@@ -3,73 +3,84 @@ import Layout from '../layouts/Layout.astro';
 
 const plans = [
   {
-    name: "Basic",
-    price: "299",
+    name: "Essentials",
     description: "Perfect for small boards and organizations",
     features: [
-      "Up to 10 board members",
-      "Document storage",
-      "Basic meeting management",
-      "Email notifications",
-      "Standard support"
+      "Unlimited Users",
+      "Agenda Builder",
+      "Document Management",
+      "Board Pack Creation",
+      "Document Repository",
+      "Private Chat",
+      "General Governance",
+      "AI Search (Basic)",
+      "Document Storage & MFA",
+      "IM & Email Support"
     ]
   },
   {
-    name: "Advanced",
-    price: "599",
+    name: "Professional",
     description: "Ideal for growing organizations",
     features: [
-      "Up to 25 board members",
-      "Advanced document management",
-      "Custom workflows",
-      "Analytics dashboard",
-      "Priority support"
+      "Everything in Essentials, plus:",
+      "Task Management",
+      "Document Annotation",
+      "Voting",
+      "Summary & Transcript",
+      "E-Signature (Documents & Minutes)",
+      "Sub-Committee Support",
+      "Polling & Document Collaboration",
+      "Regional Compliance Tools",
+      "AI Search (Cognitive)",
+      "Advanced Permissions",
+      "Priority Email & Phone Support"
     ],
     popular: true
   },
   {
     name: "Enterprise",
-    price: "Custom",
     description: "For large organizations with complex needs",
     features: [
-      "Unlimited board members",
-      "Custom integration",
-      "Advanced security features",
-      "Dedicated success manager",
-      "24/7 premium support"
+      "Everything in Professional, plus:",
+      "Advanced Annotation",
+      "Advanced Insights",
+      "E-Signature (Advanced)",
+      "Advanced Collaboration",
+      "Sector-Specific Compliance",
+      "AI Assistant & Advanced Analytics",
+      "SSO Integration",
+      "24/7 Support with Customer Success"
     ]
   }
 ];
 
-const additionalFeatures = [
+const featureCategories = [
   {
-    category: "Security & Compliance",
+    title: "Meeting Features",
     features: [
-      "GDPR Compliance",
-      "End-to-end encryption",
-      "Two-factor authentication",
-      "Role-based access control",
-      "Audit logs"
+      "Agenda Builder",
+      "Document Management",
+      "Task Management",
+      "Board Pack Tools",
+      "Voting",
+      "AI-Powered Minute Tools"
     ]
   },
   {
-    category: "Meeting Management",
+    title: "Post-Meeting Tools",
     features: [
-      "AI-powered agenda builder",
-      "Document annotation",
-      "Real-time collaboration",
-      "Automated minutes",
-      "Action item tracking"
+      "Document Repository",
+      "E-Signature",
+      "Sub-Committee Support"
     ]
   },
   {
-    category: "Board Intelligence",
+    title: "Collaboration & Governance",
     features: [
-      "Strategic insights dashboard",
-      "Performance analytics",
-      "Risk monitoring",
-      "Compliance tracking",
-      "Custom reporting"
+      "Real-time Collaboration",
+      "Compliance Tools",
+      "AI & Analytics",
+      "Security Features"
     ]
   }
 ];
@@ -81,24 +92,24 @@ const additionalFeatures = [
     <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
       <div class="absolute inset-0 z-0">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(57,153,222,0.1),transparent_50%)]"></div>
       </div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="text-center max-w-3xl mx-auto">
           <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
-            Simple, Transparent
+            Choose the Right Plan for Your
             <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
-              Pricing
+              Organization
             </span>
           </h1>
           <p class="text-xl text-gray-600 leading-relaxed">
-            Choose the perfect plan for your organization's needs. All plans include our core features with flexible options to scale.
+            Flexible plans designed to meet your board's unique needs. Contact our team for custom pricing tailored to your requirements.
           </p>
         </div>
       </div>
     </section>
 
+    <!-- Rest of the file remains unchanged -->
     <!-- Pricing Cards -->
     <section class="py-20 bg-white relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -114,10 +125,16 @@ const additionalFeatures = [
                 <h3 class="text-2xl font-bold text-gray-900">{plan.name}</h3>
                 <p class="mt-2 text-gray-500">{plan.description}</p>
                 <div class="mt-6">
-                  <p class="inline-flex items-baseline">
-                    <span class="text-5xl font-extrabold tracking-tight text-gray-900">${plan.price}</span>
-                    {plan.price !== "Custom" && <span class="text-lg text-gray-500">/month</span>}
-                  </p>
+                  <a
+                    href="/request-demo"
+                    class={`block w-full text-center px-6 py-4 text-lg font-medium rounded-xl transition-colors duration-200 ${
+                      plan.popular
+                        ? 'text-white bg-primary hover:bg-primary/90'
+                        : 'text-primary bg-white border-2 border-primary/20 hover:bg-primary/5'
+                    }`}
+                  >
+                    Contact Sales
+                  </a>
                 </div>
                 <ul class="mt-8 space-y-4">
                   {plan.features.map(feature => (
@@ -129,18 +146,6 @@ const additionalFeatures = [
                     </li>
                   ))}
                 </ul>
-                <div class="mt-8">
-                  <a
-                    href="#"
-                    class={`block w-full text-center px-6 py-4 text-lg font-medium rounded-xl transition-colors duration-200 ${
-                      plan.popular
-                        ? 'text-white bg-primary hover:bg-primary/90'
-                        : 'text-primary bg-white border-2 border-primary/20 hover:bg-primary/5'
-                    }`}
-                  >
-                    {plan.price === "Custom" ? "Contact Sales" : "Get Started"}
-                  </a>
-                </div>
               </div>
             </div>
           ))}
@@ -148,18 +153,18 @@ const additionalFeatures = [
       </div>
     </section>
 
-    <!-- Additional Features -->
+    <!-- Feature Categories -->
     <section class="py-20 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <h2 class="text-3xl font-bold text-gray-900">Everything You Need for Effective Board Management</h2>
-          <p class="mt-4 text-xl text-gray-600">All plans include these powerful features to drive your board's success</p>
+          <p class="mt-4 text-xl text-gray-600">Comprehensive features to drive your board's success</p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
-          {additionalFeatures.map(category => (
+          {featureCategories.map(category => (
             <div class="bg-white rounded-xl p-8 shadow-sm">
-              <h3 class="text-xl font-bold text-gray-900 mb-6">{category.category}</h3>
+              <h3 class="text-xl font-bold text-gray-900 mb-6">{category.title}</h3>
               <ul class="space-y-4">
                 {category.features.map(feature => (
                   <li class="flex items-center text-gray-600">
@@ -186,16 +191,16 @@ const additionalFeatures = [
 
         <div class="space-y-8">
           <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="text-lg font-semibold text-gray-900">How do I choose the right plan?</h3>
+            <p class="mt-2 text-gray-600">Contact our sales team for a personalized recommendation based on your organization's specific needs and requirements.</p>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-6">
             <h3 class="text-lg font-semibold text-gray-900">Can I switch plans later?</h3>
-            <p class="mt-2 text-gray-600">Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing cycle.</p>
+            <p class="mt-2 text-gray-600">Yes, you can upgrade or downgrade your plan at any time. Our team will help ensure a smooth transition.</p>
           </div>
           <div class="bg-gray-50 rounded-lg p-6">
             <h3 class="text-lg font-semibold text-gray-900">Is there a free trial?</h3>
-            <p class="mt-2 text-gray-600">Yes, we offer a 14-day free trial on all plans so you can experience Govrn's features before committing.</p>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-6">
-            <h3 class="text-lg font-semibold text-gray-900">What payment methods do you accept?</h3>
-            <p class="mt-2 text-gray-600">We accept all major credit cards, and for Enterprise plans, we can arrange alternative payment methods.</p>
+            <p class="mt-2 text-gray-600">Yes, we offer a free trial so you can experience Govrn's features before committing. Contact us to get started.</p>
           </div>
         </div>
       </div>
@@ -212,16 +217,16 @@ const additionalFeatures = [
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="#"
+            href="/request-demo"
             class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-primary bg-white hover:bg-gray-50 transition-colors duration-200"
           >
-            Start Free Trial
+            Request Demo
           </a>
           <a
-            href="#"
+            href="/contact"
             class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white border-2 border-white hover:bg-white/10 transition-colors duration-200"
           >
-            Talk to Sales
+            Contact Sales
           </a>
         </div>
       </div>

@@ -1,0 +1,60 @@
+---
+const team = [
+  {
+    name: "Jean-Louis Van Houwe",
+    role: "CEO & Founder",
+    image: "https://media.licdn.com/dms/image/v2/C4D03AQE5ZIIMUVL9Fg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1621331538059?e=1738195200&v=beta&t=ngl8Bct6YqFES1P_Bt9b7BtYKt0ktDhbceHPHt0VesQ",
+    linkedin: "https://www.linkedin.com/in/jeanlouisvanhouwe/",
+    bio: "Passionate about transforming board management through innovative technology and AI solutions."
+  },
+  {
+    name: "Ludovic Laffineur",
+    role: "CPO",
+    image: "https://private-user-images.githubusercontent.com/1901914/390721837-dff602bf-a9da-4b0a-ae7f-d3ec39938a5e.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzI3ODY3MTYsIm5iZiI6MTczMjc4NjQxNiwicGF0aCI6Ii8xOTAxOTE0LzM5MDcyMTgzNy1kZmY2MDJiZi1hOWRhLTRiMGEtYWU3Zi1kM2VjMzk5MzhhNWUucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI0MTEyOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNDExMjhUMDkzMzM2WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NDc0YWU1Yjk0NmQwNWEzODFlNDBhNmRhOTc3Zjc4YmVjMTI4MjkzMTM3Y2Q3NDI3NTU4NGNlNDQ0OTcyMDg0YSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.2GzfQmz3GGkCH42KxxsHsyYM3m16rp1TOP1Lz_sGDro",
+    linkedin: "https://www.linkedin.com/in/llaffineur/",
+    bio: "Leading product strategy and innovation to create exceptional board management experiences."
+  }
+];
+---
+
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Leadership Team</h2>
+      <p class="text-xl text-gray-600">
+        Meet the visionaries driving innovation in board management
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-12">
+      {team.map(member => (
+        <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+          <div class="flex flex-col md:flex-row gap-8 items-start">
+            <div class="relative flex-shrink-0">
+              <img
+                src={member.image}
+                alt={member.name}
+                class="w-48 h-48 object-cover rounded-xl shadow-lg"
+              />
+              <a
+                href={member.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-lg hover:scale-110 transition-transform duration-200"
+              >
+                <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </a>
+            </div>
+            <div class="flex-grow">
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">{member.name}</h3>
+              <p class="text-primary font-medium mb-4">{member.role}</p>
+              <p class="text-gray-600 leading-relaxed">{member.bio}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
