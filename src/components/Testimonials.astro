@@ -1,0 +1,87 @@
+---
+const testimonials = [
+  {
+    quote: "Govrn has <strong>transformed</strong> how we manage our board operations, bringing <strong>efficiency</strong> and <strong>clarity</strong> to our governance processes.",
+    author: "Lore Werbrouck",
+    position: "General Counsel",
+    company: "Van de Velde",
+    logo: "https://k0n.abe.mytemp.website/wp-content/uploads/2024/11/van-de-velde-edited.png",
+    link: "/case-studies/van-de-velde"
+  },
+  {
+    quote: "Govrn has <strong>simplified</strong> our document management tremendously, making our meeting preparations more <strong>efficient</strong> and allowing our board to focus on <strong>decision-making</strong>.",
+    author: "Pierre Hermant",
+    position: "CEO",
+    company: "Finance & Invest Brussels",
+    logo: "https://k0n.abe.mytemp.website/wp-content/uploads/2024/11/finance-edited.png",
+    link: "/case-studies/finance-invest-brussels"
+  },
+  {
+    quote: "Govrn embraced the <strong>next generation</strong> of Board management software, <strong>easy to use</strong> and with <strong>AI integration</strong>.",
+    author: "Nathalie Byl",
+    position: "Paralegal en Compliance Officer",
+    company: "Care Property Invest",
+    logo: "https://carepropertyinvest.be/wp-content/uploads/logo_header_ext.png",
+    link: "/case-studies/care-property-invest"
+  }
+];
+---
+
+<section id="testimonials" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <h2 class="text-4xl font-extrabold text-gray-900 mb-4">
+        Trusted by Leading Organizations
+      </h2>
+      <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+        See how organizations across industries transform their board management with Govrn
+      </p>
+    </div>
+
+    <div class="mt-20 grid gap-8 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+      {testimonials.map(testimonial => (
+        <a href={testimonial.link} class="group">
+          <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 h-full flex flex-col">
+            <div class="flex items-center justify-center h-16 mb-8">
+              <img
+                src={testimonial.logo}
+                alt={`${testimonial.company} logo`}
+                class="h-full object-contain"
+              />
+            </div>
+            <div class="flex-grow">
+              <div class="text-primary mb-6">
+                <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                </svg>
+              </div>
+              <p class="text-lg text-gray-600 mb-8" set:html={testimonial.quote}></p>
+            </div>
+            <div class="mt-auto">
+              <p class="font-medium text-gray-900">{testimonial.author}</p>
+              <p class="text-gray-500">{testimonial.position}, {testimonial.company}</p>
+            </div>
+            <div class="mt-4 text-primary font-medium flex items-center opacity-0 group-hover:opacity-100 transition-opacity">
+              Read Case Study
+              <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <div class="mt-16 text-center">
+      <a
+        href="/testimonials"
+        class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 group"
+      >
+        View All Success Stories
+        <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

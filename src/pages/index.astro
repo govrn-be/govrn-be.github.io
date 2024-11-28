@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Features from '../components/Features.astro';
+import Stats from '../components/Stats.astro';
+import Timeline from '../components/Timeline.astro';
+import Personas from '../components/Personas.astro';
+import Testimonials from '../components/Testimonials.astro';
+import FAQ from '../components/FAQ.astro';
+import CTA from '../components/CTA.astro';
+import FeatureShowcase from '../components/features/FeatureShowcase.astro';
+---
+
+<Layout title="Govrn - AI-First Board Management Platform">
+  <main class="overflow-hidden">
+    <Hero />
+    <Stats />
+    <Features />
+    <FeatureShowcase />
+    <Timeline />
+    <Personas />
+    <Testimonials />
+    <FAQ />
+    <CTA />
+  </main>
+</Layout>
+
+<style>
+  main {
+    width: 100%;
+  }
+</style>

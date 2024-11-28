@@ -1,0 +1,121 @@
+---
+const outcomes = [
+  {
+    title: "Streamlined Operations",
+    description: "Experience up to 60% faster meeting preparation and decision-making with smart document organization and secure collaboration tools.",
+    image: "https://k0n.abe.mytemp.website/wp-content/uploads/2024/10/Untitled-design-11.png",
+    stats: [
+      { value: "60%", label: "Faster Meeting Preparation" },
+      { value: "100%", label: "Document Accessibility" }
+    ],
+    benefits: [
+      "Automated document organization",
+      "Smart meeting templates",
+      "Secure team collaboration",
+      "Real-time annotations"
+    ]
+  },
+  {
+    title: "Data-Driven Decisions",
+    description: "Transform board documents into actionable insights with AI-powered analysis, helping you make informed strategic decisions faster.",
+    image: "https://www.govrn.com/web/image/10086-4ae54cf8/Enabling%20Smart%20Boards%20for%20Smarter%20Business.png",
+    stats: [
+      { value: "45%", label: "Better Decision Making" },
+      { value: "24/7", label: "AI-Powered Insights" }
+    ],
+    benefits: [
+      "Predictive analytics",
+      "Strategic recommendations",
+      "Market intelligence",
+      "Performance tracking"
+    ]
+  },
+  {
+    title: "Effortless Compliance",
+    description: "Maintain perfect compliance with automated tracking, e-signatures, and role-based governance tools that save time and reduce risk.",
+    image: "https://www.govrn.com/web/image/10111-ed43e796/Untitled%20design%20%2810%29.png",
+    stats: [
+      { value: "100%", label: "Compliance Coverage" },
+      { value: "40%", label: "Time Saved on Admin" }
+    ],
+    benefits: [
+      "Automated compliance checks",
+      "Digital signing workflow",
+      "Role-based permissions",
+      "Audit trail tracking"
+    ]
+  }
+];
+---
+
+<section class="py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+  <div class="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-20"></div>
+  
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <div class="text-center max-w-3xl mx-auto mb-20">
+      <div class="inline-flex items-center rounded-full px-6 py-2 text-sm font-medium bg-primary/10 text-primary mb-6">
+        Measurable Results
+      </div>
+      <h2 class="text-4xl font-bold text-gray-900 mb-6">Transform Your Board's Performance</h2>
+      <p class="text-xl text-gray-600">
+        See the real impact Govrn brings to your board operations with measurable improvements in efficiency, insight, and governance.
+      </p>
+    </div>
+
+    <div class="space-y-32">
+      {outcomes.map((outcome, index) => (
+        <div class={`grid lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
+          <div class={index % 2 === 1 ? 'lg:col-start-2' : ''}>
+            <h3 class="text-3xl font-bold text-gray-900 mb-6">{outcome.title}</h3>
+            <p class="text-xl text-gray-600 mb-8 leading-relaxed">{outcome.description}</p>
+            
+            <div class="grid grid-cols-2 gap-8 mb-8">
+              {outcome.stats.map(stat => (
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                  <div class="text-3xl font-bold text-primary mb-2">{stat.value}</div>
+                  <div class="text-gray-600">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+
+            <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+              <h4 class="font-semibold text-gray-900 mb-4">Key Benefits:</h4>
+              <ul class="grid grid-cols-2 gap-4">
+                {outcome.benefits.map(benefit => (
+                  <li class="flex items-center">
+                    <svg class="h-5 w-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span class="text-gray-600">{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div class={index % 2 === 1 ? 'lg:col-start-1' : ''}>
+            <div class="relative group">
+              <!-- Background gradients -->
+              <div class="absolute inset-0 bg-gradient-to-br from-gray-100 to-white rounded-2xl"></div>
+              <div class="absolute inset-0 bg-gradient-to-r from-primary to-blue-600 opacity-10 group-hover:opacity-20 transition-opacity duration-300 rounded-2xl"></div>
+              
+              <!-- Image container -->
+              <div class="relative rounded-2xl p-8 backdrop-blur-sm">
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden">
+                  <div class="max-h-[400px] overflow-hidden">
+                    <img
+                      src={outcome.image}
+                      alt={outcome.title}
+                      class="w-full h-auto object-cover transform group-hover:scale-[1.02] transition-transform duration-300"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-30"></div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

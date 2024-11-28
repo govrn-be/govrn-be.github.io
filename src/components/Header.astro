@@ -1,0 +1,173 @@
+---
+import { Image } from 'astro:assets';
+
+const navItems = [
+  { 
+    label: "Features", 
+    href: "/features" 
+  },
+  { 
+    label: "Industries",
+    href: "/industries",
+    dropdown: [
+      { label: "Financial Services", href: "/industries/financial-services" },
+      { label: "Healthcare", href: "/industries/healthcare" },
+      { label: "Real Estate", href: "/industries/real-estate" }
+    ]
+  },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Testimonials", href: "/testimonials" },
+  { label: "Resources", href: "/resources" },
+  { label: "About", href: "/about" }
+];
+---
+
+<header class="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center py-4">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <a href="/" class="flex items-center group">
+          <img
+            src="https://www.govrn.com/web/image/website/1/logo/Govrn%20?unique=1c1c770"
+            alt="Govrn Logo"
+            class="h-8 transform transition-transform duration-200 group-hover:scale-105"
+          />
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center space-x-1">
+        {navItems.map(item => (
+          <div class="relative group">
+            <a 
+              href={item.href} 
+              class="px-4 py-2 text-gray-600 hover:text-gray-900 rounded-lg hover:bg-gray-50 transition-all duration-200 flex items-center"
+            >
+              {item.label}
+              {item.dropdown && (
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              )}
+            </a>
+            {item.dropdown && (
+              <div class="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2">
+                <div class="bg-white rounded-lg shadow-lg border border-gray-100 py-2">
+                  {item.dropdown.map(dropdownItem => (
+                    <a
+                      href={dropdownItem.href}
+                      class="block px-4 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors duration-200"
+                    >
+                      {dropdownItem.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        ))}
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center space-x-4">
+        <a 
+          href="/try" 
+          class="hidden md:inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg text-white bg-primary hover:bg-primary/90 shadow-sm hover:shadow-md transition-all duration-200"
+        >
+          Try for Free
+        </a>
+        
+        <!-- Mobile Menu Button -->
+        <button 
+          class="md:hidden p-2 rounded-lg hover:bg-gray-50 transition-colors duration-200" 
+          id="mobile-menu-button"
+          aria-label="Toggle menu"
+        >
+          <svg class="h-6 w-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path 
+              stroke-linecap="round" 
+              stroke-linejoin="round" 
+              stroke-width="2" 
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div 
+    class="hidden md:hidden border-t border-gray-100 bg-white/95 backdrop-blur-sm transition-all duration-300" 
+    id="mobile-menu"
+  >
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 space-y-2">
+      {navItems.map(item => (
+        <>
+          <a 
+            href={item.href} 
+            class="block px-4 py-2 text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-all duration-200"
+          >
+            {item.label}
+          </a>
+          {item.dropdown && (
+            <div class="pl-4 space-y-2">
+              {item.dropdown.map(dropdownItem => (
+                <a
+                  href={dropdownItem.href}
+                  class="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-all duration-200"
+                >
+                  {dropdownItem.label}
+                </a>
+              ))}
+            </div>
+          )}
+        </>
+      ))}
+      <div class="pt-4">
+        <a 
+          href="/try" 
+          class="block px-4 py-2 text-base font-medium text-white bg-primary hover:bg-primary/90 rounded-lg transition-all duration-200"
+        >
+          Try for Free
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const header = document.querySelector('header');
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  // Handle mobile menu toggle
+  mobileMenuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+    header?.classList.toggle('bg-white');
+    header?.classList.toggle('bg-white/95');
+  });
+
+  // Handle scroll behavior
+  let lastScroll = 0;
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll <= 0) {
+      header?.classList.remove('shadow-lg');
+      header?.classList.remove('-translate-y-full');
+    }
+    
+    if (currentScroll > lastScroll && currentScroll > 80) {
+      // Scrolling down & past header
+      header?.classList.add('-translate-y-full');
+    } else {
+      // Scrolling up
+      header?.classList.remove('-translate-y-full');
+      header?.classList.add('shadow-lg');
+    }
+    
+    lastScroll = currentScroll;
+  });
+</script>

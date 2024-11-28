@@ -1,0 +1,102 @@
+---
+const personas = [
+  {
+    role: "CEO & Executives",
+    description: "Equip your board of directors with Govrn, a potent yet user-friendly tool that aids CEOs in maintaining an engaged board — fostering smarter work, swifter actions, and elevated achievements.",
+    icon: "👔",
+    features: [
+      "Real-time board engagement tracking",
+      "Strategic decision support",
+      "Performance analytics",
+      "Executive dashboards"
+    ]
+  },
+  {
+    role: "Board Professionals & Admin",
+    description: "Govrn simplifies the creation, distribution, and organization of meeting details — bolstering your efforts to keep all stakeholders informed, satisfied, and actively involved.",
+    icon: "📊",
+    features: [
+      "Automated meeting scheduling",
+      "Document distribution",
+      "Task management",
+      "Stakeholder communications"
+    ]
+  },
+  {
+    role: "Directors & Trustees",
+    description: "Navigate a confident path towards the future with Govrn, an intuitive platform that keeps you informed and simplifies intricate tasks, enabling you to fulfill your organization's mission and vision.",
+    icon: "🎯",
+    features: [
+      "Intuitive document access",
+      "Meeting preparation tools",
+      "Voting capabilities",
+      "Strategic insights"
+    ]
+  },
+  {
+    role: "General Counsels",
+    description: "With industry-leading security and encryption combined with data management capabilities, Govrn makes it effortless to safeguard the board, its members, and the organization from risk.",
+    icon: "⚖️",
+    features: [
+      "Compliance monitoring",
+      "Risk management tools",
+      "Secure document vault",
+      "Audit trails"
+    ]
+  }
+];
+---
+
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto">
+      <h2 class="text-4xl font-extrabold text-gray-900">
+        Maximize Efficiency Across Every Role
+      </h2>
+      <p class="mt-4 text-xl text-gray-500">
+        Govrn delivers a tailored experience for every governance role, empowering stakeholders with optimized board management for better decisions and efficiency.
+      </p>
+    </div>
+
+    <div class="mt-20 grid gap-8 lg:grid-cols-2">
+      {personas.map((persona, index) => (
+        <div class="relative group">
+          <div class="absolute inset-0 bg-gradient-to-r from-primary to-blue-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
+          <div class="relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
+            <div class="flex items-start space-x-6">
+              <div class="flex-shrink-0 w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center">
+                <span class="text-3xl">{persona.icon}</span>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-2xl font-bold text-gray-900 mb-3">{persona.role}</h3>
+                <p class="text-gray-600 mb-6 leading-relaxed">{persona.description}</p>
+                <ul class="space-y-3">
+                  {persona.features.map(feature => (
+                    <li class="flex items-center text-gray-600">
+                      <svg class="h-5 w-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-16 text-center">
+      <a
+        href="#"
+        class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 group"
+      >
+        Find Your Role-Based Solution
+        <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

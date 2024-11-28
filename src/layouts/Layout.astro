@@ -1,0 +1,48 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { 
+  title,
+  description = "Govrn - Simplify Board Management Like Never Before. A smart platform to centralize your documents, automate tasks, and enhance collaboration."
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="min-h-screen bg-white">
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --accent: 37, 99, 235;
+    --accent-light: 96, 165, 250;
+    --accent-dark: 30, 58, 138;
+  }
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+</style>

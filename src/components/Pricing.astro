@@ -1,0 +1,96 @@
+---
+const plans = [
+  {
+    name: "Basic",
+    price: "299",
+    description: "Perfect for small boards and organizations",
+    features: [
+      "Up to 10 board members",
+      "Document storage",
+      "Basic meeting management",
+      "Email notifications",
+      "Standard support"
+    ]
+  },
+  {
+    name: "Advanced",
+    price: "599",
+    description: "Ideal for growing organizations",
+    features: [
+      "Up to 25 board members",
+      "Advanced document management",
+      "Custom workflows",
+      "Analytics dashboard",
+      "Priority support"
+    ],
+    popular: true
+  },
+  {
+    name: "Enterprise",
+    price: "Custom",
+    description: "For large organizations with complex needs",
+    features: [
+      "Unlimited board members",
+      "Custom integration",
+      "Advanced security features",
+      "Dedicated success manager",
+      "24/7 premium support"
+    ]
+  }
+];
+---
+
+<section id="pricing" class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+        Simple, Transparent Pricing
+      </h2>
+      <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+        Choose the plan that best fits your organization's needs
+      </p>
+    </div>
+
+    <div class="mt-20 grid gap-8 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+      {plans.map(plan => (
+        <div class={`relative bg-white rounded-lg shadow-sm overflow-hidden ${plan.popular ? 'ring-2 ring-primary' : ''}`}>
+          {plan.popular && (
+            <div class="absolute top-0 right-0 bg-primary text-white px-4 py-1 text-sm font-medium">
+              Popular
+            </div>
+          )}
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-gray-900">{plan.name}</h3>
+            <p class="mt-2 text-gray-500">{plan.description}</p>
+            <p class="mt-4">
+              <span class="text-4xl font-bold text-gray-900">${plan.price}</span>
+              {plan.price !== "Custom" && <span class="text-gray-500">/month</span>}
+            </p>
+            <ul class="mt-8 space-y-4">
+              {plan.features.map(feature => (
+                <li class="flex items-center">
+                  <svg class="h-5 w-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="ml-3 text-gray-600">{feature}</span>
+                </li>
+              ))}
+            </ul>
+            <div class="mt-8">
+              <a
+                href="#"
+                class={`block w-full text-center px-6 py-3 border border-transparent text-base font-medium rounded-md ${
+                  plan.popular
+                    ? 'text-white bg-primary hover:bg-primary/90'
+                    : 'text-primary bg-white border-primary hover:bg-gray-50'
+                }`}
+              >
+                {plan.price === "Custom" ? "Contact Sales" : "Get Started"}
+              </a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
