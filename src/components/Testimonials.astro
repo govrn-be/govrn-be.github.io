@@ -5,7 +5,7 @@ const testimonials = [
     author: "Lore Werbrouck",
     position: "General Counsel",
     company: "Van de Velde",
-    logo: "/vdv-logo.png",
+    image: "/vdv-lore-portait.jpg",
     link: "/case-studies/van-de-velde"
   },
   {
@@ -13,7 +13,7 @@ const testimonials = [
     author: "Pierre Hermant",
     position: "CEO",
     company: "Finance & Invest Brussels",
-    logo: "/fib-logo.png",
+    image: "/fib-pierre.webp",
     link: "/case-studies/finance-invest-brussels"
   },
   {
@@ -21,11 +21,12 @@ const testimonials = [
     author: "Nathalie Byl",
     position: "Paralegal en Compliance Officer",
     company: "Care Property Invest",
-    logo: "/careproperty-logo.png",
+    image: "/careproperty-logo.png",
     link: "/case-studies/care-property-invest"
   }
 ];
 ---
+
 
 <section id="testimonials" class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -41,31 +42,34 @@ const testimonials = [
     <div class="mt-20 grid gap-8 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
       {testimonials.map(testimonial => (
         <a href={testimonial.link} class="group">
-          <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 h-full flex flex-col">
-            <div class="flex items-center justify-center h-16 mb-8">
+          <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+            <div class="relative h-64">
               <img
-                src={testimonial.logo}
-                alt={`${testimonial.company} logo`}
-                class="h-full object-contain"
+                src={testimonial.image}
+                alt={testimonial.author}
+                class="w-full h-full object-cover"
               />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              <div class="absolute bottom-4 left-4 text-white">
+                <h3 class="text-xl font-bold">{testimonial.author}</h3>
+                <p class="text-sm text-white/90">{testimonial.position}</p>
+                <p class="text-sm text-white/80">{testimonial.company}</p>
+              </div>
             </div>
-            <div class="flex-grow">
-              <div class="text-primary mb-6">
+            
+            <div class="p-6">
+              <div class="text-primary mb-4">
                 <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                 </svg>
               </div>
-              <p class="text-lg text-gray-600 mb-8" set:html={testimonial.quote}></p>
-            </div>
-            <div class="mt-auto">
-              <p class="font-medium text-gray-900">{testimonial.author}</p>
-              <p class="text-gray-500">{testimonial.position}, {testimonial.company}</p>
-            </div>
-            <div class="mt-4 text-primary font-medium flex items-center opacity-0 group-hover:opacity-100 transition-opacity">
-              Read Case Study
-              <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
+              <p class="text-lg text-gray-600" set:html={testimonial.quote}></p>
+              <div class="mt-6 text-primary font-medium flex items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                Read Case Study
+                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
             </div>
           </div>
         </a>
