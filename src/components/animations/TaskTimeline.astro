@@ -1,0 +1,92 @@
+---
+const messages = [
+  {
+    type: "assistant",
+    content: "I've analyzed your board documents. Here are the key insights:",
+    insights: [
+      "Revenue growth exceeds market average by 15%",
+      "Compliance requirements met at 98%",
+      "Board attendance rate at 95%"
+    ]
+  },
+  {
+    type: "user",
+    content: "What are our main risks?"
+  },
+  {
+    type: "assistant",
+    content: "Based on the analysis, here are the key risks:",
+    insights: [
+      "Market volatility in Asia Pacific",
+      "Regulatory changes in EU markets",
+      "Supply chain dependencies"
+    ]
+  }
+];
+---
+
+<div class="relative w-full h-full flex items-center justify-center">
+  <div class="w-full max-w-lg bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
+    <!-- Chat Header -->
+    <div class="bg-gradient-to-r from-primary to-blue-600 p-4 text-white">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+          <span class="text-2xl">🤖</span>
+        </div>
+        <div>
+          <div class="font-medium">AI Assist</div>
+          <div class="text-sm text-white/80">Analyzing board documents</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chat Messages -->
+    <div class="p-4 space-y-4">
+      {messages.map((msg, index) => (
+        <div 
+          class={`flex ${msg.type === 'user' ? 'justify-end' : 'justify-start'} animate-slide-up`}
+          style={`animation-delay: ${index * 0.5}s`}
+        >
+          <div class={`max-w-[80%] ${
+            msg.type === 'user' 
+              ? 'bg-primary/10 text-primary' 
+              : 'bg-gradient-to-br from-gray-50 to-gray-100 text-gray-900'
+          } rounded-xl p-4 shadow-sm`}>
+            <p class="text-sm mb-2">{msg.content}</p>
+            {msg.insights && (
+              <ul class="space-y-2">
+                {msg.insights.map(insight => (
+                  <li class="flex items-start text-sm">
+                    <svg class="w-4 h-4 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                    {insight}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </div>
+      ))}
+
+      <!-- Typing Indicator -->
+      <div class="flex items-center space-x-2">
+        <div class="w-2 h-2 bg-primary/40 rounded-full animate-bounce" style="animation-delay: 0s;"></div>
+        <div class="w-2 h-2 bg-primary/40 rounded-full animate-bounce" style="animation-delay: 0.2s;"></div>
+        <div class="w-2 h-2 bg-primary/40 rounded-full animate-bounce" style="animation-delay: 0.4s;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-slide-up {
+    opacity: 0;
+    animation: slideUp 0.5s ease-out forwards;
+  }
+</style>

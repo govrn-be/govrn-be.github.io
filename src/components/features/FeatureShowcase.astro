@@ -1,9 +1,13 @@
 ---
+import DocumentFlow from '../animations/DocumentFlow.astro';
+import TaskTimeline from '../animations/TaskTimeline.astro';
+import FeatureHighlight from '../animations/FeatureHighlight.astro';
+
 const outcomes = [
   {
     title: "Streamlined Operations",
     description: "Experience up to 60% faster meeting preparation and decision-making with smart document organization and secure collaboration tools.",
-    image: "/applications-picture-meeting.png",
+    component: DocumentFlow,
     stats: [
       { value: "60%", label: "Faster Meeting Preparation" },
       { value: "100%", label: "Document Accessibility" }
@@ -18,7 +22,7 @@ const outcomes = [
   {
     title: "Data-Driven Decisions",
     description: "Transform board documents into actionable insights with AI-powered analysis, helping you make informed strategic decisions faster.",
-    image: "/applications-picture-board-chat-mobile.png",
+    component: TaskTimeline,
     stats: [
       { value: "45%", label: "Better Decision Making" },
       { value: "24/7", label: "AI-Powered Insights" }
@@ -33,7 +37,7 @@ const outcomes = [
   {
     title: "Effortless Compliance",
     description: "Maintain perfect compliance with automated tracking, e-signatures, and role-based governance tools that save time and reduce risk.",
-    image: "/applications-picture-board-evaluation.png",
+    component: FeatureHighlight,
     stats: [
       { value: "100%", label: "Compliance Coverage" },
       { value: "40%", label: "Time Saved on Admin" }
@@ -99,17 +103,9 @@ const outcomes = [
               <div class="absolute inset-0 bg-gradient-to-br from-gray-100 to-white rounded-2xl"></div>
               <div class="absolute inset-0 bg-gradient-to-r from-primary to-blue-600 opacity-10 group-hover:opacity-20 transition-opacity duration-300 rounded-2xl"></div>
               
-              <!-- Image container -->
-              <div class="relative rounded-2xl p-8 backdrop-blur-sm">
-                <div class="bg-white rounded-xl shadow-xl overflow-hidden">
-                  <div class="max-h-[400px] overflow-hidden">
-                    <img
-                      src={outcome.image}
-                      alt={outcome.title}
-                      class="w-full h-auto object-cover transform group-hover:scale-[1.02] transition-transform duration-300"
-                    />
-                  </div>
-                </div>
+              <!-- Animation container -->
+              <div class="relative rounded-2xl p-8 backdrop-blur-sm h-[400px]">
+                <outcome.component />
               </div>
               <div class="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-30"></div>
             </div>
