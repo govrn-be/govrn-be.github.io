@@ -1,0 +1,110 @@
+---
+import FormSuccess from './FormSuccess.astro';
+
+interface Props {
+  reasons?: string[];
+}
+
+const { 
+  reasons = [
+    "Evaluating Board Management Solutions",
+    "Starting a New Board",
+    "Switching from Another Platform",
+    "Improving Board Efficiency",
+    "Other"
+  ]
+} = Astro.props;
+---
+
+<form id="demoForm" class="space-y-6">
+  <div class="grid grid-cols-2 gap-6">
+    <div>
+      <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+      <input
+        type="text"
+        id="firstName"
+        name="firstName"
+        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary"
+        required
+      />
+    </div>
+    <div>
+      <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+      <input
+        type="text"
+        id="lastName"
+        name="lastName"
+        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary"
+        required
+      />
+    </div>
+  </div>
+
+  <div>
+    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Work Email</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary"
+      required
+    />
+  </div>
+
+  <div>
+    <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Company Name</label>
+    <input
+      type="text"
+      id="company"
+      name="company"
+      class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary"
+      required
+    />
+  </div>
+
+  <div>
+    <label for="reason" class="block text-sm font-medium text-gray-700 mb-2">Reason for Demo</label>
+    <select
+      id="reason"
+      name="reason"
+      class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary"
+      required
+    >
+      <option value="">Select a reason</option>
+      {reasons.map(reason => (
+        <option value={reason}>{reason}</option>
+      ))}
+    </select>
+  </div>
+
+  <button
+    type="submit"
+    class="w-full px-6 py-4 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors duration-200 font-medium flex items-center justify-center space-x-2"
+  >
+    <span>Schedule Demo</span>
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+    </svg>
+  </button>
+</form>
+
+<div id="formSuccess" class="hidden">
+  <FormSuccess 
+    title="Demo Request Received!"
+    message="Thank you for your interest. Our team will contact you shortly to schedule your demo."
+  />
+</div>
+
+<script>
+  const form = document.getElementById('demoForm');
+  const success = document.getElementById('formSuccess');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    // Here you would typically send the form data to your backend
+    // For demo purposes, we'll just show the success message
+    form.classList.add('hidden');
+    success?.classList.remove('hidden');
+  });
+</script>
