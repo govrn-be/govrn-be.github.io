@@ -1,0 +1,120 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import GuideHeader from '../../components/guides/GuideHeader.astro';
+import GuideStep from '../../components/guides/GuideStep.astro';
+import GuideSubSection from '../../components/guides/GuideSubSection.astro';
+import GuideStepList from '../../components/guides/GuideStepList.astro';
+import ProTip from '../../components/guides/ProTip.astro';
+
+const groupSetupSteps = [
+  "Navigate to Members > Groups in your dashboard",
+  "Click 'Create New Group' to set up a committee",
+  "Name your group (e.g., 'Finance Committee', 'Audit Committee')",
+  "Configure access permissions for historical data",
+  "Save your group settings"
+];
+
+const inviteMembersSteps = [
+  "Go to the Members section",
+  "Click 'Invite Members'",
+  "Enter member email addresses",
+  "Select appropriate role (Admin, Member, or Observer)",
+  "Send invitations"
+];
+
+const beforeMeetingSteps = [
+  "Schedule the meeting with date, time, and location",
+  "Create a detailed agenda with key topics",
+  "Upload and organize relevant documents",
+  "Send meeting invitations to participants"
+];
+
+const duringMeetingSteps = [
+  "Take attendance and confirm quorum",
+  "Follow the structured agenda",
+  "Record key discussions",
+  "Use real-time document collaboration",
+  "Capture Action Items and Resolutions"
+];
+
+const afterMeetingSteps = [
+  "Finalize meeting minutes",
+  "Get minutes signed by required participants",
+  "Share approved minutes and resolutions",
+  "Track progress on action items",
+  "Prepare for the next meeting"
+];
+---
+
+<Layout title="Getting Started with Govrn - Complete Guide">
+  <main class="pt-24">
+    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <GuideHeader
+        title="Getting Started with Govrn: Your Complete Guide"
+        description="Welcome to Govrn—your comprehensive platform for efficient board management and governance! This guide will walk you through the essential steps to get started and run effective board meetings."
+      />
+
+      <GuideStep
+        number={1}
+        title="Set Up Your Groups"
+        description="Groups in Govrn help you organize your board members into committees, ensuring the right people have access to the right information."
+      >
+        <GuideSubSection title="Creating Groups for Committees">
+          <GuideStepList items={groupSetupSteps} />
+        </GuideSubSection>
+
+        <ProTip
+          tip="When setting up groups, carefully consider historical data access permissions to ensure appropriate information sharing while maintaining confidentiality."
+        />
+      </GuideStep>
+
+      <GuideStep
+        number={2}
+        title="Invite Your Board Members"
+        description="Add your board members to Govrn with the appropriate roles and permissions."
+      >
+        <GuideSubSection title="Member Invitation Process">
+          <GuideStepList items={inviteMembersSteps} />
+        </GuideSubSection>
+
+        <ProTip
+          tip="Assign roles carefully: Admins have full system access, Members have standard access to their assigned groups, and Observers have limited viewing permissions."
+        />
+      </GuideStep>
+
+      <GuideStep
+        number={3}
+        title="Master the Meeting Lifecycle"
+        description="Successful board meetings happen in three phases: Before, During, and After. Here's how to manage each phase effectively with Govrn."
+      >
+        <GuideSubSection title="Before the Meeting">
+          <p class="text-gray-600 mb-4">Proper preparation ensures productive meetings. Follow these steps to set up for success:</p>
+          <GuideStepList items={beforeMeetingSteps} />
+        </GuideSubSection>
+
+        <GuideSubSection title="During the Meeting">
+          <p class="text-gray-600 mb-4">Use Govrn's real-time features to facilitate efficient discussion and decision-making:</p>
+          <GuideStepList items={duringMeetingSteps} />
+        </GuideSubSection>
+
+        <GuideSubSection title="After the Meeting">
+          <p class="text-gray-600 mb-4">Ensure follow-through and maintain momentum with these post-meeting actions:</p>
+          <GuideStepList items={afterMeetingSteps} />
+        </GuideSubSection>
+
+        <ProTip
+          tip="Use Govrn's document collaboration features throughout all meeting phases to maintain a single source of truth for all board materials."
+        />
+      </GuideStep>
+
+      <!-- Conclusion -->
+      <div class="bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-xl p-8 border border-primary/10">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Ready for Effective Governance</h2>
+        <p class="text-lg text-gray-600 leading-relaxed mb-6">
+          You're now equipped to use Govrn for managing your board effectively. Remember that successful board management is an ongoing process, and Govrn is here to support you at every step.
+        </p>
+        <p class="text-lg font-medium text-primary">Here's to better board management! 🎉</p>
+      </div>
+    </article>
+  </main>
+</Layout>
