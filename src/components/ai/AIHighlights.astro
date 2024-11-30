@@ -1,0 +1,99 @@
+---
+const highlights = [
+  {
+    icon: "📝",
+    title: "Quoted Responses",
+    description: "All responses are directly quoted from your board documents, ensuring accuracy and traceability",
+    animation: "document-flow"
+  },
+  {
+    icon: "🔒",
+    title: "Secure Environment",
+    description: "Your data never leaves your secure environment, maintaining complete privacy and control",
+    animation: "shield-pulse"
+  },
+  {
+    icon: "📚",
+    title: "Source Attribution",
+    description: "Every response includes clear references to source documents for full transparency",
+    animation: "citation-appear"
+  }
+];
+---
+
+<section class="py-20 bg-white relative overflow-hidden">
+  <div class="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-50"></div>
+  
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">
+        Secure and Transparent AI
+      </h2>
+      <p class="text-xl text-gray-600">
+        Experience AI-powered insights with enterprise-grade security and full transparency
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      {highlights.map(highlight => (
+        <div class="relative group">
+          <div class="absolute inset-0 bg-gradient-to-br from-primary to-blue-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
+          
+          <div class="relative bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+            <!-- Animated Icon Container -->
+            <div class={`w-16 h-16 mb-6 relative ${highlight.animation}`}>
+              <div class="absolute inset-0 bg-primary/10 rounded-xl"></div>
+              <div class="absolute inset-0 flex items-center justify-center text-3xl">
+                {highlight.icon}
+              </div>
+              
+              {highlight.animation === 'document-flow' && (
+                <div class="absolute inset-[-8px] border-2 border-primary/20 rounded-xl animate-quote-pulse"></div>
+              )}
+              
+              {highlight.animation === 'shield-pulse' && (
+                <div class="absolute inset-[-4px] bg-primary/10 rounded-xl animate-shield-pulse"></div>
+              )}
+              
+              {highlight.animation === 'citation-appear' && (
+                <div class="absolute right-0 bottom-0 w-6 h-6 bg-primary/20 rounded-full animate-citation-pop"></div>
+              )}
+            </div>
+
+            <h3 class="text-xl font-bold text-gray-900 mb-4">{highlight.title}</h3>
+            <p class="text-gray-600">{highlight.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes quotePulse {
+    0%, 100% { transform: scale(1); opacity: 0.2; }
+    50% { transform: scale(1.1); opacity: 0.4; }
+  }
+
+  @keyframes shieldPulse {
+    0%, 100% { transform: scale(1); opacity: 0.1; }
+    50% { transform: scale(1.2); opacity: 0.3; }
+  }
+
+  @keyframes citationPop {
+    0%, 100% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1); opacity: 1; }
+  }
+
+  .animate-quote-pulse {
+    animation: quotePulse 3s ease-in-out infinite;
+  }
+
+  .animate-shield-pulse {
+    animation: shieldPulse 2s ease-in-out infinite;
+  }
+
+  .animate-citation-pop {
+    animation: citationPop 2s ease-in-out infinite;
+  }
+</style>

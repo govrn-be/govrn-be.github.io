@@ -5,18 +5,18 @@ import FeatureHighlight from '../animations/FeatureHighlight.astro';
 
 const outcomes = [
   {
-    title: "Streamlined Operations",
-    description: "Seamlessly centralize your information and share documents securely with confidence, across any channel — empowering everyone, regardless of their digital expertise.",
+    title: "Centralized Information Hub",
+    description: "One secure platform for all your board documents, accessible anywhere, anytime - regardless of your team's digital comfort level.",
     component: DocumentFlow,
     stats: [
-      { value: "60%", label: "Faster Meeting Preparation" },
-      { value: "100%", label: "Document Accessibility" }
+      { value: "100%", label: "Digital Accessibility" },
+      { value: "24/7", label: "Secure Access" }
     ],
     benefits: [
-      "Automated document organization",
-      "Smart meeting templates",
-      "Secure team collaboration",
-      "Real-time annotations"
+      "Single source of truth for all documents",
+      "Intelligent document categorization",
+      "Version control & audit trail",
+      "Flexible access permissions"
     ]
   },
   {
@@ -32,7 +32,11 @@ const outcomes = [
       "Strategic recommendations",
       "Market intelligence",
       "Performance tracking"
-    ]
+    ],
+    link: {
+      text: "Learn More About Our AI Assistant",
+      url: "/ai-assistant"
+    }
   },
   {
     title: "Effortless Compliance",
@@ -95,6 +99,20 @@ const outcomes = [
                 ))}
               </ul>
             </div>
+
+            {outcome.link && (
+              <div class="mt-8">
+                <a
+                  href={outcome.link.url}
+                  class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg text-white bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 group"
+                >
+                  {outcome.link.text}
+                  <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </a>
+              </div>
+            )}
           </div>
 
           <div class={index % 2 === 1 ? 'lg:col-start-1' : ''}>
