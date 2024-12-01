@@ -1,0 +1,263 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTA from '../../components/CTA.astro';
+
+const challenges = [
+  {
+    icon: "📊",
+    title: "Information Control",
+    description: "Centralized repository to manage and control information flow to the board with precision"
+  },
+  {
+    icon: "⚡",
+    title: "Timely Communication",
+    description: "Ensure consistent and timely delivery of critical updates to board members"
+  },
+  {
+    icon: "🎯",
+    title: "Information Balance",
+    description: "Smart organization tools to prevent information overload while maintaining transparency"
+  },
+  {
+    icon: "💬",
+    title: "Real-time Responsiveness",
+    description: "Quick response capabilities for board inquiries and decision-making"
+  }
+];
+
+const features = [
+  {
+    title: "Document Control Center",
+    description: "Centralized platform for managing board information flow",
+    icon: "📑",
+    benefits: [
+      "Controlled document distribution",
+      "Smart organization tools",
+      "Update notifications",
+      "Version control"
+    ]
+  },
+  {
+    title: "AI-Powered Knowledge Base",
+    description: "Intelligent system for curating and accessing essential information",
+    icon: "🤖",
+    benefits: [
+      "Document categorization",
+      "Quick reference system",
+      "Smart summaries",
+      "Focused information sharing"
+    ]
+  },
+  {
+    title: "Secure Communication Hub",
+    description: "Enterprise-grade security for all board communications",
+    icon: "🔒",
+    benefits: [
+      "End-to-end encryption",
+      "Access controls",
+      "Audit trails",
+      "Compliance tracking"
+    ]
+  }
+];
+
+const securityFeatures = [
+  {
+    icon: "🔐",
+    title: "Enterprise-Grade Security",
+    description: "Bank-level encryption and security measures protect all board communications"
+  },
+  {
+    icon: "👥",
+    title: "Access Control",
+    description: "Granular permissions ensure information reaches only intended recipients"
+  },
+  {
+    icon: "📋",
+    title: "Audit Trails",
+    description: "Comprehensive tracking of all board activities and decisions"
+  }
+];
+
+const testimonial = {
+  quote: "Govrn has simplified our document management tremendously, making our meeting preparations more efficient and allowing our board to focus on decision-making.",
+  author: "Pierre Hermant",
+  role: "CEO",
+  company: "Finance & Invest Brussels",
+  image: "https://media.licdn.com/dms/image/C4D03AQFPYn85d5YqQw/profile-displayphoto-shrink_800_800/0/1516238871440?e=1714003200&v=beta&t=Hs_Oi_Qh_Hs_Oi_Qh_Hs_Oi_Qh_Hs_Oi_Qh"
+};
+---
+
+<Layout title="Board Management Software for CEOs | Govrn">
+  <main class="pt-24">
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <div class="inline-flex items-center rounded-full px-4 py-1 text-sm font-medium bg-primary/10 text-primary mb-8">
+              For CEOs
+            </div>
+            <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
+              Control Your Board's
+              <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
+                Information Flow
+              </span>
+            </h1>
+            <p class="text-xl text-gray-600 leading-relaxed mb-12">
+              Take control of your board communication with intelligent tools that help you manage information flow, ensure timely updates, and maintain security.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="/request-demo"
+                class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                Request Demo
+              </a>
+              <a
+                href="/contact"
+                class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-gray-900 bg-white border-2 border-gray-200 hover:border-primary/20 hover:bg-gray-50 transition-colors duration-200"
+              >
+                Contact Sales
+              </a>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-3xl transform rotate-3"></div>
+            <img
+              src="https://k0n.abe.mytemp.website/wp-content/uploads/2024/10/Untitled-design-1.png"
+              alt="Govrn Platform Interface"
+              class="relative rounded-2xl shadow-2xl"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Challenges Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            CEO Challenges We Solve
+          </h2>
+          <p class="text-xl text-gray-600">
+            Address key information management and communication challenges with our comprehensive solution
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {challenges.map(challenge => (
+            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+              <div class="text-3xl mb-4">{challenge.icon}</div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">{challenge.title}</h3>
+              <p class="text-gray-600">{challenge.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Purpose-Built for CEOs
+          </h2>
+          <p class="text-xl text-gray-600">
+            Tools designed to give you complete control over board information and communication
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          {features.map(feature => (
+            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+              <div class="text-3xl mb-4">{feature.icon}</div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
+              <p class="text-gray-600 mb-6">{feature.description}</p>
+              <ul class="space-y-3">
+                {feature.benefits.map(benefit => (
+                  <li class="flex items-center text-gray-600">
+                    <svg class="h-5 w-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    {benefit}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Security Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Enterprise-Grade Security
+          </h2>
+          <p class="text-xl text-gray-600">
+            Protect sensitive board communications with industry-leading security measures
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          {securityFeatures.map(feature => (
+            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+              <div class="text-3xl mb-4">{feature.icon}</div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
+              <p class="text-gray-600">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gradient-to-br from-primary to-blue-600 rounded-2xl overflow-hidden">
+          <div class="grid lg:grid-cols-2 gap-8 p-12">
+            <div class="text-white">
+              <blockquote class="text-2xl font-medium mb-8">
+                "{testimonial.quote}"
+              </blockquote>
+              <div class="flex items-center space-x-4">
+                <img
+                  src={testimonial.image}
+                  alt={testimonial.author}
+                  class="w-12 h-12 rounded-full object-cover"
+                />
+                <div>
+                  <div class="font-semibold">{testimonial.author}</div>
+                  <div class="text-white/80">{testimonial.role}</div>
+                  <div class="text-white/80">{testimonial.company}</div>
+                </div>
+              </div>
+            </div>
+            <div class="relative lg:text-right">
+              <a
+                href="/case-studies/finance-invest-brussels"
+                class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-primary bg-white hover:bg-gray-50 transition-colors duration-200"
+              >
+                Read Case Study
+                <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <CTA />
+  </main>
+</Layout>
