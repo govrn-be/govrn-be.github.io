@@ -1,0 +1,28 @@
+---
+interface Props {
+  date: string;
+}
+
+const { date } = Astro.props;
+---
+
+<div class="max-w-2xl mx-auto mb-12 bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+  <div class="text-left space-y-4">
+    <div class="border-b border-gray-200 pb-4">
+      <h2 class="text-lg font-semibold text-gray-900">Board Resolution #404</h2>
+      <p class="text-sm text-gray-500">Date: {date}</p>
+    </div>
+    <div class="prose prose-sm">
+      <p class="text-gray-600">
+        WHEREAS, the requested page cannot be found;<br>
+        RESOLVED, that the user shall be redirected to a more suitable destination.
+      </p>
+    </div>
+    <div class="pt-4">
+      <div class="flex items-center justify-between text-sm text-gray-500">
+        <span>Status: Approved</span>
+        <span>Vote: Unanimous</span>
+      </div>
+    </div>
+  </div>
+</div>
