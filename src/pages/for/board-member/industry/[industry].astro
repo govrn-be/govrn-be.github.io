@@ -2,9 +2,9 @@
 import Layout from '../../../../layouts/Layout.astro';
 import CTA from '../../../../components/CTA.astro';
 import IndustryRegulations from '../../../../components/regulations/IndustryRegulations.astro';
-import HeroSection from '../../../../components/industries/HeroSection.astro';
-import ChallengesSection from '../../../../components/industries/ChallengesSection.astro';
-import FeaturesSection from '../../../../components/industries/FeaturesSection.astro';
+import BoardMemberHero from '../../../../components/industries/BoardMemberHero.astro';
+import IndustryChallenges from '../../../../components/industries/IndustryChallenges.astro';
+import IndustryFeatures from '../../../../components/industries/IndustryFeatures.astro';
 import TestimonialSection from '../../../../components/industries/TestimonialSection.astro';
 
 // Import industry data
@@ -29,15 +29,15 @@ const testimonial = testimonials[industry];
 
 // SEO metadata based on industry
 const seoTitles = {
-  'financial-services': 'Financial Services Board Management Software | Govrn',
-  'healthcare': 'Healthcare Board Management Platform | HIPAA Compliant | Govrn',
-  'real-estate': 'Real Estate Board Management Software | Portfolio Oversight | Govrn'
+  'financial-services': 'Financial Services Board Member Software | Govrn',
+  'healthcare': 'Healthcare Board Member Platform | HIPAA Compliant | Govrn',
+  'real-estate': 'Real Estate Board Member Software | Portfolio Oversight | Govrn'
 };
 
 const seoDescriptions = {
-  'financial-services': 'Transform your financial services board management with AI-powered tools for compliance, risk management, and strategic decision-making.',
-  'healthcare': 'HIPAA-compliant board management platform designed for healthcare organizations. Streamline governance while ensuring regulatory compliance.',
-  'real-estate': 'Optimize your real estate board operations with comprehensive portfolio management and investment analysis tools.'
+  'financial-services': 'Transform your financial services board leadership with AI-powered tools for compliance, risk management, and strategic decision-making.',
+  'healthcare': 'HIPAA-compliant board member platform designed for healthcare organizations. Drive excellence in governance while ensuring compliance.',
+  'real-estate': 'Optimize your real estate board oversight with comprehensive portfolio management and investment analysis tools.'
 };
 ---
 
@@ -46,7 +46,7 @@ const seoDescriptions = {
   description={seoDescriptions[industry] || industryInfo.description}
 >
   <main class="pt-24">
-    <HeroSection
+    <BoardMemberHero
       industry={industry}
       icon={industryInfo.icon}
       name={industryInfo.name}
@@ -60,13 +60,15 @@ const seoDescriptions = {
       </div>
     </section>
 
-    <ChallengesSection
+    <IndustryChallenges
       name={industryInfo.name}
+      role="board-member"
       challenges={industryInfo.challenges}
     />
 
-    <FeaturesSection
+    <IndustryFeatures
       name={industryInfo.name}
+      role="board-member"
       features={industryInfo.features}
     />
 

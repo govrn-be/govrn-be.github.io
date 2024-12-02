@@ -2,9 +2,9 @@
 import Layout from '../../../../layouts/Layout.astro';
 import CTA from '../../../../components/CTA.astro';
 import IndustryRegulations from '../../../../components/regulations/IndustryRegulations.astro';
-import HeroSection from '../../../../components/industries/HeroSection.astro';
-import ChallengesSection from '../../../../components/industries/ChallengesSection.astro';
-import FeaturesSection from '../../../../components/industries/FeaturesSection.astro';
+import BoardSecretaryHero from '../../../../components/industries/BoardSecretaryHero.astro';
+import IndustryChallenges from '../../../../components/industries/IndustryChallenges.astro';
+import IndustryFeatures from '../../../../components/industries/IndustryFeatures.astro';
 import TestimonialSection from '../../../../components/industries/TestimonialSection.astro';
 
 // Import industry data
@@ -46,7 +46,7 @@ const seoDescriptions = {
   description={seoDescriptions[industry] || industryInfo.description}
 >
   <main class="pt-24">
-    <HeroSection
+    <BoardSecretaryHero
       industry={industry}
       icon={industryInfo.icon}
       name={industryInfo.name}
@@ -60,13 +60,15 @@ const seoDescriptions = {
       </div>
     </section>
 
-    <ChallengesSection
+    <IndustryChallenges
       name={industryInfo.name}
+      role="board-secretary"
       challenges={industryInfo.challenges}
     />
 
-    <FeaturesSection
+    <IndustryFeatures
       name={industryInfo.name}
+      role="board-secretary"
       features={industryInfo.features}
     />
 
