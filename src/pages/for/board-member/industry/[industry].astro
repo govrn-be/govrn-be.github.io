@@ -1,0 +1,77 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+import CTA from '../../../../components/CTA.astro';
+import IndustryRegulations from '../../../../components/regulations/IndustryRegulations.astro';
+import HeroSection from '../../../../components/industries/HeroSection.astro';
+import ChallengesSection from '../../../../components/industries/ChallengesSection.astro';
+import FeaturesSection from '../../../../components/industries/FeaturesSection.astro';
+import TestimonialSection from '../../../../components/industries/TestimonialSection.astro';
+
+// Import industry data
+import { industryData, testimonials } from '../../../../data/board-member-industries';
+
+export function getStaticPaths() {
+  return Object.keys(industryData).map(industry => ({
+    params: { industry }
+  }));
+}
+
+const { industry } = Astro.params;
+const industryInfo = industryData[industry];
+
+// Redirect if invalid industry
+if (!industryInfo) {
+  return Astro.redirect('/for/board-member');
+}
+
+// Get testimonial for this industry
+const testimonial = testimonials[industry];
+
+// SEO metadata based on industry
+const seoTitles = {
+  'financial-services': 'Financial Services Board Management Software | Govrn',
+  'healthcare': 'Healthcare Board Management Platform | HIPAA Compliant | Govrn',
+  'real-estate': 'Real Estate Board Management Software | Portfolio Oversight | Govrn'
+};
+
+const seoDescriptions = {
+  'financial-services': 'Transform your financial services board management with AI-powered tools for compliance, risk management, and strategic decision-making.',
+  'healthcare': 'HIPAA-compliant board management platform designed for healthcare organizations. Streamline governance while ensuring regulatory compliance.',
+  'real-estate': 'Optimize your real estate board operations with comprehensive portfolio management and investment analysis tools.'
+};
+---
+
+<Layout 
+  title={seoTitles[industry] || `${industryInfo.name} Board Member Software - Govrn`}
+  description={seoDescriptions[industry] || industryInfo.description}
+>
+  <main class="pt-24">
+    <HeroSection
+      industry={industry}
+      icon={industryInfo.icon}
+      name={industryInfo.name}
+      description={industryInfo.description}
+    />
+
+    <!-- Industry Regulations -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <IndustryRegulations industry={industry} />
+      </div>
+    </section>
+
+    <ChallengesSection
+      name={industryInfo.name}
+      challenges={industryInfo.challenges}
+    />
+
+    <FeaturesSection
+      name={industryInfo.name}
+      features={industryInfo.features}
+    />
+
+    <TestimonialSection testimonial={testimonial} />
+
+    <CTA />
+  </main>
+</Layout>

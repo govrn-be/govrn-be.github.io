@@ -1,0 +1,331 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+const boardRoles = [
+  {
+    title: "Independent Director",
+    icon: "⚖️",
+    description: "Make objective decisions and provide unbiased oversight with specialized tools for independent directors",
+    link: "/for/independent-director",
+    features: [
+      "Private communication channels",
+      "Independent analysis tools",
+      "Conflict management"
+    ]
+  },
+  {
+    title: "Shareholder Director",
+    icon: "📈",
+    description: "Balance shareholder interests with company needs using our comprehensive stakeholder management tools",
+    link: "/for/shareholder-director",
+    features: [
+      "Stakeholder communication",
+      "Investment oversight",
+      "Performance tracking"
+    ]
+  }
+];
+
+const industries = [
+  {
+    id: "financial-services",
+    name: "Financial Services",
+    icon: "🏦",
+    description: "Banking, Insurance, and Investment firms",
+    features: [
+      "Regulatory compliance automation",
+      "Risk monitoring dashboards",
+      "Secure document management"
+    ]
+  },
+  {
+    id: "healthcare",
+    name: "Healthcare",
+    icon: "🏥",
+    description: "Hospitals, Medical Devices, and Healthcare providers",
+    features: [
+      "HIPAA compliance tools",
+      "Clinical governance support",
+      "Quality assurance tracking"
+    ]
+  },
+  {
+    id: "real-estate",
+    name: "Real Estate",
+    icon: "🏢",
+    description: "Property Investment and Management",
+    features: [
+      "Portfolio oversight tools",
+      "Investment tracking",
+      "Asset management"
+    ]
+  }
+];
+
+const commonFeatures = [
+  {
+    title: "Intelligent Insights Hub",
+    description: "Lead with confidence using AI-powered analytics that transform complex data into clear, actionable insights",
+    icon: "🎯",
+    benefits: [
+      "Real-time performance metrics",
+      "Predictive analytics",
+      "Strategic recommendations",
+      "Trend analysis"
+    ]
+  },
+  {
+    title: "Seamless Collaboration",
+    description: "Make your voice heard with powerful tools that enhance your impact on every board discussion",
+    icon: "💫",
+    benefits: [
+      "Real-time annotations",
+      "Secure messaging",
+      "Virtual meeting tools",
+      "Document collaboration"
+    ]
+  },
+  {
+    title: "Strategic Command Center",
+    description: "Take pride in your oversight with comprehensive tools that keep you informed and in control",
+    icon: "🌟",
+    benefits: [
+      "Custom dashboards",
+      "Risk monitoring",
+      "Compliance tracking",
+      "Performance analytics"
+    ]
+  }
+];
+
+const responsibilities = [
+  {
+    icon: "🎯",
+    title: "Strategic Oversight",
+    description: "Guide organizational direction with AI-powered insights and comprehensive market analysis"
+  },
+  {
+    icon: "⚖️",
+    title: "Fiduciary Duty",
+    description: "Make informed decisions with real-time access to critical financial and operational data"
+  },
+  {
+    icon: "🤝",
+    title: "Stakeholder Management",
+    description: "Balance diverse interests with tools for effective stakeholder communication and engagement"
+  },
+  {
+    icon: "📊",
+    title: "Performance Monitoring",
+    description: "Track organizational performance with customizable dashboards and automated reporting"
+  }
+];
+---
+
+<Layout title="Board Member Software - Govrn Board Management Platform">
+  <main class="pt-24">
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <div class="inline-flex items-center rounded-full px-4 py-1 text-sm font-medium bg-primary/10 text-primary mb-8">
+              Board Member Solutions
+            </div>
+            <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
+              Elevate Your Board Leadership with
+              <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
+                Intelligent Tools
+              </span>
+            </h1>
+            <p class="text-xl text-gray-600 leading-relaxed mb-12">
+              Whether you're an independent director, shareholder representative, or industry specialist, Govrn provides the tools you need to make informed decisions and drive organizational success.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="/request-demo"
+                class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                Request Demo
+              </a>
+              <a
+                href="/contact"
+                class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-gray-900 bg-white border-2 border-gray-200 hover:border-primary/20 hover:bg-gray-50 transition-colors duration-200"
+              >
+                Contact Sales
+              </a>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-3xl transform rotate-3"></div>
+            <img
+              src="https://k0n.abe.mytemp.website/wp-content/uploads/2024/10/Untitled-design-1.png"
+              alt="Govrn Platform Interface"
+              class="relative rounded-2xl shadow-2xl"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Board Responsibilities -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Supporting Your Board Responsibilities
+          </h2>
+          <p class="text-xl text-gray-600">
+            Comprehensive tools to help you fulfill your duties and drive organizational success
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {responsibilities.map(item => (
+            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+              <div class="text-3xl mb-4">{item.icon}</div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">{item.title}</h3>
+              <p class="text-gray-600">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Board Roles -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Solutions for Your Role
+          </h2>
+          <p class="text-xl text-gray-600">
+            Discover tools tailored to your specific board position
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          {boardRoles.map(role => (
+            <a
+              href={role.link}
+              class="group bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+            >
+              <div class="text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                {role.icon}
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors">
+                {role.title}
+              </h3>
+              <p class="text-gray-600 mb-6">{role.description}</p>
+              <ul class="space-y-3 mb-6">
+                {role.features.map(feature => (
+                  <li class="flex items-center text-gray-600">
+                    <svg class="h-5 w-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <div class="inline-flex items-center text-primary group-hover:translate-x-2 transition-transform duration-300">
+                View Role-Specific Solutions
+                <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Common Features -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Tools for Every Board Member
+          </h2>
+          <p class="text-xl text-gray-600">
+            Essential features that empower all board members to make an impact
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          {commonFeatures.map(feature => (
+            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+              <div class="text-3xl mb-4">{feature.icon}</div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
+              <p class="text-gray-600 mb-6">{feature.description}</p>
+              <ul class="space-y-3">
+                {feature.benefits.map(benefit => (
+                  <li class="flex items-center text-gray-600">
+                    <svg class="h-5 w-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    {benefit}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Industry Selection -->
+    <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            Industry-Specific Solutions
+          </h2>
+          <p class="text-xl text-gray-600">
+            Discover additional tools and features tailored to your industry's unique requirements
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          {industries.map(industry => (
+            <a
+              href={`/for/board-member/industry/${industry.id}`}
+              class="group bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+            >
+              <div class="text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                {industry.icon}
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors">
+                {industry.name}
+              </h3>
+              <p class="text-gray-600 mb-6">{industry.description}</p>
+              <ul class="space-y-3 mb-6">
+                {industry.features.map(feature => (
+                  <li class="flex items-center text-gray-600">
+                    <svg class="h-5 w-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <div class="inline-flex items-center text-primary group-hover:translate-x-2 transition-transform duration-300">
+                View Industry Solutions
+                <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

@@ -1,0 +1,125 @@
+---
+interface Props {
+  industry: string;
+}
+
+const { industry } = Astro.props;
+
+const regulations = {
+  "financial-services": [
+    {
+      name: "CSRD",
+      description: "Corporate Sustainability Reporting Directive requirements for ESG reporting and disclosure",
+      impact: "Mandatory ESG reporting",
+      deadline: "2024-2025",
+      solution: "Automated ESG reporting and tracking with real-time compliance monitoring"
+    },
+    {
+      name: "Basel IV",
+      description: "Enhanced capital requirements and risk management standards",
+      impact: "Capital allocation changes",
+      deadline: "2025",
+      solution: "Risk assessment tools and regulatory compliance tracking"
+    },
+    {
+      name: "GDPR",
+      description: "Data protection and privacy regulations for EU citizens",
+      impact: "Privacy compliance",
+      deadline: "Ongoing",
+      solution: "Built-in privacy controls and data protection features"
+    }
+  ],
+  "healthcare": [
+    {
+      name: "HIPAA",
+      description: "Health Insurance Portability and Accountability Act requirements",
+      impact: "Patient data protection",
+      deadline: "Ongoing",
+      solution: "End-to-end encryption and secure data handling"
+    },
+    {
+      name: "MDR",
+      description: "Medical Device Regulation compliance requirements",
+      impact: "Device documentation",
+      deadline: "Ongoing",
+      solution: "Document management and version control"
+    },
+    {
+      name: "GDPR Health",
+      description: "Special provisions for health data under GDPR",
+      impact: "Health data privacy",
+      deadline: "Ongoing",
+      solution: "Healthcare-specific privacy controls"
+    }
+  ],
+  "real-estate": [
+    {
+      name: "AIFMD",
+      description: "Alternative Investment Fund Managers Directive requirements",
+      impact: "Fund management",
+      deadline: "Ongoing",
+      solution: "Investment tracking and reporting tools"
+    },
+    {
+      name: "ESG Reporting",
+      description: "Environmental, Social, and Governance reporting requirements",
+      impact: "Sustainability reporting",
+      deadline: "2024",
+      solution: "ESG metrics tracking and reporting"
+    },
+    {
+      name: "SFDR",
+      description: "Sustainable Finance Disclosure Regulation",
+      impact: "Sustainability disclosure",
+      deadline: "2024",
+      solution: "Automated disclosure and reporting tools"
+    }
+  ]
+};
+---
+
+<div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100 mb-8">
+  <div class="text-center max-w-2xl mx-auto mb-8">
+    <h3 class="text-2xl font-bold text-gray-900 mb-3">Industry-Specific Regulations</h3>
+    <p class="text-gray-600">See how Govrn helps you stay compliant with key regulations</p>
+  </div>
+
+  <div class="grid gap-6">
+    {regulations[industry]?.map(reg => (
+      <div class="bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-xl p-6 border border-primary/10 transform transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+              <span class="text-primary font-semibold">{reg.name.slice(0, 2)}</span>
+            </div>
+            <h4 class="text-lg font-semibold text-primary">{reg.name}</h4>
+          </div>
+          <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-primary/10 text-primary">
+            Deadline: {reg.deadline}
+          </span>
+        </div>
+        <p class="text-gray-600 mb-6">{reg.description}</p>
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div class="bg-white/50 rounded-lg p-4">
+            <div class="flex items-center gap-2 mb-2">
+              <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              <span class="font-medium text-gray-900">Impact</span>
+            </div>
+            <p class="text-gray-600">{reg.impact}</p>
+          </div>
+          <div class="bg-white/50 rounded-lg p-4">
+            <div class="flex items-center gap-2 mb-2">
+              <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+              <span class="font-medium text-gray-900">Govrn Solution</span>
+            </div>
+            <p class="text-gray-600">{reg.solution}</p>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>

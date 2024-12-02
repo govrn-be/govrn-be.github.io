@@ -9,7 +9,8 @@ const personas = [
       "Strategic decision support",
       "Performance analytics",
       "Executive dashboards"
-    ]
+    ],
+    link: "/for/ceo"
   },
   {
     role: "Board Professionals & Admin",
@@ -20,7 +21,8 @@ const personas = [
       "Document distribution",
       "Task management",
       "Stakeholder communications"
-    ]
+    ],
+    link: "/for/board-secretary"
   },
   {
     role: "Directors & Trustees",
@@ -31,7 +33,8 @@ const personas = [
       "Meeting preparation tools",
       "Voting capabilities",
       "Strategic insights"
-    ]
+    ],
+    link: "/for/board-member"
   },
   {
     role: "General Counsels",
@@ -42,7 +45,8 @@ const personas = [
       "Risk management tools",
       "Secure document vault",
       "Audit trails"
-    ]
+    ],
+    link: "/for/general-counsel"
   }
 ];
 ---
@@ -60,7 +64,10 @@ const personas = [
 
     <div class="mt-20 grid gap-8 lg:grid-cols-2">
       {personas.map((persona, index) => (
-        <div class="relative group">
+        <a 
+          href={persona.link}
+          class="relative group"
+        >
           <div class="absolute inset-0 bg-gradient-to-r from-primary to-blue-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
           <div class="relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
             <div class="flex items-start space-x-6">
@@ -68,7 +75,7 @@ const personas = [
                 <span class="text-3xl">{persona.icon}</span>
               </div>
               <div class="flex-1">
-                <h3 class="text-2xl font-bold text-gray-900 mb-3">{persona.role}</h3>
+                <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">{persona.role}</h3>
                 <p class="text-gray-600 mb-6 leading-relaxed">{persona.description}</p>
                 <ul class="space-y-3">
                   {persona.features.map(feature => (
@@ -80,10 +87,16 @@ const personas = [
                     </li>
                   ))}
                 </ul>
+                <div class="mt-6 inline-flex items-center text-primary group-hover:translate-x-2 transition-transform duration-300">
+                  Learn More
+                  <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </a>
       ))}
     </div>
 
