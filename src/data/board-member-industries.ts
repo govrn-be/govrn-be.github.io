@@ -178,23 +178,23 @@ export const testimonials = {
     author: "Pierre Hermant",
     role: "CEO",
     company: "Finance & Invest Brussels",
-    image: "https://media.licdn.com/dms/image/C4D03AQFPYn85d5YqQw/profile-displayphoto-shrink_800_800/0/1516238871440?e=1714003200&v=beta&t=Hs_Oi_Qh_Hs_Oi_Qh_Hs_Oi_Qh_Hs_Oi_Qh",
+    image: "/fib-pierre.webp",
     link: "/case-studies/finance-invest-brussels"
   },
   'healthcare': {
-    quote: "The healthcare-specific features help us maintain compliance while focusing on improving patient care and operational efficiency.",
-    author: "Dr. Sarah Johnson",
-    role: "Board Member",
-    company: "Major Healthcare Network",
-    image: "https://k0n.abe.mytemp.website/wp-content/uploads/2024/10/Untitled-design-1.png",
-    link: "#"
+    quote: "Govrn has transformed how we make board decisions, providing clear insights into complex financial data and regulatory requirements.",
+    author: "Lore Werbrouck",
+    role: "General Counsel",
+    company: "Van de Velde",
+    image: "/vdv-lore-portait.jpg",
+    link: "/case-studies/van-de-velde"
   },
   'real-estate': {
     quote: "Govrn provides the insights we need to make informed property investment decisions and optimize our portfolio performance.",
     author: "Nathalie Byl",
     role: "Paralegal en Compliance Officer",
     company: "Care Property Invest",
-    image: "https://media.licdn.com/dms/image/C4E03AQGjf89oyqwM9g/profile-displayphoto-shrink_800_800/0/1517013816908?e=1714003200&v=beta&t=X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8",
+    image: "/careproperty-logo.png",
     link: "/case-studies/care-property-invest"
   }
 };

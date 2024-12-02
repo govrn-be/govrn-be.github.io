@@ -175,26 +175,26 @@ export const industryData = {
 export const testimonials = {
   'financial-services': {
     quote: "Govrn has transformed our board administration, making regulatory compliance and document management effortless.",
-    author: "Sarah Miller",
-    role: "Board Secretary",
+    author: "Pierre Hermant",
+    role: "CEO",
     company: "Finance & Invest Brussels",
-    image: "https://media.licdn.com/dms/image/C4D03AQFPYn85d5YqQw/profile-displayphoto-shrink_800_800/0/1516238871440?e=1714003200&v=beta&t=Hs_Oi_Qh_Hs_Oi_Qh_Hs_Oi_Qh_Hs_Oi_Qh",
+    image: "/fib-pierre.webp",
     link: "/case-studies/finance-invest-brussels"
   },
   'healthcare': {
-    quote: "Managing healthcare board documentation while maintaining HIPAA compliance has never been easier.",
-    author: "Emily Chen",
-    role: "Corporate Secretary",
-    company: "Major Healthcare Network",
-    image: "https://k0n.abe.mytemp.website/wp-content/uploads/2024/10/Untitled-design-1.png",
-    link: "#"
+    quote: "Govrn has transformed how we manage our board operations, bringing efficiency and clarity to our governance processes.",
+    author: "Lore Werbrouck",
+    role: "General Counsel",
+    company: "Van de Velde",
+    image: "/vdv-lore-portait.jpg",
+    link: "/case-studies/van-de-velde"
   },
   'real-estate': {
     quote: "Govrn has streamlined our property portfolio documentation and board meeting management.",
-    author: "Michael Roberts",
-    role: "Board Administrator",
+    author: "Nathalie Byl",
+    role: "Paralegal en Compliance Officer",
     company: "Care Property Invest",
-    image: "https://media.licdn.com/dms/image/C4E03AQGjf89oyqwM9g/profile-displayphoto-shrink_800_800/0/1517013816908?e=1714003200&v=beta&t=X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8X8",
+    image: "/careproperty-logo.png",
     link: "/case-studies/care-property-invest"
   }
 };
