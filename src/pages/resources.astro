@@ -15,21 +15,21 @@ const categories = [
         readTime: "10 min read",
         image: "/applications-picture-meeting.png",
         link: "/guides/getting-started"
-      },
-      {
-        title: "Best Practices for Board Document Management",
-        description: "Learn how to organize and secure your board documents effectively",
-        type: "Tutorial",
-        readTime: "8 min read",
-        image: "/fib-offices.webp"
-      },
-      {
-        title: "Maximizing Board Meeting Efficiency",
-        description: "Tips and strategies for running more productive board meetings",
-        type: "Guide",
-        readTime: "12 min read",
-        image: "/fib-pierre.webp"
       }
+      // {
+      //   title: "Best Practices for Board Document Management",
+      //   description: "Learn how to organize and secure your board documents effectively",
+      //   type: "Tutorial",
+      //   readTime: "8 min read",
+      //   image: "/fib-offices.webp"
+      // },
+      // {
+      //   title: "Maximizing Board Meeting Efficiency",
+      //   description: "Tips and strategies for running more productive board meetings",
+      //   type: "Guide",
+      //   readTime: "12 min read",
+      //   image: "/fib-pierre.webp"
+      // }
     ]
   },
   {
@@ -207,39 +207,38 @@ const latestPosts = sortedPosts.slice(0, 6);
 
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {category.resources.map(resource => (
-              <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-                <img
-                  src={resource.image}
-                  alt={resource.title}
-                  class="w-full h-48 object-cover"
-                />
-                <div class="p-6">
-                  <div class="flex items-center justify-between mb-4">
-                    <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
-                      {resource.type}
+              <a href={resource.link || "#"} class="block">
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                  <img
+                    src={resource.image}
+                    alt={resource.title}
+                    class="w-full h-48 object-cover"
+                  />
+                  <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                      <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
+                        {resource.type}
+                      </span>
+                      {resource.readTime && (
+                        <span class="text-sm text-gray-500">{resource.readTime}</span>
+                      )}
+                      {resource.date && (
+                        <span class="text-sm text-gray-500">{resource.date}</span>
+                      )}
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                      {resource.title}
+                    </h3>
+                    <p class="text-gray-600 mb-4">{resource.description}</p>
+                    <span class="text-primary hover:text-primary/90 font-medium inline-flex items-center group">
+                      Learn More
+                      <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
                     </span>
-                    {resource.readTime && (
-                      <span class="text-sm text-gray-500">{resource.readTime}</span>
-                    )}
-                    {resource.date && (
-                      <span class="text-sm text-gray-500">{resource.date}</span>
-                    )}
                   </div>
-                  <h3 class="text-xl font-semibold text-gray-900 mb-2">
-                    {resource.title}
-                  </h3>
-                  <p class="text-gray-600 mb-4">{resource.description}</p>
-                  <a
-                    href={resource.link || "#"}
-                    class="text-primary hover:text-primary/90 font-medium inline-flex items-center group"
-                  >
-                    Learn More
-                    <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                  </a>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
