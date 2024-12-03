@@ -5,6 +5,7 @@ import Layout from '../../layouts/Layout.astro';
 import BlogContent from '../../components/blog/BlogContent.astro';
 import BlogCard from '../../components/blog/BlogCard.astro';
 import CTA from '../../components/CTA.astro';
+import SharingButtons from '../../components/socials/SharingButtons.astro';
 
 interface Props {
   entry: CollectionEntry<'blog'>;
@@ -71,6 +72,7 @@ const formattedDate = entry.data.pubDate.toLocaleDateString('en-US', {
         <Content />
       </BlogContent>
 
+      <SharingButtons title={entry.data.title} message={entry.data.description} href={Astro.url.href} />
       <footer class="mt-16 pt-8 border-t border-gray-200">
         <div class="flex flex-wrap gap-2">
           {entry.data.tags.map(tag => (
@@ -79,7 +81,6 @@ const formattedDate = entry.data.pubDate.toLocaleDateString('en-US', {
             </span>
           ))}
         </div>
-        
       </footer>
     </article>
     <section class="py-20 bg-gray-50">

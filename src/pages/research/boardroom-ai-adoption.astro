@@ -6,6 +6,8 @@ import KeyFindings from '../../components/research/KeyFindings.astro';
 import Solutions from '../../components/research/Solutions.astro';
 import Methodology from '../../components/research/Methodology.astro';
 import FutureOutlook from '../../components/research/FutureOutlook.astro';
+import CTA from '../../components/CTA.astro';
+import SharingButtons from '../../components/socials/SharingButtons.astro';
 ---
 
 <Layout title="The Future of AI in the Boardroom | Govrn Research">
@@ -47,8 +49,9 @@ import FutureOutlook from '../../components/research/FutureOutlook.astro';
     <Solutions />
     <Methodology />
     <FutureOutlook />
-
+    
     <!-- Author Info -->
+    <SharingButtons title="The Future of AI in the Boardroom | Govrn Research" message="A comprehensive study examining how artificial intelligence is transforming board management and governance in the digital age." href={Astro.url.href} />
     <section class="py-16 bg-gray-50">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid sm:grid-cols-2 gap-8">
@@ -67,5 +70,6 @@ import FutureOutlook from '../../components/research/FutureOutlook.astro';
         </div>
       </div>
     </section>
+    <CTA />
   </main>
 </Layout>
