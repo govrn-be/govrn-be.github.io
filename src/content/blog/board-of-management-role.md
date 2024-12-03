@@ -1,7 +1,7 @@
 ---
 title: "The Role of a Board of Management in an Organization"
 description: "Explore the critical functions and responsibilities of a Board of Management in steering organizational success, including strategic planning, oversight, and risk management."
-pubDate: 2024-12-03
+pubDate: 2024-01-03
 author: "Govrn"
 authorRole: "Govrn Editorial Team"
 image: "/puzzle.jpg"

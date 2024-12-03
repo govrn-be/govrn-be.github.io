@@ -1,7 +1,7 @@
 ---
 title: "What’s a Board Pack and How Board Management Software Can Help?"
 description: "Explore the significance of board packs in corporate governance and discover how board management software can streamline their creation, generation, and distribution for effective decision-making."
-pubDate: 2024-12-03
+pubDate: 2024-10-23
 author: "Govrn"
 authorRole: "Govrn Editorial Team"
 image: "/book.jpg"

@@ -1,7 +1,7 @@
 ---
 title: "What is a Steering Committee? Definition, Roles, and Responsibilities"
 description: "Explore the pivotal role of steering committees in guiding projects and initiatives, including their key responsibilities and operational dynamics."
-pubDate: 2024-12-03
+pubDate: 2024-04-03
 author: "Govrn"
 authorRole: "Govrn Editorial Team"
 image: "/meeting-committee.jpg"
