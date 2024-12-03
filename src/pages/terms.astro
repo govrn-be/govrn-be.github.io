@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TermsLayout from '../components/terms/TermsLayout.astro';
+import TableOfContents from '../components/terms/TableOfContents.astro';
+import TermsHeader from '../components/terms/TermsHeader.astro';
+import { termsSections } from '../data/terms-sections';
+
+import TermsContent from '../components/terms/TermsContent.astro';
+const lastUpdate = "April 2021";
+---
+
+<Layout title="Terms and Conditions - Govrn" description="Please read these terms and conditions carefully before using our services.">
+  <main class="pt-24">
+    <TermsLayout title="Terms and Conditions">
+      <TableOfContents slot="sidebar" className="hidden lg:block sticky top-24" />
+      
+      <div>
+        <TermsHeader lastUpdate={lastUpdate} />
+        {termsSections.map((section) => (
+          <TermsContent key={section.key} title={section.title} sections={section.sections} />
+        ))}
+        
+      </div>
+    </TermsLayout>
+  </main>
+</Layout>

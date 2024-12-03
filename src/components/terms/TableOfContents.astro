@@ -1,0 +1,25 @@
+---
+import { termsSections } from '../../data/terms-sections';
+
+interface Props {
+  className?: string;
+}
+
+const { className = "" } = Astro.props;
+---
+
+<nav class={`space-y-1 ${className} sticky top-24`}>
+  <h3 class="font-semibold text-gray-900 mb-4 px-4">Quick Navigation</h3>
+  <ul class="space-y-1">
+    {termsSections.map(section => (
+      <li>
+        <a 
+          href={`#${section.key}`} 
+          class="block px-4 py-2 text-gray-600 hover:bg-primary/5 hover:text-primary rounded-lg transition-colors"
+        >
+          {section.title}
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>
