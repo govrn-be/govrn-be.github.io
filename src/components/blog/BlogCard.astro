@@ -1,0 +1,65 @@
+---
+interface Props {
+  post: {
+    slug: string;
+    data: {
+      title: string;
+      description: string;
+      pubDate: Date;
+      author: string;
+      authorRole: string;
+      image: string;
+      category: string;
+      tags: string[];
+    };
+  };
+  featured?: boolean;
+}
+
+const { post, featured = false } = Astro.props;
+const formattedDate = post.data.pubDate.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+---
+
+<a href={`/blog/${post.slug}`} class="block">
+  <article class={`group bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden ${featured ? 'lg:col-span-2 lg:grid lg:grid-cols-2 lg:gap-8' : ''}`}>
+    <div class="relative overflow-hidden aspect-video lg:aspect-auto">
+      <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      <img
+        src={post.data.image}
+        alt={post.data.title}
+        class="w-full h-[10rem] object-cover transform group-hover:scale-105 transition-transform duration-500"
+      />
+    </div>
+    <div class="p-8">
+      <div class="flex items-center justify-between mb-4">
+        <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
+          {post.data.category}
+        </span>
+        <time datetime={post.data.pubDate.toISOString()} class="text-sm text-gray-500">
+          {formattedDate}
+        </time>
+      </div>
+      <h3 class={`${featured ? 'text-2xl' : 'text-xl'} font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors duration-300`}>
+        {post.data.title}
+      </h3>
+      <p class="text-gray-600 mb-6 line-clamp-3">{post.data.description}</p>
+      
+      <div class="flex items-center justify-between">
+        <div class="text-sm">
+          <p class="font-medium text-gray-900">{post.data.author}</p>
+          <p class="text-gray-500">{post.data.authorRole}</p>
+        </div>
+        <span class="inline-flex items-center text-primary hover:text-primary/90 font-medium group/link">
+          Read More
+          <svg class="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </span>
+      </div>
+    </div>
+  </article>
+</a>
