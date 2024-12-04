@@ -4,7 +4,7 @@ description: "Discover how artificial intelligence is transforming board managem
 pubDate: 2026-03-15
 author: "Ludovic Laffineur"
 authorRole: "CTO at Govrn"
-image: "https://k0n.abe.mytemp.website/wp-content/uploads/2024/10/Untitled-design-1.png"
+image: "/realestate.jpg"
 category: "Technology"
 tags: ["AI", "Innovation", "Board Management", "Digital Transformation"]
 featured: false
