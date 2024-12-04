@@ -1,8 +1,5 @@
 export const initializeAnalytics = () => {
   // Initialize analytics (e.g., Google Analytics)
-  console.log('Analytics initialized');
-
-  // Initialize Google Analytics
   window.dataLayer = window.dataLayer || [];
   function gtag() {
     dataLayer.push(arguments);

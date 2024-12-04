@@ -123,6 +123,8 @@
 
   // Load saved preferences
   const loadPreferences = () => {
+    initializeAnalytics();
+    initializeMarketing();
     const preferences = getCookie('cookie-preferences');
     if (preferences) {
       const { analytics, marketing } = JSON.parse(preferences);
