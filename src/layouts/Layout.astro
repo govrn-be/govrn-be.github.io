@@ -14,6 +14,9 @@ const {
   description = "Govrn - Simplify Board Management Like Never Before. A smart platform to centralize your documents, automate tasks, and enhance collaboration.",
   image = "/default_sharing_meta.jpg",
 } = Astro.props;
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const url = canonicalUrl.href;
 ---
 
 <!doctype html>
@@ -40,6 +43,9 @@ const {
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={image} />
+
+    <link rel="canonical" href={url} />
+
 
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
