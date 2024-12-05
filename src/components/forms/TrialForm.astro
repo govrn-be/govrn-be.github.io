@@ -125,14 +125,6 @@ const {
 
   form?.addEventListener("submit", async (e) => {
     e.preventDefault();
-
-    // Here you would typically send the form data to your backend
-    // For demo purposes, we'll just show the success message
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: "form_submit",
-      formId: "trialForm",
-    });
     form.classList.add("hidden");
     success?.classList.remove("hidden");
   });
