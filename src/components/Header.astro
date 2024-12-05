@@ -16,6 +16,7 @@ const navItems = [
     ]
   },
   { label: "Pricing", href: "/pricing" },
+  { label: "Security", href: "/security" },
   { label: "Testimonials", href: "/testimonials" },
   { label: "Resources", href: "/resources" },
   { label: "About", href: "/about" }
@@ -29,7 +30,7 @@ const navItems = [
       <div class="flex items-center">
         <a href="/" class="flex items-center group">
           <img
-            src="/logo.webp"
+            src="https://www.govrn.com/web/image/website/1/logo/Govrn%20?unique=1c1c770"
             alt="Govrn Logo"
             class="h-8 transform transition-transform duration-200 group-hover:scale-105"
           />
@@ -71,6 +72,14 @@ const navItems = [
 
       <!-- Action Buttons -->
       <div class="flex items-center space-x-4">
+        <a 
+          href="https://app.govrn.com"
+          target="_blank"
+          rel="noopener noreferrer" 
+          class="hidden md:inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg text-primary border-2 border-primary/20 hover:bg-primary/5 transition-all duration-200"
+        >
+          Sign In
+        </a>
         <a 
           href="/try" 
           class="hidden md:inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg text-white bg-primary hover:bg-primary/90 shadow-sm hover:shadow-md transition-all duration-200"
@@ -125,10 +134,18 @@ const navItems = [
           )}
         </>
       ))}
-      <div class="pt-4">
+      <div class="pt-4 space-y-2">
+        <a 
+          href="https://app.govrn.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block w-full px-4 py-2 text-base font-medium text-primary border-2 border-primary/20 hover:bg-primary/5 rounded-lg transition-all duration-200 text-center"
+        >
+          Sign In
+        </a>
         <a 
           href="/try" 
-          class="block px-4 py-2 text-base font-medium text-white bg-primary hover:bg-primary/90 rounded-lg transition-all duration-200"
+          class="block w-full px-4 py-2 text-base font-medium text-white bg-primary hover:bg-primary/90 rounded-lg transition-all duration-200 text-center"
         >
           Try for Free
         </a>
