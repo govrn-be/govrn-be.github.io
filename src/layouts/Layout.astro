@@ -14,8 +14,9 @@ const {
   description = "Govrn - Simplify Board Management Like Never Before. A smart platform to centralize your documents, automate tasks, and enhance collaboration.",
   image = "/default_sharing_meta.jpg",
 } = Astro.props;
-
-const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+// remove .html in pathname
+const canonicalPath = Astro.url.pathname.replace(/\.html$/, '');
+const canonicalUrl = new URL(canonicalPath, Astro.site);
 const url = canonicalUrl.href;
 ---
 
