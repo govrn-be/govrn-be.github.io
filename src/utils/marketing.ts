@@ -4,5 +4,5 @@ export const initializeMarketing = () => {
 
 export const disableMarketing = () => {
   // Disable marketing tracking
-  console.log('Marketing cookies disabled');
+  console.log('Marketing c"ookies disabled');
 };
