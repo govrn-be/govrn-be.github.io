@@ -186,7 +186,7 @@ export const testimonials = {
     author: "Lore Werbrouck",
     role: "General Counsel",
     company: "Van de Velde",
-    image: "/vdv-lore-portait.jpg",
+    image: "/vdv-lore-portrait.jpg",
     link: "/case-studies/van-de-velde"
   },
   'real-estate': {
