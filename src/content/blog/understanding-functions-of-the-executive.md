@@ -12,7 +12,7 @@ featured: false
 
 The executive branch is a cornerstone of any government, tasked with implementing and enforcing laws and policies. A thorough understanding of its functions is essential for those engaged in politics, law, or public administration. This article delves into the key roles within the executive branch and their significance.
 
-### Head of State
+## Head of State
 
 The Head of State stands as the highest-ranking official in the executive branch, embodying the nation's unity and legitimacy. Responsibilities include:
 
@@ -21,7 +21,7 @@ The Head of State stands as the highest-ranking official in the executive branch
 
 In some nations, such as the United States, the President fulfills this role, whereas, in others like the United Kingdom, it is held by a monarch or a separate figurehead.
 
-### Head of Government
+## Head of Government
 
 The Head of Government manages the daily operations of the government, focusing on policy and administration. Key duties encompass:
 
@@ -30,7 +30,7 @@ The Head of Government manages the daily operations of the government, focusing 
 
 For instance, the U.S. President serves as both Head of State and Head of Government, while in the UK, the Prime Minister assumes this position.
 
-### Commander-in-Chief
+## Commander-in-Chief
 
 As the highest-ranking military authority, the Commander-in-Chief oversees the nation's armed forces. Responsibilities include:
 
@@ -39,7 +39,7 @@ As the highest-ranking military authority, the Commander-in-Chief oversees the n
 
 This role is typically held by the President or equivalent authority, providing civilian oversight of the military.
 
-### Chief Diplomat
+## Chief Diplomat
 
 The Chief Diplomat steers the country's foreign policy and international relations. Key functions involve:
 
@@ -48,7 +48,7 @@ The Chief Diplomat steers the country's foreign policy and international relatio
 
 This role is crucial for navigating global affairs and advancing national interests abroad.
 
-### Chief Legislator
+## Chief Legislator
 
 While primarily an executive role, the Chief Legislator influences the legislative process. Duties include:
 
@@ -57,7 +57,7 @@ While primarily an executive role, the Chief Legislator influences the legislati
 
 This function enables the executive to shape lawmaking and ensure alignment with the administration's goals.
 
-### Chief Executive
+## Chief Executive
 
 The Chief Executive administers the executive branch, ensuring efficient government operation. Responsibilities encompass:
 
