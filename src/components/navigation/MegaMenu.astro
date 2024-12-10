@@ -1,0 +1,80 @@
+---
+import IndustriesMenu from './menus/IndustriesMenu.astro';
+import RolesMenu from './menus/RolesMenu.astro';
+
+interface Props {
+  isOpen: boolean;
+}
+
+const { isOpen } = Astro.props;
+---
+
+<div 
+  class={`absolute top-full left-1/2 transform -translate-x-1/2 bg-white/95 backdrop-blur-sm shadow-xl border-t border-gray-100 transition-all duration-300 z-50 ${
+    isOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'
+  } overflow-hidden`}
+  style="min-width: 60vw;" >
+  <div class="w-full mx-auto px-8 sm:px-12 lg:px-16 py-12">
+    <div class="grid lg:grid-cols-5 gap-12"> <!-- Expanded to 5 columns for a wider layout -->
+      
+      <!-- Primary Navigation -->
+      <div class="w-full space-y-6">
+        <div class="space-y-4">
+          <button class="w-full text-left px-4 py-3 rounded-lg hover:bg-gray-50 text-gray-900 font-medium flex items-center justify-between group/nav" data-section="industries">
+            Industries
+            <svg class="w-5 h-5 text-gray-400 group-hover/nav:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+          <button class="w-full text-left px-4 py-3 rounded-lg hover:bg-gray-50 text-gray-900 font-medium flex items-center justify-between group/nav" data-section="roles">
+            Roles
+            <svg class="w-5 h-5 text-gray-400 group-hover/nav:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Content Sections -->
+      <div class="lg:col-span-4"> <!-- Increased the content area width -->
+        <div id="industries-content" class="hidden">
+          <IndustriesMenu />
+        </div>
+        <div id="roles-content" class="hidden">
+          <RolesMenu />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function initializeMegaMenu() {
+    const navButtons = document.querySelectorAll('button[data-section]');
+    const contentSections = {
+      industries: document.getElementById('industries-content'),
+      roles: document.getElementById('roles-content')
+    };
+
+    // Show industries by default
+    contentSections.industries?.classList.remove('hidden');
+
+    navButtons.forEach(button => {
+      button.addEventListener('mouseenter', () => {
+        const section = button.getAttribute('data-section');
+        if (section) {
+          // Hide all sections
+          Object.values(contentSections).forEach(content => {
+            content?.classList.add('hidden');
+          });
+          // Show selected section
+          contentSections[section]?.classList.remove('hidden');
+        }
+      });
+    });
+  }
+
+  // Initialize when the DOM is ready
+  document.addEventListener('astro:page-load', initializeMegaMenu);
+  initializeMegaMenu();
+</script>
