@@ -1,0 +1,63 @@
+---
+interface Props {
+  spotifyUrl?: string;
+  applePodcastsUrl?: string;
+  castboxUrl?: string;
+  amazonMusicUrl?: string;
+  className?: string;
+}
+
+const { 
+  spotifyUrl,
+  applePodcastsUrl,
+  castboxUrl,
+  amazonMusicUrl,
+  className = ""
+} = Astro.props;
+
+const platforms = [
+  {
+    name: "Spotify",
+    url: spotifyUrl,
+    icon: "🎧",
+    bgColor: "bg-[#1DB954]",
+    hoverBgColor: "hover:bg-[#1DB954]/90"
+  },
+  {
+    name: "Apple Podcasts",
+    url: applePodcastsUrl,
+    icon: "🎙️",
+    bgColor: "bg-[#872EC4]",
+    hoverBgColor: "hover:bg-[#872EC4]/90"
+  },
+  {
+    name: "Castbox",
+    url: castboxUrl,
+    icon: "📻",
+    bgColor: "bg-[#F55B23]",
+    hoverBgColor: "hover:bg-[#F55B23]/90"
+  },
+  {
+    name: "Amazon Music",
+    url: amazonMusicUrl,
+    icon: "🎵",
+    bgColor: "bg-[#00A8E1]",
+    hoverBgColor: "hover:bg-[#00A8E1]/90"
+  }
+];
+---
+
+<div class={`flex flex-wrap gap-4 ${className}`}>
+  {platforms.map(platform => platform.url && (
+    <a
+      href={platform.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      class={`inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg text-white ${platform.bgColor} ${platform.hoverBgColor} transition-colors duration-200`}
+      aria-label={`Listen on ${platform.name}`}
+    >
+      <Fragment set:html={platform.icon} />
+      <span class="ml-2">{platform.name}</span>
+    </a>
+  ))}
+</div>
