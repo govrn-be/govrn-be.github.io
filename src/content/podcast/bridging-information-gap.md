@@ -51,7 +51,8 @@ Key discussion points include:
 
 ## Guest Insights
 
-The Govrn expert panel shares actionable insights and practical examples to illustrate how FPL improves performance, builds trust, and drives better organizational outcomes.
+The Govrn expert panel shares actionable insights and practical examples to illustrate how effective information flow enhances decision-making, builds trust, and drives better organizational outcomes. They provide real-world strategies and lessons from case studies, highlighting the importance of transparency, communication, and continuous learning in corporate governance.
+
 
 ## Timestamps of Topics
 
