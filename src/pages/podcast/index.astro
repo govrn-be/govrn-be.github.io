@@ -1,0 +1,133 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { getSlug } from '../../utils/slugify';
+import EpisodeCard from '../../components/EpisodeCard.astro';
+
+const episodes = await getCollection('podcast');
+const sortedEpisodes = episodes.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const publishedEpisodes = sortedEpisodes.filter(episode => episode.data.pubDate.getTime() <= new Date().getTime());
+const featuredEpisode = publishedEpisodes.find(episode => episode.data.featured);
+const regularEpisodes = publishedEpisodes.filter(episode => !episode.data.featured);
+---
+
+<Layout title="Board Excellence Podcast - Govrn">
+  <main class="pt-24">
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-3xl mx-auto">
+          <div class="inline-flex items-center rounded-full px-4 py-1 text-sm font-medium bg-[#1DB954]/10 text-[#1DB954] mb-8">
+            Available on Spotify
+          </div>
+          <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
+            Governance
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
+              Matters
+            </span>
+          </h1>
+          <p class="text-xl text-gray-600 leading-relaxed">
+            Expert insights and discussions on modern board management, governance, and digital transformation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Episode -->
+    {featuredEpisode && (
+      <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <div class="inline-flex items-center rounded-full px-4 py-1 text-sm font-medium bg-primary/10 text-primary mb-4">
+                Featured Episode
+              </div>
+              <h2 class="text-3xl font-bold text-gray-900 mb-4">{featuredEpisode.data.title}</h2>
+              <p class="text-gray-600 mb-6">{featuredEpisode.data.description}</p>
+              
+              <div class="flex items-center space-x-4 text-gray-500 mb-8">
+                <span>{featuredEpisode.data.pubDate.toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                })}</span>
+                <span>•</span>
+                <span>{featuredEpisode.data.duration}</span>
+              </div>
+
+              {featuredEpisode.data.guests && (
+                <div class="mb-8">
+                  <h3 class="text-sm font-medium text-gray-900 mb-4">Featured Guests:</h3>
+                  <div class="flex flex-wrap gap-4">
+                    {featuredEpisode.data.guests.map(guest => (
+                      <div class="flex items-center space-x-3">
+                        {guest.image && (
+                          <img
+                            src={guest.image}
+                            alt={guest.name}
+                            class="w-10 h-10 rounded-full object-cover"
+                          />
+                        )}
+                        <div>
+                          <p class="font-medium text-gray-900">{guest.name}</p>
+                          <p class="text-sm text-gray-500">{guest.role}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              <div class="flex space-x-4">
+                <a
+                  href={`/podcast/${getSlug(featuredEpisode.data.title)}`}
+                  class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg text-white bg-primary hover:bg-primary/90 transition-colors duration-200"
+                >
+                  View Episode
+                  <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </a>
+                <a
+                  href={featuredEpisode.data.spotifyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg text-white bg-[#1DB954] hover:bg-[#1DB954]/90 transition-colors duration-200"
+                >
+                  <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+                  </svg>
+                  Listen on Spotify
+                </a>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-3xl transform rotate-3"></div>
+              <img
+                src={featuredEpisode.data.image}
+                alt={featuredEpisode.data.title}
+                class="relative rounded-2xl shadow-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- All Episodes -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-12">All Episodes</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          {regularEpisodes.map(episode => (
+            <EpisodeCard episode={episode} />
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

@@ -26,7 +26,30 @@ const research = defineCollection({
   }),
 });
 
+const podcast = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    pubDate: z.date(),
+    duration: z.string(),
+    spotifyUrl: z.string(),
+    podcastAudioUrl: z.string(),
+    image: z.string(),
+    featured: z.boolean().optional().default(false),
+    guests: z.array(z.object({
+      name: z.string(),
+      role: z.string(),
+      company: z.string(),
+      bio: z.string().optional(),
+      image: z.string().optional(),
+    })).optional(),
+    topics: z.array(z.string()).optional(),
+  }),
+});
+
 export const collections = {
   blog,
   research,
+  podcast,
 };

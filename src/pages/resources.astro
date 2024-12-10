@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import BlogCard from '../components/blog/BlogCard.astro';
 import { getCollection } from 'astro:content';
+import EpisodeCard from '../components/EpisodeCard.astro';
 const categories = [
   {
     title: "Guides & Tutorials",
@@ -86,7 +87,13 @@ const featuredResource = {
 const posts = await getCollection('blog');
 const publishedPosts = posts.filter(post => post.data.pubDate.getTime() <= new Date().getTime());
 const sortedPosts = publishedPosts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
-const latestPosts = sortedPosts.slice(0, 6);
+const latestPosts = sortedPosts.slice(0, 3);
+
+
+const podcasts = await getCollection('podcast');
+const publishedPodcasts = podcasts.filter(podcast => podcast.data.pubDate.getTime() <= new Date().getTime());
+const sortedPodcasts = publishedPodcasts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+const latestPodcasts = sortedPodcasts.slice(0, 3);
 
 ---
 
@@ -170,11 +177,35 @@ const latestPosts = sortedPosts.slice(0, 6);
       </div>
     </section>
 
+
+    <!-- Podcasts -->
+     <!-- Blog Posts -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between mb-12">
+          <h2 class="text-3xl font-bold text-gray-900">🎙️ Latest Podcasts</h2>
+          <a
+            href="/podcast"
+            class="inline-flex items-center text-primary hover:text-primary/90 font-medium group"
+          >
+            View All Podcasts
+            <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {latestPodcasts.map(podcast => (
+            <EpisodeCard episode={podcast} />
+          ))}
+        </div>
+      </div>
+    </section>
     <!-- Blog Posts -->
     <section class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between mb-12">
-          <h2 class="text-3xl font-bold text-gray-900">Latest Articles</h2>
+          <h2 class="text-3xl font-bold text-gray-900">🗞️ Latest Articles</h2>
           <a
             href="/blog"
             class="inline-flex items-center text-primary hover:text-primary/90 font-medium group"
