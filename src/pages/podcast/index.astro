@@ -9,7 +9,7 @@ const sortedEpisodes = episodes.sort((a, b) => b.data.pubDate.valueOf() - a.data
 const publishedEpisodes = sortedEpisodes.filter(episode => episode.data.pubDate.getTime() <= new Date().getTime());
 const latestEpisode = publishedEpisodes[0];
 const regularEpisodes = publishedEpisodes.slice(1);
-const spotifyUrl = "https://open.spotify.com/show/6bbd29f0-de77-4f7c-83b6-d3d64984f8c4";
+const spotifyUrl = "https://open.spotify.com/show/11ejxA1c7TZcNVBJ6Pag3B?si=ec6c83f84d4e4397";
 const applePodcastsUrl = "https://podcasts.apple.com/us/podcast/governance-matters/id1784502689";
 const castboxUrl = "https://castbox.fm/channel/id6384416";
 const amazonMusicUrl = "https://music.amazon.com/podcasts/6bbd29f0-de77-4f7c-83b6-d3d64984f8c4/governance-matters";
