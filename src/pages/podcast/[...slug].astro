@@ -16,7 +16,7 @@ const { episode } = Astro.props;
 const { Content } = await episode.render();
 ---
 
-<Layout title={`${episode.data.title} - Govrn Board Excellence Podcast`} description={episode.data.description} image={episode.data.image}>
+<Layout title={`${episode.data.title} - Governance Matters Podcast`} description={episode.data.description} image={episode.data.image}>
   <main class="pt-24">
     <!-- Hero Section -->
     <section class="relative bg-gradient-to-br from-white to-gray-50 py-20">
@@ -33,9 +33,6 @@ const { Content } = await episode.render();
               </svg>
               Back to Episodes
             </a>
-            <div class="inline-flex items-center rounded-full px-4 py-1 text-sm font-medium bg-[#1DB954]/10 text-[#1DB954] mb-4">
-              New Episode
-            </div>
             <h1 class="text-4xl font-bold text-gray-900 mb-6">{episode.data.title}</h1>
             <div class="flex items-center space-x-4 text-gray-500 mb-8">
               <span>{episode.data.pubDate.toLocaleDateString('en-US', {
