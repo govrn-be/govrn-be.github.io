@@ -1,6 +1,6 @@
 ---
 title: "Bridging the Information Gap: Enhancing Corporate Governance"
-description: "In this episode of Governance Matters, Ludovic Laffineur and the host explore the critical issue of information flow between management and boards. Learn how transparency, education, and strategic practices can empower boards to make better decisions and drive effective governance."
+description: "Govrn Experts explore the critical issue of information flow between management and boards. Learn how transparency, education, and strategic practices can empower boards to make better decisions and drive effective governance."
 pubDate: 2024-12-20
 duration: "16 min"
 spotifyUrl: "https://open.spotify.com/episode/example3"
@@ -23,7 +23,7 @@ topics:
 
 # Episode Overview
 
-In this episode of **Governance Matters**, Ludovic Laffineur and the host discuss the pivotal role of information flow in corporate governance. Boards need comprehensive and unbiased data to make decisions that drive organizational success. Drawing lessons from history, real-world case studies, and psychological insights, this episode provides actionable strategies to enhance governance practices and bridge the information gap.
+In this episode of **Governance Matters**, Govrn Experts discuss the pivotal role of information flow in corporate governance. Boards need comprehensive and unbiased data to make decisions that drive organizational success. Drawing lessons from history, real-world case studies, and psychological insights, this episode provides actionable strategies to enhance governance practices and bridge the information gap.
 
 Key discussion points include:
 
