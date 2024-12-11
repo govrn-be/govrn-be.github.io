@@ -2,11 +2,13 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
+import { onRequest } from './src/utils/middleware';
 
 
 export default defineConfig({
   integrations: [tailwind(), react(), sitemap()],
   site: 'https://govrn.com',
+  
   redirects: {
     '/blog/tips-tricks-12/what-does-abstained-mean-understanding-the-meaning-and-implications-152': '/blog/what-does-abstained-mean',
     '/blog/our-blog-1/what-does-abstained-mean-understanding-the-meaning-and-implications-152': '/blog/what-does-abstained-mean',
@@ -31,17 +33,5 @@ export default defineConfig({
   build: {
     // Example: Generate `page.html` instead of `page/index.html` during build.
     format: 'file'
-  },
-  server: {
-    middleware: [
-      function removeTrailingSlash({ request }, next) {
-        const url = new URL(request.url);
-        if (url.pathname.length > 1 && url.pathname.endsWith('/')) {
-          url.pathname = url.pathname.slice(0, -1);
-          return Response.redirect(url.toString(), 301);
-        }
-        return next();
-      }
-    ]
   }
 });

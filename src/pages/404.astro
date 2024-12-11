@@ -53,3 +53,11 @@ const randomJoke = getRandomJoke();
     </div>
   </main>
 </Layout>
+
+<script>
+  const url = new URL(window.location);
+  if (url.pathname.endsWith('/')) {
+    url.pathname = url.pathname.slice(0, -1);
+    window.location.replace(url.href);
+  }
+</script>
