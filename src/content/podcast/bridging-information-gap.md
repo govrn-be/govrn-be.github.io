@@ -3,7 +3,7 @@ title: "Bridging the Information Gap: Enhancing Corporate Governance"
 description: "Govrn Experts explore the critical issue of information flow between management and boards. Learn how transparency, education, and strategic practices can empower boards to make better decisions and drive effective governance."
 pubDate: 2024-12-20
 duration: "16 min"
-spotifyUrl: "https://open.spotify.com/episode/example3"
+spotifyUrl: "https://open.spotify.com/show/11ejxA1c7TZcNVBJ6Pag3B?si=19b17abd580a4df2"
 podcastAudioUrl: /podcast-E1S2.m4a
 image: "/podcast-E1S2.png"
 featured: false
@@ -21,7 +21,7 @@ topics:
   - "Board-Management Relationships"
 ---
 
-# Episode Overview
+## Episode Overview
 
 In this episode of **Governance Matters**, Govrn Experts discuss the pivotal role of information flow in corporate governance. Boards need comprehensive and unbiased data to make decisions that drive organizational success. Drawing lessons from history, real-world case studies, and psychological insights, this episode provides actionable strategies to enhance governance practices and bridge the information gap.
 

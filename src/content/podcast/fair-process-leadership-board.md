@@ -21,7 +21,7 @@ topics:
   - "Organizational Performance"
 ---
 
-# Episode Overview
+## Episode Overview
 
 We delve into the transformative concept of Fair Process Leadership (FPL), a management framework that emphasizes fairness in decision-making processes. Unlike distributive justice, which focuses on outcomes, FPL prioritizes procedural justice—the "how" of decision-making—to foster trust, satisfaction, and organizational success. 
 
