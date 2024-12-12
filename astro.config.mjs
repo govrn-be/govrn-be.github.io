@@ -28,6 +28,8 @@ export default defineConfig({
     '/blog/board-portal-tech-13/the-benefits-of-using-decision-logs-for-businesses-and-organizations-116': '/blog/benefits-of-decision-logs-for-businesses',
     '/blog/board-portal-tech-13/using-a-decision-log-to-track-and-document-decisions-135': '/blog/benefits-of-decision-logs-for-businesses',
     '/blog/ai-in-the-boardroom-8/ai-in-the-boardroom-a-board-grc-platform-233': '/blog/ai-boardroom-grc-platform',
+    '/board-private-chat': '/features/secure-communication',
+    '/news-feed': '/features/secure-communication'
   },
   build: {
     // Example: Generate `page.html` instead of `page/index.html` during build.
