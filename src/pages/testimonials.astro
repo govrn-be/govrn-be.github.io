@@ -168,7 +168,6 @@ const testimonials = [
               <div class={`space-y-8 ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
                 {testimonial.videoUrl ? (
                   <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl relative group">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <iframe
                       class="w-full h-full"
                       src={testimonial.videoUrl}
