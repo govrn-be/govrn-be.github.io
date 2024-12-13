@@ -1,58 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-const plans = [
-  {
-    name: "Essentials",
-    description: "Perfect for small boards and organizations",
-    features: [
-      "Unlimited Users",
-      "Agenda Builder",
-      "Document Management",
-      "Board Pack Creation",
-      "Document Repository",
-      "Private Chat",
-      "General Governance",
-      "AI Search (Basic)",
-      "Document Storage & MFA",
-      "IM & Email Support"
-    ]
-  },
-  {
-    name: "Professional",
-    description: "Ideal for growing organizations",
-    features: [
-      "Everything in Essentials, plus:",
-      "Task Management",
-      "Document Annotation",
-      "Voting",
-      "Summary & Transcript",
-      "E-Signature (Documents & Minutes)",
-      "Sub-Committee Support",
-      "Polling & Document Collaboration",
-      "Regional Compliance Tools",
-      "AI Search (Cognitive)",
-      "Advanced Permissions",
-      "Priority Email & Phone Support"
-    ],
-    popular: true
-  },
-  {
-    name: "Enterprise",
-    description: "For large organizations with complex needs",
-    features: [
-      "Everything in Professional, plus:",
-      "Advanced Annotation",
-      "Advanced Insights",
-      "E-Signature (Advanced)",
-      "Advanced Collaboration",
-      "Sector-Specific Compliance",
-      "AI Assistant & Advanced Analytics",
-      "SSO Integration",
-      "24/7 Support with Customer Success"
-    ]
-  }
-];
+import PricingToggle from '../components/pricing/PricingToggle.astro';
+import PricingPlans from '../components/pricing/PricingPlans.astro';
 
 const supportServices = [
   {
@@ -108,101 +57,45 @@ const supportFaqs = [
     answer: "Absolutely! Our team will help you migrate existing documents and data to Govrn, ensuring a seamless transition while maintaining data integrity and security."
   }
 ];
-
-const featureCategories = [
-  {
-    title: "Meeting Features",
-    features: [
-      "Agenda Builder",
-      "Document Management",
-      "Task Management",
-      "Board Pack Tools",
-      "Voting",
-      "AI-Powered Minute Tools"
-    ]
-  },
-  {
-    title: "Post-Meeting Tools",
-    features: [
-      "Document Repository",
-      "E-Signature",
-      "Sub-Committee Support"
-    ]
-  },
-  {
-    title: "Collaboration & Governance",
-    features: [
-      "Real-time Collaboration",
-      "Compliance Tools",
-      "AI & Analytics",
-      "Security Features"
-    ]
-  }
-];
 ---
 
-<Layout title="Pricing - Govrn Board Management Software" description="Flexible plans designed to meet your board's unique needs. Contact our team for custom pricing tailored to your requirements.">
+<Layout title="Pricing - Govrn Board Management Software">
   <main class="pt-16">
     <!-- Hero Section -->
     <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
       <div class="absolute inset-0 z-0">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(57,153,222,0.1),transparent_50%)]"></div>
       </div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="text-center max-w-3xl mx-auto">
           <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
-            Choose the Right Plan for Your
+            Simple, Transparent
             <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
-              Organization
+              Pricing
             </span>
           </h1>
           <p class="text-xl text-gray-600 leading-relaxed">
-            Flexible plans designed to meet your board's unique needs. Contact our team for custom pricing tailored to your requirements.
+            Choose the perfect plan for your organization's needs. All plans include our core features with flexible options to scale.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Pricing Cards -->
+    <!-- Pricing Section -->
     <section class="py-20 bg-white relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid gap-8 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
-          {plans.map(plan => (
-            <div class={`relative bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-1 transition-all duration-300 ${plan.popular ? 'ring-2 ring-primary' : 'ring-1 ring-gray-200'}`}>
-              {plan.popular && (
-                <div class="absolute top-0 right-0 bg-primary text-white px-4 py-1 text-sm font-medium rounded-bl-lg">
-                  Most Popular
-                </div>
-              )}
-              <div class="p-8">
-                <h2 class="text-2xl font-bold text-gray-900">{plan.name}</h3>
-                <p class="mt-2 text-gray-500">{plan.description}</p>
-                <div class="mt-6">
-                  <a
-                    href="/request-demo"
-                    class={`block w-full text-center px-6 py-4 text-lg font-medium rounded-xl transition-colors duration-200 ${
-                      plan.popular
-                        ? 'text-white bg-primary hover:bg-primary/90'
-                        : 'text-primary bg-white border-2 border-primary/20 hover:bg-primary/5'
-                    }`}
-                  >
-                    Contact Sales
-                  </a>
-                </div>
-                <ul class="mt-8 space-y-4">
-                  {plan.features.map(feature => (
-                    <li class="flex items-center">
-                      <svg class="h-5 w-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span class="ml-3 text-gray-600">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))}
+        <PricingToggle includeAI={true} />
+        
+        <!-- Standard Pricing -->
+        <div id="standard-pricing" class="hidden">
+          <PricingPlans includeAI={false} />
+        </div>
+
+        <!-- AI Pricing -->
+        <div id="ai-pricing">
+          <PricingPlans includeAI={true} />
         </div>
       </div>
     </section>
@@ -237,36 +130,8 @@ const featureCategories = [
       </div>
     </section>
 
-    <!-- Feature Categories -->
-    <section class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl font-bold text-gray-900">Everything You Need for Effective Board Management</h2>
-          <p class="mt-4 text-xl text-gray-600">Comprehensive features to drive your board's success</p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8">
-          {featureCategories.map(category => (
-            <div class="bg-white rounded-xl p-8 shadow-sm">
-              <h3 class="text-xl font-bold text-gray-900 mb-6">{category.title}</h3>
-              <ul class="space-y-4">
-                {category.features.map(feature => (
-                  <li class="flex items-center text-gray-600">
-                    <svg class="h-5 w-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
     <!-- Support FAQs -->
-    <section class="py-20 bg-gray-50">
+    <section class="py-20 bg-white">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <h2 class="text-3xl font-bold text-gray-900">Support & Training FAQ</h2>
@@ -275,7 +140,7 @@ const featureCategories = [
 
         <div class="space-y-8">
           {supportFaqs.map(faq => (
-            <div class="bg-white rounded-lg p-6 shadow-sm">
+            <div class="bg-gray-50 rounded-lg p-6">
               <h3 class="text-lg font-semibold text-gray-900">{faq.question}</h3>
               <p class="mt-2 text-gray-600">{faq.answer}</p>
             </div>
