@@ -22,7 +22,8 @@ export async function getStaticPaths() {
 const { slug } = Astro.params as { slug: string };
 
 const posts: CollectionEntry<'blog'>[] = await getCollection('blog');
-const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const publishedPosts = posts.filter(post => post.data.pubDate <= new Date());
+const sortedPosts = publishedPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const nextPosts = sortedPosts.filter(post => post.slug !== slug).slice(0, 3);
 const { entry } = Astro.props;
 const { Content } = await entry.render();
