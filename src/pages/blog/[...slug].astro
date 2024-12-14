@@ -33,9 +33,30 @@ const formattedDate = entry.data.pubDate.toLocaleDateString('en-US', {
   month: 'long',
   day: 'numeric'
 });
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": entry.data.title,
+  "description": entry.data.description,
+  "datePublished": entry.data.pubDate,
+  "image": "https://govrn.com" + entry.data.image,
+  "author": {
+    "@type": "Person",
+    "name": entry.data.author
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Govrn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://govrn.com/logo.webp"
+    }
+  }
+};
 ---
 
-<Layout title={`${entry.data.title} | Govrn Blog`} description={entry.data.description} image={entry.data.image}>
+<Layout title={`${entry.data.title} | Govrn Blog`} description={entry.data.description} image={entry.data.image} structuredData={structuredData}>
   <main class="pt-16">
     <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <!-- Hero Image -->

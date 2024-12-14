@@ -76,12 +76,32 @@ Govrn's commitment to innovation and responsiveness to user feedback stood in st
     quote: "Govrn embraced the next generation of Board management software, easy to use and with AI integration."
   }
 ];
+
+const structuredData = {
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "Govrn",
+  "description": "Govrn embraced the next generation of Board management software, easy to use and with AI integration.",
+  "review": {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": 5,
+      "bestRating": 5,
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Nathalie Byl",
+    },
+  },
+};
 ---
 
 <Layout 
   title="Care Property Invest Success Story | Govrn"
   description="Discover how Care Property Invest transformed their board management with Govrn's innovative platform. Read the full case study."
   image="/careproperty-logo.png"
+  structuredData={structuredData}
 >
   <!-- Hero Section -->
   <section class="relative pt-32 pb-24 overflow-hidden bg-gradient-to-br from-white to-gray-50">

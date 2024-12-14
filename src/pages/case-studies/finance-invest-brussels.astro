@@ -76,12 +76,32 @@ With Govrn's implementation, FIB has achieved greater transparency and efficienc
     quote: "We recommend Govrn because it's a simple and effective tool that facilitates the work of administrators and their collaboration. It helps with transparency, the exchange of accurate information and when you have the right information, you can make the right decision and above all, have the right debates."
   }
 ];
+
+const structuredData = {
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "Govrn",
+  "description": "Govrn has transformed how we manage our board operations, bringing efficiency and clarity to our governance processes.",
+  "review": {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": 5,
+      "bestRating": 5,
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Pierre Hermant",
+    },
+  },
+};
 ---
 
 <Layout 
   title="Finance & Invest Brussels Success Story | Govrn"
   description="Discover how Finance & Invest Brussels transformed their governance with Govrn's innovative platform. Read the full case study."
   image="/fib-pierre.webp"
+  structuredData={structuredData}
 >
   <!-- Hero Section -->
   <section class="relative pt-32 pb-24 overflow-hidden bg-gradient-to-br from-white to-gray-50">

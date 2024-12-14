@@ -7,17 +7,41 @@ interface Props {
   title: string;
   description?: string;
   image?: string;
+  structuredData?: object;
 }
 
 const {
   title,
   description = "Govrn - Simplify Board Management Like Never Before. A smart platform to centralize your documents, automate tasks, and enhance collaboration.",
   image = "/default_sharing_meta.jpg",
+  structuredData = null
 } = Astro.props;
 // remove .html in pathname
 const canonicalPath = Astro.url.pathname.replace(/\.html$/, '');
 const canonicalUrl = new URL(canonicalPath, Astro.site);
 const url = canonicalUrl.href;
+const organisationStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Govrn",
+  "url": "https://govrn.com",
+  "logo": "https://govrn.com/logo.webp",
+  "description": "Govrn is a smart platform to centralize your documents, automate tasks, and enhance collaboration.",
+  "email": "info@govrn.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Roger Vandendriessche 18",
+    "addressLocality": "Brussels",
+    "addressCountry": "BE",
+    "addressRegion": "Brussels",
+    "postalCode": "1150"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/govrncorp/",
+    "https://twitter.com/govrncorp"
+  ],
+  "vatID": "BE0761625687",
+};
 ---
 
 <!doctype html>
@@ -31,6 +55,8 @@ const url = canonicalUrl.href;
     <link rel="sitemap" href="/sitemap-index.xml" />
     <script src="https://tag.clearbitscripts.com/v1/pk_3e1d6d2934e384070f62039bb4f4efe6/tags.js" referrerpolicy="strict-origin-when-cross-origin"></script>
     <title>{title}</title>
+    <script type="application/ld+json" set:html={JSON.stringify(organisationStructuredData)}></script>
+    {structuredData && <script type="application/ld+json" set:html={JSON.stringify(structuredData)}></script>}
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
