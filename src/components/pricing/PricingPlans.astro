@@ -1,0 +1,150 @@
+---
+interface Props {
+  includeAI?: boolean;
+}
+
+const { includeAI = true } = Astro.props;
+
+const standardPlans = [
+  {
+    name: "Essentials",
+    description: "Perfect for small boards and organizations",
+    price: "1750",
+    features: [
+      "Unlimited Users",
+      "Agenda Builder",
+      "Document Management",
+      "Board Pack Creation",
+      "Document Repository",
+      "Private Chat",
+      "General Governance",
+      "Document Storage & MFA",
+      "IM & Email Support"
+    ]
+  },
+  {
+    name: "Professional",
+    description: "Ideal for growing organizations",
+    price: "2850",
+    features: [
+      "Everything in Essentials, plus:",
+      "Task Management",
+      "Document Annotation",
+      "Voting",
+      "E-Signature (Documents & Minutes)",
+      "Sub-Committee Support",
+      "Polling & Document Collaboration",
+      "Regional Compliance Tools",
+      "Advanced Permissions",
+      "Priority Email & Phone Support"
+    ],
+    popular: true
+  },
+  {
+    name: "Enterprise",
+    description: "For large organizations with complex needs",
+    price: "Custom",
+    features: [
+      "Everything in Professional, plus:",
+      "Advanced Annotation",
+      "Advanced Insights",
+      "E-Signature (Advanced)",
+      "Advanced Collaboration",
+      "Sector-Specific Compliance",
+      "SSO Integration",
+      "24/7 Support with Customer Success"
+    ]
+  }
+];
+
+const aiPlans = [
+  {
+    name: "Essentials AI",
+    description: "Perfect for small boards and organizations",
+    price: "3250",
+    features: [
+      "All Essentials features, plus:",
+      "AI Document Analysis",
+      "Smart Search",
+      "Meeting Summaries",
+      "Basic AI Insights",
+      "AI-Powered Document Organization"
+    ]
+  },
+  {
+    name: "Professional AI",
+    description: "Ideal for growing organizations",
+    price: "5550",
+    features: [
+      "All Professional features, plus:",
+      "Advanced AI Analytics",
+      "Intelligent Meeting Assistant",
+      "AI-Powered Risk Analysis",
+      "Automated Compliance Monitoring",
+      "Smart Document Processing",
+      "Predictive Insights"
+    ],
+    popular: true
+  },
+  {
+    name: "Enterprise AI",
+    description: "For large organizations with complex needs",
+    price: "Custom",
+    features: [
+      "All Enterprise features, plus:",
+      "Custom AI Models",
+      "Advanced Analytics",
+      "AI Strategy Assistant",
+      "Intelligent Automation",
+      "Custom AI Workflows",
+      "AI Governance Framework"
+    ]
+  }
+];
+
+const plans = includeAI ? aiPlans : standardPlans;
+---
+
+<div class="grid gap-8 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+  {plans.map(plan => (
+    <div class={`relative bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-1 transition-all duration-300 ${plan.popular ? 'ring-2 ring-primary' : 'ring-1 ring-gray-200'}`}>
+      {plan.popular && (
+        <div class="absolute top-0 right-0 bg-primary text-white px-4 py-1 text-sm font-medium rounded-bl-lg">
+          Most Popular
+        </div>
+      )}
+      <div class="p-8">
+        <h3 class="text-2xl font-bold text-gray-900">{plan.name}</h3>
+        <p class="mt-2 text-gray-500">{plan.description}</p>
+        <div class="mt-6 flex items-baseline">
+          <span class="text-4xl font-bold text-gray-900">
+            {plan.price !== "Custom" ? new Intl.NumberFormat('en-US', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(Number(plan.price)) : plan.price}
+          </span>
+          {plan.price !== "Custom" && <span class="text-gray-500 ml-1">/year</span>}
+        </div>
+        <div class="mt-6">
+          <a
+            href="/request-demo"
+            class={`block w-full text-center px-6 py-4 text-lg font-medium rounded-xl transition-colors duration-200 ${
+              plan.popular
+                ? 'text-white bg-primary hover:bg-primary/90'
+                : 'text-primary bg-white border-2 border-primary/20 hover:bg-primary/5'
+            }`}
+          >
+            Contact Sales
+          </a>
+        </div>
+        <ul class="mt-8 space-y-4">
+          {plan.features.map(feature => (
+            <li class="flex items-center">
+              <svg class="h-5 w-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="ml-3 text-gray-600">{feature}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  ))}
+</div>
