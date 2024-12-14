@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
+import { supportFaqs } from '../data/faq-data';
 const plans = [
   {
     name: "Essentials",
@@ -90,25 +90,6 @@ const supportServices = [
   }
 ];
 
-const supportFaqs = [
-  {
-    question: "What kind of training do you provide?",
-    answer: "We offer comprehensive training programs including live sessions, video tutorials, documentation, and personalized workshops. Our training covers everything from basic platform navigation to advanced features and best practices."
-  },
-  {
-    question: "How long does the onboarding process take?",
-    answer: "Typical onboarding takes 2-4 weeks, depending on your organization's size and requirements. We provide dedicated support throughout the process to ensure a smooth transition."
-  },
-  {
-    question: "Do you offer ongoing support after implementation?",
-    answer: "Yes, we provide continuous support through multiple channels including email, phone, and live chat. Enterprise clients receive a dedicated customer success manager for personalized assistance."
-  },
-  {
-    question: "Can you help with data migration?",
-    answer: "Absolutely! Our team will help you migrate existing documents and data to Govrn, ensuring a seamless transition while maintaining data integrity and security."
-  }
-];
-
 const featureCategories = [
   {
     title: "Meeting Features",
@@ -139,9 +120,23 @@ const featureCategories = [
     ]
   }
 ];
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "name": "Govrn - Pricing FAQ",
+  mainEntity: supportFaqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
 ---
 
-<Layout title="Pricing - Govrn Board Management Software" description="Flexible plans designed to meet your board's unique needs. Contact our team for custom pricing tailored to your requirements.">
+<Layout title="Pricing - Govrn Board Management Software" description="Flexible plans designed to meet your board's unique needs. Contact our team for custom pricing tailored to your requirements." structuredData={structuredData}>
   <main class="pt-16">
     <!-- Hero Section -->
     <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">

@@ -1,18 +1,37 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
-import Features from '../components/Features.astro';
-import Stats from '../components/Stats.astro';
-import Timeline from '../components/Timeline.astro';
-import Personas from '../components/Personas.astro';
-import Testimonials from '../components/Testimonials.astro';
-import FAQ from '../components/FAQ.astro';
-import CTA from '../components/CTA.astro';
-import FeatureShowcase from '../components/features/FeatureShowcase.astro';
-import SecurityPreview from '../components/SecurityPreview.astro';
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Features from "../components/Features.astro";
+import Stats from "../components/Stats.astro";
+import Timeline from "../components/Timeline.astro";
+import Personas from "../components/Personas.astro";
+import Testimonials from "../components/Testimonials.astro";
+import FAQ from "../components/FAQ.astro";
+import CTA from "../components/CTA.astro";
+import FeatureShowcase from "../components/features/FeatureShowcase.astro";
+import SecurityPreview from "../components/SecurityPreview.astro";
+import { faqs } from "../data/faq-data";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "name": "Govrn - Frequently Asked Questions",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
 ---
 
-<Layout title="Govrn - Power your Board decisions with AI" description="Transform your board management with Govrn, the AI-first platform that streamlines operations, enhances collaboration, and drives innovation.">
+<Layout
+  title="Govrn - Power your Board decisions with AI"
+  description="Transform your board management with Govrn, the AI-first platform that streamlines operations, enhances collaboration, and drives innovation."
+  structuredData={structuredData}
+>
   <main class="overflow-hidden">
     <Hero />
     <Stats />
