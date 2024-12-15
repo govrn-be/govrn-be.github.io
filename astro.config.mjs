@@ -30,7 +30,8 @@ export default defineConfig({
     '/blog/ai-in-the-boardroom-8/ai-in-the-boardroom-a-board-grc-platform-233': '/blog/ai-boardroom-grc-platform',
     '/board-private-chat': '/features/secure-communication',
     '/news-feed': '/features/secure-communication',
-    '/legal': '/terms'
+    '/legal': '/terms',
+    '/document-management-library': '/features/document-management-library',
   },
   build: {
     // Example: Generate `page.html` instead of `page/index.html` during build.
