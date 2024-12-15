@@ -1,0 +1,44 @@
+---
+import AgendaItem from './AgendaItem.astro';
+import { type AgendaItem as AgendaItemType } from '../types';
+
+interface Props {
+  items: AgendaItemType[];
+  totalDuration: number;
+}
+
+const { items, totalDuration } = Astro.props;
+---
+
+<div class="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
+  <div class="p-6 border-b border-gray-100 bg-gray-50">
+    <div class="flex items-center justify-between">
+      <h3 class="text-lg font-semibold text-gray-900">Board Meeting Agenda</h3>
+      <div class="flex items-center space-x-2">
+        <span class="text-sm text-gray-500">Total Duration:</span>
+        <span class="px-2 py-1 bg-primary/10 text-primary rounded-md text-sm font-medium">
+          {totalDuration} min
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="divide-y divide-gray-100">
+    {items.map((item, index) => (
+      <AgendaItem 
+        {...item}
+        animationDelay={index * 200}
+      />
+    ))}
+  </div>
+
+  <!-- Add Item Button -->
+  <div class="p-4 bg-gray-50">
+    <button class="w-full px-4 py-3 text-sm font-medium rounded-lg text-primary bg-white border-2 border-primary/20 hover:bg-primary/5 transition-colors duration-200 flex items-center justify-center">
+      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+      </svg>
+      Add Agenda Item
+    </button>
+  </div>
+</div>

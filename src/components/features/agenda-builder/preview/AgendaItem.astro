@@ -1,0 +1,119 @@
+---
+interface Props {
+  id: string;
+  title: string;
+  type: 'discussion' | 'decision' | 'information' | 'presentation' | 'voting' | 'workshop';
+  duration: number;
+  documents?: Array<{ name: string; type: string; }>;
+  subItems?: Array<{ title: string; duration: number; }>;
+  animationDelay?: number;
+}
+
+const { id, title, type, duration, documents = [], subItems = [], animationDelay = 0 } = Astro.props;
+
+const typeIcons = {
+  discussion: "💬",
+  decision: "✅",
+  information: "ℹ️",
+  presentation: "📊",
+  voting: "🗳️",
+  workshop: "🛠️"
+};
+
+const typeColors = {
+  discussion: "blue",
+  decision: "green",
+  information: "yellow",
+  presentation: "purple",
+  voting: "red",
+  workshop: "orange"
+};
+---
+
+<div 
+  class="p-6 hover:bg-gray-50 transition-colors duration-200 animate-slide-up"
+  style={`animation-delay: ${animationDelay}ms`}
+>
+  <div class="flex items-start space-x-4">
+    <!-- Type Icon -->
+    <div class={`flex-shrink-0 w-10 h-10 rounded-lg bg-${typeColors[type]}-100 flex items-center justify-center text-lg`}>
+      {typeIcons[type]}
+    </div>
+
+    <div class="flex-grow">
+      <!-- Header -->
+      <div class="flex items-start justify-between mb-4">
+        <div>
+          <h4 class="text-lg font-medium text-gray-900">{title}</h4>
+          <div class="flex items-center space-x-3 mt-1">
+            <span class={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-${typeColors[type]}-100 text-${typeColors[type]}-800`}>
+              {type}
+            </span>
+            <span class="text-sm text-gray-500">{duration} min</span>
+          </div>
+        </div>
+        <button class="text-gray-400 hover:text-gray-500">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Documents -->
+      {documents.length > 0 && (
+        <div class="mb-4">
+          <div class="text-sm font-medium text-gray-700 mb-2">Documents</div>
+          <div class="flex flex-wrap gap-2">
+            {documents.map(doc => (
+              <div class="inline-flex items-center px-3 py-1 rounded-lg bg-gray-100 text-sm">
+                <svg class="w-4 h-4 mr-2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+                {doc.name}
+              </div>
+            ))}
+            <button class="inline-flex items-center px-3 py-1 rounded-lg bg-primary/10 text-primary text-sm hover:bg-primary/20 transition-colors">
+              <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+              Add Document
+            </button>
+          </div>
+        </div>
+      )}
+
+      <!-- Sub-items -->
+      {subItems.length > 0 && (
+        <div>
+          <div class="text-sm font-medium text-gray-700 mb-2">Sub-items</div>
+          <div class="space-y-2">
+            {subItems.map(item => (
+              <div class="flex items-center justify-between p-2 rounded-lg bg-gray-50">
+                <span class="text-sm text-gray-600">{item.title}</span>
+                <span class="text-sm text-gray-500">{item.duration} min</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  </div>
+</div>
+
+<style>
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slide-up {
+    opacity: 0;
+    animation: slideUp 0.5s ease-out forwards;
+  }
+</style>
