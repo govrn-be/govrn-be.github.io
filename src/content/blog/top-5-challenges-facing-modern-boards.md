@@ -8,7 +8,7 @@ authorRole: "CPTO at Govrn"
 image: "/napoleon-meeting-room.jpg"
 category: "Governance"
 tags: ["Board Governance", "Leadership", "Compliance", "Innovation", "M&A"]
-featured: true
+featured: false
 ---
 
 Modern boards operate in a world of increasing complexity. Global competition, regulatory changes, and heightened stakeholder expectations have elevated the importance of effective governance. Yet, boards face a set of core challenges that can hinder their ability to lead strategically and responsibly. Below, we delve into the top five challenges confronting modern boards and highlight how **Govrn** is uniquely positioned to address these obstacles.

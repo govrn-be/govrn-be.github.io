@@ -7,7 +7,7 @@ authorRole: "Govrn Editorial Team"
 image: "/meeting.jpg"
 category: "Technology"
 tags: ["AI", "Board Portal", "Meeting Management", "Governance", "Digital Transformation"]
-featured: true
+featured: false
 ---
 
 In today’s fast-paced corporate landscape, the fusion of artificial intelligence (AI) and boardroom technology is reshaping how boards operate. At the forefront of this transformation are **AI-driven board portals**, revolutionizing meeting management and redefining governance practices.
