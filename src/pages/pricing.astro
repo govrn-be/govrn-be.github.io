@@ -1,63 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
-<<<<<<< HEAD
 import { supportFaqs } from '../data/faq-data';
-const plans = [
-  {
-    name: "Essentials",
-    description: "Perfect for small boards and organizations",
-    features: [
-      "Unlimited Users",
-      "Agenda Builder",
-      "Document Management",
-      "Board Pack Creation",
-      "Document Repository",
-      "Private Chat",
-      "General Governance",
-      "AI Search (Basic)",
-      "Document Storage & MFA",
-      "IM & Email Support"
-    ]
-  },
-  {
-    name: "Professional",
-    description: "Ideal for growing organizations",
-    features: [
-      "Everything in Essentials, plus:",
-      "Task Management",
-      "Document Annotation",
-      "Voting",
-      "Summary & Transcript",
-      "E-Signature (Documents & Minutes)",
-      "Sub-Committee Support",
-      "Polling & Document Collaboration",
-      "Regional Compliance Tools",
-      "AI Search (Cognitive)",
-      "Advanced Permissions",
-      "Priority Email & Phone Support"
-    ],
-    popular: true
-  },
-  {
-    name: "Enterprise",
-    description: "For large organizations with complex needs",
-    features: [
-      "Everything in Professional, plus:",
-      "Advanced Annotation",
-      "Advanced Insights",
-      "E-Signature (Advanced)",
-      "Advanced Collaboration",
-      "Sector-Specific Compliance",
-      "AI Assistant & Advanced Analytics",
-      "SSO Integration",
-      "24/7 Support with Customer Success"
-    ]
-  }
-];
-=======
+
 import PricingToggle from '../components/pricing/PricingToggle.astro';
 import PricingPlans from '../components/pricing/PricingPlans.astro';
->>>>>>> e83781d (add: new pricing)
 
 const supportServices = [
   {
@@ -126,24 +72,6 @@ const featureCategories = [
   }
 ];
 
-const supportFaqs = [
-  {
-    question: "What kind of training do you provide?",
-    answer: "We offer comprehensive training programs including live sessions, video tutorials, documentation, and personalized workshops. Our training covers everything from basic platform navigation to advanced features and best practices."
-  },
-  {
-    question: "How long does the onboarding process take?",
-    answer: "Typical onboarding takes 2-4 weeks, depending on your organization's size and requirements. We provide dedicated support throughout the process to ensure a smooth transition."
-  },
-  {
-    question: "Do you offer ongoing support after implementation?",
-    answer: "Yes, we provide continuous support through multiple channels including email, phone, and live chat. Enterprise clients receive a dedicated customer success manager for personalized assistance."
-  },
-  {
-    question: "Can you help with data migration?",
-    answer: "Absolutely! Our team will help you migrate existing documents and data to Govrn, ensuring a seamless transition while maintaining data integrity and security."
-  }
-];
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -189,15 +117,15 @@ const structuredData = {
     <!-- Pricing Section -->
     <section class="py-20 bg-white relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <PricingToggle includeAI={true} />
+        <PricingToggle includeAI={false} />
         
         <!-- Standard Pricing -->
-        <div id="standard-pricing" class="hidden">
+        <div id="standard-pricing">
           <PricingPlans includeAI={false} />
         </div>
 
         <!-- AI Pricing -->
-        <div id="ai-pricing">
+        <div id="ai-pricing"  class="hidden">
           <PricingPlans includeAI={true} />
         </div>
       </div>
