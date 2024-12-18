@@ -1,0 +1,512 @@
+---
+import PricingPlans from "./PricingPlans.astro";
+
+interface Feature {
+  name: string;
+  essential: boolean | string;
+  pro: boolean | string;
+  enterprise: boolean | string;
+}
+
+interface FeatureCategory {
+  name: string;
+  features: Feature[];
+}
+
+const featureCategories = [
+  {
+    name: "Before the Meeting",
+    features: [
+      {
+        name: "Agenda Builder",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Agenda Integration",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Board Pack Annotation",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Board Pack Creation",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Document Annotation",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Document Management",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "E-signature Delegation of Authority",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Task Management",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+    ],
+  },
+  {
+    name: "During the Meeting",
+    features: [
+      {
+        name: "Action",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Board Pack Annotation",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Easy User Interface",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "File Sharing",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "Minute Builder",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "AI Minute Summary & Transcript",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Polling",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Private Chat",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Voting",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+    ],
+  },
+  {
+    name: "After the Meeting",
+    features: [
+      {
+        name: "Document Repository",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "E-signature (Minutes, Documents)",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "General Governance",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Sub-committees",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+    ],
+  },
+  {
+    name: "Board Tools",
+    features: [
+      {
+        name: "Board Member Directory, Profile",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "Branding Personalisation",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "E-mail Integration",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "e-Signature Integration",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "IOS & Android",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Mandate Management",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "Multi-board Management",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Multiple Language",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Off-line Access",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "User Simple Directory",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+    ],
+  },
+  {
+    name: "Analytics & AI",
+    features: [
+      {
+        name: "Advanced Analytics",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "AI-Assistant",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "AI-Search",
+        essential: "Basic",
+        pro: "Advanced",
+        enterprise: "Custom",
+      },
+      {
+        name: "Board Evaluation",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "Board KPI & Audit Trail",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+    ],
+  },
+  {
+    name: "Compliance & Governance",
+    features: [
+      {
+        name: "Company Specific Compliance",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "Financial Services",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "General Secretary Check (Quorum, etc.)",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "Multi-factor Authentication",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Pharmaceutical Services",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "Secured Document Storage",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Sector Specific Compliance",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+
+      {
+        name: "Telecom Services",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+    ],
+  },
+  {
+    name: "Security",
+    features: [
+      {
+        name: "SSO Integration",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+    ],
+  },
+  {
+    name: "Support",
+    features: [
+      {
+        name: "24 Hours Support",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "Dedicated Customer Success",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "IM and E-mail",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Priority Support",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+    ],
+  },
+];
+
+export const plans = [
+  {
+    name: "Essential",
+    price: "299",
+    description:
+      "Perfect for small boards and organizations starting with essential governance tools.",
+    limits: "Includes 1 board and 1 committee",
+    popular: false,
+    features: [
+      "Unlimited Users",
+      "Agenda Builder",
+      "Document Management",
+      "Board Pack Creation",
+      "Document Repository",
+      "Private Chat",
+      "General Governance",
+      "Secured Document Storage & Multi-Factor Authentication",
+      "IM and Email Support",
+    ],
+  },
+  {
+    name: "Professional",
+    price: "599",
+    description:
+      "Ideal for growing organizations that need advanced collaboration and compliance tools.",
+    limits: "Includes 2 boards and 2 committees per board",
+    popular: true,
+    features: [
+      "Everything in Essential, plus:",
+      "Task Management",
+      "Document Annotation",
+      "Voting Tools",
+      "E-Signature (Minutes and Documents)",
+      "Sub-Committee Support",
+      "Polling",
+      "Document Collaboration (Editing & Comments)",
+      "Regional Main Compliance Tools (Learn)",
+      "Advanced Permissions and Access Control",
+      "Priority Email and Phone Support",
+    ],
+  },
+  {
+    name: "Enterprise",
+    price: "Custom",
+    description:
+      "For large organizations with complex needs and custom governance requirements.",
+    limits: "Unlimited boards and committees",
+    popular: false,
+    features: [
+      "Everything in Pro, plus:",
+      "Templates for Documents and Meetings",
+      "Advanced Insights and Analytics",
+      "E-Signature (Advanced Capabilities)",
+      "Advanced Collaboration Tools",
+      "Sector-Specific Compliance: Financial, Telecom, Pharmaceutical Services",
+      "SSO Integration",
+      "24/7 Support and Dedicated Customer Success Manager",
+    ],
+  },
+];
+---
+
+<PricingPlans plans={plans} />
+
+<!-- Feature Comparison -->
+<div
+  class="mt-10 bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden"
+>
+  <div class="p-6 bg-gray-50 border-b border-gray-100">
+    <div class="mt-8 flex flex-col items-center text-center">
+      <h2 class="text-3xl font-bold text-gray-900 mb-2">Feature-by-Feature Comparison</h3>
+      <p class="mt4 text-gray-600 text-xl">Compare our plans side-by-side to find the perfect fit for your organization's needs</p>
+    </div>
+  </div>
+
+  <div class="divide-y divide-gray-100">
+    {
+      featureCategories.map((category, index) => (
+        <div class="p-6">
+          <button
+            class="w-full flex justify-between items-center text-lg font-semibold text-gray-900 mb-4 focus:outline-none"
+            onclick={`document.getElementById('category-${index}').classList.toggle('hidden')`}
+          >
+            <span>{category.name}</span>
+            <svg
+              class="w-5 h-5 transform transition-transform duration-200"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+
+          <div
+            id={`category-${index}`}
+            class={` ${index === 0 ? "" : "hidden"}`}
+          >
+            <div class="px-4 py-2 grid grid-cols-4 gap-4 items-center mb-4">
+              <div class="text-sm text-gray-600" />
+              <div class="text-sm font-medium text-center">Essential</div>
+              <div class="text-sm font-medium text-center">Professional</div>
+              <div class="text-sm font-medium text-center">Enterprise</div>
+            </div>
+            {category.features.map((feature) => (
+              <div class="px-4 py-2 grid grid-cols-4 gap-4 items-center hover:bg-gray-50 transition-colors duration-200">
+                <div class="text-sm text-gray-600">{feature.name}</div>
+                {[feature.essential, feature.pro, feature.enterprise].map(
+                  (value) => (
+                    <div class="text-sm text-center">
+                      {typeof value === "boolean" ? (
+                        value ? (
+                          <svg
+                            class="w-5 h-5 text-primary mx-auto"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M5 13l4 4L19 7"
+                            />
+                          </svg>
+                        ) : (
+                          <svg
+                            class="w-5 h-5 text-gray-300 mx-auto"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M6 18L18 6M6 6l12 12"
+                            />
+                          </svg>
+                        )
+                      ) : (
+                        <span class="text-gray-900">{value}</span>
+                      )}
+                    </div>
+                  ),
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>
