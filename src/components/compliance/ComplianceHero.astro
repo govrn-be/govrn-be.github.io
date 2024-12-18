@@ -1,0 +1,43 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Your Board's Regulatory",
+  description = "Transform regulatory complexity into clarity. Our AI-powered monitoring keeps your board confidently informed about upcoming regulations and their strategic impact, so you can focus on what matters most."
+} = Astro.props;
+---
+
+<section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
+  <div class="absolute inset-0 z-0">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="text-center max-w-3xl mx-auto">
+      <div class="inline-flex items-center rounded-full px-4 py-1 text-sm font-medium bg-primary/10 text-primary mb-8">
+        Intelligent Compliance Monitoring
+      </div>
+      <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">{title}<span class="px-2 mt-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">Peace of Mind</span></h1>
+      <p class="text-xl text-gray-600 leading-relaxed mb-12">
+        {description}
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/request-demo"
+          class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300"
+        >
+          See It In Action
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-gray-900 bg-white border-2 border-gray-200 hover:border-primary/20 hover:bg-gray-50 transition-colors duration-200"
+        >
+          Contact Sales
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

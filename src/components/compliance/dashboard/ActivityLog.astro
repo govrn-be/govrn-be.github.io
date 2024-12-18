@@ -1,0 +1,52 @@
+
+---
+interface Activity {
+  category: string;
+  action: string;
+  timestamp: string;
+  status: 'success' | 'warning' | 'error';
+}
+
+interface Props {
+  activities: Activity[];
+}
+
+const { activities } = Astro.props;
+
+const statusColors = {
+  success: 'bg-green-500',
+  warning: 'bg-yellow-500',
+  error: 'bg-red-500'
+};
+---
+
+<div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+  <h3 class="text-lg font-semibold text-gray-900 mb-4">Recent Activity</h3>
+  <div class="space-y-4">
+    {activities.map((activity, index) => (
+      <div 
+        class="flex items-start space-x-3 animate-fade-in"
+        style={`animation-delay: ${index * 300}ms`}
+      >
+        <div class={`w-2 h-2 rounded-full mt-2 ${statusColors[activity.status]}`}></div>
+        <div>
+          <div class="text-sm font-medium text-gray-900">{activity.category}</div>
+          <div class="text-sm text-gray-600">{activity.action}</div>
+          <div class="text-xs text-gray-500">{activity.timestamp}</div>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+</style>

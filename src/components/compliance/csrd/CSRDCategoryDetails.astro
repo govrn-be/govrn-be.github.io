@@ -1,0 +1,112 @@
+
+---
+interface DocumentEvidence {
+  title: string;
+  type: string;
+  date: string;
+  relevance: number;
+  excerpt?: string;
+}
+
+interface Props {
+  title: string;
+  score: number;
+  status: 'good' | 'warning' | 'alert';
+  requirement: string;
+  analysis: {
+    strengths: string[];
+    gaps: string[];
+    recommendations: string[];
+  };
+  documents: DocumentEvidence[];
+}
+
+const { title, score, status, requirement, analysis, documents } = Astro.props;
+
+const statusColors = {
+  good: 'bg-green-100 text-green-800',
+  warning: 'bg-yellow-100 text-yellow-800',
+  alert: 'bg-red-100 text-red-800'
+};
+---
+
+<div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+  <!-- Header -->
+  <div class="flex items-start justify-between mb-6">
+    <div>
+      <h3 class="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
+      <p class="text-gray-600">{requirement}</p>
+    </div>
+    <span class={`px-4 py-2 rounded-full text-sm font-medium ${statusColors[status]}`}>
+      {score}% Complete
+    </span>
+  </div>
+
+  <!-- Analysis Section -->
+  <div class="grid md:grid-cols-3 gap-6 mb-8">
+    <div class="space-y-4">
+      <h4 class="font-medium text-gray-900">Strengths</h4>
+      <ul class="space-y-2">
+        {analysis.strengths.map(strength => (
+          <li class="flex items-start">
+            <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-sm text-gray-600">{strength}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="space-y-4">
+      <h4 class="font-medium text-gray-900">Gaps Identified</h4>
+      <ul class="space-y-2">
+        {analysis.gaps.map(gap => (
+          <li class="flex items-start">
+            <svg class="h-5 w-5 text-red-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+            <span class="text-sm text-gray-600">{gap}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="space-y-4">
+      <h4 class="font-medium text-gray-900">Recommendations</h4>
+      <ul class="space-y-2">
+        {analysis.recommendations.map(recommendation => (
+          <li class="flex items-start">
+            <svg class="h-5 w-5 text-primary mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            <span class="text-sm text-gray-600">{recommendation}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+
+  <!-- Supporting Documents -->
+  <div>
+    <h4 class="font-medium text-gray-900 mb-4">Supporting Documents</h4>
+    <div class="space-y-3">
+      {documents.map(doc => (
+        <div class="bg-gray-50 rounded-lg p-4">
+          <div class="flex items-start justify-between">
+            <div>
+              <h5 class="font-medium text-gray-900">{doc.title}</h5>
+              <p class="text-sm text-gray-500">{doc.type} • {doc.date}</p>
+              {doc.excerpt && (
+                <p class="text-sm text-gray-600 mt-2 italic">"{doc.excerpt}"</p>
+              )}
+            </div>
+            <span class="text-sm text-primary">
+              {doc.relevance}% relevant
+            </span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
