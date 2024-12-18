@@ -2,9 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import { supportFaqs } from '../data/faq-data';
 
-import PricingToggle from '../components/pricing/PricingToggle.astro';
-import PricingPlans from '../components/pricing/PricingPlans.astro';
-
+import PricingTiers from '../components/pricing/PricingTiers.astro';
 const supportServices = [
   {
     icon: "👥",
@@ -114,20 +112,9 @@ const structuredData = {
       </div>
     </section>
 
-    <!-- Pricing Section -->
     <section class="py-20 bg-white relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <PricingToggle includeAI={false} />
-        
-        <!-- Standard Pricing -->
-        <div id="standard-pricing">
-          <PricingPlans includeAI={false} />
-        </div>
-
-        <!-- AI Pricing -->
-        <div id="ai-pricing"  class="hidden">
-          <PricingPlans includeAI={true} />
-        </div>
+        <PricingTiers />
       </div>
     </section>
 
