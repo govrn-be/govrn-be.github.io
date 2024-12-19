@@ -7,7 +7,10 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   integrations: [tailwind(), react(), sitemap()],
   site: 'https://govrn.com',
-  
+  i18n: {
+    locales: ['en', 'fr'],
+    defaultLocale: 'en',
+  },
   redirects: {
     '/blog/tips-tricks-12/what-does-abstained-mean-understanding-the-meaning-and-implications-152': '/blog/what-does-abstained-mean',
     '/blog/our-blog-1/what-does-abstained-mean-understanding-the-meaning-and-implications-152': '/blog/what-does-abstained-mean',

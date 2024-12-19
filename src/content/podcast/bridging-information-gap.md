@@ -65,4 +65,18 @@ The Govrn expert panel shares actionable insights and practical examples to illu
 - 10:42 - Case Studies in Effective Governance  
 - 14:16 - Key Takeaways and Conclusion  
 
-🎙️ **Tune in now to explore how effective information flow can enhance corporate governance and empower boards to make better decisions!**
+## Leveraging Technology to Bridge the Information Gap
+
+As boards strive to improve information flow and decision-making, technology plays a crucial role in enabling effective collaboration and communication. Govrn offers a powerful solution through our document collaboration features:
+
+### Document Collaboration Platform
+
+Our [document collaboration platform](/features/document-collaboration) empowers boards to:
+
+- Share and access critical documents in a secure, centralized location
+- Track document versions and changes in real-time
+- Enable collaborative editing and feedback
+- Maintain an organized archive of board materials
+- Control access permissions and ensure data security
+
+

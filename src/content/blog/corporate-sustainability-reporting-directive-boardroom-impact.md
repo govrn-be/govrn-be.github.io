@@ -38,9 +38,9 @@ For boards, this means grappling with complex issues like:
 
 ## From Box-Ticking to Strategic Thinking  
 
-Traditionally, governance has often been a box-ticking exercise. CSRD changes that. It pushes boards to **move beyond compliance** and embed sustainability into strategy.  
+Traditionally, governance has often been a box-ticking exercise. CSRD changes that. It pushes boards to **move beyond compliance** and embed sustainability into strategy. Our [AI-powered compliance monitoring](/features/ai-board-compliance-monitoring) helps boards stay ahead of regulatory requirements while focusing on strategic initiatives.
 
-> *"CSRD is more than another report—it’s prompting boards to rethink their roles and responsibilities."* – Ludovic Laffineur  
+> *"CSRD is more than another report—it's prompting boards to rethink their roles and responsibilities."* – Ludovic Laffineur  
 
 To navigate this shift, boards need to:  
 - Develop a **deep understanding** of environmental, social, and governance (ESG) factors.  
@@ -52,9 +52,9 @@ To navigate this shift, boards need to:
 ## Challenges and Risks Boards Must Address  
 
 ### 1. **Data Overload and Analysis Paralysis**  
-CSRD reporting generates vast amounts of ESG data. Boards must focus on **material issues**—those most impactful to their business and stakeholders.  
+CSRD reporting generates vast amounts of ESG data. Boards must focus on **material issues**—those most impactful to their business and stakeholders. Our [AI assistant](/features/ai-assistant) helps analyze and distill complex ESG data into actionable insights.
 
-> "It’s about finding the right balance between being comprehensive and avoiding analysis paralysis."  
+> "It's about finding the right balance between being comprehensive and avoiding analysis paralysis."  
 
 ### 2. **Greenwashing Risks**  
 Companies may feel pressured to appear sustainable without meaningful action. Boards must ensure **integrity** and transparency in reporting.  
@@ -68,7 +68,7 @@ Personal ties to suppliers or other stakeholders could create tensions. Strong g
 
 ## Opportunities: CSRD as a Catalyst for Innovation  
 
-CSRD isn’t just about risk—it’s about **unlocking opportunity**. Companies that embrace the directive can:  
+CSRD isn't just about risk—it's about **unlocking opportunity**. Companies that embrace the directive can:  
 - Attract **ESG-focused investors** looking for trustworthy sustainability initiatives.  
 - Enhance their **brand reputation** as leaders in sustainability.  
 - Foster **innovation** across their supply chains, products, and business practices.  
@@ -79,27 +79,27 @@ CSRD isn’t just about risk—it’s about **unlocking opportunity**. Companies
 
 ## Evolving Boardroom Competencies  
 
-Implementing CSRD requires a **shift in board composition and expertise**. It’s no longer enough to rely solely on financial wizards. Boards need members who bring:  
+Implementing CSRD requires a **shift in board composition and expertise**. It's no longer enough to rely solely on financial wizards. Boards need members who bring:  
 1. **ESG expertise** to navigate sustainability reporting.  
 2. **Interpersonal skills** to foster collaboration and navigate tough discussions.  
 3. **Diverse perspectives** to challenge assumptions and avoid biases.  
 
-**Scenario planning** and tools like **premortems** can help boards anticipate potential pitfalls and make more robust decisions.  
+**Scenario planning** and tools like **premortems** can help boards anticipate potential pitfalls and make more robust decisions. Our [document collaboration](/features/document-collaboration) platform enables seamless sharing and discussion of these critical analyses.
 
-> *"Imagine it’s a year in the future, and your decision has failed spectacularly. What went wrong? That’s a premortem."*  
+> *"Imagine it's a year in the future, and your decision has failed spectacularly. What went wrong? That's a premortem."*  
 
 ---
 
 ## Shaping the Future of Corporate Leadership  
 
-CSRD’s impact goes beyond the boardroom. It’s reshaping corporate leadership and ushering in the era of the **Sustainable CEO**—leaders who:  
+CSRD's impact goes beyond the boardroom. It's reshaping corporate leadership and ushering in the era of the **Sustainable CEO**—leaders who:  
 - Balance **profit** and **purpose**.  
 - Demonstrate **stakeholder engagement skills**.  
 - Commit to **long-term value creation**.  
 
 This shift also rebalances power dynamics, empowering boards to champion sustainability and advocate for long-term success.  
 
-> *"CSRD gives boards the tools to push back against short-term pressures and focus on what’s best for all stakeholders."*  
+> *"CSRD gives boards the tools to push back against short-term pressures and focus on what's best for all stakeholders."*  
 
 ---
 
@@ -114,7 +114,7 @@ As boards grapple with the challenges and opportunities of CSRD, here are three 
    Move beyond traditional top-down dynamics. Foster open, inclusive discussions to leverage diverse perspectives.  
 
 3. **Think Long-Term, Act Strategically**  
-   CSRD isn’t just about compliance—it’s about creating a sustainable future that drives value for your business and the planet.  
+   CSRD isn't just about compliance—it's about creating a sustainable future that drives value for your business and the planet.  
 
 ---
 

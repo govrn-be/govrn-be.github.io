@@ -45,8 +45,8 @@ AI tools offer data contextualization, dynamic insights, and decision support, e
 #### **Board Data**  
 - **Internal Perspective**: Provides insights into operations, performance, and decision-making processes.  
 - **Historical Context**: Tracks organizational evolution over time for benchmarking and trend analysis.  
-- **Governance and Compliance**: Documents regulatory adherence and governance standards.  
-- **Decision Support**: Tailored insights for strategic priorities.
+- **Governance and Compliance**: Documents regulatory adherence and governance standards. [Learn more about our AI-powered compliance features](/features/ai-board-compliance-monitoring).
+- **Decision Support**: Tailored insights for strategic priorities. [Learn more about our AI assistant](/features/ai-assistant).
 
 #### **External Data**  
 - **Market Intelligence**: Offers insights into market trends, competitor actions, and customer behavior.  
