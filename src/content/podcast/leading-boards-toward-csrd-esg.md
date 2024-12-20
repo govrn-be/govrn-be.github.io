@@ -3,7 +3,7 @@ title: "CSRD and ESG: Redefining Board Leadership for Sustainability"
 description: "In this episode of Governance Matters, the hosts delve into the implications of CSRD and ESG for boards. From understanding procedural justice to overcoming decision-making challenges, discover how boards can lead the way in sustainability and accountability."
 pubDate: 2024-12-20
 duration: "20 min"
-spotifyUrl: "https://open.spotify.com/show/11ejxA1c7TZcNVBJ6Pag3B?si=19b17abd580a4df2"
+spotifyUrl: "https://open.spotify.com/episode/75f5GCAEp9UUGn6a5L0pGR?si=4caf803ea8984351"
 image: "/podcast-S1E5.png"
 featured: true
 podcastAudioUrl: "/podcast-S1E5.m4a"
