@@ -1,0 +1,169 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Hero from "../../components/Hero.astro";
+import Features from "../../components/Features.astro";
+import Stats from "../../components/Stats.astro";
+import Timeline from "../../components/Timeline.astro";
+import Personas from "../../components/Personas.astro";
+import Testimonials from "../../components/Testimonials.astro";
+import FAQ from "../../components/FAQ.astro";
+import CTA from "../../components/CTA.astro";
+import FeatureShowcase from "../../components/features/FeatureShowcase.astro";
+import SecurityPreview from "../../components/SecurityPreview.astro";
+import { faqs } from "../../data/faq-data";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "name": "Govrn - Frequently Asked Questions",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
+const hero = {
+  imageValues: [
+    {
+      title: "IA Intégrée",
+      description: "Transformez les données de votre conseil en insights exploitables grâce à notre moteur d'IA avancé",
+      position: "top-1/4 left-2/3"
+    },
+    {
+      title: "Sécurisé",
+      description: "Sécurité de niveau entreprise avec chiffrement de bout en bout et fonctionnalités de conformité",
+      position: "bottom-1/3 right-10"
+    },
+    {
+      title: "Collaboratif",
+      description: "Outils de collaboration en temps réel pour une communication fluide du conseil",
+      position: "bottom-1/4 left-1/3"
+    }
+  ],
+  badgeText: "Gestion de conseil propulsée par l'IA",
+  heading: {
+    main: "Le logiciel IA pour alimenter vos",
+    highlight: "meilleures décisions"
+  },
+  description: "Govrn permet à votre conseil de prendre facilement des décisions éclairées. Notre plateforme IA améliore la collaboration, assure la conformité et favorise la croissance à long terme.",
+  ctaButtons: {
+    primary: {
+      text: "Demander une démo",
+      href: "/fr/request-demo"
+    },
+    secondary: {
+      text: "Regarder la vidéo"
+    }
+  },
+  securityFeatures: [
+    {
+      title: "RGPD",
+      subtitle: "Conforme"
+    },
+    {
+      title: "Chiffrement",
+      subtitle: "256-bit"
+    },
+    {
+      title: "Authentification",
+      subtitle: "Multi-Facteur"
+    }
+  ],
+  imageAlt: "Interface du Logiciel de Gestion de Conseil Govrn",
+  imageSrc: "/application-home-page.png"
+}
+
+const stats = [
+  { 
+    value: "$50M+",
+    label: "Valeur perdue annuellement due à des décisions de conseil médiocres",
+    icon: "💰"
+  },
+  {
+    value: "45%+", 
+    label: "Réduction du temps de décision avec l'IA de Govrn",
+    icon: "⚡"
+  },
+  {
+    value: "10,000+",
+    label: "Décisions stratégiques grâce à Govrn", 
+    icon: "🎯"
+  }
+];
+
+const featuresProps = {
+  texts: {
+    title: "Trois piliers de la gestion de conseil moderne",
+    subtitle: "Découvrez comment Govrn transforme votre gestion de conseil",
+    exploreButton: "Explorer toutes les fonctionnalités",
+    learnMore: "En savoir plus"
+  },
+  pillars: [
+    {
+      title: "Efficacité du conseil",
+      description: "Optimisez votre conseil avec Govrn : organisez vos documents et boostez votre productivité grâce à nos outils sécurisés.",
+      icon: "⚡",
+      features: [
+        "Organisation des documents",
+        "Annotation intelligente", 
+        "Authentification sécurisée",
+        "Outils de productivité"
+      ],
+      gradient: "from-primary to-blue-500"
+    },
+    {
+      title: "Collaboration & Analyses",
+      description: "Explorez vos documents avec notre assistant IA pour des insights stratégiques plus pertinents.",
+      icon: "🤖", 
+      features: [
+        "Analyse IA",
+        "Insights stratégiques",
+        "Intelligence des documents",
+        "Collaboration en temps réel"
+      ],
+      gradient: "from-blue-500 to-indigo-500"
+    },
+    {
+      title: "Gouvernance & Conformité",
+      description: "Gérez vos tâches selon les rôles, avec signature électronique et système de vote intégrés.",
+      icon: "⚖️",
+      features: [
+        "Gestion basée sur les rôles",
+        "Intégration de la signature électronique", 
+        "Suivi de la conformité",
+        "Système de vote"
+      ],
+      gradient: "from-indigo-500 to-primary"
+    }
+  ]
+};
+---
+
+<Layout
+  title="Govrn - Propulsez les décisions de votre conseil grâce à l'IA"
+  description="Transformez votre gestion de conseil avec Govrn, la plateforme IA-First qui optimise les opérations, améliore la collaboration et stimule l'innovation."
+  structuredData={structuredData}
+>
+  <main class="overflow-hidden">
+    <Hero {...hero} />
+    <Stats stats={stats} />
+    <Features {...featuresProps} />
+    <FeatureShowcase />
+    <Timeline />
+    <SecurityPreview />
+    <Personas />
+    <Testimonials />
+    <FAQ />
+    <CTA />
+  </main>
+</Layout>
+
+<style>
+  main {
+    width: 100%;
+  }
+</style>

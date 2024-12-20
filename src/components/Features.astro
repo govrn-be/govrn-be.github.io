@@ -1,52 +1,80 @@
 ---
-const pillars = [
-  {
-    title: "Board Effectiveness",
-    description: "Optimize your board with Govrn: streamline, organize docs, boost productivity with annotation and secured authentication.",
-    icon: "⚡",
-    features: [
-      "Document organization",
-      "Smart annotation",
-      "Secure authentication",
-      "Productivity tools"
-    ],
-    gradient: "from-primary to-blue-500"
+interface Feature {
+  title: string;
+  description: string;
+  icon: string;
+  features: string[];
+  gradient: string;
+}
+
+interface Texts {
+  title: string;
+  subtitle: string;
+  exploreButton: string;
+  learnMore: string;
+}
+
+interface Props {
+  texts?: Texts;
+  pillars?: Feature[];
+}
+
+const {
+  texts = {
+    title: "Three Pillars of Modern Board Management",
+    subtitle: "Discover how Govrn's comprehensive approach transforms your board operations",
+    exploreButton: "Explore All Features",
+    learnMore: "Learn More"
   },
-  {
-    title: "Board Collaboration & Insights",
-    description: "Explore board documents with our AI-Assistant, providing deeper insights and understanding on strategic imperatives.",
-    icon: "🤖",
-    features: [
-      "AI-powered analysis",
-      "Strategic insights",
-      "Document intelligence",
-      "Real-time collaboration"
-    ],
-    gradient: "from-blue-500 to-indigo-500"
-  },
-  {
-    title: "Board Governance & Compliance",
-    description: "Organize tasks according to board roles & responsibilities, integrate e-signature for timely administration, collaboration & voting.",
-    icon: "⚖️",
-    features: [
-      "Role-based management",
-      "E-signature integration",
-      "Compliance tracking",
-      "Voting system"
-    ],
-    gradient: "from-indigo-500 to-primary"
-  }
-];
+  pillars = [
+    {
+      title: "Board Effectiveness",
+      description: "Optimize your board with Govrn: streamline, organize docs, boost productivity with annotation and secured authentication.",
+      icon: "⚡",
+      features: [
+        "Document organization",
+        "Smart annotation", 
+        "Secure authentication",
+        "Productivity tools"
+      ],
+      gradient: "from-primary to-blue-500"
+    },
+    {
+      title: "Board Collaboration & Insights",
+      description: "Explore board documents with our AI-Assistant, providing deeper insights and understanding on strategic imperatives.",
+      icon: "🤖", 
+      features: [
+        "AI-powered analysis",
+        "Strategic insights",
+        "Document intelligence",
+        "Real-time collaboration"
+      ],
+      gradient: "from-blue-500 to-indigo-500"
+    },
+    {
+      title: "Board Governance & Compliance",
+      description: "Organize tasks according to board roles & responsibilities, integrate e-signature for timely administration, collaboration & voting.",
+      icon: "⚖️",
+      features: [
+        "Role-based management",
+        "E-signature integration", 
+        "Compliance tracking",
+        "Voting system"
+      ],
+      gradient: "from-indigo-500 to-primary"
+    }
+  ]
+} = Astro.props;
 ---
 
 <section id="features" class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto mb-16">
       <h2 class="text-4xl font-extrabold text-gray-900 mb-4">
-        Three Pillars of Modern Board Management
+        {texts.title}
       </h2>
       <p class="text-xl text-gray-600">
-        Discover how Govrn's comprehensive approach transforms your board operations
+        {texts.subtitle}
       </p>
     </div>
 
@@ -76,7 +104,7 @@ const pillars = [
               href="/features" 
               class="inline-flex items-center text-primary hover:text-primary/90 font-medium group"
             >
-              Learn More
+              {texts.learnMore}
               <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
@@ -91,7 +119,7 @@ const pillars = [
         href="/features"
         class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 group"
       >
-        Explore All Features
+        {texts.exploreButton}
         <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
         </svg>

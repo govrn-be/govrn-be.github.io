@@ -1,0 +1,158 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const sections = [
+  {
+    title: "Information We Collect",
+    items: [
+      {
+        subtitle: "Account and Contact Data",
+        content: "When you register on our website, you voluntarily provide information including name, company name, email address, phone number, postal address, business sector, and password. We never store credit card information and rely on trusted third-party PCI-DSS-compliant payment processors."
+      },
+      {
+        subtitle: "Job Application Data",
+        content: "For job applications, we collect contact information and details from your CV. We only request information necessary for the recruitment process and never collect sensitive personal information about racial origin, political opinions, religious beliefs, or sexual life."
+      },
+      {
+        subtitle: "Browser Data",
+        content: "We detect browser language and geolocation to customize your experience. Our servers record basic information like IP address, visit time/date, browser version, and referral source for statistical and security purposes."
+      },
+      {
+        subtitle: "Customer Databases",
+        content: "Information in your Govrn database remains under your full control and ownership. We only process this data on your behalf according to your instructions."
+      }
+    ]
+  },
+  {
+    title: "How We Use Information",
+    items: [
+      {
+        subtitle: "Account and Contact Data",
+        content: "Used for service provision, support, billing, and optional marketing communications. Data may be shared with event organizers and sponsors if you register for events."
+      },
+      {
+        subtitle: "Job Application Data",
+        content: "Processed solely for recruitment purposes and contract preparation if selected. You may request deletion at any time."
+      },
+      {
+        subtitle: "Browser Data",
+        content: "Analyzed anonymously for service improvement. Google reCAPTCHA may be used for security, processing only anonymous scores."
+      },
+      {
+        subtitle: "Customer Databases",
+        content: "Processed according to your instructions for service provision. Support staff may access data for troubleshooting or upon your request."
+      }
+    ]
+  },
+  {
+    title: "Data Retention",
+    items: [
+      {
+        subtitle: "Account and Contact Data",
+        content: "Retained as long as necessary for service provision and legal requirements."
+      },
+      {
+        subtitle: "Job Application Data",
+        content: "Kept up to 2 years for potential future opportunities unless requested otherwise. Employee data retained per legal requirements."
+      },
+      {
+        subtitle: "Browser Data",
+        content: "Typically retained for 2 months unless needed longer for security or legal purposes."
+      },
+      {
+        subtitle: "Customer Database",
+        content: "Retained only during active service period. Deactivated databases kept for 3 weeks after cancellation, then destroyed."
+      }
+    ]
+  }
+];
+
+const contactInfo = {
+  email: "privacy@govrn.com",
+  address: "GORVN SA - Data Protection\n18 Avenue Roger Vandendriessche\n1150 Brussels, Belgium",
+  vat: "BE0761625687"
+};
+---
+
+<Layout title="Privacy Policy - Govrn Board Management Software" description="We are committed to protecting your privacy and ensuring the security of your data. Learn how we collect, use, and protect your information.">
+  <main class="pt-16">
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-3xl mx-auto">
+          <div class="inline-flex items-center rounded-full px-4 py-1 text-sm font-medium bg-primary/10 text-primary mb-8">
+            Privacy Policy
+          </div>
+          <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
+            Your Privacy is Our
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
+              Priority
+            </span>
+          </h1>
+          <p class="text-xl text-gray-600 leading-relaxed">
+            We are committed to protecting your privacy and ensuring the security of your data. Learn how we collect, use, and protect your information.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="prose prose-lg max-w-none">
+          <p class="text-xl text-gray-600 mb-12">
+            GOVRN SA and its affiliates offer many services to help you run your business, including a platform to host your Govrn database. This policy explains what information we collect, why we collect it, and how we use it.
+          </p>
+
+          {sections.map(section => (
+            <div class="mb-16">
+              <h2 class="text-3xl font-bold text-gray-900 mb-8">{section.title}</h2>
+              <div class="space-y-12">
+                {section.items.map(item => (
+                  <div class="bg-gray-50 rounded-xl p-8">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">{item.subtitle}</h3>
+                    <p class="text-gray-600">{item.content}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+
+          <!-- Cookies Section -->
+          <div class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Cookies</h2>
+            <div class="bg-gray-50 rounded-xl p-8">
+              <p class="text-gray-600">
+                Cookies are small bits of text sent by our servers to your computer when you access our services. We use them to support your activities, understand preferences, and improve our services. Third-party services like Google Analytics may also use cookies for their own purposes.
+              </p>
+            </div>
+          </div>
+
+          <!-- Contact Information -->
+          <div class="bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-xl p-8 border border-primary/10">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Contact Us</h2>
+            <p class="text-gray-600 mb-4">
+              If you have any questions about this Privacy Policy or concerns about your personal data, please contact us:
+            </p>
+            <div class="space-y-2">
+              <p class="text-gray-600">
+                <strong>Email:</strong> {contactInfo.email}
+              </p>
+              <p class="text-gray-600 whitespace-pre-line">
+                <strong>Address:</strong>
+                {contactInfo.address}
+              </p>
+              <p class="text-gray-600">
+                <strong>VAT:</strong> {contactInfo.vat}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

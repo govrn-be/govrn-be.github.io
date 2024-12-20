@@ -1,0 +1,122 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrialForm from '../../components/forms/TrialForm.astro';
+
+const benefits = [
+  {
+    icon: "⚡",
+    title: "Instant Access",
+    description: "Get started immediately with our fully-featured platform"
+  },
+  {
+    icon: "🎯",
+    title: "No Credit Card Required",
+    description: "Try all features risk-free for 14 days"
+  },
+  {
+    icon: "👥",
+    title: "Full Team Access",
+    description: "Invite your entire board to experience Govrn"
+  },
+  {
+    icon: "🔒",
+    title: "Enterprise Security",
+    description: "Bank-grade encryption and security from day one"
+  }
+];
+---
+
+<Layout title="Try Govrn Free - Transform Your Board Management" description="Experience how Govrn can transform your board management with our 14-day free trial. No credit card required.">
+  <main class="pt-16">
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <!-- Left Column - Content -->
+          <div>
+            <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
+              Start Your Free Trial of
+              <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
+                Govrn Today
+              </span>
+            </h1>
+            <p class="text-xl text-gray-600 leading-relaxed mb-12">
+              Experience how Govrn can transform your board management with our 14-day free trial. No credit card required.
+            </p>
+
+            <div class="grid sm:grid-cols-2 gap-6">
+              {benefits.map(benefit => (
+                <div class="flex items-start space-x-4">
+                  <div class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-2xl">
+                    {benefit.icon}
+                  </div>
+                  <div>
+                    <h2 class="font-semibold text-gray-900">{benefit.title}</h3>
+                    <p class="text-sm text-gray-600">{benefit.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Right Column - Form -->
+          <div class="bg-white rounded-2xl p-8 shadow-xl border border-gray-100">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8">Activate Your Free Trial</h2>
+            <TrialForm />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8">Trusted by Leading Organizations</h2>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-8 items-center opacity-70">
+            <img
+              src="/vdv-logo.png"
+              alt="Van de Velde"
+              class="h-24 object-contain mx-auto"
+            />
+            <img
+              src="/fib-logo.png"
+              alt="Finance & Invest Brussels"
+              class="h-24 object-contain mx-auto"
+            />
+            <img
+              src="/careproperty-logo.png"
+              alt="Care Property Invest"
+              class="h-24 object-contain mx-auto"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Frequently Asked Questions</h2>
+        <div class="space-y-8">
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">What's included in the free trial?</h3>
+            <p class="text-gray-600">You get full access to all Govrn features for 14 days, including document management, meeting tools, and collaboration features.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Do I need a credit card to start?</h3>
+            <p class="text-gray-600">No, you can start your free trial without entering any payment information. We'll notify you before the trial ends.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">What happens after the trial?</h3>
+            <p class="text-gray-600">After 14 days, you can choose to upgrade to one of our paid plans. We'll help you select the best option for your needs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

@@ -8,8 +8,14 @@ export default defineConfig({
   integrations: [tailwind(), react(), sitemap()],
   site: 'https://govrn.com',
   i18n: {
-    locales: ['en', 'fr'],
+    locales: ["en", {
+      path: "fr",
+      codes: ["fr", "fr-FR", "fr-CA", "fr-BE", "fr-CH", "fr-DZ", "fr-FR", "fr-GF", "fr-GP", "fr-MQ", "fr-RE", "fr-YT"]
+    }],   
     defaultLocale: 'en',
+    routing: {
+      prefixDefaultLocale: false
+    }
   },
   redirects: {
     '/blog/tips-tricks-12/what-does-abstained-mean-understanding-the-meaning-and-implications-152': '/blog/what-does-abstained-mean',

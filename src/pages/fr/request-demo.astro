@@ -1,0 +1,126 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const industries = [
+  "Financial Services",
+  "Healthcare",
+  "Real Estate",
+  "Manufacturing",
+  "Non-Profit",
+  "Education",
+  "Other"
+];
+
+const boardSizes = [
+  "1-5 members",
+  "6-10 members",
+  "11-15 members",
+  "16+ members"
+];
+
+const features = [
+  {
+    icon: "📊",
+    title: "Live Product Demo",
+    description: "See Govrn in action with a personalized walkthrough"
+  },
+  {
+    icon: "💡",
+    title: "Expert Consultation",
+    description: "Get tailored recommendations for your board's needs"
+  },
+  {
+    icon: "💰",
+    title: "Pricing Discussion",
+    description: "Learn about our flexible pricing options"
+  },
+  {
+    icon: "🚀",
+    title: "Implementation Plan",
+    description: "Discover how to get started with Govrn"
+  }
+];
+---
+
+<Layout title="Request a Demo - Govrn Board Management Software" description="Schedule a personalized demo to see how Govrn can transform your board operations with AI-powered insights and seamless collaboration.">
+  <main class="pt-16">
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <!-- Left Column - Content -->
+          <div>
+            <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
+              Experience the Future of
+              <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
+                Board Management
+              </span>
+            </h1>
+            <p class="text-xl text-gray-600 leading-relaxed mb-12">
+              Schedule a personalized demo to see how Govrn can transform your board operations with AI-powered insights and seamless collaboration.
+            </p>
+
+            <div class="grid sm:grid-cols-2 gap-6">
+              {features.map(feature => (
+                <div class="flex items-start space-x-4">
+                  <div class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-2xl">
+                    {feature.icon}
+                  </div>
+                  <div>
+                    <h2 class="font-semibold text-gray-900">{feature.title}</h3>
+                    <p class="text-sm text-gray-600">{feature.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Right Column - Form -->
+          <div class="bg-white rounded-2xl p-8 shadow-xl border border-gray-100">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8">Schedule Your Demo</h2>
+            <!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/marketing-lech/30min-1?primary_color=3999de" style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8">Trusted by Leading Organizations</h2>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-70">
+            <img
+              src="/vdv-logo.png"
+              alt="Van de Velde"
+              class="h-12 object-contain mx-auto"
+            />
+            <img
+              src="/fib-logo.png"
+              alt="Finance & Invest Brussels"
+              class="h-12 object-contain mx-auto"
+            />
+            <img
+              src="/careproperty-logo.png"
+              alt="Care Property Invest"
+              class="h-12 object-contain mx-auto"
+            />
+            <img
+              src="/fib-logo.png"
+              alt="Another Company"
+              class="h-12 object-contain mx-auto"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

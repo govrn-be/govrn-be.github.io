@@ -2,23 +2,85 @@
 import { Image } from 'astro:assets';
 import VideoModal from './VideoModal.astro';
 
-const imageValues = [
-  {
-    title: "AI-Powered",
-    description: "Transform board data into actionable insights with our advanced AI engine",
-    position: "top-1/4 left-2/3"
+interface HeroProps {
+  imageValues?: {
+    title: string;
+    description: string;
+    position: string;
+  }[];
+  badgeText?: string;
+  heading?: {
+    main: string;
+    highlight: string;
+  };
+  description?: string;
+  ctaButtons?: {
+    primary: {
+      text: string;
+      href: string;
+    };
+    secondary: {
+      text: string;
+    };
+  };
+  securityFeatures?: {
+    title: string;
+    subtitle: string;
+  }[];
+  imageAlt?: string;
+  imageSrc?: string;
+}
+
+const {
+  imageValues = [
+    {
+      title: "AI-Powered",
+      description: "Transform board data into actionable insights with our advanced AI engine",
+      position: "top-1/4 left-2/3"
+    },
+    {
+      title: "Secure", 
+      description: "Enterprise-grade security with end-to-end encryption and compliance features",
+      position: "bottom-1/3 right-10"
+    },
+    {
+      title: "Collaborative",
+      description: "Real-time collaboration tools for seamless board communication", 
+      position: "bottom-1/4 left-1/3"
+    }
+  ],
+  badgeText = "AI-Powered Board Management",
+  heading = {
+    main: "The AI-First Board Platform to Power Your",
+    highlight: "Best Decisions"
   },
-  {
-    title: "Secure",
-    description: "Enterprise-grade security with end-to-end encryption and compliance features",
-    position: "bottom-1/3 right-10"
+  description = "Govrn equips your board to make swift, informed decisions with ease. Our AI platform enhances collaboration, ensures compliance, and drives long-term growth and success.",
+  ctaButtons = {
+    primary: {
+      text: "Request Demo",
+      href: "/request-demo"
+    },
+    secondary: {
+      text: "Watch Video"
+    }
   },
-  {
-    title: "Collaborative",
-    description: "Real-time collaboration tools for seamless board communication",
-    position: "bottom-1/4 left-1/3"
-  }
-];
+  securityFeatures = [
+    {
+      title: "GDPR",
+      subtitle: "Compliant"
+    },
+    {
+      title: "256-bit",
+      subtitle: "Encryption"  
+    },
+    {
+      title: "Multi-Factor",
+      subtitle: "Authentication"
+    }
+  ],
+  imageAlt = "Govrn Board Management Software Interface",
+  imageSrc = "/application-home-page.png"
+} = Astro.props;
 ---
 
 <section class="relative bg-gradient-to-br from-white to-gray-50 pt-32 pb-24 overflow-hidden">
@@ -34,20 +96,20 @@ const imageValues = [
           <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
           </svg>
-          AI-Powered Board Management
+          {badgeText}
         </div>
 
         <h1 class="text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight leading-tight">
-          <span>The AI-First Board Platform to Power Your <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">Best Decisions</span></span>
+          <span>{heading.main} <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">{heading.highlight}</span></span>
         </h1>
 
         <p class="mt-8 text-xl text-gray-600 leading-relaxed">
-          Govrn equips your board to make swift, informed decisions with ease. Our AI platform enhances collaboration, ensures compliance, and drives long-term growth and success.
+          {description}
         </p>
 
         <div class="mt-10 flex flex-col sm:flex-row gap-4">
-          <a href="/request-demo" class="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-xl text-white bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200">
-            Request Demo
+          <a href={ctaButtons.primary.href} class="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-xl text-white bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200">
+            {ctaButtons.primary.text}
             <svg class="ml-2 -mr-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
@@ -56,7 +118,7 @@ const imageValues = [
             onclick="openVideoModal()"
             class="inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-xl text-primary bg-white border-2 border-primary/20 hover:border-primary/40 hover:bg-primary/5 transition-colors duration-200"
           >
-            Watch Video
+            {ctaButtons.secondary.text}
             <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
               <path d="M10 0a10 10 0 100 20 10 10 0 000-20zm3.5 10.5l-5 3a.5.5 0 01-.75-.4v-6a.5.5 0 01.75-.4l5 3a.5.5 0 010 .8z" />
             </svg>
@@ -64,39 +126,19 @@ const imageValues = [
         </div>
 
         <div class="mt-12 grid grid-cols-3 gap-6">
-          <div class="flex items-center space-x-2">
-            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-              <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
+          {securityFeatures.map(feature => (
+            <div class="flex items-center space-x-2">
+              <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <div class="text-sm">
+                <div class="font-medium text-gray-900">{feature.title}</div>
+                <div class="text-gray-500">{feature.subtitle}</div>
+              </div>
             </div>
-            <div class="text-sm">
-              <div class="font-medium text-gray-900">GDPR</div>
-              <div class="text-gray-500">Compliant</div>
-            </div>
-          </div>
-          <div class="flex items-center space-x-2">
-            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-              <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-              </svg>
-            </div>
-            <div class="text-sm">
-              <div class="font-medium text-gray-900">256-bit</div>
-              <div class="text-gray-500">Encryption</div>
-            </div>
-          </div>
-          <div class="flex items-center space-x-2">
-            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-              <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
-            </div>
-            <div class="text-sm">
-              <div class="font-medium text-gray-900">Multi-Factor</div>
-              <div class="text-gray-500">Authentication</div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 
@@ -107,8 +149,8 @@ const imageValues = [
         <div class="relative">
           <img
             class="w-full h-auto rounded-2xl shadow-2xl transform transition-transform duration-300 hover:scale-[1.02]"
-            src="/application-home-page.png"
-            alt="Govrn Board Management Software Interface"
+            src={imageSrc}
+            alt={imageAlt}
           />
           <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
           

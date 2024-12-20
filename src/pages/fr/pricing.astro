@@ -1,0 +1,196 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { supportFaqs } from '../../data/faq-data';
+
+import PricingTiers from '../../components/pricing/PricingTiers.astro';
+const supportServices = [
+  {
+    icon: "👥",
+    title: "Dedicated Onboarding",
+    description: "Personalized onboarding program tailored to your board's needs",
+    features: [
+      "Initial setup assistance",
+      "Data migration support",
+      "Custom workflow configuration",
+      "Integration setup"
+    ]
+  },
+  {
+    icon: "🎓",
+    title: "Training Programs",
+    description: "Comprehensive training for all board members and administrators",
+    features: [
+      "Live training sessions",
+      "On-demand video tutorials",
+      "Best practices workshops",
+      "Refresher courses"
+    ]
+  },
+  {
+    icon: "🛟",
+    title: "Ongoing Support",
+    description: "Multi-channel support to ensure your success",
+    features: [
+      "24/7 technical support",
+      "Dedicated success manager",
+      "Regular check-ins",
+      "Priority issue resolution"
+    ]
+  }
+];
+
+const featureCategories = [
+  {
+    title: "Meeting Features",
+    features: [
+      "Agenda Builder",
+      "Document Management",
+      "Task Management",
+      "Board Pack Tools",
+      "Voting",
+      "AI-Powered Minute Tools"
+    ]
+  },
+  {
+    title: "Post-Meeting Tools",
+    features: [
+      "Document Repository",
+      "E-Signature",
+      "Sub-Committee Support"
+    ]
+  },
+  {
+    title: "Collaboration & Governance",
+    features: [
+      "Real-time Collaboration",
+      "Compliance Tools",
+      "AI & Analytics",
+      "Security Features"
+    ]
+  }
+];
+
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "name": "Govrn - Pricing FAQ",
+  mainEntity: supportFaqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
+
+---
+
+<Layout title="Pricing - Govrn Board Management Software" description="Simple and transparent pricing starting from €149/month. Choose the perfect plan for your board management needs." structuredData={structuredData}>
+  <main class="pt-16">
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(57,153,222,0.1),transparent_50%)]"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-3xl mx-auto">
+          <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
+            Simple, Transparent
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
+              Pricing
+            </span>
+          </h1>
+          <p class="text-xl text-gray-600 leading-relaxed">
+            Choose the perfect plan for your organization's needs. All plans include our core features with flexible options to scale.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <PricingTiers />
+      </div>
+    </section>
+
+    <!-- Support & Training Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900">Comprehensive Support & Training</h2>
+          <p class="mt-4 text-xl text-gray-600">We're committed to your success with dedicated support at every step</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          {supportServices.map(service => (
+            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+              <div class="text-4xl mb-6">{service.icon}</div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
+              <p class="text-gray-600 mb-6">{service.description}</p>
+              <ul class="space-y-3">
+                {service.features.map(feature => (
+                  <li class="flex items-center text-gray-600">
+                    <svg class="h-5 w-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Support FAQs -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900">Support & Training FAQ</h2>
+          <p class="mt-4 text-xl text-gray-600">Common questions about our support and training services</p>
+        </div>
+
+        <div class="space-y-8">
+          {supportFaqs.map(faq => (
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-semibold text-gray-900">{faq.question}</h3>
+              <p class="mt-2 text-gray-600">{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-gradient-to-br from-primary to-blue-600 py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold text-white mb-8">
+          Ready to Transform Your Board Management?
+        </h2>
+        <p class="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
+          Join leading organizations that trust Govrn to power their board's success
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/request-demo"
+            class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-primary bg-white hover:bg-gray-50 transition-colors duration-200"
+          >
+            Request Demo
+          </a>
+          <a
+            href="/contact"
+            class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white border-2 border-white hover:bg-white/10 transition-colors duration-200"
+          >
+            Contact Sales
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
