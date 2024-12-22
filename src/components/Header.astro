@@ -20,9 +20,10 @@ const navItems = [
 interface Props {
   transparent?: boolean;
   hideMenu?: boolean;
+  whiteLogo?: boolean;
 }
 
-const { transparent = false, hideMenu = false } = Astro.props;
+const { transparent = false, hideMenu = false, whiteLogo = false } = Astro.props;
 ---
 
 <header
@@ -39,7 +40,7 @@ const { transparent = false, hideMenu = false } = Astro.props;
       <div class="flex items-center">
         <a href="/" class="flex items-center group">
           <img
-            src="/logo.webp"
+            src={whiteLogo ? "/logo_white.png" : "/logo.webp"}
             alt="Govrn Logo"
             class="h-8 transform transition-transform duration-200 group-hover:scale-105"
           />

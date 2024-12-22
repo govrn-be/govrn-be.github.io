@@ -10,6 +10,7 @@ interface Props {
   structuredData?: object;
   headerTransparent?: boolean;
   hideMenu?: boolean;
+  whiteLogo?: boolean;
 }
 
 const {
@@ -19,6 +20,7 @@ const {
   structuredData = null,
   headerTransparent = false,
   hideMenu = false,
+  whiteLogo = false,
 } = Astro.props;
 // remove .html in pathname
 const canonicalPath = Astro.url.pathname.replace(/\.html$/, '');
@@ -94,7 +96,7 @@ const organisationStructuredData = {
     <!-- Global site tag (gtag.js) - Google Analytics -->
   </head>
   <body class="min-h-screen bg-white">
-    <Header transparent={headerTransparent} hideMenu={hideMenu} />
+    <Header transparent={headerTransparent} hideMenu={hideMenu} whiteLogo={whiteLogo} />
     <slot />
     <Footer />
     <CookieBanner />
