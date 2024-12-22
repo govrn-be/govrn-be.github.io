@@ -8,13 +8,19 @@ interface Props {
   description?: string;
   image?: string;
   structuredData?: object;
+  headerTransparent?: boolean;
+  hideMenu?: boolean;
+  whiteLogo?: boolean;
 }
 
 const {
   title,
   description = "Govrn - Simplify Board Management Like Never Before. A smart platform to centralize your documents, automate tasks, and enhance collaboration.",
   image = "/default_sharing_meta.jpg",
-  structuredData = null
+  structuredData = null,
+  headerTransparent = false,
+  hideMenu = false,
+  whiteLogo = false,
 } = Astro.props;
 // remove .html in pathname
 const canonicalPath = Astro.url.pathname.replace(/\.html$/, '');
@@ -90,7 +96,7 @@ const organisationStructuredData = {
     <!-- Global site tag (gtag.js) - Google Analytics -->
   </head>
   <body class="min-h-screen bg-white">
-    <Header />
+    <Header transparent={headerTransparent} hideMenu={hideMenu} whiteLogo={whiteLogo} />
     <slot />
     <Footer />
     <CookieBanner />
