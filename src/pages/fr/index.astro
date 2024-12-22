@@ -11,11 +11,14 @@ import CTA from "../../components/CTA.astro";
 import FeatureShowcase from "../../components/features/FeatureShowcase.astro";
 import SecurityPreview from "../../components/SecurityPreview.astro";
 import { faqs } from "../../data/faq-data";
+import DocumentFlow from "../../components/animations/DocumentFlow.astro";
+import TaskTimeline from "../../components/animations/TaskTimeline.astro";
+import FeatureHighlight from "../../components/animations/FeatureHighlight.astro";
 
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "name": "Govrn - Frequently Asked Questions",
+  name: "Govrn - Frequently Asked Questions",
   mainEntity: faqs.map((faq) => ({
     "@type": "Question",
     name: faq.question,
@@ -30,69 +33,74 @@ const hero = {
   imageValues: [
     {
       title: "IA Intégrée",
-      description: "Transformez les données de votre conseil en insights exploitables grâce à notre moteur d'IA avancé",
-      position: "top-1/4 left-2/3"
+      description:
+        "Transformez les données de votre conseil en insights exploitables grâce à notre moteur d'IA avancé",
+      position: "top-1/4 left-2/3",
     },
     {
       title: "Sécurisé",
-      description: "Sécurité de niveau entreprise avec chiffrement de bout en bout et fonctionnalités de conformité",
-      position: "bottom-1/3 right-10"
+      description:
+        "Sécurité de niveau entreprise avec chiffrement de bout en bout et fonctionnalités de conformité",
+      position: "bottom-1/3 right-10",
     },
     {
       title: "Collaboratif",
-      description: "Outils de collaboration en temps réel pour une communication fluide du conseil",
-      position: "bottom-1/4 left-1/3"
-    }
+      description:
+        "Outils de collaboration en temps réel pour une communication fluide du conseil",
+      position: "bottom-1/4 left-1/3",
+    },
   ],
   badgeText: "Gestion de conseil propulsée par l'IA",
   heading: {
     main: "Le logiciel IA pour alimenter vos",
-    highlight: "meilleures décisions"
+    highlight: "meilleures décisions",
   },
-  description: "Govrn permet à votre conseil de prendre facilement des décisions éclairées. Notre plateforme IA améliore la collaboration, assure la conformité et favorise la croissance à long terme.",
+  description:
+    "Govrn permet à votre conseil de prendre facilement des décisions éclairées. Notre plateforme IA améliore la collaboration, assure la conformité et favorise la croissance à long terme.",
   ctaButtons: {
     primary: {
       text: "Demander une démo",
-      href: "/fr/request-demo"
+      href: "/fr/request-demo",
     },
     secondary: {
-      text: "Regarder la vidéo"
-    }
+      text: "Regarder la vidéo",
+    },
   },
   securityFeatures: [
     {
       title: "RGPD",
-      subtitle: "Conforme"
+      subtitle: "Conforme",
     },
     {
       title: "Chiffrement",
-      subtitle: "256-bit"
+      subtitle: "256-bit",
     },
     {
       title: "Authentification",
-      subtitle: "Multi-Facteur"
-    }
+      subtitle: "Multi-Facteur",
+    },
   ],
   imageAlt: "Interface du Logiciel de Gestion de Conseil Govrn",
-  imageSrc: "/application-home-page.png"
-}
+  imageSrc: "/application-home-page.png",
+};
 
 const stats = [
-  { 
+  {
     value: "$50M+",
-    label: "Valeur perdue annuellement due à des décisions de conseil médiocres",
-    icon: "💰"
+    label:
+      "Valeur perdue annuellement due à des décisions de conseil médiocres",
+    icon: "💰",
   },
   {
-    value: "45%+", 
+    value: "45%+",
     label: "Réduction du temps de décision avec l'IA de Govrn",
-    icon: "⚡"
+    icon: "⚡",
   },
   {
     value: "10,000+",
-    label: "Décisions stratégiques grâce à Govrn", 
-    icon: "🎯"
-  }
+    label: "Décisions stratégiques grâce à Govrn",
+    icon: "🎯",
+  },
 ];
 
 const featuresProps = {
@@ -100,46 +108,148 @@ const featuresProps = {
     title: "Trois piliers de la gestion de conseil moderne",
     subtitle: "Découvrez comment Govrn transforme votre gestion de conseil",
     exploreButton: "Explorer toutes les fonctionnalités",
-    learnMore: "En savoir plus"
+    learnMore: "En savoir plus",
   },
   pillars: [
     {
       title: "Efficacité du conseil",
-      description: "Optimisez votre conseil avec Govrn : organisez vos documents et boostez votre productivité grâce à nos outils sécurisés.",
+      description:
+        "Optimisez votre conseil avec Govrn : organisez vos documents et boostez votre productivité grâce à nos outils sécurisés.",
       icon: "⚡",
       features: [
         "Organisation des documents",
-        "Annotation intelligente", 
+        "Annotation intelligente",
         "Authentification sécurisée",
-        "Outils de productivité"
+        "Outils de productivité",
       ],
-      gradient: "from-primary to-blue-500"
+      gradient: "from-primary to-blue-500",
     },
     {
       title: "Collaboration & Analyses",
-      description: "Explorez vos documents avec notre assistant IA pour des insights stratégiques plus pertinents.",
-      icon: "🤖", 
+      description:
+        "Explorez vos documents avec notre assistant IA pour des insights stratégiques plus pertinents.",
+      icon: "🤖",
       features: [
         "Analyse IA",
         "Insights stratégiques",
         "Intelligence des documents",
-        "Collaboration en temps réel"
+        "Collaboration en temps réel",
       ],
-      gradient: "from-blue-500 to-indigo-500"
+      gradient: "from-blue-500 to-indigo-500",
     },
     {
       title: "Gouvernance & Conformité",
-      description: "Gérez vos tâches selon les rôles, avec signature électronique et système de vote intégrés.",
+      description:
+        "Gérez vos tâches selon les rôles, avec signature électronique et système de vote intégrés.",
       icon: "⚖️",
       features: [
         "Gestion basée sur les rôles",
-        "Intégration de la signature électronique", 
+        "Intégration de la signature électronique",
         "Suivi de la conformité",
-        "Système de vote"
+        "Système de vote",
       ],
-      gradient: "from-indigo-500 to-primary"
-    }
-  ]
+      gradient: "from-indigo-500 to-primary",
+    },
+  ],
+};
+
+const documentFlowProps = {
+  documents: [
+    { type: "Contrat", icon: "📄" },
+    { type: "Minutes", icon: "📝" },
+    { type: "Rapport", icon: "📊" },
+    { type: "Ordre du jour", icon: "📅" },
+    { type: "Politique", icon: "📋" },
+  ],
+  sharingMethods: [
+    {
+      name: "Email",
+      line: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
+    },
+    {
+      name: "Mobile",
+      line: "M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z",
+    },
+    {
+      name: "Ordinateur",
+      line: "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
+    },
+    {
+      name: "Equipe",
+      line: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
+    },
+  ],
+  texts: {
+    centralIcon: {
+      emoji: "🔒",
+      title: "Stockage",
+      subtitle: "Sécurisé",
+    },
+  },
+};
+const featureShowcaseProps = {
+  texts: {
+    badge: "Résultats mesurables",
+    title: "Transformez la performance de votre conseil",
+    subtitle:
+      "Voir l'impact réel de Govrn sur les opérations de votre conseil avec des améliorations mesurables en efficacité, en insights et en gouvernance.",
+    keyBenefits: "Avantages clés :",
+  },
+  outcomes: [
+    {
+      title: "Centralisation des documents",
+      description:
+        "Une plateforme sécurisée pour tous vos documents de conseil, accessibles partout, en tout temps - peu importe votre niveau de confort numérique.",
+      component: DocumentFlow,
+      componentProps: documentFlowProps,
+      stats: [
+        { value: "100%", label: "Documents centralisés" },
+        { value: "24/7", label: "Accès sécurisé" },
+      ],
+      benefits: [
+        "Source unique de vérité pour tous les documents",
+        "Categorisation intelligente des documents",
+        "Contrôle de version & suivi",
+        "Permissions d'accès flexibles",
+      ],
+    },
+    {
+      title: "Décisions basées sur les données",
+      description:
+        "Transformez vos documents de conseil en insights exploitables grâce à notre moteur d'IA avancé, vous permettant de prendre des décisions stratégiques plus informées et plus rapides.",
+      component: TaskTimeline,
+      stats: [
+        { value: "45%", label: "Meilleures décisions" },
+        { value: "24/7", label: "Insights IA" },
+      ],
+      benefits: [
+        "Analyse prédictive",
+        "Recommandations stratégiques",
+        "Intelligence de marché",
+        "Suivi des performances",
+      ],
+      link: {
+        text: "En savoir plus sur notre assistant IA",
+        url: "/features/ai-assistant",
+      },
+    },
+    {
+      title: "Gouvernance & Conformité",
+      description:
+        "Gérez votre conseil avec des outils de gouvernance basés sur les rôles, avec signature électronique et suivi de la conformité automatique, vous permettant de gagner du temps et de réduire les risques.",
+      component: FeatureHighlight,
+      stats: [
+        { value: "100%", label: "Conformité" },
+        { value: "40%", label: "Temps gagné sur l'administration" },
+      ],
+      benefits: [
+        "Vérifications de la conformité automatiques",
+        "Workflow de signature numérique",
+        "Permissions basées sur les rôles",
+        "Suivi du journal d'audit",
+      ],
+    },
+  ],
 };
 ---
 
@@ -152,7 +262,7 @@ const featuresProps = {
     <Hero {...hero} />
     <Stats stats={stats} />
     <Features {...featuresProps} />
-    <FeatureShowcase />
+    <FeatureShowcase {...featureShowcaseProps} />
     <Timeline />
     <SecurityPreview />
     <Personas />

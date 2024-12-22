@@ -5,7 +5,17 @@ import sitemap from '@astrojs/sitemap';
 
 
 export default defineConfig({
-  integrations: [tailwind(), react(), sitemap()],
+  integrations: [tailwind(), react(), sitemap(
+    {
+      i18n: {
+        locales: {
+          en: 'en', // The `defaultLocale` value must present in `locales` keys
+          fr: 'fr',
+        },
+        defaultLocale: "en",
+      },
+    }
+  )],
   site: 'https://govrn.com',
   i18n: {
     locales: ["en", {
