@@ -1,41 +1,63 @@
 ---
-const testimonials = [
-  {
-    quote: "Govrn has <strong>transformed</strong> how we manage our board operations, bringing <strong>efficiency</strong> and <strong>clarity</strong> to our governance processes.",
-    author: "Lore Werbrouck",
-    position: "General Counsel",
-    company: "Van de Velde",
-    image: "/vdv-lore-portrait.jpg",
-    link: "/case-studies/van-de-velde"
-  },
-  {
-    quote: "Govrn has <strong>simplified</strong> our document management tremendously, making our meeting preparations more <strong>efficient</strong> and allowing our board to focus on <strong>decision-making</strong>.",
-    author: "Pierre Hermant",
-    position: "CEO",
-    company: "Finance & Invest Brussels",
-    image: "/fib-pierre.webp",
-    link: "/case-studies/finance-invest-brussels"
-  },
-  {
-    quote: "Govrn embraced the <strong>next generation</strong> of Board management software, <strong>easy to use</strong> and with <strong>AI integration</strong>.",
-    author: "Nathalie Byl",
-    position: "Paralegal en Compliance Officer",
-    company: "Care Property Invest",
-    image: "/careproperty-logo.png",
-    link: "/case-studies/care-property-invest"
-  }
-];
----
+interface Props {
+  texts?: {
+    title: string;
+    subtitle: string;
+    cta: string;
+  };
+  testimonials?: {
+    quote: string;
+    author: string;
+    position: string;
+    company: string;
+    image: string;
+    link: string;
+  }[];
+}
 
+const {
+  texts = {
+    title: "Trusted by Leading Organizations",
+    subtitle: "See how organizations across industries transform their board management with Govrn",
+    cta: "View All Success Stories"
+  },
+  testimonials = [
+    {
+      quote: "Govrn has <strong>transformed</strong> how we manage our board operations, bringing <strong>efficiency</strong> and <strong>clarity</strong> to our governance processes.",
+      author: "Lore Werbrouck",
+      position: "General Counsel",
+      company: "Van de Velde",
+      image: "/vdv-lore-portrait.jpg",
+      link: "/case-studies/van-de-velde"
+    },
+    {
+      quote: "Govrn has <strong>simplified</strong> our document management tremendously, making our meeting preparations more <strong>efficient</strong> and allowing our board to focus on <strong>decision-making</strong>.",
+      author: "Pierre Hermant",
+      position: "CEO",
+      company: "Finance & Invest Brussels",
+      image: "/fib-pierre.webp",
+      link: "/case-studies/finance-invest-brussels"
+    },
+    {
+      quote: "Govrn embraced the <strong>next generation</strong> of Board management software, <strong>easy to use</strong> and with <strong>AI integration</strong>.",
+      author: "Nathalie Byl",
+      position: "Paralegal en Compliance Officer",
+      company: "Care Property Invest",
+      image: "/careproperty-logo.png",
+      link: "/case-studies/care-property-invest"
+    }
+  ]
+} = Astro.props;
+---
 
 <section id="testimonials" class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center">
       <h2 class="text-4xl font-extrabold text-gray-900 mb-4">
-        Trusted by Leading Organizations
+        {texts.title}
       </h2>
       <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
-        See how organizations across industries transform their board management with Govrn
+        {texts.subtitle}
       </p>
     </div>
 
@@ -81,7 +103,7 @@ const testimonials = [
         href="/testimonials"
         class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 group"
       >
-        View All Success Stories
+        {texts.cta}
         <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
         </svg>

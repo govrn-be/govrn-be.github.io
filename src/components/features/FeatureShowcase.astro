@@ -1,6 +1,6 @@
 ---
 import DocumentFlow from '../animations/DocumentFlow.astro';
-import TaskTimeline from '../animations/TaskTimeline.astro';
+import TaskTimeline, { type TaskTimelineProps } from '../animations/TaskTimeline.astro';
 import FeatureHighlight from '../animations/FeatureHighlight.astro';
 
 interface Props {
@@ -10,27 +10,11 @@ interface Props {
     subtitle: string;
     keyBenefits: string;
   };
-  documentFlowProps?: {
-    documents: {
-      type: string;
-      icon: string;
-    }[];
-    sharingMethods: {
-      name: string;
-      line: string;
-    }[];
-    texts: {
-      centralIcon: {
-        emoji: string;
-        title: string;
-        subtitle: string;
-      }
-    }
-  };
   outcomes?: {
     title: string;
     description: string;
     component: any;
+    componentProps?: any;
     stats: {
       value: string;
       label: string;
@@ -46,88 +30,12 @@ interface Props {
 const {
   texts = {
     badge: "Measurable Results",
-    title: "Transform Your Board's Performance",
+    title: "Transform Your Board's Performance", 
     subtitle: "See the real impact Govrn brings to your board operations with measurable improvements in efficiency, insight, and governance.",
     keyBenefits: "Key Benefits:"
   },
-  documentFlowProps = {
-    documents: [
-      { type: "Contract", icon: "📄" },
-      { type: "Minutes", icon: "📝" },
-      { type: "Report", icon: "📊" },
-      { type: "Agenda", icon: "📅" },
-      { type: "Policy", icon: "📋" }
-    ],
-    sharingMethods: [
-      { name: "Email", line: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" },
-      { name: "Mobile", line: "M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" },
-      { name: "Desktop", line: "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" },
-      { name: "Team", line: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" }
-    ],
-    texts: {
-      centralIcon: {
-        emoji: "🔒",
-        title: "Secure",
-        subtitle: "Storage"
-      }
-    }
-  },
-  outcomes = [
-    {
-      title: "Centralized Information Hub",
-      description: "One secure platform for all your board documents, accessible anywhere, anytime - regardless of your team's digital comfort level.",
-      component: DocumentFlow,
-      componentProps: documentFlowProps,
-      stats: [
-        { value: "100%", label: "Digital Accessibility" },
-        { value: "24/7", label: "Secure Access" }
-      ],
-      benefits: [
-        "Single source of truth for all documents",
-        "Intelligent document categorization", 
-        "Version control & audit trail",
-        "Flexible access permissions"
-      ]
-    },
-    {
-      title: "Data-Driven Decisions",
-      description: "Transform board documents into actionable insights with AI-powered analysis, helping you make informed strategic decisions faster.",
-      component: TaskTimeline,
-      componentProps: documentFlowProps,
-      stats: [
-        { value: "45%", label: "Better Decision Making" },
-        { value: "24/7", label: "AI-Powered Insights" }
-      ],
-      benefits: [
-        "Predictive analytics",
-        "Strategic recommendations",
-        "Market intelligence", 
-        "Performance tracking"
-      ],
-      link: {
-        text: "Learn More About Our AI Assistant",
-        url: "/features/ai-assistant"
-      }
-    },
-    {
-      title: "Effortless Compliance",
-      description: "Maintain perfect compliance with automated tracking, e-signatures, and role-based governance tools that save time and reduce risk.",
-      component: FeatureHighlight,
-      componentProps: documentFlowProps,
-      
-      stats: [
-        { value: "100%", label: "Compliance Coverage" },
-        { value: "40%", label: "Time Saved on Admin" }
-      ],
-      benefits: [
-        "Automated compliance checks",
-        "Digital signing workflow",
-        "Role-based permissions",
-        "Audit trail tracking"
-      ]
-    }
-  ]
-} = Astro.props; 
+  outcomes = []
+} = Astro.props;
 ---
 
 <section class="py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">

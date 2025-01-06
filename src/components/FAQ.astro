@@ -1,21 +1,63 @@
 ---
-import { faqs } from '../data/faq-data';
+interface Props {
+  texts?: {
+    title: string;
+    subtitle: string;
+    faqs: {
+      question: string;
+      answer: string;
+    }[];
+  };
+}
+
+const {
+  texts = {
+    title: "Frequently Asked Questions",
+    subtitle: "Find answers to common questions about Govrn",
+    faqs: [
+      {
+        question: "How does Govrn handle different levels of digital adoption?",
+        answer: "Govrn's intuitive platform ensures that even the least tech-savvy directors can engage effectively. Designed for diverse boards with varying digital maturity, we offer seamless onboarding, personalized training, and user-friendly tools to unify all members and support smooth collaboration."
+      },
+      {
+        question: "Is Govrn GDPR compliant?",
+        answer: "Yes, Govrn is fully GDPR compliant and implements strict data protection measures to ensure your board's information is secure and private."
+      },
+      {
+        question: "How do I import existing documents?",
+        answer: "Govrn provides multiple ways to import your existing documents, including bulk upload, drag-and-drop interface, and integration with popular cloud storage services."
+      },
+      {
+        question: "Can I customize the workflow for my organization?",
+        answer: "Absolutely! Govrn offers extensive customization options to match your organization's specific processes and requirements."
+      },
+      {
+        question: "What kind of support do you offer?",
+        answer: "We provide different levels of support based on your plan, ranging from standard email support to 24/7 premium support with a dedicated success manager."
+      },
+      {
+        question: "Is there a limit to the number of documents we can store?",
+        answer: "Storage limits vary by plan. Basic plans include generous storage, while Enterprise plans offer unlimited storage to meet your organization's needs."
+      }
+    ]
+  }
+} = Astro.props;
 ---
 
 <section id="faq" class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center">
       <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-        Frequently Asked Questions
+        {texts.title}
       </h2>
       <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
-        Find answers to common questions about Govrn
+        {texts.subtitle}
       </p>
     </div>
 
     <div class="mt-20 max-w-3xl mx-auto">
       <dl class="space-y-8">
-        {faqs.map(faq => (
+        {texts.faqs.map(faq => (
           <div class="bg-gray-50 p-8 rounded-lg">
             <dt class="text-lg font-semibold text-gray-900">{faq.question}</dt>
             <dd class="mt-2 text-gray-600">{faq.answer}</dd>

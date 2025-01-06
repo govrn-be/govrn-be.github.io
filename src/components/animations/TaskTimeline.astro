@@ -1,28 +1,46 @@
 ---
-const messages = [
-  {
-    type: "assistant",
-    content: "I've analyzed your board documents. Here are the key insights:",
-    insights: [
-      "Revenue growth exceeds market average by 15%",
-      "Compliance requirements met at 98%",
-      "Board attendance rate at 95%"
-    ]
-  },
-  {
-    type: "user",
-    content: "What are our main risks?"
-  },
-  {
-    type: "assistant",
-    content: "Based on the analysis, here are the key risks:",
-    insights: [
-      "Market volatility in Asia Pacific",
-      "Regulatory changes in EU markets",
-      "Supply chain dependencies"
-    ]
-  }
-];
+export interface Message {
+  type: "assistant" | "user";
+  content: string;
+  insights?: string[];
+}
+
+export interface TaskTimelineProps {
+  messages: Message[];
+  headerTitle?: string;
+  headerSubtitle?: string;
+  headerEmoji?: string;
+}
+
+const {
+  messages = [
+    {
+      type: "assistant",
+      content: "I've analyzed your board documents. Here are the key insights:",
+      insights: [
+        "Revenue growth exceeds market average by 15%",
+        "Compliance requirements met at 98%",
+        "Board attendance rate at 95%"
+      ]
+    },
+    {
+      type: "user", 
+      content: "What are our main risks?"
+    },
+    {
+      type: "assistant",
+      content: "Based on the analysis, here are the key risks:",
+      insights: [
+        "Market volatility in Asia Pacific",
+        "Regulatory changes in EU markets",
+        "Supply chain dependencies"
+      ]
+    }
+  ],
+  headerTitle = "AI Assist",
+  headerSubtitle = "Analyzing board documents",
+  headerEmoji = "🤖"
+} = Astro.props;
 ---
 
 <div class="relative w-full h-full flex items-center justify-center">
@@ -31,11 +49,11 @@ const messages = [
     <div class="bg-gradient-to-r from-primary to-blue-600 p-4 text-white">
       <div class="flex items-center space-x-3">
         <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-          <span class="text-2xl">🤖</span>
+          <span class="text-2xl">{headerEmoji}</span>
         </div>
         <div>
-          <div class="font-medium">AI Assist</div>
-          <div class="text-sm text-white/80">Analyzing board documents</div>
+          <div class="font-medium">{headerTitle}</div>
+          <div class="text-sm text-white/80">{headerSubtitle}</div>
         </div>
       </div>
     </div>

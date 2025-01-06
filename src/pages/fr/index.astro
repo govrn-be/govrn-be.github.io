@@ -187,6 +187,57 @@ const documentFlowProps = {
     },
   },
 };
+const aiAssistantProps =  {
+    messages: [
+      {
+        type: "assistant",
+        content: "J'ai analysé vos documents du conseil. Voici les points clés :",
+        insights: [
+        "La croissance du chiffre d'affaires dépasse la moyenne du marché de 15%",
+        "Exigences de conformité respectées à 98%",
+        "Taux de présence au conseil à 95%"
+      ]
+    },
+    {
+      type: "user", 
+      content: "Quels sont nos principaux risques ?"
+    },
+    {
+      type: "assistant",
+      content: "En fonction de l'analyse, voici les risques clés :",
+      insights: [
+        "Volatilité du marché en Asie-Pacifique",
+        "Changements réglementaires sur le marché européen",
+        "Dépendances de la chaîne de production"
+      ]
+    }
+    ],
+    headerTitle: "Assistant IA",
+    headerSubtitle: "Analyse des documents du conseil",
+    headerEmoji: "🤖"
+  }
+
+const gouvernanceComplianceProps = {
+  texts: {
+    tasks: [
+      { title: "Minutes du conseil", status: "pending" },
+      { title: "Rapport annuel", status: "signed" },
+      { title: "Vérification de la conformité", status: "in_progress" }
+    ],
+    signatures: [
+      { name: "Sophie Dubois", role: "Directrice" },
+      { name: "Jean-Pierre Martin", role: "Président" },
+      { name: "Marie Lefebvre", role: "Secrétaire" }
+    ],
+    labels: {
+      tasks: "Tâches",
+      activeTasks: "Tâches actives",
+      signatures: "Signatures", 
+      pending: "En attente"
+    }
+  }
+};
+
 const featureShowcaseProps = {
   texts: {
     badge: "Résultats mesurables",
@@ -218,6 +269,7 @@ const featureShowcaseProps = {
       description:
         "Transformez vos documents de conseil en insights exploitables grâce à notre moteur d'IA avancé, vous permettant de prendre des décisions stratégiques plus informées et plus rapides.",
       component: TaskTimeline,
+      componentProps: aiAssistantProps,
       stats: [
         { value: "45%", label: "Meilleures décisions" },
         { value: "24/7", label: "Insights IA" },
@@ -238,6 +290,7 @@ const featureShowcaseProps = {
       description:
         "Gérez votre conseil avec des outils de gouvernance basés sur les rôles, avec signature électronique et suivi de la conformité automatique, vous permettant de gagner du temps et de réduire les risques.",
       component: FeatureHighlight,
+      componentProps: gouvernanceComplianceProps,
       stats: [
         { value: "100%", label: "Conformité" },
         { value: "40%", label: "Temps gagné sur l'administration" },
@@ -251,6 +304,245 @@ const featureShowcaseProps = {
     },
   ],
 };
+
+const timelineProps = {
+  texts: {
+    title: "Le cycle de vie complet du conseil",
+    subtitle: "Découvrez les différentes étapes de la gestion du conseil",
+    cta: "Démarrez dès à présent"
+  },
+  timelineSteps: [
+    {
+      phase: "Avant la réunion",
+      title: "Simplification de la préparation",
+      icon: "📋",
+      color: "from-blue-500 to-primary",
+      features: [
+        {
+          title: "Agendas automatiques",
+          description: "Créez et distribuez rapidement des agendas de réunion adaptés.",
+          icon: "📅"
+        },
+        {
+          title: "Gestion des documents", 
+          description: "Organisez et partagez les documents essentiels de manière sécurisée.",
+          icon: "📁"
+        },
+        {
+          title: "Insights IA",
+          description: "Supportez les membres du conseil avec des insights basés sur les données et des matériaux de préparation avant la réunion.",
+          icon: "🤖"
+        }
+      ]
+    },
+    {
+      phase: "Durant la réunion",
+      title: "Collaboration en temps réel",
+      icon: "🤝",
+      color: "from-primary to-blue-600",
+      features: [
+        {
+          title: "Collaboration en temps réel",
+          description: "Permettez aux membres du conseil d'annoter les documents et de participer aux discussions en temps réel, tout en un seul endroit sécurisé.",
+          icon: "✏️"
+        },
+        {
+          title: "Décisions intelligentes",
+          description: "Capturez les décisions en temps réel et suivez les actions en temps réel.",
+          icon: "📝"
+        }
+      ]
+    },
+    {
+      phase: "Après la réunion",
+      title: "Suivi fluide",
+      icon: "✅",
+      color: "from-blue-600 to-primary",
+      features: [
+        {
+          title: "Minutes automatiques",
+          description: "Générez les minutes de la réunion instantanément, avec une intégration automatique des actions et des décisions.",
+          icon: "⚡"
+        },
+        {
+          title: "Gestion des tâches",
+          description: "Suivez et assignez des tâches de suivi, garantissant que rien ne passe par-dessus.",
+          icon: "📋"
+        },
+        {
+          title: "Communication intégrée",
+          description: "Restez informé avec un flux de nouvelles en temps réel, simplifiez la prise de décision avec des votes et des sondages.",
+          icon: "💬"
+        }
+      ]
+    }
+  ]
+}
+
+const securityPreviewProps = {
+  texts: {
+    badge: "Sécurité de pointe",
+    title: "La sécurité de votre conseil est notre priorité",
+    subtitle: "Mesures de sécurité de pointe pour protéger vos informations sensibles",
+    cta: "En savoir plus sur la sécurité",
+    features: [
+      {
+        icon: "🔒",
+        title: "Sécurité de pointe",
+        description: "Mesures de sécurité de pointe pour protéger vos informations sensibles"
+      },
+      {
+        icon: "🔐",
+        title: "Authentification à deux facteurs", 
+        description: "Sécurisation des comptes avec l'authentification à deux facteurs"
+      },
+      {
+        icon: "👥",
+        title: "Accès basé sur les rôles",
+        description: "Contrôles d'accès granulaires et suivi complet des actions"
+      }
+    ]
+  }
+}
+
+const personasProps = {
+  texts: {
+    title: "Maximisez l'efficacité dans chaque rôle",
+    subtitle: "Govrn propose une expérience personnalisée pour chaque rôle de gouvernance, en donnant aux participants un outil de gestion optimisé pour des décisions et une efficacité améliorée.",
+    cta: "Trouvez votre solution basée sur le rôle",
+    learnMore: "En savoir plus"
+  },
+  personas: [
+    {
+      role: "CEO & Exécutifs",
+      description: "Equipez votre conseil d'administrateurs avec Govrn, un outil puissant mais facile à utiliser qui aide les chefs d'entreprise à maintenir un conseil engagé — stimulant un travail plus intelligent, plus rapide et plus élevé.",
+      icon: "👔",
+      features: [
+        "Suivi en temps réel de l'engagement du conseil",
+        "Support stratégique aux décisions", 
+        "Analyse des performances",
+        "Tableaux de bord exécutifs"
+      ],
+      link: "/for/ceo"
+    },
+    {
+      role: "Professionnels du conseil & Administrateurs",
+      description: "Govrn simplifie la création, la distribution et l'organisation des détails des réunions — en stimulant vos efforts à maintenir tous les parties prenantes informées, satisfaites et activement impliquées.",
+      icon: "📊",
+      features: [
+        "Programmation automatique des réunions",
+        "Distribution des documents",
+        "Gestion des tâches", 
+        "Communication avec les parties prenantes"
+      ],
+      link: "/for/board-secretary"
+    },
+    {
+      role: "Membres du conseil et Conseillers",
+      description: "Naviguez avec confiance vers le futur avec Govrn, une plateforme intuitive qui vous informe et simplifie les tâches complexes, vous permettant de réaliser votre mission et votre vision.",
+      icon: "🎯",
+      features: [
+        "Accès intuitif aux documents",
+        "Outils de préparation des réunions",
+        "Capacités de vote",
+        "Insights stratégiques"
+      ],
+      link: "/for/board-member"
+    },
+    {
+      role: "Avocats généraux",
+      description: "Avec des mesures de sécurité de pointe et des capacités de gestion des données, Govrn rend facile de protéger le conseil, ses membres et l'organisation contre les risques.",
+      icon: "⚖️",
+      features: [
+        "Suivi de la conformité",
+        "Outils de gestion des risques",
+        "Vault de documents sécurisé",
+        "Suivi des actions"
+      ],
+      link: "/for/general-counsel"
+    }
+  ]
+}
+
+const testimonialsProps = {
+  texts: {
+    title: "Les plus grand nous font confiance",
+    subtitle: "Voir comment les organisations de différents secteurs transforment leur gestion du conseil avec Govrn",
+    cta: "Voir toutes les histoires de succès"
+  },
+    testimonials: [
+    {
+      quote: "Govrn a <strong>transformé</strong> notre gestion des opérations du conseil, apportant <strong>efficacité</strong> et <strong>clarté</strong> à nos processus de gouvernance.",
+      author: "Lore Werbrouck",
+      position: "Avocat général",
+      company: "Van de Velde",
+      image: "/vdv-lore-portrait.jpg",
+      link: "/case-studies/van-de-velde"
+    },
+    {
+      quote: "Govrn a <strong>simplifié</strong> notre gestion des documents de manière considérable, rendant nos préparations de réunions plus <strong>efficaces</strong> et permettant à notre conseil de se concentrer sur <strong>la prise de décision</strong>.",
+      author: "Pierre Hermant",
+      position: "CEO",
+      company: "Finance & Invest Brussels",
+      image: "/fib-pierre.webp",
+      link: "/case-studies/finance-invest-brussels"
+    },
+    {
+      quote: "Govrn a <strong>est la nouvelle génération</strong> de logiciels de gestion du conseil, <strong>facile à utiliser</strong> et avec <strong>intégration d'IA</strong>.",
+      author: "Nathalie Byl",
+      position: "Paralegal en Compliance Officer",
+      company: "Care Property Invest",
+      image: "/careproperty-logo.png",
+      link: "/case-studies/care-property-invest"
+    }
+  ]
+}
+
+const faqProps = {
+  texts: {
+    title: "Questions fréquemment posées",
+    subtitle: "Trouvez les réponses aux questions fréquemment posées sur Govrn",
+    faqs: [
+      {
+        question: "Comment Govrn gère les différents niveaux d'adoption numérique ?",
+        answer: "La plateforme intuitive de Govrn permet même aux administrateurs les moins férus de technologie de s'engager efficacement. Conçue pour des conseils d'administration avec différents niveaux de maturité numérique, nous offrons une intégration transparente, une formation personnalisée et des outils conviviaux pour unifier tous les membres et favoriser une collaboration fluide."
+      },
+      {
+        question: "Govrn est-il conforme au RGPD ?",
+        answer: "Oui, Govrn est entièrement conforme au RGPD et met en œuvre des mesures strictes de protection des données pour garantir la sécurité et la confidentialité des informations de votre conseil."
+      },
+      {
+        question: "Comment importer des documents existants ?",
+        answer: "Govrn fournit plusieurs méthodes pour importer vos documents existants, y compris le téléchargement par lots, l'interface glisser-déposer et l'intégration avec des services de stockage cloud populaires."
+      },
+      {
+        question: "Puis-je personnaliser le workflow pour mon organisation ?",
+        answer: "Absolument ! Govrn offre des options de personnalisation extensives pour correspondre à vos processus et besoins spécifiques."
+      },
+      {
+        question: "Quel type de support proposez-vous ?",
+        answer: "Nous proposons différents niveaux de support en fonction de votre plan, allant du support par email standard à un support 24/7 premium avec un manager de succès dédié."
+      },
+      {
+        question: "Y a-t-il une limite au nombre de documents que nous pouvons stocker ?",
+        answer: "Les limites de stockage varient en fonction du plan. Les plans de base incluent un stockage généreux, tandis que les plans Entreprise offrent un stockage illimité pour répondre à vos besoins."
+      }
+    ]
+  }
+}
+
+const ctaProps = {
+  texts: {
+    title: "Prêt à transformer votre gestion du conseil ?",
+    subtitle: "Rejoignez les entreprises leaders qui font confiance à Govrn pour leur gestion du conseil",
+    cta1: "Demander un essai gratuit",
+    cta2: "Contactez-nous"
+  },
+  links: {
+    cta1: "/request-demo",
+    cta2: "/contact"
+  }
+}
 ---
 
 <Layout
@@ -263,12 +555,12 @@ const featureShowcaseProps = {
     <Stats stats={stats} />
     <Features {...featuresProps} />
     <FeatureShowcase {...featureShowcaseProps} />
-    <Timeline />
-    <SecurityPreview />
-    <Personas />
-    <Testimonials />
-    <FAQ />
-    <CTA />
+    <Timeline {...timelineProps} />
+    <SecurityPreview {...securityPreviewProps} />
+    <Personas {...personasProps} />
+    <Testimonials {...testimonialsProps} />
+    <FAQ {...faqProps} />
+    <CTA {...ctaProps} />
   </main>
 </Layout>
 

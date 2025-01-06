@@ -1,15 +1,43 @@
 ---
-const tasks = [
-  { title: "Board Meeting Minutes", status: "pending" },
-  { title: "Annual Report Review", status: "signed" },
-  { title: "Compliance Check", status: "in_progress" }
-];
+interface Props {
+  texts?: {
+    tasks: {
+      title: string;
+      status: string;
+    }[];
+    signatures: {
+      name: string;
+      role: string;
+    }[];
+    labels: {
+      tasks: string;
+      activeTasks: string;
+      signatures: string;
+      pending: string;
+    };
+  }
+}
 
-const signatures = [
-  { name: "Emma Wilson", role: "Director" },
-  { name: "James Chen", role: "Chairman" },
-  { name: "Sarah Miller", role: "Secretary" }
-];
+const {
+  texts = {
+    tasks: [
+      { title: "Board Meeting Minutes", status: "pending" },
+      { title: "Annual Report Review", status: "signed" },
+      { title: "Compliance Check", status: "in_progress" }
+    ],
+    signatures: [
+      { name: "Emma Wilson", role: "Director" },
+      { name: "James Chen", role: "Chairman" },
+      { name: "Sarah Miller", role: "Secretary" }
+    ],
+    labels: {
+      tasks: "Tasks",
+      activeTasks: "Active Tasks",
+      signatures: "Signatures", 
+      pending: "Pending"
+    }
+  }
+} = Astro.props;
 ---
 
 <div class="relative w-full h-full flex items-center justify-center">
@@ -17,14 +45,14 @@ const signatures = [
     <!-- Task Management -->
     <div class="bg-white rounded-xl p-4 shadow-lg border border-gray-100">
       <div class="flex items-center justify-between mb-4">
-        <h3 class="font-semibold text-gray-900 text-sm">Tasks</h3>
+        <h3 class="font-semibold text-gray-900 text-sm">{texts.labels.tasks}</h3>
         <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">
-          Active Tasks
+          {texts.labels.activeTasks}
         </span>
       </div>
 
       <div class="space-y-2">
-        {tasks.map((task, index) => (
+        {texts.tasks.map((task, index) => (
           <div 
             class="flex items-center justify-between p-3 bg-gray-50 rounded-lg animate-task-validation"
             style={`animation-delay: ${index * 2}s`}
@@ -48,14 +76,14 @@ const signatures = [
     <!-- E-Signatures -->
     <div class="bg-white rounded-xl p-4 shadow-lg border border-gray-100">
       <div class="flex items-center justify-between mb-4">
-        <h3 class="font-semibold text-gray-900 text-sm">Signatures</h3>
+        <h3 class="font-semibold text-gray-900 text-sm">{texts.labels.signatures}</h3>
         <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">
-          Pending
+          {texts.labels.pending}
         </span>
       </div>
 
       <div class="space-y-2">
-        {signatures.map((sig, index) => (
+        {texts.signatures.map((sig, index) => (
           <div 
             class="flex items-center justify-between p-3 bg-gray-50 rounded-lg animate-signature-validation"
             style={`animation-delay: ${index * 2 + 1}s`}

@@ -1,64 +1,90 @@
 ---
-const personas = [
-  {
-    role: "CEO & Executives",
-    description: "Equip your board of directors with Govrn, a potent yet user-friendly tool that aids CEOs in maintaining an engaged board — fostering smarter work, swifter actions, and elevated achievements.",
-    icon: "👔",
-    features: [
-      "Real-time board engagement tracking",
-      "Strategic decision support",
-      "Performance analytics",
-      "Executive dashboards"
-    ],
-    link: "/for/ceo"
+interface Persona {
+  role: string;
+  description: string;
+  icon: string;
+  features: string[];
+  link: string;
+}
+
+interface Props {
+  texts?: {
+    title: string;
+    subtitle: string;
+    cta: string;
+    learnMore: string;
+  };
+  personas?: Persona[];
+}
+
+const {
+  texts = {
+    title: "Maximize Efficiency Across Every Role",
+    subtitle: "Govrn delivers a tailored experience for every governance role, empowering stakeholders with optimized board management for better decisions and efficiency.",
+    cta: "Find Your Role-Based Solution",
+    learnMore: "Learn More"
   },
-  {
-    role: "Board Professionals & Admin",
-    description: "Govrn simplifies the creation, distribution, and organization of meeting details — bolstering your efforts to keep all stakeholders informed, satisfied, and actively involved.",
-    icon: "📊",
-    features: [
-      "Automated meeting scheduling",
-      "Document distribution",
-      "Task management",
-      "Stakeholder communications"
-    ],
-    link: "/for/board-secretary"
-  },
-  {
-    role: "Directors & Trustees",
-    description: "Navigate a confident path towards the future with Govrn, an intuitive platform that keeps you informed and simplifies intricate tasks, enabling you to fulfill your organization's mission and vision.",
-    icon: "🎯",
-    features: [
-      "Intuitive document access",
-      "Meeting preparation tools",
-      "Voting capabilities",
-      "Strategic insights"
-    ],
-    link: "/for/board-member"
-  },
-  {
-    role: "General Counsels",
-    description: "With industry-leading security and encryption combined with data management capabilities, Govrn makes it effortless to safeguard the board, its members, and the organization from risk.",
-    icon: "⚖️",
-    features: [
-      "Compliance monitoring",
-      "Risk management tools",
-      "Secure document vault",
-      "Audit trails"
-    ],
-    link: "/for/general-counsel"
-  }
-];
+  personas = [
+    {
+      role: "CEO & Executives",
+      description: "Equip your board of directors with Govrn, a potent yet user-friendly tool that aids CEOs in maintaining an engaged board — fostering smarter work, swifter actions, and elevated achievements.",
+      icon: "👔",
+      features: [
+        "Real-time board engagement tracking",
+        "Strategic decision support", 
+        "Performance analytics",
+        "Executive dashboards"
+      ],
+      link: "/for/ceo"
+    },
+    {
+      role: "Board Professionals & Admin",
+      description: "Govrn simplifies the creation, distribution, and organization of meeting details — bolstering your efforts to keep all stakeholders informed, satisfied, and actively involved.",
+      icon: "📊",
+      features: [
+        "Automated meeting scheduling",
+        "Document distribution",
+        "Task management", 
+        "Stakeholder communications"
+      ],
+      link: "/for/board-secretary"
+    },
+    {
+      role: "Directors & Trustees",
+      description: "Navigate a confident path towards the future with Govrn, an intuitive platform that keeps you informed and simplifies intricate tasks, enabling you to fulfill your organization's mission and vision.",
+      icon: "🎯",
+      features: [
+        "Intuitive document access",
+        "Meeting preparation tools",
+        "Voting capabilities",
+        "Strategic insights"
+      ],
+      link: "/for/board-member"
+    },
+    {
+      role: "General Counsels",
+      description: "With industry-leading security and encryption combined with data management capabilities, Govrn makes it effortless to safeguard the board, its members, and the organization from risk.",
+      icon: "⚖️",
+      features: [
+        "Compliance monitoring",
+        "Risk management tools",
+        "Secure document vault",
+        "Audit trails"
+      ],
+      link: "/for/general-counsel"
+    }
+  ]
+} = Astro.props;
 ---
 
 <section class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto">
       <h2 class="text-4xl font-extrabold text-gray-900">
-        Maximize Efficiency Across Every Role
+        {texts.title}
       </h2>
       <p class="mt-4 text-xl text-gray-500">
-        Govrn delivers a tailored experience for every governance role, empowering stakeholders with optimized board management for better decisions and efficiency.
+        {texts.subtitle}
       </p>
     </div>
 
@@ -88,7 +114,7 @@ const personas = [
                   ))}
                 </ul>
                 <div class="mt-6 inline-flex items-center text-primary group-hover:translate-x-2 transition-transform duration-300">
-                  Learn More
+                  {texts.learnMore}
                   <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
@@ -105,7 +131,7 @@ const personas = [
         href="#"
         class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 group"
       >
-        Find Your Role-Based Solution
+        {texts.cta}
         <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
         </svg>
