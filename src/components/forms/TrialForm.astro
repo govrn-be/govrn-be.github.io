@@ -3,6 +3,23 @@ import FormSuccess from "./FormSuccess.astro";
 
 interface Props {
   reasons?: string[];
+  labels?: {
+    firstName: string;
+    lastName: string;
+    email: string;
+    company: string;
+    reason: string;
+    submit: string;
+    termsText: string;
+    termsLink: string;
+    privacyLink: string;
+  };
+  defaultReasons?: string[];
+  successTitle?: string;
+  successMessage?: string;
+  selectReasonText?: string;
+  termsUrl?: string;
+  privacyUrl?: string;
 }
 
 const {
@@ -13,6 +30,22 @@ const {
     "Improving Board Efficiency",
     "Other",
   ],
+  labels = {
+    firstName: "First Name",
+    lastName: "Last Name", 
+    email: "Work Email",
+    company: "Company Name",
+    reason: "Reason for Trial",
+    submit: "Start Now",
+    termsText: "By signing up, you agree to our",
+    termsLink: "Terms of Service",
+    privacyLink: "Privacy Policy"
+  },
+  successTitle = "Welcome to Govrn!",
+  successMessage = "Your trial account is being set up. Check your email for login instructions.",
+  selectReasonText = "Select a reason",
+  termsUrl = "/terms",
+  privacyUrl = "/privacy"
 } = Astro.props;
 ---
 
@@ -20,7 +53,7 @@ const {
   <div class="grid grid-cols-2 gap-6">
     <div>
       <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">
-        First Name
+        {labels.firstName}
       </label>
       <input
         type="text"
@@ -32,7 +65,7 @@ const {
     </div>
     <div>
       <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">
-        Last Name
+        {labels.lastName}
       </label>
       <input
         type="text"
@@ -46,7 +79,7 @@ const {
 
   <div>
     <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
-      Work Email
+      {labels.email}
     </label>
     <input
       type="email"
@@ -59,7 +92,7 @@ const {
 
   <div>
     <label for="company" class="block text-sm font-medium text-gray-700 mb-2">
-      Company Name
+      {labels.company}
     </label>
     <input
       type="text"
@@ -72,7 +105,7 @@ const {
 
   <div>
     <label for="reason" class="block text-sm font-medium text-gray-700 mb-2">
-      Reason for Trial
+      {labels.reason}
     </label>
     <select
       id="reason"
@@ -80,7 +113,7 @@ const {
       class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary"
       required
     >
-      <option value="">Select a reason</option>
+      <option value="">{selectReasonText}</option>
       {reasons.map((reason) => (
         <option value={reason}>{reason}</option>
       ))}
@@ -92,7 +125,7 @@ const {
     id="submitButton"
     class="w-full px-6 py-4 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors duration-200 font-medium flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
   >
-    <span id="buttonText">Start Now</span>
+    <span id="buttonText">{labels.submit}</span>
     <svg id="buttonArrow" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path
         stroke-linecap="round"
@@ -108,17 +141,17 @@ const {
   </button>
 
   <p class="text-sm text-gray-500 text-center">
-    By signing up, you agree to our
-    <a href="/terms" class="text-primary hover:text-primary/90">Terms of Service</a>
+    {labels.termsText}
+    <a href={termsUrl} class="text-primary hover:text-primary/90">{labels.termsLink}</a>
     and
-    <a href="/privacy" class="text-primary hover:text-primary/90">Privacy Policy</a>.
+    <a href={privacyUrl} class="text-primary hover:text-primary/90">{labels.privacyLink}</a>.
   </p>
 </form>
 
 <div id="formSuccess" class="hidden">
   <FormSuccess
-    title="Welcome to Govrn!"
-    message="Your trial account is being set up. Check your email for login instructions."
+    title={successTitle}
+    message={successMessage}
   />
 </div>
 
@@ -133,8 +166,6 @@ const {
   form?.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    // Show loading state and disable button
-    // if (buttonText) buttonText.textContent = "Processing...";
     buttonArrow?.classList.add("hidden");
     buttonLoader?.classList.remove("hidden");
     if (submitButton) submitButton.disabled = true;
@@ -162,15 +193,12 @@ const {
         throw new Error("Failed to submit trial request");
       }
 
-      // Show success message
       form.classList.add("hidden");
       success?.classList.remove("hidden");
     } catch (error) {
       console.error("Error submitting form:", error);
       alert("There was an issue submitting your trial request. Please try again later.");
       
-      // Reset button state on error
-      // if (buttonText) buttonText.textContent = "Start Now";
       buttonArrow?.classList.remove("hidden");
       buttonLoader?.classList.add("hidden");
       if (submitButton) submitButton.disabled = false;
