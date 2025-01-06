@@ -17,8 +17,49 @@ interface Props {
     features: Feature[];
   }
 }
+const defaultTexts = {
+  texts: {
+    title: "Your Board's Regulatory",
+    description: "Transform regulatory complexity into clarity. Our AI-powered monitoring keeps your board confidently informed about upcoming regulations and their strategic impact, so you can focus on what matters most.",
+    features: [
+    {
+    title: "CSRD Compliance",
+    description: "Automated tracking and reporting of sustainability metrics for Corporate Sustainability Reporting Directive compliance",
+    icon: "🌱",
+    benefits: [
+      "ESG metrics tracking",
+      "Automated report generation",
+      "Impact assessment",
+      "Stakeholder reporting"
+    ]
+  },
+  {
+    title: "GDPR Protection",
+    description: "Comprehensive data protection measures ensuring compliance with EU privacy regulations",
+    icon: "🔒",
+    benefits: [
+      "Data privacy controls",
+      "Consent management",
+      "Access tracking",
+      "Breach prevention"
+    ]
+  },
+  {
+    title: "HIPAA Security",
+    description: "Healthcare-specific security measures protecting sensitive patient information",
+    icon: "🏥",
+    benefits: [
+      "PHI protection",
+      "Access controls",
+      "Audit logging",
+      "Secure sharing"
+    ]
+  }
+    ]
+  }
+}
 
-const { texts } = Astro.props;
+const { texts = defaultTexts.texts } = Astro.props;
 ---
 
 <section class="py-20 bg-white">

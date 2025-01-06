@@ -18,9 +18,9 @@ const { episode } = Astro.props;
 const { Content } = await episode.render();
 ---
 
-<Layout title={`${episode.data.title} - Governance Matters Podcast`} description={episode.data.description} image={episode.data.image}>
+<Layout title={`${episode.data.title} - La gouvernance en pratique`} description={episode.data.description} image={episode.data.image}>
   <main class="pt-24">
-    <!-- Hero Section -->
+    <!-- Section héro -->
     <section class="relative bg-gradient-to-br from-white to-gray-50 py-20">
       <div class="absolute inset-0 z-0">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
@@ -29,15 +29,15 @@ const { Content } = await episode.render();
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <a href="/podcast" class="inline-flex items-center text-primary hover:text-primary/90 font-medium mb-8">
+            <a href="/fr/podcast" class="inline-flex items-center text-primary hover:text-primary/90 font-medium mb-8">
               <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
               </svg>
-              Back to Episodes
+              Retour aux épisodes
             </a>
             <h1 class="text-4xl font-bold text-gray-900 mb-6">{episode.data.title}</h1>
             <div class="flex items-center space-x-4 text-gray-500 mb-8">
-              <span>{episode.data.pubDate.toLocaleDateString('en-US', {
+              <span>{episode.data.pubDate.toLocaleDateString('fr-FR', {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric'
@@ -64,7 +64,7 @@ const { Content } = await episode.render();
       </div>
     </section>
 
-    <!-- Episode Content -->
+    <!-- Contenu de l'épisode -->
     <AudioPlayer title={episode.data.title} audioUrl={episode.data.podcastAudioUrl} spotifyUrl={episode.data.spotifyUrl} />
     <section class="py-20 bg-white">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -76,11 +76,11 @@ const { Content } = await episode.render();
       </div>
     </section>
 
-    <!-- Guests Section -->
+    <!-- Section invités -->
     {episode.data.guests && (
       <section class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 class="text-3xl font-bold text-gray-900 mb-12">Featured Guests</h2>
+          <h2 class="text-3xl font-bold text-gray-900 mb-12">Nos invités</h2>
           <div class="grid md:grid-cols-2 gap-8">
             {episode.data.guests.map(guest => (
               <div class="flex items-start space-x-6">
@@ -104,11 +104,11 @@ const { Content } = await episode.render();
       </section>
     )}
 
-    <!-- Topics Section -->
+    <!-- Section thématiques -->
     {episode.data.topics && (
       <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 class="text-3xl font-bold text-gray-900 mb-12">Topics Covered</h2>
+          <h2 class="text-3xl font-bold text-gray-900 mb-12">Thématiques abordées</h2>
           <div class="flex flex-wrap gap-4">
             {episode.data.topics.map(topic => (
               <span class="px-4 py-2 bg-gray-50 rounded-full text-gray-700 shadow-sm border border-gray-100">

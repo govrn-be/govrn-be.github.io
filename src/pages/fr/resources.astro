@@ -16,7 +16,7 @@ const categories = [
         type: "Guide",
         readTime: "10 min de lecture",
         image: "/applications-picture-meeting.png",
-        link: "/guides/getting-started"
+        link: "/fr/guides/getting-started"
       }
     ]
   },
@@ -31,7 +31,7 @@ const categories = [
         type: "Étude",
         readTime: "10 min de lecture",
         image: "/research_brunel.jpg",
-        link: "/research/boardroom-ai-adoption"
+        link: "/fr/research/boardroom-ai-adoption"
       }
     ]
   }
@@ -51,7 +51,7 @@ const featuredResource = {
 };
 
 const posts = await getCollection('blog');
-const publishedPosts = posts.filter(post => post.data.pubDate.getTime() <= new Date().getTime());
+const publishedPosts = posts.filter(post => post.data.pubDate.getTime() <= new Date().getTime() && post.data.lang === 'fr');
 const sortedPosts = publishedPosts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 const latestPosts = sortedPosts.slice(0, 3);
 
@@ -110,7 +110,7 @@ const latestPodcasts = sortedPodcasts.slice(0, 3);
               </div>
               <div class="flex space-x-4">
                 <a
-                  href="/research/boardroom-ai-adoption"
+                  href="/fr/research/boardroom-ai-adoption"
                   class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg text-primary bg-white hover:bg-gray-50 transition-colors duration-200"
                 >
                   Lire l'Étude Complète
@@ -138,7 +138,7 @@ const latestPodcasts = sortedPodcasts.slice(0, 3);
         <div class="flex items-center justify-between mb-12">
           <h2 class="text-3xl font-bold text-gray-900">🎙️ Derniers Podcasts</h2>
           <a
-            href="/podcast"
+            href="/fr/podcast"
             class="inline-flex items-center text-primary hover:text-primary/90 font-medium group"
           >
             Voir Tous les Podcasts
@@ -161,7 +161,7 @@ const latestPodcasts = sortedPodcasts.slice(0, 3);
         <div class="flex items-center justify-between mb-12">
           <h2 class="text-3xl font-bold text-gray-900">🗞️ Derniers Articles</h2>
           <a
-            href="/blog"
+            href="/fr/blog"
             class="inline-flex items-center text-primary hover:text-primary/90 font-medium group"
           >
             Voir Tous les Articles

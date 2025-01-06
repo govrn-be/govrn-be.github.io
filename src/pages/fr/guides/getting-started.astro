@@ -7,113 +7,113 @@ import GuideStepList from '../../../components/guides/GuideStepList.astro';
 import ProTip from '../../../components/guides/ProTip.astro';
 
 const groupSetupSteps = [
-  "Navigate to Members > Groups in your dashboard",
-  "Click 'Create New Group' to set up a committee",
-  "Name your group (e.g., 'Finance Committee', 'Audit Committee')",
-  "Configure access permissions for historical data",
-  "Save your group settings"
+  "Accédez à la section Membres > Groupes dans votre tableau de bord",
+  "Cliquez sur 'Créer un groupe' pour configurer un comité",
+  "Nommez votre groupe (ex: 'comité des finances', 'comité d'audit')",
+  "Définissez les permissions d'accès aux données historiques",
+  "Enregistrez les paramètres du groupe"
 ];
 
 const inviteMembersSteps = [
-  "Go to the Members section",
-  "Click 'Invite Members'",
-  "Enter member email addresses",
-  "Select appropriate role (Admin, Member, or Observer)",
-  "Send invitations"
+  "Rendez-vous dans la section Membres",
+  "Cliquez sur 'Inviter des membres'",
+  "Saisissez les adresses e-mail des membres",
+  "Sélectionnez le rôle approprié (administrateur, membre ou observateur)",
+  "Envoyez les invitations"
 ];
 
 const beforeMeetingSteps = [
-  "Schedule the meeting with date, time, and location",
-  "Create a detailed agenda with key topics",
-  "Upload and organize relevant documents",
-  "Send meeting invitations to participants"
+  "Planifiez la réunion en précisant la date, l'heure et le lieu",
+  "Créez un ordre du jour détaillé avec les points clés",
+  "Téléchargez et organisez les documents pertinents",
+  "Envoyez les invitations aux participants"
 ];
 
 const duringMeetingSteps = [
-  "Take attendance and confirm quorum",
-  "Follow the structured agenda",
-  "Record key discussions",
-  "Use real-time document collaboration",
-  "Capture Action Items and Resolutions"
+  "Faites l'appel et vérifiez le quorum",
+  "Suivez l'ordre du jour structuré",
+  "Enregistrez les discussions importantes",
+  "Utilisez la collaboration documentaire en temps réel",
+  "Notez les points d'action et les résolutions"
 ];
 
 const afterMeetingSteps = [
-  "Finalize meeting minutes",
-  "Get minutes signed by required participants",
-  "Share approved minutes and resolutions",
-  "Track progress on action items",
-  "Prepare for the next meeting"
+  "Finalisez le procès-verbal",
+  "Faites signer le PV par les participants requis",
+  "Partagez les procès-verbaux et résolutions approuvés",
+  "Suivez l'avancement des points d'action",
+  "Préparez la prochaine réunion"
 ];
 ---
 
-<Layout title="Getting Started with Govrn - Complete Guide" description="Welcome to Govrn—your comprehensive platform for efficient board management and governance! This guide will walk you through the essential steps to get started and run effective board meetings.">
+<Layout title="Premiers pas avec Govrn - Guide complet" description="Bienvenue sur Govrn, votre plateforme complète pour une gestion efficace des conseils d'administration ! Ce guide vous accompagnera dans les étapes essentielles pour démarrer et animer des réunions de conseil performantes.">
   <main class="pt-16">
     <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <GuideHeader
-        title="Getting Started with Govrn: Your Complete Guide"
-        description="Welcome to Govrn—your comprehensive platform for efficient board management and governance! This guide will walk you through the essential steps to get started and run effective board meetings."
+        title="Premiers pas avec Govrn : votre guide complet"
+        description="Bienvenue sur Govrn, votre plateforme complète pour une gestion efficace des conseils d'administration ! Ce guide vous accompagnera dans les étapes essentielles pour démarrer et animer des réunions de conseil performantes."
       />
 
       <GuideStep
         number={1}
-        title="Set Up Your Groups"
-        description="Groups in Govrn help you organize your board members into committees, ensuring the right people have access to the right information."
+        title="Configurez vos groupes"
+        description="Les groupes dans Govrn vous permettent d'organiser vos administrateurs en comités, garantissant que les bonnes personnes accèdent aux bonnes informations."
       >
-        <GuideSubSection title="Creating Groups for Committees">
+        <GuideSubSection title="Création des groupes pour les comités">
           <GuideStepList items={groupSetupSteps} />
         </GuideSubSection>
 
         <ProTip
-          tip="When setting up groups, carefully consider historical data access permissions to ensure appropriate information sharing while maintaining confidentiality."
+          tip="Lors de la configuration des groupes, réfléchissez attentivement aux permissions d'accès aux données historiques pour assurer un partage d'information approprié tout en préservant la confidentialité."
         />
       </GuideStep>
 
       <GuideStep
         number={2}
-        title="Invite Your Board Members"
-        description="Add your board members to Govrn with the appropriate roles and permissions."
+        title="Invitez vos administrateurs"
+        description="Ajoutez vos administrateurs à Govrn avec les rôles et permissions appropriés."
       >
-        <GuideSubSection title="Member Invitation Process">
+        <GuideSubSection title="Processus d'invitation des membres">
           <GuideStepList items={inviteMembersSteps} />
         </GuideSubSection>
 
         <ProTip
-          tip="Assign roles carefully: Admins have full system access, Members have standard access to their assigned groups, and Observers have limited viewing permissions."
+          tip="Attribuez les rôles avec précaution : les administrateurs ont un accès complet au système, les membres ont un accès standard à leurs groupes assignés, et les observateurs ont des permissions de consultation limitées."
         />
       </GuideStep>
 
       <GuideStep
         number={3}
-        title="Master the Meeting Lifecycle"
-        description="Successful board meetings happen in three phases: Before, During, and After. Here's how to manage each phase effectively with Govrn."
+        title="Maîtrisez le cycle de vie des réunions"
+        description="Les réunions de conseil réussies se déroulent en trois phases : avant, pendant et après. Voici comment gérer efficacement chaque phase avec Govrn."
       >
-        <GuideSubSection title="Before the Meeting">
-          <p class="text-gray-600 mb-4">Proper preparation ensures productive meetings. Follow these steps to set up for success:</p>
+        <GuideSubSection title="Avant la réunion">
+          <p class="text-gray-600 mb-4">Une bonne préparation garantit des réunions productives. Suivez ces étapes pour assurer le succès :</p>
           <GuideStepList items={beforeMeetingSteps} />
         </GuideSubSection>
 
-        <GuideSubSection title="During the Meeting">
-          <p class="text-gray-600 mb-4">Use Govrn's real-time features to facilitate efficient discussion and decision-making:</p>
+        <GuideSubSection title="Pendant la réunion">
+          <p class="text-gray-600 mb-4">Utilisez les fonctionnalités en temps réel de Govrn pour faciliter les discussions et la prise de décision :</p>
           <GuideStepList items={duringMeetingSteps} />
         </GuideSubSection>
 
-        <GuideSubSection title="After the Meeting">
-          <p class="text-gray-600 mb-4">Ensure follow-through and maintain momentum with these post-meeting actions:</p>
+        <GuideSubSection title="Après la réunion">
+          <p class="text-gray-600 mb-4">Assurez le suivi et maintenez la dynamique avec ces actions post-réunion :</p>
           <GuideStepList items={afterMeetingSteps} />
         </GuideSubSection>
 
         <ProTip
-          tip="Use Govrn's document collaboration features throughout all meeting phases to maintain a single source of truth for all board materials."
+          tip="Utilisez les fonctionnalités de collaboration documentaire de Govrn tout au long des phases de la réunion pour maintenir une source unique de vérité pour tous les documents du conseil."
         />
       </GuideStep>
 
       <!-- Conclusion -->
       <div class="bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-xl p-8 border border-primary/10">
-        <h2 class="text-2xl font-bold text-gray-900 mb-4">Ready for Effective Governance</h2>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Prêt pour une gouvernance efficace</h2>
         <p class="text-lg text-gray-600 leading-relaxed mb-6">
-          You're now equipped to use Govrn for managing your board effectively. Remember that successful board management is an ongoing process, and Govrn is here to support you at every step.
+          Vous êtes maintenant équipé pour gérer efficacement votre conseil avec Govrn. N'oubliez pas que la gestion d'un conseil est un processus continu, et Govrn est là pour vous accompagner à chaque étape.
         </p>
-        <p class="text-lg font-medium text-primary">Here's to better board management! 🎉</p>
+        <p class="text-lg font-medium text-primary">Pour une meilleure gestion de conseil ! 🎉</p>
       </div>
     </article>
   </main>

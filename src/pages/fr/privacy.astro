@@ -3,65 +3,65 @@ import Layout from '../../layouts/Layout.astro';
 
 const sections = [
   {
-    title: "Information We Collect",
+    title: "Collecte des données",
     items: [
       {
-        subtitle: "Account and Contact Data",
-        content: "When you register on our website, you voluntarily provide information including name, company name, email address, phone number, postal address, business sector, and password. We never store credit card information and rely on trusted third-party PCI-DSS-compliant payment processors."
+        subtitle: "Données de compte et de contact",
+        content: "Lors de votre inscription sur notre plateforme, vous nous communiquez volontairement certaines informations comme votre nom, le nom de votre entreprise, votre adresse électronique, votre numéro de téléphone, votre adresse postale, votre secteur d'activité et votre mot de passe. Nous ne stockons jamais vos données bancaires et faisons appel à des prestataires de paiement tiers certifiés PCI-DSS."
       },
       {
-        subtitle: "Job Application Data",
-        content: "For job applications, we collect contact information and details from your CV. We only request information necessary for the recruitment process and never collect sensitive personal information about racial origin, political opinions, religious beliefs, or sexual life."
+        subtitle: "Données de candidature",
+        content: "Dans le cadre des candidatures, nous collectons vos coordonnées et les informations de votre CV. Nous ne demandons que les informations nécessaires au processus de recrutement et ne collectons jamais de données sensibles concernant l'origine ethnique, les opinions politiques, les croyances religieuses ou la vie sexuelle."
       },
       {
-        subtitle: "Browser Data",
-        content: "We detect browser language and geolocation to customize your experience. Our servers record basic information like IP address, visit time/date, browser version, and referral source for statistical and security purposes."
+        subtitle: "Données de navigation",
+        content: "Nous détectons la langue de votre navigateur et votre localisation pour personnaliser votre expérience. Nos serveurs enregistrent des informations basiques comme l'adresse IP, l'heure et la date de visite, la version du navigateur et la source de trafic à des fins statistiques et de sécurité."
       },
       {
-        subtitle: "Customer Databases",
-        content: "Information in your Govrn database remains under your full control and ownership. We only process this data on your behalf according to your instructions."
+        subtitle: "Bases de données clients",
+        content: "Les informations contenues dans votre base de données Govrn restent sous votre contrôle et propriété exclusive. Nous ne traitons ces données que selon vos instructions."
       }
     ]
   },
   {
-    title: "How We Use Information",
+    title: "Utilisation des données",
     items: [
       {
-        subtitle: "Account and Contact Data",
-        content: "Used for service provision, support, billing, and optional marketing communications. Data may be shared with event organizers and sponsors if you register for events."
+        subtitle: "Données de compte et de contact",
+        content: "Utilisées pour la fourniture du service, le support, la facturation et les communications marketing optionnelles. Ces données peuvent être partagées avec les organisateurs et sponsors d'événements si vous vous y inscrivez."
       },
       {
-        subtitle: "Job Application Data",
-        content: "Processed solely for recruitment purposes and contract preparation if selected. You may request deletion at any time."
+        subtitle: "Données de candidature",
+        content: "Traitées uniquement dans le cadre du recrutement et de la préparation du contrat si votre candidature est retenue. Vous pouvez demander leur suppression à tout moment."
       },
       {
-        subtitle: "Browser Data",
-        content: "Analyzed anonymously for service improvement. Google reCAPTCHA may be used for security, processing only anonymous scores."
+        subtitle: "Données de navigation",
+        content: "Analysées de manière anonyme pour améliorer nos services. Google reCAPTCHA peut être utilisé pour la sécurité, ne traitant que des scores anonymes."
       },
       {
-        subtitle: "Customer Databases",
-        content: "Processed according to your instructions for service provision. Support staff may access data for troubleshooting or upon your request."
+        subtitle: "Bases de données clients",
+        content: "Traitées selon vos instructions pour la fourniture du service. Notre équipe support peut y accéder pour la résolution des problèmes ou à votre demande."
       }
     ]
   },
   {
-    title: "Data Retention",
+    title: "Conservation des données",
     items: [
       {
-        subtitle: "Account and Contact Data",
-        content: "Retained as long as necessary for service provision and legal requirements."
+        subtitle: "Données de compte et de contact",
+        content: "Conservées le temps nécessaire à la fourniture du service et aux obligations légales."
       },
       {
-        subtitle: "Job Application Data",
-        content: "Kept up to 2 years for potential future opportunities unless requested otherwise. Employee data retained per legal requirements."
+        subtitle: "Données de candidature",
+        content: "Conservées jusqu'à 2 ans pour d'éventuelles opportunités futures, sauf demande contraire. Les données des employés sont conservées selon les obligations légales."
       },
       {
-        subtitle: "Browser Data",
-        content: "Typically retained for 2 months unless needed longer for security or legal purposes."
+        subtitle: "Données de navigation",
+        content: "Généralement conservées pendant 2 mois, sauf nécessité prolongée pour des raisons de sécurité ou légales."
       },
       {
-        subtitle: "Customer Database",
-        content: "Retained only during active service period. Deactivated databases kept for 3 weeks after cancellation, then destroyed."
+        subtitle: "Base de données client",
+        content: "Conservées uniquement pendant la période de service active. Les bases désactivées sont gardées 3 semaines après résiliation, puis détruites."
       }
     ]
   }
@@ -69,14 +69,14 @@ const sections = [
 
 const contactInfo = {
   email: "privacy@govrn.com",
-  address: "GORVN SA - Data Protection\n18 Avenue Roger Vandendriessche\n1150 Brussels, Belgium",
+  address: "GOVRN SA - Protection des données\n18 Avenue Roger Vandendriessche\n1150 Bruxelles, Belgique",
   vat: "BE0761625687"
 };
 ---
 
-<Layout title="Privacy Policy - Govrn Board Management Software" description="We are committed to protecting your privacy and ensuring the security of your data. Learn how we collect, use, and protect your information.">
+<Layout title="Politique de confidentialité - Logiciel de gestion de conseil Govrn" description="Nous nous engageons à protéger votre vie privée et à garantir la sécurité de vos données. Découvrez comment nous collectons, utilisons et protégeons vos informations.">
   <main class="pt-16">
-    <!-- Hero Section -->
+    <!-- Section héro -->
     <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
       <div class="absolute inset-0 z-0">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
@@ -85,27 +85,27 @@ const contactInfo = {
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="text-center max-w-3xl mx-auto">
           <div class="inline-flex items-center rounded-full px-4 py-1 text-sm font-medium bg-primary/10 text-primary mb-8">
-            Privacy Policy
+            Politique de confidentialité
           </div>
           <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
-            Your Privacy is Our
+            Votre confidentialité est notre
             <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
-              Priority
+              priorité
             </span>
           </h1>
           <p class="text-xl text-gray-600 leading-relaxed">
-            We are committed to protecting your privacy and ensuring the security of your data. Learn how we collect, use, and protect your information.
+            Nous nous engageons à protéger votre vie privée et à garantir la sécurité de vos données. Découvrez comment nous collectons, utilisons et protégeons vos informations.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Main Content -->
+    <!-- Contenu principal -->
     <section class="py-20 bg-white">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="prose prose-lg max-w-none">
           <p class="text-xl text-gray-600 mb-12">
-            GOVRN SA and its affiliates offer many services to help you run your business, including a platform to host your Govrn database. This policy explains what information we collect, why we collect it, and how we use it.
+            GOVRN SA et ses filiales proposent de nombreux services pour vous aider à gérer votre entreprise, notamment une plateforme pour héberger votre base de données Govrn. Cette politique explique quelles informations nous collectons, pourquoi nous les collectons et comment nous les utilisons.
           </p>
 
           {sections.map(section => (
@@ -122,32 +122,32 @@ const contactInfo = {
             </div>
           ))}
 
-          <!-- Cookies Section -->
+          <!-- Section cookies -->
           <div class="mb-16">
             <h2 class="text-3xl font-bold text-gray-900 mb-8">Cookies</h2>
             <div class="bg-gray-50 rounded-xl p-8">
               <p class="text-gray-600">
-                Cookies are small bits of text sent by our servers to your computer when you access our services. We use them to support your activities, understand preferences, and improve our services. Third-party services like Google Analytics may also use cookies for their own purposes.
+                Les cookies sont de petits fichiers texte envoyés par nos serveurs à votre ordinateur lorsque vous accédez à nos services. Nous les utilisons pour faciliter votre navigation, comprendre vos préférences et améliorer nos services. Des services tiers comme Google Analytics peuvent également utiliser des cookies à leurs propres fins.
               </p>
             </div>
           </div>
 
-          <!-- Contact Information -->
+          <!-- Coordonnées -->
           <div class="bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-xl p-8 border border-primary/10">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">Contact Us</h2>
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Nous contacter</h2>
             <p class="text-gray-600 mb-4">
-              If you have any questions about this Privacy Policy or concerns about your personal data, please contact us:
+              Si vous avez des questions concernant cette politique de confidentialité ou vos données personnelles, n'hésitez pas à nous contacter :
             </p>
             <div class="space-y-2">
               <p class="text-gray-600">
-                <strong>Email:</strong> {contactInfo.email}
+                <strong>Courriel :</strong> {contactInfo.email}
               </p>
               <p class="text-gray-600 whitespace-pre-line">
-                <strong>Address:</strong>
+                <strong>Adresse :</strong>
                 {contactInfo.address}
               </p>
               <p class="text-gray-600">
-                <strong>VAT:</strong> {contactInfo.vat}
+                <strong>TVA :</strong> {contactInfo.vat}
               </p>
             </div>
           </div>

@@ -12,6 +12,7 @@ const blog = defineCollection({
     category: z.enum(['Governance', 'Technology', 'Best Practices', 'Industry Insights', 'Regulatory']),
     tags: z.array(z.string()),
     featured: z.boolean().optional().default(false),
+    lang: z.enum(['fr', 'en']).optional().default('en'),
   }),
 });
 

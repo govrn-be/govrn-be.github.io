@@ -3,156 +3,135 @@ import Layout from "../../../layouts/Layout.astro";
 
 const challenges = [
   {
-    icon: "👥",
-    title: "Board Integration",
-    description:
-      "Complex onboarding of external board members requiring comprehensive understanding of operations and strategy",
+    icon: "👥", 
+    title: "Intégration au conseil",
+    description: "Processus d'intégration complexe des administrateurs externes nécessitant une compréhension approfondie des opérations et de la stratégie"
   },
   {
     icon: "📊",
-    title: "Digital Complexity",
-    description:
-      "Growing need to master and apply diverse subjects in an increasingly digital corporate landscape",
+    title: "Complexité numérique",
+    description: "Besoin croissant de maîtriser et d'appliquer divers sujets dans un environnement d'entreprise de plus en plus numérique"
   },
   {
     icon: "🔒",
-    title: "Information Security",
-    description:
-      "Ensuring secure access to sensitive board documents while maintaining accessibility",
-  },
+    title: "Sécurité des informations",
+    description: "Garantir un accès sécurisé aux documents confidentiels du conseil tout en maintenant leur accessibilité"
+  }
 ];
 
 const solutions = [
   {
     icon: "💻",
-    title: "User-Friendly Platform",
-    description:
-      "Intuitive interface requiring no manual, making adoption seamless for all board members",
+    title: "Plateforme intuitive",
+    description: "Interface simple ne nécessitant aucun manuel, facilitant l'adoption par tous les membres du conseil"
   },
   {
     icon: "📱",
-    title: "Digital Transformation",
-    description:
-      "Complete digitalization of document management and signing processes",
+    title: "Transformation numérique",
+    description: "Numérisation complète de la gestion documentaire et des processus de signature"
   },
   {
     icon: "🤝",
-    title: "Enhanced Collaboration",
-    description:
-      "Centralized platform for document sharing and real-time collaboration",
-  },
+    title: "Collaboration améliorée",
+    description: "Plateforme centralisée pour le partage de documents et la collaboration en temps réel"
+  }
 ];
 
 const results = [
   {
     metric: "50%",
-    label: "Reduction in meeting preparation time",
-    icon: "⚡",
+    label: "de temps gagné sur la préparation des réunions",
+    icon: "⚡"
   },
   {
     metric: "100%",
-    label: "Digital document accessibility",
-    icon: "📱",
+    label: "d'accessibilité numérique aux documents",
+    icon: "📱"
   },
   {
     metric: "30%",
-    label: "Increase in board member engagement",
-    icon: "📈",
+    label: "d'augmentation de l'engagement des administrateurs",
+    icon: "📈"
   },
   {
     metric: "24/7",
-    label: "Secure board access",
-    icon: "🔒",
-  },
+    label: "d'accès sécurisé au conseil",
+    icon: "🔒"
+  }
 ];
 
 const articleSections = [
   {
-    title: "A Legacy of Excellence",
-    content: `Van de Velde prides itself on a heritage of quality and innovation. With Lore serving as General Counsel for the past eight years, her role is multifaceted encompassing legal advice, compliance, policy management, and serving as the Secretary to the Board of Directors.
+    title: "Un héritage d'excellence",
+    content: `Van de Velde est fière de son héritage de qualité et d'innovation. En tant que directrice juridique depuis huit ans, Lore assume de multiples responsabilités, notamment le conseil juridique, la conformité, la gestion des politiques et le secrétariat du conseil d'administration.
 
-The company is driven by six core values emphasising quality in products and processes, long-term relationships with stakeholders and a relentless pursuit of sustainable solutions over quick wins.`,
-    quote:
-      "At Van de Velde, we are committed to not just maintaining but elevating the quality across our product lines and operational processes.",
+L'entreprise est guidée par six valeurs fondamentales qui mettent l'accent sur la qualité des produits et des processus, les relations durables avec les parties prenantes et la recherche constante de solutions pérennes plutôt que de gains rapides.`,
+    quote: "Chez Van de Velde, nous nous engageons non seulement à maintenir mais aussi à élever la qualité de nos gammes de produits et de nos processus opérationnels."
   },
   {
-    title: "The Digital Transformation Journey",
-    content: `As the corporate world becomes increasingly digital and regulatory landscapes grow more complex, Van de Velde's board members are tasked with mastering and applying a wide range of subjects to the company's strategy. 
+    title: "Le parcours de transformation numérique",
+    content: `Alors que le monde de l'entreprise devient de plus en plus numérique et que les exigences réglementaires se complexifient, les administrateurs de Van de Velde doivent maîtriser et appliquer un large éventail de sujets à la stratégie de l'entreprise.
 
-Govrn has been instrumental in facilitating this digital transformation, providing a centralized platform that simplifies document management while maintaining the highest security standards.`,
-    quote:
-      "Govrn has revolutionized how we manage our board operations, bringing efficiency and clarity to our governance processes.",
-  },
+Govrn a joué un rôle essentiel dans cette transformation numérique, en fournissant une plateforme centralisée qui simplifie la gestion documentaire tout en maintenant les plus hauts standards de sécurité.`,
+    quote: "Govrn a révolutionné notre gestion du conseil d'administration, apportant efficacité et clarté à nos processus de gouvernance."
+  }
 ];
 
 const structuredData = {
   "@context": "https://schema.org/",
   "@type": "Product",
   "name": "Govrn",
-  "description": "Govrn has transformed how we manage our board operations, bringing efficiency and clarity to our governance processes.",
+  "description": "Govrn a transformé notre gestion du conseil d'administration, apportant efficacité et clarté à nos processus de gouvernance.",
   "review": {
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
       "ratingValue": 5,
-      "bestRating": 5,
+      "bestRating": 5
     },
     "author": {
       "@type": "Person",
-      "name": "Lore Werbrouck",
-    },
-  },
+      "name": "Lore Werbrouck"
+    }
+  }
 };
 ---
 
 <Layout
-  title="Van de Velde Success Story | Govrn"
-  description="Discover how Van de Velde revolutionized their board management with Govrn's innovative platform. Read the full case study."
+  title="Témoignage Van de Velde | Govrn"
+  description="Découvrez comment Van de Velde a révolutionné sa gestion du conseil avec la plateforme innovante de Govrn. Lisez l'étude de cas complète."
   structuredData={structuredData}
 >
-  <!-- Hero Section -->
-  <section
-    class="relative pt-32 pb-24 overflow-hidden bg-gradient-to-br from-white to-gray-50"
-  >
+  <!-- Section héro -->
+  <section class="relative pt-32 pb-24 overflow-hidden bg-gradient-to-br from-white to-gray-50">
     <div class="absolute inset-0 z-0">
-      <div
-        class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"
-      >
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]">
       </div>
     </div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="flex items-center justify-between mb-12">
-        <img src="/vdv-logo.png" alt="Van de Velde Logo" class="h-16" />
+        <img src="/vdv-logo.png" alt="Logo Van de Velde" class="h-16" />
         <div class="flex items-center space-x-4">
-          <span
-            class="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium"
-            >Retail & Fashion</span
-          >
-          <span class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm"
-            >Est. 1919</span
-          >
+          <span class="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">Mode et distribution</span>
+          <span class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm">Créé en 1919</span>
         </div>
       </div>
 
       <div class="grid lg:grid-cols-2 gap-16 items-center">
         <div>
           <h1 class="text-4xl font-bold text-gray-900 mb-6">
-            Revolutionising Governance in Retail with Govrn
+            Révolutionner la gouvernance dans le secteur de la mode avec Govrn
           </h1>
           <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-            How Van de Velde transformed their board management and enhanced
-            collaboration using Govrn's innovative platform.
+            Comment Van de Velde a transformé sa gestion du conseil et amélioré la collaboration grâce à la plateforme innovante de Govrn.
           </p>
-          <blockquote
-            class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 mb-8"
-          >
+          <blockquote class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 mb-8">
             <p class="text-lg text-gray-700 italic">
-              "Govrn has transformed how we manage our board operations,
-              bringing efficiency and clarity to our governance processes."
+              "Govrn a transformé notre gestion du conseil d'administration, apportant efficacité et clarté à nos processus de gouvernance."
             </p>
             <footer class="mt-4 text-gray-600">
-              - Lore Werbrouck, General Counsel
+              - Lore Werbrouck, directrice juridique
             </footer>
           </blockquote>
         </div>
@@ -161,7 +140,7 @@ const structuredData = {
             <iframe
               class="w-full h-full"
               src="https://www.youtube.com/embed/sabn6q1gsBw"
-              title="Van de Velde Case Study Video"
+              title="Vidéo témoignage Van de Velde"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
@@ -171,13 +150,13 @@ const structuredData = {
     </div>
   </section>
 
-  <!-- Challenges & Solutions -->
+  <!-- Défis et solutions -->
   <section class="py-24 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-16">
-        <!-- Challenges -->
+        <!-- Défis -->
         <div>
-          <h2 class="text-3xl font-bold text-gray-900 mb-12">Key Challenges</h2>
+          <h2 class="text-3xl font-bold text-gray-900 mb-12">Principaux défis</h2>
           <div class="space-y-8">
             {
               challenges.map((challenge) => (
@@ -200,7 +179,7 @@ const structuredData = {
         <!-- Solutions -->
         <div>
           <h2 class="text-3xl font-bold text-gray-900 mb-12">
-            Govrn's Solutions
+            Solutions Govrn
           </h2>
           <div class="space-y-8">
             {
@@ -224,11 +203,11 @@ const structuredData = {
     </div>
   </section>
 
-  <!-- Results Section -->
+  <!-- Section résultats -->
   <section class="py-24 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-bold text-gray-900 text-center mb-16">
-        Measurable Impact
+        Impact mesurable
       </h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         {
@@ -246,15 +225,13 @@ const structuredData = {
     </div>
   </section>
 
-  <!-- Article Section -->
+  <!-- Section article -->
   <section class="py-24 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl mx-auto">
         {
           articleSections.map((section, index) => (
-            <div
-              class={`mb-16 ${index !== 0 ? "pt-16 border-t border-gray-100" : ""}`}
-            >
+            <div class={`mb-16 ${index !== 0 ? "pt-16 border-t border-gray-100" : ""}`}>
               <h2 class="text-3xl font-bold text-gray-900 mb-8">
                 {section.title}
               </h2>
@@ -273,28 +250,27 @@ const structuredData = {
     </div>
   </section>
 
-  <!-- CTA Section -->
+  <!-- Section CTA -->
   <section class="bg-gradient-to-br from-primary to-blue-600 py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-3xl font-bold text-white mb-8">
-        Ready to Transform Your Board Management?
+        Prêt à transformer votre gestion du conseil ?
       </h2>
       <p class="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
-        Join Van de Velde and other leading organizations that trust Govrn to
-        power their board's success
+        Rejoignez Van de Velde et d'autres organisations leaders qui font confiance à Govrn pour optimiser leur conseil
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a
           href="#"
           class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-primary bg-white hover:bg-gray-50 transition-colors duration-200"
         >
-          Request a Demo
+          Demander une démo
         </a>
         <a
           href="#"
           class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white border-2 border-white hover:bg-white/10 transition-colors duration-200"
         >
-          Contact Sales
+          Contacter l'équipe commerciale
         </a>
       </div>
     </div>

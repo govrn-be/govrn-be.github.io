@@ -1,138 +1,139 @@
 ---
 import Layout from '../../../../layouts/Layout.astro';
 import CTA from '../../../../components/CTA.astro';
+
 const responsibilities = [
   {
     icon: "📅",
-    title: "Meeting Management",
-    description: "Streamline the entire meeting lifecycle from planning to follow-up"
+    title: "Gestion des réunions",
+    description: "Optimisez le cycle complet des réunions, de la planification au suivi"
   },
   {
-    icon: "📄",
-    title: "Document Control",
-    description: "Maintain precise control over board documentation and version history"
+    icon: "📄", 
+    title: "Contrôle documentaire",
+    description: "Maîtrisez la gestion des documents du conseil et leur historique"
   },
   {
     icon: "✍️",
-    title: "Minute Taking",
-    description: "AI-powered tools for efficient and accurate meeting minutes"
+    title: "Rédaction des procès-verbaux",
+    description: "Outils d'IA pour des procès-verbaux précis et efficaces"
   },
   {
     icon: "⚖️",
-    title: "Compliance Support",
-    description: "Ensure adherence to governance requirements and regulations"
+    title: "Support à la conformité",
+    description: "Garantissez le respect des exigences de gouvernance et réglementaires"
   }
 ];
 
 const features = [
   {
-    title: "Meeting Management Hub",
-    description: "Comprehensive toolkit for planning and executing board meetings",
+    title: "Centre de gestion des réunions",
+    description: "Boîte à outils complète pour planifier et exécuter les réunions du conseil",
     icon: "🗓️",
     benefits: [
-      "Calendar integration",
-      "Progressive agenda building",
-      "Document version control",
-      "Meeting templates"
+      "Intégration calendrier",
+      "Construction progressive de l'ordre du jour",
+      "Contrôle des versions",
+      "Modèles de réunion"
     ]
   },
   {
-    title: "AI-Powered Assistant",
-    description: "Intelligent tools for efficient meeting preparation and follow-up",
+    title: "Assistant IA intégré",
+    description: "Outils intelligents pour la préparation et le suivi des réunions",
     icon: "🤖",
     benefits: [
-      "Meeting transcription",
-      "Smart minutes creation",
-      "Historical context",
-      "Template suggestions"
+      "Transcription des réunions",
+      "Création intelligente des PV",
+      "Contexte historique",
+      "Suggestions de modèles"
     ]
   },
   {
-    title: "Document Control Center",
-    description: "Secure platform for managing all board documentation",
+    title: "Centre de contrôle documentaire",
+    description: "Plateforme sécurisée pour la gestion de tous les documents du conseil",
     icon: "📚",
     benefits: [
-      "Centralized repository",
-      "Automated distribution",
-      "Access tracking",
-      "Version history"
+      "Dépôt centralisé",
+      "Distribution automatisée",
+      "Suivi des accès",
+      "Historique des versions"
     ]
   }
 ];
 
 const workflowSteps = [
   {
-    phase: "Pre-Meeting",
+    phase: "Pré-réunion",
     icon: "📋",
     tasks: [
-      "Schedule meetings with calendar integration",
-      "Create and distribute agendas",
-      "Collect and organize board materials",
-      "Send automated reminders"
+      "Planification avec intégration calendrier",
+      "Création et diffusion des ordres du jour",
+      "Organisation des documents du conseil",
+      "Envoi automatique des rappels"
     ]
   },
   {
-    phase: "During Meeting",
+    phase: "Pendant la réunion",
     icon: "💼",
     tasks: [
-      "Take minutes with AI assistance",
-      "Track attendance and quorum",
-      "Record resolutions and decisions",
-      "Capture action items"
+      "Rédaction assistée par IA",
+      "Suivi des présences et du quorum",
+      "Enregistrement des résolutions",
+      "Capture des actions à suivre"
     ]
   },
   {
-    phase: "Post-Meeting",
+    phase: "Post-réunion",
     icon: "✅",
     tasks: [
-      "Finalize and distribute minutes",
-      "Collect digital signatures",
-      "Track resolution implementation",
-      "Prepare follow-up communications"
+      "Finalisation et diffusion des PV",
+      "Collecte des signatures électroniques",
+      "Suivi des résolutions",
+      "Préparation des communications"
     ]
   }
 ];
 
 const industries = [
   {
-    id: "financial-services",
-    name: "Financial Services",
+    id: "services-financiers",
+    name: "Services financiers",
     icon: "🏦",
-    description: "Specialized tools for managing financial services board documentation and compliance",
+    description: "Outils spécialisés pour la gestion documentaire et la conformité des conseils financiers",
     features: [
-      "Regulatory compliance tracking",
-      "Secure document management",
-      "Audit trail maintenance"
+      "Suivi de la conformité réglementaire",
+      "Gestion sécurisée des documents",
+      "Maintien des pistes d'audit"
     ]
   },
   {
-    id: "healthcare",
-    name: "Healthcare",
+    id: "sante",
+    name: "Santé",
     icon: "🏥",
-    description: "HIPAA-compliant solutions for healthcare board administration",
+    description: "Solutions conformes aux normes de santé pour l'administration des conseils",
     features: [
-      "HIPAA compliance tools",
-      "Clinical governance support",
-      "Medical staff coordination"
+      "Outils de conformité médicale",
+      "Support à la gouvernance clinique",
+      "Coordination du personnel médical"
     ]
   },
   {
-    id: "real-estate",
-    name: "Real Estate",
+    id: "immobilier",
+    name: "Immobilier",
     icon: "🏢",
-    description: "Streamlined tools for real estate board administration",
+    description: "Outils optimisés pour l'administration des conseils immobiliers",
     features: [
-      "Portfolio documentation",
-      "Investment tracking",
-      "Property compliance"
+      "Documentation du portefeuille",
+      "Suivi des investissements",
+      "Conformité immobilière"
     ]
   }
 ];
 ---
 
-<Layout title="Board Secretary Software - Govrn Board Management Platform" description="Streamline your board administration with our comprehensive board secretary software, designed to enhance efficiency, compliance, and collaboration.">
+<Layout title="Logiciel pour secrétaire de conseil | Plateforme Govrn" description="Optimisez votre administration du conseil avec notre logiciel complet, conçu pour améliorer l'efficacité, la conformité et la collaboration.">
   <main class="pt-16">
-    <!-- Hero Section -->
+    <!-- Section héro -->
     <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
       <div class="absolute inset-0 z-0">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
@@ -142,29 +143,29 @@ const industries = [
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <div class="inline-flex items-center rounded-full px-4 py-1 text-sm font-medium bg-primary/10 text-primary mb-8">
-              Board Secretary Solutions
+              Solutions pour secrétaires de conseil
             </div>
             <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
-              Transform Your Board Administration with
+              Transformez votre administration avec des
               <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
-                Intelligent Tools
+                outils intelligents
               </span>
             </h1>
             <p class="text-xl text-gray-600 leading-relaxed mb-12">
-              Streamline your board management responsibilities with AI-powered tools that enhance efficiency, ensure compliance, and simplify complex workflows.
+              Simplifiez vos responsabilités avec des outils d'IA qui améliorent l'efficacité, assurent la conformité et simplifient les processus complexes.
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
               <a
-                href="/request-demo"
+                href="/fr/request-demo"
                 class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                Request Demo
+                Demander une démo
               </a>
               <a
-                href="/contact"
+                href="/fr/contact"
                 class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-gray-900 bg-white border-2 border-gray-200 hover:border-primary/20 hover:bg-gray-50 transition-colors duration-200"
               >
-                Contact Sales
+                Contacter l'équipe
               </a>
             </div>
           </div>
@@ -172,7 +173,7 @@ const industries = [
             <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-3xl transform rotate-3"></div>
             <img
               src="/realestate.jpg"
-              alt="Govrn Platform Interface"
+              alt="Interface Govrn"
               class="relative rounded-2xl shadow-2xl"
             />
           </div>
@@ -180,15 +181,15 @@ const industries = [
       </div>
     </section>
 
-    <!-- Core Responsibilities -->
+    <!-- Responsabilités principales -->
     <section class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16">
           <h2 class="text-3xl font-bold text-gray-900 mb-4">
-            Streamline Your Core Responsibilities
+            Simplifiez vos responsabilités essentielles
           </h2>
           <p class="text-xl text-gray-600">
-            Comprehensive tools to help you excel in your role as Board Secretary
+            Des outils complets pour exceller dans votre rôle de secrétaire de conseil
           </p>
         </div>
 
@@ -204,15 +205,15 @@ const industries = [
       </div>
     </section>
 
-    <!-- Features -->
+    <!-- Fonctionnalités -->
     <section class="py-20 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16">
           <h2 class="text-3xl font-bold text-gray-900 mb-4">
-            Purpose-Built Features
+            Fonctionnalités dédiées
           </h2>
           <p class="text-xl text-gray-600">
-            Tools designed specifically for board secretaries and administrators
+            Des outils conçus spécifiquement pour les secrétaires et administrateurs de conseil
           </p>
         </div>
 
@@ -238,15 +239,15 @@ const industries = [
       </div>
     </section>
 
-    <!-- Workflow Steps -->
+    <!-- Étapes du processus -->
     <section class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16">
           <h2 class="text-3xl font-bold text-gray-900 mb-4">
-            Streamlined Meeting Workflow
+            Processus de réunion optimisé
           </h2>
           <p class="text-xl text-gray-600">
-            Comprehensive support throughout the entire meeting lifecycle
+            Un accompagnement complet tout au long du cycle de réunion
           </p>
         </div>
 
@@ -273,7 +274,7 @@ const industries = [
       </div>
     </section>
 
-    <!-- Industry Selection -->
+    <!-- Sélection par secteur -->
     <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
       <div class="absolute inset-0 z-0">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
@@ -282,17 +283,17 @@ const industries = [
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="text-center max-w-3xl mx-auto mb-16">
           <h2 class="text-4xl font-bold text-gray-900 mb-4">
-            Industry-Specific Solutions
+            Solutions sectorielles
           </h2>
           <p class="text-xl text-gray-600">
-            Discover additional tools and features tailored to your industry's unique requirements
+            Découvrez nos outils et fonctionnalités adaptés aux exigences spécifiques de votre secteur
           </p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
           {industries.map(industry => (
             <a
-              href={`/for/board-secretary/industry/${industry.id}`}
+              href={`/fr/for/board-secretary/industry/${industry.id}`}
               class="group bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
             >
               <div class="text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
@@ -313,7 +314,7 @@ const industries = [
                 ))}
               </ul>
               <div class="inline-flex items-center text-primary group-hover:translate-x-2 transition-transform duration-300">
-                View Industry Solutions
+                Voir les solutions sectorielles
                 <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>

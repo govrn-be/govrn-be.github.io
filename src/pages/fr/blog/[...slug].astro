@@ -14,12 +14,12 @@ interface Props {
 export async function getStaticPaths() {
   const blogEntries = await getCollection('blog');
   return blogEntries.map(entry => ({
-    params: { slug: entry.slug },
+    params: { lang: entry.data.lang, slug: entry.slug },
     props: { entry },
   }));
 }
 
-const { slug } = Astro.params as { slug: string };
+const { slug, lang } = Astro.params as { slug: string, lang: string };
 
 const posts: CollectionEntry<'blog'>[] = await getCollection('blog');
 const publishedPosts = posts.filter(post => post.data.pubDate <= new Date());
@@ -28,7 +28,7 @@ const nextPosts = sortedPosts.filter(post => post.slug !== slug).slice(0, 3);
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 
-const formattedDate = entry.data.pubDate.toLocaleDateString('en-US', {
+const formattedDate = entry.data.pubDate.toLocaleDateString('fr-FR', {
   year: 'numeric',
   month: 'long',
   day: 'numeric'
@@ -41,6 +41,7 @@ const structuredData = {
   "description": entry.data.description,
   "datePublished": entry.data.pubDate,
   "image": "https://govrn.com" + entry.data.image,
+  "inLanguage": lang,
   "author": {
     "@type": "Person",
     "name": entry.data.author,

@@ -3,19 +3,28 @@ import Layout from '../../layouts/Layout.astro';
 import TermsLayout from '../../components/terms/TermsLayout.astro';
 import TableOfContents from '../../components/terms/TableOfContents.astro';
 import TermsHeader from '../../components/terms/TermsHeader.astro';
-import { termsSections } from '../../data/terms-sections';
+import { termsSections } from '../../data/terms-sections-fr';
 
 import TermsContent from '../../components/terms/TermsContent.astro';
 const lastUpdate = "April 2021";
+
+const termsHeader = {
+  title: "Conditions générales",
+  titleHighlight: "d'utilisation",
+  description: "Veuillez lire attentivement ces conditions générales avant d'utiliser nos services.",
+  contactText: "Pour toute question ou préoccupation, veuillez contacter",
+  contactEmail: "info@govrn.com",
+  lastUpdateText: "Dernière mise à jour"
+}
 ---
 
-<Layout title="Terms and Conditions - Govrn" description="Please read these terms and conditions carefully before using our services.">
+<Layout title="Conditions générales - Govrn" description="Veuillez lire attentivement ces conditions générales avant d'utiliser nos services.">
   <main class="pt-16">
-    <TermsLayout title="Terms and Conditions">
+    <TermsLayout title="Conditions générales">
       <TableOfContents slot="sidebar" className="hidden lg:block sticky top-24" />
       
       <div>
-        <TermsHeader lastUpdate={lastUpdate} />
+        <TermsHeader lastUpdate={lastUpdate} {...termsHeader} />
         {termsSections.map((section) => (
           <TermsContent key={section.key} title={section.title} sections={section.sections} />
         ))}

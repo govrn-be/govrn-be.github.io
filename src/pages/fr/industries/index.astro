@@ -3,44 +3,44 @@ import Layout from '../../../layouts/Layout.astro';
 
 const industries = [
   {
-    name: "Financial Services",
-    icon: "🏦",
-    description: "Secure and compliant board management for banks, insurance, and investment firms",
-    link: "/industries/financial-services",
+    name: "Services financiers",
+    icon: "🏦", 
+    description: "Gestion de conseil sécurisée et conforme pour les banques, assurances et sociétés d'investissement",
+    link: "/fr/industries/financial-services",
     features: [
-      "Regulatory compliance automation",
-      "Secure document management",
-      "Risk monitoring"
+      "Automatisation de la conformité réglementaire",
+      "Gestion documentaire sécurisée",
+      "Surveillance des risques"
     ]
   },
   {
-    name: "Healthcare",
+    name: "Santé",
     icon: "🏥",
-    description: "HIPAA-compliant solutions for healthcare organizations",
-    link: "/industries/healthcare",
+    description: "Solutions conformes aux normes de confidentialité pour les établissements de santé",
+    link: "/fr/industries/healthcare", 
     features: [
-      "HIPAA compliance",
-      "Clinical governance",
-      "Quality assurance"
+      "Protection des données de santé",
+      "Gouvernance clinique",
+      "Assurance qualité"
     ]
   },
   {
-    name: "Real Estate",
+    name: "Immobilier",
     icon: "🏢",
-    description: "Streamlined board management for property investment and management",
-    link: "/industries/real-estate",
+    description: "Gestion optimisée des conseils pour l'investissement et la gestion immobilière",
+    link: "/fr/industries/real-estate",
     features: [
-      "Portfolio oversight",
-      "Investment tracking",
-      "Asset management"
+      "Supervision du portefeuille",
+      "Suivi des investissements", 
+      "Gestion des actifs"
     ]
   }
 ];
 ---
 
-<Layout title="Industry Solutions | Govrn Board Management Software" description="Discover tailored solutions for your industry, including financial services, healthcare, and real estate, designed to enhance board operations and compliance.">
+<Layout title="Solutions sectorielles | Logiciel de gestion de conseil Govrn" description="Découvrez nos solutions sur mesure pour votre secteur d'activité, incluant les services financiers, la santé et l'immobilier, conçues pour optimiser vos opérations de conseil.">
   <main class="pt-16">
-    <!-- Hero Section -->
+    <!-- Section héro -->
     <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
       <div class="absolute inset-0 z-0">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
@@ -49,19 +49,19 @@ const industries = [
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="text-center max-w-3xl mx-auto">
           <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
-            Industry-Specific
+            Solutions adaptées à
             <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
-              Board Solutions
+              votre secteur
             </span>
           </h1>
           <p class="text-xl text-gray-600 leading-relaxed">
-            Discover how Govrn adapts to your industry's unique requirements with tailored features and compliance standards.
+            Découvrez comment Govrn s'adapte aux exigences spécifiques de votre industrie avec des fonctionnalités et des normes de conformité sur mesure.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Industries Grid -->
+    <!-- Grille des secteurs -->
     <section class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

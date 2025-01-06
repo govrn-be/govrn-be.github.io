@@ -13,18 +13,19 @@ interface Props {
       tags: string[];
     };
   };
+  lang: string;
   featured?: boolean;
 }
 
-const { post, featured = false } = Astro.props;
-const formattedDate = post.data.pubDate.toLocaleDateString('en-US', {
+const { post, featured = false, lang } = Astro.props;
+const formattedDate = post.data.pubDate.toLocaleDateString(lang === 'fr' ? 'fr-FR' : 'en-US', {
   year: 'numeric',
   month: 'long',
   day: 'numeric'
 });
 ---
 
-<a href={`/blog/${post.slug}`} class="block">
+<a href={`${lang === 'en' ? '' : `/${lang}`}/blog/${post.slug}`} class="block">
   <article class={`group bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden ${featured ? 'lg:col-span-2 lg:grid lg:grid-cols-2 lg:gap-8' : ''}`}>
     <div class="relative overflow-hidden aspect-video lg:aspect-auto">
       <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -37,7 +38,12 @@ const formattedDate = post.data.pubDate.toLocaleDateString('en-US', {
     <div class="p-8">
       <div class="flex items-center justify-between mb-4">
         <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
-          {post.data.category}
+          {lang === 'fr' ? {
+            'Governance': 'Gouvernance',
+            'Technology': 'Technologie', 
+            'Best Practices': 'Bonnes Pratiques',
+            'Case Studies': 'Études de Cas'
+          }[post.data.category] || post.data.category : post.data.category}
         </span>
         <time datetime={post.data.pubDate.toISOString()} class="text-sm text-gray-500">
           {formattedDate}

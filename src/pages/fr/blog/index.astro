@@ -4,15 +4,15 @@ import Layout from '../../../layouts/Layout.astro';
 import BlogCard from '../../../components/blog/BlogCard.astro';
 
 const posts = await getCollection('blog');
-const publishedPosts = posts.filter(post => post.data.pubDate.getTime() <= new Date().getTime());
+const publishedPosts = posts.filter(post => post.data.pubDate.getTime() <= new Date().getTime() && post.data.lang === 'fr');
 const sortedPosts = publishedPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const featuredPost = sortedPosts.find(post => post.data.featured);
 const regularPosts = sortedPosts.filter(post => !post.data.featured);
 ---
 
-<Layout title="Blog - Govrn Board Management Insights" description="Explore our latest insights on board management, governance, and technology. Stay informed with expert articles, guides, and best practices.">
+<Layout title="Blog - Conseils et expertise en gestion de conseil" description="Découvrez nos derniers articles sur la gestion des conseils d'administration, la gouvernance et la technologie. Restez informé grâce à nos experts.">
   <main class="pt-16">
-    <!-- Hero Section -->
+    <!-- Section d'en-tête -->
     <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
       <div class="absolute inset-0 z-0">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
@@ -21,23 +21,23 @@ const regularPosts = sortedPosts.filter(post => !post.data.featured);
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="text-center max-w-3xl mx-auto">
           <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
-            Insights for Better
+            Expertise en
             <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
-              Board Management
+              gestion de conseil
             </span>
           </h1>
           <p class="text-xl text-gray-600 leading-relaxed">
-            Expert articles, guides, and best practices to help you transform your board operations
+            Articles d'experts, guides et bonnes pratiques pour améliorer le fonctionnement de votre conseil
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Featured Post -->
+    <!-- Article à la une -->
     {featuredPost && (
       <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 class="text-3xl font-bold text-gray-900 mb-12">Featured Article</h2>
+          <h2 class="text-3xl font-bold text-gray-900 mb-12">Article à la une</h2>
           <div class="grid lg:grid-cols-2 gap-12">
             <div class="relative">
               <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-xl"></div>
@@ -53,7 +53,7 @@ const regularPosts = sortedPosts.filter(post => !post.data.featured);
                   {featuredPost.data.category}
                 </span>
                 <time datetime={featuredPost.data.pubDate.toISOString()} class="text-gray-500">
-                  {featuredPost.data.pubDate.toLocaleDateString('en-US', {
+                  {featuredPost.data.pubDate.toLocaleDateString('fr-FR', {
                     year: 'numeric',
                     month: 'long',
                     day: 'numeric'
@@ -72,10 +72,10 @@ const regularPosts = sortedPosts.filter(post => !post.data.featured);
                   <p class="text-gray-500">{featuredPost.data.authorRole}</p>
                 </div>
                 <a
-                  href={`/blog/${featuredPost.slug}`}
+                  href={`/fr/blog/${featuredPost.slug}`}
                   class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg text-white bg-primary hover:bg-primary/90 transition-colors duration-200"
                 >
-                  Read Article
+                  Lire l'article
                   <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
@@ -87,13 +87,13 @@ const regularPosts = sortedPosts.filter(post => !post.data.featured);
       </section>
     )}
 
-    <!-- All Posts -->
+    <!-- Tous les articles -->
     <section class="py-20 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-gray-900 mb-12">Latest Articles</h2>
+        <h2 class="text-3xl font-bold text-gray-900 mb-12">Derniers articles</h2>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {regularPosts.map(post => (
-            <BlogCard post={post} />
+            <BlogCard post={post} lang="fr" />
           ))}
         </div>
       </div>
