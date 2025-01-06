@@ -1,24 +1,14 @@
 ---
-const industries = [
-  {
-    name: "Financial Services",
-    icon: "🏦",
-    description: "Banking, Insurance, and Investment firms",
-    href: "/industries/financial-services",
-  },
-  {
-    name: "Healthcare",
-    icon: "🏥",
-    description: "Hospitals, Medical Devices, and Healthcare providers",
-    href: "/industries/healthcare",
-  },
-  {
-    name: "Real Estate",
-    icon: "🏢",
-    description: "Property Investment and Management",
-    href: "/industries/real-estate",
-  }
-];
+interface Props {
+  industries: {
+    name: string;
+    icon: string;
+    description: string;
+    href: string;
+  }[];
+}
+
+const { industries } = Astro.props;
 ---
 
 <div class="grid gap-2">

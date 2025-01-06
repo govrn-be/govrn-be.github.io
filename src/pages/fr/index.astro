@@ -10,24 +10,11 @@ import FAQ from "../../components/FAQ.astro";
 import CTA from "../../components/CTA.astro";
 import FeatureShowcase from "../../components/features/FeatureShowcase.astro";
 import SecurityPreview from "../../components/SecurityPreview.astro";
-import { faqs } from "../../data/faq-data";
 import DocumentFlow from "../../components/animations/DocumentFlow.astro";
 import TaskTimeline from "../../components/animations/TaskTimeline.astro";
 import FeatureHighlight from "../../components/animations/FeatureHighlight.astro";
 
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  name: "Govrn - Frequently Asked Questions",
-  mainEntity: faqs.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+
 
 const hero = {
   imageValues: [
@@ -108,6 +95,7 @@ const featuresProps = {
     title: "Trois piliers de la gestion de conseil moderne",
     subtitle: "Découvrez comment Govrn transforme votre gestion de conseil",
     exploreButton: "Explorer toutes les fonctionnalités",
+    exploreButtonUrl: "/fr/features",
     learnMore: "En savoir plus",
   },
   pillars: [
@@ -282,7 +270,7 @@ const featureShowcaseProps = {
       ],
       link: {
         text: "En savoir plus sur notre assistant IA",
-        url: "/features/ai-assistant",
+        url: "/fr/features/ai-assistant",
       },
     },
     {
@@ -423,7 +411,7 @@ const personasProps = {
         "Analyse des performances",
         "Tableaux de bord exécutifs"
       ],
-      link: "/for/ceo"
+      link: "/fr/for/ceo"
     },
     {
       role: "Professionnels du conseil & Administrateurs",
@@ -435,7 +423,7 @@ const personasProps = {
         "Gestion des tâches", 
         "Communication avec les parties prenantes"
       ],
-      link: "/for/board-secretary"
+      link: "/fr/for/board-secretary"
     },
     {
       role: "Membres du conseil et Conseillers",
@@ -447,7 +435,7 @@ const personasProps = {
         "Capacités de vote",
         "Insights stratégiques"
       ],
-      link: "/for/board-member"
+      link: "/fr/for/board-member"
     },
     {
       role: "Avocats généraux",
@@ -459,7 +447,7 @@ const personasProps = {
         "Vault de documents sécurisé",
         "Suivi des actions"
       ],
-      link: "/for/general-counsel"
+      link: "/fr/for/general-counsel"
     }
   ]
 }
@@ -477,7 +465,7 @@ const testimonialsProps = {
       position: "Avocat général",
       company: "Van de Velde",
       image: "/vdv-lore-portrait.jpg",
-      link: "/case-studies/van-de-velde"
+      link: "/fr/case-studies/van-de-velde"
     },
     {
       quote: "Govrn a <strong>simplifié</strong> notre gestion des documents de manière considérable, rendant nos préparations de réunions plus <strong>efficaces</strong> et permettant à notre conseil de se concentrer sur <strong>la prise de décision</strong>.",
@@ -485,7 +473,7 @@ const testimonialsProps = {
       position: "CEO",
       company: "Finance & Invest Brussels",
       image: "/fib-pierre.webp",
-      link: "/case-studies/finance-invest-brussels"
+      link: "/fr/case-studies/finance-invest-brussels"
     },
     {
       quote: "Govrn a <strong>est la nouvelle génération</strong> de logiciels de gestion du conseil, <strong>facile à utiliser</strong> et avec <strong>intégration d'IA</strong>.",
@@ -493,7 +481,7 @@ const testimonialsProps = {
       position: "Paralegal en Compliance Officer",
       company: "Care Property Invest",
       image: "/careproperty-logo.png",
-      link: "/case-studies/care-property-invest"
+      link: "/fr/case-studies/care-property-invest"
     }
   ]
 }
@@ -531,6 +519,21 @@ const faqProps = {
   }
 }
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  name: "Govrn - Questions fréquemment posées",
+  inLanguage: "fr",
+  mainEntity: faqProps.texts.faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
 const ctaProps = {
   texts: {
     title: "Prêt à transformer votre gestion du conseil ?",
@@ -539,8 +542,8 @@ const ctaProps = {
     cta2: "Contactez-nous"
   },
   links: {
-    cta1: "/request-demo",
-    cta2: "/contact"
+    cta1: "/fr/request-demo",
+    cta2: "/fr/contact"
   }
 }
 ---
@@ -568,4 +571,5 @@ const ctaProps = {
   main {
     width: 100%;
   }
+</style>
 </style>

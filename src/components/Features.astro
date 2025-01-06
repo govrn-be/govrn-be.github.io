@@ -12,6 +12,7 @@ interface Texts {
   subtitle: string;
   exploreButton: string;
   learnMore: string;
+  exploreButtonUrl: string;
 }
 
 interface Props {
@@ -24,7 +25,8 @@ const {
     title: "Three Pillars of Modern Board Management",
     subtitle: "Discover how Govrn's comprehensive approach transforms your board operations",
     exploreButton: "Explore All Features",
-    learnMore: "Learn More"
+    learnMore: "Learn More",
+    exploreButtonUrl: "/features"
   },
   pillars = [
     {
@@ -101,7 +103,7 @@ const {
               ))}
             </ul>
             <a 
-              href="/features" 
+              href={texts.exploreButtonUrl} 
               class="inline-flex items-center text-primary hover:text-primary/90 font-medium group"
             >
               {texts.learnMore}
@@ -116,7 +118,7 @@ const {
 
     <div class="mt-16 text-center">
       <a 
-        href="/features"
+        href={texts.exploreButtonUrl}
         class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 group"
       >
         {texts.exploreButton}

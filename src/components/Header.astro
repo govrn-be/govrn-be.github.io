@@ -2,7 +2,51 @@
 import { Image } from "astro:assets";
 import MegaMenu from "./navigation/MegaMenu.astro";
 
-const navItems = [
+// Get current path and language
+const path = Astro.url.pathname;
+const currentLang = path.startsWith('/fr/') || path === '/fr' ? 'fr' : path.startsWith('/nl/') || path === '/nl' ? 'nl' : 'en';
+
+const buttonTexts = currentLang === 'fr' ? {
+  signIn: "Se connecter",
+  tryForFree: "Essayer gratuitement",
+  tryPath: "/fr/try"
+} : currentLang === 'nl' ? {
+  signIn: "Inloggen", 
+  tryForFree: "Gratis proberen",
+  tryPath: "/nl/try"
+} : {
+  signIn: "Sign In",
+  tryForFree: "Try for Free",
+  tryPath: "/try"
+};
+
+const navItems = currentLang === 'fr' ? [
+  {
+    label: "Fonctionnalités",
+    href: "/fr/features",
+  },
+  {
+    label: "Cas d'usage",
+    hasMegaMenu: true,
+  },
+  { label: "Tarifs", href: "/fr/pricing" },
+  { label: "Témoignages", href: "/fr/testimonials" },
+  { label: "Ressources", href: "/fr/resources" },
+  { label: "À propos", href: "/fr/about" },
+] : currentLang === 'nl' ? [
+  {
+    label: "Functies",
+    href: "/nl/features",
+  },
+  {
+    label: "Gebruiksscenario's",
+    hasMegaMenu: true,
+  },
+  { label: "Prijzen", href: "/nl/pricing" },
+  { label: "Getuigenissen", href: "/nl/testimonials" },
+  { label: "Bronnen", href: "/nl/resources" },
+  { label: "Over ons", href: "/nl/about" },
+] : [
   {
     label: "Features",
     href: "/features",
@@ -38,7 +82,7 @@ const { transparent = false, hideMenu = false, whiteLogo = false } = Astro.props
     <div class="flex justify-between items-center py-4">
       <!-- Logo -->
       <div class="flex items-center">
-        <a href="/" class="flex items-center group">
+        <a href={currentLang === 'en' ? '/' : `/${currentLang}`} class="flex items-center group">
           <img
             src={whiteLogo ? "/logo_white.png" : "/logo.webp"}
             alt="Govrn Logo"
@@ -74,7 +118,7 @@ const { transparent = false, hideMenu = false, whiteLogo = false } = Astro.props
                   </svg>
                 )}
               </a>
-              {item.hasMegaMenu && <MegaMenu isOpen={false} />}
+              {item.hasMegaMenu && <MegaMenu isOpen={false} lang={currentLang}/>}
               </div>
             ))
           }
@@ -89,13 +133,13 @@ const { transparent = false, hideMenu = false, whiteLogo = false } = Astro.props
           rel="noopener noreferrer"
           class="hidden md:inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg text-primary border-2 border-primary/20 hover:bg-primary/5 transition-all duration-200"
         >
-          Sign In
+          {buttonTexts.signIn}
         </a>
         <a
-          href="/try"
+          href={buttonTexts.tryPath}
           class="hidden md:inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg text-white bg-primary hover:bg-primary/90 shadow-sm hover:shadow-md transition-all duration-200"
         >
-          Try for Free
+          {buttonTexts.tryForFree}
         </a>
 
         <!-- Mobile Menu Button -->
@@ -147,13 +191,13 @@ const { transparent = false, hideMenu = false, whiteLogo = false } = Astro.props
           rel="noopener noreferrer"
           class="block px-4 py-2 text-base font-medium text-gray-700 border-2 border-gray-200 hover:border-primary/20 hover:bg-gray-50 rounded-lg transition-all duration-200"
         >
-          Sign In
+          {buttonTexts.signIn}
         </a>
         <a
-          href="/try"
+          href={buttonTexts.tryPath}
           class="block px-4 py-2 text-base font-medium text-white bg-primary hover:bg-primary/90 rounded-lg transition-all duration-200"
         >
-          Try for Free
+          {buttonTexts.tryForFree}
         </a>
           </div>
         </nav>

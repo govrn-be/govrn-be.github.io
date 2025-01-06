@@ -1,38 +1,127 @@
 ---
 const currentYear = new Date().getFullYear();
+
+// Get current path and language
+const path = Astro.url.pathname;
+const currentLang = path.startsWith('/fr/') || path === '/fr' ? 'fr' : path.startsWith('/nl/') || path === '/nl' ? 'nl' : 'en';
+
+// Generate language URLs
+const basePath = path.replace(/^\/(fr|nl)(\/|$)/, '/');
+const enUrl = basePath;
+const frUrl = `/fr${basePath}`;
+const nlUrl = `/nl${basePath}`;
+
+const links = currentLang === 'fr' ? {
+  about: "/fr/about",
+  resources: "/fr/resources",
+  blog: "/fr/blog",
+  podcast: "/fr/podcast",
+  security: "/fr/security", 
+  template: "/fr/templates/board-meeting-minutes",
+  contact: "/fr/contact",
+  privacy: "/fr/privacy",
+  terms: "/fr/terms",
+  quickLinks: "Liens rapides",
+  legal: "Mentions légales",
+  connect: "Nous suivre",
+  tagline: "Simplifier la gestion des conseils pour les organisations modernes",
+  aboutText: "À propos",
+  resourcesText: "Ressources",
+  blogText: "Blog",
+  podcastText: "Podcast",
+  securityText: "Sécurité",
+  templateText: "Modèle de PV de conseil",
+  contactText: "Contactez-nous",
+  privacyText: "Politique de confidentialité",
+  termsText: "Conditions d'utilisation",
+  allRights: "Tous droits réservés"
+} : currentLang === 'nl' ? {
+  about: "/nl/about",
+  resources: "/nl/resources",
+  blog: "/nl/blog",
+  podcast: "/nl/podcast",
+  security: "/nl/security",
+  template: "/nl/templates/board-meeting-minutes",
+  contact: "/nl/contact", 
+  privacy: "/nl/privacy",
+  terms: "/nl/terms",
+  quickLinks: "Snelle links",
+  legal: "Juridisch",
+  connect: "Volg ons",
+  tagline: "Vereenvoudiging van bestuursbeheer voor moderne organisaties",
+  aboutText: "Over ons",
+  resourcesText: "Bronnen",
+  blogText: "Blog",
+  podcastText: "Podcast",
+  securityText: "Beveiliging",
+  templateText: "Sjabloon voor notulen",
+  contactText: "Contacteer ons",
+  privacyText: "Privacybeleid",
+  termsText: "Gebruiksvoorwaarden",
+  allRights: "Alle rechten voorbehouden"
+} : {
+  about: "/about",
+  resources: "/resources", 
+  blog: "/blog",
+  podcast: "/podcast",
+  security: "/security",
+  template: "/templates/board-meeting-minutes",
+  contact: "/contact",
+  privacy: "/privacy",
+  terms: "/terms",
+  quickLinks: "Quick Links",
+  legal: "Legal",
+  connect: "Connect",
+  tagline: "Simplifying board management for modern organizations",
+  aboutText: "About",
+  resourcesText: "Resources",
+  blogText: "Blog",
+  podcastText: "Podcast",
+  securityText: "Security",
+  templateText: "Board Meeting Minutes Template",
+  contactText: "Contact Us",
+  privacyText: "Privacy Policy",
+  termsText: "Terms of Service",
+  allRights: "All rights reserved"
+};
 ---
 <footer class="bg-gray-900 text-white relative z-10">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
       <div class="space-y-4">
         <h3 class="text-lg font-bold">Govrn</h3>
-        <p class="text-gray-400">Simplifying board management for modern organizations.</p>
+        <p class="text-gray-400">{links.tagline}</p>
+        <div class="flex space-x-4 pt-2">
+          <a href={enUrl} class={`text-sm ${currentLang === 'en' ? 'text-white font-semibold' : 'text-gray-400 hover:text-white'}`}>EN</a>
+          <a href={frUrl} class={`text-sm ${currentLang === 'fr' ? 'text-white font-semibold' : 'text-gray-400 hover:text-white'}`}>FR</a>
+          <a href={nlUrl} class={`text-sm ${currentLang === 'nl' ? 'text-white font-semibold' : 'text-gray-400 hover:text-white'}`}>NL</a>
+        </div>
       </div>
 
       <div>
-        <h4 class="font-semibold mb-4">Quick Links</h4>
+        <h4 class="font-semibold mb-4">{links.quickLinks}</h4>
         <ul class="space-y-2">
-          <li><a href="/about" class="text-gray-400 hover:text-white">About</a></li>
-          <li><a href="/resources" class="text-gray-400 hover:text-white">Resources</a></li>
-          <li><a href="/blog" class="text-gray-400 hover:text-white">Blog</a></li>
-          <li><a href="/podcast" class="text-gray-400 hover:text-white">Podcast</a></li>
-          <li><a href="/security" class="text-gray-400 hover:text-white">Security</a></li>
-          <li><a href="/templates/board-meeting-minutes" class="text-gray-400 hover:text-white">Board Meeting Minutes Template</a></li>
+          <li><a href={links.about} class="text-gray-400 hover:text-white">{links.aboutText}</a></li>
+          <li><a href={links.resources} class="text-gray-400 hover:text-white">{links.resourcesText}</a></li>
+          <li><a href={links.blog} class="text-gray-400 hover:text-white">{links.blogText}</a></li>
+          <li><a href={links.podcast} class="text-gray-400 hover:text-white">{links.podcastText}</a></li>
+          <li><a href={links.security} class="text-gray-400 hover:text-white">{links.securityText}</a></li>
+          <li><a href={links.template} class="text-gray-400 hover:text-white">{links.templateText}</a></li>
         </ul>
       </div>
 
       <div>
-        <h4 class="font-semibold mb-4">Legal</h4>
+        <h4 class="font-semibold mb-4">{links.legal}</h4>
         <ul class="space-y-2">
           <!-- <li><a href="/help" class="text-gray-400 hover:text-white">Help Center</a></li> -->
-          <li><a href="/contact" class="text-gray-400 hover:text-white">Contact Us</a></li>
-          <li><a href="/privacy" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
-          <li><a href="/terms" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+          <li><a href={links.contact} class="text-gray-400 hover:text-white">{links.contactText}</a></li>
+          <li><a href={links.privacy} class="text-gray-400 hover:text-white">{links.privacyText}</a></li>
+          <li><a href={links.terms} class="text-gray-400 hover:text-white">{links.termsText}</a></li>
         </ul>
       </div>
 
       <div>
-        <h4 class="font-semibold mb-4">Connect</h4>
+        <h4 class="font-semibold mb-4">{links.connect}</h4>
         <div class="flex space-x-4">
           <a href="https://www.linkedin.com/company/govrncorp" class="text-gray-400 hover:text-white">
             <span class="sr-only">LinkedIn</span>
@@ -45,7 +134,7 @@ const currentYear = new Date().getFullYear();
     </div>
 
     <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-      <p>&copy; {currentYear} Govrn NV/SA. All rights reserved.</p>
+      <p>&copy; {currentYear} Govrn NV/SA. {links.allRights}</p>
     </div>
   </div>
 </footer>
