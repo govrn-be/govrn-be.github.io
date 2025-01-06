@@ -1,28 +1,44 @@
 ---
-const team = [
-  {
-    name: "Jean-Louis Van Houwe",
-    role: "CEO & Founder",
-    image: "/jean-louis-van-houwe.jpeg",
-    linkedin: "https://www.linkedin.com/in/jeanlouisvanhouwe/",
-    bio: "Passionate about transforming board management through innovative technology and AI solutions."
-  },
-  {
-    name: "Ludovic Laffineur",
-    role: "CTO - Product & Tech",
-    image: "/ludovic-laffineur.jpg",
-    linkedin: "https://www.linkedin.com/in/llaffineur/",
-    bio: "Leading product strategy and innovation to create exceptional board management experiences."
-  }
-];
+interface Props {
+  title: string;
+  subtitle: string;
+  team: {
+    name: string;
+    role: string;
+    image: string;
+    linkedin: string;
+    bio: string;
+  }[];
+}
+
+const {
+  title = "Our Leadership Team",
+  subtitle = "Meet the visionaries driving innovation in board management",
+  team = [
+    {
+      name: "Jean-Louis Van Houwe",
+      role: "CEO & Founder",
+      image: "/jean-louis-van-houwe.jpeg", 
+      linkedin: "https://www.linkedin.com/in/jeanlouisvanhouwe/",
+      bio: "Passionate about transforming board management through innovative technology and AI solutions."
+    },
+    {
+      name: "Ludovic Laffineur",
+      role: "CTO - Product & Tech",
+      image: "/ludovic-laffineur.jpg",
+      linkedin: "https://www.linkedin.com/in/llaffineur/",
+      bio: "Leading product strategy and innovation to create exceptional board management experiences."
+    }
+  ]
+} = Astro.props;
 ---
 
 <section class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto mb-16">
-      <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Leadership Team</h2>
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">{title}</h2>
       <p class="text-xl text-gray-600">
-        Meet the visionaries driving innovation in board management
+        {subtitle}
       </p>
     </div>
 

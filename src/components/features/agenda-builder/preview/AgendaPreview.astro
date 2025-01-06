@@ -5,17 +5,36 @@ import { type AgendaItem as AgendaItemType } from '../types';
 interface Props {
   items: AgendaItemType[];
   totalDuration: number;
+  texts?: {
+    title: string;
+    totalDurationLabel: string;
+    addItemButton: string;
+    itemTexts: {
+      documentsLabel: string;
+      addDocumentButton: string;
+      subItemsLabel: string;
+    };
+  };
 }
 
-const { items, totalDuration } = Astro.props;
+const { items, totalDuration, texts = {
+  title: "Board Meeting Agenda",
+  totalDurationLabel: "Total Duration:",
+  addItemButton: "Add Agenda Item",
+  itemTexts: {
+    documentsLabel: "Documents",
+    addDocumentButton: "Add Document",
+    subItemsLabel: "Sub-items"
+  }
+}} = Astro.props;
 ---
 
 <div class="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
   <div class="p-6 border-b border-gray-100 bg-gray-50">
     <div class="flex items-center justify-between">
-      <h3 class="text-lg font-semibold text-gray-900">Board Meeting Agenda</h3>
+      <h3 class="text-lg font-semibold text-gray-900">{texts.title}</h3>
       <div class="flex items-center space-x-2">
-        <span class="text-sm text-gray-500">Total Duration:</span>
+        <span class="text-sm text-gray-500">{texts.totalDurationLabel}</span>
         <span class="px-2 py-1 bg-primary/10 text-primary rounded-md text-sm font-medium">
           {totalDuration} min
         </span>
@@ -27,6 +46,7 @@ const { items, totalDuration } = Astro.props;
     {items.map((item, index) => (
       <AgendaItem 
         {...item}
+        texts={texts.itemTexts}
         animationDelay={index * 200}
       />
     ))}
@@ -38,7 +58,7 @@ const { items, totalDuration } = Astro.props;
       <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
       </svg>
-      Add Agenda Item
+      {texts.addItemButton}
     </button>
   </div>
 </div>

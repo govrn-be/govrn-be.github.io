@@ -1,38 +1,67 @@
 ---
-const messages = [
-  {
-    type: "user",
-    content: "What were the key decisions from last quarter's board meetings?"
-  },
-  {
-    type: "assistant",
-    content: "Based on the Q3 board minutes, here are the key decisions:",
-    quotes: [
-      {
-        text: "The board approved the expansion plan for the European market with a budget of €2.5M",
-        source: "Q3 Board Minutes, Section 2.3"
-      },
-      {
-        text: "A new sustainability initiative was approved, targeting 30% reduction in carbon emissions by 2025",
-        source: "Q3 Board Minutes, Section 4.1"
-      }
-    ]
-  },
-  {
-    type: "user",
-    content: "What's our current progress on the sustainability initiative?"
-  },
-  {
-    type: "assistant",
-    content: "According to the latest sustainability report:",
-    quotes: [
-      {
-        text: "Current emissions reduction stands at 12%, with all major facilities now running on renewable energy",
-        source: "Sustainability Report 2024, Page 15"
-      }
-    ]
+interface Props {
+  texts?: {
+    messages: {
+      type: "user" | "assistant";
+      content: string;
+      quotes?: {
+        text: string;
+        source: string;
+      }[];
+    }[];
+    header: {
+      title: string;
+      subtitle: string;
+    };
+    input: {
+      placeholder: string;
+    };
   }
-];
+}
+
+const { texts = {
+  messages: [
+    {
+      type: "user",
+      content: "What were the key decisions from last quarter's board meetings?"
+    },
+    {
+      type: "assistant", 
+      content: "Based on the Q3 board minutes, here are the key decisions:",
+      quotes: [
+        {
+          text: "The board approved the expansion plan for the European market with a budget of €2.5M",
+          source: "Q3 Board Minutes, Section 2.3"
+        },
+        {
+          text: "A new sustainability initiative was approved, targeting 30% reduction in carbon emissions by 2025",
+          source: "Q3 Board Minutes, Section 4.1"
+        }
+      ]
+    },
+    {
+      type: "user",
+      content: "What's our current progress on the sustainability initiative?"
+    },
+    {
+      type: "assistant",
+      content: "According to the latest sustainability report:",
+      quotes: [
+        {
+          text: "Current emissions reduction stands at 12%, with all major facilities now running on renewable energy",
+          source: "Sustainability Report 2024, Page 15"
+        }
+      ]
+    }
+  ],
+  header: {
+    title: "Board AI Assistant",
+    subtitle: "Powered by your board documents"
+  },
+  input: {
+    placeholder: "Ask a question about your board documents..."
+  }
+}} = Astro.props;
 ---
 
 <div class="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden max-h-[600px] flex flex-col">
@@ -43,15 +72,15 @@ const messages = [
         <span class="text-2xl">🤖</span>
       </div>
       <div class="text-white">
-        <div class="font-medium">Board AI Assistant</div>
-        <div class="text-sm text-white/80">Powered by your board documents</div>
+        <div class="font-medium">{texts.header.title}</div>
+        <div class="text-sm text-white/80">{texts.header.subtitle}</div>
       </div>
     </div>
   </div>
 
   <!-- Chat Messages -->
   <div class="flex-1 overflow-y-auto p-4 space-y-4">
-    {messages.map((msg, index) => (
+    {texts.messages.map((msg, index) => (
       <div class={`flex ${msg.type === 'user' ? 'justify-end' : 'justify-start'} animate-slide-up`}
         style={`animation-delay: ${index * 0.5}s`}
       >
@@ -88,7 +117,7 @@ const messages = [
     <div class="flex items-center space-x-4">
       <input
         type="text"
-        placeholder="Ask a question about your board documents..."
+        placeholder={texts.input.placeholder}
         class="flex-1 px-4 py-2 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary focus:border-primary"
       />
       <button class="p-2 text-primary hover:text-primary/90">

@@ -1,9 +1,35 @@
 ---
 interface Props {
   className?: string;
+  mission?: {
+    title: string;
+    description: string;
+    aiText: string;
+  };
+  vision?: {
+    title: string;
+    description: string;
+    highlightedText: string;
+  };
+  aiEraStatement?: string;
+  aiHighlight?: string;
 }
 
-const { className = "" } = Astro.props;
+const { 
+  className = "",
+  mission = {
+    title: "Our Mission",
+    description: "We build simple board management solutions that revolutionize board governance & decision making, with",
+    aiText: "Artificial Intelligence"
+  },
+  vision = {
+    title: "Our Vision",
+    description: "Make the best governance-driven solution that helps boards",
+    highlightedText: "building a better world"
+  },
+  aiEraStatement = "We live in a new era for the boardroom, where",
+  aiHighlight = "Artificial Intelligence"
+} = Astro.props;
 ---
 
 <section class={`py-24 bg-white ${className}`}>
@@ -15,12 +41,12 @@ const { className = "" } = Astro.props;
         <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary/10 to-blue-500/10 rounded-full mb-6">
           <span class="text-3xl">🎯</span>
         </div>
-        <h2 class="text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
+        <h2 class="text-4xl font-bold text-gray-900 mb-6">{mission.title}</h2>
         <p class="text-2xl text-gray-700 leading-relaxed font-medium">
-          We build simple board management solutions that revolutionize board governance & decision making, with 
+          {mission.description}
           <span class="relative">
             <span class="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent font-bold">
-              Artificial Intelligence
+              {mission.aiText}
             </span>
           </span>
         </p>
@@ -32,12 +58,12 @@ const { className = "" } = Astro.props;
         <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500/10 to-primary/10 rounded-full mb-6">
           <span class="text-3xl">🌟</span>
         </div>
-        <h2 class="text-4xl font-bold text-gray-900 mb-6">Our Vision</h2>
+        <h2 class="text-4xl font-bold text-gray-900 mb-6">{vision.title}</h2>
         <p class="text-2xl text-gray-700 leading-relaxed font-medium">
-          Make the best governance-driven solution that helps boards 
+          {vision.description}
           <span class="relative">
             <span class="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent font-bold">
-              building a better world
+              {vision.highlightedText}
             </span>
             <span class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-blue-600 opacity-30"></span>
           </span>
@@ -48,8 +74,8 @@ const { className = "" } = Astro.props;
       <div class="text-center relative">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(57,153,222,0.1),transparent_70%)] -z-10"></div>
         <p class="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-          We live in a new era for the boardroom, where 
-          <span class="font-semibold text-primary">Artificial Intelligence</span> 
+          {aiEraStatement}
+          <span class="font-semibold text-primary">{aiHighlight}</span> 
           is transforming how boards work and make decisions.
         </p>
       </div>

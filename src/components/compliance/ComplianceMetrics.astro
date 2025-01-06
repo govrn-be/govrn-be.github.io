@@ -1,5 +1,14 @@
 ---
-const metrics = [
+interface Props {
+  metrics?: {
+    title: string;
+    value: string;
+    change: string;
+    icon: string;
+  }[];
+}
+
+const { metrics = [
   {
     title: "Compliance Score",
     value: "92%",
@@ -24,7 +33,7 @@ const metrics = [
     change: "vs. manual tracking",
     icon: "💰"
   }
-];
+]} = Astro.props;
 ---
 
 <section class="py-20 bg-gray-50">

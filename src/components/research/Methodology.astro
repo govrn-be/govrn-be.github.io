@@ -1,76 +1,86 @@
 ---
-const researchPhases = [
-  {
-    title: "Data Collection",
-    icon: "📊",
-    description: "A comprehensive multi-method approach to gather diverse perspectives and insights.",
-    methods: [
-      {
-        name: "In-depth Interviews",
-        details: "One-on-one sessions with board members and executives",
-        count: "50+ interviews"
-      },
-      {
-        name: "Survey Analysis",
-        details: "Quantitative data collection across organizations",
-        count: "200+ responses"
-      },
-      {
-        name: "Case Studies",
-        details: "Detailed examination of AI implementation success stories",
-        count: "15 cases"
-      }
-    ]
-  },
-  {
-    title: "Research Scope",
-    icon: "🎯",
-    description: "Carefully selected participants across various sectors and roles.",
-    participants: [
-      {
-        role: "Board Leadership",
-        positions: ["Board Chairs", "Committee Heads", "Lead Directors"],
-        percentage: "35%"
-      },
-      {
-        role: "Executive Management",
-        positions: ["CEOs", "CFOs", "CIOs"],
-        percentage: "40%"
-      },
-      {
-        role: "Governance Professionals",
-        positions: ["Corporate Secretaries", "Risk Officers", "Compliance Managers"],
-        percentage: "25%"
-      }
-    ]
-  },
-  {
-    title: "Analysis Framework",
-    icon: "🔍",
-    description: "Rigorous analytical approach combining qualitative and quantitative methods.",
-    components: [
-      {
-        name: "Thematic Analysis",
-        description: "Identification of key patterns and trends in adoption challenges"
-      },
-      {
-        name: "Statistical Validation",
-        description: "Quantitative verification of findings and correlations"
-      },
-      {
-        name: "Cross-Sector Comparison",
-        description: "Analysis of variations across different industries and regions"
-      }
-    ]
-  }
-];
+const defaultProps = {
+  title: "Research Methodology",
+  description: "Our comprehensive research approach combines rigorous academic methods with practical industry insights to ensure actionable findings.",
+  researchPhases: [
+    {
+      title: "Data Collection",
+      icon: "📊", 
+      description: "A comprehensive multi-method approach to gather diverse perspectives and insights.",
+      methods: [
+        {
+          name: "In-depth Interviews",
+          details: "One-on-one sessions with board members and executives",
+          count: "50+ interviews"
+        },
+        {
+          name: "Survey Analysis", 
+          details: "Quantitative data collection across organizations",
+          count: "200+ responses"
+        },
+        {
+          name: "Case Studies",
+          details: "Detailed examination of AI implementation success stories",
+          count: "15 cases"
+        }
+      ]
+    },
+    {
+      title: "Research Scope",
+      icon: "🎯",
+      description: "Carefully selected participants across various sectors and roles.",
+      participants: [
+        {
+          role: "Board Leadership",
+          positions: ["Board Chairs", "Committee Heads", "Lead Directors"],
+          percentage: "35%"
+        },
+        {
+          role: "Executive Management",
+          positions: ["CEOs", "CFOs", "CIOs"],
+          percentage: "40%"
+        },
+        {
+          role: "Governance Professionals",
+          positions: ["Corporate Secretaries", "Risk Officers", "Compliance Managers"],
+          percentage: "25%"
+        }
+      ]
+    },
+    {
+      title: "Analysis Framework",
+      icon: "🔍",
+      description: "Rigorous analytical approach combining qualitative and quantitative methods.",
+      components: [
+        {
+          name: "Thematic Analysis",
+          description: "Identification of key patterns and trends in adoption challenges"
+        },
+        {
+          name: "Statistical Validation",
+          description: "Quantitative verification of findings and correlations"
+        },
+        {
+          name: "Cross-Sector Comparison",
+          description: "Analysis of variations across different industries and regions"
+        }
+      ]
+    }
+  ]
+};
+
+const {
+  title = defaultProps.title,
+  description = defaultProps.description,
+  researchPhases = defaultProps.researchPhases
+} = Astro.props;
 ---
 <section class="py-16 bg-gray-50">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
-      <h2 class="text-3xl font-bold text-gray-900 mb-4">Research Methodology</h2>
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">{title}</h2>
       <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-        Our comprehensive research approach combines rigorous academic methods with practical industry insights to ensure actionable findings.
+        {description}
       </p>
     </div>
 

@@ -4,226 +4,287 @@ import ActivityLog from './dashboard/ActivityLog.astro';
 import MetricCard from './dashboard/MetricCard.astro';
 import CSRDCategoryDetails from './csrd/CSRDCategoryDetails.astro';
 
-// CSRD-specific categories based on the directive's requirements
-const csrdCategories = [
-  {
-    title: "Impact on Operations",
+interface Props {
+  texts?: {
+    title: string;
+    lastUpdated: string;
+    liveUpdates: string;
+    csrdDashboard: string;
+  };
+  csrdCategories?: Array<{
+    title: string;
+    score: number;
+    status: string;
+    requirement: string;
+    dueDate: string;
+    analysis: {
+      strengths: string[];
+      gaps: string[];
+      recommendations: string[];
+    };
+    documents: Array<{
+      title: string;
+      type: string;
+      date: string;
+      relevance: number;
+      excerpt?: string;
+    }>;
+  }>;
+  recentActivities?: Array<{
+    category: string;
+    action: string;
+    timestamp: string;
+    status: string;
+  }>;
+  metrics?: Array<{
+    title: string;
+    value: string;
+    change: string;
+    icon: string;
+  }>;
+  selectedCategory?: {
+    title: string;
+    score: number;
+    status: string;
+    requirement: string;
+    analysis: {
+      strengths: string[];
+      gaps: string[];
+      recommendations: string[];
+    };
+    documents: Array<{
+      title: string;
+      type: string;
+      date: string;
+      relevance: number;
+      excerpt?: string;
+    }>;
+  };
+}
+
+const { 
+  texts = {
+    title: "CSRD Compliance Dashboard",
+    lastUpdated: "Last updated",
+    liveUpdates: "Live Updates",
+    csrdDashboard: "CSRD Compliance Dashboard"
+  },
+  csrdCategories = [
+    {
+      title: "Impact on Operations",
+      score: 85,
+      status: 'good',
+      requirement: "Assessment of operational impacts on environment and society",
+      dueDate: "2024-12-31",
+      analysis: {
+        strengths: [
+          "Comprehensive climate risk assessment in place",
+          "Clear emission reduction targets established",
+          "Regular environmental impact monitoring"
+        ],
+        gaps: [
+          "Limited scope 3 emissions data",
+          "Incomplete supplier environmental assessments"
+        ],
+        recommendations: [
+          "Expand scope 3 emissions tracking",
+          "Implement supplier environmental scoring",
+          "Enhance climate risk disclosures"
+        ]
+      },
+      documents: [
+        {
+          title: "Board Meeting Minutes - Q1 2024",
+          type: "Meeting Minutes",
+          date: "2024-03-15",
+          relevance: 95,
+          excerpt: "Board approved new climate action targets including 50% reduction in emissions by 2030"
+        },
+        {
+          title: "Environmental Policy Update",
+          type: "Policy Document",
+          date: "2024-02-28",
+          relevance: 90
+        },
+        {
+          title: "Sustainability Report 2023",
+          type: "Annual Report",
+          date: "2024-01-15",
+          relevance: 85,
+          excerpt: "Detailed analysis of current environmental impact and mitigation strategies"
+        }
+      ]
+    },
+    {
+      title: "Finance, Costs and Resources",
+      score: 72,
+      status: 'warning',
+      requirement: "Financial implications of sustainability initiatives and resource allocation",
+      dueDate: "2024-12-31",
+      analysis: {
+        strengths: [
+          "Comprehensive climate risk assessment in place",
+          "Clear emission reduction targets established",
+          "Regular environmental impact monitoring"
+        ],
+        gaps: [
+          "Limited scope 3 emissions data",
+          "Incomplete supplier environmental assessments"
+        ],
+        recommendations: [
+          "Expand scope 3 emissions tracking",
+          "Implement supplier environmental scoring",
+          "Enhance climate risk disclosures"
+        ]
+      },
+      documents: [
+        {
+          title: "Board Meeting Minutes - Q1 2024",
+          type: "Meeting Minutes",
+          date: "2024-03-15",
+          relevance: 95,
+          excerpt: "Board approved new climate action targets including 50% reduction in emissions by 2030"
+        },
+        {
+          title: "Environmental Policy Update",
+          type: "Policy Document",
+          date: "2024-02-28",
+          relevance: 90
+        },
+        {
+          title: "Sustainability Report 2023",
+          type: "Annual Report",
+          date: "2024-01-15",
+          relevance: 85,
+          excerpt: "Detailed analysis of current environmental impact and mitigation strategies"
+        }
+      ]
+    },
+    {
+      title: "Risks and Risk Management",
+      score: 90,
+      status: 'good',
+      requirement: "Identification and mitigation of sustainability-related risks",
+      dueDate: "2024-12-31",
+      analysis: {
+        strengths: [
+          "Comprehensive climate risk assessment in place",
+          "Clear emission reduction targets established",
+          "Regular environmental impact monitoring"
+        ],
+        gaps: [
+          "Limited scope 3 emissions data",
+          "Incomplete supplier environmental assessments"
+        ],
+        recommendations: [
+          "Expand scope 3 emissions tracking",
+          "Implement supplier environmental scoring",
+          "Enhance climate risk disclosures"
+        ]
+      },
+      documents: [
+        {
+          title: "Board Meeting Minutes - Q1 2024",
+          type: "Meeting Minutes",
+          date: "2024-03-15",
+          relevance: 95,
+          excerpt: "Board approved new climate action targets including 50% reduction in emissions by 2030"
+        },
+        {
+          title: "Environmental Policy Update",
+          type: "Policy Document",
+          date: "2024-02-28",
+          relevance: 90
+        },
+        {
+          title: "Sustainability Report 2023",
+          type: "Annual Report",
+          date: "2024-01-15",
+          relevance: 85,
+          excerpt: "Detailed analysis of current environmental impact and mitigation strategies"
+        }
+      ]
+    }
+  ],
+  recentActivities = [
+    {
+      category: "CSRD Compliance",
+      action: "Environmental impact report updated",
+      timestamp: "2 hours ago",
+      status: 'success'
+    },
+    {
+      category: "ESG Reporting",
+      action: "Social metrics need attention",
+      timestamp: "4 hours ago",
+      status: 'warning'
+    },
+    {
+      category: "Sustainability",
+      action: "Carbon footprint data collected",
+      timestamp: "1 day ago",
+      status: 'success'
+    }
+  ],
+  metrics = [
+    {
+      title: "CSRD Readiness",
+      value: "78%",
+      change: "+12%",
+      icon: "🌱"
+    },
+    {
+      title: "ESG Score",
+      value: "A-",
+      change: "Improved",
+      icon: "📈"
+    }
+  ],
+  selectedCategory = {
+    title: "Environmental Impact",
     score: 85,
     status: 'good',
-    requirement: "Assessment of operational impacts on environment and society",
-    dueDate: "2024-12-31",
+    requirement: "Climate change mitigation and adaptation strategies",
     analysis: {
-    strengths: [
-      "Comprehensive climate risk assessment in place",
-      "Clear emission reduction targets established",
-      "Regular environmental impact monitoring"
-    ],
-    gaps: [
-      "Limited scope 3 emissions data",
-      "Incomplete supplier environmental assessments"
-    ],
-    recommendations: [
-      "Expand scope 3 emissions tracking",
-      "Implement supplier environmental scoring",
-      "Enhance climate risk disclosures"
+      strengths: [
+        "Comprehensive climate risk assessment in place",
+        "Clear emission reduction targets established",
+        "Regular environmental impact monitoring"
+      ],
+      gaps: [
+        "Limited scope 3 emissions data",
+        "Incomplete supplier environmental assessments"
+      ],
+      recommendations: [
+        "Expand scope 3 emissions tracking",
+        "Implement supplier environmental scoring",
+        "Enhance climate risk disclosures"
+      ]
+    },
+    documents: [
+      {
+        title: "Board Meeting Minutes - Q1 2024",
+        type: "Meeting Minutes",
+        date: "2024-03-15",
+        relevance: 95,
+        excerpt: "Board approved new climate action targets including 50% reduction in emissions by 2030"
+      },
+      {
+        title: "Environmental Policy Update",
+        type: "Policy Document",
+        date: "2024-02-28",
+        relevance: 90
+      },
+      {
+        title: "Sustainability Report 2023",
+        type: "Annual Report",
+        date: "2024-01-15",
+        relevance: 85,
+        excerpt: "Detailed analysis of current environmental impact and mitigation strategies"
+      }
     ]
-  },
-  documents: [
-    {
-      title: "Board Meeting Minutes - Q1 2024",
-      type: "Meeting Minutes",
-      date: "2024-03-15",
-      relevance: 95,
-      excerpt: "Board approved new climate action targets including 50% reduction in emissions by 2030"
-    },
-    {
-      title: "Environmental Policy Update",
-      type: "Policy Document",
-      date: "2024-02-28",
-      relevance: 90
-    },
-    {
-      title: "Sustainability Report 2023",
-      type: "Annual Report",
-      date: "2024-01-15",
-      relevance: 85,
-      excerpt: "Detailed analysis of current environmental impact and mitigation strategies"
-    }
-  ]
-  },
-  {
-    title: "Finance, Costs and Resources",
-    score: 72,
-    status: 'warning',
-    requirement: "Financial implications of sustainability initiatives and resource allocation",
-    dueDate: "2024-12-31",
-    analysis: {
-    strengths: [
-      "Comprehensive climate risk assessment in place",
-      "Clear emission reduction targets established",
-      "Regular environmental impact monitoring"
-    ],
-    gaps: [
-      "Limited scope 3 emissions data",
-      "Incomplete supplier environmental assessments"
-    ],
-    recommendations: [
-      "Expand scope 3 emissions tracking",
-      "Implement supplier environmental scoring",
-      "Enhance climate risk disclosures"
-    ]
-  },
-  documents: [
-    {
-      title: "Board Meeting Minutes - Q1 2024",
-      type: "Meeting Minutes",
-      date: "2024-03-15",
-      relevance: 95,
-      excerpt: "Board approved new climate action targets including 50% reduction in emissions by 2030"
-    },
-    {
-      title: "Environmental Policy Update",
-      type: "Policy Document",
-      date: "2024-02-28",
-      relevance: 90
-    },
-    {
-      title: "Sustainability Report 2023",
-      type: "Annual Report",
-      date: "2024-01-15",
-      relevance: 85,
-      excerpt: "Detailed analysis of current environmental impact and mitigation strategies"
-    }
-  ]
-  },
-  {
-    title: "Risks and Risk Management",
-    score: 90,
-    status: 'good',
-    requirement: "Identification and mitigation of sustainability-related risks",
-    dueDate: "2024-12-31",
-    analysis: {
-    strengths: [
-      "Comprehensive climate risk assessment in place",
-      "Clear emission reduction targets established",
-      "Regular environmental impact monitoring"
-    ],
-    gaps: [
-      "Limited scope 3 emissions data",
-      "Incomplete supplier environmental assessments"
-    ],
-    recommendations: [
-      "Expand scope 3 emissions tracking",
-      "Implement supplier environmental scoring",
-      "Enhance climate risk disclosures"
-    ]
-  },
-  documents: [
-    {
-      title: "Board Meeting Minutes - Q1 2024",
-      type: "Meeting Minutes",
-      date: "2024-03-15",
-      relevance: 95,
-      excerpt: "Board approved new climate action targets including 50% reduction in emissions by 2030"
-    },
-    {
-      title: "Environmental Policy Update",
-      type: "Policy Document",
-      date: "2024-02-28",
-      relevance: 90
-    },
-    {
-      title: "Sustainability Report 2023",
-      type: "Annual Report",
-      date: "2024-01-15",
-      relevance: 85,
-      excerpt: "Detailed analysis of current environmental impact and mitigation strategies"
-    }
-  ]
-  },
-  
-];
-
-const recentActivities = [
-  {
-    category: "CSRD Compliance",
-    action: "Environmental impact report updated",
-    timestamp: "2 hours ago",
-    status: 'success'
-  },
-  {
-    category: "ESG Reporting",
-    action: "Social metrics need attention",
-    timestamp: "4 hours ago",
-    status: 'warning'
-  },
-  {
-    category: "Sustainability",
-    action: "Carbon footprint data collected",
-    timestamp: "1 day ago",
-    status: 'success'
   }
-];
-
-const metrics = [
-  {
-    title: "CSRD Readiness",
-    value: "78%",
-    change: "+12%",
-    icon: "🌱"
-  },
-  {
-    title: "ESG Score",
-    value: "A-",
-    change: "Improved",
-    icon: "📈"
-  }
-];
-
-const selectedCategory = {
-  title: "Environmental Impact",
-  score: 85,
-  status: 'good',
-  requirement: "Climate change mitigation and adaptation strategies",
-  analysis: {
-    strengths: [
-      "Comprehensive climate risk assessment in place",
-      "Clear emission reduction targets established",
-      "Regular environmental impact monitoring"
-    ],
-    gaps: [
-      "Limited scope 3 emissions data",
-      "Incomplete supplier environmental assessments"
-    ],
-    recommendations: [
-      "Expand scope 3 emissions tracking",
-      "Implement supplier environmental scoring",
-      "Enhance climate risk disclosures"
-    ]
-  },
-  documents: [
-    {
-      title: "Board Meeting Minutes - Q1 2024",
-      type: "Meeting Minutes",
-      date: "2024-03-15",
-      relevance: 95,
-      excerpt: "Board approved new climate action targets including 50% reduction in emissions by 2030"
-    },
-    {
-      title: "Environmental Policy Update",
-      type: "Policy Document",
-      date: "2024-02-28",
-      relevance: 90
-    },
-    {
-      title: "Sustainability Report 2023",
-      type: "Annual Report",
-      date: "2024-01-15",
-      relevance: 85,
-      excerpt: "Detailed analysis of current environmental impact and mitigation strategies"
-    }
-  ]
-};
+} = Astro.props;
 ---
 
 <div class="relative w-full min-h-[600px] bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
@@ -231,11 +292,11 @@ const selectedCategory = {
   <div class="p-6 border-b border-gray-100 bg-gradient-to-r from-primary/5 to-transparent">
     <div class="flex items-center justify-between">
       <div>
-        <h2 class="text-xl font-semibold text-gray-900">CSRD Compliance Dashboard</h2>
-        <p class="text-sm text-gray-600">Last updated: {new Date().toLocaleDateString()}</p>
+        <h2 class="text-xl font-semibold text-gray-900">{texts.title}</h2>
+        <p class="text-sm text-gray-600">{texts.lastUpdated}: {new Date().toLocaleDateString()}</p>
       </div>
       <div class="flex items-center space-x-2">
-        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Live Updates</span>
+        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">{texts.liveUpdates}</span>
       </div>
     </div>
   </div>
@@ -256,7 +317,6 @@ const selectedCategory = {
         {csrdCategories.map((category, index) => (
           <button 
             class="w-full text-left"
-
             onclick={`window.innerWidth > 768 && document.getElementById('categoryDetails').classList.toggle('hidden')`}
           >
             <CSRDCategoryCard {...category} index={index} />
@@ -285,27 +345,25 @@ const selectedCategory = {
         id="categoryDetails" 
         class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50 transition-opacity duration-300 ease-in-out animate-fadeIn flex"
         onclick={`document.getElementById('categoryDetails').classList.toggle('hidden')`}
-
       >
         <div 
           class="bg-white rounded-xl p-6 max-w-2xl w-full mx-4 relative"
           onclick="event.stopPropagation()"
         >
           <button
-          onclick={`document.getElementById('categoryDetails').classList.toggle('hidden')`}
-          class="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+            onclick={`document.getElementById('categoryDetails').classList.toggle('hidden')`}
+            class="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
           >
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
           <div id="detailsContent">
-            <CSRDCategoryDetails {...csrdCategories[0]} />
+            <CSRDCategoryDetails {...selectedCategory} />
           </div>
         </div>
       </div>
 
-      
       <!-- Activity Log -->
       <div class="lg:col-span-1">
         <ActivityLog activities={recentActivities} />

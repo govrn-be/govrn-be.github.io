@@ -1,86 +1,289 @@
 ---
-import Layout from '../../../layouts/Layout.astro';
-import DocumentPreview from '../../../components/features/document-collaboration/DocumentPreview.astro';
-import CollaborationFeatures from '../../../components/features/document-collaboration/CollaborationFeatures.astro';
-import LiveAnnotation from '../../../components/features/document-collaboration/LiveAnnotation.astro';
-import SecurityFeatures from '../../../components/features/document-collaboration/SecurityFeatures.astro';
-import CollaborationStats from '../../../components/features/document-collaboration/CollaborationStats.astro';
-import DocumentViewer from '../../../components/features/document-collaboration/DocumentViewer.astro';
-import CTA from '../../../components/CTA.astro';
+import Layout from "../../../layouts/Layout.astro";
+import DocumentPreview from "../../../components/features/document-collaboration/DocumentPreview.astro";
+import CollaborationFeatures from "../../../components/features/document-collaboration/CollaborationFeatures.astro";
+import LiveAnnotation from "../../../components/features/document-collaboration/LiveAnnotation.astro";
+import SecurityFeatures from "../../../components/features/document-collaboration/SecurityFeatures.astro";
+import CollaborationStats from "../../../components/features/document-collaboration/CollaborationStats.astro";
+import DocumentViewer from "../../../components/features/document-collaboration/DocumentViewer.astro";
+import CTA from "../../../components/CTA.astro";
 
 const features = [
   {
-    title: "Private Annotations",
-    description: "Add personal notes and annotations visible only to you for meeting preparation",
+    title: "Notes personnelles",
+    description:
+      "Créez des annotations privées visibles uniquement par vous pour mieux préparer vos réunions",
     icon: "✏️",
     benefits: [
-      "Private note-taking",
-      "Personal highlights and markers",
-      "Preparation reminders",
-      "Individual annotation history"
-    ]
-  }, 
-  {
-    title: "Documents Comments",
-    description: "Share comments and discussions with the entire board in real-time",
-    icon: "💬",
-    benefits: [
-      "Real-time group discussions",
-      "Threaded conversations",
-      "Rich text formatting",
-      "Comment notifications"
-    ]
+      "Notes confidentielles",
+      "Surlignage personnel",
+      "Aide-mémoire",
+      "Historique de vos annotations",
+    ],
   },
   {
-    title: "Version Control",
-    description: "Track all changes with comprehensive version history",
+    title: "Commentaires collaboratifs",
+    description:
+      "Échangez et discutez en temps réel avec tous les membres du conseil",
+    icon: "💬",
+    benefits: [
+      "Discussions instantanées",
+      "Échanges organisés",
+      "Texte enrichi",
+      "Alertes de nouveaux commentaires",
+    ],
+  },
+  {
+    title: "Historique des versions",
+    description:
+      "Gardez une trace de chaque modification avec un historique détaillé",
     icon: "🔄",
     benefits: [
-      "Complete change history",
-      "Version comparison",
-      "Restore previous versions",
-      "Change attribution"
-    ]
-  }
+      "Suivi des changements",
+      "Comparaison des versions",
+      "Retour aux versions précédentes",
+      "Identification des auteurs",
+    ],
+  },
 ];
+
+const documentViewer = {
+  comments: [
+    {
+      id: "1",
+      author: { name: "Jean Dupont", initials: "JD" },
+      content:
+        "Devrions-nous ajouter plus de détails sur les objectifs du T2 ?",
+      timestamp: "il y a 2 min",
+      replies: [
+        {
+          id: "2",
+          author: { name: "Alice Martin", initials: "AM", color: "blue" },
+          content: "Bonne remarque, je vais mettre à jour cette partie.",
+          timestamp: "il y a 1 min",
+        },
+      ],
+    },
+  ],
+  versions: [
+    {
+      id: "v1.2",
+      author: { name: "Alice Martin", initials: "AM" },
+      timestamp: "il y a 10 min",
+      changes: ["Mise à jour des objectifs T2", "Ajout du résumé financier"],
+    },
+    {
+      id: "v1.1",
+      author: { name: "Jean Dupont", initials: "JD" },
+      timestamp: "il y a 1 heure",
+      changes: ["Première version"],
+    },
+  ],
+  tools: [
+    { icon: "✏️", label: "Annoter" },
+    { icon: "💬", label: "Commenter" },
+    { icon: "🔍", label: "Rechercher" },
+    { icon: "🔄", label: "Historique" },
+  ],
+  texts: {
+    version: "Version 1.2",
+    share: "Partager",
+    shareThrough: "Partager via :",
+    shareOptions: ["📧 Email", "💬 Message privé", "📱 Application mobile"],
+    title: "Compte-rendu du conseil d'administration",
+    date: "15 mars 2024",
+    strategicTitle: "Initiatives stratégiques",
+    strategicContent:
+      "Le conseil a discuté des initiatives stratégiques pour le trimestre à venir, en se concentrant sur trois axes principaux :",
+    strategicItems: [
+      "Expansion sur de nouveaux marchés",
+      "Feuille de route produit",
+      "Optimisation opérationnelle",
+    ],
+    financialTitle: "Performance financière",
+    financialContent:
+      "Les résultats financiers ont dépassé les attentes avec une",
+    highlightedText: "hausse de 20% du chiffre d'affaires",
+    comparedText: "par rapport au trimestre précédent.",
+    comments: {
+      title: "Commentaires",
+      filterButton: "Filtrer",
+      addCommentPlaceholder: "Ajouter un commentaire...",
+      submitButton: "Commenter",
+      userInitials: "ME",
+    },
+  },
+};
+
+const liveAnnotation = {
+  texts: {
+    title: "Annotations et commentaires en direct",
+    description:
+      "Collaborez en temps réel avec des annotations et commentaires instantanés. Visualisez les modifications en direct et participez à des discussions constructives directement dans vos documents.",
+    features: [
+      {
+        text: "Visibilité immédiate pour tous les participants",
+        icon: "👥",
+      },
+      {
+        text: "Mise en forme avancée et fils de discussion",
+        icon: "✨",
+      },
+      {
+        text: "Suggestions de commentaires par IA",
+        icon: "🤖",
+      },
+      {
+        text: "Historique complet des annotations",
+        icon: "📝",
+      },
+    ],
+    comments: [
+      {
+        author: {
+          name: "Jean Dupont",
+          initials: "JD",
+        },
+        content: "Excellent point !",
+      },
+      {
+        author: {
+          name: "Alice Martin",
+          initials: "AM",
+        },
+        content: "Devrions-nous ajouter plus de contexte ?",
+      },
+    ],
+  },
+};
+
+const securityFeatures = {
+  texts: {
+    title: "Sécurité de niveau professionnel",
+    description:
+      "Vos documents sont protégés par des mesures de sécurité à la pointe de l'industrie",
+    features: [
+      {
+        icon: "🔒",
+        title: "Chiffrement de bout en bout",
+        description:
+          "Toutes les modifications et commentaires sont chiffrés de manière sécurisée",
+      },
+      {
+        icon: "👥", 
+        title: "Gestion des accès",
+        description:
+          "Contrôlez précisément qui peut consulter et modifier les documents",
+      },
+      {
+        icon: "📝",
+        title: "Historique détaillé",
+        description: "Suivi complet de toutes les actions et modifications",
+      },
+    ],
+  },
+};
+
+const cta = {
+  texts: {
+    title: "Commencez à collaborer maintenant",
+    subtitle: "Découvrez une collaboration documentaire fluide en temps réel avec une sécurité de niveau entreprise. Annotez, commentez et travaillez ensemble efficacement pendant les réunions du conseil.",
+    cta1: "Commencer",
+    cta2: "Découvrir",
+  },
+};
+
+const collaborationStats = {
+  texts: {
+    title: "Des résultats concrets",
+    subtitle: "Constatez l'efficacité de la collaboration instantanée",
+    stats: [
+    {
+      value: "50%",
+      label: "De temps gagné sur la révision",
+      icon: "⚡"
+    },
+    {
+      value: "100%",
+      label: "De transparence sur les activités",
+      icon: "👁️"
+    },
+    {
+      value: "30%",
+      label: "De participation accrue",
+      icon: "📈"
+    },
+    {
+      value: "24/7",
+      label: "De disponibilité sécurisée",
+      icon: "🔒",
+    },
+    ],
+  },
+};
 ---
 
-<Layout title="Real-Time Document Collaboration - Govrn" description="Experience seamless real-time document collaboration with enterprise-grade security. Annotate, comment, and work together effortlessly during board meetings.">
+<Layout
+  title="Collaboration documentaire en temps réel - Govrn"
+  description="Découvrez une collaboration documentaire fluide en temps réel avec une sécurité de niveau entreprise. Annotez, commentez et travaillez ensemble efficacement pendant les réunions du conseil."
+>
   <main class="pt-16">
-    <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
+    <!-- Section Hero -->
+    <section
+      class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden"
+    >
       <div class="absolute inset-0 z-0">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
+        <div
+          class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"
+        >
+        </div>
       </div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="text-center max-w-3xl mx-auto mb-16">
-          <div class="inline-flex items-center rounded-full px-4 py-1 text-sm font-medium bg-primary/10 text-primary mb-8">
-            Real-Time Collaboration
+          <div
+            class="inline-flex items-center rounded-full px-4 py-1 text-sm font-medium bg-primary/10 text-primary mb-8"
+          >
+            Collaboration en temps réel
           </div>
           <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
-            Transform Your Board
-            <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
-              Document Collaboration
+            Réinventez votre
+            <span
+              class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600"
+            >
+              gestion documentaire
             </span>
           </h1>
           <p class="text-xl text-gray-600 leading-relaxed">
-            Experience seamless real-time document collaboration with enterprise-grade security. Annotate, comment, and work together effortlessly during board meetings.
+            Bénéficiez d'une plateforme collaborative sécurisée pour vos
+            documents. Annotez, échangez et collaborez efficacement lors de vos
+            réunions de conseil.
           </p>
         </div>
 
-        <DocumentViewer />
+        <DocumentViewer
+          comments={documentViewer.comments}
+          versions={documentViewer.versions}
+          tools={documentViewer.tools}
+          texts={documentViewer.texts}
+        />
       </div>
     </section>
 
-    <CollaborationFeatures features={features} />
-    
-    <LiveAnnotation />
-    
-    <SecurityFeatures />
-    
-    <CollaborationStats />
-    
-    <CTA />
+    <CollaborationFeatures
+      features={features}
+      texts={{
+        title: "Fonctionnalités collaboratives",
+        subtitle: "Tous les outils essentiels pour une collaboration efficace",
+      }}
+    />
+
+    <LiveAnnotation texts={liveAnnotation.texts} />
+
+    <SecurityFeatures texts={securityFeatures.texts} />
+
+    <CollaborationStats texts={collaborationStats.texts} />
+
+    <CTA texts={cta.texts} />
   </main>
 </Layout>

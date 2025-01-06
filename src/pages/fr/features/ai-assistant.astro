@@ -1,140 +1,249 @@
 ---
-import Layout from '../../../layouts/Layout.astro';
-import AIChat from '../../../components/ai/AIChat.astro';
-import AIHighlights from '../../../components/ai/AIHighlights.astro';
-import AIFeatures from '../../../components/ai/AIFeatures.astro';
-import AISecurity from '../../../components/ai/AISecurity.astro';
+import Layout from "../../../layouts/Layout.astro";
+import AIChat from "../../../components/ai/AIChat.astro";
+import AIHighlights from "../../../components/ai/AIHighlights.astro";
+import AIFeatures from "../../../components/ai/AIFeatures.astro";
+import AISecurity from "../../../components/ai/AISecurity.astro";
 
 const features = [
   {
     icon: "🔍",
-    title: "Intelligent Search",
-    description: "Natural language search across all your board documents with instant, relevant results"
+    title: "Recherche intelligente",
+    description:
+      "Recherchez en langage naturel dans tous vos documents du conseil avec des résultats pertinents instantanés",
   },
   {
     icon: "📊",
-    title: "Smart Summaries",
-    description: "Get concise summaries of lengthy documents and meeting minutes with key points highlighted"
+    title: "Résumés automatiques",
+    description:
+      "Obtenez des synthèses concises de vos documents et procès-verbaux avec les points clés mis en évidence",
   },
   {
     icon: "🎯",
-    title: "Decision Support",
-    description: "AI-powered insights to help inform strategic decision-making based on historical data"
-  }
+    title: "Aide à la décision",
+    description:
+      "Des analyses basées sur l'IA pour éclairer vos décisions stratégiques à partir de l'historique",
+  },
 ];
+
+const featuresTexts = {
+  title: "Des fonctionnalités intelligentes pour une meilleure gouvernance",
+  description: "Des capacités d'IA puissantes conçues spécifiquement pour la gestion de conseil"
+}
 
 const securityFeatures = [
   {
     icon: "🔒",
-    title: "Data Privacy",
-    description: "Your data stays within your secure environment",
+    title: "Protection des données",
+    description: "Vos données restent dans votre environnement sécurisé",
     details: [
-      "End-to-end encryption",
-      "Private cloud deployment",
-      "No data sharing",
-      "Access controls"
-    ]
+      "Chiffrement de bout en bout",
+      "Déploiement cloud privé",
+      "Aucun partage de données",
+      "Contrôle des accès",
+    ],
   },
   {
     icon: "📝",
-    title: "Audit Trail",
-    description: "Complete transparency in AI interactions",
+    title: "Traçabilité",
+    description: "Transparence totale des interactions avec l'IA",
     details: [
-      "Source attribution",
-      "Usage logging",
-      "Query tracking",
-      "Response verification"
-    ]
+      "Attribution des sources",
+      "Journalisation des usages",
+      "Suivi des requêtes",
+      "Vérification des réponses",
+    ],
   },
   {
     icon: "⚡",
-    title: "Real-time Processing",
-    description: "Instant, secure processing of queries",
+    title: "Traitement en temps réel",
+    description: "Traitement instantané et sécurisé des requêtes",
     details: [
-      "Local processing",
-      "No external APIs",
-      "Fast response times",
-      "Resource optimization"
-    ]
-  }
+      "Traitement local",
+      "Pas d'API externes",
+      "Temps de réponse rapides",
+      "Optimisation des ressources",
+    ],
+  },
 ];
+
+const securityTexts = {
+  title: "Sécurité maximale pour votre entreprise",
+  subtitle: "La protection de vos informations est notre mission première"
+}
+
+const aiHighlights = {
+  texts: {
+    title: "Une IA sécurisée et transparente",
+    description:
+      "Bénéficiez d'analyses basées sur l'IA avec une sécurité de niveau entreprise et une transparence totale",
+    highlights: [
+      {
+        icon: "📝",
+        title: "Réponses sourcées",
+        description:
+          "Toutes les réponses sont directement extraites de vos documents du conseil, garantissant précision et traçabilité",
+        animation: "document-flow",
+      },
+      {
+        icon: "🔒",
+        title: "Environnement sécurisé",
+        description:
+          "Vos données restent dans votre environnement protégé, assurant confidentialité et contrôle total",
+        animation: "shield-pulse",
+      },
+      {
+        icon: "📚",
+        title: "Citations des sources",
+        description:
+          "Chaque réponse inclut des références claires aux documents sources pour une transparence complète",
+        animation: "citation-appear",
+      },
+    ],
+  },
+};
+
+const aiChat = {
+  texts: {
+    messages: [
+      {
+        type: "user",
+        content:
+          "Quelles ont été les décisions importantes lors des réunions du conseil du dernier trimestre ?",
+      },
+      {
+        type: "assistant",
+        content: "D'après le compte-rendu du T3, voici les décisions clés :",
+        quotes: [
+          {
+            text: "Le conseil a approuvé le plan d'expansion sur le marché européen avec un budget de 2,5M€",
+            source: "Compte-rendu T3, Section 2.3",
+          },
+          {
+            text: "Une nouvelle initiative de développement durable a été approuvée, visant une réduction de 30% des émissions carbone d'ici 2025",
+            source: "Compte-rendu T3, Section 4.1",
+          },
+        ],
+      },
+      {
+        type: "user",
+        content:
+          "Où en sommes-nous dans l'avancement de l'initiative développement durable ?",
+      },
+      {
+        type: "assistant",
+        content: "Selon le dernier rapport de développement durable :",
+        quotes: [
+          {
+            text: "La réduction actuelle des émissions atteint 12%, avec l'ensemble des installations principales fonctionnant désormais à l'énergie renouvelable",
+            source: "Rapport de Développement Durable 2024, Page 15",
+          },
+        ],
+      },
+    ],
+    header: {
+      title: "Assistant IA du Conseil",
+      subtitle: "Alimenté par vos documents du conseil",
+    },
+    input: {
+      placeholder: "Posez une question sur vos documents du conseil...",
+    },
+  },
+};
+
 ---
 
-<Layout title="AI Assistant - Govrn Board Management Software" description="Experience the power of AI to unlock insights from your board documents while maintaining complete security and privacy.">
+<Layout
+  title="Assistant IA - Logiciel de gestion de conseil Govrn"
+  description="Découvrez la puissance de l'IA pour exploiter les informations de vos documents tout en garantissant une sécurité et une confidentialité totales."
+>
   <main class="pt-16">
-    <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
+    <!-- Section Hero -->
+    <section
+      class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden"
+    >
       <div class="absolute inset-0 z-0">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
+        <div
+          class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"
+        >
+        </div>
       </div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="text-center max-w-3xl mx-auto">
-          <div class="inline-flex items-center rounded-full px-4 py-1 text-sm font-medium bg-primary/10 text-primary mb-8">
-            AI-Powered Insights
+          <div
+            class="inline-flex items-center rounded-full px-4 py-1 text-sm font-medium bg-primary/10 text-primary mb-8"
+          >
+            Analyses propulsées par l'IA
           </div>
           <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
-            Your Intelligent Board
-            <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
-              Assistant
+            Votre assistant intelligent
+            <span
+              class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600"
+            >
+              pour le conseil
             </span>
           </h1>
           <p class="text-xl text-gray-600 leading-relaxed">
-            Experience the power of AI to unlock insights from your board documents while maintaining complete security and privacy.
+            Exploitez la puissance de l'IA pour tirer parti de vos documents
+            tout en garantissant une sécurité et une confidentialité totales.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- AI Highlights Section -->
-    <AIHighlights />
+    <!-- Section Points Forts IA -->
+    <AIHighlights texts={aiHighlights.texts} />
 
-    <!-- Demo Section -->
+    <!-- Section Démo -->
     <section class="py-20 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <h2 class="text-3xl font-bold text-gray-900 mb-6">
-              Experience AI-Powered Board Intelligence
+              Découvrez l'intelligence artificielle au service de votre conseil
             </h2>
             <p class="text-xl text-gray-600 leading-relaxed mb-8">
-              Ask questions about your board documents and get instant, accurate responses backed by your organization's data.
+              Posez des questions sur vos documents et obtenez des réponses
+              instantanées et précises basées sur les données de votre
+              organisation.
             </p>
           </div>
           <div class="relative">
-            <AIChat />
+            <AIChat texts={aiChat.texts} />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Features -->
-    <AIFeatures features={features} />
+    <!-- Fonctionnalités -->
+    <AIFeatures features={features} texts={featuresTexts} />
 
-    <!-- Security -->
-    <AISecurity features={securityFeatures} />
+    <!-- Sécurité -->
+    <AISecurity features={securityFeatures} texts={securityTexts} />
 
-    <!-- CTA -->
+    <!-- Appel à l'action -->
     <section class="bg-gradient-to-br from-primary to-blue-600 py-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-3xl font-bold text-white mb-8">
-          Ready to Experience AI-Powered Board Management?
+          Prêt à découvrir la gestion de conseil assistée par l'IA ?
         </h2>
         <p class="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
-          Join leading organizations using Govrn's AI assistant to make better board decisions
+          Rejoignez les organisations leaders qui utilisent l'assistant IA de
+          Govrn pour prendre de meilleures décisions
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="/request-demo"
             class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-primary bg-white hover:bg-gray-50 transition-colors duration-200"
           >
-            Request Demo
+            Demander une démo
           </a>
           <a
             href="/contact"
             class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white border-2 border-white hover:bg-white/10 transition-colors duration-200"
           >
-            Contact Sales
+            Contacter l'équipe commerciale
           </a>
         </div>
       </div>

@@ -13,7 +13,36 @@ interface FeatureCategory {
   features: Feature[];
 }
 
-const featureCategories = [
+interface Props {
+  featureCategories?: {
+    name: string;
+    features: {
+      name: string;
+      essential: boolean | string;
+      pro: boolean | string;
+      enterprise: boolean | string;
+    }[];
+  }[];
+  plans?: {
+    name: string;
+    price: string;
+    description: string;
+    limits: string;
+    popular: boolean;
+    features: string[];
+  }[];
+  planTexts?: {
+    requestQuote: string;
+    billedAnnually: string; 
+    mostPopular: string;
+  },
+  featureComparison?: {
+    title: string;
+    subtitle: string;
+  }
+}
+
+const { featureCategories = [
   {
     name: "Before the Meeting",
     features: [
@@ -300,7 +329,6 @@ const featureCategories = [
         pro: false,
         enterprise: true,
       },
-
       {
         name: "Telecom Services",
         essential: false,
@@ -385,9 +413,7 @@ const featureCategories = [
       },
     ],
   },
-];
-
-export const plans = [
+], plans = [
   {
     name: "Essential",
     price: "149", 
@@ -454,10 +480,18 @@ export const plans = [
       "Advanced Natural Language Processing for Multi-Language Support ✨"
     ],
   },
-];
+], planTexts = {
+  requestQuote: "Request a Quote",
+  billedAnnually: "billed annually", 
+  mostPopular: "Most Popular",
+  month: "month"
+}, featureComparison = {
+  title: "Feature-by-Feature Comparison",
+  subtitle: "Compare our plans side-by-side to find the perfect fit for your organization's needs"
+} } = Astro.props;
 ---
 
-<PricingPlans plans={plans} />
+<PricingPlans plans={plans} texts={planTexts} />
 
 <!-- Feature Comparison -->
 <div
@@ -465,8 +499,8 @@ export const plans = [
 >
   <div class="p-6 bg-gray-50 border-b border-gray-100">
     <div class="mt-8 flex flex-col items-center text-center">
-      <h2 class="text-3xl font-bold text-gray-900 mb-2">Feature-by-Feature Comparison</h3>
-      <p class="mt4 text-gray-600 text-xl">Compare our plans side-by-side to find the perfect fit for your organization's needs</p>
+      <h2 class="text-3xl font-bold text-gray-900 mb-2">{featureComparison.title}</h3>
+      <p class="mt4 text-gray-600 text-xl">{featureComparison.subtitle}</p>
     </div>
   </div>
 
@@ -500,9 +534,9 @@ export const plans = [
           >
             <div class="px-4 py-2 grid grid-cols-4 gap-4 items-center mb-4">
               <div class="text-sm text-gray-600" />
-              <div class="text-sm font-medium text-center">Essential</div>
-              <div class="text-sm font-medium text-center">Professional</div>
-              <div class="text-sm font-medium text-center">Enterprise</div>
+              <div class="text-sm font-medium text-center">{plans[0].name}</div>
+              <div class="text-sm font-medium text-center">{plans[1].name}</div>
+              <div class="text-sm font-medium text-center">{plans[2].name}</div>
             </div>
             {category.features.map((feature) => (
               <div class="px-4 py-2 grid grid-cols-4 gap-4 items-center hover:bg-gray-50 transition-colors duration-200">

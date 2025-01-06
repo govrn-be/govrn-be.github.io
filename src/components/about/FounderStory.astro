@@ -1,4 +1,28 @@
 ---
+interface Props {
+  tagText: string;
+  title: string;
+  story: string[];
+  founder: {
+    name: string;
+    role: string;
+  };
+}
+
+const {
+  tagText = "Our Story",
+  title = "Why We Started Govrn",
+  story = [
+    "Throughout my career serving on multiple boards, I consistently encountered the same challenges: overwhelming document management, inefficient decision-making processes, and the struggle to maintain proper governance standards.",
+    "The turning point came during a crucial board meeting where critical documents were misplaced, leading to delayed decisions that impacted the organization's strategic direction. I realized there had to be a better way.",
+    "This experience led to the creation of Govrn. We set out to build not just another board portal, but an intelligent platform that truly understands and addresses the complex needs of modern boards.",
+    "Today, we're proud to help boards across Europe make better decisions and maintain excellence in governance, powered by cutting-edge AI technology."
+  ],
+  founder = {
+    name: "Jean-Louis Van Houwe",
+    role: "Founder & CEO"
+  }
+} = Astro.props;
 ---
 
 <section class="py-20 bg-gray-50 relative overflow-hidden">
@@ -19,27 +43,16 @@
       <!-- Story Content -->
       <div class="space-y-8">
         <div class="inline-flex items-center rounded-full px-4 py-1 text-sm font-medium bg-primary/10 text-primary">
-          Our Story
+          {tagText}
         </div>
         
-        <h2 class="text-3xl font-bold text-gray-900">Why We Started Govrn</h2>
+        <h2 class="text-3xl font-bold text-gray-900">{title}</h2>
         
         <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
-          <p>
-            "Throughout my career serving on multiple boards, I consistently encountered the same challenges: overwhelming document management, inefficient decision-making processes, and the struggle to maintain proper governance standards.
-          </p>
+          {story.map((paragraph) => (
+            <p>{paragraph}</p>
+          ))}
           
-          <p>
-            The turning point came during a crucial board meeting where critical documents were misplaced, leading to delayed decisions that impacted the organization's strategic direction. I realized there had to be a better way.
-          </p>
-          
-          <p>
-            This experience led to the creation of Govrn. We set out to build not just another board portal, but an intelligent platform that truly understands and addresses the complex needs of modern boards.
-          </p>
-          
-          <p>
-            Today, we're proud to help boards across Europe make better decisions and maintain excellence in governance, powered by cutting-edge AI technology."
-          </p>
         </div>
         
         <div class="flex items-center space-x-4">
@@ -49,8 +62,8 @@
             class="w-12 h-12 rounded-full object-cover"
           />
           <div>
-            <h3 class="font-semibold text-gray-900">Jean-Louis Van Houwe</h3>
-            <p class="text-gray-600">Founder & CEO</p>
+            <h3 class="font-semibold text-gray-900">{founder.name}</h3>
+            <p class="text-gray-600">{founder.role}</p>
           </div>
         </div>
       </div>

@@ -5,19 +5,38 @@ import OfficeCard from '../../components/OfficeCard.astro';
 
 const offices = [
 {
-    city: "Brussels",
-    country: "Belgium",
+    city: "Bruxelles",
+    country: "Belgique", 
     image: "/bxl.jpg",
     address: "Avenue Roger Vandendriessche 18, Woluwe-Saint-Pierre",
     postalCode: "1150",
     email: "info@govrn.com",
   }
 ];
+
+const contactFormProps = {
+  reasons: [
+   "Demander une démonstration",
+    "Question commerciale",
+    "Support technique",
+    "Proposition de partenariat", 
+    "Autre demande"
+  ],
+  labels: {
+    firstName: "Prénom",
+    lastName: "Nom",
+    email: "Email",
+    company: "Entreprise",
+    reason: "Motif de contact",
+    message: "Message",
+    submit: "Envoyer"
+  }
+};
 ---
 
-<Layout title="Contact Us - Govrn Board Management Software" description="Have questions about Govrn? Our team is here to help you transform your board management experience.">
+<Layout title="Contactez-nous - Logiciel de gestion de conseil Govrn" description="Des questions sur Govrn ? Notre équipe est là pour vous aider à transformer votre expérience de gestion de conseil.">
   <main class="pt-16">
-    <!-- Hero Section -->
+    <!-- Section d'en-tête -->
     <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
       <div class="absolute inset-0 z-0">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
@@ -26,32 +45,32 @@ const offices = [
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="text-center max-w-3xl mx-auto">
           <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
-            Get in Touch with
+            Contactez
             <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
-              Our Team
+              Notre Équipe
             </span>
           </h1>
           <p class="text-xl text-gray-600 leading-relaxed">
-            Have questions about Govrn? Our team is here to help you transform your board management experience.
+            Des questions sur Govrn ? Notre équipe est là pour vous aider à transformer votre expérience de gestion de conseil.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Contact Form Section -->
+    <!-- Section du formulaire de contact -->
     <section class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-16">
-          <!-- Contact Form -->
+          <!-- Formulaire de contact -->
           <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-            <h2 class="text-2xl font-bold text-gray-900 mb-8">Send Us a Message</h2>
-            <ContactForm />
+            <h2 class="text-2xl font-bold text-gray-900 mb-8">Envoyez-nous un message</h2>
+            <ContactForm {...contactFormProps} />
           </div>
 
-          <!-- Contact Information -->
+          <!-- Informations de contact -->
           <div class="space-y-12">
             <div>
-              <h2 class="text-2xl font-bold text-gray-900 mb-6">Our Offices</h2>
+              <h2 class="text-2xl font-bold text-gray-900 mb-6">Nos Bureaux</h2>
               <div class="space-y-8">
                 {offices.map(office => (
                   <OfficeCard {...office} />
@@ -60,7 +79,7 @@ const offices = [
             </div>
 
             <div>
-              <h2 class="text-2xl font-bold text-gray-900 mb-6">Connect With Us</h2>
+              <h2 class="text-2xl font-bold text-gray-900 mb-6">Suivez-nous</h2>
               <div class="flex space-x-4">
                 <a href="#" class="p-3 bg-gray-50 rounded-lg text-gray-600 hover:text-primary transition-colors duration-200">
                   <span class="sr-only">LinkedIn</span>
@@ -78,13 +97,13 @@ const offices = [
             </div>
 
             <!-- <div class="bg-primary/10 rounded-xl p-8">
-              <h2 class="text-xl font-bold text-gray-900 mb-4">Need Immediate Assistance?</h2>
-              <p class="text-gray-600 mb-6">Our support team is available 24/7 to help you with any questions or concerns.</p>
+              <h2 class="text-xl font-bold text-gray-900 mb-4">Besoin d'aide immédiate ?</h2>
+              <p class="text-gray-600 mb-6">Notre équipe support est disponible 24/7 pour répondre à vos questions.</p>
               <a
                 href="#"
                 class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg text-white bg-primary hover:bg-primary/90 transition-colors duration-200"
               >
-                Start Live Chat
+                Démarrer le chat
                 <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                 </svg>

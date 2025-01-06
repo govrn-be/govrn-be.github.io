@@ -6,66 +6,66 @@ import PricingTiers from '../../components/pricing/PricingTiers.astro';
 const supportServices = [
   {
     icon: "👥",
-    title: "Dedicated Onboarding",
-    description: "Personalized onboarding program tailored to your board's needs",
+    title: "Accompagnement personnalisé",
+    description: "Programme d'intégration sur mesure adapté aux besoins de votre conseil",
     features: [
-      "Initial setup assistance",
-      "Data migration support",
-      "Custom workflow configuration",
-      "Integration setup"
+      "Configuration initiale",
+      "Migration des données",
+      "Personnalisation des processus",
+      "Mise en place des intégrations"
     ]
   },
   {
-    icon: "🎓",
-    title: "Training Programs",
-    description: "Comprehensive training for all board members and administrators",
+    icon: "🎓", 
+    title: "Formations complètes",
+    description: "Formation approfondie pour les membres et administrateurs",
     features: [
-      "Live training sessions",
-      "On-demand video tutorials",
-      "Best practices workshops",
-      "Refresher courses"
+      "Sessions en direct",
+      "Tutoriels à la demande",
+      "Ateliers de bonnes pratiques",
+      "Sessions de mise à niveau"
     ]
   },
   {
     icon: "🛟",
-    title: "Ongoing Support",
-    description: "Multi-channel support to ensure your success",
+    title: "Support continu",
+    description: "Assistance multicanal pour votre réussite",
     features: [
-      "24/7 technical support",
-      "Dedicated success manager",
-      "Regular check-ins",
-      "Priority issue resolution"
+      "Support technique 24/7",
+      "Responsable dédié",
+      "Suivis réguliers", 
+      "Résolution prioritaire"
     ]
   }
 ];
 
 const featureCategories = [
   {
-    title: "Meeting Features",
+    title: "Fonctionnalités de réunion",
     features: [
-      "Agenda Builder",
-      "Document Management",
-      "Task Management",
-      "Board Pack Tools",
-      "Voting",
-      "AI-Powered Minute Tools"
+      "Création d'ordre du jour",
+      "Gestion documentaire",
+      "Gestion des tâches",
+      "Outils de dossier",
+      "Vote électronique",
+      "Rédaction assistée par IA"
     ]
   },
   {
-    title: "Post-Meeting Tools",
+    title: "Outils post-réunion",
     features: [
-      "Document Repository",
-      "E-Signature",
-      "Sub-Committee Support"
+      "Base documentaire",
+      "Signature électronique",
+      "Gestion des comités"
     ]
   },
   {
-    title: "Collaboration & Governance",
+    title: "Collaboration & Gouvernance",
     features: [
-      "Real-time Collaboration",
-      "Compliance Tools",
-      "AI & Analytics",
-      "Security Features"
+      "Collaboration en temps réel",
+      "Outils de conformité",
+      "IA & Analyses",
+      "Sécurité renforcée"
     ]
   }
 ];
@@ -74,7 +74,8 @@ const featureCategories = [
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "name": "Govrn - Pricing FAQ",
+  "name": "Govrn - FAQ Tarification",
+  "inLanguage": "fr",
   mainEntity: supportFaqs.map((faq) => ({
     "@type": "Question",
     name: faq.question,
@@ -85,12 +86,480 @@ const structuredData = {
   })),
 };
 
+const pricingTexts = {
+  featureCategories: [
+  {
+    name: "Avant la réunion",
+    features: [
+      {
+        name: "Création d'ordre du jour",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Intégration d'ordre du jour",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Annotation du dossier",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Création de dossier",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Annotation de documents",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Gestion documentaire",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Délégation de signature électronique",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Gestion des tâches",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+    ],
+  },
+  {
+    name: "Pendant la réunion",
+    features: [
+      {
+        name: "Actions",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Annotation en direct",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Interface intuitive",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Partage de fichiers",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "Rédaction de PV",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "PV et transcription par IA",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Sondages",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Chat privé",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Vote électronique",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+    ],
+  },
+  {
+    name: "Après la réunion",
+    features: [
+      {
+        name: "Base documentaire",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Signature électronique (PV, Documents)",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Gouvernance générale",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Sous-comités",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+    ],
+  },
+  {
+    name: "Outils de conseil",
+    features: [
+      {
+        name: "Annuaire et profils des membres",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "Personnalisation de la marque",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "Intégration e-mail",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Intégration signature électronique",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Applications iOS et Android",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Gestion des mandats",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "Gestion multi-conseils",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Multi-langues",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Accès hors-ligne",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Annuaire utilisateurs simple",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+    ],
+  },
+  {
+    name: "Analyses & IA",
+    features: [
+      {
+        name: "Analyses avancées",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "Assistant IA",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "Recherche IA",
+        essential: "Basique",
+        pro: "Avancée",
+        enterprise: "Personnalisée",
+      },
+      {
+        name: "Évaluation du conseil",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "KPI et piste d'audit",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+    ],
+  },
+  {
+    name: "Conformité & Gouvernance",
+    features: [
+      {
+        name: "Conformité spécifique entreprise",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "Services financiers",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "Vérifications secrétariat (Quorum, etc.)",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "Authentification multi-facteurs",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Services pharmaceutiques",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "Stockage sécurisé",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Conformité sectorielle",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "Services télécoms",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+    ],
+  },
+  {
+    name: "Sécurité",
+    features: [
+      {
+        name: "Contrôles d'accès avancés",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Chiffrement des données au repos",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Chiffrement de bout en bout",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Liste blanche IP",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "Contrôle d'accès par rôle",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Journaux d'audit sécurité",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Intégration SSO",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+    ],
+  },
+  {
+    name: "Support",
+    features: [
+      {
+        name: "Support 24/7",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "Succès client dédié",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "Messagerie et e-mail",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Support prioritaire",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+    ],
+  },
+], plans: [
+  {
+    name: "Essentiel",
+    price: "149",
+    description:
+      "Parfait pour les petits conseils et organisations débutant avec des outils de gouvernance essentiels.",
+    limits: "Inclut 1 conseil et 1 comité",
+    popular: false,
+    features: [
+      "Utilisateurs illimités",
+      "Création d'ordre du jour",
+      "Gestion documentaire",
+      "Création de dossier",
+      "Base documentaire",
+      "Chat privé",
+      "Gouvernance générale",
+      "Stockage sécurisé et authentification multi-facteurs",
+      "Support par messagerie et email",
+      "Recherche IA basique ✨"
+    ],
+  },
+  {
+    name: "Professionnel",
+    price: "449",
+    description:
+      "Idéal pour les organisations en croissance nécessitant des outils avancés de collaboration et de conformité.",
+    limits: "Inclut 2 conseils et 2 comités par conseil",
+    popular: true,
+    features: [
+      "Tout Essentiel, plus :",
+      "Gestion des tâches",
+      "Annotation de documents",
+      "Outils de vote",
+      "Signature électronique (PV et documents)",
+      "Support des sous-comités",
+      "Sondages",
+      "Collaboration documentaire (édition et commentaires)",
+      "Outils de conformité régionaux principaux",
+      "Contrôle d'accès et permissions avancés",
+      "Support prioritaire par email et téléphone",
+      "PV par IA avancé ✨",
+      "Analyse documentaire et insights par IA ✨",
+      "Recherche IA avancée ✨"
+    ],
+  },
+  {
+    name: "Entreprise",
+    price: "Sur mesure",
+    description:
+      "Pour les grandes organisations avec des besoins complexes et des exigences de gouvernance personnalisées.",
+    limits: "Conseils et comités illimités",
+    popular: false,
+    features: [
+      "Tout Professionnel, plus :",
+      "Modèles de documents et réunions",
+      "Analyses et insights avancés",
+      "Signature électronique avancée",
+      "Outils de collaboration avancés",
+      "Conformité sectorielle : Services financiers, télécoms, pharmaceutiques",
+      "Intégration SSO",
+      "Support 24/7 et responsable succès client dédié",
+      "Modèles IA personnalisés par secteur ✨",
+      "Analyse des risques de gouvernance par IA ✨",
+      "Analyses prédictives de performance du conseil ✨",
+      "Traitement du langage naturel avancé pour support multilingue ✨"
+    ],
+  },
+], planTexts: {
+  requestQuote: "Demander un devis",
+  billedAnnually: "annuellement", 
+  mostPopular: "Le plus populaire",
+  month: "mois",
+  
+},featureComparison: {
+    title: "Tableau comparatif",
+    subtitle: "Découvrez en détail les fonctionnalités de chaque offre pour choisir celle qui vous convient"
+  } };
+
+const faqs =  [
+    {
+      question: "Quelle formation proposez-vous ?",
+      answer: "Nous offrons des programmes de formation complets comprenant des sessions en direct, des tutoriels vidéo, de la documentation et des ateliers personnalisés. Notre formation couvre tout, de la navigation de base aux fonctionnalités avancées et aux meilleures pratiques."
+    },
+    {
+      question: "Combien de temps dure le processus d'intégration ?",
+      answer: "L'intégration prend généralement 2 à 4 semaines, selon la taille et les besoins de votre organisation. Nous vous accompagnons tout au long du processus pour assurer une transition en douceur."
+    },
+    {
+      question: "Proposez-vous un support continu après la mise en place ?",
+      answer: "Oui, nous fournissons un support continu via plusieurs canaux : email, téléphone et chat en direct. Les clients Entreprise bénéficient d'un responsable succès client dédié pour une assistance personnalisée."
+    },
+    {
+      question: "Pouvez-vous nous aider avec la migration des données ?",
+      answer: "Absolument ! Notre équipe vous aide à migrer vos documents et données existants vers Govrn, en garantissant une transition fluide tout en préservant l'intégrité et la sécurité des données."
+    }
+  ];
 
 ---
 
-<Layout title="Pricing - Govrn Board Management Software" description="Simple and transparent pricing starting from €149/month. Choose the perfect plan for your board management needs." structuredData={structuredData}>
+<Layout title="Tarifs - Logiciel de gestion de conseil Govrn" description="Tarification simple et transparente à partir de 149€/mois. Choisissez le forfait idéal pour votre conseil." structuredData={structuredData}>
   <main class="pt-16">
-    <!-- Hero Section -->
+    <!-- Section d'en-tête -->
     <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
       <div class="absolute inset-0 z-0">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
@@ -100,13 +569,13 @@ const structuredData = {
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="text-center max-w-3xl mx-auto">
           <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
-            Simple, Transparent
+            Une tarification simple et
             <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
-              Pricing
+              transparente
             </span>
           </h1>
           <p class="text-xl text-gray-600 leading-relaxed">
-            Choose the perfect plan for your organization's needs. All plans include our core features with flexible options to scale.
+            Choisissez le forfait adapté à vos besoins. Toutes nos offres incluent les fonctionnalités essentielles avec des options flexibles.
           </p>
         </div>
       </div>
@@ -114,16 +583,16 @@ const structuredData = {
 
     <section class="py-20 bg-white relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <PricingTiers />
+        <PricingTiers {...pricingTexts} />
       </div>
     </section>
 
-    <!-- Support & Training Section -->
+    <!-- Section Support & Formation -->
     <section class="py-20 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-          <h2 class="text-3xl font-bold text-gray-900">Comprehensive Support & Training</h2>
-          <p class="mt-4 text-xl text-gray-600">We're committed to your success with dedicated support at every step</p>
+          <h2 class="text-3xl font-bold text-gray-900">Support et formation complets</h2>
+          <p class="mt-4 text-xl text-gray-600">Nous nous engageons pour votre réussite avec un accompagnement personnalisé</p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
@@ -148,16 +617,16 @@ const structuredData = {
       </div>
     </section>
 
-    <!-- Support FAQs -->
+    <!-- FAQ Support -->
     <section class="py-20 bg-white">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-          <h2 class="text-3xl font-bold text-gray-900">Support & Training FAQ</h2>
-          <p class="mt-4 text-xl text-gray-600">Common questions about our support and training services</p>
+          <h2 class="text-3xl font-bold text-gray-900">FAQ Support et Formation</h2>
+          <p class="mt-4 text-xl text-gray-600">Questions fréquentes sur nos services de support et de formation</p>
         </div>
 
         <div class="space-y-8">
-          {supportFaqs.map(faq => (
+          {faqs.map(faq => (
             <div class="bg-gray-50 rounded-lg p-6">
               <h3 class="text-lg font-semibold text-gray-900">{faq.question}</h3>
               <p class="mt-2 text-gray-600">{faq.answer}</p>
@@ -167,27 +636,27 @@ const structuredData = {
       </div>
     </section>
 
-    <!-- CTA -->
+    <!-- Appel à l'action -->
     <section class="bg-gradient-to-br from-primary to-blue-600 py-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-3xl font-bold text-white mb-8">
-          Ready to Transform Your Board Management?
+          Prêt à transformer la gestion de votre conseil ?
         </h2>
         <p class="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
-          Join leading organizations that trust Govrn to power their board's success
+          Rejoignez les organisations leaders qui font confiance à Govrn
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="/request-demo"
             class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-primary bg-white hover:bg-gray-50 transition-colors duration-200"
           >
-            Request Demo
+            Demander une démo
           </a>
           <a
             href="/contact"
             class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white border-2 border-white hover:bg-white/10 transition-colors duration-200"
           >
-            Contact Sales
+            Contacter l'équipe commerciale
           </a>
         </div>
       </div>

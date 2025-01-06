@@ -1,61 +1,24 @@
 ---
 interface Props {
   plans: any[];
+  texts?: {
+    requestQuote: string;
+    billedAnnually: string;
+    mostPopular: string;
+    month: string;
+  };
 }
 
-const { plans } = Astro.props;
+const { 
+  plans,
+  texts = {
+    requestQuote: "Request a Quote",
+    billedAnnually: "billed annually", 
+    mostPopular: "Most Popular",
+    month: "month"
+  }
+} = Astro.props;
 
-const standardPlans = [
-  {
-    name: "Essentials",
-    description: "Perfect for small boards and organizations",
-    price: "299",
-    features: [
-      "Unlimited Users",
-      "Agenda Builder",
-      "Document Management",
-      "Board Pack Creation",
-      "Document Repository",
-      "Private Chat",
-      "General Governance",
-      "Document Storage & MFA",
-      "IM & Email Support",
-    ],
-  },
-  {
-    name: "Professional",
-    description: "Ideal for growing organizations",
-    price: "599",
-    features: [
-      "Everything in Essentials, plus:",
-      "Task Management",
-      "Document Annotation",
-      "Voting",
-      "E-Signature (Documents & Minutes)",
-      "Sub-Committee Support",
-      "Polling & Document Collaboration",
-      "Regional Compliance Tools",
-      "Advanced Permissions",
-      "Priority Email & Phone Support",
-    ],
-    popular: true,
-  },
-  {
-    name: "Enterprise",
-    description: "For large organizations with complex needs",
-    price: "Custom",
-    features: [
-      "Everything in Professional, plus:",
-      "Advanced Annotation",
-      "Advanced Insights",
-      "E-Signature (Advanced)",
-      "Advanced Collaboration",
-      "Sector-Specific Compliance",
-      "SSO Integration",
-      "24/7 Support with Customer Success",
-    ],
-  },
-];
 ---
 
 <div class="grid gap-8 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
@@ -66,7 +29,7 @@ const standardPlans = [
       >
         {plan.popular && (
           <div class="absolute top-0 right-0 bg-primary text-white px-4 py-1 text-sm font-medium rounded-bl-lg">
-            Most Popular
+            {texts.mostPopular}
           </div>
         )}
         <div class="p-8">
@@ -74,15 +37,15 @@ const standardPlans = [
           <p class="mt-2 text-gray-500">{plan.description}</p>
           <div class="mt-6 flex items-baseline">
             <span class="text-4xl font-bold text-gray-900">
-          {plan.price !== "Custom" ? new Intl.NumberFormat('en-US', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(Number(plan.price)) : plan.price}
+          {isNaN(Number(plan.price)) ? plan.price : new Intl.NumberFormat('en-US', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(Number(plan.price))}
         </span>
-        {plan.price !== "Custom" && <span class="text-gray-500 ml-1">/month</span>}
+        {!isNaN(Number(plan.price)) && <span class="text-gray-500 ml-1">/ {texts.month}</span>}
         <div class="mt-1 group relative">
         {plan.price !== "Custom" && (
           <>
             <span class="ml-2 text-sm text-black-500 hover:text-gray-700 cursor-help text-xl"> * </span>
             <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-900 text-white text-xs rounded py-1 px-2 whitespace-nowrap">
-              billed annually
+              {texts.billedAnnually}
             </div>
           </>
         )}
@@ -98,7 +61,7 @@ const standardPlans = [
                   : "text-primary bg-white border-2 border-primary/20 hover:bg-primary/5"
               }`}
             >
-              Request a Quote
+              {texts.requestQuote}
             </a>
           </div>
           

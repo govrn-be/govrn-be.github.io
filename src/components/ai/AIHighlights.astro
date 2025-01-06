@@ -1,24 +1,41 @@
 ---
-const highlights = [
-  {
-    icon: "📝",
-    title: "Quoted Responses",
-    description: "All responses are directly quoted from your board documents, ensuring accuracy and traceability",
-    animation: "document-flow"
-  },
-  {
-    icon: "🔒",
-    title: "Secure Environment",
-    description: "Your data never leaves your secure environment, maintaining complete privacy and control",
-    animation: "shield-pulse"
-  },
-  {
-    icon: "📚",
-    title: "Source Attribution",
-    description: "Every response includes clear references to source documents for full transparency",
-    animation: "citation-appear"
+interface Props {
+  texts?: {
+    title: string;
+    description: string;
+    highlights: {
+      icon: string;
+      title: string;
+      description: string;
+      animation: string;
+    }[];
   }
-];
+}
+
+const { texts = {
+  title: "Secure and Transparent AI",
+  description: "Experience AI-powered insights with enterprise-grade security and full transparency",
+  highlights: [
+    {
+      icon: "📝",
+      title: "Quoted Responses",
+      description: "All responses are directly quoted from your board documents, ensuring accuracy and traceability",
+      animation: "document-flow"
+    },
+    {
+      icon: "🔒", 
+      title: "Secure Environment",
+      description: "Your data never leaves your secure environment, maintaining complete privacy and control",
+      animation: "shield-pulse"
+    },
+    {
+      icon: "📚",
+      title: "Source Attribution", 
+      description: "Every response includes clear references to source documents for full transparency",
+      animation: "citation-appear"
+    }
+  ]
+}} = Astro.props;
 ---
 
 <section class="py-20 bg-white relative overflow-hidden">
@@ -27,15 +44,15 @@ const highlights = [
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
     <div class="text-center max-w-3xl mx-auto mb-16">
       <h2 class="text-3xl font-bold text-gray-900 mb-4">
-        Secure and Transparent AI
+        {texts.title}
       </h2>
       <p class="text-xl text-gray-600">
-        Experience AI-powered insights with enterprise-grade security and full transparency
+        {texts.description}
       </p>
     </div>
 
     <div class="grid lg:grid-cols-3 gap-8">
-      {highlights.map(highlight => (
+      {texts.highlights.map(highlight => (
         <div class="relative group">
           <div class="absolute inset-0 bg-gradient-to-br from-primary to-blue-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
           

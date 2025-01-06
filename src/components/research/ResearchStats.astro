@@ -1,8 +1,16 @@
 ---
-const stats = [
+interface Props {
+  stats: {
+    icon: string;
+    value: string;
+    label: string;
+  }[];
+}
+
+const { stats = [
   {
     icon: "👥",
-    value: "50+",
+    value: "50+", 
     label: "Board Members Interviewed"
   },
   {
@@ -11,7 +19,7 @@ const stats = [
     label: "Sectors Analyzed"
   },
   {
-    icon: "💡",
+    icon: "💡", 
     value: "15+",
     label: "Key Insights Identified"
   },
@@ -20,7 +28,7 @@ const stats = [
     value: "100%",
     label: "Data-Driven Recommendations"
   }
-];
+]} = Astro.props;
 ---
 <section class="py-12 bg-gradient-to-b from-gray-50 to-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

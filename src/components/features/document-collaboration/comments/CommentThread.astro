@@ -14,9 +14,14 @@ interface Comment {
 interface Props {
   comment: Comment;
   level?: number;
+  texts?: {
+    replyButton: string;
+  };
 }
 
-const { comment, level = 0 } = Astro.props;
+const { comment, level = 0, texts = {
+  replyButton: "Reply"
+}} = Astro.props;
 ---
 
 <div class={`${level > 0 ? 'ml-8 mt-3' : ''}`}>
@@ -35,14 +40,14 @@ const { comment, level = 0 } = Astro.props;
       
       <!-- Reply Button -->
       <button class="text-sm text-primary hover:text-primary/90 font-medium mt-2">
-        Reply
+        {texts.replyButton}
       </button>
 
       <!-- Nested Replies -->
       {comment.replies && (
         <div class="mt-3">
           {comment.replies.map(reply => (
-            <Astro.self comment={reply} level={level + 1} />
+            <Astro.self comment={reply} level={level + 1} texts={texts} />
           ))}
         </div>
       )}

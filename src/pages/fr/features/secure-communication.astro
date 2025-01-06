@@ -4,93 +4,93 @@ import Layout from '../../../layouts/Layout.astro';
 const features = [
   {
     icon: "🔒",
-    title: "End-to-End Encryption",
-    description: "All messages and files are encrypted from sender to recipient, ensuring complete privacy",
+    title: "Chiffrement de bout en bout",
+    description: "Messages et fichiers chiffrés de l'expéditeur au destinataire pour une confidentialité totale",
     benefits: [
-      "Zero-knowledge architecture",
-      "Military-grade encryption",
-      "No server-side message storage",
-      "Secure key management"
+      "Architecture zéro connaissance",
+      "Chiffrement de niveau militaire", 
+      "Aucun stockage des messages sur serveur",
+      "Gestion sécurisée des clés"
     ]
   },
   {
-    icon: "💬",
-    title: "Private Chat",
-    description: "Secure, real-time messaging for confidential board discussions",
+    icon: "💬", 
+    title: "Messagerie privée",
+    description: "Messagerie instantanée sécurisée pour les discussions confidentielles du conseil",
     benefits: [
-      "One-on-one messaging",
-      "Group discussions",
-      "Message expiration",
+      "Messages individuels",
+      "Discussions de groupe",
+      "Expiration des messages"
     ]
   },
   {
     icon: "📂",
-    title: "Secure File Sharing",
-    description: "Share sensitive documents with granular access controls",
+    title: "Partage de fichiers sécurisé",
+    description: "Partagez vos documents sensibles avec un contrôle d'accès précis",
     benefits: [
-      "End-to-end encrypted transfer",
-      "Access logging",
-      "Version control",
-      "Expiring share links"
+      "Transfert chiffré de bout en bout",
+      "Historique des accès",
+      "Gestion des versions",
+      "Liens de partage temporaires"
     ]
   }
 ];
 
 const communicationTools = [
   {
-    title: "Private Board Chat",
-    description: "Secure messaging platform designed specifically for board communications",
+    title: "Messagerie privée du conseil",
+    description: "Plateforme de messagerie sécurisée conçue spécifiquement pour les communications du conseil",
     icon: "💬",
     capabilities: [
       {
-        title: "Real-time Messaging",
-        description: "Instant, encrypted communication between board members"
+        title: "Messagerie instantanée",
+        description: "Communication chiffrée en temps réel entre les membres"
       },
       {
-        title: "Group Channels",
-        description: "Dedicated spaces for committees and working groups"
+        title: "Canaux de groupe",
+        description: "Espaces dédiés pour les comités et groupes de travail"
       },
       {
-        title: "Message Controls",
-        description: "Set message expiration and editing permissions"
+        title: "Contrôle des messages",
+        description: "Configuration de l'expiration et des droits de modification"
       }
     ]
   },
   {
-    title: "Board News Feed",
-    description: "Stay updated with important announcements and updates",
+    title: "Fil d'actualités du conseil",
+    description: "Restez informé des annonces et mises à jour importantes",
     icon: "📰",
     capabilities: [
       {
-        title: "Targeted Updates",
-        description: "Share news with specific board members or committees"
+        title: "Diffusion ciblée",
+        description: "Partagez les actualités avec des membres ou comités spécifiques"
       },
       {
-        title: "Rich Media Support",
-        description: "Share images, documents, and links securely"
+        title: "Support multimédia",
+        description: "Partagez images, documents et liens en toute sécurité"
       },
       {
-        title: "Interactive Discussions",
-        description: "Comment and react to updates while maintaining security"
+        title: "Discussions interactives",
+        description: "Commentez et réagissez aux actualités en toute sécurité"
       }
     ]
   },
   {
-    title: "Document Sharing",
-    description: "Secure platform for sharing and collaborating on sensitive documents",
+    title: "Partage documentaire",
+    description: "Plateforme sécurisée pour partager et collaborer sur les documents sensibles",
     icon: "📄",
     capabilities: [
       {
-        title: "Access Controls",
-        description: "Granular permissions for document access and editing"
+        title: "Contrôle d'accès",
+        description: "Permissions détaillées pour l'accès et la modification"
       },
       {
-        title: "Version History",
-        description: "Track document changes with complete audit trails"
+        title: "Historique des versions",
+        description: "Suivi des modifications avec piste d'audit complète"
       },
       {
-        title: "Secure Preview",
-        description: "View documents without downloading using secure viewer"
+        title: "Visualisation sécurisée",
+        description: "Consultez les documents sans téléchargement via notre visionneuse sécurisée"
       }
     ]
   }
@@ -99,33 +99,33 @@ const communicationTools = [
 const securityMeasures = [
   {
     icon: "🔐",
-    title: "Zero-Knowledge Architecture",
-    description: "Your messages and files are encrypted before leaving your device, ensuring only intended recipients can access them"
+    title: "Architecture zéro connaissance",
+    description: "Vos messages et fichiers sont chiffrés avant de quitter votre appareil, seuls les destinataires peuvent y accéder"
   },
   {
     icon: "🔍",
-    title: "Audit Trails",
-    description: "Comprehensive logging of all communication activities while maintaining end-to-end encryption"
+    title: "Piste d'audit",
+    description: "Traçabilité complète des communications tout en préservant le chiffrement de bout en bout"
   },
   {
     icon: "⚡",
-    title: "Real-time Security",
-    description: "Continuous monitoring and protection against unauthorized access attempts"
+    title: "Sécurité en temps réel",
+    description: "Surveillance continue et protection contre les tentatives d'accès non autorisées"
   }
 ];
 
 const testimonial = {
-  quote: "Govrn's secure communication features have transformed how our board collaborates, providing the perfect balance of security and usability.",
+  quote: "Les fonctionnalités de communication sécurisée de Govrn ont transformé la collaboration de notre conseil, offrant l'équilibre parfait entre sécurité et facilité d'utilisation.",
   author: "Pierre Hermant",
-  role: "CEO",
+  role: "Directeur Général",
   company: "Finance & Invest Brussels",
   image: "/fib-pierre.webp"
 };
 ---
 
-<Layout title="Secure Board Communication - Govrn" description="End-to-end encrypted messaging and file sharing ensure your sensitive board communications stay confidential and protected.">
+<Layout title="Communication sécurisée pour le conseil - Govrn" description="Messagerie et partage de fichiers chiffrés de bout en bout pour des communications confidentielles et protégées.">
   <main class="pt-24">
-    <!-- Hero Section -->
+    <!-- Section Hero -->
     <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
       <div class="absolute inset-0 z-0">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
@@ -135,29 +135,29 @@ const testimonial = {
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <div class="inline-flex items-center rounded-full px-4 py-1 text-sm font-medium bg-primary/10 text-primary mb-8">
-              Enterprise-Grade Security
+              Sécurité de niveau entreprise
             </div>
             <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
-              Keep Board Discussions
+              Des échanges
               <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
-                Private and Secure
+                confidentiels et sécurisés
               </span>
             </h1>
             <p class="text-xl text-gray-600 leading-relaxed mb-12">
-              End-to-end encrypted messaging and file sharing ensure your sensitive board communications stay confidential and protected.
+              Messagerie et partage de fichiers chiffrés de bout en bout pour des communications confidentielles et protégées.
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
               <a
                 href="/request-demo"
                 class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                Request Demo
+                Demander une démo
               </a>
               <a
                 href="/security"
                 class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-gray-900 bg-white border-2 border-gray-200 hover:border-primary/20 hover:bg-gray-50 transition-colors duration-200"
               >
-                Learn More About Security
+                En savoir plus sur la sécurité
               </a>
             </div>
           </div>
@@ -165,7 +165,7 @@ const testimonial = {
             <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-3xl transform rotate-3"></div>
             <img
               src="/applications-picture-board-chat-mobile.png"
-              alt="Secure Board Communication Interface"
+              alt="Interface de communication sécurisée"
               class="relative rounded-2xl shadow-2xl w-4/6 mx-auto"
             />
           </div>
@@ -173,15 +173,15 @@ const testimonial = {
       </div>
     </section>
 
-    <!-- Core Features -->
+    <!-- Fonctionnalités principales -->
     <section class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16">
           <h2 class="text-3xl font-bold text-gray-900 mb-4">
-            Enterprise-Grade Security Features
+            Sécurité de niveau entreprise
           </h2>
           <p class="text-xl text-gray-600">
-            Keep your board communications secure with our comprehensive security features
+            Protégez vos communications grâce à nos fonctionnalités de sécurité avancées
           </p>
         </div>
 
@@ -207,15 +207,15 @@ const testimonial = {
       </div>
     </section>
 
-    <!-- Communication Tools -->
+    <!-- Outils de communication -->
     <section class="py-20 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16">
           <h2 class="text-3xl font-bold text-gray-900 mb-4">
-            Secure Communication Tools
+            Outils de communication sécurisés
           </h2>
           <p class="text-xl text-gray-600">
-            Everything you need for secure board collaboration
+            Tout ce dont vous avez besoin pour une collaboration sécurisée
           </p>
         </div>
 
@@ -240,15 +240,15 @@ const testimonial = {
       </div>
     </section>
 
-    <!-- Security Measures -->
+    <!-- Mesures de sécurité -->
     <section class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16">
           <h2 class="text-3xl font-bold text-gray-900 mb-4">
-            Built-in Security Measures
+            Mesures de sécurité intégrées
           </h2>
           <p class="text-xl text-gray-600">
-            Multiple layers of security to protect your communications
+            Plusieurs niveaux de protection pour sécuriser vos communications
           </p>
         </div>
 
@@ -264,7 +264,7 @@ const testimonial = {
       </div>
     </section>
 
-    <!-- Testimonial Section -->
+    <!-- Section Témoignage -->
     <section class="py-20 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="bg-gradient-to-br from-primary to-blue-600 rounded-2xl overflow-hidden">
@@ -291,7 +291,7 @@ const testimonial = {
                 href="/case-studies/finance-invest-brussels"
                 class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-primary bg-white hover:bg-gray-50 transition-colors duration-200"
               >
-                Read Case Study
+                Lire l'étude de cas
                 <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -302,27 +302,27 @@ const testimonial = {
       </div>
     </section>
 
-    <!-- CTA Section -->
+    <!-- Section CTA -->
     <section class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-3xl font-bold text-gray-900 mb-8">
-          Ready to Secure Your Board Communications?
+          Prêt à sécuriser vos communications ?
         </h2>
         <p class="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-          Join leading organizations that trust Govrn to keep their board communications private and secure
+          Rejoignez les organisations leaders qui font confiance à Govrn pour protéger leurs communications
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="/request-demo"
             class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300"
           >
-            Request Demo
+            Demander une démo
           </a>
           <a
             href="/contact"
             class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-gray-900 bg-white border-2 border-gray-200 hover:border-primary/20 hover:bg-gray-50 transition-colors duration-200"
           >
-            Contact Sales
+            Contacter l'équipe commerciale
           </a>
         </div>
       </div>

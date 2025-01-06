@@ -6,19 +6,23 @@ interface Props {
     icon: string;
     benefits: string[];
   }>;
+  texts: {
+    title: string;
+    subtitle: string;
+  };
 }
 
-const { features } = Astro.props;
+const { features, texts } = Astro.props;
 ---
 
 <section class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto mb-16">
       <h2 class="text-3xl font-bold text-gray-900 mb-4">
-        Powerful Collaboration Features
+        {texts.title}
       </h2>
       <p class="text-xl text-gray-600">
-        Everything you need for seamless document collaboration
+        {texts.subtitle}
       </p>
     </div>
 

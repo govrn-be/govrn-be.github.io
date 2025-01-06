@@ -8,64 +8,116 @@ import OfficeCard from '../../components/OfficeCard.astro';
 const values = [
   {
     icon: "🎯",
-    title: "Innovation First",
-    description: "We constantly push the boundaries of what's possible in board management technology"
+    title: "Innovation",
+    description: "Nous repoussons sans cesse les limites de la technologie de gestion des conseils"
   },
   {
-    icon: "🔒",
-    title: "Security & Trust",
-    description: "Unwavering commitment to protecting our clients' sensitive information"
+    icon: "🔒", 
+    title: "Sécurité absolue",
+    description: "La protection des données sensibles de nos clients est notre priorité absolue"
   },
   {
     icon: "🤝",
-    title: "Client Success",
-    description: "Our clients' success is our success - we're partners in their journey"
+    title: "Partenariat client",
+    description: "Votre succès est le nôtre - nous vous accompagnons à chaque étape"
   },
   {
     icon: "⚡",
-    title: "Efficiency",
-    description: "Streamlining board operations to save time and reduce complexity"
+    title: "Performance",
+    description: "Optimisation des processus pour une gestion plus fluide et efficace"
   }
 ];
 
 const aiCapabilities = [
   {
     icon: "🔍",
-    title: "Unlock Board Data",
-    description: "Transform raw board data into actionable insights that drive strategic decision-making"
+    title: "Analyse des données",
+    description: "Des insights stratégiques précis pour une prise de décision éclairée"
   },
   {
     icon: "🎯",
-    title: "Enhanced Decision-Making",
-    description: "Leverage AI-powered analytics to make more informed and timely decisions"
+    title: "Décisions éclairées",
+    description: "Une analyse intelligente au service de votre stratégie"
   },
   {
     icon: "⚡",
-    title: "Process Automation",
-    description: "Streamline board operations through intelligent automation of routine tasks"
+    title: "Automatisation avancée",
+    description: "Libérez-vous des tâches répétitives grâce à l'automatisation"
   },
   {
     icon: "⚖️",
-    title: "Governance Excellence",
-    description: "Elevate governance standards and ensure compliance through AI-driven oversight"
+    title: "Gouvernance optimale",
+    description: "Une supervision intelligente pour une gouvernance irréprochable"
   }
 ];
 
+const missionVisionProps = {
+  className: "",
+  mission: {
+    title: "Notre Mission",
+    description: "Nous développons des solutions intuitives qui transforment la gouvernance et la prise de décision, grâce à",
+    aiText: "l'intelligence artificielle"
+  },
+  vision: {
+    title: "Notre Vision",
+    description: "Créer la solution de gouvernance de référence pour permettre aux conseils",
+    highlightedText: "de façonner un avenir meilleur"
+  },
+  aiEraStatement: "Une nouvelle ère s'ouvre pour les conseils d'administration, où",
+  aiHighlight: "l'intelligence artificielle"
+}
+
 const offices = [
   {
-    city: "Brussels",
-    country: "Belgium",
+    city: "Bruxelles",
+    country: "Belgique",
     image: "/bxl.jpg",
     address: "Avenue Roger Vandendriessche 18, Woluwe-Saint-Pierre",
     postalCode: "1150",
     email: "info@govrn.com",
   }
 ];
+
+const founderStoryProps = {
+  tagText: "Notre Histoire",
+  title: "La Genèse de Govrn",
+  story: [
+    "Au fil de mes années d'expérience au sein de différents conseils d'administration, j'ai été confronté aux mêmes défis récurrents : une gestion documentaire complexe, des processus décisionnels lourds et la difficulté de maintenir des standards de gouvernance élevés.",
+    "L'élément déclencheur fut une réunion cruciale où l'égarement de documents essentiels a entraîné des retards décisionnels majeurs, impactant directement la trajectoire de l'organisation. Cette situation m'a convaincu qu'une alternative était nécessaire.",
+    "C'est ainsi qu'est né Govrn. Notre ambition dépassait la simple création d'un portail : nous voulions concevoir une plateforme intelligente répondant aux enjeux complexes des conseils d'administration modernes.",
+    "Aujourd'hui, nous sommes fiers d'accompagner les conseils d'administration européens vers l'excellence, en leur permettant de prendre de meilleures décisions grâce à notre technologie d'intelligence artificielle de pointe."
+  ],
+  founder: {
+    name: "Jean-Louis Van Houwe",
+    role: "Fondateur & CEO"
+  }
+}
+
+const teamMembersProps = {
+  title: "Notre Équipe",
+  subtitle: "Découvrez les experts qui révolutionnent la gestion des conseils d'administration",
+  team: [
+    {
+      name: "Jean-Louis Van Houwe",
+      role: "CEO & Fondateur",
+      image: "/jean-louis-van-houwe.jpeg", 
+      linkedin: "https://www.linkedin.com/in/jeanlouisvanhouwe/",
+      bio: "Visionnaire passionné par la transformation digitale de la gouvernance d'entreprise."
+    },
+    {
+      name: "Ludovic Laffineur",
+      role: "CTO - Produit & Technologie",
+      image: "/ludovic-laffineur.jpg",
+      linkedin: "https://www.linkedin.com/in/llaffineur/",
+      bio: "Expert en innovation technologique dédié à l'excellence des solutions de gouvernance."
+    }
+  ]
+}
 ---
 
-<Layout title="About Us - Govrn Board Management Software" description="We're building a better world through better governance." image="/about.png">
+<Layout title="À propos - Govrn, Solution Intelligente de Gouvernance" description="Ensemble, construisons une meilleure gouvernance pour un monde meilleur." image="/about.png">
   <main class="pt-16">
-    <!-- Hero Section -->
+    <!-- Section héro -->
     <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
       <div class="absolute inset-0 z-0">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
@@ -74,30 +126,30 @@ const offices = [
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="text-center max-w-3xl mx-auto">
           <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
-            Building a
+            Façonnons un
             <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
-              Better World
+              Avenir Meilleur
             </span>
-            Through Better Governance
+            Par une Gouvernance d'Excellence
           </h1>
           <p class="text-xl text-gray-600 leading-relaxed mb-12">
-            We're entering a new era for the boardroom, where artificial intelligence transforms how boards work and make decisions.
+            Une nouvelle ère s'ouvre pour la gouvernance d'entreprise, où l'intelligence artificielle redéfinit les standards d'excellence.
           </p>
         </div>
       </div>
     </section>
 
-    <MissionVision />
-    <FounderStory />
-    <TeamMembers />
+    <MissionVision {...missionVisionProps} />
+    <FounderStory {...founderStoryProps} />
+    <TeamMembers {...teamMembersProps} />
 
-    <!-- AI Capabilities Section -->
+    <!-- Section Capacités IA -->
     <section class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16">
-          <h2 class="text-3xl font-bold text-gray-900 mb-4">AI-Powered Innovation</h2>
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">L'IA au Service de la Performance</h2>
           <p class="text-xl text-gray-600">
-            Artificial Intelligence is transforming how boards work. Discover how Govrn leads this revolution.
+            L'intelligence artificielle révolutionne la gouvernance. Découvrez comment Govrn ouvre la voie.
           </p>
         </div>
 
@@ -113,13 +165,13 @@ const offices = [
       </div>
     </section>
 
-    <!-- Values Section -->
+    <!-- Section Valeurs -->
     <section class="py-20 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16">
-          <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Values</h2>
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Nos Valeurs</h2>
           <p class="text-xl text-gray-600">
-            The principles that guide everything we do at Govrn
+            Les fondements de notre engagement quotidien
           </p>
         </div>
 
@@ -135,46 +187,45 @@ const offices = [
       </div>
     </section>
 
-    <!-- Offices Section -->
+    <!-- Section Bureaux -->
     <section class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16">
-          <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Offices</h2>
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Nos Bureaux</h2>
           <p class="text-xl text-gray-600">
-            Where innovation happens
+            Au cœur de l'innovation
           </p>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {offices.map(office => (
             <OfficeCard {...office} />
-                
           ))}
         </div>
       </div>
     </section>
 
-    <!-- CTA Section -->
+    <!-- Section CTA -->
     <section class="bg-gradient-to-br from-primary to-blue-600 py-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-3xl font-bold text-white mb-8">
-          Join Us in Transforming Board Management
+          Participez à la Révolution de la Gouvernance
         </h2>
         <p class="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
-          Experience how Govrn can revolutionize your board operations
+          Découvrez comment Govrn peut transformer votre conseil d'administration
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="/try"
+            href="/fr/try"
             class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-primary bg-white hover:bg-gray-50 transition-colors duration-200"
           >
-            Start Free Trial
+            Essayer Gratuitement
           </a>
           <a
-            href="/contact"
+            href="/fr/contact"
             class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white border-2 border-white hover:bg-white/10 transition-colors duration-200"
           >
-            Contact Us
+            Nous Contacter
           </a>
         </div>
       </div>

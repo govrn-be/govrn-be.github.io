@@ -6,38 +6,340 @@ import ComplianceFeatures from '../../../components/compliance/ComplianceFeature
 import ComplianceMetrics from '../../../components/compliance/ComplianceMetrics.astro';
 
 const testimonial = {
-  quote: "Govrn's compliance dashboard has transformed how we manage regulatory requirements. The AI-powered insights help us stay ahead of changes and maintain compliance effortlessly.",
+  quote: "Le tableau de bord de conformité de Govrn a transformé notre gestion des exigences réglementaires. Les analyses basées sur l'IA nous permettent d'anticiper les changements et de maintenir notre conformité sans effort.",
   author: "Lore Werbrouck",
-  role: "General Counsel",
+  role: "Directrice Juridique",
   company: "Van de Velde",
   image: "/vdv-lore-portrait.jpg"
 };
+
+const complianceHeroTexts = {
+  badge: "Suivi intelligent de la conformité",
+  title: "La conformité de votre conseil",
+  titleHighlight: "en toute sérénité",
+  description: "Simplifiez la complexité réglementaire. Notre système de suivi basé sur l'IA informe votre conseil en temps réel des évolutions réglementaires et de leurs impacts stratégiques, pour vous permettre de vous concentrer sur l'essentiel.",
+  cta1: "Voir en action",
+  cta2: "Contacter l'équipe commerciale"
+}
+const complianceAnimationTexts = { 
+  texts: {
+    title: "Tableau de bord CSRD",
+    lastUpdated: "Dernière mise à jour",
+    liveUpdates: "Mises à jour en direct",
+    csrdDashboard: "Tableau de bord CSRD"
+  },
+  csrdCategories : [
+    {
+      title: "Impact sur les Opérations",
+      score: 85,
+      status: 'good',
+      requirement: "Évaluation des impacts opérationnels sur l'environnement et la société",
+      dueDate: "31/12/2024",
+      analysis: {
+        strengths: [
+          "Évaluation complète des risques climatiques en place",
+          "Objectifs clairs de réduction des émissions",
+          "Suivi régulier de l'impact environnemental"
+        ],
+        gaps: [
+          "Données limitées sur les émissions de scope 3",
+          "Évaluations environnementales incomplètes des fournisseurs"
+        ],
+        recommendations: [
+          "Étendre le suivi des émissions de scope 3",
+          "Mettre en place une notation environnementale des fournisseurs",
+          "Améliorer la transparence sur les risques climatiques"
+        ]
+      },
+      documents: [
+        {
+          title: "Procès-verbal du Conseil - T1 2024",
+          type: "Procès-verbal",
+          date: "15/03/2024",
+          relevance: 95,
+          excerpt: "Le conseil a approuvé de nouveaux objectifs climatiques incluant une réduction de 50% des émissions d'ici 2030"
+        },
+        {
+          title: "Mise à jour de la Politique Environnementale",
+          type: "Document de Politique",
+          date: "28/02/2024",
+          relevance: 90
+        },
+        {
+          title: "Rapport de Développement Durable 2023",
+          type: "Rapport Annuel",
+          date: "15/01/2024",
+          relevance: 85,
+          excerpt: "Analyse détaillée de l'impact environnemental actuel et des stratégies d'atténuation"
+        }
+      ]
+    },
+    {
+      title: "Finance, Coûts et Ressources",
+      score: 72,
+      status: 'warning',
+      requirement: "Implications financières des initiatives durables et allocation des ressources",
+      dueDate: "31/12/2024",
+      analysis: {
+        strengths: [
+          "Évaluation complète des risques climatiques en place",
+          "Objectifs clairs de réduction des émissions",
+          "Suivi régulier de l'impact environnemental"
+        ],
+        gaps: [
+          "Données limitées sur les émissions de scope 3",
+          "Évaluations environnementales incomplètes des fournisseurs"
+        ],
+        recommendations: [
+          "Étendre le suivi des émissions de scope 3",
+          "Mettre en place une notation environnementale des fournisseurs",
+          "Améliorer la transparence sur les risques climatiques"
+        ]
+      },
+      documents: [
+        {
+          title: "Procès-verbal du Conseil - T1 2024",
+          type: "Procès-verbal",
+          date: "15/03/2024",
+          relevance: 95,
+          excerpt: "Le conseil a approuvé de nouveaux objectifs climatiques incluant une réduction de 50% des émissions d'ici 2030"
+        },
+        {
+          title: "Mise à jour de la Politique Environnementale",
+          type: "Document de Politique",
+          date: "28/02/2024",
+          relevance: 90
+        },
+        {
+          title: "Rapport de Développement Durable 2023",
+          type: "Rapport Annuel",
+          date: "15/01/2024",
+          relevance: 85,
+          excerpt: "Analyse détaillée de l'impact environnemental actuel et des stratégies d'atténuation"
+        }
+      ]
+    },
+    {
+      title: "Risques et Gestion des Risques",
+      score: 90,
+      status: 'good',
+      requirement: "Identification et atténuation des risques liés au développement durable",
+      dueDate: "31/12/2024",
+      analysis: {
+        strengths: [
+          "Évaluation complète des risques climatiques en place",
+          "Objectifs clairs de réduction des émissions",
+          "Suivi régulier de l'impact environnemental"
+        ],
+        gaps: [
+          "Données limitées sur les émissions de scope 3",
+          "Évaluations environnementales incomplètes des fournisseurs"
+        ],
+        recommendations: [
+          "Étendre le suivi des émissions de scope 3",
+          "Mettre en place une notation environnementale des fournisseurs",
+          "Améliorer la transparence sur les risques climatiques"
+        ]
+      },
+      documents: [
+        {
+          title: "Procès-verbal du Conseil - T1 2024",
+          type: "Procès-verbal",
+          date: "15/03/2024",
+          relevance: 95,
+          excerpt: "Le conseil a approuvé de nouveaux objectifs climatiques incluant une réduction de 50% des émissions d'ici 2030"
+        },
+        {
+          title: "Mise à jour de la Politique Environnementale",
+          type: "Document de Politique",
+          date: "28/02/2024",
+          relevance: 90
+        },
+        {
+          title: "Rapport de Développement Durable 2023",
+          type: "Rapport Annuel",
+          date: "15/01/2024",
+          relevance: 85,
+          excerpt: "Analyse détaillée de l'impact environnemental actuel et des stratégies d'atténuation"
+        }
+      ]
+    }
+  ],
+  recentActivities : [
+    {
+      category: "Conformité CSRD",
+      action: "Rapport d'impact environnemental mis à jour",
+      timestamp: "Il y a 2 heures",
+      status: 'success'
+    },
+    {
+      category: "Reporting ESG",
+      action: "Indicateurs sociaux à surveiller",
+      timestamp: "Il y a 4 heures",
+      status: 'warning'
+    },
+    {
+      category: "Développement Durable",
+      action: "Données d'empreinte carbone collectées",
+      timestamp: "Il y a 1 jour",
+      status: 'success'
+    }
+  ],
+  metrics : [
+    {
+      title: "Préparation CSRD",
+      value: "78%",
+      change: "+12%",
+      icon: "🌱"
+    },
+    {
+      title: "Score ESG",
+      value: "A-",
+      change: "En amélioration",
+      icon: "📈"
+    }
+  ],
+  selectedCategory : {
+    title: "Impact Environnemental",
+    score: 85,
+    status: 'good',
+    requirement: "Stratégies d'adaptation et d'atténuation du changement climatique",
+    analysis: {
+      strengths: [
+        "Évaluation complète des risques climatiques en place",
+        "Objectifs clairs de réduction des émissions",
+        "Suivi régulier de l'impact environnemental"
+      ],
+      gaps: [
+        "Données limitées sur les émissions de scope 3",
+        "Évaluations environnementales incomplètes des fournisseurs"
+      ],
+      recommendations: [
+        "Étendre le suivi des émissions de scope 3",
+        "Mettre en place une notation environnementale des fournisseurs",
+        "Améliorer la transparence sur les risques climatiques"
+      ]
+    },
+    documents: [
+      {
+        title: "Procès-verbal du Conseil - T1 2024",
+        type: "Procès-verbal",
+        date: "15/03/2024",
+        relevance: 95,
+        excerpt: "Le conseil a approuvé de nouveaux objectifs climatiques incluant une réduction de 50% des émissions d'ici 2030"
+      },
+      {
+        title: "Mise à jour de la Politique Environnementale",
+        type: "Document de Politique",
+        date: "28/02/2024",
+        relevance: 90
+      },
+      {
+        title: "Rapport de Développement Durable 2023",
+        type: "Rapport Annuel",
+        date: "15/01/2024",
+        relevance: 85,
+        excerpt: "Analyse détaillée de l'impact environnemental actuel et des stratégies d'atténuation"
+      }
+    ]
+  }
+}
+
+const complianceFeatures = {
+  title: "Votre hub de conformité réglementaire",
+  description: "Transformez la complexité réglementaire en avantage concurrentiel avec notre surveillance intelligente de CSRD, RGPD, lois spécifiques au secteur et régulations en évolution",
+  features: [
+    {
+      title: "Conformité CSRD",
+      description: "Suivi et reporting automatisés des indicateurs de durabilité pour assurer la conformité à la directive sur le reporting de durabilité des entreprises",
+      icon: "🌱", 
+      benefits: [
+        "Suivi des indicateurs ESG",
+        "Génération automatique de rapports",
+        "Évaluation d'impact",
+        "Reporting aux parties prenantes"
+      ]
+    },
+    {
+      title: "Protection RGPD",
+      description: "Mesures complètes de protection des données garantissant la conformité aux règles européennes de confidentialité",
+      icon: "🔒",
+      benefits: [
+        "Contrôles de confidentialité",
+        "Gestion du consentement",
+        "Suivi des accès",
+        "Prévention des violations"
+      ]
+    },
+    {
+      title: "Sécurité des données de santé",
+      description: "Mesures de sécurité spécifiques au secteur de la santé protégeant les informations sensibles des patients",
+      icon: "🏥",
+      benefits: [
+        "Protection des données de santé",
+        "Contrôle des accès",
+        "Journalisation des audits",
+        "Partage sécurisé"
+      ]
+    }
+  ]
+}
+
+const complianceMetrics = {
+  metrics: [
+  {
+    title: "Score de conformité",
+    value: "92%",
+    change: "+5%",
+    icon: "📈"
+  },
+  {
+    title: "Problèmes résolus",
+    value: "127", 
+    change: "30 derniers jours",
+    icon: "✅"
+  },
+  {
+    title: "Temps économisé",
+    value: "40h",
+    change: "par mois",
+    icon: "⚡"
+  },
+  {
+    title: "Réduction des coûts",
+    value: "30%",
+    change: "vs. suivi manuel",
+    icon: "💰"
+  }
+  ]
+}
 ---
 
-<Layout title="AI-Powered Board Compliance Monitoring - Govrn" description="Govrn's AI-powered compliance dashboard helps you stay ahead of regulatory changes and maintain compliance effortlessly. See how our platform simplifies compliance tracking and reporting." >
+<Layout title="Suivi de la conformité assisté par IA - Govrn" description="Le tableau de bord de conformité de Govrn, optimisé par l'IA, vous aide à anticiper les changements réglementaires et à maintenir votre conformité sans effort. Découvrez comment notre plateforme simplifie le suivi et le reporting de conformité." >
   <main class="pt-16">
-    <ComplianceHero />
+    <ComplianceHero texts={complianceHeroTexts} />
 
-    <!-- Interactive Demo Section -->
+    <!-- Section Démo Interactive -->
     <section class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16">
           <h2 class="text-3xl font-bold text-gray-900 mb-4">
-            Stay Informed, Stay Compliant
+            Restez informé, restez conforme
           </h2>
           <p class="text-xl text-gray-600">
-            Simplify compliance and empower your board with the tools to make informed, regulation-aligned decisions.          </p>
+            Simplifiez la conformité et donnez à votre conseil les outils nécessaires pour prendre des décisions éclairées et conformes à la réglementation.
+          </p>
         </div>
 
-        <ComplianceAnimation />
+        <ComplianceAnimation {...complianceAnimationTexts} />
       </div>
     </section>
 
-    <ComplianceFeatures />
+    <ComplianceFeatures texts={complianceFeatures} />
     
-    <ComplianceMetrics />
+    <ComplianceMetrics metrics={complianceMetrics.metrics} />
 
-    <!-- Testimonial Section -->
+    <!-- Section Témoignage -->
     <section class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="bg-gradient-to-br from-primary to-blue-600 rounded-2xl overflow-hidden">
@@ -64,7 +366,7 @@ const testimonial = {
                 href="/case-studies/van-de-velde"
                 class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-primary bg-white hover:bg-gray-50 transition-colors duration-200"
               >
-                Read Case Study
+                Lire l'étude de cas
                 <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -75,27 +377,27 @@ const testimonial = {
       </div>
     </section>
 
-    <!-- CTA Section -->
+    <!-- Section CTA -->
     <section class="py-20 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-3xl font-bold text-gray-900 mb-8">
-          Ready to Simplify Your Compliance Management?
+          Prêt à simplifier votre gestion de la conformité ?
         </h2>
         <p class="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-          Join leading organizations that trust Govrn to maintain compliance excellence
+          Rejoignez les organisations leaders qui font confiance à Govrn pour maintenir l'excellence en matière de conformité
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="/request-demo"
             class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300"
           >
-            Request Demo
+            Demander une démo
           </a>
           <a
             href="/contact"
             class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-gray-900 bg-white border-2 border-gray-200 hover:border-primary/20 hover:bg-gray-50 transition-colors duration-200"
           >
-            Contact Sales
+            Contacter l'équipe commerciale
           </a>
         </div>
       </div>

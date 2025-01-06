@@ -14,127 +14,125 @@ import DocumentFlow from "../../components/animations/DocumentFlow.astro";
 import TaskTimeline from "../../components/animations/TaskTimeline.astro";
 import FeatureHighlight from "../../components/animations/FeatureHighlight.astro";
 
-
-
 const hero = {
   imageValues: [
     {
-      title: "IA Intégrée",
+      title: "Intelligence Artificielle",
       description:
-        "Transformez les données de votre conseil en insights exploitables grâce à notre moteur d'IA avancé",
+        "Exploitez la puissance de l'IA pour transformer vos données en insights stratégiques",
       position: "top-1/4 left-2/3",
     },
     {
-      title: "Sécurisé",
+      title: "Sécurité Optimale",
       description:
-        "Sécurité de niveau entreprise avec chiffrement de bout en bout et fonctionnalités de conformité",
+        "Protection de niveau entreprise avec chiffrement de bout en bout et conformité garantie",
       position: "bottom-1/3 right-10",
     },
     {
-      title: "Collaboratif",
+      title: "Collaboration Fluide",
       description:
-        "Outils de collaboration en temps réel pour une communication fluide du conseil",
+        "Des outils collaboratifs performants pour une communication efficace",
       position: "bottom-1/4 left-1/3",
     },
   ],
-  badgeText: "Gestion de conseil propulsée par l'IA",
+  badgeText: "La gouvernance d'entreprise réinventée par l'IA",
   heading: {
-    main: "Le logiciel IA pour alimenter vos",
-    highlight: "meilleures décisions",
+    main: "L'intelligence artificielle au service de vos",
+    highlight: "décisions stratégiques",
   },
   description:
-    "Govrn permet à votre conseil de prendre facilement des décisions éclairées. Notre plateforme IA améliore la collaboration, assure la conformité et favorise la croissance à long terme.",
+    "Govrn accompagne votre conseil d'administration dans sa prise de décision. Notre plateforme IA optimise la collaboration, garantit la conformité et soutient votre développement durable.",
   ctaButtons: {
     primary: {
-      text: "Demander une démo",
+      text: "Découvrir Govrn",
       href: "/fr/request-demo",
     },
     secondary: {
-      text: "Regarder la vidéo",
+      text: "Voir la démonstration",
     },
   },
   securityFeatures: [
     {
       title: "RGPD",
-      subtitle: "Conforme",
+      subtitle: "Certifié",
     },
     {
       title: "Chiffrement",
       subtitle: "256-bit",
     },
     {
-      title: "Authentification",
-      subtitle: "Multi-Facteur",
+      title: "Sécurité",
+      subtitle: "Multi-Facteurs",
     },
   ],
-  imageAlt: "Interface du Logiciel de Gestion de Conseil Govrn",
+  imageAlt: "Interface Govrn - Plateforme de gouvernance d'entreprise",
   imageSrc: "/application-home-page.png",
 };
 
 const stats = [
   {
-    value: "$50M+",
+    value: "50M€+",
     label:
-      "Valeur perdue annuellement due à des décisions de conseil médiocres",
+      "De pertes évitées grâce à une meilleure gouvernance",
     icon: "💰",
   },
   {
-    value: "45%+",
-    label: "Réduction du temps de décision avec l'IA de Govrn",
+    value: "45%",
+    label: "De gain de temps dans la prise de décision",
     icon: "⚡",
   },
   {
-    value: "10,000+",
-    label: "Décisions stratégiques grâce à Govrn",
+    value: "10 000+",
+    label: "Décisions stratégiques accompagnées",
     icon: "🎯",
   },
 ];
 
 const featuresProps = {
   texts: {
-    title: "Trois piliers de la gestion de conseil moderne",
-    subtitle: "Découvrez comment Govrn transforme votre gestion de conseil",
-    exploreButton: "Explorer toutes les fonctionnalités",
+    title: "Les fondamentaux d'une gouvernance moderne",
+    subtitle: "Découvrez comment Govrn révolutionne votre gouvernance",
+    exploreButton: "Découvrir nos fonctionnalités",
     exploreButtonUrl: "/fr/features",
     learnMore: "En savoir plus",
   },
   pillars: [
     {
-      title: "Efficacité du conseil",
+      title: "Performance du conseil",
       description:
-        "Optimisez votre conseil avec Govrn : organisez vos documents et boostez votre productivité grâce à nos outils sécurisés.",
+        "Optimisez votre gouvernance avec Govrn : centralisez vos documents et améliorez votre productivité grâce à nos outils sécurisés.",
       icon: "⚡",
       features: [
-        "Organisation des documents",
-        "Annotation intelligente",
-        "Authentification sécurisée",
-        "Outils de productivité",
+        "Gestion documentaire centralisée",
+        "Annotations intelligentes",
+        "Sécurité renforcée",
+        "Outils de productivité avancés",
       ],
       gradient: "from-primary to-blue-500",
     },
     {
-      title: "Collaboration & Analyses",
+      title: "Intelligence Collective",
       description:
-        "Explorez vos documents avec notre assistant IA pour des insights stratégiques plus pertinents.",
+        "Exploitez la puissance de l'IA pour analyser vos documents et obtenir des insights stratégiques pertinents.",
       icon: "🤖",
       features: [
-        "Analyse IA",
+        "Analyse prédictive",
         "Insights stratégiques",
-        "Intelligence des documents",
+        "Intelligence documentaire",
         "Collaboration en temps réel",
       ],
       gradient: "from-blue-500 to-indigo-500",
     },
     {
-      title: "Gouvernance & Conformité",
+      title: "Conformité & Gouvernance",
       description:
-        "Gérez vos tâches selon les rôles, avec signature électronique et système de vote intégrés.",
+        "Gérez vos processus selon les rôles, avec signature électronique et système de vote intégrés.",
       icon: "⚖️",
       features: [
-        "Gestion basée sur les rôles",
-        "Intégration de la signature électronique",
-        "Suivi de la conformité",
-        "Système de vote",
+        "Gestion des rôles",
+        "Signature électronique",
+        "Suivi de conformité",
+        "Système de vote électronique",
       ],
       gradient: "from-indigo-500 to-primary",
     },
@@ -144,7 +142,7 @@ const featuresProps = {
 const documentFlowProps = {
   documents: [
     { type: "Contrat", icon: "📄" },
-    { type: "Minutes", icon: "📝" },
+    { type: "Procès-verbal", icon: "📝" },
     { type: "Rapport", icon: "📊" },
     { type: "Ordre du jour", icon: "📅" },
     { type: "Politique", icon: "📋" },
@@ -163,7 +161,7 @@ const documentFlowProps = {
       line: "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
     },
     {
-      name: "Equipe",
+      name: "Équipe",
       line: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
     },
   ],
@@ -175,70 +173,71 @@ const documentFlowProps = {
     },
   },
 };
-const aiAssistantProps =  {
+
+const aiAssistantProps = {
     messages: [
       {
         type: "assistant",
-        content: "J'ai analysé vos documents du conseil. Voici les points clés :",
+        content: "Analyse des documents du conseil terminée. Points essentiels :",
         insights: [
-        "La croissance du chiffre d'affaires dépasse la moyenne du marché de 15%",
-        "Exigences de conformité respectées à 98%",
-        "Taux de présence au conseil à 95%"
+        "Croissance du CA supérieure de 15% à la moyenne sectorielle",
+        "Taux de conformité de 98%",
+        "Participation aux conseils de 95%"
       ]
     },
     {
       type: "user", 
-      content: "Quels sont nos principaux risques ?"
+      content: "Quels sont les risques majeurs identifiés ?"
     },
     {
       type: "assistant",
-      content: "En fonction de l'analyse, voici les risques clés :",
+      content: "L'analyse révèle les risques principaux suivants :",
       insights: [
-        "Volatilité du marché en Asie-Pacifique",
-        "Changements réglementaires sur le marché européen",
-        "Dépendances de la chaîne de production"
+        "Instabilité du marché Asie-Pacifique",
+        "Évolutions réglementaires européennes",
+        "Fragilités dans la chaîne d'approvisionnement"
       ]
     }
     ],
     headerTitle: "Assistant IA",
-    headerSubtitle: "Analyse des documents du conseil",
+    headerSubtitle: "Analyse documentaire",
     headerEmoji: "🤖"
-  }
+};
 
 const gouvernanceComplianceProps = {
   texts: {
     tasks: [
-      { title: "Minutes du conseil", status: "pending" },
+      { title: "Procès-verbal", status: "pending" },
       { title: "Rapport annuel", status: "signed" },
-      { title: "Vérification de la conformité", status: "in_progress" }
+      { title: "Audit de conformité", status: "in_progress" }
     ],
     signatures: [
-      { name: "Sophie Dubois", role: "Directrice" },
+      { name: "Sophie Dubois", role: "Directrice Générale" },
       { name: "Jean-Pierre Martin", role: "Président" },
-      { name: "Marie Lefebvre", role: "Secrétaire" }
+      { name: "Marie Lefebvre", role: "Secrétaire Générale" }
     ],
     labels: {
       tasks: "Tâches",
-      activeTasks: "Tâches actives",
+      activeTasks: "En cours",
       signatures: "Signatures", 
-      pending: "En attente"
+      pending: "À traiter"
     }
   }
 };
 
 const featureShowcaseProps = {
   texts: {
-    badge: "Résultats mesurables",
-    title: "Transformez la performance de votre conseil",
+    badge: "Résultats concrets",
+    title: "Optimisez la performance de votre conseil",
     subtitle:
-      "Voir l'impact réel de Govrn sur les opérations de votre conseil avec des améliorations mesurables en efficacité, en insights et en gouvernance.",
-    keyBenefits: "Avantages clés :",
+      "Constatez l'impact tangible de Govrn sur votre gouvernance avec des améliorations mesurables en efficacité, en intelligence et en conformité.",
+    keyBenefits: "Bénéfices clés :",
   },
   outcomes: [
     {
-      title: "Centralisation des documents",
+      title: "Centralisation documentaire",
       description:
-        "Une plateforme sécurisée pour tous vos documents de conseil, accessibles partout, en tout temps - peu importe votre niveau de confort numérique.",
+        "Une plateforme sécurisée pour l'ensemble de vos documents, accessible en tout lieu et à tout moment - quelle que soit votre aisance technologique.",
       component: DocumentFlow,
       componentProps: documentFlowProps,
       stats: [
@@ -246,48 +245,48 @@ const featureShowcaseProps = {
         { value: "24/7", label: "Accès sécurisé" },
       ],
       benefits: [
-        "Source unique de vérité pour tous les documents",
-        "Categorisation intelligente des documents",
-        "Contrôle de version & suivi",
-        "Permissions d'accès flexibles",
+        "Source unique de vérité",
+        "Classification intelligente",
+        "Gestion des versions",
+        "Contrôle d'accès flexible",
       ],
     },
     {
-      title: "Décisions basées sur les données",
+      title: "Décisions data-driven",
       description:
-        "Transformez vos documents de conseil en insights exploitables grâce à notre moteur d'IA avancé, vous permettant de prendre des décisions stratégiques plus informées et plus rapides.",
+        "Transformez vos documents en insights actionnables grâce à notre IA avancée, pour des décisions stratégiques plus éclairées et plus rapides.",
       component: TaskTimeline,
       componentProps: aiAssistantProps,
       stats: [
-        { value: "45%", label: "Meilleures décisions" },
-        { value: "24/7", label: "Insights IA" },
+        { value: "45%", label: "Qualité des décisions" },
+        { value: "24/7", label: "Analyse IA" },
       ],
       benefits: [
-        "Analyse prédictive",
+        "Analyses prédictives",
         "Recommandations stratégiques",
-        "Intelligence de marché",
-        "Suivi des performances",
+        "Veille marché",
+        "Suivi de performance",
       ],
       link: {
-        text: "En savoir plus sur notre assistant IA",
+        text: "Découvrir notre IA",
         url: "/fr/features/ai-assistant",
       },
     },
     {
-      title: "Gouvernance & Conformité",
+      title: "Conformité & Gouvernance",
       description:
-        "Gérez votre conseil avec des outils de gouvernance basés sur les rôles, avec signature électronique et suivi de la conformité automatique, vous permettant de gagner du temps et de réduire les risques.",
+        "Pilotez votre conseil avec des outils de gouvernance adaptés, incluant signature électronique et contrôle automatisé de la conformité.",
       component: FeatureHighlight,
       componentProps: gouvernanceComplianceProps,
       stats: [
         { value: "100%", label: "Conformité" },
-        { value: "40%", label: "Temps gagné sur l'administration" },
+        { value: "40%", label: "Gain de temps administratif" },
       ],
       benefits: [
-        "Vérifications de la conformité automatiques",
-        "Workflow de signature numérique",
-        "Permissions basées sur les rôles",
-        "Suivi du journal d'audit",
+        "Contrôles automatisés",
+        "Signature électronique",
+        "Gestion des droits",
+        "Piste d'audit",
       ],
     },
   ],
@@ -295,234 +294,234 @@ const featureShowcaseProps = {
 
 const timelineProps = {
   texts: {
-    title: "Le cycle de vie complet du conseil",
-    subtitle: "Découvrez les différentes étapes de la gestion du conseil",
-    cta: "Démarrez dès à présent"
+    title: "Le cycle de vie du conseil",
+    subtitle: "Maîtrisez chaque étape de votre gouvernance",
+    cta: "Commencer maintenant"
   },
   timelineSteps: [
     {
-      phase: "Avant la réunion",
-      title: "Simplification de la préparation",
+      phase: "Préparation",
+      title: "Optimisation de la préparation",
       icon: "📋",
       color: "from-blue-500 to-primary",
       features: [
         {
-          title: "Agendas automatiques",
-          description: "Créez et distribuez rapidement des agendas de réunion adaptés.",
+          title: "Ordres du jour automatisés",
+          description: "Création et diffusion efficace des ordres du jour.",
           icon: "📅"
         },
         {
-          title: "Gestion des documents", 
-          description: "Organisez et partagez les documents essentiels de manière sécurisée.",
+          title: "Gestion documentaire", 
+          description: "Organisation et partage sécurisé des documents essentiels.",
           icon: "📁"
         },
         {
-          title: "Insights IA",
-          description: "Supportez les membres du conseil avec des insights basés sur les données et des matériaux de préparation avant la réunion.",
+          title: "Analyse IA",
+          description: "Accompagnement des administrateurs avec des insights data-driven.",
           icon: "🤖"
         }
       ]
     },
     {
-      phase: "Durant la réunion",
-      title: "Collaboration en temps réel",
+      phase: "Durant la séance",
+      title: "Collaboration en direct",
       icon: "🤝",
       color: "from-primary to-blue-600",
       features: [
         {
-          title: "Collaboration en temps réel",
-          description: "Permettez aux membres du conseil d'annoter les documents et de participer aux discussions en temps réel, tout en un seul endroit sécurisé.",
+          title: "Collaboration synchrone",
+          description: "Annotations et échanges en temps réel dans un environnement sécurisé.",
           icon: "✏️"
         },
         {
-          title: "Décisions intelligentes",
-          description: "Capturez les décisions en temps réel et suivez les actions en temps réel.",
+          title: "Prise de décision",
+          description: "Suivi instantané des décisions et des actions.",
           icon: "📝"
         }
       ]
     },
     {
-      phase: "Après la réunion",
-      title: "Suivi fluide",
+      phase: "Suivi",
+      title: "Gestion post-conseil",
       icon: "✅",
       color: "from-blue-600 to-primary",
       features: [
         {
-          title: "Minutes automatiques",
-          description: "Générez les minutes de la réunion instantanément, avec une intégration automatique des actions et des décisions.",
+          title: "Procès-verbaux automatisés",
+          description: "Génération instantanée des PV avec intégration des décisions.",
           icon: "⚡"
         },
         {
-          title: "Gestion des tâches",
-          description: "Suivez et assignez des tâches de suivi, garantissant que rien ne passe par-dessus.",
+          title: "Suivi des actions",
+          description: "Attribution et monitoring des tâches post-conseil.",
           icon: "📋"
         },
         {
           title: "Communication intégrée",
-          description: "Restez informé avec un flux de nouvelles en temps réel, simplifiez la prise de décision avec des votes et des sondages.",
+          description: "Actualités en temps réel, votes et sondages simplifiés.",
           icon: "💬"
         }
       ]
     }
   ]
-}
+};
 
 const securityPreviewProps = {
   texts: {
-    badge: "Sécurité de pointe",
-    title: "La sécurité de votre conseil est notre priorité",
-    subtitle: "Mesures de sécurité de pointe pour protéger vos informations sensibles",
+    badge: "Sécurité maximale",
+    title: "Votre sécurité, notre priorité absolue",
+    subtitle: "Protection de pointe pour vos données sensibles",
     cta: "En savoir plus sur la sécurité",
     features: [
       {
         icon: "🔒",
-        title: "Sécurité de pointe",
-        description: "Mesures de sécurité de pointe pour protéger vos informations sensibles"
+        title: "Sécurité renforcée",
+        description: "Protection maximale de vos informations confidentielles"
       },
       {
         icon: "🔐",
-        title: "Authentification à deux facteurs", 
-        description: "Sécurisation des comptes avec l'authentification à deux facteurs"
+        title: "Double authentification", 
+        description: "Sécurisation renforcée des accès"
       },
       {
         icon: "👥",
-        title: "Accès basé sur les rôles",
-        description: "Contrôles d'accès granulaires et suivi complet des actions"
+        title: "Contrôle d'accès",
+        description: "Gestion fine des droits et traçabilité complète"
       }
     ]
   }
-}
+};
 
 const personasProps = {
   texts: {
-    title: "Maximisez l'efficacité dans chaque rôle",
-    subtitle: "Govrn propose une expérience personnalisée pour chaque rôle de gouvernance, en donnant aux participants un outil de gestion optimisé pour des décisions et une efficacité améliorée.",
-    cta: "Trouvez votre solution basée sur le rôle",
+    title: "Une solution adaptée à chaque rôle",
+    subtitle: "Govrn propose une expérience sur mesure pour chaque acteur de la gouvernance, optimisant la prise de décision et l'efficacité opérationnelle.",
+    cta: "Découvrir votre solution",
     learnMore: "En savoir plus"
   },
   personas: [
     {
-      role: "CEO & Exécutifs",
-      description: "Equipez votre conseil d'administrateurs avec Govrn, un outil puissant mais facile à utiliser qui aide les chefs d'entreprise à maintenir un conseil engagé — stimulant un travail plus intelligent, plus rapide et plus élevé.",
+      role: "Direction Générale",
+      description: "Dotez votre conseil d'administration d'un outil puissant et intuitif pour stimuler l'engagement et l'efficacité collective.",
       icon: "👔",
       features: [
-        "Suivi en temps réel de l'engagement du conseil",
-        "Support stratégique aux décisions", 
-        "Analyse des performances",
+        "Suivi de l'engagement en temps réel",
+        "Aide à la décision stratégique", 
+        "Analyse de performance",
         "Tableaux de bord exécutifs"
       ],
       link: "/fr/for/ceo"
     },
     {
-      role: "Professionnels du conseil & Administrateurs",
-      description: "Govrn simplifie la création, la distribution et l'organisation des détails des réunions — en stimulant vos efforts à maintenir tous les parties prenantes informées, satisfaites et activement impliquées.",
+      role: "Secrétariat Général",
+      description: "Simplifiez l'organisation et le suivi des conseils tout en assurant une communication fluide entre les parties prenantes.",
       icon: "📊",
       features: [
-        "Programmation automatique des réunions",
-        "Distribution des documents",
-        "Gestion des tâches", 
-        "Communication avec les parties prenantes"
+        "Planification automatisée",
+        "Gestion documentaire",
+        "Suivi des actions", 
+        "Communication efficace"
       ],
       link: "/fr/for/board-secretary"
     },
     {
-      role: "Membres du conseil et Conseillers",
-      description: "Naviguez avec confiance vers le futur avec Govrn, une plateforme intuitive qui vous informe et simplifie les tâches complexes, vous permettant de réaliser votre mission et votre vision.",
+      role: "Administrateurs",
+      description: "Accédez à une plateforme intuitive qui vous accompagne dans vos missions et simplifie votre prise de décision.",
       icon: "🎯",
       features: [
-        "Accès intuitif aux documents",
-        "Outils de préparation des réunions",
-        "Capacités de vote",
-        "Insights stratégiques"
+        "Accès simplifié aux documents",
+        "Préparation optimisée",
+        "Vote électronique",
+        "Analyses stratégiques"
       ],
       link: "/fr/for/board-member"
     },
     {
-      role: "Avocats généraux",
-      description: "Avec des mesures de sécurité de pointe et des capacités de gestion des données, Govrn rend facile de protéger le conseil, ses membres et l'organisation contre les risques.",
+      role: "Direction Juridique",
+      description: "Bénéficiez d'une solution sécurisée qui protège efficacement votre conseil et votre organisation.",
       icon: "⚖️",
       features: [
-        "Suivi de la conformité",
-        "Outils de gestion des risques",
-        "Vault de documents sécurisé",
-        "Suivi des actions"
+        "Contrôle de conformité",
+        "Gestion des risques",
+        "Coffre-fort numérique",
+        "Traçabilité complète"
       ],
       link: "/fr/for/general-counsel"
     }
   ]
-}
+};
 
 const testimonialsProps = {
   texts: {
-    title: "Les plus grand nous font confiance",
-    subtitle: "Voir comment les organisations de différents secteurs transforment leur gestion du conseil avec Govrn",
-    cta: "Voir toutes les histoires de succès"
+    title: "Ils nous font confiance",
+    subtitle: "Découvrez comment les organisations transforment leur gouvernance avec Govrn",
+    cta: "Toutes nos success stories"
   },
     testimonials: [
     {
-      quote: "Govrn a <strong>transformé</strong> notre gestion des opérations du conseil, apportant <strong>efficacité</strong> et <strong>clarté</strong> à nos processus de gouvernance.",
+      quote: "Govrn a <strong>révolutionné</strong> notre gouvernance en apportant <strong>efficacité</strong> et <strong>clarté</strong> à nos processus.",
       author: "Lore Werbrouck",
-      position: "Avocat général",
+      position: "Directrice Juridique",
       company: "Van de Velde",
       image: "/vdv-lore-portrait.jpg",
       link: "/fr/case-studies/van-de-velde"
     },
     {
-      quote: "Govrn a <strong>simplifié</strong> notre gestion des documents de manière considérable, rendant nos préparations de réunions plus <strong>efficaces</strong> et permettant à notre conseil de se concentrer sur <strong>la prise de décision</strong>.",
+      quote: "Govrn a <strong>transformé</strong> notre gestion documentaire, rendant nos conseils plus <strong>efficaces</strong> et centrés sur la <strong>prise de décision</strong>.",
       author: "Pierre Hermant",
-      position: "CEO",
+      position: "Directeur Général",
       company: "Finance & Invest Brussels",
       image: "/fib-pierre.webp",
       link: "/fr/case-studies/finance-invest-brussels"
     },
     {
-      quote: "Govrn a <strong>est la nouvelle génération</strong> de logiciels de gestion du conseil, <strong>facile à utiliser</strong> et avec <strong>intégration d'IA</strong>.",
+      quote: "Govrn représente <strong>l'avenir</strong> de la gouvernance, alliant <strong>simplicité d'usage</strong> et <strong>intelligence artificielle</strong>.",
       author: "Nathalie Byl",
-      position: "Paralegal en Compliance Officer",
+      position: "Responsable Juridique et Conformité",
       company: "Care Property Invest",
       image: "/careproperty-logo.png",
       link: "/fr/case-studies/care-property-invest"
     }
   ]
-}
+};
 
 const faqProps = {
   texts: {
-    title: "Questions fréquemment posées",
-    subtitle: "Trouvez les réponses aux questions fréquemment posées sur Govrn",
+    title: "Questions fréquentes",
+    subtitle: "Réponses aux questions les plus courantes sur Govrn",
     faqs: [
       {
-        question: "Comment Govrn gère les différents niveaux d'adoption numérique ?",
-        answer: "La plateforme intuitive de Govrn permet même aux administrateurs les moins férus de technologie de s'engager efficacement. Conçue pour des conseils d'administration avec différents niveaux de maturité numérique, nous offrons une intégration transparente, une formation personnalisée et des outils conviviaux pour unifier tous les membres et favoriser une collaboration fluide."
+        question: "Comment Govrn s'adapte-t-il aux différents niveaux de maturité numérique ?",
+        answer: "L'interface intuitive de Govrn permet à tous les administrateurs de participer efficacement, quel que soit leur niveau technologique. Notre plateforme propose une prise en main progressive, des formations personnalisées et des outils accessibles pour garantir une collaboration fluide."
       },
       {
         question: "Govrn est-il conforme au RGPD ?",
-        answer: "Oui, Govrn est entièrement conforme au RGPD et met en œuvre des mesures strictes de protection des données pour garantir la sécurité et la confidentialité des informations de votre conseil."
+        answer: "Oui, Govrn respecte intégralement le RGPD et applique des mesures strictes de protection des données pour garantir la confidentialité de vos informations."
       },
       {
-        question: "Comment importer des documents existants ?",
-        answer: "Govrn fournit plusieurs méthodes pour importer vos documents existants, y compris le téléchargement par lots, l'interface glisser-déposer et l'intégration avec des services de stockage cloud populaires."
+        question: "Comment importer nos documents existants ?",
+        answer: "Govrn propose plusieurs méthodes d'import : téléchargement par lots, glisser-déposer et intégration avec vos solutions de stockage actuelles."
       },
       {
-        question: "Puis-je personnaliser le workflow pour mon organisation ?",
-        answer: "Absolument ! Govrn offre des options de personnalisation extensives pour correspondre à vos processus et besoins spécifiques."
+        question: "Est-il possible de personnaliser les processus ?",
+        answer: "Absolument ! Govrn s'adapte à vos besoins spécifiques avec des options de personnalisation étendues."
       },
       {
-        question: "Quel type de support proposez-vous ?",
-        answer: "Nous proposons différents niveaux de support en fonction de votre plan, allant du support par email standard à un support 24/7 premium avec un manager de succès dédié."
+        question: "Quel accompagnement proposez-vous ?",
+        answer: "Notre support s'adapte à vos besoins : du support standard par email jusqu'au support premium 24/7 avec un responsable de compte dédié."
       },
       {
-        question: "Y a-t-il une limite au nombre de documents que nous pouvons stocker ?",
-        answer: "Les limites de stockage varient en fonction du plan. Les plans de base incluent un stockage généreux, tandis que les plans Entreprise offrent un stockage illimité pour répondre à vos besoins."
+        question: "Existe-t-il une limite de stockage ?",
+        answer: "Les limites varient selon les formules : stockage généreux en standard et illimité pour les offres Entreprise."
       }
     ]
   }
-}
+};
 
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  name: "Govrn - Questions fréquemment posées",
+  name: "Govrn - Questions fréquentes",
   inLanguage: "fr",
   mainEntity: faqProps.texts.faqs.map((faq) => ({
     "@type": "Question",
@@ -536,21 +535,21 @@ const structuredData = {
 
 const ctaProps = {
   texts: {
-    title: "Prêt à transformer votre gestion du conseil ?",
-    subtitle: "Rejoignez les entreprises leaders qui font confiance à Govrn pour leur gestion du conseil",
-    cta1: "Demander un essai gratuit",
-    cta2: "Contactez-nous"
+    title: "Prêt à transformer votre gouvernance ?",
+    subtitle: "Rejoignez les organisations qui innovent avec Govrn",
+    cta1: "Demander une démonstration",
+    cta2: "Nous contacter"
   },
   links: {
     cta1: "/fr/request-demo",
     cta2: "/fr/contact"
   }
-}
+};
 ---
 
 <Layout
-  title="Govrn - Propulsez les décisions de votre conseil grâce à l'IA"
-  description="Transformez votre gestion de conseil avec Govrn, la plateforme IA-First qui optimise les opérations, améliore la collaboration et stimule l'innovation."
+  title="Govrn - L'intelligence artificielle au service de votre gouvernance"
+  description="Transformez votre gouvernance avec Govrn, la plateforme IA qui optimise vos processus, renforce la collaboration et stimule l'innovation."
   structuredData={structuredData}
 >
   <main class="overflow-hidden">
@@ -571,5 +570,4 @@ const ctaProps = {
   main {
     width: 100%;
   }
-</style>
 </style>

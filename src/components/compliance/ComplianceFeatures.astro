@@ -1,54 +1,39 @@
 ---
-const features = [
-  {
-    title: "CSRD Compliance",
-    description: "Automated tracking and reporting of sustainability metrics for Corporate Sustainability Reporting Directive compliance",
-    icon: "🌱",
-    benefits: [
-      "ESG metrics tracking",
-      "Automated report generation",
-      "Impact assessment",
-      "Stakeholder reporting"
-    ]
-  },
-  {
-    title: "GDPR Protection",
-    description: "Comprehensive data protection measures ensuring compliance with EU privacy regulations",
-    icon: "🔒",
-    benefits: [
-      "Data privacy controls",
-      "Consent management",
-      "Access tracking",
-      "Breach prevention"
-    ]
-  },
-  {
-    title: "HIPAA Security",
-    description: "Healthcare-specific security measures protecting sensitive patient information",
-    icon: "🏥",
-    benefits: [
-      "PHI protection",
-      "Access controls",
-      "Audit logging",
-      "Secure sharing"
-    ]
+interface Benefit {
+  text: string;
+}
+
+interface Feature {
+  title: string;
+  description: string;
+  icon: string;
+  benefits: string[];
+}
+
+interface Props {
+  texts: {
+    title: string;
+    description: string;
+    features: Feature[];
   }
-];
+}
+
+const { texts } = Astro.props;
 ---
 
 <section class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto mb-16">
       <h2 class="text-3xl font-bold text-gray-900 mb-4">
-        Your All-in-One Regulatory Intelligence Hub
+        {texts.title}
       </h2>
       <p class="text-xl text-gray-600">
-        Transform regulatory complexity into competitive advantage with AI-powered monitoring of CSRD, GDPR, sector-specific laws and emerging regulations
+        {texts.description}
       </p>
     </div>
 
     <div class="grid md:grid-cols-3 gap-8">
-      {features.map(feature => (
+      {texts.features.map(feature => (
         <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
           <div class="text-4xl mb-6">{feature.icon}</div>
           <h3 class="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>

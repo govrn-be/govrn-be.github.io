@@ -1,97 +1,109 @@
 ---
-const trends = [
-  {
-    title: "AI-Powered Analytics Evolution",
-    icon: "📊",
-    description: "Advanced analytics capabilities will become increasingly sophisticated and integral to board operations.",
-    timeline: "Next 12-24 months",
-    impact: "High",
-    points: [
-      {
-        title: "Real-time Processing",
-        description: "Instant analysis of board documents and market data",
-        readiness: "85%"
-      },
-      {
-        title: "Predictive Insights",
-        description: "AI-driven forecasting for strategic planning",
-        readiness: "75%"
-      },
-      {
-        title: "Decision Support",
-        description: "Contextual recommendations based on historical data",
-        readiness: "80%"
-      }
-    ]
-  },
-  {
-    title: "Intelligent Compliance Management",
-    icon: "⚖️",
-    description: "Automation will transform how boards handle regulatory requirements and risk management.",
-    timeline: "Next 18-36 months",
-    impact: "Critical",
-    points: [
-      {
-        title: "Regulatory Monitoring",
-        description: "Automated tracking of compliance requirements",
-        readiness: "90%"
-      },
-      {
-        title: "Risk Assessment",
-        description: "Proactive identification of potential risks",
-        readiness: "85%"
-      },
-      {
-        title: "Audit Automation",
-        description: "Streamlined audit processes with AI assistance",
-        readiness: "70%"
-      }
-    ]
-  },
-  {
-    title: "Ethical AI Governance",
-    icon: "🎯",
-    description: "Focus on responsible AI implementation will become a key board priority.",
-    timeline: "Next 24-48 months",
-    impact: "Transformative",
-    points: [
-      {
-        title: "Algorithm Transparency",
-        description: "Clear visibility into AI decision-making processes",
-        readiness: "65%"
-      },
-      {
-        title: "Bias Prevention",
-        description: "Advanced systems to detect and prevent AI bias",
-        readiness: "70%"
-      },
-      {
-        title: "Responsible Implementation",
-        description: "Framework for ethical AI deployment",
-        readiness: "80%"
-      }
-    ]
-  }
-];
+const defaultProps = {
+  title: "Future Outlook",
+  description: "Our research reveals transformative trends that will shape the future of AI in board management over the next five years.",
+  marketProjectionsTitle: "Market Growth Projections",
+  trends: [
+    {
+      title: "AI-Powered Analytics Evolution",
+      icon: "📊",
+      description: "Advanced analytics capabilities will become increasingly sophisticated and integral to board operations.",
+      timeline: "Next 12-24 months",
+      impact: "High",
+      points: [
+        {
+          title: "Real-time Processing",
+          description: "Instant analysis of board documents and market data",
+          readiness: "85%"
+        },
+        {
+          title: "Predictive Insights",
+          description: "AI-driven forecasting for strategic planning",
+          readiness: "75%"
+        },
+        {
+          title: "Decision Support",
+          description: "Contextual recommendations based on historical data",
+          readiness: "80%"
+        }
+      ]
+    },
+    {
+      title: "Intelligent Compliance Management",
+      icon: "⚖️",
+      description: "Automation will transform how boards handle regulatory requirements and risk management.",
+      timeline: "Next 18-36 months",
+      impact: "Critical",
+      points: [
+        {
+          title: "Regulatory Monitoring",
+          description: "Automated tracking of compliance requirements",
+          readiness: "90%"
+        },
+        {
+          title: "Risk Assessment",
+          description: "Proactive identification of potential risks",
+          readiness: "85%"
+        },
+        {
+          title: "Audit Automation",
+          description: "Streamlined audit processes with AI assistance",
+          readiness: "70%"
+        }
+      ]
+    },
+    {
+      title: "Ethical AI Governance",
+      icon: "🎯", 
+      description: "Focus on responsible AI implementation will become a key board priority.",
+      timeline: "Next 24-48 months",
+      impact: "Transformative",
+      points: [
+        {
+          title: "Algorithm Transparency",
+          description: "Clear visibility into AI decision-making processes",
+          readiness: "65%"
+        },
+        {
+          title: "Bias Prevention",
+          description: "Advanced systems to detect and prevent AI bias",
+          readiness: "70%"
+        },
+        {
+          title: "Responsible Implementation",
+          description: "Framework for ethical AI deployment",
+          readiness: "80%"
+        }
+      ]
+    }
+  ],
+  marketProjections: [
+    { year: "2024", value: "$5.2B", growth: "+45%" },
+    { year: "2025", value: "$7.8B", growth: "+50%" },
+    { year: "2026", value: "$12.1B", growth: "+55%" }
+  ]
+};
 
-const marketProjections = [
-  { year: "2024", value: "$5.2B", growth: "+45%" },
-  { year: "2025", value: "$7.8B", growth: "+50%" },
-  { year: "2026", value: "$12.1B", growth: "+55%" }
-];
+const {
+  title = defaultProps.title,
+  description = defaultProps.description,
+  marketProjectionsTitle = defaultProps.marketProjectionsTitle,
+  trends = defaultProps.trends,
+  marketProjections = defaultProps.marketProjections
+} = Astro.props;
 ---
 <section class="py-16 bg-white">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
-      <h2 class="text-3xl font-bold text-gray-900 mb-4">Future Outlook</h2>
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">{title}</h2>
       <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-        Our research reveals transformative trends that will shape the future of AI in board management over the next five years.
+        {description}
       </p>
     </div>
 
     <!-- Market Projections -->
     <div class="bg-gradient-to-br from-primary to-blue-600 rounded-2xl p-8 mb-16 text-white">
-      <h3 class="text-2xl font-bold mb-8">Market Growth Projections</h3>
+      <h3 class="text-2xl font-bold mb-8">{marketProjectionsTitle}</h3>
       <div class="grid grid-cols-3 gap-8">
         {marketProjections.map(projection => (
           <div class="text-center">
@@ -144,4 +156,3 @@ const marketProjections = [
 
   </div>
 </section>
-

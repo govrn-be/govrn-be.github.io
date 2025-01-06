@@ -7,9 +7,27 @@ interface Props {
   documents?: Array<{ name: string; type: string; }>;
   subItems?: Array<{ title: string; duration: number; }>;
   animationDelay?: number;
+  texts?: {
+    documentsLabel: string;
+    addDocumentButton: string;
+    subItemsLabel: string;
+  };
 }
 
-const { id, title, type, duration, documents = [], subItems = [], animationDelay = 0 } = Astro.props;
+const { 
+  id, 
+  title, 
+  type, 
+  duration, 
+  documents = [], 
+  subItems = [], 
+  animationDelay = 0,
+  texts = {
+    documentsLabel: "Documents",
+    addDocumentButton: "Add Document",
+    subItemsLabel: "Sub-items"
+  }
+} = Astro.props;
 
 const typeIcons = {
   discussion: "💬",
@@ -62,7 +80,7 @@ const typeColors = {
       <!-- Documents -->
       {documents.length > 0 && (
         <div class="mb-4">
-          <div class="text-sm font-medium text-gray-700 mb-2">Documents</div>
+          <div class="text-sm font-medium text-gray-700 mb-2">{texts.documentsLabel}</div>
           <div class="flex flex-wrap gap-2">
             {documents.map(doc => (
               <div class="inline-flex items-center px-3 py-1 rounded-lg bg-gray-100 text-sm">
@@ -76,7 +94,7 @@ const typeColors = {
               <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
               </svg>
-              Add Document
+              {texts.addDocumentButton}
             </button>
           </div>
         </div>
@@ -85,7 +103,7 @@ const typeColors = {
       <!-- Sub-items -->
       {subItems.length > 0 && (
         <div>
-          <div class="text-sm font-medium text-gray-700 mb-2">Sub-items</div>
+          <div class="text-sm font-medium text-gray-700 mb-2">{texts.subItemsLabel}</div>
           <div class="space-y-2">
             {subItems.map(item => (
               <div class="flex items-center justify-between p-2 rounded-lg bg-gray-50">

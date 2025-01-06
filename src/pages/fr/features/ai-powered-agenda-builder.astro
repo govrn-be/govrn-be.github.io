@@ -4,62 +4,62 @@ import AgendaPreview from '../../../components/features/agenda-builder/preview/A
 
 const features = [
   {
-    title: "Smart Templates",
-    description: "Start quickly with pre-built templates for different meeting types",
+    title: "Modèles intelligents",
+    description: "Démarrez rapidement avec des modèles préconçus adaptés à vos réunions",
     icon: "📋",
     benefits: [
-      "Industry-specific templates",
-      "Customizable layouts",
-      "Time allocation suggestions",
-      "Best practice formats"
+      "Modèles par secteur d'activité",
+      "Mises en page personnalisables", 
+      "Suggestions de durée",
+      "Formats optimisés"
     ]
   },
   {
-    title: "AI-Powered Suggestions",
-    description: "Get intelligent recommendations based on your board's history",
+    title: "Suggestions par IA",
+    description: "Recevez des recommandations intelligentes basées sur l'historique de votre conseil",
     icon: "🤖",
     benefits: [
-      "Context-aware items",
-      "Smart time allocation",
-      "Follow-up tracking",
-      "Pattern recognition"
+      "Points adaptés au contexte",
+      "Allocation intelligente du temps",
+      "Suivi des actions",
+      "Analyse des tendances"
     ]
   },
   {
-    title: "Dynamic Organization",
-    description: "Easily organize and adjust your agenda items",
+    title: "Organisation dynamique",
+    description: "Organisez et ajustez facilement vos points à l'ordre du jour",
     icon: "✨",
     benefits: [
-      "Drag-and-drop ordering",
-      "Sub-item management",
-      "Time reallocation",
-      "Document linking"
+      "Réorganisation par glisser-déposer",
+      "Gestion des sous-points",
+      "Réallocation du temps",
+      "Liaison des documents"
     ]
   }
 ];
 
 const workflowSteps = [
   {
-    title: "Select Template",
-    description: "Choose from pre-built templates or start from scratch",
+    title: "Choisir un modèle",
+    description: "Sélectionnez un modèle préconçu ou partez de zéro",
     icon: "📝",
     animation: "slide-right"
   },
   {
-    title: "Customize Content",
-    description: "Add, remove, or modify agenda items with ease",
+    title: "Personnaliser le contenu",
+    description: "Ajoutez, supprimez ou modifiez les points facilement",
     icon: "✏️",
     animation: "slide-right"
   },
   {
-    title: "Review Timeline",
-    description: "Visualize and adjust time allocations",
+    title: "Vérifier le timing",
+    description: "Visualisez et ajustez la durée des points",
     icon: "⏱️",
     animation: "slide-right"
   },
   {
-    title: "Share & Collaborate",
-    description: "Get feedback and finalize the agenda",
+    title: "Partager et collaborer",
+    description: "Recueillez les retours et finalisez l'ordre du jour",
     icon: "🤝",
     animation: "slide-right"
   }
@@ -67,49 +67,60 @@ const workflowSteps = [
 
 const items = [
   {
-    title: "Financial Review",
+    title: "Bilan financier",
     type: "discussion",
     duration: 30,
-    description: "Review Q1 financial performance and metrics",
-    presenter: "CFO",
+    description: "Examen des performances financières du T1",
+    presenter: "Directeur financier",
     subItems: [
-      { title: "Q1 Financials", duration: 15 },
-      { title: "Budget Forecast", duration: 15 }
+      { title: "Résultats T1", duration: 15 },
+      { title: "Prévisions budgétaires", duration: 15 }
     ],
     documents: [
-      { name: "Q1-financials.pdf", type: "pdf" },
-      { name: "budget-forecast.xlsx", type: "xlsx" }
+      { name: "resultats-t1.pdf", type: "pdf" },
+      { name: "previsions-budget.xlsx", type: "xlsx" }
     ]
   },
   {
-    title: "Strategic Initiatives", 
+    title: "Initiatives stratégiques",
     type: "decision",
     duration: 30,
-    description: "Vote on proposed strategic initiatives for next quarter",
-    presenter: "CEO",
+    description: "Vote sur les initiatives stratégiques proposées",
+    presenter: "PDG",
     subItems: [
-      { title: "Strategic Plan", duration: 15 },
-      { title: "Initiative Details", duration: 15 }
+      { title: "Plan stratégique", duration: 15 },
+      { title: "Détails des initiatives", duration: 15 }
     ],
     documents: [
-      { name: "strategic-plan.pdf", type: "pdf" },
-      { name: "initiative-details.pdf", type: "pdf" }
+      { name: "plan-strategique.pdf", type: "pdf" },
+      { name: "details-initiatives.pdf", type: "pdf" }
     ]
   },
 ];
 
 const timeSlots = [
-  { startTime: "09:00", endTime: "09:30", title: "Opening Remarks", type: "discussion", duration: 30 },
-  { startTime: "09:30", endTime: "10:00", title: "Financial Review", type: "discussion", duration: 30 },
-  { startTime: "10:00", endTime: "10:30", title: "Strategic Initiatives", type: "decision", duration: 30 }
+  { startTime: "09:00", endTime: "09:30", title: "Mot d'ouverture", type: "discussion", duration: 30 },
+  { startTime: "09:30", endTime: "10:00", title: "Bilan financier", type: "discussion", duration: 30 },
+  { startTime: "10:00", endTime: "10:30", title: "Initiatives stratégiques", type: "decision", duration: 30 }
 ];
+
+const agendaPreviewTexts = {
+  title: "Ordre du jour",
+  totalDurationLabel: "Durée totale:",
+  addItemButton: "Ajouter un point",
+  itemTexts: {
+    documentsLabel: "Documents",
+    addDocumentButton: "Ajouter un document",
+    subItemsLabel: "Sous-points"
+  }
+};
 
 const totalDuration = 60;
 ---
 
-<Layout title="AI-Powered Agenda Builder - Govrn" description="Create comprehensive meeting agendas with AI-powered suggestions, smart templates, and real-time collaboration tools." >
+<Layout title="Création d'ordre du jour assistée par IA - Govrn" description="Créez des ordres du jour complets avec des suggestions intelligentes, des modèles adaptés et des outils de collaboration en temps réel." >
   <main class="pt-16">
-    <!-- Hero Section with Enhanced Visual Appeal -->
+    <!-- Section d'en-tête -->
     <section class="relative min-h-[90vh] flex items-center bg-gradient-to-br from-white to-gray-50 overflow-hidden">
       <div class="absolute inset-0 z-0">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
@@ -119,30 +130,30 @@ const totalDuration = 60;
         <div class="flex flex-col lg:flex-row items-center gap-12">
           <div class="flex-1 text-left">
             <div class="inline-flex items-center rounded-full px-4 py-1.5 text-sm font-medium bg-primary/10 text-primary mb-8 hover:bg-primary/15 transition-colors cursor-pointer">
-              ✨ AI-Powered Agenda Management
+              ✨ Gestion d'ordre du jour assistée par IA
             </div>
             
             <h1 class="text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight mb-6 leading-tight">
-              <span class="sr-only">AI-Powered Agenda Management — </span>
-              Build Dynamic Agendas with
+              <span class="sr-only">Gestion d'ordre du jour assistée par IA — </span>
+              Créez des ordres du jour avec
               <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
-                Intelligent Assistance
+                l'aide de l'IA
               </span>
             </h1>
             <p class="text-xl text-gray-600 leading-relaxed mb-8">
-              Create comprehensive meeting agendas with AI-powered suggestions, smart templates, and real-time collaboration tools.
+              Élaborez des ordres du jour complets grâce aux suggestions de l'IA, aux modèles intelligents et aux outils collaboratifs.
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
               <button class="px-8 py-4 bg-primary text-white rounded-xl font-medium hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20">
-                Try Demo
+                Essayer la démo
               </button>
               <button class="px-8 py-4 bg-white text-primary border-2 border-primary/20 rounded-xl font-medium hover:bg-gray-50 transition-colors">
-                Watch Video
+                Voir la vidéo
               </button>
             </div>
           </div>
           <div class="flex-1">
-            <AgendaPreview items={items} totalDuration={totalDuration} />
+            <AgendaPreview items={items} totalDuration={totalDuration} texts={agendaPreviewTexts} />
           </div>
         </div>
       </div>
@@ -150,17 +161,17 @@ const totalDuration = 60;
     <section>
    
 
-    <!-- Features Section with Cards Animation -->
+    <!-- Section Fonctionnalités -->
     <section class="py-24 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16">
           <div class="inline-flex items-center rounded-full px-4 py-1.5 text-sm font-medium bg-primary/10 text-primary mb-8 hover:bg-primary/15 transition-colors cursor-pointer">
-            Features</div>
+            Fonctionnalités</div>
           <h2 class="text-4xl font-bold text-gray-900 mt-2 mb-4">
-            Intelligent Agenda Building
+            Création intelligente d'ordres du jour
           </h2>
           <p class="text-xl text-gray-600">
-            Powerful features to streamline your meeting preparation
+            Des fonctionnalités puissantes pour simplifier la préparation de vos réunions
           </p>
         </div>
 
@@ -186,19 +197,19 @@ const totalDuration = 60;
       </div>
     </section>
 
-    <!-- Workflow Steps with Enhanced Visual Flow -->
+    <!-- Section Étapes -->
     <section class="py-24 bg-gray-50 relative overflow-hidden">
       <div class="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-30"></div>
       
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div class="text-center max-w-3xl mx-auto mb-16">
           <div class="inline-flex items-center rounded-full px-4 py-1.5 text-sm font-medium bg-primary/10 text-primary mb-8 hover:bg-primary/15 transition-colors cursor-pointer">
-            How It Works</div>
+            Comment ça marche</div>
           <h2 class="text-4xl font-bold text-gray-900 mt-2 mb-4">
-            Simple, Intuitive Workflow
+            Un processus simple et intuitif
           </h2>
           <p class="text-xl text-gray-600">
-            Create perfect agendas in minutes with our streamlined process
+            Créez des ordres du jour parfaits en quelques minutes
           </p>
         </div>
 
@@ -223,21 +234,21 @@ const totalDuration = 60;
       </div>
     </section>
 
-    <!-- Enhanced CTA Section -->
+    <!-- Section CTA -->
     <section class="bg-gradient-to-br from-primary to-blue-600 py-32">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
         <h2 class="text-4xl font-bold text-white mb-8">
-          Ready to Transform Your Meeting Preparation?
+          Prêt à transformer la préparation de vos réunions ?
         </h2>
         <p class="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
-          Join leading organizations using Govrn's intelligent agenda builder
+          Rejoignez les organisations qui utilisent déjà notre outil intelligent
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="/request-demo"
             class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-primary bg-white hover:bg-gray-50 transition-all duration-200 hover:shadow-lg hover:-translate-y-1"
           >
-            Request Demo
+            Demander une démo
             <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
@@ -246,7 +257,7 @@ const totalDuration = 60;
             href="/contact"
             class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white border-2 border-white hover:bg-white/10 transition-all duration-200 hover:-translate-y-1"
           >
-            Contact Sales
+            Contacter l'équipe commerciale
           </a>
         </div>
       </div>
