@@ -1,9 +1,10 @@
 ---
+const { currentLang = 'en' } = Astro.props;
+
 const currentYear = new Date().getFullYear();
 
 // Get current path and language
 const path = Astro.url.pathname;
-const currentLang = path.startsWith('/fr/') || path === '/fr' ? 'fr' : path.startsWith('/nl/') || path === '/nl' ? 'nl' : 'en';
 
 // Generate language URLs
 const basePath = path.replace(/^\/(fr|nl)(\/|$)/, '/');
@@ -91,10 +92,15 @@ const links = currentLang === 'fr' ? {
       <div class="space-y-4">
         <h3 class="text-lg font-bold">Govrn</h3>
         <p class="text-gray-400">{links.tagline}</p>
-        <div class="flex space-x-4 pt-2">
-          <a href={enUrl} class={`text-sm ${currentLang === 'en' ? 'text-white font-semibold' : 'text-gray-400 hover:text-white'}`}>EN</a>
-          <a href={frUrl} class={`text-sm ${currentLang === 'fr' ? 'text-white font-semibold' : 'text-gray-400 hover:text-white'}`}>FR</a>
-          <!-- <a href={nlUrl} class={`text-sm ${currentLang === 'nl' ? 'text-white font-semibold' : 'text-gray-400 hover:text-white'}`}>NL</a> -->
+        <div class="relative inline-block text-left pt-2">
+          <select 
+            class="bg-gray-900 text-gray-400 hover:text-white border border-gray-700 rounded-md py-1 px-2 focus:outline-none focus:ring-2 focus:ring-gray-600"
+            onchange="window.location.href=this.value"
+          >
+            <option value={enUrl} selected={currentLang === 'en'}>EN</option>
+            <option value={frUrl} selected={currentLang === 'fr'}>FR</option>
+            <!-- <option value={nlUrl} selected={currentLang === 'nl'}>NL</option> -->
+          </select>
         </div>
       </div>
 

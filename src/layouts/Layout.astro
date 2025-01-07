@@ -103,7 +103,7 @@ const currentLang = canonicalPath.startsWith('/fr/') || canonicalPath.endsWith('
   <body class="min-h-screen bg-white">
     <Header transparent={headerTransparent} hideMenu={hideMenu} whiteLogo={whiteLogo} currentLang={currentLang} />
     <slot />
-    <Footer />
+    <Footer currentLang={currentLang} />
     <CookieBanner />
     <!-- Google Tag Manager (noscript) -->
     <noscript
