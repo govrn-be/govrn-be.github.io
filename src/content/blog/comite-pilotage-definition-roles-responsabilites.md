@@ -9,6 +9,9 @@ category: "Governance"
 tags: ["Comité de pilotage", "Gestion de projet", "Gouvernance", "Leadership"]
 featured: false
 lang: "fr"
+slug: "comite-pilotage-definition-roles-responsabilites"
+
+
 ---
 
 Dans l'univers de la gestion de projet, le comité de pilotage joue un rôle central dans la prise de décision. Il apporte l'orientation et la supervision nécessaires pour garantir l'alignement des projets avec les objectifs stratégiques et l'atteinte des résultats attendus.

@@ -9,6 +9,8 @@ category: "Governance"
 tags: ["Fonctions exécutives", "Rôles gouvernementaux", "Administration publique"]
 featured: false
 lang: "fr"
+slug: "comprendre-fonctions-executif-importance-exemples"
+
 ---
 
 Le pouvoir exécutif est un pilier fondamental de tout gouvernement, chargé de mettre en œuvre et d'appliquer les lois et les politiques. Une compréhension approfondie de ses fonctions est essentielle pour toute personne impliquée dans la politique, le droit ou l'administration publique. Cet article explore les rôles clés au sein du pouvoir exécutif et leur importance.
