@@ -67,7 +67,7 @@ export default defineConfig({
         if (page.url.startsWith('https://govrn.com')) {
           pageUrl = page.url.replace('https://govrn.com', '');
         }
-        if (!pageUrl.startsWith("/blog/") && !pageUrl.startsWith("/fr/blog/")) {
+        if (!pageUrl.startsWith("/blog/") && !pageUrl.startsWith("/fr/blog/") && !pageUrl.startsWith("/nl/blog/")) {
           return page;
         }
 
