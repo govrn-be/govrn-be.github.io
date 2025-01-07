@@ -1,0 +1,148 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrialForm from '../../components/forms/TrialForm.astro';
+
+const benefits = [
+  {
+    icon: "⚡",
+    title: "Directe toegang",
+    description: "Begin meteen met ons complete platform"
+  },
+  {
+    icon: "🎯", 
+    title: "Geen creditcard nodig",
+    description: "Test alle functies risicovrij gedurende 14 dagen"
+  },
+  {
+    icon: "👥",
+    title: "Onbeperkte teamtoegang",
+    description: "Nodig al uw bestuursleden uit om Govrn te ontdekken"
+  },
+  {
+    icon: "🔒",
+    title: "Enterprise-grade beveiliging",
+    description: "Bankwaardige bescherming en versleuteling vanaf dag één"
+  }
+];
+
+const trialFormProps = {
+  selectReasonText: "Selecteer een reden",
+  reasons: [
+    "Evaluatie van bestuursbeheersystemen",
+    "Oprichting van een nieuw bestuur", 
+    "Overstap van platform",
+    "Verbetering van bestuursefficiëntie",
+    "Anders",
+  ],
+  labels: {
+    firstName: "Voornaam",
+    lastName: "Achternaam", 
+    email: "Zakelijk e-mailadres",
+    company: "Bedrijfsnaam",
+    reason: "Reden voor proefperiode",
+    submit: "Nu beginnen",
+    termsText: "Door u aan te melden, gaat u akkoord met onze",
+    termsLink: "Gebruiksvoorwaarden",
+    privacyLink: "Privacybeleid",
+  },
+  termsUrl: "/nl/terms",
+  privacyUrl: "/nl/privacy",
+  successTitle: "Welkom bij Govrn!",
+  successMessage: "Uw proefaccount wordt aangemaakt. Controleer uw e-mail voor inloginstructies."
+} 
+---
+
+<Layout title="Probeer Govrn gratis - Optimaliseer uw bestuursbeheer" description="Ontdek hoe Govrn uw bestuursbeheer kan transformeren met onze gratis proefperiode van 14 dagen. Geen creditcard vereist.">
+  <main class="pt-16">
+    <!-- Hero sectie -->
+    <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <!-- Linkerkolom - Content -->
+          <div>
+            <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
+              Start vandaag uw gratis proefperiode van
+              <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
+                Govrn
+              </span>
+            </h1>
+            <p class="text-xl text-gray-600 leading-relaxed mb-12">
+              Ontdek hoe Govrn uw bestuursbeheer kan transformeren met onze gratis proefperiode van 14 dagen. Geen creditcard vereist.
+            </p>
+
+            <div class="grid sm:grid-cols-2 gap-6">
+              {benefits.map(benefit => (
+                <div class="flex items-start space-x-4">
+                  <div class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-2xl">
+                    {benefit.icon}
+                  </div>
+                  <div>
+                    <h2 class="font-semibold text-gray-900">{benefit.title}</h3>
+                    <p class="text-sm text-gray-600">{benefit.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Rechterkolom - Formulier -->
+          <div class="bg-white rounded-2xl p-8 shadow-xl border border-gray-100">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8">Activeer uw gratis proefperiode</h2>
+            <TrialForm {...trialFormProps} />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social proof sectie -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8">Zij vertrouwen op ons</h2>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-8 items-center opacity-70">
+            <img
+              src="/vdv-logo.png"
+              alt="Van de Velde"
+              class="h-24 object-contain mx-auto"
+            />
+            <img
+              src="/fib-logo.png"
+              alt="Finance & Invest Brussels"
+              class="h-24 object-contain mx-auto"
+            />
+            <img
+              src="/careproperty-logo.png"
+              alt="Care Property Invest"
+              class="h-24 object-contain mx-auto"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ sectie -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Veelgestelde vragen</h2>
+        <div class="space-y-8">
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Wat is inbegrepen bij de gratis proefperiode?</h3>
+            <p class="text-gray-600">U krijgt gedurende 14 dagen volledige toegang tot alle Govrn-functionaliteiten, inclusief documentbeheer, vergadertools en samenwerkingsfuncties.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Is een creditcard nodig?</h3>
+            <p class="text-gray-600">Nee, u kunt uw gratis proefperiode starten zonder betalingsgegevens. We informeren u voor het einde van de proefperiode.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Wat gebeurt er na de proefperiode?</h3>
+            <p class="text-gray-600">Na 14 dagen kunt u kiezen uit een van onze betaalde abonnementen. We helpen u graag bij het kiezen van het plan dat het beste bij uw behoeften past.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

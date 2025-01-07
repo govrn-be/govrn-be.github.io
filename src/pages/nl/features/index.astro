@@ -1,0 +1,194 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FeatureSection from '../../../components/features/FeatureSection.astro';
+
+const meetingFeatures = {
+  title: "Optimaliseer uw vergaderingen",
+  subtitle: "Excellentie in vergaderbeheer",
+  description: "Transformeer uw bestuur in een echte strategische hefboom. Govrn biedt een complete suite aan tools voor productieve vergaderingen met concrete resultaten.",
+  gradient: "from-primary to-blue-600",
+  image: "/applications-picture-meeting.png", 
+  imageAlt: "Govrn vergaderbeheersinterface",
+  features: [
+    {
+      title: "AI-ondersteunde agendavorming",
+      description: "Genereer dynamische agenda's op maat van uw bestuur, met intelligente suggesties en sjablonen",
+      icon: "📝",
+      highlight: true,
+      link: "/nl/features/ai-powered-agenda-builder"
+    },
+    {
+      title: "Real-time documentensamenwerking",
+      description: "Annoteer, becommentarieer en werk samen aan documenten tijdens vergaderingen in alle veiligheid",
+      icon: "✏️",
+      highlight: false,
+      link: "/nl/features/document-collaboration"
+    },
+    {
+      title: "Beveiligde communicatie",
+      description: "Bescherm gevoelige uitwisselingen met end-to-end versleuteling",
+      icon: "🔒",
+      highlight: true,
+      link: "/nl/features/secure-communication"
+    },
+    {
+      title: "Intelligent besluitvormingsbeheer",
+      description: "Leg besluiten vast en volg ze op met geautomatiseerde stem- en enquêtesystemen",
+      icon: "📊",
+      highlight: false,
+      // link: "/nl/features/smart-vote-polls-capture"
+    }
+  ]
+};
+
+const insightFeatures = {
+  title: "Onthul strategische inzichten",
+  subtitle: "Geavanceerde kunstmatige intelligentie",
+  description: "Benut de kracht van AI om uw data om te zetten in bruikbare inzichten en betere beslissingen te nemen.",
+  gradient: "from-blue-600 to-indigo-600",
+  image: "/applications-picture-board-chat-mobile.png",
+  imageAlt: "Govrn inzichtendashboard",
+  features: [
+    {
+      title: "Intelligent documentbeheer",
+      description: "Slimme organisatie en zoekfunctie voor documenten dankzij AI-categorisering",
+      icon: "🤖",
+      highlight: true
+    },
+    {
+      title: "Voorspellende analyses",
+      description: "Anticipeer op trends en identificeer kansen met geavanceerde analyse",
+      icon: "📈",
+      highlight: false
+    },
+    {
+      title: "Real-time intelligentie",
+      description: "Blijf geïnformeerd met relevante updates en inzichten geselecteerd door AI",
+      icon: "🔍",
+      highlight: true
+    },
+    {
+      title: "Compliance monitoring",
+      description: "Automatische conformiteitscontrole en opvolging van regelgevingsvereisten",
+      icon: "⚖️",
+      highlight: false,
+      link: "/nl/features/ai-board-compliance-monitoring"
+    }
+  ]
+};
+
+const governanceFeatures = {
+  title: "Excellentie in governance",
+  subtitle: "Optimaal bestuur",
+  description: "Zet nieuwe standaarden in governance met tools die transparantie, verantwoordelijkheid en effectieve besluitvorming garanderen.",
+  gradient: "from-indigo-600 to-primary",
+  image: "/applications-picture-board-evaluation.png",
+  imageAlt: "Govrn governance dashboard",
+  features: [
+    {
+      title: "Dynamisch takenbeheer",
+      description: "Vereenvoudig bestuursverantwoordelijkheden met intelligente en geautomatiseerde opvolging",
+      icon: "✅",
+      highlight: true
+    },
+    {
+      title: "Elektronische handtekeningen",
+      description: "Versnel documentondertekening met juridisch geldige e-handtekeningen",
+      icon: "✍️",
+      highlight: false
+    },
+    {
+      title: "Rolgebaseerde toegangscontrole",
+      description: "Waarborg veiligheid met nauwkeurig beheer van rechten en rollen",
+      icon: "👥",
+      highlight: true
+    },
+    {
+      title: "Prestatie-analyse",
+      description: "Monitor en optimaliseer bestuurseffectiviteit met gedetailleerde metrics",
+      icon: "📊",
+      highlight: false
+    }
+  ]
+};
+---
+
+<Layout title="Functionaliteiten - Govrn bestuurssoftware" description="Ontdek de uitgebreide functionaliteiten van Govrn: AI-gestuurde inzichten, geautomatiseerde compliance tools en naadloze samenwerking voor moderne besturen." image="/features.png">
+  <main class="pt-16">
+    <!-- Hero Sectie -->
+    <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(57,153,222,0.1),transparent_50%)]"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-4xl mx-auto">
+          <div class="inline-flex items-center rounded-full px-6 py-2 text-sm font-medium bg-primary/10 text-primary mb-8">
+            Professionele governance-oplossing
+          </div>
+
+          <h1 class="text-6xl font-extrabold text-gray-900 tracking-tight mb-8 leading-tight">
+            Versterk uw bestuur met onze
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
+              innovatieve functionaliteiten
+            </span>
+          </h1>
+
+          <p class="text-xl text-gray-600 leading-relaxed mb-12 max-w-3xl mx-auto">
+            Ontdek de toekomst van bestuursbeheer met Govrn's complete toolkit, ontworpen om samenwerking te verbeteren, compliance te waarborgen en strategische besluitvorming te faciliteren.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/nl/request-demo"
+              class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 group"
+            >
+              Demo aanvragen
+              <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </a>
+            <a
+              href="/nl/pricing"
+              class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-gray-900 bg-white border-2 border-gray-200 hover:border-primary/20 hover:bg-gray-50 transition-colors duration-200"
+            >
+              Prijzen bekijken
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Functionaliteiten Secties -->
+    <FeatureSection {...meetingFeatures} />
+    <FeatureSection {...insightFeatures} reversed={true} />
+    <FeatureSection {...governanceFeatures} />
+
+    <!-- CTA Sectie -->
+    <section class="bg-gradient-to-br from-primary to-blue-600 py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl font-bold text-white mb-8">
+          Klaar om uw governance te transformeren?
+        </h2>
+        <p class="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
+          Sluit u aan bij toonaangevende organisaties die Govrn vertrouwen
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/nl/request-demo"
+            class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-primary bg-white hover:bg-gray-50 transition-colors duration-200"
+          >
+            Demo aanvragen
+          </a>
+          <a
+            href="/nl/contact"
+            class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white border-2 border-white hover:bg-white/10 transition-colors duration-200"
+          >
+            Contact sales team
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

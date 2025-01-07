@@ -1,0 +1,420 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import ExecutiveSummary from '../../../components/research/ExecutiveSummary.astro';
+import ResearchStats from '../../../components/research/ResearchStats.astro';
+import KeyFindings from '../../../components/research/KeyFindings.astro';
+import Solutions from '../../../components/research/Solutions.astro';
+import Methodology from '../../../components/research/Methodology.astro';
+import FutureOutlook from '../../../components/research/FutureOutlook.astro';
+import CTA from '../../../components/CTA.astro';
+import SharingButtons from '../../../components/socials/SharingButtons.astro';
+
+const researchStats = [
+  {
+    icon: "👥",
+    value: "50+",
+    label: "Geïnterviewde bestuurders"
+  },
+  {
+    icon: "🏢", 
+    value: "3",
+    label: "Onderzochte sectoren"
+  },
+  {
+    icon: "💡",
+    value: "15+",
+    label: "Belangrijke inzichten"
+  },
+  {
+    icon: "📊",
+    value: "100%",
+    label: "Data-gedreven aanbevelingen"
+  }
+]
+
+const keyFindings = {
+  title: "Belangrijkste Onderzoeksbevindingen",
+  subtitle: "Onze diepgaande analyse onthult de grootste uitdagingen en kansen voor AI-adoptie in bestuurskamers.",
+  findings: [
+    {
+      title: "Technologische Adoptiebarrières",
+      description: "Ons onderzoek belicht significante uitdagingen bij de implementatie van AI-technologieën in bestuurskamers, vooral binnen gevestigde organisaties.",
+      sections: [
+        {
+          subtitle: "Generationele Weerstand",
+          content: "Senior bestuursleden tonen aanzienlijke terughoudendheid tegenover AI, voornamelijk door zorgen over veiligheid en privacy, waargenomen technologische complexiteit, en voorkeur voor traditionele methoden.",
+          stats: {
+            percentage: "73%",
+            label: "van de bestuurders uit zorgen over veiligheid"
+          },
+          insights: [
+            "Bezorgdheid over gegevensprivacy",
+            "Weerstand tegen veranderende werkmethoden",
+            "Behoefte aan eenvoudigere interfaces"
+          ]
+        },
+        {
+          subtitle: "Afhankelijkheid van Bestaande Systemen",
+          content: "Het huidige gebruik van traditionele tools zoals e-mail en SharePoint creëert inefficiënties in documentbeheer, platformsamenwerking en informatietoegang.",
+          stats: {
+            percentage: "65%",
+            label: "meldt integratieproblemen"
+          },
+          insights: [
+            "E-mailgecentreerd documentdelen",
+            "Gefragmenteerde samenwerkingstools",
+            "Beperkte mobiele toegang"
+          ]
+        }
+      ]
+    },
+    {
+      title: "Uitdagingen in Gegevensbeheer",
+      description: "De toenemende complexiteit van bestuursgegevens en -documentatie vormt grote uitdagingen voor organisatie, toegankelijkheid en gebruik.",
+      sections: [
+        {
+          subtitle: "Informatie-overbelasting",
+          content: "Organisaties worden geconfronteerd met toenemende regelgevingseisen die leiden tot documentproliferatie, terwijl effectieve synthesetools ontbreken en gedecentraliseerde systemen de efficiëntie belemmeren.",
+          stats: {
+            percentage: "89%",
+            label: "ervaart documentaire overbelasting"
+          },
+          insights: [
+            "Toenemende regelgevingscomplexiteit",
+            "Handmatige documentverwerking",
+            "Inefficiënt informatiezoeken"
+          ]
+        },
+        {
+          subtitle: "AI-gerelateerde Zorgen",
+          content: "De belangrijkste uitdagingen omvatten gebrek aan standaardisatie in gegevensintegratie, zorgen over de nauwkeurigheid van AI-gegenereerde samenvattingen en vertrouwenskwesties rond geautomatiseerde analyses.",
+          stats: {
+            percentage: "82%",
+            label: "wenst garanties over AI-nauwkeurigheid"
+          },
+          insights: [
+            "Behoefte aan gegevensstandaardisatie",
+            "Validatie van AI-nauwkeurigheid",
+            "Noodzaak voor vertrouwensopbouw"
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+const solutions = {
+  sectionTitle: "Geïdentificeerde Oplossingen",
+  sectionDescription: "Ons onderzoek heeft kernoplossingen geïdentificeerd die de uitdagingen van AI-adoptie in bestuursbeheer aanpakken, met focus op praktische implementatie en meetbare resultaten.",
+  solutions: [
+    {
+      title: "Beslissingsondersteunende Systemen",
+      description: "Versterk bestuurders met AI-gebaseerde tools die besluitvorming verbeteren met behoud van veiligheid en compliance.",
+      icon: "🎯",
+      items: [
+        {
+          name: "Automatische Samenvattingsgeneratie",
+          description: "Automatische creatie van beknopte samenvattingen van bestuursdocumenten, met nadruk op kernpunten en acties.",
+          impact: "70% tijdsbesparing bij lezen"
+        },
+        {
+          name: "Concurrentie-analysetools",
+          description: "Real-time marktmonitoring en concurrentieanalyse via AI-algoritmes.",
+          impact: "2x snellere strategische besluitvorming"
+        },
+        {
+          name: "Beveiligd Dashboard",
+          description: "Gecentraliseerde dashboards met rol-gebaseerde toegang, real-time analyses en KPI-tracking.",
+          impact: "100% veilige gegevenstoegang"
+        }
+      ]
+    },
+    {
+      title: "Digitale Transformatiestrategie",
+      description: "Een gestructureerde aanpak voor AI-implementatie die soepele adoptie en maximale waarde garandeert.",
+      icon: "🚀",
+      items: [
+        {
+          name: "Gefaseerde Uitrol",
+          description: "Geplande implementatiestrategie met duidelijke doelen en succescriteria.",
+          impact: "85% adoptiesnelheid"
+        },
+        {
+          name: "On-premise Oplossingen",
+          description: "Beveiligde lokale hosting-opties voor organisaties met strikte data-soevereiniteitseisen.",
+          impact: "Volledige gegevenscontrole"
+        },
+        {
+          name: "Uitgebreide Trainingsprogramma's",
+          description: "Gepersonaliseerde trainingssessies en doorlopende ondersteuning voor succesvolle adoptie.",
+          impact: "95% gebruikersvertrouwen"
+        }
+      ]
+    },
+    {
+      title: "Verbeterd Documentbeheer",
+      description: "Transformeer documentbeheer met AI-tools die organisatie, zoeken en samenwerking optimaliseren.",
+      icon: "📑",
+      items: [
+        {
+          name: "Geautomatiseerde Synthese",
+          description: "AI-gedreven documentanalyse en extractie van kernpunten voor sneller begrip.",
+          impact: "60% snellere verwerking"
+        },
+        {
+          name: "Intelligent Zoeken",
+          description: "Geavanceerde zoekfuncties met natuurlijke taalverwerking en semantisch begrip.",
+          impact: "90% sneller informatie vinden"
+        },
+        {
+          name: "Centrale Opslagplaats",
+          description: "Enkele bron van waarheid voor alle bestuursdocumenten met versiebeheer en audittrails.",
+          impact: "100% documenteerbaarheid"
+        }
+      ]
+    }
+  ],
+  ctaText: "Meer informatie over onze oplossingen"
+};
+
+const methodology = {
+  title: "Onderzoeksmethodologie",
+  description: "Onze onderzoeksaanpak combineert rigoureuze academische methoden met praktische sectorinzichten voor bruikbare resultaten.",
+  researchPhases: [
+    {
+      title: "Gegevensverzameling",
+      icon: "📊",
+      description: "Een uitgebreide multi-methode benadering voor het verzamelen van diverse perspectieven.",
+      methods: [
+        {
+          name: "Diepte-interviews",
+          details: "Individuele sessies met bestuursleden en executives",
+          count: "Meer dan 50 interviews"
+        },
+        {
+          name: "Enquête-analyse",
+          details: "Kwantitatieve gegevensverzameling van organisaties",
+          count: "Meer dan 200 responses"
+        },
+        {
+          name: "Casestudies",
+          details: "Gedetailleerd onderzoek van succesvolle AI-implementaties",
+          count: "15 cases"
+        }
+      ]
+    },
+    {
+      title: "Onderzoeksreikwijdte",
+      icon: "🎯",
+      description: "Zorgvuldig geselecteerde deelnemers uit diverse sectoren en functies.",
+      participants: [
+        {
+          role: "Bestuursleiding",
+          positions: ["Bestuursvoorzitters", "Commissievoorzitters", "Senior Bestuurders"],
+          percentage: "35%"
+        },
+        {
+          role: "Uitvoerende Directie",
+          positions: ["CEO's", "CFO's", "CIO's"],
+          percentage: "40%"
+        },
+        {
+          role: "Governance Professionals",
+          positions: ["Secretarissen", "Risicomanagers", "Compliance Officers"],
+          percentage: "25%"
+        }
+      ]
+    },
+    {
+      title: "Analysekader",
+      icon: "🔍",
+      description: "Rigoureuze analytische aanpak die kwalitatieve en kwantitatieve methoden combineert.",
+      components: [
+        {
+          name: "Thematische Analyse",
+          description: "Identificatie van kerntrends in adoptie-uitdagingen"
+        },
+        {
+          name: "Statistische Validatie",
+          description: "Kwantitatieve verificatie van bevindingen en correlaties"
+        },
+        {
+          name: "Sectorvergelijking",
+          description: "Analyse van variaties tussen verschillende sectoren en regio's"
+        }
+      ]
+    }
+  ]
+};
+
+const futureOutlook = {
+  title: "Toekomstperspectief",
+  description: "Ons onderzoek onthult trends die het AI-gebruik in bestuurskamerbeheer de komende vijf jaar zullen transformeren.",
+  marketProjectionsTitle: "Marktgroeiprojecties",
+  trends: [
+    {
+      title: "Evolutie van AI-analyses",
+      icon: "📊",
+      description: "Analysemogelijkheden worden geavanceerder en essentieel voor bestuursoperaties.",
+      timeline: "Komende 12-24 maanden",
+      impact: "Hoog",
+      points: [
+        {
+          title: "Real-time Verwerking",
+          description: "Directe analyse van bestuursdocumenten en marktgegevens",
+          readiness: "85%"
+        },
+        {
+          title: "Geavanceerde Voorspellingen",
+          description: "AI-gebaseerde anticipatie voor strategische planning",
+          readiness: "75%"
+        },
+        {
+          title: "Beslissingsondersteuning",
+          description: "Contextgebaseerde aanbevelingen op basis van historische gegevens",
+          readiness: "80%"
+        }
+      ]
+    },
+    {
+      title: "Intelligente Compliance",
+      icon: "⚖️",
+      description: "Automatisering transformeert het beheer van regelgeving en risico's.",
+      timeline: "Komende 18-36 maanden",
+      impact: "Kritiek",
+      points: [
+        {
+          title: "Regelgevingsmonitoring",
+          description: "Geautomatiseerde tracking van compliance-vereisten",
+          readiness: "90%"
+        },
+        {
+          title: "Risicobeoordeling",
+          description: "Proactieve identificatie van potentiële risico's",
+          readiness: "85%"
+        },
+        {
+          title: "Auditautomatisering",
+          description: "Gestroomlijnde auditprocessen met AI-ondersteuning",
+          readiness: "70%"
+        }
+      ]
+    },
+    {
+      title: "Ethische AI-governance",
+      icon: "🎯",
+      description: "Focus op verantwoorde AI-implementatie.",
+      timeline: "Komende 24-48 maanden",
+      impact: "Transformatief",
+      points: [
+        {
+          title: "Algoritmische Transparantie",
+          description: "Duidelijk inzicht in AI-besluitvormingsprocessen",
+          readiness: "65%"
+        },
+        {
+          title: "Vooroordeel Preventie",
+          description: "Geavanceerde systemen voor bias-detectie en -preventie",
+          readiness: "70%"
+        },
+        {
+          title: "Verantwoorde Uitrol",
+          description: "Raamwerk voor ethische AI-implementatie",
+          readiness: "80%"
+        }
+      ]
+    }
+  ],
+  marketProjections: [
+    { year: "2024", value: "€5,2 miljard", growth: "+45%" },
+    { year: "2025", value: "€7,8 miljard", growth: "+50%" },
+    { year: "2026", value: "€12,1 miljard", growth: "+55%" }
+  ]
+}
+
+const cta = {
+  texts: {
+    title: "Klaar om uw bestuursbeheer te transformeren?",
+    subtitle: "Sluit u aan bij organisaties die vertrouwen op govrn voor hun bestuursbeheer",
+    cta1: "Demo aanvragen",
+    cta2: "Contact sales team"
+  },
+  links: {
+    cta1: "/nl/request-demo",
+    cta2: "/nl/contact"
+  }
+}
+---
+
+<Layout title="De Toekomst van AI in de Bestuurskamer | Govrn Onderzoek" description="Een diepgaand onderzoek naar hoe kunstmatige intelligentie bestuursbeheer en governance transformeert in het digitale tijdperk.">
+  <main class="pt-16">
+    <!-- Header sectie -->
+    <section class="relative bg-gradient-to-br from-white to-gray-50 py-20">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-3xl mx-auto">
+          <div class="inline-flex items-center rounded-full px-4 py-1 text-sm font-medium bg-primary/10 text-primary mb-8">
+            Innovatief Onderzoek
+          </div>
+          <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-8 leading-tight">
+            De Toekomst van AI in de Bestuurskamer:
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
+              Uitdagingen en Kansen
+            </span>
+          </h1>
+          <div class="flex flex-wrap justify-center gap-4 text-gray-600 mb-8">
+            <p class="font-medium">Dr. Weifeng Chen</p>
+            <span class="hidden sm:inline">•</span>
+            <p>Brunel Business School & Govrn</p>
+            <span class="hidden sm:inline">•</span>
+            <p>2024</p>
+          </div>
+          <p class="text-xl text-gray-600 leading-relaxed">
+            Een uitgebreid onderzoek naar de transformatie van bestuursbeheer en governance door kunstmatige intelligentie.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <ResearchStats stats={researchStats} />
+    <section class="py-16 bg-white">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8">Samenvatting</h2>
+        <div class="prose prose-lg">
+          <p class="text-gray-600 leading-relaxed">
+            De integratie van Kunstmatige Intelligentie (AI) in bestuursprocessen vormt zowel een belangrijke kans als een complexe uitdaging voor moderne organisaties. Dit onderzoek, uitgevoerd door Brunel Business School en Govrn, analyseert de huidige staat van AI-adoptie in bestuursbeheer en biedt concrete aanbevelingen voor organisaties die effectief gebruik willen maken van AI-technologieën.
+          </p>
+        </div>
+      </div>
+    </section>
+    <KeyFindings {...keyFindings} />
+    <Solutions {...solutions} />
+    <Methodology {...methodology} />
+    <FutureOutlook {...futureOutlook} />
+    
+    <!-- Auteursinformatie -->
+    <SharingButtons title="De Toekomst van AI in de Bestuurskamer | Govrn Onderzoek" message="Een diepgaand onderzoek naar hoe kunstmatige intelligentie bestuursbeheer en governance transformeert in het digitale tijdperk." href={Astro.url.href} />
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid sm:grid-cols-2 gap-8">
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <h3 class="font-semibold text-gray-900 mb-2">Over de auteurs</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Dr. Weifeng Chen is Universitair Docent Innovatiemanagement en Strategie aan de Brunel Business School, gespecialiseerd in AI-adoptie en digitale transformatie.
+            </p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <h3 class="font-semibold text-gray-900 mb-2">Doe mee</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Geïnteresseerd in deelname aan ons toekomstig onderzoek of onze AI-engine? Neem contact op via info@govrn.com
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <CTA {...cta} />
+  </main>
+</Layout>

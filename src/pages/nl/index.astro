@@ -1,0 +1,573 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Hero from "../../components/Hero.astro";
+import Features from "../../components/Features.astro";
+import Stats from "../../components/Stats.astro";
+import Timeline from "../../components/Timeline.astro";
+import Personas from "../../components/Personas.astro";
+import Testimonials from "../../components/Testimonials.astro";
+import FAQ from "../../components/FAQ.astro";
+import CTA from "../../components/CTA.astro";
+import FeatureShowcase from "../../components/features/FeatureShowcase.astro";
+import SecurityPreview from "../../components/SecurityPreview.astro";
+import DocumentFlow from "../../components/animations/DocumentFlow.astro";
+import TaskTimeline from "../../components/animations/TaskTimeline.astro";
+import FeatureHighlight from "../../components/animations/FeatureHighlight.astro";
+
+const hero = {
+  imageValues: [
+    {
+      title: "Kunstmatige Intelligentie",
+      description:
+        "Benut de kracht van AI om uw data om te zetten in strategische inzichten",
+      position: "top-1/4 left-2/3",
+    },
+    {
+      title: "Optimale Beveiliging",
+      description:
+        "Enterprise-grade beveiliging met end-to-end encryptie en gegarandeerde compliance",
+      position: "bottom-1/3 right-10",
+    },
+    {
+      title: "Naadloze Samenwerking",
+      description:
+        "Krachtige samenwerkingstools voor effectieve communicatie",
+      position: "bottom-1/4 left-1/3",
+    },
+  ],
+  badgeText: "Corporate governance herontworpen door AI",
+  heading: {
+    main: "Kunstmatige intelligentie voor uw",
+    highlight: "strategische besluitvorming",
+  },
+  description:
+    "Govrn ondersteunt uw raad van bestuur bij het nemen van beslissingen. Ons AI-platform optimaliseert samenwerking, waarborgt compliance en ondersteunt uw duurzame ontwikkeling.",
+  ctaButtons: {
+    primary: {
+      text: "Ontdek Govrn",
+      href: "/nl/request-demo",
+    },
+    secondary: {
+      text: "Bekijk de demo",
+    },
+  },
+  securityFeatures: [
+    {
+      title: "AVG",
+      subtitle: "Gecertificeerd",
+    },
+    {
+      title: "Encryptie",
+      subtitle: "256-bit",
+    },
+    {
+      title: "Beveiliging",
+      subtitle: "Multi-Factor",
+    },
+  ],
+  imageAlt: "Govrn Interface - Corporate governance platform",
+  imageSrc: "/application-home-page.png",
+};
+
+const stats = [
+  {
+    value: "€50M+",
+    label:
+      "Aan verliezen vermeden dankzij betere governance",
+    icon: "💰",
+  },
+  {
+    value: "45%",
+    label: "Tijdsbesparing in besluitvorming",
+    icon: "⚡",
+  },
+  {
+    value: "10.000+",
+    label: "Begeleide strategische beslissingen",
+    icon: "🎯",
+  },
+];
+
+const featuresProps = {
+  texts: {
+    title: "De fundamenten van moderne governance",
+    subtitle: "Ontdek hoe Govrn uw governance transformeert",
+    exploreButton: "Ontdek onze functies",
+    exploreButtonUrl: "/nl/features",
+    learnMore: "Meer informatie",
+  },
+  pillars: [
+    {
+      title: "Bestuursprestaties",
+      description:
+        "Optimaliseer uw governance met Govrn: centraliseer uw documenten en verbeter uw productiviteit met onze beveiligde tools.",
+      icon: "⚡",
+      features: [
+        "Gecentraliseerd documentbeheer",
+        "Intelligente annotaties",
+        "Versterkte beveiliging",
+        "Geavanceerde productiviteitstools",
+      ],
+      gradient: "from-primary to-blue-500",
+    },
+    {
+      title: "Collectieve Intelligentie",
+      description:
+        "Benut de kracht van AI om uw documenten te analyseren en relevante strategische inzichten te verkrijgen.",
+      icon: "🤖",
+      features: [
+        "Voorspellende analyse",
+        "Strategische inzichten",
+        "Document intelligence",
+        "Realtime samenwerking",
+      ],
+      gradient: "from-blue-500 to-indigo-500",
+    },
+    {
+      title: "Compliance & Governance",
+      description:
+        "Beheer uw processen op basis van rollen, met geïntegreerde elektronische handtekening en stemsysteem.",
+      icon: "⚖️",
+      features: [
+        "Rolbeheer",
+        "Elektronische handtekening",
+        "Compliance monitoring",
+        "Elektronisch stemsysteem",
+      ],
+      gradient: "from-indigo-500 to-primary",
+    },
+  ],
+};
+
+const documentFlowProps = {
+  documents: [
+    { type: "Contract", icon: "📄" },
+    { type: "Notulen", icon: "📝" },
+    { type: "Rapport", icon: "📊" },
+    { type: "Agenda", icon: "📅" },
+    { type: "Beleid", icon: "📋" },
+  ],
+  sharingMethods: [
+    {
+      name: "E-mail",
+      line: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
+    },
+    {
+      name: "Mobiel",
+      line: "M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z",
+    },
+    {
+      name: "Computer",
+      line: "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
+    },
+    {
+      name: "Team",
+      line: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
+    },
+  ],
+  texts: {
+    centralIcon: {
+      emoji: "🔒",
+      title: "Opslag",
+      subtitle: "Beveiligd",
+    },
+  },
+};
+
+const aiAssistantProps = {
+    messages: [
+      {
+        type: "assistant",
+        content: "Analyse van bestuurdocumenten voltooid. Belangrijkste punten:",
+        insights: [
+        "Omzetgroei 15% boven sectorgemiddelde",
+        "98% compliance ratio",
+        "95% bestuursvergadering aanwezigheid"
+      ]
+    },
+    {
+      type: "user", 
+      content: "Wat zijn de belangrijkste geïdentificeerde risico's?"
+    },
+    {
+      type: "assistant",
+      content: "De analyse toont de volgende hoofdrisico's:",
+      insights: [
+        "Instabiliteit Azië-Pacific markt",
+        "Europese regelgevingswijzigingen",
+        "Kwetsbaarheden in de toeleveringsketen"
+      ]
+    }
+    ],
+    headerTitle: "AI Assistent",
+    headerSubtitle: "Document analyse",
+    headerEmoji: "🤖"
+};
+
+const gouvernanceComplianceProps = {
+  texts: {
+    tasks: [
+      { title: "Notulen", status: "pending" },
+      { title: "Jaarverslag", status: "signed" },
+      { title: "Compliance audit", status: "in_progress" }
+    ],
+    signatures: [
+      { name: "Sophie De Vries", role: "CEO" },
+      { name: "Jan-Pieter Martens", role: "Voorzitter" },
+      { name: "Maria van der Linden", role: "Algemeen Secretaris" }
+    ],
+    labels: {
+      tasks: "Taken",
+      activeTasks: "Lopend",
+      signatures: "Handtekeningen", 
+      pending: "Te behandelen"
+    }
+  }
+};
+
+const featureShowcaseProps = {
+  texts: {
+    badge: "Concrete resultaten",
+    title: "Optimaliseer uw bestuursprestaties",
+    subtitle:
+      "Ervaar de tastbare impact van Govrn op uw governance met meetbare verbeteringen in efficiëntie, intelligentie en compliance.",
+    keyBenefits: "Belangrijkste voordelen:",
+  },
+  outcomes: [
+    {
+      title: "Document centralisatie",
+      description:
+        "Een beveiligd platform voor al uw documenten, overal en altijd toegankelijk - ongeacht uw technische vaardigheden.",
+      component: DocumentFlow,
+      componentProps: documentFlowProps,
+      stats: [
+        { value: "100%", label: "Gecentraliseerde documenten" },
+        { value: "24/7", label: "Beveiligde toegang" },
+      ],
+      benefits: [
+        "Centrale informatiebron",
+        "Intelligente classificatie",
+        "Versiebeheer",
+        "Flexibele toegangscontrole",
+      ],
+    },
+    {
+      title: "Data-gedreven besluitvorming",
+      description:
+        "Transformeer uw documenten in bruikbare inzichten met onze geavanceerde AI, voor snellere en beter geïnformeerde strategische beslissingen.",
+      component: TaskTimeline,
+      componentProps: aiAssistantProps,
+      stats: [
+        { value: "45%", label: "Besluitvormingskwaliteit" },
+        { value: "24/7", label: "AI-analyse" },
+      ],
+      benefits: [
+        "Voorspellende analyses",
+        "Strategische aanbevelingen",
+        "Marktmonitoring",
+        "Prestatiemonitoring",
+      ],
+      link: {
+        text: "Ontdek onze AI",
+        url: "/nl/features/ai-assistant",
+      },
+    },
+    {
+      title: "Compliance & Governance",
+      description:
+        "Bestuur uw raad met aangepaste governance tools, inclusief elektronische handtekening en geautomatiseerde compliance controle.",
+      component: FeatureHighlight,
+      componentProps: gouvernanceComplianceProps,
+      stats: [
+        { value: "100%", label: "Compliance" },
+        { value: "40%", label: "Administratieve tijdsbesparing" },
+      ],
+      benefits: [
+        "Geautomatiseerde controles",
+        "Elektronische handtekening",
+        "Rechtenbeheer",
+        "Audit trail",
+      ],
+    },
+  ],
+};
+
+const timelineProps = {
+  texts: {
+    title: "De bestuurscyclus",
+    subtitle: "Beheers elke fase van uw governance",
+    cta: "Nu beginnen"
+  },
+  timelineSteps: [
+    {
+      phase: "Voorbereiding",
+      title: "Geoptimaliseerde voorbereiding",
+      icon: "📋",
+      color: "from-blue-500 to-primary",
+      features: [
+        {
+          title: "Geautomatiseerde agenda's",
+          description: "Efficiënte creatie en verspreiding van agenda's.",
+          icon: "📅"
+        },
+        {
+          title: "Documentbeheer", 
+          description: "Veilige organisatie en delen van essentiële documenten.",
+          icon: "📁"
+        },
+        {
+          title: "AI-analyse",
+          description: "Ondersteuning van bestuurders met data-gedreven inzichten.",
+          icon: "🤖"
+        }
+      ]
+    },
+    {
+      phase: "Tijdens de vergadering",
+      title: "Live samenwerking",
+      icon: "🤝",
+      color: "from-primary to-blue-600",
+      features: [
+        {
+          title: "Synchrone samenwerking",
+          description: "Realtime annotaties en uitwisselingen in een beveiligde omgeving.",
+          icon: "✏️"
+        },
+        {
+          title: "Besluitvorming",
+          description: "Directe opvolging van besluiten en acties.",
+          icon: "📝"
+        }
+      ]
+    },
+    {
+      phase: "Opvolging",
+      title: "Post-vergadering beheer",
+      icon: "✅",
+      color: "from-blue-600 to-primary",
+      features: [
+        {
+          title: "Geautomatiseerde notulen",
+          description: "Directe generatie van notulen met geïntegreerde besluiten.",
+          icon: "⚡"
+        },
+        {
+          title: "Actie-opvolging",
+          description: "Toewijzing en monitoring van post-vergadering taken.",
+          icon: "📋"
+        },
+        {
+          title: "Geïntegreerde communicatie",
+          description: "Realtime updates, vereenvoudigde stemmingen en enquêtes.",
+          icon: "💬"
+        }
+      ]
+    }
+  ]
+};
+
+const securityPreviewProps = {
+  texts: {
+    badge: "Maximale beveiliging",
+    title: "Uw veiligheid, onze topprioriteit",
+    subtitle: "Geavanceerde bescherming voor uw gevoelige gegevens",
+    cta: "Meer over beveiliging",
+    features: [
+      {
+        icon: "🔒",
+        title: "Versterkte beveiliging",
+        description: "Maximale bescherming van uw vertrouwelijke informatie"
+      },
+      {
+        icon: "🔐",
+        title: "Twee-factor authenticatie", 
+        description: "Versterkte toegangsbeveiliging"
+      },
+      {
+        icon: "👥",
+        title: "Toegangscontrole",
+        description: "Gedetailleerd rechtenbeheer en volledige traceerbaarheid"
+      }
+    ]
+  }
+};
+
+const personasProps = {
+  texts: {
+    title: "Een oplossing voor elke rol",
+    subtitle: "Govrn biedt een op maat gemaakte ervaring voor elke governance stakeholder, met optimalisatie van besluitvorming en operationele efficiëntie.",
+    cta: "Ontdek uw oplossing",
+    learnMore: "Meer informatie"
+  },
+  personas: [
+    {
+      role: "Directie",
+      description: "Voorzie uw raad van bestuur van een krachtige en intuïtieve tool om betrokkenheid en collectieve effectiviteit te stimuleren.",
+      icon: "👔",
+      features: [
+        "Realtime engagement monitoring",
+        "Strategische beslissingsondersteuning", 
+        "Prestatie-analyse",
+        "Executive dashboards"
+      ],
+      link: "/nl/for/ceo"
+    },
+    {
+      role: "Algemeen Secretariaat",
+      description: "Vereenvoudig de organisatie en opvolging van vergaderingen terwijl u zorgt voor vlotte communicatie tussen stakeholders.",
+      icon: "📊",
+      features: [
+        "Geautomatiseerde planning",
+        "Documentbeheer",
+        "Actie-opvolging", 
+        "Effectieve communicatie"
+      ],
+      link: "/nl/for/board-secretary"
+    },
+    {
+      role: "Bestuurders",
+      description: "Krijg toegang tot een intuïtief platform dat u ondersteunt in uw taken en uw besluitvorming vereenvoudigt.",
+      icon: "🎯",
+      features: [
+        "Eenvoudige documenttoegang",
+        "Geoptimaliseerde voorbereiding",
+        "Elektronisch stemmen",
+        "Strategische analyses"
+      ],
+      link: "/nl/for/board-member"
+    },
+    {
+      role: "Juridische Directie",
+      description: "Profiteer van een beveiligde oplossing die uw raad en organisatie effectief beschermt.",
+      icon: "⚖️",
+      features: [
+        "Compliance controle",
+        "Risicobeheer",
+        "Digitale kluis",
+        "Volledige traceerbaarheid"
+      ],
+      link: "/nl/for/general-counsel"
+    }
+  ]
+};
+
+const testimonialsProps = {
+  texts: {
+    title: "Zij vertrouwen op ons",
+    subtitle: "Ontdek hoe organisaties hun governance transformeren met Govrn",
+    cta: "Alle succesverhalen"
+  },
+    testimonials: [
+    {
+      quote: "Govrn heeft onze governance <strong>gerevolutioneerd</strong> door <strong>efficiëntie</strong> en <strong>duidelijkheid</strong> in onze processen te brengen.",
+      author: "Lore Werbrouck",
+      position: "Juridisch Directeur",
+      company: "Van de Velde",
+      image: "/vdv-lore-portrait.jpg",
+      link: "/nl/case-studies/van-de-velde"
+    },
+    {
+      quote: "Govrn heeft ons documentbeheer <strong>getransformeerd</strong>, waardoor onze vergaderingen <strong>efficiënter</strong> en meer <strong>besluitgericht</strong> zijn geworden.",
+      author: "Pierre Hermant",
+      position: "CEO",
+      company: "Finance & Invest Brussels",
+      image: "/fib-pierre.webp",
+      link: "/nl/case-studies/finance-invest-brussels"
+    },
+    {
+      quote: "Govrn vertegenwoordigt de <strong>toekomst</strong> van governance, met een combinatie van <strong>gebruiksgemak</strong> en <strong>kunstmatige intelligentie</strong>.",
+      author: "Nathalie Byl",
+      position: "Legal & Compliance Manager",
+      company: "Care Property Invest",
+      image: "/careproperty-logo.png",
+      link: "/nl/case-studies/care-property-invest"
+    }
+  ]
+};
+
+const faqProps = {
+  texts: {
+    title: "Veelgestelde vragen",
+    subtitle: "Antwoorden op de meest gestelde vragen over Govrn",
+    faqs: [
+      {
+        question: "Hoe past Govrn zich aan verschillende niveaus van digitale volwassenheid aan?",
+        answer: "De intuïtieve interface van Govrn stelt alle bestuurders in staat om effectief deel te nemen, ongeacht hun technologisch niveau. Ons platform biedt geleidelijke onboarding, gepersonaliseerde training en toegankelijke tools voor soepele samenwerking."
+      },
+      {
+        question: "Is Govrn AVG-compliant?",
+        answer: "Ja, Govrn voldoet volledig aan de AVG en past strikte gegevensbeschermingsmaatregelen toe om de vertrouwelijkheid van uw informatie te waarborgen."
+      },
+      {
+        question: "Hoe kunnen we onze bestaande documenten importeren?",
+        answer: "Govrn biedt verschillende importmethoden: batch upload, drag-and-drop en integratie met uw huidige opslagoplossingen."
+      },
+      {
+        question: "Kunnen processen worden aangepast?",
+        answer: "Absoluut! Govrn past zich aan uw specifieke behoeften aan met uitgebreide aanpassingsmogelijkheden."
+      },
+      {
+        question: "Welke ondersteuning biedt u?",
+        answer: "Onze ondersteuning past zich aan uw behoeften aan: van standaard e-mailondersteuning tot premium 24/7 support met een toegewijde accountmanager."
+      },
+      {
+        question: "Is er een opslaglimiet?",
+        answer: "Limieten variëren per pakket: ruime opslag in standaard en onbeperkt voor Enterprise-aanbiedingen."
+      }
+    ]
+  }
+};
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  name: "Govrn - Veelgestelde vragen",
+  inLanguage: "nl",
+  mainEntity: faqProps.texts.faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
+const ctaProps = {
+  texts: {
+    title: "Klaar om uw governance te transformeren?",
+    subtitle: "Sluit u aan bij de organisaties die innoveren met Govrn",
+    cta1: "Demo aanvragen",
+    cta2: "Contact opnemen"
+  },
+  links: {
+    cta1: "/nl/request-demo",
+    cta2: "/nl/contact"
+  }
+};
+---
+
+<Layout
+  title="Govrn - Kunstmatige intelligentie voor uw governance"
+  description="Transformeer uw governance met Govrn, het AI-platform dat uw processen optimaliseert, samenwerking versterkt en innovatie stimuleert."
+  structuredData={structuredData}
+>
+  <main class="overflow-hidden">
+    <Hero {...hero} />
+    <Stats stats={stats} />
+    <Features {...featuresProps} />
+    <FeatureShowcase {...featureShowcaseProps} />
+    <Timeline {...timelineProps} />
+    <SecurityPreview {...securityPreviewProps} />
+    <Personas {...personasProps} />
+    <Testimonials {...testimonialsProps} />
+    <FAQ {...faqProps} />
+    <CTA {...ctaProps} />
+  </main>
+</Layout>
+
+<style>
+  main {
+    width: 100%;
+  }
+</style>

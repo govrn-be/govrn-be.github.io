@@ -1,0 +1,665 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { supportFaqs } from '../../data/faq-data';
+
+import PricingTiers from '../../components/pricing/PricingTiers.astro';
+const supportServices = [
+  {
+    icon: "👥",
+    title: "Persoonlijke begeleiding",
+    description: "Op maat gemaakt onboardingprogramma aangepast aan de behoeften van uw bestuur",
+    features: [
+      "Initiële configuratie",
+      "Gegevensmigratie", 
+      "Procesoptimalisatie",
+      "Integratie-implementatie"
+    ]
+  },
+  {
+    icon: "🎓",
+    title: "Uitgebreide trainingen",
+    description: "Diepgaande training voor leden en beheerders",
+    features: [
+      "Live sessies",
+      "On-demand tutorials",
+      "Best practices workshops",
+      "Opfriscursussen"
+    ]
+  },
+  {
+    icon: "🛟",
+    title: "Doorlopende ondersteuning",
+    description: "Multi-channel ondersteuning voor uw succes",
+    features: [
+      "24/7 technische support",
+      "Dedicated accountmanager",
+      "Regelmatige follow-ups",
+      "Prioritaire probleemoplossing"
+    ]
+  }
+];
+
+const featureCategories = [
+  {
+    title: "Vergaderfunctionaliteiten",
+    features: [
+      "Agenda opstellen",
+      "Documentbeheer",
+      "Taakbeheer",
+      "Dossierhulpmiddelen",
+      "Elektronisch stemmen",
+      "AI-ondersteunde notulen"
+    ]
+  },
+  {
+    title: "Post-vergadertools",
+    features: [
+      "Documentenbibliotheek",
+      "Elektronische handtekening",
+      "Commissiebeheer"
+    ]
+  },
+  {
+    title: "Samenwerking & Governance",
+    features: [
+      "Real-time samenwerking",
+      "Compliance tools",
+      "AI & Analytics",
+      "Versterkte beveiliging"
+    ]
+  }
+];
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "name": "Govrn - Prijzen FAQ",
+  "inLanguage": "nl",
+  mainEntity: supportFaqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
+const pricingTexts = {
+  featureCategories: [
+  {
+    name: "Voor de vergadering",
+    features: [
+      {
+        name: "Agenda opstellen",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Agenda-integratie",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Dossieraantekeningen",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Dossier aanmaken",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Document annotatie",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Documentbeheer",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "E-handtekening delegatie",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Taakbeheer",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+    ],
+  },
+  {
+    name: "Tijdens de vergadering",
+    features: [
+      {
+        name: "Acties",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Live annotatie",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Intuïtieve interface",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Bestanden delen",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "Notulen opstellen",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "AI notulen en transcriptie",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Enquêtes",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Privéchat",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Elektronisch stemmen",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+    ],
+  },
+  {
+    name: "Na de vergadering",
+    features: [
+      {
+        name: "Documentenbibliotheek",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "E-handtekening (Notulen, Documenten)",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Algemene governance",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Subcommissies",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+    ],
+  },
+  {
+    name: "Bestuurstools",
+    features: [
+      {
+        name: "Ledenlijst en profielen",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "Merkpersonalisatie",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "E-mail integratie",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "E-handtekening integratie",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "iOS en Android apps",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Mandaatbeheer",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "Multi-board beheer",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Meertalig",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Offline toegang",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Eenvoudige gebruikerslijst",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+    ],
+  },
+  {
+    name: "Analytics & AI",
+    features: [
+      {
+        name: "Geavanceerde analyses",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "AI Assistent",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "AI Zoeken",
+        essential: "Basis",
+        pro: "Geavanceerd",
+        enterprise: "Op maat",
+      },
+      {
+        name: "Bestuursevaluatie",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "KPI's en audit trail",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+    ],
+  },
+  {
+    name: "Compliance & Governance",
+    features: [
+      {
+        name: "Bedrijfsspecifieke compliance",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "Financiële diensten",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "Secretariële controles (Quorum, etc.)",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "Multi-factor authenticatie",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Farmaceutische diensten",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "Beveiligde opslag",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Sectorale compliance",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "Telecomdiensten",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+    ],
+  },
+  {
+    name: "Beveiliging",
+    features: [
+      {
+        name: "Geavanceerde toegangscontrole",
+        essential: false,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Data-encryptie in rust",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "End-to-end encryptie",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "IP-whitelisting",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "Rol-gebaseerde toegang",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Beveiligingsauditlogs",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "SSO-integratie",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+    ],
+  },
+  {
+    name: "Ondersteuning",
+    features: [
+      {
+        name: "24/7 support",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "Dedicated klantsucces",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+      {
+        name: "Chat en e-mail",
+        essential: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Prioritaire ondersteuning",
+        essential: false,
+        pro: false,
+        enterprise: true,
+      },
+    ],
+  },
+], plans: [
+  {
+    name: "Essentieel",
+    price: "149",
+    description:
+      "Perfect voor kleine besturen en organisaties die beginnen met essentiële governance tools.",
+    limits: "Inclusief 1 bestuur en 1 commissie",
+    popular: false,
+    features: [
+      "Onbeperkt aantal gebruikers",
+      "Agenda opstellen",
+      "Documentbeheer",
+      "Dossier aanmaken",
+      "Documentenbibliotheek",
+      "Privéchat",
+      "Algemene governance",
+      "Beveiligde opslag en multi-factor authenticatie",
+      "Chat en e-mail support",
+      "Basis AI zoekfunctie ✨"
+    ],
+  },
+  {
+    name: "Professional",
+    price: "449",
+    description:
+      "Ideaal voor groeiende organisaties die geavanceerde samenwerkings- en compliance tools nodig hebben.",
+    limits: "Inclusief 2 besturen en 2 commissies per bestuur",
+    popular: true,
+    features: [
+      "Alles van Essentieel, plus:",
+      "Taakbeheer",
+      "Document annotatie",
+      "Stemtools",
+      "E-handtekening (Notulen en documenten)",
+      "Subcommissies ondersteuning",
+      "Enquêtes",
+      "Document samenwerking (bewerken en opmerkingen)",
+      "Belangrijkste regionale compliance tools",
+      "Geavanceerde toegangscontrole en rechten",
+      "Prioritaire e-mail en telefoon support",
+      "Geavanceerde AI notulen ✨",
+      "AI document analyse en inzichten ✨",
+      "Geavanceerd AI zoeken ✨"
+    ],
+  },
+  {
+    name: "Enterprise",
+    price: "Op maat",
+    description:
+      "Voor grote organisaties met complexe behoeften en aangepaste governance vereisten.",
+    limits: "Onbeperkt aantal besturen en commissies",
+    popular: false,
+    features: [
+      "Alles van Professional, plus:",
+      "Document- en vergadersjablonen",
+      "Geavanceerde analyses en inzichten",
+      "Geavanceerde e-handtekening",
+      "Geavanceerde samenwerkingstools",
+      "Sectorale compliance: Financiële diensten, telecom, farma",
+      "SSO-integratie",
+      "24/7 support en dedicated klantsuccesmanager",
+      "Sectorspecifieke AI modellen ✨",
+      "AI governance risico-analyse ✨",
+      "Voorspellende bestuursprestatieanalyse ✨",
+      "Geavanceerde natuurlijke taalverwerking voor meertalige ondersteuning ✨"
+    ],
+  },
+], planTexts: {
+  requestQuote: "Offerte aanvragen",
+  billedAnnually: "per jaar",
+  mostPopular: "Meest gekozen",
+  month: "maand",
+  
+},featureComparison: {
+    title: "Vergelijkingstabel",
+    subtitle: "Ontdek in detail de functies van elk pakket om de beste keuze te maken"
+  } };
+
+const faqs = [
+    {
+      question: "Welke training biedt u aan?",
+      answer: "We bieden uitgebreide trainingsprogramma's met live sessies, videohandleidingen, documentatie en aangepaste workshops. Onze training behandelt alles, van basisnavigatie tot geavanceerde functies en best practices."
+    },
+    {
+      question: "Hoe lang duurt het onboardingproces?",
+      answer: "De onboarding duurt meestal 2 tot 4 weken, afhankelijk van de grootte en behoeften van uw organisatie. We begeleiden u door het hele proces voor een soepele overgang."
+    },
+    {
+      question: "Biedt u doorlopende ondersteuning na implementatie?",
+      answer: "Ja, we bieden doorlopende ondersteuning via verschillende kanalen: e-mail, telefoon en live chat. Enterprise klanten krijgen een dedicated klantsuccesmanager voor persoonlijke ondersteuning."
+    },
+    {
+      question: "Kunt u ons helpen met gegevensmigratie?",
+      answer: "Absoluut! Ons team helpt u bij het migreren van bestaande documenten en gegevens naar Govrn, waarbij we een soepele overgang garanderen met behoud van data-integriteit en beveiliging."
+    }
+];
+
+---
+
+<Layout title="Prijzen - Govrn Bestuurssoftware" description="Eenvoudige en transparante prijzen vanaf €149/maand. Kies het ideale pakket voor uw bestuur." structuredData={structuredData}>
+  <main class="pt-16">
+    <!-- Header sectie -->
+    <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(57,153,222,0.1),transparent_50%)]"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-3xl mx-auto">
+          <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
+            Eenvoudige en
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
+              transparante
+            </span>
+            prijzen
+          </h1>
+          <p class="text-xl text-gray-600 leading-relaxed">
+            Kies het pakket dat bij uw behoeften past. Alle pakketten bevatten essentiële functies met flexibele opties.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <PricingTiers {...pricingTexts} />
+      </div>
+    </section>
+
+    <!-- Support & Training sectie -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900">Complete support en training</h2>
+          <p class="mt-4 text-xl text-gray-600">Wij zetten ons in voor uw succes met persoonlijke begeleiding</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          {supportServices.map(service => (
+            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+              <div class="text-4xl mb-6">{service.icon}</div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
+              <p class="text-gray-600 mb-6">{service.description}</p>
+              <ul class="space-y-3">
+                {service.features.map(feature => (
+                  <li class="flex items-center text-gray-600">
+                    <svg class="h-5 w-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Support -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900">FAQ Support en Training</h2>
+          <p class="mt-4 text-xl text-gray-600">Veelgestelde vragen over onze support- en trainingsdiensten</p>
+        </div>
+
+        <div class="space-y-8">
+          {faqs.map(faq => (
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="text-lg font-semibold text-gray-900">{faq.question}</h3>
+              <p class="mt-2 text-gray-600">{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Call-to-action -->
+    <section class="bg-gradient-to-br from-primary to-blue-600 py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold text-white mb-8">
+          Klaar om uw bestuur te transformeren?
+        </h2>
+        <p class="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
+          Sluit u aan bij toonaangevende organisaties die Govrn vertrouwen
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/request-demo"
+            class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-primary bg-white hover:bg-gray-50 transition-colors duration-200"
+          >
+            Demo aanvragen
+          </a>
+          <a
+            href="/contact"
+            class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white border-2 border-white hover:bg-white/10 transition-colors duration-200"
+          >
+            Contact sales team
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

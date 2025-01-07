@@ -1,0 +1,120 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import GuideHeader from '../../../components/guides/GuideHeader.astro';
+import GuideStep from '../../../components/guides/GuideStep.astro';
+import GuideSubSection from '../../../components/guides/GuideSubSection.astro';
+import GuideStepList from '../../../components/guides/GuideStepList.astro';
+import ProTip from '../../../components/guides/ProTip.astro';
+
+const groupSetupSteps = [
+  "Ga naar Leden > Groepen in uw dashboard",
+  "Klik op 'Groep aanmaken' om een commissie in te stellen",
+  "Geef uw groep een naam (bijv: 'financiële commissie', 'auditcommissie')",
+  "Stel toegangsrechten in voor historische gegevens",
+  "Sla de groepsinstellingen op"
+];
+
+const inviteMembersSteps = [
+  "Navigeer naar de sectie Leden",
+  "Klik op 'Leden uitnodigen'",
+  "Voer de e-mailadressen van de leden in",
+  "Selecteer de juiste rol (beheerder, lid of waarnemer)",
+  "Verstuur de uitnodigingen"
+];
+
+const beforeMeetingSteps = [
+  "Plan de vergadering met datum, tijd en locatie",
+  "Stel een gedetailleerde agenda op met kernpunten",
+  "Upload en organiseer relevante documenten",
+  "Stuur uitnodigingen naar deelnemers"
+];
+
+const duringMeetingSteps = [
+  "Neem presentielijst door en controleer quorum",
+  "Volg de gestructureerde agenda",
+  "Leg belangrijke discussies vast",
+  "Gebruik real-time documentensamenwerking",
+  "Noteer actiepunten en besluiten"
+];
+
+const afterMeetingSteps = [
+  "Rond de notulen af",
+  "Laat notulen ondertekenen door vereiste deelnemers",
+  "Deel goedgekeurde notulen en besluiten",
+  "Monitor voortgang van actiepunten",
+  "Begin met voorbereidingen volgende vergadering"
+];
+---
+
+<Layout title="Aan de slag met Govrn - Complete handleiding" description="Welkom bij Govrn, uw complete platform voor effectief bestuur! Deze handleiding begeleidt u door de essentiële stappen om te starten en effectieve bestuursvergaderingen te organiseren.">
+  <main class="pt-16">
+    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <GuideHeader
+        title="Aan de slag met Govrn: uw complete handleiding"
+        description="Welkom bij Govrn, uw complete platform voor effectief bestuur! Deze handleiding begeleidt u door de essentiële stappen om te starten en effectieve bestuursvergaderingen te organiseren."
+      />
+
+      <GuideStep
+        number={1}
+        title="Stel uw groepen in"
+        description="Met groepen in Govrn kunt u uw bestuurders organiseren in commissies, zodat de juiste mensen toegang hebben tot de juiste informatie."
+      >
+        <GuideSubSection title="Commissies instellen">
+          <GuideStepList items={groupSetupSteps} />
+        </GuideSubSection>
+
+        <ProTip
+          tip="Denk bij het instellen van groepen zorgvuldig na over toegangsrechten tot historische gegevens om een passende informatiedeling te waarborgen met behoud van vertrouwelijkheid."
+        />
+      </GuideStep>
+
+      <GuideStep
+        number={2}
+        title="Nodig uw bestuurders uit"
+        description="Voeg uw bestuurders toe aan Govrn met de juiste rollen en rechten."
+      >
+        <GuideSubSection title="Proces voor het uitnodigen van leden">
+          <GuideStepList items={inviteMembersSteps} />
+        </GuideSubSection>
+
+        <ProTip
+          tip="Wijs rollen zorgvuldig toe: bestuurders hebben volledige systeemtoegang, leden hebben standaardtoegang tot hun toegewezen groepen, en waarnemers hebben beperkte inzagerechten."
+        />
+      </GuideStep>
+
+      <GuideStep
+        number={3}
+        title="Beheers de vergadercyclus"
+        description="Succesvolle bestuursvergaderingen verlopen in drie fasen: voor, tijdens en na. Hier leest u hoe u elke fase effectief beheert met Govrn."
+      >
+        <GuideSubSection title="Voor de vergadering">
+          <p class="text-gray-600 mb-4">Goede voorbereiding zorgt voor productieve vergaderingen. Volg deze stappen voor succes:</p>
+          <GuideStepList items={beforeMeetingSteps} />
+        </GuideSubSection>
+
+        <GuideSubSection title="Tijdens de vergadering">
+          <p class="text-gray-600 mb-4">Gebruik de real-time functies van Govrn om discussies en besluitvorming te faciliteren:</p>
+          <GuideStepList items={duringMeetingSteps} />
+        </GuideSubSection>
+
+        <GuideSubSection title="Na de vergadering">
+          <p class="text-gray-600 mb-4">Zorg voor opvolging en behoud momentum met deze acties na de vergadering:</p>
+          <GuideStepList items={afterMeetingSteps} />
+        </GuideSubSection>
+
+        <ProTip
+          tip="Gebruik Govrn's documentsamenwerkingsfuncties tijdens alle vergaderfasen om één bron van waarheid te behouden voor alle bestuursdocumenten."
+        />
+      </GuideStep>
+
+      <!-- Conclusie -->
+      <div class="bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-xl p-8 border border-primary/10">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Klaar voor effectief bestuur</h2>
+        <p class="text-lg text-gray-600 leading-relaxed mb-6">
+          U bent nu toegerust om uw bestuur effectief te leiden met Govrn. Onthoud dat bestuursmanagement een continu proces is, en Govrn staat klaar om u bij elke stap te ondersteunen.
+        </p>
+        <p class="text-lg font-medium text-primary">Op weg naar beter bestuur! 🎉</p>
+      </div>
+    </article>
+  </main>
+</Layout>

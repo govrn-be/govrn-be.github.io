@@ -56,6 +56,7 @@ export default defineConfig({
         locales: {
           en: 'en', // The `defaultLocale` value must present in `locales` keys
           fr: 'fr',
+          nl: 'nl',
         },
         defaultLocale: "en",
        
@@ -119,6 +120,9 @@ export default defineConfig({
     locales: ["en", {
       path: "fr",
       codes: ["fr", "fr-FR", "fr-CA", "fr-BE", "fr-CH", "fr-DZ", "fr-FR", "fr-GF", "fr-GP", "fr-MQ", "fr-RE", "fr-YT"]
+    }, {
+      path: "nl",
+      codes: ["nl", "nl-NL", "nl-BE", "nl-SR", "nl-AW", "nl-CW", "nl-SX", "nl-BQ"]
     }],
     defaultLocale: 'en',
     routing: {

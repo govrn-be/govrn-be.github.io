@@ -1,0 +1,329 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+import CTA from '../../../../components/CTA.astro';
+
+const responsibilities = [
+  {
+    icon: "📅",
+    title: "Vergaderbeheer",
+    description: "Optimaliseer de volledige vergadercyclus, van planning tot opvolging"
+  },
+  {
+    icon: "📄", 
+    title: "Documentbeheer",
+    description: "Beheers bestuursdocumenten en hun geschiedenis efficiënt"
+  },
+  {
+    icon: "✍️",
+    title: "Notulen opstellen",
+    description: "AI-tools voor nauwkeurige en efficiënte verslaglegging"
+  },
+  {
+    icon: "⚖️",
+    title: "Compliance ondersteuning", 
+    description: "Waarborg naleving van governance- en regelgevingsvereisten"
+  }
+];
+
+const features = [
+  {
+    title: "Vergaderbeheersysteem",
+    description: "Complete toolkit voor het plannen en uitvoeren van bestuursvergaderingen",
+    icon: "🗓️",
+    benefits: [
+      "Agenda-integratie",
+      "Stapsgewijze agendaopbouw",
+      "Versiebeheer",
+      "Vergadersjablonen"
+    ]
+  },
+  {
+    title: "Geïntegreerde AI-assistent",
+    description: "Slimme tools voor vergadervoorbereiding en -opvolging",
+    icon: "🤖",
+    benefits: [
+      "Vergadertranscriptie",
+      "Intelligente notulenvorming",
+      "Historische context",
+      "Sjabloonvoorstellen"
+    ]
+  },
+  {
+    title: "Documentbeheercentrum",
+    description: "Beveiligd platform voor het beheer van alle bestuursdocumenten",
+    icon: "📚",
+    benefits: [
+      "Centrale opslag",
+      "Geautomatiseerde distributie",
+      "Toegangsmonitoring",
+      "Versiegeschiedenis"
+    ]
+  }
+];
+
+const workflowSteps = [
+  {
+    phase: "Voorafgaand aan vergadering",
+    icon: "📋",
+    tasks: [
+      "Planning met agendakoppeling",
+      "Opstellen en delen van agenda's",
+      "Organiseren van bestuursdocumenten",
+      "Automatische herinneringen"
+    ]
+  },
+  {
+    phase: "Tijdens vergadering",
+    icon: "💼",
+    tasks: [
+      "AI-ondersteunde notulering",
+      "Aanwezigheids- en quorumregistratie",
+      "Vastleggen van besluiten",
+      "Actiepunten vastleggen"
+    ]
+  },
+  {
+    phase: "Na vergadering",
+    icon: "✅",
+    tasks: [
+      "Afronding en verspreiding notulen",
+      "Verzamelen e-handtekeningen",
+      "Opvolging besluiten",
+      "Voorbereiden communicatie"
+    ]
+  }
+];
+
+const industries = [
+  {
+    id: "financiele-diensten",
+    name: "Financiële dienstverlening",
+    icon: "🏦",
+    description: "Gespecialiseerde tools voor documentbeheer en compliance in financiële raden",
+    features: [
+      "Monitoring regelgeving",
+      "Beveiligd documentbeheer",
+      "Audit trail behoud"
+    ]
+  },
+  {
+    id: "gezondheidszorg",
+    name: "Gezondheidszorg",
+    icon: "🏥",
+    description: "Zorgsector-conforme oplossingen voor bestuursadministratie",
+    features: [
+      "Medische compliance tools",
+      "Klinische governance support",
+      "Medische stafcoördinatie"
+    ]
+  },
+  {
+    id: "vastgoed",
+    name: "Vastgoed",
+    icon: "🏢",
+    description: "Geoptimaliseerde tools voor vastgoedbestuursadministratie",
+    features: [
+      "Portfoliodocumentatie",
+      "Investeringsmonitoring",
+      "Vastgoedcompliance"
+    ]
+  }
+];
+---
+
+<Layout title="Bestuurssoftware voor secretarissen | Govrn Platform" description="Optimaliseer uw bestuursadministratie met onze complete software, ontworpen voor verhoogde efficiëntie, compliance en samenwerking.">
+  <main class="pt-16">
+    <!-- Hero sectie -->
+    <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <div class="inline-flex items-center rounded-full px-4 py-1 text-sm font-medium bg-primary/10 text-primary mb-8">
+              Oplossingen voor bestuurssecretarissen
+            </div>
+            <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
+              Transformeer uw bestuurswerk met
+              <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
+                intelligente tools
+              </span>
+            </h1>
+            <p class="text-xl text-gray-600 leading-relaxed mb-12">
+              Vereenvoudig uw taken met AI-tools die de efficiëntie verhogen, compliance waarborgen en complexe processen stroomlijnen.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="/nl/request-demo"
+                class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                Demo aanvragen
+              </a>
+              <a
+                href="/nl/contact"
+                class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-gray-900 bg-white border-2 border-gray-200 hover:border-primary/20 hover:bg-gray-50 transition-colors duration-200"
+              >
+                Contact team
+              </a>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-3xl transform rotate-3"></div>
+            <img
+              src="/realestate.jpg"
+              alt="Govrn Interface"
+              class="relative rounded-2xl shadow-2xl"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kernverantwoordelijkheden -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Vereenvoudig uw kerntaken
+          </h2>
+          <p class="text-xl text-gray-600">
+            Complete tools om te excelleren in uw rol als bestuurssecretaris
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {responsibilities.map(item => (
+            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+              <div class="text-3xl mb-4">{item.icon}</div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">{item.title}</h3>
+              <p class="text-gray-600">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Functionaliteiten -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Toegewijde functionaliteiten
+          </h2>
+          <p class="text-xl text-gray-600">
+            Tools specifiek ontworpen voor bestuurssecretarissen en -beheerders
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          {features.map(feature => (
+            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+              <div class="text-3xl mb-4">{feature.icon}</div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
+              <p class="text-gray-600 mb-6">{feature.description}</p>
+              <ul class="space-y-3">
+                {feature.benefits.map(benefit => (
+                  <li class="flex items-center text-gray-600">
+                    <svg class="h-5 w-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    {benefit}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Processtappen -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Geoptimaliseerd vergaderproces
+          </h2>
+          <p class="text-xl text-gray-600">
+            Complete ondersteuning tijdens de hele vergadercyclus
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          {workflowSteps.map(step => (
+            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+              <div class="flex items-center space-x-3 mb-6">
+                <div class="text-3xl">{step.icon}</div>
+                <h3 class="text-xl font-bold text-gray-900">{step.phase}</h3>
+              </div>
+              <ul class="space-y-4">
+                {step.tasks.map(task => (
+                  <li class="flex items-start">
+                    <svg class="h-5 w-5 text-primary mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span class="text-gray-600">{task}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Sectorspecifiek -->
+    <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            Sectoroplossingen
+          </h2>
+          <p class="text-xl text-gray-600">
+            Ontdek onze tools en functies aangepast aan de specifieke eisen van uw sector
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          {industries.map(industry => (
+            <a
+              href={`/nl/for/board-secretary/industry/${industry.id}`}
+              class="group bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+            >
+              <div class="text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                {industry.icon}
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors">
+                {industry.name}
+              </h3>
+              <p class="text-gray-600 mb-6">{industry.description}</p>
+              <ul class="space-y-3 mb-6">
+                {industry.features.map(feature => (
+                  <li class="flex items-center text-gray-600">
+                    <svg class="h-5 w-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <div class="inline-flex items-center text-primary group-hover:translate-x-2 transition-transform duration-300">
+                Bekijk sectoroplossingen
+                <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+    <CTA />
+  </main>
+</Layout>

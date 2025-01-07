@@ -1,0 +1,122 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
+import Layout from '../../../layouts/Layout.astro';
+import BlogContent from '../../../components/blog/BlogContent.astro';
+import BlogCard from '../../../components/blog/BlogCard.astro';
+import CTA from '../../../components/CTA.astro';
+import SharingButtons from '../../../components/socials/SharingButtons.astro';
+
+interface Props {
+  entry: CollectionEntry<'blog'>;
+}
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('blog');
+  return blogEntries.map(entry => ({
+    params: { lang: entry.data.lang, slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { slug, lang } = Astro.params as { slug: string, lang: string };
+
+const posts: CollectionEntry<'blog'>[] = await getCollection('blog');
+const publishedPosts = posts.filter(post => post.data.pubDate <= new Date());
+const sortedPosts = publishedPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const nextPosts = sortedPosts.filter(post => post.slug !== slug).slice(0, 3);
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+
+const formattedDate = entry.data.pubDate.toLocaleDateString('nl-NL', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": entry.data.title,
+  "description": entry.data.description,
+  "datePublished": entry.data.pubDate,
+  "image": "https://govrn.com" + entry.data.image,
+  "inLanguage": "nl",
+  "author": {
+    "@type": "Person",
+    "name": entry.data.author,
+    "url": "https://govrn.com/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Govrn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://govrn.com/logo.webp"
+    }
+  }
+};
+---
+
+<Layout title={`${entry.data.title} | Govrn Blog`} description={entry.data.description} image={entry.data.image} structuredData={structuredData}>
+  <main class="pt-16">
+    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <!-- Hero Afbeelding -->
+      <div class="relative rounded-xl overflow-hidden mb-12 aspect-video">
+        <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent"></div>
+        <img
+          src={entry.data.image}
+          alt={entry.data.title}
+          class="w-full h-full object-cover"
+        />
+      </div>
+
+      <header class="mb-16">
+        <div class="flex items-center justify-between mb-8">
+          <span class="px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
+            {entry.data.category}
+          </span>
+          <time datetime={entry.data.pubDate.toISOString()} class="text-gray-500">
+            {formattedDate}
+          </time>
+        </div>
+        
+        <h1 class="text-4xl font-bold text-gray-900 mb-6">{entry.data.title}</h1>
+        <p class="text-xl text-gray-600 mb-8">{entry.data.description}</p>
+        
+        <div class="flex items-center">
+          <div>
+            <p class="font-medium text-gray-900">{entry.data.author}</p>
+            <p class="text-gray-500">{entry.data.authorRole}</p>
+          </div>
+        </div>
+      </header>
+
+      <BlogContent class="max-w-4xl">
+        <Content />
+      </BlogContent>
+
+      <SharingButtons title={entry.data.title} message={entry.data.description} href={Astro.url.href} />
+      <footer class="mt-16 pt-8 border-t border-gray-200">
+        <div class="flex flex-wrap gap-2">
+          {entry.data.tags.map(tag => (
+            <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
+              {tag}
+            </span>
+          ))}
+        </div>
+      </footer>
+    </article>
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-12">Ontdek Meer Inzichten</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {nextPosts.map(post => (
+            <BlogCard post={post} />
+          ))}
+        </div>
+      </div>
+    </section>
+    <CTA />
+  </main>
+</Layout>

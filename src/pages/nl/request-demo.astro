@@ -1,0 +1,126 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const sectoren = [
+  "Financiële dienstverlening",
+  "Gezondheidszorg", 
+  "Vastgoed",
+  "Productie",
+  "Non-profit",
+  "Onderwijs",
+  "Overig"
+];
+
+const bestuursgroottes = [
+  "1-5 leden",
+  "6-10 leden", 
+  "11-15 leden",
+  "16+ leden"
+];
+
+const voordelen = [
+  {
+    icon: "📊",
+    title: "Live productdemonstratie",
+    description: "Bekijk Govrn in actie met een persoonlijke rondleiding"
+  },
+  {
+    icon: "💡", 
+    title: "Expert consultatie",
+    description: "Ontvang advies op maat voor de behoeften van uw bestuur"
+  },
+  {
+    icon: "💰",
+    title: "Prijsbespreking",
+    description: "Ontdek onze flexibele prijsopties"
+  },
+  {
+    icon: "🚀",
+    title: "Implementatieplan",
+    description: "Leer hoe u kunt starten met Govrn"
+  }
+];
+---
+
+<Layout title="Vraag een demo aan - Govrn Bestuursbeheersoftware" description="Plan een persoonlijke demo om te zien hoe Govrn uw bestuursprocessen kan transformeren met AI-gestuurde inzichten en naadloze samenwerking.">
+  <main class="pt-16">
+    <!-- Hero Sectie -->
+    <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <!-- Linkerkolom - Content -->
+          <div>
+            <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
+              Ervaar de toekomst van
+              <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
+                Bestuursbeheer
+              </span>
+            </h1>
+            <p class="text-xl text-gray-600 leading-relaxed mb-12">
+              Plan een persoonlijke demo om te zien hoe Govrn uw bestuursprocessen kan transformeren met AI-gestuurde inzichten en naadloze samenwerking.
+            </p>
+
+            <div class="grid sm:grid-cols-2 gap-6">
+              {voordelen.map(voordeel => (
+                <div class="flex items-start space-x-4">
+                  <div class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-2xl">
+                    {voordeel.icon}
+                  </div>
+                  <div>
+                    <h2 class="font-semibold text-gray-900">{voordeel.title}</h3>
+                    <p class="text-sm text-gray-600">{voordeel.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Rechterkolom - Formulier -->
+          <div class="bg-white rounded-2xl p-8 shadow-xl border border-gray-100">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8">Plan uw demo</h2>
+            <!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/marketing-lech/30min-1?primary_color=3999de" style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sociale bewijssectie -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8">Vertrouwd door toonaangevende organisaties</h2>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-70">
+            <img
+              src="/vdv-logo.png"
+              alt="Van de Velde"
+              class="h-12 object-contain mx-auto"
+            />
+            <img
+              src="/fib-logo.png"
+              alt="Finance & Invest Brussels"
+              class="h-12 object-contain mx-auto"
+            />
+            <img
+              src="/careproperty-logo.png"
+              alt="Care Property Invest"
+              class="h-12 object-contain mx-auto"
+            />
+            <img
+              src="/fib-logo.png"
+              alt="Ander bedrijf"
+              class="h-12 object-contain mx-auto"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
