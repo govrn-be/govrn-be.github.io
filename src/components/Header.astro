@@ -2,10 +2,6 @@
 import { Image } from "astro:assets";
 import MegaMenu from "./navigation/MegaMenu.astro";
 
-// Get current path and language
-
-
-
 const { transparent = false, hideMenu = false, whiteLogo = false, currentLang = 'en' } = Astro.props;
 const buttonTexts = currentLang === 'fr' ? {
   signIn: "Se connecter",

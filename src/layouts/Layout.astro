@@ -49,9 +49,9 @@ const organisationStructuredData = {
   "vatID": "BE0761625687",
 };
 const currentPath = Astro.url.pathname;
-const currentLang = currentPath.startsWith('/fr/') || currentPath === '/fr' 
+const currentLang = currentPath.startsWith('/fr/') || currentPath.endsWith('/fr') 
   ? 'fr' 
-  : currentPath.startsWith('/nl/') || currentPath === '/nl' 
+  : currentPath.startsWith('/nl/') || currentPath.endsWith('/nl') 
     ? 'nl' 
     : 'en';
 ---
