@@ -128,13 +128,13 @@ interface Props {
           href="https://app.govrn.com"
           target="_blank"
           rel="noopener noreferrer"
-          class="hidden md:inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg text-primary border-2 border-primary/20 hover:bg-primary/5 transition-all duration-200"
+          class="hidden md:inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg text-primary hover:bg-primary/5 transition-all duration-200"
         >
           {buttonTexts.signIn}
         </a>
         <a
           href={buttonTexts.tryPath}
-          class="hidden md:inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg text-white bg-primary hover:bg-primary/90 shadow-sm hover:shadow-md transition-all duration-200"
+          class="hidden md:inline-flex items-center px-6 py-3 text-base font-medium rounded-lg text-white bg-primary hover:bg-primary/90 shadow-sm hover:shadow-md transition-all duration-200"
         >
           {buttonTexts.tryForFree}
         </a>
@@ -142,7 +142,7 @@ interface Props {
         <!-- Mobile Menu Button -->
         <button
           class="md:hidden p-2 rounded-lg hover:bg-gray-50 transition-colors duration-200"
-          id="mobile-menu-button"
+          id="mobile-menu-button-main"
           aria-label="Toggle menu"
         >
           <svg
@@ -166,40 +166,60 @@ interface Props {
   {!hideMenu && (
     <div
       class="hidden md:hidden border-t border-gray-100 bg-white/95 backdrop-blur-sm transition-all duration-300"
-    id="mobile-menu"
-  >
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 space-y-2">
-      {
-        navItems.map((item) => (
-          <>
-            <a
-              href={item.href}
-              class="block px-4 py-2 text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-all duration-200"
-            >
-              {item.label}
-            </a>
-          </>
-        ))
-      }
-      <div class="pt-4 space-y-2">
-        <a
-          href="https://app.govrn.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="block px-4 py-2 text-base font-medium text-gray-700 border-2 border-gray-200 hover:border-primary/20 hover:bg-gray-50 rounded-lg transition-all duration-200"
-        >
-          {buttonTexts.signIn}
-        </a>
-        <a
-          href={buttonTexts.tryPath}
-          class="block px-4 py-2 text-base font-medium text-white bg-primary hover:bg-primary/90 rounded-lg transition-all duration-200"
-        >
-          {buttonTexts.tryForFree}
-        </a>
-          </div>
-        </nav>
-      </div>
-    )}
+      id="mobile-menu"
+    >
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 space-y-2">
+        {
+          navItems.map((item) => (
+            <>
+              <a
+                href={item.href}
+                class="block px-4 py-2 text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-all duration-200"
+              >
+                {item.label}
+              </a>
+            </>
+          ))
+        }
+        <div class="pt-4 space-y-2">
+          <a
+            href="https://app.govrn.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block px-4 py-2 text-base font-medium text-gray-700 border-2 border-gray-200 hover:border-primary/20 hover:bg-gray-50 rounded-lg transition-all duration-200"
+          >
+            {buttonTexts.signIn}
+          </a>
+        </div>
+      </nav>
+    </div>
+  )}
+  <div class="md:hidden flex items-center fixed top-4 right-4 z-50 space-x-2">
+    <button
+      class="p-2 rounded-lg hover:bg-gray-50 transition-colors duration-200 bg-white"
+      id="mobile-menu-button-fixed"
+      aria-label="Toggle menu"
+    >
+      <svg
+        class="h-6 w-6 text-gray-600"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+    <a
+      href={buttonTexts.tryPath}
+      class="inline-flex items-center px-4 py-2 text-base font-medium text-white bg-primary hover:bg-primary/90 rounded-lg shadow-lg transition-all duration-200"
+    >
+      {buttonTexts.tryForFree}
+    </a>
+  </div>
   </header>
 
 <script>
@@ -218,15 +238,21 @@ interface Props {
     console.log(detectLanguage());
     header.dataset.currentLang = detectLanguage();
   }
-  const mobileMenuButton = document.getElementById("mobile-menu-button");
+
+  // Get both mobile menu buttons
+  const mobileMenuButtonMain = document.getElementById("mobile-menu-button-main");
+  const mobileMenuButtonFixed = document.getElementById("mobile-menu-button-fixed");
   const mobileMenu = document.getElementById("mobile-menu");
 
-  // Handle mobile menu toggle
-  mobileMenuButton?.addEventListener("click", () => {
+  // Handle mobile menu toggle for both buttons
+  function toggleMobileMenu() {
     mobileMenu?.classList.toggle("hidden");
     header?.classList.toggle("bg-white");
     header?.classList.toggle("bg-white/95");
-  });
+  }
+
+  mobileMenuButtonMain?.addEventListener("click", toggleMobileMenu);
+  mobileMenuButtonFixed?.addEventListener("click", toggleMobileMenu);
 
   // Handle scroll behavior
   let lastScroll = 0;
@@ -249,6 +275,7 @@ interface Props {
 
     lastScroll = currentScroll;
   });
+
   // Handle mega menu
   document.querySelectorAll('.group').forEach(group => {
     const megaMenu = group.querySelector('div[class*="absolute"]');
