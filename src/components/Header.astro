@@ -3,9 +3,10 @@ import { Image } from "astro:assets";
 import MegaMenu from "./navigation/MegaMenu.astro";
 
 // Get current path and language
-const path = Astro.url.pathname;
-const currentLang = path.startsWith('/fr/') || path === '/fr' ? 'fr' : path.startsWith('/nl/') || path === '/nl' ? 'nl' : 'en';
 
+
+
+const { transparent = false, hideMenu = false, whiteLogo = false, currentLang = 'en' } = Astro.props;
 const buttonTexts = currentLang === 'fr' ? {
   signIn: "Se connecter",
   tryForFree: "Essayer gratuitement",
@@ -65,9 +66,8 @@ interface Props {
   transparent?: boolean;
   hideMenu?: boolean;
   whiteLogo?: boolean;
+  currentLang?: 'en' | 'fr' | 'nl';
 }
-
-const { transparent = false, hideMenu = false, whiteLogo = false } = Astro.props;
 ---
 
 <header
@@ -77,6 +77,7 @@ const { transparent = false, hideMenu = false, whiteLogo = false } = Astro.props
       : 'bg-white/95 backdrop-blur-sm border-b border-gray-100'
     }
   `}
+  data-current-lang={currentLang}
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center py-4">
@@ -206,7 +207,21 @@ const { transparent = false, hideMenu = false, whiteLogo = false } = Astro.props
   </header>
 
 <script>
-  const header = document.querySelector("header");
+  function detectLanguage() {
+    const path = window.location.pathname;
+    return path.startsWith('/fr/') || path === '/fr' 
+      ? 'fr' 
+      : path.startsWith('/nl/') || path === '/nl' 
+        ? 'nl' 
+        : 'en';
+  }
+
+  // Update the header's data attribute with the correct language
+  const header = document.querySelector('header');
+  if (header) {
+    console.log(detectLanguage());
+    header.dataset.currentLang = detectLanguage();
+  }
   const mobileMenuButton = document.getElementById("mobile-menu-button");
   const mobileMenu = document.getElementById("mobile-menu");
 

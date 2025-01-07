@@ -48,6 +48,12 @@ const organisationStructuredData = {
   ],
   "vatID": "BE0761625687",
 };
+const currentPath = Astro.url.pathname;
+const currentLang = currentPath.startsWith('/fr/') || currentPath === '/fr' 
+  ? 'fr' 
+  : currentPath.startsWith('/nl/') || currentPath === '/nl' 
+    ? 'nl' 
+    : 'en';
 ---
 
 <!doctype html>
@@ -96,7 +102,7 @@ const organisationStructuredData = {
     <!-- Global site tag (gtag.js) - Google Analytics -->
   </head>
   <body class="min-h-screen bg-white">
-    <Header transparent={headerTransparent} hideMenu={hideMenu} whiteLogo={whiteLogo} />
+    <Header transparent={headerTransparent} hideMenu={hideMenu} whiteLogo={whiteLogo} currentLang={currentLang} />
     <slot />
     <Footer />
     <CookieBanner />
