@@ -65,7 +65,7 @@ Les outils modernes de gouvernance intègrent l'IA pour faciliter la gestion du 
 - **Support documentaire** : aide à la rédaction des convocations
 - **Recommandations** : conseils contextualisés sur les décisions liées au quorum
 
-[-> En savoir plus sur la gouvernance assistée par l'IA](/features/ai-assistant)
+[-> En savoir plus sur la gouvernance assistée par l'IA](/fr/features/ai-assistant)
 
 ## Quorum et leadership équitable
 
@@ -79,4 +79,4 @@ Le leadership équitable repose sur l'engagement, la transparence et la responsa
 
 ## Conclusion
 
-Le quorum est un élément central d'une bonne gouvernance et d'un leadership équitable. En assurant des décisions légitimes et réfléchies, il construit la confiance et l'intégrité opérationnelle. Les organisations qui respectent ces exigences se positionnent pour agir de manière éthique et durable. Avec l'aide de l'IA, la gestion du quorum devient plus simple et précise que jamais. [Découvrez la gouvernance assistée par l'IA](https://govrn.com/get-started)
+Le quorum est un élément central d'une bonne gouvernance et d'un leadership équitable. En assurant des décisions légitimes et réfléchies, il construit la confiance et l'intégrité opérationnelle. Les organisations qui respectent ces exigences se positionnent pour agir de manière éthique et durable. Avec l'aide de l'IA, la gestion du quorum devient plus simple et précise que jamais. [Découvrez la gouvernance assistée par l'IA](https://govrn.com/fr/try)

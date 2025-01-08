@@ -65,7 +65,7 @@ Moderne bestuurstools integreren nu AI-ondersteuning voor quorumvereisten:
 - **Documentatieondersteuning**: AI helpt bij het opstellen van vergadernotificaties.
 - **Best Practice Aanbevelingen**: AI biedt contextuele begeleiding.
 
-[-> Lees meer over AI-ondersteund bestuur](/features/ai-assistant)
+[-> Lees meer over AI-ondersteund bestuur](/nl/features/ai-assistant)
 
 ## Quorum en Fair Process Leiderschap
 
@@ -79,4 +79,4 @@ Fair process leiderschap benadrukt betrokkenheid, transparantie en verantwoordin
 
 ## Conclusie
 
-Quorum is veel meer dan een formaliteit - het is een hoeksteen van goed bestuur en eerlijk procesleiderschap. Door legitieme, representatieve en doordachte besluitvorming te waarborgen, bouwt quorum aan vertrouwen, verantwoording en operationele integriteit. Met de komst van AI-ondersteuning is het beheer van quorumvereisten efficiënter dan ooit. [Start met AI-ondersteund bestuur](https://govrn.com/get-started)
+Quorum is veel meer dan een formaliteit - het is een hoeksteen van goed bestuur en eerlijk procesleiderschap. Door legitieme, representatieve en doordachte besluitvorming te waarborgen, bouwt quorum aan vertrouwen, verantwoording en operationele integriteit. Met de komst van AI-ondersteuning is het beheer van quorumvereisten efficiënter dan ooit. [Start met AI-ondersteund bestuur](https://govrn.com/nl/try)
