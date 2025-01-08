@@ -4,6 +4,7 @@ interface Props {
     title: string;
     subtitle: string;
     cta: string;
+    ctaLink: string;
   };
   timelineSteps?: {
     phase: string;
@@ -22,7 +23,8 @@ const {
   texts = {
     title: "The Complete Board Meeting Lifecycle",
     subtitle: "Experience seamless board management at every stage",
-    cta: "Start Your Journey"
+    cta: "Start Your Journey",
+    ctaLink: "/try"
   },
   timelineSteps = [
     {
@@ -156,7 +158,7 @@ const {
 
       <!-- Bottom CTA -->
       <div class="mt-20 text-center">
-        <a href="/try" class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 group">
+        <a href={texts.ctaLink} class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 group">
           {texts.cta}
           <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
