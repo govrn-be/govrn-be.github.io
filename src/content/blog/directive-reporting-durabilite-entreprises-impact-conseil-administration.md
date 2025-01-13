@@ -7,7 +7,7 @@ authorRole: "CPTO chez Govrn"
 image: "/csrd-esg-leadership-substainability.jpg"
 category: "Regulatory"
 tags: ["CSRD", "Dynamique du conseil", "Reporting ESG", "Gouvernance d'entreprise", "Durabilité"]
-featured: true
+featured: false
 lang: "fr"
 ---
 

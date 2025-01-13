@@ -7,7 +7,7 @@ authorRole: "CPTO bij Govrn"
 image: "/csrd-esg-leadership-substainability.jpg"
 category: "Regulatory"
 tags: ["CSRD", "Bestuursdynamiek", "ESG-rapportage", "Corporate Governance", "Duurzaamheid"]
-featured: true
+featured: false
 lang: "nl"
 slug: "corporate-sustainability-reporting-directive-impact-bestuurskamers"
 ---

@@ -7,7 +7,7 @@ authorRole: "CPTO at Govrn"
 image: "/csrd-esg-leadership-substainability.jpg"
 category: "Regulatory"
 tags: ["CSRD", "Board Dynamics", "ESG Reporting", "Corporate Governance", "Sustainability"]
-featured: true
+featured: false
 ---
 
 ## The Corporate Sustainability Reporting Directive: A Game Changer for Boardrooms  
