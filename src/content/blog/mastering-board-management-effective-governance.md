@@ -26,6 +26,9 @@ The structure and role distribution within a board profoundly influence its effe
 
 ### Key Roles and Responsibilities of Board Members
 
+![Board Roles and Responsibilities](/mastering-board-management-effective-governance-3.png)
+
+
 To operate effectively, board members must align on their roles, which include:
 
 - **Strategic Guidance**  
@@ -66,6 +69,9 @@ Board effectiveness transcends structure and roles. It depends significantly on 
 ## Types of Boards
 
 Each board operates differently based on its purpose, structure, and level of engagement. Here’s a detailed breakdown:
+
+![Types of Boards](/mastering-board-management-effective-governance-2.png)
+
 
 1. **Minimum Boards**  
    These boards fulfill only the basic legal or statutory requirements, meeting occasionally to approve annual reports or other mandatory filings. While compliant, they contribute little to strategic decision-making or organizational growth.
