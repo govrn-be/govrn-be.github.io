@@ -7,7 +7,7 @@ authorRole: "CEO & Founder"
 image: "/blog-board-management.jpg"
 category: "Governance"
 tags: ["Raadbeheer", "Corporate Governance", "Leiderschap", "Strategie"]
-featured: true
+featured: false
 lang: nl
 slug: "meesterschap-raadbeheer-effectieve-governance"
 ---

@@ -7,7 +7,7 @@ authorRole: "CEO & Founder"
 image: "/blog-board-management.jpg"
 category: "Governance"
 tags: ["Gestion de Conseil", "Gouvernance d'Entreprise", "Leadership", "Stratégie"]
-featured: true
+featured: false
 lang: fr
 slug: "maitriser-gestion-conseil-gouvernance-efficace"
 ---
