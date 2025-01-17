@@ -22,11 +22,33 @@ One of the most significant hurdles for boards is ensuring that directors have t
 ### Why It Matters:
 Access to diverse viewpoints and robust information sources is critical for informed decision-making. Without this, boards risk falling into "groupthink," where decisions are driven by incomplete or biased data. 
 
+
+
+
 ### Historical Insight:
 Napoleon Bonaparte's strategic errors, such as the invasion of Russia, highlight the dangers of a constrained information flow. Surrounded by a small, insular circle of advisors, he lacked broader perspectives, leading to catastrophic outcomes. Similarly, modern boards must seek independent and varied insights to navigate complex decisions.
 
 ### Govrn's Solution:
 Govrn provides a centralized platform that enables seamless access to reports, analytics, and real-time updates. Directors can tap into the same pool of information, ensuring transparency and reducing the risk of knowledge silos. Learn more about our [document collaboration features](/features/document-collaboration).
+
+---
+
+<div class="info-box">
+<div class="content">
+
+#### Transform Your Board's Effectiveness with Govrn
+
+Our comprehensive platform tackles modern board challenges head-on with:
+- Secure document sharing and collaboration
+- Real-time analytics and reporting
+- AI-powered compliance monitoring
+- Streamlined decision-making tools
+
+[Start Your Journey →](/try)
+</div>
+
+![Govrn Board Management Platform](/applications-picture-board-chat-mobile_croped.png)
+</div>
 
 ---
 

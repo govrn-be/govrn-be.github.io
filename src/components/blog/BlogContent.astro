@@ -11,6 +11,15 @@ const { class: className = "" } = Astro.props;
 </div>
 
 <style is:global>
+  /* Example usage in markdown:
+  ::: info-box
+  # Box Title
+  This is the description text that goes in the box. You can write multiple paragraphs.
+  
+  ![Alt text for image](/path/to/image.jpg)
+  :::
+  */
+
   .prose {
     --tw-prose-body: #4b5563;
     --tw-prose-headings: #111827;
@@ -102,13 +111,11 @@ const { class: className = "" } = Astro.props;
   .prose :where(ul > li):not(:where([class~="not-prose"] *)) {
     list-style-type: disc;
     margin: 0em 3em;
-
   }
 
   .prose :where(ol > li):not(:where([class~="not-prose"] *)) {
     list-style-type: decimal;
     margin: 0em 3em;
-
   }
 
   .prose :where(ol > li):not(:where([class~="not-prose"] *))::marker {
@@ -140,5 +147,42 @@ const { class: className = "" } = Astro.props;
   .prose :where(tbody td):not(:where([class~="not-prose"] *)) {
     padding: 0.75em 1em;
     border-bottom: 1px solid var(--tw-prose-td-borders);
+  }
+
+  /* Custom info box styles */
+  .prose :where(.info-box):not(:where([class~="not-prose"] *)) {
+    background-color: #f0f9ff;
+    border: 1px solid #bae6fd;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin: 2em 0;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .prose :where(.info-box .content):not(:where([class~="not-prose"] *)) {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .prose :where(.info-box h1, 
+  .info-box h2, 
+  .info-box h3, 
+  .info-box h4):not(:where([class~="not-prose"] *)) {
+    margin: 0;
+  }
+
+  .prose :where(.info-box p):not(:where([class~="not-prose"] *)) {
+    margin: 0;
+  }
+
+  .prose :where(.info-box img):not(:where([class~="not-prose"] *)) {
+    width: 100%;
+    height: auto;
+    margin: 0;
   }
 </style>
