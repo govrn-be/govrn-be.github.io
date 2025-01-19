@@ -100,11 +100,38 @@ const currentLang = canonicalPath.startsWith('/fr/') || canonicalPath.endsWith('
     <!-- End of HubSpot Embed Code -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
   </head>
-  <body class="min-h-screen bg-white">
+  <body class="min-h-screen bg-white relative">
     <Header transparent={headerTransparent} hideMenu={hideMenu} whiteLogo={whiteLogo} currentLang={currentLang} />
     <slot />
     <Footer currentLang={currentLang} />
+    
     <CookieBanner />
+
+    <!-- Sticky Trial Button -->
+    <a
+      href={currentLang === 'fr' ? '/fr/try' : currentLang === 'nl' ? '/nl/try' : '/try'}
+      class="z-1000 fixed top-2 right-8 z-40 px-6 py-4 text-base font-semibold rounded-full text-white bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-3 group hover:scale-105 active:scale-95"
+    >
+      <svg 
+        class="w-5 h-5" 
+        fill="none" 
+        stroke="currentColor" 
+        viewBox="0 0 24 24"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+      </svg>
+      <span>{currentLang === 'fr' ? 'Essayer gratuitement' : currentLang === 'nl' ? 'Gratis proberen' : 'Try for Free'}</span>
+      <svg 
+        class="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300" 
+        fill="none" 
+        stroke="currentColor" 
+        viewBox="0 0 24 24"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+      </svg>
+    </a>
+
+
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
