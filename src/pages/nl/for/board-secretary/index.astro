@@ -1,139 +1,145 @@
 ---
 import Layout from '../../../../layouts/Layout.astro';
 import CTA from '../../../../components/CTA.astro';
+import Testimonials from '../../../../components/Testimonials.astro';
 
-const responsibilities = [
+const dayInLife = [
   {
-    icon: "📅",
-    title: "Vergaderbeheer",
-    description: "Optimaliseer de volledige vergadercyclus, van planning tot opvolging"
+    time: "9:00", 
+    before: "Eindeloos zoeken in e-mailketens naar het laatste bestuurspakket",
+    after: "Met één klik toegang tot alle bestuursdocumenten, perfect geordend met versiebeheer",
+    icon: "🌅"
   },
   {
-    icon: "📄", 
-    title: "Documentbeheer",
-    description: "Beheers bestuursdocumenten en hun geschiedenis efficiënt"
+    time: "14:00",
+    before: "Worstelen met het maken van gedetailleerde notulen tijdens de vergadering",
+    after: "Volledig gefocust tijdens de vergadering terwijl AI elk detail vastlegt",
+    icon: "🎯"
+  },
+  {
+    time: "17:30",
+    before: "Net begonnen aan het tijdrovende proces van notulen uitwerken",
+    after: "AI-gegenereerde notulen nakijken en op tijd naar huis",
+    icon: "🌙"
+  }
+];
+
+const painPoints = [
+  {
+    icon: "📚",
+    title: "Verdrinken in documentenchaos?",
+    description: "Maak komaf met eindeloze mailketens en verwarrende versies. Kies voor een beveiligde, centrale plek waar alles netjes geordend en makkelijk terug te vinden is."
+  },
+  {
+    icon: "⏰",
+    title: "Geen zin meer in late uurtjes notulen tikken?",
+    description: "Laat onze AI-assistent het werk doen tijdens de vergadering, zodat jij je kunt richten op wat écht telt - het begeleiden van zinvolle gesprekken."
   },
   {
     icon: "✍️",
-    title: "Notulen opstellen",
-    description: "AI-tools voor nauwkeurige en efficiënte verslaglegging"
+    title: "Beu om handtekeningen te moeten najagen?",
+    description: "Van dagen wachten naar minuten: ons gebruiksvriendelijk e-handtekeningensysteem maakt het bestuurders makkelijk om snel te tekenen."
   },
   {
-    icon: "⚖️",
-    title: "Compliance ondersteuning", 
-    description: "Waarborg naleving van governance- en regelgevingsvereisten"
+    icon: "🔍",
+    title: "Vroegere beslissingen onvindbaar?",
+    description: "Vind meteen wat je zoekt in je complete bestuursarchief dankzij slimme zoekfuncties - alle kennis direct bij de hand."
   }
 ];
 
 const features = [
   {
-    title: "Vergaderbeheersysteem",
-    description: "Complete toolkit voor het plannen en uitvoeren van bestuursvergaderingen",
-    icon: "🗓️",
-    benefits: [
-      "Agenda-integratie",
-      "Stapsgewijze agendaopbouw",
-      "Versiebeheer",
-      "Vergadersjablonen"
-    ]
-  },
-  {
-    title: "Geïntegreerde AI-assistent",
-    description: "Slimme tools voor vergadervoorbereiding en -opvolging",
+    title: "Je AI-vergadermaatje",
+    description: "Een slimme assistent die elk aspect van je rol naar een hoger niveau tilt",
     icon: "🤖",
     benefits: [
-      "Vergadertranscriptie",
-      "Intelligente notulenvorming",
-      "Historische context",
-      "Sjabloonvoorstellen"
+      "Slimme realtime notulen",
+      "Automatische opvolging van actiepunten",
+      "Contextbewuste vergadersamenvattingen",
+      "Handige historische inzichten"
     ]
   },
   {
-    title: "Documentbeheercentrum",
-    description: "Beveiligd platform voor het beheer van alle bestuursdocumenten",
+    title: "Document-cockpit",
+    description: "Volledige grip op je bestuursdocumenten",
     icon: "📚",
     benefits: [
-      "Centrale opslag",
-      "Geautomatiseerde distributie",
-      "Toegangsmonitoring",
-      "Versiegeschiedenis"
+      "Slim versiebeheer",
+      "Veilige documentendeling",
+      "Vlotte e-handtekeningen",
+      "Handige sjablonen"
+    ]
+  },
+  {
+    title: "Vergader-excellentie",
+    description: "Vlekkeloze organisatie van A tot Z",
+    icon: "✨",
+    benefits: [
+      "Slim agendabeheer",
+      "Interactieve agenda-opbouw",
+      "Realtime aanwezigheden",
+      "Uitgebreide opvolging"
     ]
   }
 ];
 
-const workflowSteps = [
-  {
-    phase: "Voorafgaand aan vergadering",
-    icon: "📋",
-    tasks: [
-      "Planning met agendakoppeling",
-      "Opstellen en delen van agenda's",
-      "Organiseren van bestuursdocumenten",
-      "Automatische herinneringen"
-    ]
-  },
-  {
-    phase: "Tijdens vergadering",
-    icon: "💼",
-    tasks: [
-      "AI-ondersteunde notulering",
-      "Aanwezigheids- en quorumregistratie",
-      "Vastleggen van besluiten",
-      "Actiepunten vastleggen"
-    ]
-  },
-  {
-    phase: "Na vergadering",
-    icon: "✅",
-    tasks: [
-      "Afronding en verspreiding notulen",
-      "Verzamelen e-handtekeningen",
-      "Opvolging besluiten",
-      "Voorbereiden communicatie"
-    ]
+const midPageCTA = {
+  title: "Ontdek de Toekomst van Bestuursbeheer",
+  subtitle: "Ervaar zelf hoe Govrn je bestuursvergaderingen naar een hoger niveau tilt",
+  cta1: "Gratis starten",
+  cta2: "Contact Sales",
+  links: {
+    cta1: "/try",
+    cta2: "/contact"
   }
-];
+}
 
-const industries = [
-  {
-    id: "financial-services",
-    name: "Financiële dienstverlening",
-    icon: "🏦",
-    description: "Gespecialiseerde tools voor documentbeheer en compliance in financiële raden",
-    features: [
-      "Monitoring regelgeving",
-      "Beveiligd documentbeheer",
-      "Audit trail behoud"
-    ]
+const testimonials = {
+  texts: { 
+    title: "Zij gingen je voor",
+    subtitle: "Ontdek hoe organisaties uit verschillende sectoren hun bestuursbeheer verbeteren met Govrn",
+    cta: "Bekijk alle succesverhalen",
+    ctaLink: "/testimonials"
   },
-  {
-    id: "healthcare",
-    name: "Gezondheidszorg",
-    icon: "🏥",
-    description: "Zorgsector-conforme oplossingen voor bestuursadministratie",
-    features: [
-      "Medische compliance tools",
-      "Klinische governance support",
-      "Medische stafcoördinatie"
-    ]
-  },
-  {
-    id: "real-estate",
-    name: "Vastgoed",
-    icon: "🏢",
-    description: "Geoptimaliseerde tools voor vastgoedbestuursadministratie",
-    features: [
-      "Portfoliodocumentatie",
-      "Investeringsmonitoring",
-      "Vastgoedcompliance"
-    ]
-  }
+  testimonials: [
+    {
+      quote: "Govrn heeft <strong>compleet veranderd</strong> hoe wij ons bestuur runnen, met veel meer <strong>efficiëntie</strong> en <strong>duidelijkheid</strong> in onze processen.",
+      author: "Lore Werbrouck",
+      position: "General Counsel",
+      company: "Van de Velde",
+      image: "/vdv-lore-portrait.jpg",
+      link: "/case-studies/van-de-velde"
+    },
+    {
+      quote: "Govrn heeft ons documentbeheer enorm <strong>vereenvoudigd</strong>, waardoor we vergaderingen beter kunnen voorbereiden en ons bestuur zich kan focussen op <strong>besluitvorming</strong>.",
+      author: "Pierre Hermant",
+      position: "CEO",
+      company: "Finance & Invest Brussels",
+      image: "/fib-pierre.webp",
+      link: "/case-studies/finance-invest-brussels"
+    },
+    {
+      quote: "Govrn is echt de <strong>volgende stap</strong> in bestuurssoftware, <strong>super gebruiksvriendelijk</strong> en met slimme <strong>AI-ondersteuning</strong>.",
+      author: "Nathalie Byl",
+      position: "Paralegal en Compliance Officer",
+      company: "Care Property Invest",
+      image: "/careproperty-logo.png",
+      link: "/case-studies/care-property-invest"
+    }
+  ]
+}
+
+const stats = [
+  { value: "75%", label: "Minder administratie" },
+  { value: "100%", label: "Digitaal beschikbaar" },
+  { value: "60%", label: "Snellere voorbereiding" },
+  { value: "90%", label: "Minder opvolging nodig" }
 ];
 ---
 
-<Layout title="Bestuurssoftware voor secretarissen | Govrn Platform" description="Optimaliseer uw bestuursadministratie met onze complete software, ontworpen voor verhoogde efficiëntie, compliance en samenwerking.">
-  <main class="pt-16">
-    <!-- Hero sectie -->
+<Layout title="De beste bestuurssoftware voor secretarissen | Govrn">
+  <main class="pt-24">
+    <!-- Hero Section -->
     <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
       <div class="absolute inset-0 z-0">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
@@ -142,86 +148,165 @@ const industries = [
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <div class="inline-flex items-center rounded-full px-4 py-1 text-sm font-medium bg-primary/10 text-primary mb-8">
-              Oplossingen voor bestuurssecretarissen
+            <div class="inline-flex items-center rounded-full px-4 py-1 text-sm font-medium bg-primary/10 text-primary mb-8 animate-fade-in">
+              Hét platform voor de moderne secretaris
             </div>
-            <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
-              Transformeer uw bestuurswerk met
+            <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8 animate-slide-up">
+              <span class="sr-only">De beste bestuurssoftware voor secretarissen</span>
+              Versterk je rol als
               <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
-                intelligente tools
+                secretaris
               </span>
             </h1>
-            <p class="text-xl text-gray-600 leading-relaxed mb-12">
-              Vereenvoudig uw taken met AI-tools die de efficiëntie verhogen, compliance waarborgen en complexe processen stroomlijnen.
+            <p class="text-xl text-gray-600 leading-relaxed mb-8 animate-slide-up" style="animation-delay: 100ms">
+              Stap in de toekomst van bestuursbeheer. Ons AI-platform neemt het zware werk uit handen - van notulen tot documentbeheer - zodat jij je kunt richten op strategisch leiderschap en waardecreatie.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4">
+
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-2 gap-4 mb-8">
+              {stats.map((stat, index) => (
+                <div 
+                  class="bg-white rounded-xl p-4 shadow-sm border border-gray-100 hover:border-primary/20 transition-all duration-300 transform hover:-translate-y-1 animate-slide-up"
+                  style={`animation-delay: ${150 + index * 50}ms`}
+                >
+                  <div class="text-3xl font-bold text-primary mb-1">{stat.value}</div>
+                  <div class="text-sm text-gray-600">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 animate-slide-up" style="animation-delay: 350ms">
               <a
-                href="/nl/request-demo"
-                class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300"
+                href="/request-demo"
+                class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 group"
               >
-                Demo aanvragen
+                Plan een demo
+                <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
               </a>
               <a
-                href="/nl/contact"
+                href="/try"
                 class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-gray-900 bg-white border-2 border-gray-200 hover:border-primary/20 hover:bg-gray-50 transition-colors duration-200"
               >
-                Contact team
+                Start gratis trial
               </a>
             </div>
           </div>
-          <div class="relative">
-            <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-3xl transform rotate-3"></div>
+          <div class="relative animate-fade-in" style="animation-delay: 400ms">
+            <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-3xl transform rotate-3 scale-110"></div>
             <img
-              src="/realestate.jpg"
-              alt="Govrn Interface"
-              class="relative rounded-2xl shadow-2xl"
+              src="/board-secretary.png"
+              alt="Secretaris gebruikt Govrn"
+              class="relative rounded-2xl shadow-2xl w-[120%] h-[120%] object-cover transform hover:scale-105 transition-transform duration-500"
             />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Kernverantwoordelijkheden -->
+    <!-- A Day in the Life Section -->
     <section class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16">
           <h2 class="text-3xl font-bold text-gray-900 mb-4">
-            Vereenvoudig uw kerntaken
+            Ervaar het Govrn-verschil
           </h2>
           <p class="text-xl text-gray-600">
-            Complete tools om te excelleren in uw rol als bestuurssecretaris
+            Zie hoe we je werkdag makkelijker maken
+          </p>
+        </div>
+
+        <div class="space-y-8">
+          {dayInLife.map((timeSlot, index) => (
+            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div class="grid md:grid-cols-3 gap-8 items-center">
+                <div class="text-center md:text-left">
+                  <div class="text-4xl mb-2">{timeSlot.icon}</div>
+                  <div class="text-2xl font-bold text-primary">{timeSlot.time}</div>
+                </div>
+                <div class="relative">
+                  <div class="bg-red-50 rounded-lg p-4 text-red-700">
+                    <div class="font-medium mb-1">Vroeger:</div>
+                    {timeSlot.before}
+                  </div>
+                  {index !== dayInLife.length - 1 && (
+                    <div class="absolute left-1/2 -bottom-8 transform -translate-x-1/2">
+                      <svg class="w-6 h-6 text-primary animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                      </svg>
+                    </div>
+                  )}
+                </div>
+                <div class="bg-green-50 rounded-lg p-4 text-green-700">
+                  <div class="font-medium mb-1">Met Govrn:</div>
+                  {timeSlot.after}
+                </div>
+              </div>
+            </div>
+          ))}
+
+          <div class="mt-16 text-center">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">
+              Klaar voor een betere aanpak?
+            </h2>
+            <p class="text-lg text-gray-600 mb-8">
+              Sluit je aan bij vooruitstrevende secretarissen die hun werk slimmer aanpakken
+            </p>
+            <div class="flex justify-center gap-4">
+              <a
+                href="/try"
+                class="px-6 py-3 text-white bg-primary rounded-lg hover:bg-primary/90 transition-colors transform hover:scale-105 duration-300"
+              >
+                Start gratis trial
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Herkenbare uitdagingen, slimme oplossingen
+          </h2>
+          <p class="text-xl text-gray-600">
+            We kennen de dagelijkse struikelblokken van secretarissen - en hebben oplossingen die écht werken.
           </p>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {responsibilities.map(item => (
-            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
-              <div class="text-3xl mb-4">{item.icon}</div>
-              <h3 class="text-xl font-bold text-gray-900 mb-4">{item.title}</h3>
-              <p class="text-gray-600">{item.description}</p>
+          {painPoints.map(point => (
+            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div class="text-4xl mb-4 transform group-hover:scale-110 transition-transform">{point.icon}</div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">{point.title}</h3>
+              <p class="text-gray-600">{point.description}</p>
             </div>
           ))}
         </div>
       </div>
     </section>
 
-    <!-- Functionaliteiten -->
-    <section class="py-20 bg-gray-50">
+    <!-- Features Section -->
+    <section class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16">
           <h2 class="text-3xl font-bold text-gray-900 mb-4">
-            Toegewijde functionaliteiten
+            Jouw nieuwe mogelijkheden
           </h2>
           <p class="text-xl text-gray-600">
-            Tools specifiek ontworpen voor bestuurssecretarissen en -beheerders
+            Handige tools die je werk makkelijker maken en je impact vergroten
           </p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
           {features.map(feature => (
-            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
-              <div class="text-3xl mb-4">{feature.icon}</div>
-              <h3 class="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
+            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group">
+              <div class="text-3xl mb-4 transform group-hover:scale-110 transition-transform">{feature.icon}</div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors">{feature.title}</h3>
               <p class="text-gray-600 mb-6">{feature.description}</p>
               <ul class="space-y-3">
                 {feature.benefits.map(benefit => (
@@ -239,91 +324,67 @@ const industries = [
       </div>
     </section>
 
-    <!-- Processtappen -->
-    <section class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <h2 class="text-3xl font-bold text-gray-900 mb-4">
-            Geoptimaliseerd vergaderproces
-          </h2>
-          <p class="text-xl text-gray-600">
-            Complete ondersteuning tijdens de hele vergadercyclus
-          </p>
-        </div>
+    <CTA texts={midPageCTA} />
+    <!-- Mid-page CTA 2 -->
+    <Testimonials texts={testimonials.texts} testimonials={testimonials.testimonials}  />
 
-        <div class="grid md:grid-cols-3 gap-8">
-          {workflowSteps.map(step => (
-            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
-              <div class="flex items-center space-x-3 mb-6">
-                <div class="text-3xl">{step.icon}</div>
-                <h3 class="text-xl font-bold text-gray-900">{step.phase}</h3>
-              </div>
-              <ul class="space-y-4">
-                {step.tasks.map(task => (
-                  <li class="flex items-start">
-                    <svg class="h-5 w-5 text-primary mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span class="text-gray-600">{task}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+   
+
+    <!-- Final CTA -->
+    <section class="bg-gradient-to-br from-primary to-blue-600 py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold text-white mb-8">
+          Klaar om je rol te versterken?
+        </h2>
+        <p class="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
+          Word deel van de groep moderne secretarissen die de toekomst van bestuur vormgeven
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/try"
+            class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-primary bg-white hover:bg-gray-50 transition-colors duration-200 transform hover:scale-105"
+          >
+            Start gratis trial
+          </a>
+          <a
+            href="/request-demo"
+            class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white border-2 border-white hover:bg-white/10 transition-colors duration-200 transform hover:scale-105"
+          >
+            Plan demo
+          </a>
         </div>
+        <p class="text-white/80 mt-6">
+          Geen creditcard nodig. 30 dagen gratis uitproberen.
+        </p>
       </div>
     </section>
-
-    <!-- Sectorspecifiek -->
-    <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
-      <div class="absolute inset-0 z-0">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
-      </div>
-
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <h2 class="text-4xl font-bold text-gray-900 mb-4">
-            Sectoroplossingen
-          </h2>
-          <p class="text-xl text-gray-600">
-            Ontdek onze tools en functies aangepast aan de specifieke eisen van uw sector
-          </p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8">
-          {industries.map(industry => (
-            <a
-              href={`/nl/for/board-secretary/industry/${industry.id}`}
-              class="group bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-            >
-              <div class="text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
-                {industry.icon}
-              </div>
-              <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors">
-                {industry.name}
-              </h3>
-              <p class="text-gray-600 mb-6">{industry.description}</p>
-              <ul class="space-y-3 mb-6">
-                {industry.features.map(feature => (
-                  <li class="flex items-center text-gray-600">
-                    <svg class="h-5 w-5 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              <div class="inline-flex items-center text-primary group-hover:translate-x-2 transition-transform duration-300">
-                Bekijk sectoroplossingen
-                <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </div>
-            </a>
-          ))}
-        </div>
-      </div>
-    </section>
-    <CTA />
   </main>
 </Layout>
+
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { 
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    opacity: 0;
+    animation: slideUp 0.8s ease-out forwards;
+  }
+</style>
