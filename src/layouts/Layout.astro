@@ -48,6 +48,25 @@ const organisationStructuredData = {
   ],
   "vatID": "BE0761625687",
 };
+
+const aggregateRating = {
+  "@context": "https://schema.org",
+  "@type": ["WebApplication", "MobileApplication"],
+  operatingSystem: ["ANDROID", "IOS"],
+  name: "Govrn",
+  applicationCategory: "BusinessApplication",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: 4.6,
+    ratingCount: 19,
+  },
+  offers: {
+    "@type": "Offer",
+    price: 149.0,
+    priceCurrency: "EUR",
+  },
+};
+
 const currentLang = canonicalPath.startsWith('/fr/') || canonicalPath.endsWith('/fr') 
   ? 'fr' 
   : canonicalPath.startsWith('/nl/') || canonicalPath.endsWith('/nl') 
@@ -67,6 +86,7 @@ const currentLang = canonicalPath.startsWith('/fr/') || canonicalPath.endsWith('
     <script src="https://tag.clearbitscripts.com/v1/pk_3e1d6d2934e384070f62039bb4f4efe6/tags.js" referrerpolicy="strict-origin-when-cross-origin"></script>
     <title>{title}</title>
     <script type="application/ld+json" set:html={JSON.stringify(organisationStructuredData)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(aggregateRating)}></script>
     {structuredData && <script type="application/ld+json" set:html={JSON.stringify(structuredData)}></script>}
 
     <!-- Open Graph / Facebook -->
