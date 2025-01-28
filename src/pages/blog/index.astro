@@ -52,13 +52,13 @@ const regularPosts = sortedPosts.filter(post => !post.data.featured);
                 <span class="px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
                   {featuredPost.data.category}
                 </span>
-                <time datetime={featuredPost.data.pubDate.toISOString()} class="text-gray-500">
+                {/* <time datetime={featuredPost.data.pubDate.toISOString()} class="text-gray-500">
                   {featuredPost.data.pubDate.toLocaleDateString('en-US', {
                     year: 'numeric',
                     month: 'long',
                     day: 'numeric'
                   })}
-                </time>
+                </time> */}
               </div>
               <h3 class="text-3xl font-bold text-gray-900 mb-4">
                 {featuredPost.data.title}

@@ -45,9 +45,9 @@ const formattedDate = post.data.pubDate.toLocaleDateString(lang === 'fr' ? 'fr-F
             'Case Studies': 'Études de Cas'
           }[post.data.category] || post.data.category : post.data.category}
         </span>
-        <time datetime={post.data.pubDate.toISOString()} class="text-sm text-gray-500">
+        <!-- <time datetime={post.data.pubDate.toISOString()} class="text-sm text-gray-500">
           {formattedDate}
-        </time>
+        </time> -->
       </div>
       <h3 class={`${featured ? 'text-2xl' : 'text-xl'} font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors duration-300`}>
         {post.data.title}
