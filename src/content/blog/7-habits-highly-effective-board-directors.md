@@ -7,7 +7,7 @@ authorRole: "CTO at Govrn"
 image: "/7-habits-highly-effective-board-directors.png"
 category: "Regulatory"
 tags: ["Board Directors", "Leadership", "Corporate Governance", "Board Effectiveness"]
-featured: true
+featured: false
 ---
 
 Being an effective board director requires more than just attending meetings. It demands a unique blend of skills, perspectives, and a commitment to continuous improvement. Drawing on insights from leading governance research and real-world examples, this post explores seven essential habits that define highly effective board directors. These habits will help directors contribute meaningfully to their organizations and drive better outcomes.
