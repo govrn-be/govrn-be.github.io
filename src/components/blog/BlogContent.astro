@@ -158,9 +158,15 @@ const { class: className = "" } = Astro.props;
     margin: 2em 0;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 2rem;
     align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .prose :where(.info-box):not(:where([class~="not-prose"] *)) {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   .prose :where(.info-box .content):not(:where([class~="not-prose"] *)) {

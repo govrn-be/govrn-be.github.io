@@ -34,7 +34,60 @@ const {
     subtitle: "See the real impact Govrn brings to your board operations with measurable improvements in efficiency, insight, and governance.",
     keyBenefits: "Key Benefits:"
   },
-  outcomes = []
+  outcomes= [
+    {
+      title: "Document Centralization",
+      description:
+        "A secure platform for all your documents, accessible anywhere and anytime - regardless of your technical skills.",
+      component: DocumentFlow,
+      stats: [
+        { value: "100%", label: "Centralized documents" },
+        { value: "24/7", label: "Secure access" },
+      ],
+      benefits: [
+        "Central information source",
+        "Intelligent classification",
+        "Version control",
+        "Flexible access control",
+      ],
+    },
+    {
+      title: "Data-driven Decision Making",
+      description:
+        "Transform your documents into actionable insights with our advanced AI, for faster and better-informed strategic decisions.",
+      component: TaskTimeline,
+      stats: [
+        { value: "45%", label: "Decision quality" },
+        { value: "24/7", label: "AI analysis" },
+      ],
+      benefits: [
+        "Predictive analytics",
+        "Strategic recommendations",
+        "Market monitoring",
+        "Performance monitoring",
+      ],
+      link: {
+        text: "Discover our AI",
+        url: "/nl/features/ai-assistant",
+      },
+    },
+    {
+      title: "Compliance & Governance",
+      description:
+        "Govern your board with customized governance tools, including electronic signature and automated compliance checks.",
+      component: FeatureHighlight,
+      stats: [
+        { value: "100%", label: "Compliance" },
+        { value: "40%", label: "Administrative time savings" },
+      ],
+      benefits: [
+        "Automated checks",
+        "Electronic signature",
+        "Rights management",
+        "Audit trail",
+      ],
+    },
+  ],
 } = Astro.props;
 ---
 
