@@ -1,0 +1,257 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import GuideHeader from '../../components/guides/GuideHeader.astro';
+import GuideStep from '../../components/guides/GuideStep.astro';
+import GuideSubSection from '../../components/guides/GuideSubSection.astro';
+import GuideStepList from '../../components/guides/GuideStepList.astro';
+import ProTip from '../../components/guides/ProTip.astro';
+
+const signUpSteps = [
+  "Open the invitation email from Govrn",
+  "Click the 'Accept Invitation' button",
+  "Select your country from the dropdown menu",
+  "Enter your mobile phone number",
+  "Enter the verification code sent via SMS",
+  "Create a strong password (minimum 8 characters)",
+  "Accept the terms and conditions",
+  "Click 'Complete Registration'"
+];
+
+const signInSteps = [
+  "Visit app.govrn.com in your browser",
+  "Enter your email address",
+  "Enter your password",
+  "Click 'Sign In'",
+  "Enter the 2FA code sent to your phone",
+  "Click 'Verify' to complete login"
+];
+
+const resetPasswordSteps = [
+  "Click 'Forgot Password?' on the login page",
+  "Enter your email address",
+  "Click 'Reset Password'",
+  "Check your email for the reset link",
+  "Click the reset link in the email",
+  "Enter and confirm your new password",
+  "Click 'Save New Password'"
+];
+
+const twoFactorTroubleshooting = [
+  "Wait 30 seconds and request a new code",
+  "Check if your phone has signal",
+  "Verify your phone number is correct",
+  "Contact support if issues persist"
+];
+
+const resetPasswordTroubleshooting = [
+  "Check your spam/junk folder for the reset email",
+  "Add support@govrn.com to your safe senders list",
+  "Request a new reset link if 24 hours have passed",
+  "Clear your browser cache and cookies"
+];
+
+const firewallTroubleshooting = [
+  "Ensure prod.api.ongovrn.com is whitelisted",
+  "Check corporate firewall settings",
+  "Allow HTTPS traffic on port 443",
+  "Contact your IT department if needed"
+];
+---
+
+<Layout title="How to Sign Up and Sign In - Govrn Authentication Guide">
+  <main class="pt-24">
+    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <GuideHeader
+        title="How to Sign Up and Sign In to Govrn"
+        description="Complete guide to creating your account, signing in securely, and managing your authentication settings."
+      />
+
+      <GuideStep
+        number={1}
+        title="How to Create Your Account"
+        description="Follow these steps to set up your Govrn account from an invitation:"
+      >
+        <div class="mb-8">
+          <!-- <img
+            src="https://k0n.abe.mytemp.website/wp-content/uploads/2024/10/Untitled-design-1.png"
+            alt="Account creation process"
+            class="rounded-lg shadow-lg border border-gray-200 mb-6"
+          /> -->
+          <GuideStepList items={signUpSteps} />
+        </div>
+
+        <ProTip
+          tip="Create a strong password using a mix of letters, numbers, and symbols. Never share your password or 2FA codes with anyone."
+        />
+
+        <GuideSubSection title="Password Requirements">
+          <div class="bg-white rounded-lg p-4 border border-gray-200">
+            <ul class="space-y-2 text-gray-600">
+              <li>• Minimum 8 characters long</li>
+              <li>• At least one uppercase letter</li>
+              <li>• At least one number</li>
+              <li>• At least one special character</li>
+              <!-- <li>• Cannot be a previously used password</li> -->
+            </ul>
+          </div>
+        </GuideSubSection>
+      </GuideStep>
+
+      <GuideStep
+        number={2}
+        title="How to Sign In Securely"
+        description="Access your Govrn account with these steps:"
+      >
+        <div class="mb-8">
+          <!-- <img
+            src="https://k0n.abe.mytemp.website/wp-content/uploads/2024/10/Untitled-design-1.png"
+            alt="Sign in process"
+            class="rounded-lg shadow-lg border border-gray-200 mb-6"
+          /> -->
+          <GuideStepList items={signInSteps} />
+        </div>
+
+        <ProTip
+          tip="Enable 'Remember this device' only on your personal, secure devices to streamline future logins."
+        />
+
+        <GuideSubSection title="Two-Factor Authentication (2FA)">
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <h4 class="font-semibold text-gray-900 mb-2">Why Use 2FA?</h4>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Extra security layer</li>
+                <li>• Prevents unauthorized access</li>
+                <li>• Protects sensitive data</li>
+              </ul>
+            </div>
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <h4 class="font-semibold text-gray-900 mb-2">Troubleshooting</h4>
+              <ul class="text-sm text-gray-600 space-y-1">
+                {twoFactorTroubleshooting.map(step => (
+                  <li>• {step}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </GuideSubSection>
+      </GuideStep>
+
+      <GuideStep
+        number={3}
+        title="How to Reset Your Password"
+        description="If you've forgotten your password, here's how to reset it:"
+      >
+        <div class="mb-8">
+          <!-- <img
+            src="https://k0n.abe.mytemp.website/wp-content/uploads/2024/10/Untitled-design-1.png"
+            alt="Password reset process"
+            class="rounded-lg shadow-lg border border-gray-200 mb-6"
+          /> -->
+          <GuideStepList items={resetPasswordSteps} />
+        </div>
+
+        <ProTip
+          tip="Password reset links expire after 24 hours for security. Request a new one if needed."
+        />
+
+        <!-- <GuideSubSection title="Security Measures">
+          <div class="bg-white rounded-lg p-4 border border-gray-200 space-y-4">
+            <div>
+              <h4 class="font-semibold text-gray-900 mb-2">Account Protection</h4>
+              <p class="text-sm text-gray-600">After 3 failed login attempts, your account will be temporarily locked for 30 minutes.</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-900 mb-2">Session Management</h4>
+              <p class="text-sm text-gray-600">Your session automatically expires after 30 minutes of inactivity.</p>
+            </div>
+          </div>
+        </GuideSubSection> -->
+      </GuideStep>
+
+      <GuideStep
+        number={4}
+        title="Troubleshooting Common Issues"
+        description="Solutions for common authentication problems:"
+      >
+        <div class="grid md:grid-cols-2 gap-6">
+          <GuideSubSection title="Password Reset Issues">
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <ul class="text-sm text-gray-600 space-y-2">
+                {resetPasswordTroubleshooting.map(step => (
+                  <li>• {step}</li>
+                ))}
+              </ul>
+            </div>
+          </GuideSubSection>
+
+          <GuideSubSection title="Firewall & Access Issues">
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <ul class="text-sm text-gray-600 space-y-2">
+                {firewallTroubleshooting.map(step => (
+                  <li>• {step}</li>
+                ))}
+              </ul>
+            </div>
+          </GuideSubSection>
+        </div>
+
+        <div class="mt-6">
+          <p class="text-sm text-gray-600">
+            For more details about domains and protocols used by Govrn, please see our
+            <a href="/guides/domains-and-protocols" class="text-primary hover:text-primary/80 underline">
+              Domains & Protocols Guide
+            </a>.
+          </p>
+        </div>
+      </GuideStep>
+
+      <!-- Quick Reference -->
+      <div class="mt-16 bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-xl p-8 border border-primary/10">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Quick Reference</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-2">Common Issues</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li>• No invitation email: Check spam folder</li>
+              <li>• 2FA not received: Verify phone number</li>
+              <li>• Can't log in: Clear browser cache</li>
+              <li>• Session expired: Sign in again</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-2">Security Tips</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li>• Use a unique password</li>
+              <li>• Never share 2FA codes</li>
+              <li>• Sign out on shared devices</li>
+              <li>• Update password regularly</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Help Section -->
+      <div class="mt-8 bg-white rounded-xl p-8 shadow-sm border border-gray-200">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Need Help?</h2>
+        <p class="text-gray-600 mb-6">
+          Having trouble signing in or need assistance with authentication? Our support team is here to help.
+        </p>
+        <div class="flex space-x-4">
+          <a
+            href="/contact"
+            class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg text-white bg-primary hover:bg-primary/90 transition-colors"
+          >
+            Contact Support
+          </a>
+          <a
+            href="/guides"
+            class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg text-gray-900 bg-white border border-gray-200 hover:bg-gray-50 transition-colors"
+          >
+            View All Guides
+          </a>
+        </div>
+      </div>
+    </article>
+  </main>
+</Layout>

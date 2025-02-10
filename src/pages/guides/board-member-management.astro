@@ -1,0 +1,232 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import GuideHeader from '../../components/guides/GuideHeader.astro';
+import GuideStep from '../../components/guides/GuideStep.astro';
+import GuideSubSection from '../../components/guides/GuideSubSection.astro';
+import GuideStepList from '../../components/guides/GuideStepList.astro';
+import ProTip from '../../components/guides/ProTip.astro';
+
+const inviteSteps = [
+  "Click the '+' icon in the top navigation bar",
+  "Select 'Invite Member' from the dropdown menu",
+  "Fill in the member's email address in the invitation form",
+  "Choose their role from Admin, Member, or Observer",
+  "Set their mandate duration (optional)",
+  "Click the blue 'Send Invitation' button"
+];
+
+const updateRoleSteps = [
+  "Click on 'Members' in the left sidebar",
+  "Find the member in the list and click their name",
+  "Click the 'Edit Role' button next to their current role",
+  "Select the new role from the dropdown menu",
+  "Click 'Save Changes' to confirm"
+];
+
+const createGroupSteps = [
+  "Click 'Groups' in the left sidebar",
+  "Click the blue '+ New Group' button",
+  "Enter a name for your group/committee",
+  "Add a description to help identify the group's purpose",
+  "Click 'Next' to proceed to member selection",
+  "Check the boxes next to members to add them",
+  "Toggle 'Historical Access' if needed",
+  "Click 'Create Group' to finish"
+];
+
+const deactivateSteps = [
+  "Navigate to 'Members' in the left sidebar",
+  "Click the member's name to open their profile",
+  "Click the 'Deactivate' button in the top right",
+  "Select a deactivation date in the calendar",
+  "Add a reason for deactivation (optional)",
+  "Click 'Confirm Deactivation'"
+];
+---
+
+<Layout title="How to Add and Manage Board Members - Govrn">
+  <main class="pt-24">
+    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <GuideHeader
+        title="How to Add and Manage Board Members"
+        description="Step-by-step instructions for adding new board members, managing roles, creating committees, and handling member deactivation in Govrn."
+      />
+
+      <GuideStep
+        number={1}
+        title="How to Invite New Board Members"
+        description="Follow these steps to send an invitation to a new board member:"
+      >
+        <div class="mb-8">
+          <img
+            src="https://k0n.abe.mytemp.website/wp-content/uploads/2024/10/Untitled-design-1.png"
+            alt="Inviting a new board member"
+            class="rounded-lg shadow-lg border border-gray-200 mb-6"
+          />
+          <GuideStepList items={inviteSteps} />
+        </div>
+        
+        <ProTip
+          tip="💡 You can invite multiple members at once by clicking 'Add Another' before sending the invitations."
+        />
+
+        <GuideSubSection title="What Happens Next?">
+          <div class="space-y-4 text-gray-600">
+            <p>1. The invited member receives an email with a registration link</p>
+            <p>2. They click the link and create their password</p>
+            <p>3. Once registered, they can immediately access their board materials</p>
+          </div>
+        </GuideSubSection>
+      </GuideStep>
+
+      <GuideStep
+        number={2}
+        title="How to Change Member Roles"
+        description="Need to update a member's permissions? Here's how to change their role:"
+      >
+        <div class="mb-8">
+          <img
+            src="https://k0n.abe.mytemp.website/wp-content/uploads/2024/10/Untitled-design-1.png"
+            alt="Changing member roles"
+            class="rounded-lg shadow-lg border border-gray-200 mb-6"
+          />
+          <GuideStepList items={updateRoleSteps} />
+        </div>
+
+        <GuideSubSection title="Available Roles">
+          <div class="grid md:grid-cols-3 gap-4">
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <h4 class="font-semibold text-gray-900 mb-2">👑 Admin</h4>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Create content</li>
+                <li>• Manage members</li>
+                <li>• Full access</li>
+              </ul>
+            </div>
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <h4 class="font-semibold text-gray-900 mb-2">👥 Member</h4>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• View content</li>
+                <li>• Add comments</li>
+                <li>• Vote on items</li>
+              </ul>
+            </div>
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <h4 class="font-semibold text-gray-900 mb-2">👀 Observer</h4>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• View content</li>
+                <li>• Limited access</li>
+                <li>• No editing</li>
+              </ul>
+            </div>
+          </div>
+        </GuideSubSection>
+      </GuideStep>
+
+      <GuideStep
+        number={3}
+        title="How to Create a Committee"
+        description="Organize your board members into committees with these steps:"
+      >
+        <div class="mb-8">
+          <img
+            src="https://k0n.abe.mytemp.website/wp-content/uploads/2024/10/Untitled-design-1.png"
+            alt="Creating a committee"
+            class="rounded-lg shadow-lg border border-gray-200 mb-6"
+          />
+          <GuideStepList items={createGroupSteps} />
+        </div>
+        
+        <ProTip
+          tip="💡 Enable 'Historical Access' to give new committee members access to past documents and discussions."
+        />
+
+        <GuideSubSection title="Quick Actions">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <h4 class="font-semibold text-gray-900 mb-2">✏️ Edit Committee</h4>
+              <p class="text-sm text-gray-600">Click the committee name > Edit button > Make changes > Save</p>
+            </div>
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <h4 class="font-semibold text-gray-900 mb-2">🗑️ Delete Committee</h4>
+              <p class="text-sm text-gray-600">Click the committee name > Settings > Delete > Confirm</p>
+            </div>
+          </div>
+        </GuideSubSection>
+      </GuideStep>
+
+      <GuideStep
+        number={4}
+        title="How to Deactivate a Member"
+        description="When a board member leaves, follow these steps to deactivate their account:"
+      >
+        <div class="mb-8">
+          <img
+            src="https://k0n.abe.mytemp.website/wp-content/uploads/2024/10/Untitled-design-1.png"
+            alt="Deactivating a member"
+            class="rounded-lg shadow-lg border border-gray-200 mb-6"
+          />
+          <GuideStepList items={deactivateSteps} />
+        </div>
+        
+        <ProTip
+          tip="⚠️ Before deactivating a member, make sure to transfer ownership of any documents they own to another member."
+        />
+
+        <GuideSubSection title="What Happens After Deactivation?">
+          <div class="bg-white rounded-lg p-4 border border-gray-200 space-y-2">
+            <p class="text-gray-600">• Member loses access on the specified date</p>
+            <p class="text-gray-600">• Their comments and annotations remain visible</p>
+            <p class="text-gray-600">• Their account can be reactivated if needed</p>
+          </div>
+        </GuideSubSection>
+      </GuideStep>
+
+      <!-- Quick Reference -->
+      <div class="mt-16 bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-xl p-8 border border-primary/10">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Quick Reference</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-2">Common Tasks</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li>• Invite member: + > Invite Member</li>
+              <li>• Change role: Members > Name > Edit Role</li>
+              <li>• Create committee: Groups > + New Group</li>
+              <li>• Deactivate: Members > Name > Deactivate</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-2">Keyboard Shortcuts</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li>• Open member list: <kbd class="px-2 py-1 bg-gray-100 rounded">M</kbd></li>
+              <li>• New invitation: <kbd class="px-2 py-1 bg-gray-100 rounded">N</kbd> + <kbd class="px-2 py-1 bg-gray-100 rounded">I</kbd></li>
+              <li>• Open groups: <kbd class="px-2 py-1 bg-gray-100 rounded">G</kbd></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Help Section -->
+      <div class="mt-8 bg-white rounded-xl p-8 shadow-sm border border-gray-200">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Need Help?</h2>
+        <p class="text-gray-600 mb-6">
+          Our support team is available 24/7 to assist you with member management.
+        </p>
+        <div class="flex space-x-4">
+          <a
+            href="/contact"
+            class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg text-white bg-primary hover:bg-primary/90 transition-colors"
+          >
+            Contact Support
+          </a>
+          <a
+            href="/guides"
+            class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg text-gray-900 bg-white border border-gray-200 hover:bg-gray-50 transition-colors"
+          >
+            View All Guides
+          </a>
+        </div>
+      </div>
+    </article>
+  </main>
+</Layout>

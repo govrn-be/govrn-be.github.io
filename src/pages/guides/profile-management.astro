@@ -1,0 +1,274 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import GuideHeader from '../../components/guides/GuideHeader.astro';
+import GuideStep from '../../components/guides/GuideStep.astro';
+import GuideSubSection from '../../components/guides/GuideSubSection.astro';
+import GuideStepList from '../../components/guides/GuideStepList.astro';
+import ProTip from '../../components/guides/ProTip.astro';
+
+const accessProfileSteps = [
+  "Click your profile picture/name in the bottom left corner",
+  // "Select 'Account Settings' from the dropdown menu",
+  "Your profile information will be displayed",
+  "Click 'Edit' to make changes"
+];
+
+const updateEmailSteps = [
+  "Go to Account Settings",
+  "Click 'Edit' next to your email address",
+  "Enter your new email address",
+  "Click 'Save Changes'",
+  "Check your new email for a verification link",
+  "Click the verification link to confirm the change"
+];
+
+const updatePhoneSteps = [
+  "Navigate to Account Settings",
+  "Click 'Edit' next to your phone number",
+  "Enter your new phone number",
+  "Click 'Send Verification Code'",
+  "Enter the code received via SMS",
+  "Click 'Verify' to confirm the change"
+];
+
+const changePasswordSteps = [
+  "Go to Account Settings",
+  "Click 'Change Password'",
+  "Enter your current password",
+  "Enter your new password",
+  "Confirm your new password",
+  "Click 'Update Password'"
+];
+
+const profilePictureSteps = [
+  "Go to Account Settings",
+  "Click on your profile picture or the camera icon",
+  "Choose 'Upload Photo' or 'Take Photo'",
+  "Select an image from your device",
+  // "Adjust the crop area if needed",
+  "Click 'Save' to update"
+];
+---
+
+<Layout title="How to Manage Your Profile - Govrn">
+  <main class="pt-24">
+    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <GuideHeader
+        title="How to Manage Your Profile Settings"
+        description="Complete guide to updating your personal information, email, phone number, and security settings in Govrn."
+      />
+
+      <GuideStep
+        number={1}
+        title="How to Access Your Profile"
+        description="Follow these steps to view and edit your profile information:"
+      >
+        <div class="mb-8">
+          <!-- <img
+            src="https://k0n.abe.mytemp.website/wp-content/uploads/2024/10/Untitled-design-1.png"
+            alt="Accessing profile settings"
+            class="rounded-lg shadow-lg border border-gray-200 mb-6"
+          /> -->
+          <GuideStepList items={accessProfileSteps} />
+        </div>
+
+        <ProTip
+          tip="Keep your profile information up-to-date to ensure you receive important notifications and communications."
+        />
+
+        <GuideSubSection title="Profile Information Fields">
+          <div class="bg-white rounded-lg p-4 border border-gray-200">
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Basic Information</h4>
+                <ul class="text-sm text-gray-600 space-y-1">
+                  <li>• Full Name</li>
+                  <li>• Job Title</li>
+                  <li>• Company</li>
+                  <li>• Time Zone</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Contact Details</h4>
+                <ul class="text-sm text-gray-600 space-y-1">
+                  <li>• Email Address</li>
+                  <li>• Phone Number</li>
+                  <li>• Language Preference</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </GuideSubSection>
+      </GuideStep>
+
+      <GuideStep
+        number={2}
+        title="How to Update Your Profile Picture"
+        description="Add or change your profile picture with these steps:"
+      >
+        <div class="mb-8">
+          <!-- <img
+            src="https://k0n.abe.mytemp.website/wp-content/uploads/2024/10/Untitled-design-1.png"
+            alt="Updating profile picture"
+            class="rounded-lg shadow-lg border border-gray-200 mb-6"
+          /> -->
+          <GuideStepList items={profilePictureSteps} />
+        </div>
+
+        <ProTip
+          tip="Use a professional headshot for your profile picture to help other board members easily identify you."
+        />
+
+        <GuideSubSection title="Image Requirements">
+          <div class="bg-white rounded-lg p-4 border border-gray-200">
+            <ul class="text-sm text-gray-600 space-y-1">
+              <li>• Maximum file size: 5MB</li>
+              <li>• Supported formats: JPG, PNG</li>
+              <li>• Recommended size: 400x400 pixels</li>
+              <li>• Square aspect ratio preferred</li>
+            </ul>
+          </div>
+        </GuideSubSection>
+      </GuideStep>
+
+      <GuideStep
+        number={3}
+        title="How to Change Your Email Address"
+        description="Update your email address securely with these steps:"
+      >
+        <div class="mb-8">
+          <!-- <img
+            src="https://k0n.abe.mytemp.website/wp-content/uploads/2024/10/Untitled-design-1.png"
+            alt="Changing email address"
+            class="rounded-lg shadow-lg border border-gray-200 mb-6"
+          /> -->
+          <GuideStepList items={updateEmailSteps} />
+        </div>
+
+        <ProTip
+          tip="Make sure you have access to your new email address before making the change, as you'll need to verify it."
+        />
+
+        <GuideSubSection title="Important Notes">
+          <div class="bg-white rounded-lg p-4 border border-gray-200 space-y-4">
+            <div>
+              <h4 class="font-semibold text-gray-900 mb-2">Email Verification</h4>
+              <p class="text-sm text-gray-600">Your new email won't be active until you verify it through the link sent to your new address.</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-900 mb-2">Access During Change</h4>
+              <p class="text-sm text-gray-600">You can still use your old email to log in until the new one is verified.</p>
+            </div>
+          </div>
+        </GuideSubSection>
+      </GuideStep>
+
+      <GuideStep
+        number={4}
+        title="How to Update Your Phone Number"
+        description="Change your phone number for 2FA and notifications:"
+      >
+        <div class="mb-8">
+          <!-- <img
+            src="https://k0n.abe.mytemp.website/wp-content/uploads/2024/10/Untitled-design-1.png"
+            alt="Updating phone number"
+            class="rounded-lg shadow-lg border border-gray-200 mb-6"
+          /> -->
+          <GuideStepList items={updatePhoneSteps} />
+        </div>
+
+        <ProTip
+          tip="Keep your phone number up to date to ensure you receive important security codes and notifications."
+        />
+
+        <GuideSubSection title="Phone Number Format">
+          <div class="bg-white rounded-lg p-4 border border-gray-200">
+            <ul class="text-sm text-gray-600 space-y-1">
+              <li>• Include country code (e.g., +1 for US)</li>
+              <li>• No spaces or special characters</li>
+              <li>• Mobile numbers only (no landlines)</li>
+            </ul>
+          </div>
+        </GuideSubSection>
+      </GuideStep>
+
+      <GuideStep
+        number={5}
+        title="How to Change Your Password"
+        description="Keep your account secure by regularly updating your password:"
+      >
+        <div class="mb-8">
+          <!-- <img
+            src="https://k0n.abe.mytemp.website/wp-content/uploads/2024/10/Untitled-design-1.png"
+            alt="Changing password"
+            class="rounded-lg shadow-lg border border-gray-200 mb-6"
+          /> -->
+          <GuideStepList items={changePasswordSteps} />
+        </div>
+
+        <ProTip
+          tip="Use a unique, strong password that you haven't used on other websites."
+        />
+
+        <GuideSubSection title="Password Requirements">
+          <div class="bg-white rounded-lg p-4 border border-gray-200">
+            <ul class="text-sm text-gray-600 space-y-1">
+              <li>• Minimum 8 characters</li>
+              <li>• At least one uppercase letter</li>
+              <li>• At least one number</li>
+              <li>• At least one special character</li>
+              <li>• Cannot be a previously used password</li>
+            </ul>
+          </div>
+        </GuideSubSection>
+      </GuideStep>
+
+      <!-- Quick Reference -->
+      <div class="mt-16 bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-xl p-8 border border-primary/10">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Quick Reference</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-2">Common Tasks</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li>• Update profile: Account Settings > Edit</li>
+              <li>• Change email: Account Settings > Email > Edit</li>
+              <li>• Update phone: Account Settings > Phone > Edit</li>
+              <li>• Change password: Account Settings > Security</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-2">Important Tips</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li>• Keep contact info current</li>
+              <li>• Use a professional photo</li>
+              <li>• Enable all security features</li>
+              <li>• Update password regularly</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Help Section -->
+      <div class="mt-8 bg-white rounded-xl p-8 shadow-sm border border-gray-200">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Need Help?</h2>
+        <p class="text-gray-600 mb-6">
+          Having trouble updating your profile or need assistance? Our support team is here to help.
+        </p>
+        <div class="flex space-x-4">
+          <a
+            href="/contact"
+            class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg text-white bg-primary hover:bg-primary/90 transition-colors"
+          >
+            Contact Support
+          </a>
+          <a
+            href="/guides"
+            class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg text-gray-900 bg-white border border-gray-200 hover:bg-gray-50 transition-colors"
+          >
+            View All Guides
+          </a>
+        </div>
+      </div>
+    </article>
+  </main>
+</Layout>
