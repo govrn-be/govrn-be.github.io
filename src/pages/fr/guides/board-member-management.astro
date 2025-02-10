@@ -1,0 +1,232 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import GuideHeader from '../../../components/guides/GuideHeader.astro';
+import GuideStep from '../../../components/guides/GuideStep.astro';
+import GuideSubSection from '../../../components/guides/GuideSubSection.astro';
+import GuideStepList from '../../../components/guides/GuideStepList.astro';
+import ProTip from '../../../components/guides/ProTip.astro';
+
+const inviteSteps = [
+  "Cliquez sur l'icône '+' dans la barre de navigation",
+  "Sélectionnez 'Inviter un membre'",
+  "Renseignez l'adresse e-mail du nouveau membre",
+  "Attribuez son rôle (Administrateur, Membre ou Observateur)",
+  "Définissez la durée de son mandat (facultatif)",
+  "Validez l'invitation via le bouton bleu"
+];
+
+const updateRoleSteps = [
+  "Accédez à la section 'Membres'",
+  "Recherchez le membre concerné et cliquez sur son nom",
+  "Utilisez le bouton 'Modifier le rôle'",
+  "Sélectionnez le nouveau rôle souhaité",
+  "Confirmez le changement"
+];
+
+const createGroupSteps = [
+  "Ouvrez la section 'Groupes'",
+  "Cliquez sur '+ Nouveau Groupe'",
+  "Donnez un nom à votre comité",
+  "Ajoutez une description explicative",
+  "Passez à la sélection des membres",
+  "Cochez les membres à intégrer",
+  "Activez l'accès historique si nécessaire",
+  "Finalisez la création du groupe"
+];
+
+const deactivateSteps = [
+  "Rendez-vous dans la section 'Membres'",
+  "Accédez au profil du membre concerné",
+  "Cliquez sur 'Désactiver' en haut à droite",
+  "Choisissez la date de fin de mandat",
+  "Précisez le motif (optionnel)",
+  "Validez la désactivation"
+];
+---
+
+<Layout title="Gestion des Administrateurs - Guide Complet - Govrn">
+  <main class="pt-24">
+    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <GuideHeader
+        title="Guide de Gestion des Administrateurs"
+        description="Découvrez comment gérer efficacement votre conseil d'administration : invitations, attribution des rôles, création de comités et gestion des départs."
+      />
+
+      <GuideStep
+        number={1}
+        title="Inviter de Nouveaux Administrateurs"
+        description="Suivez ce processus pour intégrer un nouveau membre au conseil :"
+      >
+        <div class="mb-8">
+          <img
+            src="https://k0n.abe.mytemp.website/wp-content/uploads/2024/10/Untitled-design-1.png"
+            alt="Processus d'invitation"
+            class="rounded-lg shadow-lg border border-gray-200 mb-6"
+          />
+          <GuideStepList items={inviteSteps} />
+        </div>
+        
+        <ProTip
+          tip="💡 Optimisez votre temps en invitant plusieurs membres simultanément grâce à l'option 'Ajouter un autre'."
+        />
+
+        <GuideSubSection title="Processus d'Intégration">
+          <div class="space-y-4 text-gray-600">
+            <p>1. Le membre reçoit un e-mail sécurisé avec son lien d'inscription</p>
+            <p>2. Il définit ses identifiants de connexion</p>
+            <p>3. L'accès à la documentation est immédiat après validation</p>
+          </div>
+        </GuideSubSection>
+      </GuideStep>
+
+      <GuideStep
+        number={2}
+        title="Gestion des Rôles et Permissions"
+        description="Adaptez les droits d'accès selon les responsabilités :"
+      >
+        <div class="mb-8">
+          <img
+            src="https://k0n.abe.mytemp.website/wp-content/uploads/2024/10/Untitled-design-1.png"
+            alt="Modification des rôles"
+            class="rounded-lg shadow-lg border border-gray-200 mb-6"
+          />
+          <GuideStepList items={updateRoleSteps} />
+        </div>
+
+        <GuideSubSection title="Niveaux d'Accès">
+          <div class="grid md:grid-cols-3 gap-4">
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <h4 class="font-semibold text-gray-900 mb-2">👑 Administrateur</h4>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Gestion complète</li>
+                <li>• Administration des membres</li>
+                <li>• Accès intégral</li>
+              </ul>
+            </div>
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <h4 class="font-semibold text-gray-900 mb-2">👥 Membre</h4>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Consultation</li>
+                <li>• Participation aux discussions</li>
+                <li>• Vote</li>
+              </ul>
+            </div>
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <h4 class="font-semibold text-gray-900 mb-2">👀 Observateur</h4>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Lecture seule</li>
+                <li>• Accès restreint</li>
+                <li>• Sans modification</li>
+              </ul>
+            </div>
+          </div>
+        </GuideSubSection>
+      </GuideStep>
+
+      <GuideStep
+        number={3}
+        title="Organisation des Comités"
+        description="Structurez votre gouvernance en comités spécialisés :"
+      >
+        <div class="mb-8">
+          <img
+            src="https://k0n.abe.mytemp.website/wp-content/uploads/2024/10/Untitled-design-1.png"
+            alt="Création de comité"
+            class="rounded-lg shadow-lg border border-gray-200 mb-6"
+          />
+          <GuideStepList items={createGroupSteps} />
+        </div>
+        
+        <ProTip
+          tip="💡 L'accès historique permet aux nouveaux membres de consulter l'ensemble des archives du comité."
+        />
+
+        <GuideSubSection title="Actions Rapides">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <h4 class="font-semibold text-gray-900 mb-2">✏️ Modifier un Comité</h4>
+              <p class="text-sm text-gray-600">Nom du comité > Modifier > Changements > Enregistrer</p>
+            </div>
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <h4 class="font-semibold text-gray-900 mb-2">🗑️ Supprimer un Comité</h4>
+              <p class="text-sm text-gray-600">Nom du comité > Paramètres > Supprimer > Confirmer</p>
+            </div>
+          </div>
+        </GuideSubSection>
+      </GuideStep>
+
+      <GuideStep
+        number={4}
+        title="Gestion des Départs"
+        description="Procédure de désactivation d'un membre sortant :"
+      >
+        <div class="mb-8">
+          <img
+            src="https://k0n.abe.mytemp.website/wp-content/uploads/2024/10/Untitled-design-1.png"
+            alt="Désactivation d'un membre"
+            class="rounded-lg shadow-lg border border-gray-200 mb-6"
+          />
+          <GuideStepList items={deactivateSteps} />
+        </div>
+        
+        <ProTip
+          tip="⚠️ Pensez à réattribuer les documents appartenant au membre sortant avant sa désactivation."
+        />
+
+        <GuideSubSection title="Conséquences de la Désactivation">
+          <div class="bg-white rounded-lg p-4 border border-gray-200 space-y-2">
+            <p class="text-gray-600">• Révocation des accès à la date indiquée</p>
+            <p class="text-gray-600">• Conservation de l'historique des contributions</p>
+            <p class="text-gray-600">• Possibilité de réactivation ultérieure</p>
+          </div>
+        </GuideSubSection>
+      </GuideStep>
+
+      <!-- Référence Rapide -->
+      <div class="mt-16 bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-xl p-8 border border-primary/10">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Mémo Pratique</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-2">Actions Courantes</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li>• Invitation : + > Inviter un membre</li>
+              <li>• Modification de rôle : Membres > Nom > Modifier</li>
+              <li>• Nouveau comité : Groupes > + Nouveau</li>
+              <li>• Désactivation : Membres > Nom > Désactiver</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-2">Raccourcis Clavier</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li>• Liste des membres : <kbd class="px-2 py-1 bg-gray-100 rounded">M</kbd></li>
+              <li>• Nouvelle invitation : <kbd class="px-2 py-1 bg-gray-100 rounded">N</kbd> + <kbd class="px-2 py-1 bg-gray-100 rounded">I</kbd></li>
+              <li>• Accès groupes : <kbd class="px-2 py-1 bg-gray-100 rounded">G</kbd></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section Aide -->
+      <div class="mt-8 bg-white rounded-xl p-8 shadow-sm border border-gray-200">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Besoin d'Assistance ?</h2>
+        <p class="text-gray-600 mb-6">
+          Notre équipe support est disponible 24/7 pour vous accompagner dans la gestion de votre conseil.
+        </p>
+        <div class="flex space-x-4">
+          <a
+            href="/contact"
+            class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg text-white bg-primary hover:bg-primary/90 transition-colors"
+          >
+            Contacter le Support
+          </a>
+          <a
+            href="/guides"
+            class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg text-gray-900 bg-white border border-gray-200 hover:bg-gray-50 transition-colors"
+          >
+            Tous les Guides
+          </a>
+        </div>
+      </div>
+    </article>
+  </main>
+</Layout>

@@ -8,9 +8,9 @@ import ProTip from '../../../components/guides/ProTip.astro';
 
 const groupSetupSteps = [
   "Accédez à la section Membres > Groupes dans votre tableau de bord",
-  "Cliquez sur 'Créer un groupe' pour configurer un comité",
-  "Nommez votre groupe (ex: 'comité des finances', 'comité d'audit')",
-  "Définissez les permissions d'accès aux données historiques",
+  "Cliquez sur 'Créer un nouveau groupe' pour configurer un comité",
+  "Nommez votre groupe (ex: 'Comité des finances', 'Comité d'audit')",
+  "Définissez les droits d'accès aux données historiques",
   "Enregistrez les paramètres du groupe"
 ];
 
@@ -18,15 +18,15 @@ const inviteMembersSteps = [
   "Rendez-vous dans la section Membres",
   "Cliquez sur 'Inviter des membres'",
   "Saisissez les adresses e-mail des membres",
-  "Sélectionnez le rôle approprié (administrateur, membre ou observateur)",
+  "Attribuez le rôle approprié (Administrateur, Membre ou Observateur)",
   "Envoyez les invitations"
 ];
 
 const beforeMeetingSteps = [
-  "Planifiez la réunion en précisant la date, l'heure et le lieu",
+  "Planifiez la réunion en fixant la date, l'heure et le lieu",
   "Créez un ordre du jour détaillé avec les points clés",
   "Téléchargez et organisez les documents pertinents",
-  "Envoyez les invitations aux participants"
+  "Envoyez les convocations aux participants"
 ];
 
 const duringMeetingSteps = [
@@ -40,80 +40,80 @@ const duringMeetingSteps = [
 const afterMeetingSteps = [
   "Finalisez le procès-verbal",
   "Faites signer le PV par les participants requis",
-  "Partagez les procès-verbaux et résolutions approuvés",
+  "Partagez les minutes approuvées et les résolutions",
   "Suivez l'avancement des points d'action",
   "Préparez la prochaine réunion"
 ];
 ---
 
-<Layout title="Premiers pas avec Govrn - Guide complet" description="Bienvenue sur Govrn, votre plateforme complète pour une gestion efficace des conseils d'administration ! Ce guide vous accompagnera dans les étapes essentielles pour démarrer et animer des réunions de conseil performantes.">
+<Layout title="Démarrer avec Govrn - Guide Complet" description="Bienvenue sur Govrn, votre plateforme complète pour une gouvernance efficace ! Ce guide vous accompagnera dans la prise en main et l'organisation de vos conseils d'administration.">
   <main class="pt-16">
     <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <GuideHeader
-        title="Premiers pas avec Govrn : votre guide complet"
-        description="Bienvenue sur Govrn, votre plateforme complète pour une gestion efficace des conseils d'administration ! Ce guide vous accompagnera dans les étapes essentielles pour démarrer et animer des réunions de conseil performantes."
+        title="Débuter avec Govrn : Votre Guide Complet"
+        description="Bienvenue sur Govrn, votre plateforme de gouvernance nouvelle génération ! Découvrez comment optimiser la gestion de votre conseil d'administration étape par étape."
       />
 
       <GuideStep
         number={1}
-        title="Configurez vos groupes"
-        description="Les groupes dans Govrn vous permettent d'organiser vos administrateurs en comités, garantissant que les bonnes personnes accèdent aux bonnes informations."
+        title="Structurez vos Groupes"
+        description="Les groupes dans Govrn permettent d'organiser vos administrateurs en comités, garantissant un accès ciblé aux informations pertinentes."
       >
-        <GuideSubSection title="Création des groupes pour les comités">
+        <GuideSubSection title="Création des Comités">
           <GuideStepList items={groupSetupSteps} />
         </GuideSubSection>
 
         <ProTip
-          tip="Lors de la configuration des groupes, réfléchissez attentivement aux permissions d'accès aux données historiques pour assurer un partage d'information approprié tout en préservant la confidentialité."
+          tip="Lors de la configuration des groupes, accordez une attention particulière aux droits d'accès aux données historiques pour assurer un partage d'information approprié tout en préservant la confidentialité."
         />
       </GuideStep>
 
       <GuideStep
         number={2}
-        title="Invitez vos administrateurs"
-        description="Ajoutez vos administrateurs à Govrn avec les rôles et permissions appropriés."
+        title="Constituez votre Conseil"
+        description="Intégrez vos administrateurs sur Govrn avec les rôles et permissions adaptés."
       >
         <GuideSubSection title="Processus d'invitation des membres">
           <GuideStepList items={inviteMembersSteps} />
         </GuideSubSection>
 
         <ProTip
-          tip="Attribuez les rôles avec précaution : les administrateurs ont un accès complet au système, les membres ont un accès standard à leurs groupes assignés, et les observateurs ont des permissions de consultation limitées."
+          tip="Attribuez les rôles avec précision : les Administrateurs ont un accès complet, les Membres un accès standard à leurs groupes, et les Observateurs des droits de consultation limités."
         />
       </GuideStep>
 
       <GuideStep
         number={3}
-        title="Maîtrisez le cycle de vie des réunions"
-        description="Les réunions de conseil réussies se déroulent en trois phases : avant, pendant et après. Voici comment gérer efficacement chaque phase avec Govrn."
+        title="Maîtrisez le Cycle des Réunions"
+        description="Une réunion efficace se déroule en trois temps : la préparation, la séance et le suivi. Voici comment optimiser chaque phase avec Govrn."
       >
-        <GuideSubSection title="Avant la réunion">
-          <p class="text-gray-600 mb-4">Une bonne préparation garantit des réunions productives. Suivez ces étapes pour assurer le succès :</p>
+        <GuideSubSection title="Avant la Réunion">
+          <p class="text-gray-600 mb-4">Une préparation minutieuse est la clé du succès. Suivez ces étapes :</p>
           <GuideStepList items={beforeMeetingSteps} />
         </GuideSubSection>
 
-        <GuideSubSection title="Pendant la réunion">
-          <p class="text-gray-600 mb-4">Utilisez les fonctionnalités en temps réel de Govrn pour faciliter les discussions et la prise de décision :</p>
+        <GuideSubSection title="Pendant la Réunion">
+          <p class="text-gray-600 mb-4">Exploitez les fonctionnalités en temps réel de Govrn pour des échanges productifs :</p>
           <GuideStepList items={duringMeetingSteps} />
         </GuideSubSection>
 
-        <GuideSubSection title="Après la réunion">
+        <GuideSubSection title="Après la Réunion">
           <p class="text-gray-600 mb-4">Assurez le suivi et maintenez la dynamique avec ces actions post-réunion :</p>
           <GuideStepList items={afterMeetingSteps} />
         </GuideSubSection>
 
         <ProTip
-          tip="Utilisez les fonctionnalités de collaboration documentaire de Govrn tout au long des phases de la réunion pour maintenir une source unique de vérité pour tous les documents du conseil."
+          tip="Utilisez les outils collaboratifs de Govrn tout au long du processus pour maintenir une source unique de vérité pour tous vos documents."
         />
       </GuideStep>
 
       <!-- Conclusion -->
       <div class="bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-xl p-8 border border-primary/10">
-        <h2 class="text-2xl font-bold text-gray-900 mb-4">Prêt pour une gouvernance efficace</h2>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Prêt pour une Gouvernance Efficace</h2>
         <p class="text-lg text-gray-600 leading-relaxed mb-6">
-          Vous êtes maintenant équipé pour gérer efficacement votre conseil avec Govrn. N'oubliez pas que la gestion d'un conseil est un processus continu, et Govrn est là pour vous accompagner à chaque étape.
+          Vous disposez maintenant de tous les outils pour piloter efficacement votre conseil d'administration. La bonne gouvernance est un processus continu, et Govrn vous accompagne à chaque étape.
         </p>
-        <p class="text-lg font-medium text-primary">Pour une meilleure gestion de conseil ! 🎉</p>
+        <p class="text-lg font-medium text-primary">Pour une meilleure gouvernance ! 🎉</p>
       </div>
     </article>
   </main>

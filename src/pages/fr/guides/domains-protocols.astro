@@ -1,0 +1,220 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import GuideHeader from '../../../components/guides/GuideHeader.astro';
+import GuideStep from '../../../components/guides/GuideStep.astro';
+import GuideSubSection from '../../../components/guides/GuideSubSection.astro';
+import GuideStepList from '../../../components/guides/GuideStepList.astro';
+import ProTip from '../../../components/guides/ProTip.astro';
+
+const prerequisReseau = [
+  "Autoriser le trafic HTTPS (port 443) pour tous les domaines",
+  "Permettre le trafic WSS (port 443) pour api.govrn.com", 
+  "Configurer les règles du pare-feu",
+  "Vérifier la résolution DNS pour tous les domaines",
+  "Tester la connectivité vers tous les domaines requis"
+];
+
+const etapesDepannage = [
+  "Vérifier votre connexion internet",
+  "Contrôler les paramètres du pare-feu",
+  "Vider le cache et les cookies du navigateur",
+  "Essayer un autre navigateur",
+  "Contacter le service informatique si le problème persiste"
+];
+---
+
+<Layout title="Infrastructure Technique - Guide Govrn">
+  <main class="pt-24">
+    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <GuideHeader
+        title="L'Architecture Technique de Govrn"
+        description="Découvrez l'infrastructure cloud sécurisée de Govrn : domaines, protocoles et prérequis techniques pour une utilisation optimale."
+      />
+
+      <GuideStep
+        number={1}
+        title="Les Domaines Essentiels"
+        description="Comprendre les différents domaines qui composent l'écosystème Govrn :"
+      >
+        <div class="space-y-6">
+          <div class="bg-white rounded-lg p-6 border border-gray-200">
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center text-xl">
+                🖥️
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Interface Utilisateur</h4>
+                <p class="text-gray-600 mb-2">app.govrn.com</p>
+                <p class="text-sm text-gray-500">Portail principal d'accès à votre espace Govrn</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 border border-gray-200">
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center text-xl">
+                🗄️
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Stockage Sécurisé</h4>
+                <p class="text-gray-600 mb-2">stgovrnprodfr001.blob.core.windows.net</p>
+                <p class="text-sm text-gray-500">Hébergement crypté de vos documents</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 border border-gray-200">
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center text-xl">
+                🔗
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">API Centrale</h4>
+                <p class="text-gray-600 mb-2">prod.api.ongovrn.com</p>
+                <p class="text-sm text-gray-500">Moteur de traitement des données</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 border border-gray-200">
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center text-xl">
+                🔄
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Temps Réel</h4>
+                <p class="text-gray-600 mb-2">api.govrn.com</p>
+                <p class="text-sm text-gray-500">Notifications et mises à jour instantanées</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 border border-gray-200">
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center text-xl">
+                📝
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Signature Électronique</h4>
+                <p class="text-gray-600 mb-2">apps.universign.com</p>
+                <p class="text-sm text-gray-500">Service de signature conforme eIDAS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <ProTip
+          tip="Transmettez ces domaines à votre DSI pour garantir un accès fluide à la plateforme."
+        />
+      </GuideStep>
+
+      <GuideStep
+        number={2}
+        title="Prérequis Techniques"
+        description="Configuration réseau nécessaire pour Govrn :"
+      >
+        <div class="mb-8">
+          <GuideStepList items={prerequisReseau} />
+        </div>
+
+        <GuideSubSection title="Détails des Protocoles">
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <h4 class="font-semibold text-gray-900 mb-2">HTTPS (Port 443)</h4>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Navigation sécurisée</li>
+                <li>• Transfert chiffré</li>
+                <li>• Requis pour tous les domaines</li>
+              </ul>
+            </div>
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <h4 class="font-semibold text-gray-900 mb-2">WSS (Port 443)</h4>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Communication instantanée</li>
+                <li>• Mises à jour en direct</li>
+                <li>• Requis pour api.govrn.com</li>
+              </ul>
+            </div>
+          </div>
+        </GuideSubSection>
+      </GuideStep>
+
+      <GuideStep
+        number={3}
+        title="Résolution des Problèmes"
+        description="En cas de difficulté de connexion, suivez ce guide :"
+      >
+        <div class="mb-8">
+          <GuideStepList items={etapesDepannage} />
+        </div>
+
+        <ProTip
+          tip="Utilisez les outils développeur de votre navigateur (F12) pour identifier d'éventuels blocages réseau."
+        />
+
+        <GuideSubSection title="Problèmes Fréquents">
+          <div class="space-y-4">
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <h4 class="font-semibold text-gray-900 mb-2">Délai de Connexion</h4>
+              <p class="text-sm text-gray-600">Généralement lié au pare-feu. Contactez votre DSI pour vérifier les accès.</p>
+            </div>
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <h4 class="font-semibold text-gray-900 mb-2">Erreur WebSocket</h4>
+              <p class="text-sm text-gray-600">Vérifiez que votre réseau autorise les connexions WebSocket.</p>
+            </div>
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <h4 class="font-semibold text-gray-900 mb-2">Erreur Certificat SSL</h4>
+              <p class="text-sm text-gray-600">Vérifiez la date système et mettez à jour votre navigateur.</p>
+            </div>
+          </div>
+        </GuideSubSection>
+      </GuideStep>
+
+      <!-- Référence Rapide -->
+      <div class="mt-16 bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-xl p-8 border border-primary/10">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Mémo Technique</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-2">Domaines Requis</h3>
+            <ul class="space-y-2 text-gray-600 text-sm">
+              <li>• app.govrn.com</li>
+              <li>• stgovrnprodfr001.blob.core.windows.net</li>
+              <li>• prod.api.ongovrn.com</li>
+              <li>• api.govrn.com</li>
+              <li>• apps.universign.com</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-2">Ports Nécessaires</h3>
+            <ul class="space-y-2 text-gray-600 text-sm">
+              <li>• HTTPS : 443 (TCP)</li>
+              <li>• WSS : 443 (TCP)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section Aide -->
+      <div class="mt-8 bg-white rounded-xl p-8 shadow-sm border border-gray-200">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Besoin d'Aide ?</h2>
+        <p class="text-gray-600 mb-6">
+          Des difficultés techniques ? Notre équipe support est à votre disposition.
+        </p>
+        <div class="flex space-x-4">
+          <a
+            href="/contact"
+            class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg text-white bg-primary hover:bg-primary/90 transition-colors"
+          >
+            Contacter le Support
+          </a>
+          <a
+            href="/guides"
+            class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg text-gray-900 bg-white border border-gray-200 hover:bg-gray-50 transition-colors"
+          >
+            Tous les Guides
+          </a>
+        </div>
+      </div>
+    </article>
+  </main>
+</Layout>

@@ -1,0 +1,244 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import GuideHeader from '../../../components/guides/GuideHeader.astro';
+import GuideStep from '../../../components/guides/GuideStep.astro';
+import GuideSubSection from '../../../components/guides/GuideSubSection.astro';
+import GuideStepList from '../../../components/guides/GuideStepList.astro';
+import ProTip from '../../../components/guides/ProTip.astro';
+
+const accessProfileSteps = [
+  "Cliquez sur votre photo/nom en bas à gauche de l'écran",
+  "Vos informations personnelles s'affichent",
+  "Utilisez le bouton 'Modifier' pour effectuer des changements"
+];
+
+const updateEmailSteps = [
+  "Accédez aux Paramètres du compte",
+  "Cliquez sur 'Modifier' à côté de votre adresse e-mail",
+  "Saisissez votre nouvelle adresse",
+  "Validez les modifications",
+  "Consultez votre nouvelle boîte mail",
+  "Cliquez sur le lien de vérification reçu"
+];
+
+const updatePhoneSteps = [
+  "Rendez-vous dans les Paramètres",
+  "Sélectionnez 'Modifier' près de votre numéro",
+  "Renseignez votre nouveau numéro mobile",
+  "Demandez l'envoi du code",
+  "Saisissez le code reçu par SMS",
+  "Confirmez le changement"
+];
+
+const changePasswordSteps = [
+  "Accédez aux Paramètres",
+  "Sélectionnez 'Modifier le mot de passe'",
+  "Saisissez votre mot de passe actuel",
+  "Créez votre nouveau mot de passe",
+  "Confirmez-le",
+  "Validez la modification"
+];
+
+const profilePictureSteps = [
+  "Ouvrez les Paramètres",
+  "Cliquez sur votre photo ou l'icône appareil photo",
+  "Choisissez 'Télécharger' ou 'Prendre une photo'",
+  "Sélectionnez une image depuis votre appareil",
+  "Validez pour mettre à jour"
+];
+---
+
+<Layout title="Gestion de votre Profil - Govrn">
+  <main class="pt-24">
+    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <GuideHeader
+        title="Personnalisez votre Profil Administrateur"
+        description="Guide complet pour gérer vos informations personnelles, coordonnées et paramètres de sécurité sur Govrn."
+      />
+
+      <GuideStep
+        number={1}
+        title="Accéder à votre Espace Personnel"
+        description="Suivez ces étapes pour consulter et modifier vos informations :"
+      >
+        <div class="mb-8">
+          <GuideStepList items={accessProfileSteps} />
+        </div>
+
+        <ProTip
+          tip="Maintenez vos informations à jour pour garantir une communication optimale au sein du conseil."
+        />
+
+        <GuideSubSection title="Données du Profil">
+          <div class="bg-white rounded-lg p-4 border border-gray-200">
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Informations Principales</h4>
+                <ul class="text-sm text-gray-600 space-y-1">
+                  <li>• Nom complet</li>
+                  <li>• Fonction</li>
+                  <li>• Organisation</li>
+                  <li>• Fuseau horaire</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Coordonnées</h4>
+                <ul class="text-sm text-gray-600 space-y-1">
+                  <li>• Adresse e-mail</li>
+                  <li>• Numéro mobile</li>
+                  <li>• Langue préférée</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </GuideSubSection>
+      </GuideStep>
+
+      <GuideStep
+        number={2}
+        title="Personnaliser votre Photo"
+        description="Ajoutez ou modifiez votre photo de profil :"
+      >
+        <div class="mb-8">
+          <GuideStepList items={profilePictureSteps} />
+        </div>
+
+        <ProTip
+          tip="Privilégiez une photo professionnelle pour faciliter votre identification par les autres membres du conseil."
+        />
+
+        <GuideSubSection title="Spécifications Techniques">
+          <div class="bg-white rounded-lg p-4 border border-gray-200">
+            <ul class="text-sm text-gray-600 space-y-1">
+              <li>• Taille maximale : 5 Mo</li>
+              <li>• Formats acceptés : JPG, PNG</li>
+              <li>• Dimensions recommandées : 400x400 pixels</li>
+              <li>• Format carré conseillé</li>
+            </ul>
+          </div>
+        </GuideSubSection>
+      </GuideStep>
+
+      <GuideStep
+        number={3}
+        title="Modifier votre Adresse E-mail"
+        description="Mettez à jour votre e-mail en toute sécurité :"
+      >
+        <div class="mb-8">
+          <GuideStepList items={updateEmailSteps} />
+        </div>
+
+        <ProTip
+          tip="Assurez-vous d'avoir accès à votre nouvelle adresse avant d'effectuer le changement."
+        />
+
+        <GuideSubSection title="Points Importants">
+          <div class="bg-white rounded-lg p-4 border border-gray-200 space-y-4">
+            <div>
+              <h4 class="font-semibold text-gray-900 mb-2">Vérification</h4>
+              <p class="text-sm text-gray-600">La nouvelle adresse sera active uniquement après validation du lien reçu.</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-900 mb-2">Transition</h4>
+              <p class="text-sm text-gray-600">L'ancienne adresse reste utilisable jusqu'à la validation complète.</p>
+            </div>
+          </div>
+        </GuideSubSection>
+      </GuideStep>
+
+      <GuideStep
+        number={4}
+        title="Mettre à Jour votre Mobile"
+        description="Actualisez votre numéro pour la double authentification :"
+      >
+        <div class="mb-8">
+          <GuideStepList items={updatePhoneSteps} />
+        </div>
+
+        <ProTip
+          tip="Un numéro à jour est essentiel pour la sécurité de votre compte et la réception des notifications importantes."
+        />
+
+        <GuideSubSection title="Format du Numéro">
+          <div class="bg-white rounded-lg p-4 border border-gray-200">
+            <ul class="text-sm text-gray-600 space-y-1">
+              <li>• Inclure l'indicatif pays (ex: +33 pour la France)</li>
+              <li>• Sans espaces ni caractères spéciaux</li>
+              <li>• Uniquement les mobiles (pas de fixes)</li>
+            </ul>
+          </div>
+        </GuideSubSection>
+      </GuideStep>
+
+      <GuideStep
+        number={5}
+        title="Renforcer votre Mot de Passe"
+        description="Sécurisez votre compte avec un mot de passe robuste :"
+      >
+        <div class="mb-8">
+          <GuideStepList items={changePasswordSteps} />
+        </div>
+
+        <ProTip
+          tip="Optez pour un mot de passe unique et complexe, différent de ceux utilisés sur d'autres plateformes."
+        />
+
+        <GuideSubSection title="Critères de Sécurité">
+          <div class="bg-white rounded-lg p-4 border border-gray-200">
+            <ul class="text-sm text-gray-600 space-y-1">
+              <li>• Minimum 8 caractères</li>
+              <li>• Au moins une majuscule</li>
+              <li>• Au moins un chiffre</li>
+              <li>• Au moins un caractère spécial</li>
+            </ul>
+          </div>
+        </GuideSubSection>
+      </GuideStep>
+
+      <div class="mt-16 bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-xl p-8 border border-primary/10">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Mémo Rapide</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-2">Actions Courantes</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li>• Profil : Paramètres > Modifier</li>
+              <li>• E-mail : Paramètres > E-mail > Modifier</li>
+              <li>• Mobile : Paramètres > Téléphone > Modifier</li>
+              <li>• Mot de passe : Paramètres > Sécurité</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-2">Conseils Essentiels</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li>• Coordonnées toujours à jour</li>
+              <li>• Photo professionnelle</li>
+              <li>• Sécurité maximale activée</li>
+              <li>• Renouvellement régulier du mot de passe</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 bg-white rounded-xl p-8 shadow-sm border border-gray-200">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Besoin d'Aide ?</h2>
+        <p class="text-gray-600 mb-6">
+          Des difficultés avec votre profil ? Notre équipe support est à votre disposition.
+        </p>
+        <div class="flex space-x-4">
+          <a
+            href="/contact"
+            class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg text-white bg-primary hover:bg-primary/90 transition-colors"
+          >
+            Contacter le Support
+          </a>
+          <a
+            href="/guides"
+            class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg text-gray-900 bg-white border border-gray-200 hover:bg-gray-50 transition-colors"
+          >
+            Consulter les Guides
+          </a>
+        </div>
+      </div>
+    </article>
+  </main>
+</Layout>
