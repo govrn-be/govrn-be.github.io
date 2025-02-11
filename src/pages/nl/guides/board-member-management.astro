@@ -1,0 +1,232 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import GuideHeader from '../../../components/guides/GuideHeader.astro';
+import GuideStep from '../../../components/guides/GuideStep.astro';
+import GuideSubSection from '../../../components/guides/GuideSubSection.astro';
+import GuideStepList from '../../../components/guides/GuideStepList.astro';
+import ProTip from '../../../components/guides/ProTip.astro';
+
+const inviteSteps = [
+  "Klik op het '+' icoon in de navigatiebalk",
+  "Selecteer 'Lid Uitnodigen' in het dropdown menu",
+  "Vul het e-mailadres van het lid in op het uitnodigingsformulier",
+  "Kies hun rol: Beheerder, Lid of Waarnemer",
+  "Stel de mandaatduur in (optioneel)",
+  "Klik op de blauwe 'Verstuur Uitnodiging' knop"
+];
+
+const updateRoleSteps = [
+  "Klik op 'Leden' in de zijbalk",
+  "Zoek het lid in de lijst en klik op hun naam",
+  "Klik op de 'Rol Bewerken' knop naast hun huidige rol",
+  "Selecteer de nieuwe rol uit het dropdown menu",
+  "Klik op 'Wijzigingen Opslaan' om te bevestigen"
+];
+
+const createGroupSteps = [
+  "Klik op 'Groepen' in de zijbalk",
+  "Klik op de blauwe '+ Nieuwe Groep' knop",
+  "Voer een naam in voor uw groep/commissie",
+  "Voeg een beschrijving toe om het doel van de groep te verduidelijken",
+  "Klik op 'Volgende' om door te gaan naar ledenselectie",
+  "Vink de vakjes aan naast leden om ze toe te voegen",
+  "Schakel 'Historische Toegang' in indien nodig",
+  "Klik op 'Groep Aanmaken' om af te ronden"
+];
+
+const deactivateSteps = [
+  "Ga naar 'Leden' in de zijbalk",
+  "Klik op de naam van het lid om hun profiel te openen",
+  "Klik op de 'Deactiveren' knop rechtsboven",
+  "Selecteer een deactiveringsdatum in de kalender",
+  "Voeg een reden voor deactivering toe (optioneel)",
+  "Klik op 'Deactivering Bevestigen'"
+];
+---
+
+<Layout title="Bestuursledenbeheer - Govrn">
+  <main class="pt-24">
+    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <GuideHeader
+        title="Bestuursledenbeheer in Govrn"
+        description="Stapsgewijze handleiding voor het toevoegen van nieuwe bestuursleden, rollenbeheer, commissies samenstellen en het beheren van lidmaatschappen in Govrn."
+      />
+
+      <GuideStep
+        number={1}
+        title="Nieuwe Bestuursleden Uitnodigen"
+        description="Volg deze stappen om een uitnodiging te versturen naar een nieuw bestuurslid:"
+      >
+        <div class="mb-8">
+          <img
+            src="https://k0n.abe.mytemp.website/wp-content/uploads/2024/10/Untitled-design-1.png"
+            alt="Nieuw bestuurslid uitnodigen"
+            class="rounded-lg shadow-lg border border-gray-200 mb-6"
+          />
+          <GuideStepList items={inviteSteps} />
+        </div>
+        
+        <ProTip
+          tip="💡 U kunt meerdere leden tegelijk uitnodigen door op 'Nog Een Toevoegen' te klikken voordat u de uitnodigingen verstuurt."
+        />
+
+        <GuideSubSection title="Wat Gebeurt Er Daarna?">
+          <div class="space-y-4 text-gray-600">
+            <p>1. Het uitgenodigde lid ontvangt een e-mail met een registratielink</p>
+            <p>2. Ze klikken op de link en maken hun wachtwoord aan</p>
+            <p>3. Na registratie hebben ze direct toegang tot hun bestuursdocumenten</p>
+          </div>
+        </GuideSubSection>
+      </GuideStep>
+
+      <GuideStep
+        number={2}
+        title="Rollen Wijzigen"
+        description="Zo past u de rechten van een lid aan:"
+      >
+        <div class="mb-8">
+          <img
+            src="https://k0n.abe.mytemp.website/wp-content/uploads/2024/10/Untitled-design-1.png"
+            alt="Rollen wijzigen"
+            class="rounded-lg shadow-lg border border-gray-200 mb-6"
+          />
+          <GuideStepList items={updateRoleSteps} />
+        </div>
+
+        <GuideSubSection title="Beschikbare Rollen">
+          <div class="grid md:grid-cols-3 gap-4">
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <h4 class="font-semibold text-gray-900 mb-2">👑 Beheerder</h4>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Content maken</li>
+                <li>• Leden beheren</li>
+                <li>• Volledige toegang</li>
+              </ul>
+            </div>
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <h4 class="font-semibold text-gray-900 mb-2">👥 Lid</h4>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Content bekijken</li>
+                <li>• Opmerkingen toevoegen</li>
+                <li>• Stemmen op items</li>
+              </ul>
+            </div>
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <h4 class="font-semibold text-gray-900 mb-2">👀 Waarnemer</h4>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Content bekijken</li>
+                <li>• Beperkte toegang</li>
+                <li>• Geen bewerkingen</li>
+              </ul>
+            </div>
+          </div>
+        </GuideSubSection>
+      </GuideStep>
+
+      <GuideStep
+        number={3}
+        title="Commissies Aanmaken"
+        description="Organiseer uw bestuursleden in commissies met deze stappen:"
+      >
+        <div class="mb-8">
+          <img
+            src="https://k0n.abe.mytemp.website/wp-content/uploads/2024/10/Untitled-design-1.png"
+            alt="Commissie aanmaken"
+            class="rounded-lg shadow-lg border border-gray-200 mb-6"
+          />
+          <GuideStepList items={createGroupSteps} />
+        </div>
+        
+        <ProTip
+          tip="💡 Schakel 'Historische Toegang' in om nieuwe commissieleden toegang te geven tot eerdere documenten en discussies."
+        />
+
+        <GuideSubSection title="Snelle Acties">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <h4 class="font-semibold text-gray-900 mb-2">✏️ Commissie Bewerken</h4>
+              <p class="text-sm text-gray-600">Klik op commissienaam > Bewerken > Wijzigingen maken > Opslaan</p>
+            </div>
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <h4 class="font-semibold text-gray-900 mb-2">🗑️ Commissie Verwijderen</h4>
+              <p class="text-sm text-gray-600">Klik op commissienaam > Instellingen > Verwijderen > Bevestigen</p>
+            </div>
+          </div>
+        </GuideSubSection>
+      </GuideStep>
+
+      <GuideStep
+        number={4}
+        title="Lid Deactiveren"
+        description="Wanneer een bestuurslid vertrekt, volgt u deze stappen om hun account te deactiveren:"
+      >
+        <div class="mb-8">
+          <img
+            src="https://k0n.abe.mytemp.website/wp-content/uploads/2024/10/Untitled-design-1.png"
+            alt="Lid deactiveren"
+            class="rounded-lg shadow-lg border border-gray-200 mb-6"
+          />
+          <GuideStepList items={deactivateSteps} />
+        </div>
+        
+        <ProTip
+          tip="⚠️ Zorg ervoor dat u vóór deactivering het eigenaarschap van documenten overdraagt aan een ander lid."
+        />
+
+        <GuideSubSection title="Wat Gebeurt Er Na Deactivering?">
+          <div class="bg-white rounded-lg p-4 border border-gray-200 space-y-2">
+            <p class="text-gray-600">• Lid verliest toegang op de aangegeven datum</p>
+            <p class="text-gray-600">• Hun opmerkingen en annotaties blijven zichtbaar</p>
+            <p class="text-gray-600">• Hun account kan indien nodig worden gereactiveerd</p>
+          </div>
+        </GuideSubSection>
+      </GuideStep>
+
+      <!-- Snelle Referentie -->
+      <div class="mt-16 bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-xl p-8 border border-primary/10">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Snelle Referentie</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-2">Veelvoorkomende Taken</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li>• Lid uitnodigen: + > Lid Uitnodigen</li>
+              <li>• Rol wijzigen: Leden > Naam > Rol Bewerken</li>
+              <li>• Commissie aanmaken: Groepen > + Nieuwe Groep</li>
+              <li>• Deactiveren: Leden > Naam > Deactiveren</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-2">Sneltoetsen</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li>• Ledenlijst openen: <kbd class="px-2 py-1 bg-gray-100 rounded">M</kbd></li>
+              <li>• Nieuwe uitnodiging: <kbd class="px-2 py-1 bg-gray-100 rounded">N</kbd> + <kbd class="px-2 py-1 bg-gray-100 rounded">I</kbd></li>
+              <li>• Groepen openen: <kbd class="px-2 py-1 bg-gray-100 rounded">G</kbd></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hulp Sectie -->
+      <div class="mt-8 bg-white rounded-xl p-8 shadow-sm border border-gray-200">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Hulp Nodig?</h2>
+        <p class="text-gray-600 mb-6">
+          Ons supportteam staat 24/7 voor u klaar om te helpen met ledenbeheer.
+        </p>
+        <div class="flex space-x-4">
+          <a
+            href="/nl/contact"
+            class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg text-white bg-primary hover:bg-primary/90 transition-colors"
+          >
+            Contact Support
+          </a>
+          <a
+            href="/nl/guides"
+            class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg text-gray-900 bg-white border border-gray-200 hover:bg-gray-50 transition-colors"
+          >
+            Bekijk Alle Handleidingen
+          </a>
+        </div>
+      </div>
+    </article>
+  </main>
+</Layout>

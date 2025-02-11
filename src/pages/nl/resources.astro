@@ -17,6 +17,22 @@ const categories = [
         readTime: "10 min leestijd",
         image: "/applications-picture-meeting.png",
         link: "/nl/guides/getting-started"
+      },
+      {
+        title: "Authenticatie & Beveiliging",
+        description: "Ontdek hoe u de toegang en beveiliging voor uw bestuursleden optimaal kunt beheren",
+        type: "Handleiding",
+        readTime: "8 min leestijd", 
+        image: "/en-authentication.jpg",
+        link: "/nl/guides/authentication"
+      },
+      {
+        title: "Uw Profiel Beheren",
+        description: "Leer hoe u uw Govrn-profiel kunt personaliseren voor optimale samenwerking",
+        type: "Handleiding",
+        readTime: "5 min leestijd",
+        image: "/profile-management.jpg",
+        link: "/nl/guides/profile-management"
       }
     ]
   },
@@ -63,74 +79,81 @@ const latestPodcasts = sortedPodcasts.slice(0, 3);
 ---
 
 <Layout title="Kennisbank - Govrn Bestuurssoftware" description="Ontdek onze verzameling handleidingen, onderzoeken en best practices om uw bestuursmanagement en governance strategieën te verbeteren." image="/resources.png">
-  <main class="pt-16">
-    <!-- Hero sectie -->
-    <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
-      <div class="absolute inset-0 z-0">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
-      </div>
+  <main class="pt-24">
+    <!-- Vue d'ensemble des ressources -->
+    <section class="bg-white py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-4xl mx-auto">
+          <div class="inline-flex items-center rounded-full px-6 py-2 text-sm font-medium bg-primary/10 text-primary mb-8">
+            Kenniscentrum
+          </div>
 
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="text-center max-w-3xl mx-auto">
-          <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
-            Bronnen om
-            <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
-              Uw Bestuur te Versterken
+          <h1 class="text-6xl font-extrabold text-gray-900 tracking-tight mb-8">
+            Optimaliseer uw Bestuur
+            <span class="block mt-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
+              met onze Bronnen
             </span>
           </h1>
-          <p class="text-xl text-gray-600 leading-relaxed">
-            Ontdek onze verzameling handleidingen, onderzoeken en best practices om uw bestuursmanagement en governance strategieën naar een hoger niveau te tillen.
+
+          <p class="text-xl text-gray-600 leading-relaxed mb-12 max-w-3xl mx-auto">
+            Ontdek onze verzameling essentiële bronnen: praktische handleidingen, case studies, podcasts en artikelen voor effectief bestuur.
           </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <!-- Sections identiques à la version FR mais avec texte en NL -->
+          <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl">
+            <span class="text-3xl mb-4 block">🎙️</span>
+            <h2 class="text-xl font-bold text-gray-900 mb-2">Podcasts</h2>
+            <p class="text-gray-600 mb-4">Expertgesprekken over modern bestuur</p>
+            <a href="/nl/podcast" class="text-primary hover:text-primary/90 font-medium inline-flex items-center">
+              Luister Episodes
+              <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl">
+            <span class="text-3xl mb-4 block">📝</span>
+            <h2 class="text-xl font-bold text-gray-900 mb-2">Artikelen</h2>
+            <p class="text-gray-600 mb-4">Laatste nieuws en analyses</p>
+            <a href="/nl/blog" class="text-primary hover:text-primary/90 font-medium inline-flex items-center">
+              Lees Artikelen
+              <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl">
+            <span class="text-3xl mb-4 block">📊</span>
+            <h2 class="text-xl font-bold text-gray-900 mb-2">Onderzoeken</h2>
+            <p class="text-gray-600 mb-4">Diepgaande analyses en whitepapers</p>
+            <a href="/nl/research/boardroom-ai-adoption" class="text-primary hover:text-primary/90 font-medium inline-flex items-center">
+              Bekijk Onderzoeken
+              <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-xl">
+            <span class="text-3xl mb-4 block">📚</span>
+            <h2 class="text-xl font-bold text-gray-900 mb-2">Handleidingen</h2>
+            <p class="text-gray-600 mb-4">Tutorials en praktische gidsen</p>
+            <a href="/nl/guides" class="text-primary hover:text-primary/90 font-medium inline-flex items-center">
+              Verken Handleidingen
+              <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Uitgelichte Bron -->
-    <section class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-gradient-to-br from-primary to-blue-600 rounded-3xl overflow-hidden shadow-xl">
-          <div class="grid lg:grid-cols-2 gap-8 p-12">
-            <div class="text-white">
-              <div class="flex items-center space-x-2 mb-4">
-                <span class="px-3 py-1 bg-white/20 rounded-full text-sm backdrop-blur-sm">Nieuw Onderzoek</span>
-              </div>
-              <h2 class="text-3xl font-bold mb-4">{featuredResource.title}</h2>
-              <p class="text-lg text-white/90 mb-6">{featuredResource.description}</p>
-              <div class="grid grid-cols-3 gap-4 mb-8">
-                {featuredResource.stats.map(stat => (
-                  <div class="bg-white/10 rounded-lg p-4 backdrop-blur-sm">
-                    <div class="text-2xl font-bold">{stat.value}</div>
-                    <div class="text-sm text-white/80">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-              <div class="mb-8">
-                <p class="text-white/90">Door {featuredResource.authors}</p>
-                <p class="text-white/80 text-sm">{featuredResource.institution}</p>
-              </div>
-              <div class="flex space-x-4">
-                <a
-                  href="/nl/research/boardroom-ai-adoption"
-                  class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg text-primary bg-white hover:bg-gray-50 transition-colors duration-200"
-                >
-                  Lees het volledige onderzoek
-                  <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <div class="relative flex items-center h-full">
-              <img
-                src={featuredResource.image}
-                alt="Uitgelichte Bron"
-                class="rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Podcasts -->
     <section class="py-20 bg-white">

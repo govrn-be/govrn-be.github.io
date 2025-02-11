@@ -1,0 +1,226 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import GuideHeader from '../../../components/guides/GuideHeader.astro';
+import GuideStep from '../../../components/guides/GuideStep.astro';
+import GuideSubSection from '../../../components/guides/GuideSubSection.astro';
+import GuideStepList from '../../../components/guides/GuideStepList.astro';
+import ProTip from '../../../components/guides/ProTip.astro';
+
+const signUpSteps = [
+  "Open de uitnodigingsmail van Govrn",
+  "Klik op de knop 'Uitnodiging Accepteren'", 
+  "Selecteer uw land uit het dropdown menu",
+  "Voer uw mobiele telefoonnummer in",
+  "Voer de verificatiecode in die u per SMS ontvangt",
+  "Maak een sterk wachtwoord aan (minimaal 8 tekens)",
+  "Accepteer de algemene voorwaarden",
+  "Klik op 'Registratie Voltooien'"
+];
+
+const signInSteps = [
+  "Ga naar app.govrn.com in uw browser",
+  "Voer uw e-mailadres in",
+  "Voer uw wachtwoord in", 
+  "Klik op 'Inloggen'",
+  "Voer de 2FA-code in die naar uw telefoon is gestuurd",
+  "Klik op 'Verifiëren' om het inloggen te voltooien"
+];
+
+const resetPasswordSteps = [
+  "Klik op 'Wachtwoord Vergeten?' op de inlogpagina",
+  "Voer uw e-mailadres in",
+  "Klik op 'Wachtwoord Resetten'",
+  "Controleer uw e-mail voor de resetlink",
+  "Klik op de resetlink in de e-mail",
+  "Voer uw nieuwe wachtwoord twee keer in",
+  "Klik op 'Nieuw Wachtwoord Opslaan'"
+];
+
+const twoFactorTroubleshooting = [
+  "Wacht 30 seconden en vraag een nieuwe code aan",
+  "Controleer of uw telefoon bereik heeft",
+  "Verifieer of uw telefoonnummer correct is",
+  "Neem contact op met support als problemen aanhouden"
+];
+
+const resetPasswordTroubleshooting = [
+  "Controleer uw spam/ongewenste e-mail map",
+  "Voeg support@govrn.com toe aan uw veilige afzenders",
+  "Vraag een nieuwe resetlink aan als er 24 uur verstreken zijn",
+  "Wis uw browser cache en cookies"
+];
+
+const firewallTroubleshooting = [
+  "Zorg dat prod.api.ongovrn.com op de whitelist staat",
+  "Controleer bedrijfsfirewall-instellingen",
+  "Sta HTTPS-verkeer toe op poort 443",
+  "Neem indien nodig contact op met uw IT-afdeling"
+];
+---
+
+<Layout title="Aanmelden en Inloggen - Govrn Authenticatie Handleiding">
+  <main class="pt-24">
+    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <GuideHeader
+        title="Aanmelden en Inloggen bij Govrn"
+        description="Complete handleiding voor het aanmaken van uw account, veilig inloggen en het beheren van uw authenticatie-instellingen."
+      />
+
+      <GuideStep
+        number={1}
+        title="Uw Account Aanmaken"
+        description="Volg deze stappen om uw Govrn-account aan te maken via een uitnodiging:"
+      >
+        <div class="mb-8">
+          <GuideStepList items={signUpSteps} />
+        </div>
+
+        <ProTip
+          tip="Maak een sterk wachtwoord aan met een combinatie van letters, cijfers en symbolen. Deel uw wachtwoord of 2FA-codes nooit met anderen."
+        />
+
+        <GuideSubSection title="Wachtwoordvereisten">
+          <div class="bg-white rounded-lg p-4 border border-gray-200">
+            <ul class="space-y-2 text-gray-600">
+              <li>• Minimaal 8 tekens lang</li>
+              <li>• Ten minste één hoofdletter</li>
+              <li>• Ten minste één cijfer</li>
+              <li>• Ten minste één speciaal teken</li>
+            </ul>
+          </div>
+        </GuideSubSection>
+      </GuideStep>
+
+      <GuideStep
+        number={2}
+        title="Veilig Inloggen"
+        description="Toegang tot uw Govrn-account krijgt u via deze stappen:"
+      >
+        <div class="mb-8">
+          <GuideStepList items={signInSteps} />
+        </div>
+
+        <ProTip
+          tip="Activeer 'Apparaat Onthouden' alleen op uw persoonlijke, beveiligde apparaten om toekomstige logins te vereenvoudigen."
+        />
+
+        <GuideSubSection title="Tweestapsverificatie (2FA)">
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <h4 class="font-semibold text-gray-900 mb-2">Waarom 2FA Gebruiken?</h4>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Extra beveiligingslaag</li>
+                <li>• Voorkomt ongeautoriseerde toegang</li>
+                <li>• Beschermt gevoelige gegevens</li>
+              </ul>
+            </div>
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <h4 class="font-semibold text-gray-900 mb-2">Probleemoplossing</h4>
+              <ul class="text-sm text-gray-600 space-y-1">
+                {twoFactorTroubleshooting.map(step => (
+                  <li>• {step}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </GuideSubSection>
+      </GuideStep>
+
+      <GuideStep
+        number={3}
+        title="Wachtwoord Resetten"
+        description="Als u uw wachtwoord bent vergeten, kunt u het zo resetten:"
+      >
+        <div class="mb-8">
+          <GuideStepList items={resetPasswordSteps} />
+        </div>
+
+        <ProTip
+          tip="Wachtwoord-resetlinks vervallen na 24 uur om veiligheidsredenen. Vraag indien nodig een nieuwe aan."
+        />
+      </GuideStep>
+
+      <GuideStep
+        number={4}
+        title="Veelvoorkomende Problemen Oplossen"
+        description="Oplossingen voor veel voorkomende authenticatieproblemen:"
+      >
+        <div class="grid md:grid-cols-2 gap-6">
+          <GuideSubSection title="Wachtwoord Reset Problemen">
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <ul class="text-sm text-gray-600 space-y-2">
+                {resetPasswordTroubleshooting.map(step => (
+                  <li>• {step}</li>
+                ))}
+              </ul>
+            </div>
+          </GuideSubSection>
+
+          <GuideSubSection title="Firewall & Toegangsproblemen">
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <ul class="text-sm text-gray-600 space-y-2">
+                {firewallTroubleshooting.map(step => (
+                  <li>• {step}</li>
+                ))}
+              </ul>
+            </div>
+          </GuideSubSection>
+        </div>
+
+        <div class="mt-6">
+          <p class="text-sm text-gray-600">
+            Voor meer details over domeinen en protocollen die Govrn gebruikt, zie onze
+            <a href="/nl/guides/domains-and-protocols" class="text-primary hover:text-primary/80 underline">
+              Domeinen & Protocollen Handleiding
+            </a>.
+          </p>
+        </div>
+      </GuideStep>
+
+      <div class="mt-16 bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-xl p-8 border border-primary/10">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Snelle Referentie</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-2">Veelvoorkomende Problemen</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li>• Geen uitnodigingsmail: Controleer spam</li>
+              <li>• 2FA niet ontvangen: Verifieer telefoonnummer</li>
+              <li>• Kan niet inloggen: Wis browser cache</li>
+              <li>• Sessie verlopen: Log opnieuw in</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-2">Beveiligingstips</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li>• Gebruik een uniek wachtwoord</li>
+              <li>• Deel nooit 2FA-codes</li>
+              <li>• Log uit op gedeelde apparaten</li>
+              <li>• Update wachtwoord regelmatig</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 bg-white rounded-xl p-8 shadow-sm border border-gray-200">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Hulp Nodig?</h2>
+        <p class="text-gray-600 mb-6">
+          Problemen met inloggen of hulp nodig bij authenticatie? Ons supportteam staat voor u klaar.
+        </p>
+        <div class="flex space-x-4">
+          <a
+            href="/nl/contact"
+            class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg text-white bg-primary hover:bg-primary/90 transition-colors"
+          >
+            Contact Support
+          </a>
+          <a
+            href="/nl/guides"
+            class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg text-gray-900 bg-white border border-gray-200 hover:bg-gray-50 transition-colors"
+          >
+            Bekijk Alle Handleidingen
+          </a>
+        </div>
+      </div>
+    </article>
+  </main>
+</Layout>

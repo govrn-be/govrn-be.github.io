@@ -9,6 +9,7 @@ const categories = [
     title: "Guides & Tutorials",
     icon: "📚",
     description: "Step-by-step guides to help you make the most of Govrn",
+    link: "/guides",
     resources: [
       {
         title: "Getting Started with Govrn",
@@ -17,6 +18,22 @@ const categories = [
         readTime: "10 min read",
         image: "/applications-picture-meeting.png",
         link: "/guides/getting-started"
+      },
+      {
+        title: "Authentication Guide",
+        description: "Learn how to set up and manage authentication for your board members",
+        type: "Guide", 
+        readTime: "8 min read",
+        image: "/en-authentication.jpg",
+        link: "/guides/authentication"
+      },
+      {
+        title: "Managing Your Profile",
+        description: "A guide to customizing and maintaining your Govrn profile",
+        type: "Guide",
+        readTime: "5 min read",
+        image: "/profile-management.jpg",
+        link: "/guides/profile-management"
       }
     ]
   },
@@ -171,12 +188,22 @@ const latestPodcasts = sortedPodcasts.slice(0, 3);
     {categories.map((category, index) => (
       <section class={`py-16 ${index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="flex items-center space-x-4 mb-12">
-            <span class="text-4xl">{category.icon}</span>
-            <div>
-              <h2 class="text-3xl font-bold text-gray-900">{category.title}</h2>
-              <p class="text-gray-600 mt-2">{category.description}</p>
+          <div class="flex items-center justify-between mb-12">
+            <div class="flex items-center space-x-4">
+              <span class="text-4xl">{category.icon}</span>
+              <div>
+                <h2 class="text-3xl font-bold text-gray-900">{category.title}</h2>
+                <p class="text-gray-600 mt-2">{category.description}</p>
+              </div>
             </div>
+            {category.link && (
+              <a href={`${category.link}`} class="inline-flex items-center text-primary hover:text-primary/90 font-medium group">
+                Voir tout
+                <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                </svg>
+              </a>
+            )}
           </div>
 
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -1,66 +1,66 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Layout from '../../../layouts/Layout.astro';
 
 const guides = [
   {
-    category: "Getting Started",
-    icon: "🚀",
-    description: "Essential guides for new users",
+    category: "Aan de slag",
+    icon: "🚀", 
+    description: "Essentiële handleidingen voor nieuwe gebruikers",
     guides: [
       {
-        title: "Getting Started with Govrn",
-        description: "Complete guide to setting up and using Govrn for your board",
+        title: "Beginnen met Govrn",
+        description: "Complete handleiding voor het opzetten en gebruiken van Govrn voor uw bestuur",
         icon: "📚",
         readTime: "10 min",
-        link: "/guides/getting-started"
+        link: "/nl/guides/getting-started"
       },
       {
-        title: "Authentication Guide",
-        description: "Learn how to sign up, sign in, and manage your authentication",
+        title: "Authenticatie Handleiding",
+        description: "Leer hoe u zich kunt registreren, inloggen en uw authenticatie kunt beheren",
         icon: "🔐",
-        readTime: "5 min",
-        link: "/guides/authentication"
+        readTime: "5 min", 
+        link: "/nl/guides/authentication"
       }
     ]
   },
   {
-    category: "Account Management",
+    category: "Accountbeheer",
     icon: "👤",
-    description: "Manage your account and profile",
+    description: "Beheer uw account en profiel",
     guides: [
       {
-        title: "Profile Management",
-        description: "Update your personal information, email, and settings",
+        title: "Profielbeheer",
+        description: "Werk uw persoonlijke gegevens, e-mail en instellingen bij",
         icon: "⚙️",
         readTime: "5 min",
-        link: "/guides/profile-management"
+        link: "/nl/guides/profile-management"
       },
       {
-        title: "Board Member Management",
-        description: "Add and manage board members, roles, and permissions",
+        title: "Bestuursledenbeheer",
+        description: "Voeg bestuursleden toe en beheer hun rollen en rechten",
         icon: "👥",
         readTime: "8 min",
-        link: "/guides/board-member-management"
+        link: "/nl/guides/board-member-management"
       }
     ]
   },
   {
-    category: "Technical Guides",
+    category: "Technische Handleidingen",
     icon: "🔧",
-    description: "Technical documentation and setup guides",
+    description: "Technische documentatie en configuratiehandleidingen",
     guides: [
       {
-        title: "Domains and Protocols",
-        description: "Understanding Govrn's domains and network requirements",
+        title: "Domeinen en Protocollen",
+        description: "Inzicht in Govrn's domeinen en netwerkvereisten",
         icon: "🌐",
         readTime: "7 min",
-        link: "/guides/domains-protocols"
+        link: "/nl/guides/domains-protocols"
       }
     ]
   }
 ];
 
-// Flatten guides for search
+// Guides samenvoegen voor zoekfunctie
 const allGuides = guides.flatMap(category => 
   category.guides.map(guide => ({
     ...guide,
@@ -69,9 +69,9 @@ const allGuides = guides.flatMap(category =>
 );
 ---
 
-<Layout title="Help Guides - Govrn Board Management Software">
+<Layout title="Hulpgidsen - Govrn Bestuurssoftware">
   <main class="pt-24">
-    <!-- Hero Section -->
+    <!-- Hero Sectie -->
     <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-visible">
       <div class="absolute inset-0 z-0">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
@@ -80,19 +80,19 @@ const allGuides = guides.flatMap(category =>
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="text-center max-w-3xl mx-auto">
           <div class="inline-flex items-center rounded-full px-4 py-1 text-sm font-medium bg-primary/10 text-primary mb-8">
-            Help Center
+            Helpcentrum
           </div>
           <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
-            How can we
+            Hoe kunnen we u
             <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
-              help you?
+              helpen?
             </span>
           </h1>
           <p class="text-xl text-gray-600 leading-relaxed mb-12">
-            Find step-by-step guides and tutorials to help you make the most of Govrn.
+            Ontdek stap-voor-stap handleidingen om het beste uit Govrn te halen.
           </p>
 
-          <!-- Search container with high z-index -->
+          <!-- Conteneur de recherche met z-index élevé -->
           <div class="max-w-2xl mx-auto relative z-[100]">
             <div class="relative flex items-center">
               <div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
@@ -103,26 +103,26 @@ const allGuides = guides.flatMap(category =>
               <input
                 type="text"
                 id="search-guides"
-                placeholder="Search guides..."
+                placeholder="Zoek handleidingen..."
                 class="w-full px-6 py-4 pl-14 text-lg rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary"
                 autocomplete="off"
               />
             </div>
 
-            <!-- Search Results Dropdown -->
+            <!-- Zoekresultaten Dropdown -->
             <div 
               id="search-results"
               class="absolute left-0 right-0 top-full mt-2 bg-white rounded-xl shadow-xl border border-gray-100 divide-y divide-gray-100 max-h-96 overflow-y-auto hidden"
               style="position: absolute; z-index: 9999;"
             >
-              <!-- Results will be populated by JavaScript -->
+              <!-- Resultaten worden via JavaScript ingevuld -->
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Guides Grid -->
+    <!-- Handleidingen Grid -->
     <section class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="space-y-32">
@@ -147,7 +147,7 @@ const allGuides = guides.flatMap(category =>
                         {guide.icon}
                       </div>
                       <div class="text-sm text-primary font-medium">
-                        {guide.readTime} read
+                        {guide.readTime} leestijd
                       </div>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
@@ -155,7 +155,7 @@ const allGuides = guides.flatMap(category =>
                     </h3>
                     <p class="text-gray-600">{guide.description}</p>
                     <div class="mt-4 inline-flex items-center text-primary group-hover:translate-x-2 transition-transform">
-                      Read Guide
+                      Lees Handleiding
                       <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                       </svg>
@@ -169,29 +169,29 @@ const allGuides = guides.flatMap(category =>
       </div>
     </section>
 
-    <!-- Can't Find Help Section -->
+    <!-- Niet Gevonden Sectie -->
     <section class="py-20 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="bg-white rounded-2xl p-12 shadow-sm border border-gray-100">
           <div class="max-w-2xl mx-auto text-center">
             <h2 class="text-3xl font-bold text-gray-900 mb-4">
-              Can't Find What You're Looking For?
+              Niet gevonden wat u zoekt?
             </h2>
             <p class="text-xl text-gray-600 mb-8">
-              Our support team is here to help you with any questions you may have.
+              Ons supportteam staat klaar om al uw vragen te beantwoorden.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/contact"
+                href="/nl/contact"
                 class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 Contact Support
               </a>
               <a
-                href="/request-demo"
+                href="/nl/request-demo"
                 class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-gray-900 bg-white border-2 border-gray-200 hover:border-primary/20 hover:bg-gray-50 transition-colors duration-200"
               >
-                Request a Demo
+                Demo Aanvragen
               </a>
             </div>
           </div>
@@ -205,19 +205,19 @@ const allGuides = guides.flatMap(category =>
     const searchResults = document.getElementById('search-results');
 
     if (searchInput && searchResults) {
-      // Show/hide dropdown based on focus
+      // Toon/verberg dropdown op basis van focus
       searchInput.addEventListener('focus', () => {
         searchResults.classList.remove('hidden');
       });
 
-      // Close dropdown when clicking outside
+      // Sluit dropdown bij klik buiten
       document.addEventListener('click', (e) => {
         if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
           searchResults.classList.add('hidden');
         }
       });
 
-      // Handle search input
+      // Verwerk zoekinvoer
       searchInput.addEventListener('input', (e) => {
         const searchTerm = searchInput.value.toLowerCase();
         
@@ -226,13 +226,13 @@ const allGuides = guides.flatMap(category =>
           return;
         }
 
-        // Filter guides based on search term
+        // Filter handleidingen op zoekterm
         const filteredGuides = allGuides.filter(guide => 
           guide.title.toLowerCase().includes(searchTerm) ||
           guide.description.toLowerCase().includes(searchTerm)
         );
 
-        // Update dropdown content
+        // Update dropdown inhoud
         searchResults.innerHTML = filteredGuides.length > 0
           ? filteredGuides.map(guide => `
               <a 
@@ -254,12 +254,12 @@ const allGuides = guides.flatMap(category =>
                 </div>
               </a>
             `).join('')
-          : `<div class="p-4 text-gray-500 text-center">No guides found</div>`;
+          : `<div class="p-4 text-gray-500 text-center">Geen handleidingen gevonden</div>`;
 
         searchResults.classList.remove('hidden');
       });
 
-      // Handle keyboard navigation
+      // Toetsenbordnavigatie
       searchInput.addEventListener('keydown', (e) => {
         const items = searchResults.querySelectorAll('a');
         const currentIndex = Array.from(items).findIndex(item => item === document.activeElement);

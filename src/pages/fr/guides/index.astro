@@ -72,7 +72,7 @@ const allGuides = guides.flatMap(category =>
 <Layout title="Centre d'aide - Logiciel de gouvernance Govrn">
   <main class="pt-24">
     <!-- Section héro -->
-    <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
+    <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-visible">
       <div class="absolute inset-0 z-0">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
       </div>
@@ -92,8 +92,8 @@ const allGuides = guides.flatMap(category =>
             Découvrez nos guides et tutoriels pour tirer le meilleur parti de Govrn.
           </p>
 
-          <!-- Barre de recherche avec menu déroulant -->
-          <div class="max-w-2xl mx-auto relative">
+          <!-- Conteneur de recherche avec z-index élevé -->
+          <div class="max-w-2xl mx-auto relative z-[100]">
             <div class="relative flex items-center">
               <div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
                 <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -112,7 +112,8 @@ const allGuides = guides.flatMap(category =>
             <!-- Résultats de recherche -->
             <div 
               id="search-results"
-              class="absolute left-0 right-0 mt-2 bg-white rounded-xl shadow-lg border border-gray-100 divide-y divide-gray-100 max-h-96 overflow-y-auto hidden z-50"
+              class="absolute left-0 right-0 top-full mt-2 bg-white rounded-xl shadow-xl border border-gray-100 divide-y divide-gray-100 max-h-96 overflow-y-auto hidden"
+              style="position: absolute; z-index: 9999;"
             >
             </div>
           </div>
