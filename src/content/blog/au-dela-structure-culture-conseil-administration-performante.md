@@ -13,8 +13,6 @@ slug: "au-dela-structure-culture-conseil-administration-performante"
 
 ---
 
-# Au-delà de la structure : construire une culture de conseil d'administration performante
-
 Dans le paysage complexe des affaires d'aujourd'hui, le débat sur l'efficacité des conseils d'administration s'est déplacé d'une concentration unique sur la conception structurelle vers une appréciation des dimensions humaines et comportementales. Bien que des structures de gouvernance solides soient essentielles, **la véritable force d'un conseil réside dans sa culture—la façon dont ses membres interagissent, remettent en question les hypothèses et travaillent ensemble pour générer un succès à long terme.**
 
 ## Pourquoi la culture du conseil prime sur la structure
