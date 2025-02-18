@@ -4,40 +4,54 @@ interface StatsProps {
     value: string;
     label: string;
     icon: string;
+    bgImage: string;
   }[];
 }
 
 const {
   stats = [
     {
-      value: "$50M+",
-      label: "Value Lost Annually Due to Poor Board Decisions",
-      icon: "💰"
+      value: "93%",
+      label: "Of board members feel more confident in their decisions with AI support",
+      icon: "🎯",
+      bgImage: "/hero-man.jpg"
     },
     {
-      value: "45%+", 
-      label: "Reduction in Decision-Making Time with Govrn's AI-Powered Insights",
-      icon: "⚡"
+      value: "2.5x",
+      label: "Faster strategic planning and execution with our collaborative tools",
+      icon: "⚡",
+      bgImage: "/hero-woman.jpg"
     },
     {
-      value: "10,000+",
-      label: "Strategic Decisions Powered by Govrn's Data-Driven Collaboration", 
-      icon: "🎯"
+      value: "86%",
+      label: "Of boards report improved stakeholder engagement and transparency",
+      icon: "🤝",
+      bgImage: "/hero-group.jpg"
     }
   ]
 } = Astro.props;
 ---
 
-<section class="py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
+<section class="py-12 bg-gradient-to-br from-primary/10 to-secondary/10">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-3">
       {stats.map(stat => (
-        <div class="relative bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow">
-          <div class="absolute -top-4 left-8 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-xl">
-            {stat.icon}
+        <div class="relative overflow-hidden rounded-xl bg-primary/5 transition-transform duration-300 hover:scale-[1.02] hover:shadow-2xl">
+          <img 
+            src={stat.bgImage} 
+            alt={`Background image illustrating ${stat.label}`}
+            class="absolute inset-0 w-full h-full object-cover transform transition-all duration-700 ease-in-out hover:scale-110 brightness-[0.65] contrast-[1.15] saturate-[0.95] hue-rotate-[10deg]"
+          />
+          <div class="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/75 to-primary/60 opacity-75 mix-blend-soft-light"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent opacity-80"></div>
+          
+          <div class="relative px-5 py-4">
+            <div class="inline-flex items-center justify-center w-8 h-8 mb-3 rounded-full bg-white/25 text-lg transition-transform duration-300 hover:scale-110 hover:bg-white/35">
+              {stat.icon}
+            </div>
+            <p class="text-5xl font-bold text-white mb-2 tracking-tight transition-transform duration-300 hover:translate-x-1">{stat.value}</p>
+            <p class="text-sm text-white font-medium leading-relaxed transition-colors duration-300 hover:text-white">{stat.label}</p>
           </div>
-          <h2 class="text-4xl font-bold text-gray-900 mb-4">{stat.value}</h3>
-          <p class="text-gray-600 text-lg">{stat.label}</p>
         </div>
       ))}
     </div>
