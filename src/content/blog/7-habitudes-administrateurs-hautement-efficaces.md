@@ -7,7 +7,7 @@ authorRole: "CTO chez Govrn"
 image: "/7-habitudes-administrateurs-hautement-efficaces.png"
 category: "Regulatory"
 tags: ["Administrateurs", "Leadership", "Gouvernance d'entreprise", "Efficacité du conseil"]
-featured: true
+featured: false
 lang: "fr"
 slug: "7-habitudes-administrateurs-hautement-efficaces"
 ---

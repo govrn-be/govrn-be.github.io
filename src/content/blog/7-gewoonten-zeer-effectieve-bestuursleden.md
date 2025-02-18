@@ -7,7 +7,7 @@ authorRole: "CTO bij Govrn"
 image: "/7-gewoonten-zeer-effectieve-bestuursleden.png"
 category: "Regulatory"
 tags: ["Bestuursleden", "Leiderschap", "Corporate governance", "Bestuurseffectiviteit"]
-featured: true
+featured: false
 lang: "nl"
 slug: "7-gewoonten-zeer-effectieve-bestuursleden"
 ---
