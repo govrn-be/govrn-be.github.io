@@ -1,6 +1,6 @@
 ---
 title: "The Future of AI in the Boardroom: Challenges and Opportunities"
-authors: "Dr. Weifeng Chen, Paul Stark"
+authors: "Dr. Weifeng Chen"
 institution: "Brunel Business School & Govrn"
 date: "2024"
 abstract: "This comprehensive study examines the current landscape of AI adoption in boardrooms across private, public, and third sectors. Through extensive interviews with board members and governance professionals, we explore the challenges, opportunities, and potential solutions for integrating AI into board management processes."
