@@ -155,7 +155,7 @@ export default defineConfig({
     '/document-management-library': '/features/document-management-library',
     '/r/or5': 'https://govrn-doc.notion.site/Govrn-Board-Administrator-Documentation-dbe190033163442f8fea15671aa3b93e',
    'r/RS2': 'https://www.youtube.com/watch?v=mgr62dXb2QM',
-    
+    'r/Fuz': "/guides"
   },
   build: {
     // Example: Generate `page.html` instead of `page/index.html` during build.
