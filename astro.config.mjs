@@ -59,7 +59,7 @@ export default defineConfig({
           nl: 'nl',
         },
         defaultLocale: "en",
-       
+
       },
       serialize: (page) => {
 
@@ -71,18 +71,18 @@ export default defineConfig({
           return page;
         }
 
-        if (!frenchBlogRedirects[pageUrl] && !enBlogRedirects[pageUrl]){
+        if (!frenchBlogRedirects[pageUrl] && !enBlogRedirects[pageUrl]) {
           return null;
         }
         if (frenchBlogRedirects[pageUrl]) {
           page.links = [{
-            loc: `${pageUrl}`,  
+            loc: `${pageUrl}`,
             lang: 'fr',
             url: `${pageUrl}`
           }];
           return page;
         }
-        if (enBlogRedirects[pageUrl]){
+        if (enBlogRedirects[pageUrl]) {
           page.links = [
             {
               loc: `${pageUrl}`,
@@ -92,7 +92,7 @@ export default defineConfig({
           ];
           return page;
         }
-        if (nlBlogRedirects[pageUrl]){
+        if (nlBlogRedirects[pageUrl]) {
           page.links = [
             {
               loc: `${pageUrl}`,
@@ -102,7 +102,7 @@ export default defineConfig({
           ];
           return page;
         }
-       
+
         // if (frenchBlogRedirects.includes(page.url)){
         //   page.links = [
         //     {
@@ -121,9 +121,9 @@ export default defineConfig({
       path: "fr",
       codes: ["fr", "fr-FR", "fr-CA", "fr-BE", "fr-CH", "fr-DZ", "fr-FR", "fr-GF", "fr-GP", "fr-MQ", "fr-RE", "fr-YT"]
     }, {
-      path: "nl",
-      codes: ["nl", "nl-NL", "nl-BE", "nl-SR", "nl-AW", "nl-CW", "nl-SX", "nl-BQ"]
-    }],
+        path: "nl",
+        codes: ["nl", "nl-NL", "nl-BE", "nl-SR", "nl-AW", "nl-CW", "nl-SX", "nl-BQ"]
+      }],
     defaultLocale: 'en',
     routing: {
       prefixDefaultLocale: false
@@ -154,7 +154,7 @@ export default defineConfig({
     '/legal': '/terms',
     '/document-management-library': '/features/document-management-library',
     '/r/or5': 'https://govrn-doc.notion.site/Govrn-Board-Administrator-Documentation-dbe190033163442f8fea15671aa3b93e',
-   'r/RS2': 'https://www.youtube.com/watch?v=mgr62dXb2QM',
+    'r/RS2': 'https://www.youtube.com/watch?v=mgr62dXb2QM',
     'r/Fuz': "/guides"
   },
   build: {
