@@ -15,7 +15,8 @@ const { city, country, address, postalCode, image, email } = Astro.props;
   class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300"
 >
   <div class="relative h-48">
-    <img
+    <img 
+  loading="lazy"
       src={image}
       alt={`${city} Office`}
       class="w-full h-full object-cover"

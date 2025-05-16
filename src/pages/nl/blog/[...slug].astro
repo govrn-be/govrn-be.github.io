@@ -64,7 +64,8 @@ const structuredData = {
         <!-- Hoofdafbeelding -->
         <div class="relative rounded-xl overflow-hidden mb-12 aspect-video">
           <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent"></div>
-          <img
+          <img 
+  loading="lazy"
             src={entry.data.image}
             alt={entry.data.title}
             class="w-full h-full object-cover"

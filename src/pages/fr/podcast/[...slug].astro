@@ -53,7 +53,8 @@ const { Content } = await episode.render();
           </div>
           <div class="relative">
             <div class="aspect-square rounded-2xl overflow-hidden shadow-xl">
-              <img
+              <img 
+  loading="lazy"
                 src={episode.data.image}
                 alt={episode.data.title}
                 class="w-full h-full object-cover"
@@ -85,7 +86,8 @@ const { Content } = await episode.render();
             {episode.data.guests.map(guest => (
               <div class="flex items-start space-x-6">
                 {guest.image && (
-                  <img
+                  <img 
+  loading="lazy"
                     src={guest.image}
                     alt={guest.name}
                     class="w-24 h-24 rounded-xl object-cover"

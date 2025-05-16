@@ -12,7 +12,8 @@ const { name, role, image, bio, linkedin } = Astro.props;
 
 <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
   <div class="relative mb-6">
-    <img
+    <img 
+  loading="lazy"
       src={image}
       alt={name}
       class="w-full h-64 object-cover rounded-lg"

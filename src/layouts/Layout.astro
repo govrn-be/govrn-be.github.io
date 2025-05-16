@@ -23,30 +23,31 @@ const {
   whiteLogo = false,
 } = Astro.props;
 // remove .html in pathname
-const canonicalPath = Astro.url.pathname.replace(/\.html$/, '');
+const canonicalPath = Astro.url.pathname.replace(/\.html$/, "");
 const canonicalUrl = new URL(canonicalPath, Astro.site);
 const url = canonicalUrl.href;
 const organisationStructuredData = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Govrn",
-  "url": "https://govrn.com",
-  "logo": "https://govrn.com/logo.webp",
-  "description": "Govrn is a smart platform to centralize your documents, automate tasks, and enhance collaboration.",
-  "email": "info@govrn.com",
-  "address": {
+  name: "Govrn",
+  url: "https://govrn.com",
+  logo: "https://govrn.com/logo.webp",
+  description:
+    "Govrn is a smart platform to centralize your documents, automate tasks, and enhance collaboration.",
+  email: "info@govrn.com",
+  address: {
     "@type": "PostalAddress",
-    "streetAddress": "Av. Roger Vandendriessche 18",
-    "addressLocality": "Brussels",
-    "addressCountry": "BE",
-    "addressRegion": "Brussels",
-    "postalCode": "1150"
+    streetAddress: "Av. Roger Vandendriessche 18",
+    addressLocality: "Brussels",
+    addressCountry: "BE",
+    addressRegion: "Brussels",
+    postalCode: "1150",
   },
-  "sameAs": [
+  sameAs: [
     "https://www.linkedin.com/company/govrncorp/",
-    "https://twitter.com/govrncorp"
+    "https://twitter.com/govrncorp",
   ],
-  "vatID": "BE0761625687",
+  vatID: "BE0761625687",
 };
 
 const aggregateRating = {
@@ -67,11 +68,16 @@ const aggregateRating = {
   },
 };
 
-const currentLang = canonicalPath.startsWith('/fr/') || canonicalPath.endsWith('/fr') 
-  ? 'fr' 
-  : canonicalPath.startsWith('/nl/') || canonicalPath.endsWith('/nl') 
-    ? 'nl' 
-    : 'en';
+const currentLang =
+  canonicalPath.startsWith("/fr/") || canonicalPath.endsWith("/fr")
+    ? "fr"
+    : canonicalPath.startsWith("/nl/") || canonicalPath.endsWith("/nl")
+      ? "nl"
+      : "en";
+
+const RECAPTCHA_EXECUTE_KEY =
+  import.meta.env.RECAPTCHA_EXECUTE_KEY ||
+  "6LfV-TwrAAAAAC5iJ7BMz5JoCKYHRRPCa16_Ic6E";
 ---
 
 <!doctype html>
@@ -83,11 +89,31 @@ const currentLang = canonicalPath.startsWith('/fr/') || canonicalPath.endsWith('
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <script src="https://tag.clearbitscripts.com/v1/pk_3e1d6d2934e384070f62039bb4f4efe6/tags.js" referrerpolicy="strict-origin-when-cross-origin"></script>
+    <script
+      src="https://tag.clearbitscripts.com/v1/pk_3e1d6d2934e384070f62039bb4f4efe6/tags.js"
+      referrerpolicy="strict-origin-when-cross-origin"></script>
+    <script
+      src={`https://www.google.com/recaptcha/enterprise.js?render=${RECAPTCHA_EXECUTE_KEY}`}
+      async
+      defer></script>
+
     <title>{title}</title>
-    <script type="application/ld+json" set:html={JSON.stringify(organisationStructuredData)}></script>
-    <script type="application/ld+json" set:html={JSON.stringify(aggregateRating)}></script>
-    {structuredData && <script type="application/ld+json" set:html={JSON.stringify(structuredData)}></script>}
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(organisationStructuredData)}
+    />
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(aggregateRating)}
+    />
+    {
+      structuredData && (
+        <script
+          type="application/ld+json"
+          set:html={JSON.stringify(structuredData)}
+        />
+      )
+    }
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -105,7 +131,6 @@ const currentLang = canonicalPath.startsWith('/fr/') || canonicalPath.endsWith('
 
     <link rel="canonical" href={url} />
 
-
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -121,36 +146,60 @@ const currentLang = canonicalPath.startsWith('/fr/') || canonicalPath.endsWith('
     <!-- Global site tag (gtag.js) - Google Analytics -->
   </head>
   <body class="min-h-screen bg-white relative">
-    <Header transparent={headerTransparent} hideMenu={hideMenu} whiteLogo={whiteLogo} currentLang={currentLang} />
+    <Header
+      transparent={headerTransparent}
+      hideMenu={hideMenu}
+      whiteLogo={whiteLogo}
+      currentLang={currentLang}
+    />
     <slot />
     <Footer currentLang={currentLang} />
-    
+
     <CookieBanner />
 
     <!-- Sticky Trial Button -->
     <a
-      href={currentLang === 'fr' ? '/fr/try' : currentLang === 'nl' ? '/nl/try' : '/try'}
+      href={currentLang === "fr"
+        ? "/fr/try"
+        : currentLang === "nl"
+          ? "/nl/try"
+          : "/try"}
       class="z-1000 fixed top-2 right-8 z-40 px-6 py-4 text-base font-semibold rounded-full text-white bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-3 group hover:scale-105 active:scale-95"
     >
-      <svg 
-        class="w-5 h-5" 
-        fill="none" 
-        stroke="currentColor" 
+      <svg
+        class="w-5 h-5"
+        fill="none"
+        stroke="currentColor"
         viewBox="0 0 24 24"
       >
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M13 10V3L4 14h7v7l9-11h-7z"></path>
       </svg>
-      <span>{currentLang === 'fr' ? 'Essayer gratuitement' : currentLang === 'nl' ? 'Gratis proberen' : 'Try for Free'}</span>
-      <svg 
-        class="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300" 
-        fill="none" 
-        stroke="currentColor" 
+      <span
+        >{
+          currentLang === "fr"
+            ? "Essayer gratuitement"
+            : currentLang === "nl"
+              ? "Gratis proberen"
+              : "Try for Free"
+        }</span
+      >
+      <svg
+        class="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-300"
+        fill="none"
+        stroke="currentColor"
         viewBox="0 0 24 24"
       >
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M9 5l7 7-7 7"></path>
       </svg>
     </a>
-
 
     <!-- Google Tag Manager (noscript) -->
     <noscript

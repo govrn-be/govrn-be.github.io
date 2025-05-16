@@ -81,7 +81,8 @@ const { title, subtitle, description, gradient, features, image, imageAlt, rever
           <!-- Image container -->
           <div class="relative rounded-2xl p-8 backdrop-blur-sm">
               <div class="max-h-[400px] overflow-hidden rounded-lg">
-                <img
+                <img 
+  loading="lazy"
                   src={image}
                   alt={imageAlt}
                   class="w-full h-auto object-contain transform group-hover:scale-[1.02] transition-transform duration-300"
