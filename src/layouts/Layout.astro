@@ -11,6 +11,7 @@ interface Props {
   headerTransparent?: boolean;
   hideMenu?: boolean;
   whiteLogo?: boolean;
+  noindex?: boolean;
 }
 
 const {
@@ -21,6 +22,7 @@ const {
   headerTransparent = false,
   hideMenu = false,
   whiteLogo = false,
+  noindex = false,
 } = Astro.props;
 // remove .html in pathname
 const canonicalPath = Astro.url.pathname.replace(/\.html$/, "");
@@ -84,6 +86,7 @@ const RECAPTCHA_EXECUTE_KEY =
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    {noindex && <meta name="robots" content="noindex" />}
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />

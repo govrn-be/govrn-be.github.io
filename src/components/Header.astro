@@ -75,6 +75,42 @@ interface Props {
   `}
   data-current-lang={currentLang}
 >
+  <!-- Live Governance Summit Banner -->
+  <div class="hidden md:block bg-gradient-to-r from-primary to-blue-600 text-white py-2 px-4 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+      <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 20px 20px;"></div>
+    </div>
+    
+    <div class="max-w-7xl mx-auto relative">
+      <div class="flex items-center justify-center gap-2 text-center">
+        <!-- Live indicator -->
+        <div class="flex items-center gap-1.5">
+          <div class="w-1.5 h-1.5 bg-red-400 rounded-full animate-ping"></div>
+          <span class="text-xs font-medium">LIVE EVENT</span>
+        </div>
+        
+        <!-- Event info -->
+        <div class="hidden lg:block w-px h-4 bg-white/30"></div>
+        <div class="text-xs lg:text-sm">
+          <span class="font-semibold">Governance Summit 2025</span>
+          <span class="hidden lg:inline"> - June 6, 2025 | Antwerp</span>
+        </div>
+        
+        <!-- CTA -->
+        <div class="hidden lg:block w-px h-4 bg-white/30"></div>
+        <a 
+          href="/governance-summit-summary" 
+          class="inline-flex items-center gap-1 bg-white/20 hover:bg-white/30 px-2.5 py-0.5 rounded-full text-xs font-medium transition-colors"
+        >
+          <span>Access Program & Summaries</span>
+          <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center py-4">
       <!-- Logo -->
