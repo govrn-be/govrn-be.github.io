@@ -1,6 +1,475 @@
 {
     "data": [
         {
+            "uuid": "f1993c89-923f-4bab-a7e5-a45ce2b19846",
+            "source": "leexi",
+            "source_id": "fa2466b8-e848-436e-a28b-c66bf1742b36",
+            "created_at": "2025-06-06T08:35:56.993Z",
+            "updated_at": "2025-06-06T08:51:32.763Z",
+            "performed_at": "2025-06-06T08:35:57.436Z",
+            "locale": "en-US",
+            "duration": 4236.54,
+            "direction": "outbound",
+            "is_video": false,
+            "visible": true,
+            "recording_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/f1993c89-923f-4bab-a7e5-a45ce2b19846/recording.mp3?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T085333Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIFrkYVCKLzOGbmIjBKVEYzoIKSfSa%2Fw6a7EGGMw5n7k%2FAiEAxlfz9pBl8ViadgH6jLvy6QEuGle5zf%2FyFOokLZXQZqIqmQQIWhABGgw3MjcxNTM4NDEzMjkiDMEJY%2FN2bbdAKnfmXir2A4n67UUPx4CzZwYN%2FIkJdNFPYRdAT9QrEVkgtG4NzwOsxbPfEa2B%2BWg0KIzfLfHlNcvnmZ1ChAybzuZjZlY0E3qDnH4JbA0KravBljsTP32p%2BxrzyCDAd47OOkf4XPmO%2BNq6kMCx1sJAUEUR7s03g4fm4OxWAXaLT81liUIpP6%2FRSuEbmvqmMKQp92WkolRZlr%2B5ZZOBp7ayBULmGmgk7gNzqP96lPA2EfFssOQFw40xiuFehuj0v%2B08fI9rwVoJLqNliIZ9ed9nZwSrlQFO91DjZGbMzzmwjY4uwzP%2Bha3ekThL2WkYLHCEJOtVRJHtZlmVgWMZcB6WT7SB77dtu0QGck30ZACV7Msk%2ByBXmEXmrTqGLA2AltbU8OF8kVfspKK0LxKlHI7%2B9120g%2Bwmz7y5iALmFftC0QZ32lo211bqQTsAFnO2XIKtpEx5sO0WXzXtPAr6ryuQLbCku5lsUezkqZ2sBi8s2zxevKntcj8F4ePWKF3%2BC9oGv9%2FIG9rfT3MTY0IRkjM1I3pGKt6VJKT7UhpEdEZTkD1W7bXKwOtLmD%2F%2Fi5jASO9VStBjbZU0U4gk9P4AuYt%2BGcd5VXsQJ4U%2FU0zro76L%2BpVlVcpJSji9Oc5tqCi7l8JveC4qbzJUAE7NjDFp1broxTmHE5MFvz%2FYBuI8hKkwt8%2BKwgY6pgFhvcVmuY3eNaC%2FJeyUkYGMt1GphAHO1RqfOxy0g25pke262cXX9QSLh6BU2lEQIFw9iLKOuUYQEU3c4vXHejwmjmptXfGGjRY2%2B8uy0GV9Xg8d8vwcZ2zeiQcaCALoa8KRS4F2HP%2BEIczDuprNxE7YQScDk%2FiNuqsjHWqPyA4dNWPq66EObrE7aHmH6UBS5lSC%2B8emZfZHhf2K3QVaIlVITom6RmA9\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYXJSL7NLM%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=8a6d99623371447d06760e8a6504f8955c6ab0dc344a4b72075904feb7176f1b",
+            "transcript_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/f1993c89-923f-4bab-a7e5-a45ce2b19846/transcript.json?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T085333Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIFrkYVCKLzOGbmIjBKVEYzoIKSfSa%2Fw6a7EGGMw5n7k%2FAiEAxlfz9pBl8ViadgH6jLvy6QEuGle5zf%2FyFOokLZXQZqIqmQQIWhABGgw3MjcxNTM4NDEzMjkiDMEJY%2FN2bbdAKnfmXir2A4n67UUPx4CzZwYN%2FIkJdNFPYRdAT9QrEVkgtG4NzwOsxbPfEa2B%2BWg0KIzfLfHlNcvnmZ1ChAybzuZjZlY0E3qDnH4JbA0KravBljsTP32p%2BxrzyCDAd47OOkf4XPmO%2BNq6kMCx1sJAUEUR7s03g4fm4OxWAXaLT81liUIpP6%2FRSuEbmvqmMKQp92WkolRZlr%2B5ZZOBp7ayBULmGmgk7gNzqP96lPA2EfFssOQFw40xiuFehuj0v%2B08fI9rwVoJLqNliIZ9ed9nZwSrlQFO91DjZGbMzzmwjY4uwzP%2Bha3ekThL2WkYLHCEJOtVRJHtZlmVgWMZcB6WT7SB77dtu0QGck30ZACV7Msk%2ByBXmEXmrTqGLA2AltbU8OF8kVfspKK0LxKlHI7%2B9120g%2Bwmz7y5iALmFftC0QZ32lo211bqQTsAFnO2XIKtpEx5sO0WXzXtPAr6ryuQLbCku5lsUezkqZ2sBi8s2zxevKntcj8F4ePWKF3%2BC9oGv9%2FIG9rfT3MTY0IRkjM1I3pGKt6VJKT7UhpEdEZTkD1W7bXKwOtLmD%2F%2Fi5jASO9VStBjbZU0U4gk9P4AuYt%2BGcd5VXsQJ4U%2FU0zro76L%2BpVlVcpJSji9Oc5tqCi7l8JveC4qbzJUAE7NjDFp1broxTmHE5MFvz%2FYBuI8hKkwt8%2BKwgY6pgFhvcVmuY3eNaC%2FJeyUkYGMt1GphAHO1RqfOxy0g25pke262cXX9QSLh6BU2lEQIFw9iLKOuUYQEU3c4vXHejwmjmptXfGGjRY2%2B8uy0GV9Xg8d8vwcZ2zeiQcaCALoa8KRS4F2HP%2BEIczDuprNxE7YQScDk%2FiNuqsjHWqPyA4dNWPq66EObrE7aHmH6UBS5lSC%2B8emZfZHhf2K3QVaIlVITom6RmA9\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYXJSL7NLM%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=6ff74979a2f3611e32b4da1e706854d134033d84cf2b248bf5ae1eef71338097",
+            "leexi_url": "https://app.leexi.ai/calls/f1993c89-923f-4bab-a7e5-a45ce2b19846",
+            "video_archived_at": null,
+            "audio_archived_at": null,
+            "transcript_archived_at": null,
+            "completions_archived_at": null,
+            "summary": "### Key Insights\n\n1. **Boardroom Dynamics Matter**: The effectiveness of a board is heavily influenced by its culture and dynamics. Dysfunctional interactions can lead to poor decision-making, even when members are well-intentioned.\n\n2. **Importance of Independence**: The independence of board members, particularly the chair, is crucial for effective governance. A lack of independence can lead to conflicts of interest and undermine the board's ability to act in the best interests of the organization.\n\n3. **Diversity Beyond Gender**: While gender diversity on boards has improved, there is a pressing need for generational diversity and broader representation to ensure a variety of perspectives and experiences are included in decision-making processes.\n\n4. **Cultural Measurement**: Organizations should actively measure and understand their culture, as it significantly impacts strategy implementation and overall success. Employee engagement surveys are a starting point, but deeper insights are necessary.\n\n5. **Learning Goals for Boards**: Boards should set clear learning objectives to ensure all members are equipped with the knowledge and skills necessary to make informed decisions, particularly in rapidly evolving fields like technology and sustainability.\n\n### Impactful Quote\n\n\"Good governance is not just about compliance; it’s about the way we work together and ensuring that loyalty is to the firm above all else.\"\n\n### Executive Summary\n\nIn his keynote address at the Governance Summit, Professor Randall Peterson from the London Business School emphasized the critical role of boardroom dynamics in effective governance. He highlighted that dysfunctional interactions can lead to disastrous decisions, even among well-meaning board members. The independence of board members, particularly the chair, is essential to mitigate conflicts of interest and uphold the organization's best interests. Peterson also stressed the importance of diversity, advocating for not just gender representation but also generational diversity to enrich decision-making. He urged organizations to actively measure their culture, as it significantly influences strategy execution. Finally, he recommended that boards establish clear learning goals to ensure all members are adequately prepared to navigate complex challenges. This multifaceted approach to governance aims to foster a culture of accountability, innovation, and strategic alignment within organizations.",
+            "conversation_type": {
+                "uuid": "47555ecb-bfa1-4490-a935-1ce04f91fe58",
+                "slug": "generic",
+                "active": true
+            },
+            "deal": null,
+            "meeting_event": null,
+            "feedbacks": [],
+            "owner": {
+                "uuid": "353e176c-29b8-40f9-83a8-38d445d7c4a4",
+                "name": "Admin api",
+                "email": "it+gov-sum@govrn.com",
+                "active": true
+            },
+            "participating_users": [
+                {
+                    "uuid": "353e176c-29b8-40f9-83a8-38d445d7c4a4",
+                    "name": "Admin api",
+                    "email": "it+gov-sum@govrn.com",
+                    "active": true
+                }
+            ],
+            "customer_phone_numbers": [],
+            "customer_email_addresses": [],
+            "speakers": [
+                {
+                    "uuid": "bbc7c511-b45c-4a3b-bbf8-027e738478c8",
+                    "index": 0,
+                    "name": "Intervenant 1",
+                    "is_user": false,
+                    "phone_number": null,
+                    "email_address": null
+                },
+                {
+                    "uuid": "a044a009-4e0a-452e-a901-5994543820f3",
+                    "index": 1,
+                    "name": "Intervenant 2",
+                    "is_user": false,
+                    "phone_number": null,
+                    "email_address": null
+                },
+                {
+                    "uuid": "5bdcb215-460a-45c0-bd37-b9eea25056ed",
+                    "index": 2,
+                    "name": "Intervenant 3",
+                    "is_user": false,
+                    "phone_number": null,
+                    "email_address": null
+                }
+            ],
+            "prompts": [
+                {
+                    "uuid": "da26107f-10ad-4bbd-8c01-f5869a6aeaad",
+                    "title": "chaptering",
+                    "category": "chaptering",
+                    "completions": [
+                        "Speaker 1 welcomes attendees to the Governance Summit in Antwerp, providing practical announcements regarding translation services available via QR codes. The theme of the summit is introduced: 'Creating good vibes in the boardroom.' The speaker emphasizes the importance of good governance and the role of boardrooms in fostering innovation, sustainability, and value creation.",
+                        "Philippe Peters, the host of the summit, addresses the audience, referencing the TV series 'Succession' to illustrate the consequences of poor governance. He highlights the importance of good governance as a silent engine driving organizations and introduces the study from Vlerik on growth drivers in SMEs, emphasizing the need for better governance practices.",
+                        "Speaker 1 announces the official opening of the Governance Summit and introduces the first keynote speaker, Professor Randall S. Peterson from the London Business School. The professor is recognized for his expertise in organizational psychology and leadership, and he will discuss board dynamics and pitfalls.",
+                        "Professor Peterson begins his keynote by discussing the concept of 'bad vibes' in the boardroom and how to cultivate 'good vibes.' He emphasizes the board's responsibility for important decisions and the alignment of culture with strategy. He shares insights from his research on board dynamics and the common pitfalls that boards face.",
+                        "The session transitions to a Q\u0026A segment where attendees ask questions regarding the impact of governance practices. Professor Peterson discusses the importance of diversity in boards, the role of the chairman, and the challenges faced by family businesses in governance.",
+                        "Attendees engage with Professor Peterson, asking questions about board independence, the role of family members in governance, and strategies for preparing younger generations for board roles. The professor provides insights on the complexities of governance in family-owned businesses and the need for generational diversity.",
+                        "Speaker 1 concludes the Q\u0026A session, thanking Professor Peterson for his insights and encouraging further discussions during the coffee break and lunch. The session ends with a reminder of the upcoming parallel sessions and a call for attendees to reconnect after the break."
+                    ]
+                },
+                {
+                    "uuid": "9b9f36da-1289-44c3-834f-0810b1e439ad",
+                    "title": "conversation type",
+                    "category": "text",
+                    "completions": [
+                        "\"Generic Meeting\""
+                    ]
+                },
+                {
+                    "uuid": "1b2458f8-771a-4ff3-8d3a-c4425a7daae8",
+                    "title": "exec summary",
+                    "category": "summary",
+                    "completions": [
+                        "### Key Insights\n\n1. **Boardroom Dynamics Matter**: The effectiveness of a board is heavily influenced by its culture and dynamics. Dysfunctional interactions can lead to poor decision-making, even when members are well-intentioned.\n\n2. **Importance of Independence**: The independence of board members, particularly the chair, is crucial for effective governance. A lack of independence can lead to conflicts of interest and undermine the board's ability to act in the best interests of the organization.\n\n3. **Diversity Beyond Gender**: While gender diversity on boards has improved, there is a pressing need for generational diversity and broader representation to ensure a variety of perspectives and experiences are included in decision-making processes.\n\n4. **Cultural Measurement**: Organizations should actively measure and understand their culture, as it significantly impacts strategy implementation and overall success. Employee engagement surveys are a starting point, but deeper insights are necessary.\n\n5. **Learning Goals for Boards**: Boards should set clear learning objectives to ensure all members are equipped with the knowledge and skills necessary to make informed decisions, particularly in rapidly evolving fields like technology and sustainability.\n\n### Impactful Quote\n\n\"Good governance is not just about compliance; it’s about the way we work together and ensuring that loyalty is to the firm above all else.\"\n\n### Executive Summary\n\nIn his keynote address at the Governance Summit, Professor Randall Peterson from the London Business School emphasized the critical role of boardroom dynamics in effective governance. He highlighted that dysfunctional interactions can lead to disastrous decisions, even among well-meaning board members. The independence of board members, particularly the chair, is essential to mitigate conflicts of interest and uphold the organization's best interests. Peterson also stressed the importance of diversity, advocating for not just gender representation but also generational diversity to enrich decision-making. He urged organizations to actively measure their culture, as it significantly influences strategy execution. Finally, he recommended that boards establish clear learning goals to ensure all members are adequately prepared to navigate complex challenges. This multifaceted approach to governance aims to foster a culture of accountability, innovation, and strategic alignment within organizations."
+                    ]
+                },
+                {
+                    "uuid": "0533c405-e708-4819-9c56-db3a58e60555",
+                    "title": "follow-up tasks",
+                    "category": "follow_up_tasks",
+                    "completions": [
+                        "Switch to English for the keynote introduction and moderate the Q\u0026A session with Professor Randall Peterson.",
+                        "Announce the start and end of sessions and remind attendees about their parallel sessions and breaks.",
+                        "Welcome attendees and thank partners, sponsors, and contributors for the Governance Summit.",
+                        "Explain the purpose and theme of the summit and encourage networking and engagement among participants.",
+                        "Deliver the keynote speech on boardroom dynamics and governance.",
+                        "Engage with attendees during the Q\u0026A session, answering questions about board independence, family business boards, and diversity in boards.",
+                        "Promote the importance of measuring culture, setting cultural expectations, and continuous learning for board members."
+                    ]
+                }
+            ],
+            "scorecards": [
+                {
+                    "uuid": "a1d92fa0-40ff-4500-be31-161e7193d25f",
+                    "template_uuid": "3f761e72-c11e-48ab-a6f9-e7360499aa95",
+                    "title": "Meddic",
+                    "automatic": true,
+                    "scorecard_attributes": [
+                        {
+                            "uuid": "ee8015d8-a1a5-4b5f-bed1-6a632b168919",
+                            "template_attribute_uuid": "8536ec4c-e3fb-4cc2-b221-d7ee93389b0e",
+                            "title": "Metrics : What the customer expects from the solution",
+                            "rating": 0,
+                            "automatic": true,
+                            "feedback": null,
+                            "automatic_feedback": "The transcript does not provide specific metrics or expectations that the customer has from the solution."
+                        },
+                        {
+                            "uuid": "5e2dadbd-a510-4dcc-be73-f5a83dd0c155",
+                            "template_attribute_uuid": "f3d32d4f-6a5c-452a-b303-cf23208727fb",
+                            "title": "Economic Buyer : The company’s decision-maker.",
+                            "rating": 0,
+                            "automatic": true,
+                            "feedback": null,
+                            "automatic_feedback": "The transcript does not specify who the economic buyer or decision-maker is within the company."
+                        },
+                        {
+                            "uuid": "5371a466-884b-468d-aa53-6d5b751ef827",
+                            "template_attribute_uuid": "1348ee14-3e97-4ccb-8a82-a260b2685146",
+                            "title": "Decision Criteria : What criteria does the company use to make decisions.",
+                            "rating": 0,
+                            "automatic": true,
+                            "feedback": null,
+                            "automatic_feedback": "The transcript does not outline any specific criteria that the company uses to make decisions."
+                        },
+                        {
+                            "uuid": "305053bc-1444-435b-bc39-9497b0a635fb",
+                            "template_attribute_uuid": "b9fdf2e1-683d-4771-9034-d95d345ef4a0",
+                            "title": "Decision Process : The steps involved in the decision-making process.",
+                            "rating": 0,
+                            "automatic": true,
+                            "feedback": null,
+                            "automatic_feedback": "The transcript does not detail the steps involved in the decision-making process."
+                        },
+                        {
+                            "uuid": "0795aec3-36e9-46c5-9f44-28ca54875cf9",
+                            "template_attribute_uuid": "7218c9ad-5a11-4d92-81ea-3330c01e6baa",
+                            "title": "Identify pain : The customer’s needs or the source of his difficulties.",
+                            "rating": 5,
+                            "automatic": true,
+                            "feedback": null,
+                            "automatic_feedback": "The customer expresses a need for better governance and decision-making in boardrooms, highlighting issues like groupthink and the importance of culture in governance."
+                        },
+                        {
+                            "uuid": "24f778a3-6d91-4ade-bbed-badefb529751",
+                            "template_attribute_uuid": "8d31d264-e04e-4f24-be15-58929a5a6a27",
+                            "title": "Champion: The ally on the customer’s side.",
+                            "rating": 0,
+                            "automatic": true,
+                            "feedback": null,
+                            "automatic_feedback": "The transcript does not identify any specific champion or ally on the customer's side."
+                        }
+                    ]
+                },
+                {
+                    "uuid": "14b7ef20-12b1-439d-96fd-49dcd5f0414a",
+                    "template_uuid": "409d312f-db86-402f-9ff1-6b96c14d54bf",
+                    "title": "SPICED",
+                    "automatic": true,
+                    "scorecard_attributes": [
+                        {
+                            "uuid": "377205b4-bc4f-454e-a6fa-8bcf289ceda3",
+                            "template_attribute_uuid": "42219d60-44b4-48c8-b3f3-356cc2fa3657",
+                            "title": "Situation: The prospect's key information.",
+                            "rating": 0,
+                            "automatic": true,
+                            "feedback": null,
+                            "automatic_feedback": "De informatie over de belangrijkste gegevens van de prospect is niet beschikbaar in de transcriptie."
+                        },
+                        {
+                            "uuid": "c7f63c97-a73b-4fb9-8ab5-5f58453d6f75",
+                            "template_attribute_uuid": "a2d012f0-bce5-48da-b175-fe783df8c48a",
+                            "title": "Pain: The customer's challenges and difficulties.",
+                            "rating": 0,
+                            "automatic": true,
+                            "feedback": null,
+                            "automatic_feedback": "Er zijn geen specifieke uitdagingen of moeilijkheden van de klant genoemd in de transcriptie."
+                        },
+                        {
+                            "uuid": "80da03b5-5454-4395-b30b-089f5b445883",
+                            "template_attribute_uuid": "72dac607-9381-4774-ac77-e711499d913d",
+                            "title": "Impact: How the company can meet the customer's needs.",
+                            "rating": 0,
+                            "automatic": true,
+                            "feedback": null,
+                            "automatic_feedback": "De transcriptie bevat geen informatie over hoe het bedrijf aan de behoeften van de klant kan voldoen."
+                        },
+                        {
+                            "uuid": "de6c67cb-e4d3-4fc6-b94c-7af34a500aff",
+                            "template_attribute_uuid": "b88b302b-eae1-4b83-803d-912a906553d6",
+                            "title": "Critical Event: Deadlines and important dates.",
+                            "rating": 0,
+                            "automatic": true,
+                            "feedback": null,
+                            "automatic_feedback": "Er zijn geen deadlines of belangrijke data vermeld in de transcriptie."
+                        },
+                        {
+                            "uuid": "e8c068b2-b770-4f2f-9b42-57d473a61e84",
+                            "template_attribute_uuid": "195f1939-4b8a-4137-ad9e-220e87b37190",
+                            "title": "Decision: Who will make the final decision and according to what criteria.",
+                            "rating": 0,
+                            "automatic": true,
+                            "feedback": null,
+                            "automatic_feedback": "De transcriptie biedt geen informatie over wie de uiteindelijke beslissing zal nemen en op basis van welke criteria."
+                        }
+                    ]
+                }
+            ],
+            "tags": [],
+            "title": null,
+            "description": null,
+            "simple_transcript": ""
+        },
+        {
+            "uuid": "63c6fccc-aa76-4979-9c7d-03f257e8a122",
+            "source": "leexi",
+            "source_id": "602656a5-b0a7-452b-817f-eec21c9873ad",
+            "created_at": "2025-06-05T15:00:12.064Z",
+            "updated_at": "2025-06-05T15:01:49.665Z",
+            "performed_at": "2025-06-05T15:00:11.978Z",
+            "locale": "nl-NL",
+            "duration": 77.66,
+            "direction": "outbound",
+            "is_video": false,
+            "visible": true,
+            "recording_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/63c6fccc-aa76-4979-9c7d-03f257e8a122/recording.mp3?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T085333Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIFrkYVCKLzOGbmIjBKVEYzoIKSfSa%2Fw6a7EGGMw5n7k%2FAiEAxlfz9pBl8ViadgH6jLvy6QEuGle5zf%2FyFOokLZXQZqIqmQQIWhABGgw3MjcxNTM4NDEzMjkiDMEJY%2FN2bbdAKnfmXir2A4n67UUPx4CzZwYN%2FIkJdNFPYRdAT9QrEVkgtG4NzwOsxbPfEa2B%2BWg0KIzfLfHlNcvnmZ1ChAybzuZjZlY0E3qDnH4JbA0KravBljsTP32p%2BxrzyCDAd47OOkf4XPmO%2BNq6kMCx1sJAUEUR7s03g4fm4OxWAXaLT81liUIpP6%2FRSuEbmvqmMKQp92WkolRZlr%2B5ZZOBp7ayBULmGmgk7gNzqP96lPA2EfFssOQFw40xiuFehuj0v%2B08fI9rwVoJLqNliIZ9ed9nZwSrlQFO91DjZGbMzzmwjY4uwzP%2Bha3ekThL2WkYLHCEJOtVRJHtZlmVgWMZcB6WT7SB77dtu0QGck30ZACV7Msk%2ByBXmEXmrTqGLA2AltbU8OF8kVfspKK0LxKlHI7%2B9120g%2Bwmz7y5iALmFftC0QZ32lo211bqQTsAFnO2XIKtpEx5sO0WXzXtPAr6ryuQLbCku5lsUezkqZ2sBi8s2zxevKntcj8F4ePWKF3%2BC9oGv9%2FIG9rfT3MTY0IRkjM1I3pGKt6VJKT7UhpEdEZTkD1W7bXKwOtLmD%2F%2Fi5jASO9VStBjbZU0U4gk9P4AuYt%2BGcd5VXsQJ4U%2FU0zro76L%2BpVlVcpJSji9Oc5tqCi7l8JveC4qbzJUAE7NjDFp1broxTmHE5MFvz%2FYBuI8hKkwt8%2BKwgY6pgFhvcVmuY3eNaC%2FJeyUkYGMt1GphAHO1RqfOxy0g25pke262cXX9QSLh6BU2lEQIFw9iLKOuUYQEU3c4vXHejwmjmptXfGGjRY2%2B8uy0GV9Xg8d8vwcZ2zeiQcaCALoa8KRS4F2HP%2BEIczDuprNxE7YQScDk%2FiNuqsjHWqPyA4dNWPq66EObrE7aHmH6UBS5lSC%2B8emZfZHhf2K3QVaIlVITom6RmA9\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYXJSL7NLM%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=45d0f2273311378ec8cc025ff10d99237aaf2350507ed17482bc646a3affc1db",
+            "transcript_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/63c6fccc-aa76-4979-9c7d-03f257e8a122/transcript.json?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T085333Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIFrkYVCKLzOGbmIjBKVEYzoIKSfSa%2Fw6a7EGGMw5n7k%2FAiEAxlfz9pBl8ViadgH6jLvy6QEuGle5zf%2FyFOokLZXQZqIqmQQIWhABGgw3MjcxNTM4NDEzMjkiDMEJY%2FN2bbdAKnfmXir2A4n67UUPx4CzZwYN%2FIkJdNFPYRdAT9QrEVkgtG4NzwOsxbPfEa2B%2BWg0KIzfLfHlNcvnmZ1ChAybzuZjZlY0E3qDnH4JbA0KravBljsTP32p%2BxrzyCDAd47OOkf4XPmO%2BNq6kMCx1sJAUEUR7s03g4fm4OxWAXaLT81liUIpP6%2FRSuEbmvqmMKQp92WkolRZlr%2B5ZZOBp7ayBULmGmgk7gNzqP96lPA2EfFssOQFw40xiuFehuj0v%2B08fI9rwVoJLqNliIZ9ed9nZwSrlQFO91DjZGbMzzmwjY4uwzP%2Bha3ekThL2WkYLHCEJOtVRJHtZlmVgWMZcB6WT7SB77dtu0QGck30ZACV7Msk%2ByBXmEXmrTqGLA2AltbU8OF8kVfspKK0LxKlHI7%2B9120g%2Bwmz7y5iALmFftC0QZ32lo211bqQTsAFnO2XIKtpEx5sO0WXzXtPAr6ryuQLbCku5lsUezkqZ2sBi8s2zxevKntcj8F4ePWKF3%2BC9oGv9%2FIG9rfT3MTY0IRkjM1I3pGKt6VJKT7UhpEdEZTkD1W7bXKwOtLmD%2F%2Fi5jASO9VStBjbZU0U4gk9P4AuYt%2BGcd5VXsQJ4U%2FU0zro76L%2BpVlVcpJSji9Oc5tqCi7l8JveC4qbzJUAE7NjDFp1broxTmHE5MFvz%2FYBuI8hKkwt8%2BKwgY6pgFhvcVmuY3eNaC%2FJeyUkYGMt1GphAHO1RqfOxy0g25pke262cXX9QSLh6BU2lEQIFw9iLKOuUYQEU3c4vXHejwmjmptXfGGjRY2%2B8uy0GV9Xg8d8vwcZ2zeiQcaCALoa8KRS4F2HP%2BEIczDuprNxE7YQScDk%2FiNuqsjHWqPyA4dNWPq66EObrE7aHmH6UBS5lSC%2B8emZfZHhf2K3QVaIlVITom6RmA9\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYXJSL7NLM%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=1833cadb6c77de03f3633e21a7d77fd6edf0795e7e9b0b8e793effe218de1f59",
+            "leexi_url": "https://app.leexi.ai/calls/63c6fccc-aa76-4979-9c7d-03f257e8a122",
+            "video_archived_at": null,
+            "audio_archived_at": null,
+            "transcript_archived_at": null,
+            "completions_archived_at": null,
+            "summary": "### Kerninzichten\n\n1. **Innovatie in Governance**: Het platform dat door de sprekers is ontwikkeld, is gericht op het verbeteren van de efficiëntie en effectiviteit van raden van bestuur door middel van kunstmatige intelligentie.\n   \n2. **Start-up Cultuur**: De sprekers benadrukken dat ze een start-up zijn, gevestigd in Brussel, en dat ze al twee jaar actief zijn in de sector, wat hun ervaring en toewijding aan het onderwerp onderstreept.\n\n3. **Belang van Voorzorg**: Het platform is ontworpen om voorzorg te bieden aan raden van bestuur, wat suggereert dat proactief handelen cruciaal is voor goed bestuur.\n\n4. **Interactie met het Publiek**: De sprekers moedigen interactie aan door het publiek te vragen naar hun bekendheid met het platform, wat de betrokkenheid vergroot.\n\n5. **Toekomstgericht**: De focus op AI en technologie in governance wijst op een verschuiving naar meer datagestuurde besluitvorming in de toekomst.\n\n### Inspirerend Citaat\n\n\"Wij zijn een start-up gebaseerd in Brussel dat nu al twee jaar bestaat en we hebben een platform uitgevonden dat er eigenlijk voor zorgt dat raden van besturen nog efficiënter en effectiever gaan werken met de hulp van AI.\"\n\n### Executieve Samenvatting\n\nTijdens de Governance Summit presenteerden Hanne Gellinck, Jean Louis van Hauwe en Ludok La Finale hun innovatieve platform dat is ontworpen om de efficiëntie en effectiviteit van raden van bestuur te verbeteren door middel van kunstmatige intelligentie. Als een start-up met twee jaar ervaring in Brussel, benadrukken de sprekers het belang van proactief handelen in governance. Hun platform biedt voorzorgsmaatregelen die raden van bestuur in staat stellen om beter geïnformeerde beslissingen te nemen, wat cruciaal is in een steeds complexere zakelijke omgeving. De sprekers moedigen interactie aan met het publiek, wat de betrokkenheid vergroot en de relevantie van hun boodschap versterkt. Deze presentatie onderstreept de verschuiving naar datagestuurde besluitvorming en de rol van technologie in de toekomst van governance.",
+            "conversation_type": {
+                "uuid": "47555ecb-bfa1-4490-a935-1ce04f91fe58",
+                "slug": "generic",
+                "active": true
+            },
+            "deal": null,
+            "meeting_event": null,
+            "feedbacks": [],
+            "owner": {
+                "uuid": "353e176c-29b8-40f9-83a8-38d445d7c4a4",
+                "name": "Admin api",
+                "email": "it+gov-sum@govrn.com",
+                "active": true
+            },
+            "participating_users": [
+                {
+                    "uuid": "353e176c-29b8-40f9-83a8-38d445d7c4a4",
+                    "name": "Admin api",
+                    "email": "it+gov-sum@govrn.com",
+                    "active": true
+                }
+            ],
+            "customer_phone_numbers": [],
+            "customer_email_addresses": [],
+            "speakers": [
+                {
+                    "uuid": "087cae9e-85dd-45e9-a5a9-9be561b7d494",
+                    "index": 0,
+                    "name": "Admin api",
+                    "is_user": true,
+                    "phone_number": null,
+                    "email_address": "it+gov-sum@govrn.com"
+                },
+                {
+                    "uuid": "66f4f606-fe91-46de-95c2-b63ec73faacd",
+                    "index": 1,
+                    "name": "Intervenant 2",
+                    "is_user": false,
+                    "phone_number": null,
+                    "email_address": null
+                }
+            ],
+            "prompts": [
+                {
+                    "uuid": "da26107f-10ad-4bbd-8c01-f5869a6aeaad",
+                    "title": "chaptering",
+                    "category": "chaptering",
+                    "completions": [
+                        "De sprekers verwelkomen het publiek op de Governance Summit en introduceren zichzelf als Hanne Gellinck, Jean Louis van Hauwe en Ludok La Finale.",
+                        "De sprekers leggen uit dat ze een start-up zijn uit Brussel die een platform heeft ontwikkeld om raden van besturen efficiënter en effectiever te laten werken met behulp van AI.",
+                        "Er wordt een vraag gesteld aan het publiek over hun bekendheid met het platform, maar niemand steekt zijn hand op, wat de sprekers bevestigt dat het goed is dat ze hier zijn."
+                    ]
+                },
+                {
+                    "uuid": "9b9f36da-1289-44c3-834f-0810b1e439ad",
+                    "title": "conversation type",
+                    "category": "text",
+                    "completions": [
+                        "\"Algemene vergadering\""
+                    ]
+                },
+                {
+                    "uuid": "1b2458f8-771a-4ff3-8d3a-c4425a7daae8",
+                    "title": "exec summary",
+                    "category": "summary",
+                    "completions": [
+                        "### Kerninzichten\n\n1. **Innovatie in Governance**: Het platform dat door de sprekers is ontwikkeld, is gericht op het verbeteren van de efficiëntie en effectiviteit van raden van bestuur door middel van kunstmatige intelligentie.\n   \n2. **Start-up Cultuur**: De sprekers benadrukken dat ze een start-up zijn, gevestigd in Brussel, en dat ze al twee jaar actief zijn in de sector, wat hun ervaring en toewijding aan het onderwerp onderstreept.\n\n3. **Belang van Voorzorg**: Het platform is ontworpen om voorzorg te bieden aan raden van bestuur, wat suggereert dat proactief handelen cruciaal is voor goed bestuur.\n\n4. **Interactie met het Publiek**: De sprekers moedigen interactie aan door het publiek te vragen naar hun bekendheid met het platform, wat de betrokkenheid vergroot.\n\n5. **Toekomstgericht**: De focus op AI en technologie in governance wijst op een verschuiving naar meer datagestuurde besluitvorming in de toekomst.\n\n### Inspirerend Citaat\n\n\"Wij zijn een start-up gebaseerd in Brussel dat nu al twee jaar bestaat en we hebben een platform uitgevonden dat er eigenlijk voor zorgt dat raden van besturen nog efficiënter en effectiever gaan werken met de hulp van AI.\"\n\n### Executieve Samenvatting\n\nTijdens de Governance Summit presenteerden Hanne Gellinck, Jean Louis van Hauwe en Ludok La Finale hun innovatieve platform dat is ontworpen om de efficiëntie en effectiviteit van raden van bestuur te verbeteren door middel van kunstmatige intelligentie. Als een start-up met twee jaar ervaring in Brussel, benadrukken de sprekers het belang van proactief handelen in governance. Hun platform biedt voorzorgsmaatregelen die raden van bestuur in staat stellen om beter geïnformeerde beslissingen te nemen, wat cruciaal is in een steeds complexere zakelijke omgeving. De sprekers moedigen interactie aan met het publiek, wat de betrokkenheid vergroot en de relevantie van hun boodschap versterkt. Deze presentatie onderstreept de verschuiving naar datagestuurde besluitvorming en de rol van technologie in de toekomst van governance."
+                    ]
+                },
+                {
+                    "uuid": "0533c405-e708-4819-9c56-db3a58e60555",
+                    "title": "follow-up tasks",
+                    "category": "follow_up_tasks",
+                    "completions": [
+                        "Voorbereiden van een gedetailleerde presentatie over het platform voor raden van bestuur.",
+                        "Verzamelen van feedback van de aanwezigen tijdens de governance summit.",
+                        "Opvolgen van geïnteresseerde deelnemers die meer willen weten over het platform."
+                    ]
+                }
+            ],
+            "scorecards": [
+                {
+                    "uuid": "ae14b7ba-e089-4862-8e3a-a5b4344f0a8f",
+                    "template_uuid": "3f761e72-c11e-48ab-a6f9-e7360499aa95",
+                    "title": "Meddic",
+                    "automatic": true,
+                    "scorecard_attributes": []
+                },
+                {
+                    "uuid": "48a24348-81c2-4c8c-ab1a-cd6990402ee6",
+                    "template_uuid": "409d312f-db86-402f-9ff1-6b96c14d54bf",
+                    "title": "SPICED",
+                    "automatic": true,
+                    "scorecard_attributes": []
+                }
+            ],
+            "tags": [],
+            "title": null,
+            "description": null,
+            "simple_transcript": ""
+        },
+        {
+            "uuid": "569dc843-a898-4d5e-86e5-484d5139befc",
+            "source": "leexi",
+            "source_id": "aa814970-4c01-4b34-9528-4b22355803a5",
+            "created_at": "2025-06-05T14:59:49.594Z",
+            "updated_at": "2025-06-05T15:01:29.118Z",
+            "performed_at": "2025-06-05T14:59:49.453Z",
+            "locale": "nl-NL",
+            "duration": 92.06,
+            "direction": "outbound",
+            "is_video": false,
+            "visible": true,
+            "recording_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/569dc843-a898-4d5e-86e5-484d5139befc/recording.mp3?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T085333Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIFrkYVCKLzOGbmIjBKVEYzoIKSfSa%2Fw6a7EGGMw5n7k%2FAiEAxlfz9pBl8ViadgH6jLvy6QEuGle5zf%2FyFOokLZXQZqIqmQQIWhABGgw3MjcxNTM4NDEzMjkiDMEJY%2FN2bbdAKnfmXir2A4n67UUPx4CzZwYN%2FIkJdNFPYRdAT9QrEVkgtG4NzwOsxbPfEa2B%2BWg0KIzfLfHlNcvnmZ1ChAybzuZjZlY0E3qDnH4JbA0KravBljsTP32p%2BxrzyCDAd47OOkf4XPmO%2BNq6kMCx1sJAUEUR7s03g4fm4OxWAXaLT81liUIpP6%2FRSuEbmvqmMKQp92WkolRZlr%2B5ZZOBp7ayBULmGmgk7gNzqP96lPA2EfFssOQFw40xiuFehuj0v%2B08fI9rwVoJLqNliIZ9ed9nZwSrlQFO91DjZGbMzzmwjY4uwzP%2Bha3ekThL2WkYLHCEJOtVRJHtZlmVgWMZcB6WT7SB77dtu0QGck30ZACV7Msk%2ByBXmEXmrTqGLA2AltbU8OF8kVfspKK0LxKlHI7%2B9120g%2Bwmz7y5iALmFftC0QZ32lo211bqQTsAFnO2XIKtpEx5sO0WXzXtPAr6ryuQLbCku5lsUezkqZ2sBi8s2zxevKntcj8F4ePWKF3%2BC9oGv9%2FIG9rfT3MTY0IRkjM1I3pGKt6VJKT7UhpEdEZTkD1W7bXKwOtLmD%2F%2Fi5jASO9VStBjbZU0U4gk9P4AuYt%2BGcd5VXsQJ4U%2FU0zro76L%2BpVlVcpJSji9Oc5tqCi7l8JveC4qbzJUAE7NjDFp1broxTmHE5MFvz%2FYBuI8hKkwt8%2BKwgY6pgFhvcVmuY3eNaC%2FJeyUkYGMt1GphAHO1RqfOxy0g25pke262cXX9QSLh6BU2lEQIFw9iLKOuUYQEU3c4vXHejwmjmptXfGGjRY2%2B8uy0GV9Xg8d8vwcZ2zeiQcaCALoa8KRS4F2HP%2BEIczDuprNxE7YQScDk%2FiNuqsjHWqPyA4dNWPq66EObrE7aHmH6UBS5lSC%2B8emZfZHhf2K3QVaIlVITom6RmA9\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYXJSL7NLM%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=0e770e38700623fc1c8399c3879aa9b8e7d700c07fb63172d21abebfb0db684c",
+            "transcript_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/569dc843-a898-4d5e-86e5-484d5139befc/transcript.json?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T085333Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIFrkYVCKLzOGbmIjBKVEYzoIKSfSa%2Fw6a7EGGMw5n7k%2FAiEAxlfz9pBl8ViadgH6jLvy6QEuGle5zf%2FyFOokLZXQZqIqmQQIWhABGgw3MjcxNTM4NDEzMjkiDMEJY%2FN2bbdAKnfmXir2A4n67UUPx4CzZwYN%2FIkJdNFPYRdAT9QrEVkgtG4NzwOsxbPfEa2B%2BWg0KIzfLfHlNcvnmZ1ChAybzuZjZlY0E3qDnH4JbA0KravBljsTP32p%2BxrzyCDAd47OOkf4XPmO%2BNq6kMCx1sJAUEUR7s03g4fm4OxWAXaLT81liUIpP6%2FRSuEbmvqmMKQp92WkolRZlr%2B5ZZOBp7ayBULmGmgk7gNzqP96lPA2EfFssOQFw40xiuFehuj0v%2B08fI9rwVoJLqNliIZ9ed9nZwSrlQFO91DjZGbMzzmwjY4uwzP%2Bha3ekThL2WkYLHCEJOtVRJHtZlmVgWMZcB6WT7SB77dtu0QGck30ZACV7Msk%2ByBXmEXmrTqGLA2AltbU8OF8kVfspKK0LxKlHI7%2B9120g%2Bwmz7y5iALmFftC0QZ32lo211bqQTsAFnO2XIKtpEx5sO0WXzXtPAr6ryuQLbCku5lsUezkqZ2sBi8s2zxevKntcj8F4ePWKF3%2BC9oGv9%2FIG9rfT3MTY0IRkjM1I3pGKt6VJKT7UhpEdEZTkD1W7bXKwOtLmD%2F%2Fi5jASO9VStBjbZU0U4gk9P4AuYt%2BGcd5VXsQJ4U%2FU0zro76L%2BpVlVcpJSji9Oc5tqCi7l8JveC4qbzJUAE7NjDFp1broxTmHE5MFvz%2FYBuI8hKkwt8%2BKwgY6pgFhvcVmuY3eNaC%2FJeyUkYGMt1GphAHO1RqfOxy0g25pke262cXX9QSLh6BU2lEQIFw9iLKOuUYQEU3c4vXHejwmjmptXfGGjRY2%2B8uy0GV9Xg8d8vwcZ2zeiQcaCALoa8KRS4F2HP%2BEIczDuprNxE7YQScDk%2FiNuqsjHWqPyA4dNWPq66EObrE7aHmH6UBS5lSC%2B8emZfZHhf2K3QVaIlVITom6RmA9\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYXJSL7NLM%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=acc541fb61e926679384ffcf55b0f2addb008e87b6f792be04cd0a3c7362f221",
+            "leexi_url": "https://app.leexi.ai/calls/569dc843-a898-4d5e-86e5-484d5139befc",
+            "video_archived_at": null,
+            "audio_archived_at": null,
+            "transcript_archived_at": null,
+            "completions_archived_at": null,
+            "summary": "### Kerninzichten\n1. **Innovatie in Bestuur**: Govern is een startup die zich richt op het vernieuwen van raden van bestuur door gebruik te maken van kunstmatige intelligentie.\n2. **Focus op Samenwerking**: De sessies zijn bedoeld om samen te werken en inzichten te delen, zowel in grote als kleine zalen.\n3. **Toegankelijkheid van Informatie**: De opnames en samenvattingen van de sessies zullen beschikbaar worden gesteld op de website, waardoor informatie toegankelijker wordt voor het publiek.\n4. **Testen van Technologie**: Er wordt een test uitgevoerd om te zorgen dat alle technische aspecten goed functioneren voor een optimale opname-ervaring.\n5. **Verwelkoming van Deelnemers**: De spreker benadrukt het belang van het verwelkomen van deelnemers en het creëren van een inclusieve sfeer.\n\n### Inspirerend Citaat\n\"Ons doel is echt om de raden van bestuur een beetje een nieuwe wind in te blazen met de hulp van AI.\"\n\n### Executieve Samenvatting\nIn deze talk introduceert de spreker Govern, een innovatieve startup die zich richt op het moderniseren van raden van bestuur door middel van kunstmatige intelligentie. De sessies zijn ontworpen om samenwerking en kennisdeling te bevorderen, zowel in grote als kleine zalen. De spreker benadrukt het belang van toegankelijkheid van informatie, waarbij opnames en samenvattingen van de sessies op de website worden geplaatst om het publiek te informeren en te betrekken. Tijdens de talk wordt ook een test uitgevoerd om de technische aspecten van de opnames te waarborgen, wat de focus op kwaliteit en professionaliteit onderstreept. De spreker verwelkomt de deelnemers en creëert een inclusieve sfeer, wat essentieel is voor het succes van de sessies. De kernboodschap is dat Govern zich inzet voor innovatie in bestuur en het gebruik van technologie om effectievere en toegankelijkere besluitvormingsprocessen te faciliteren.",
+            "conversation_type": {
+                "uuid": "47555ecb-bfa1-4490-a935-1ce04f91fe58",
+                "slug": "generic",
+                "active": true
+            },
+            "deal": null,
+            "meeting_event": null,
+            "feedbacks": [],
+            "owner": {
+                "uuid": "353e176c-29b8-40f9-83a8-38d445d7c4a4",
+                "name": "Admin api",
+                "email": "it+gov-sum@govrn.com",
+                "active": true
+            },
+            "participating_users": [
+                {
+                    "uuid": "353e176c-29b8-40f9-83a8-38d445d7c4a4",
+                    "name": "Admin api",
+                    "email": "it+gov-sum@govrn.com",
+                    "active": true
+                }
+            ],
+            "customer_phone_numbers": [],
+            "customer_email_addresses": [],
+            "speakers": [
+                {
+                    "uuid": "d3203445-990d-4d7d-a2f4-8b1d256728b2",
+                    "index": 0,
+                    "name": "Admin api",
+                    "is_user": true,
+                    "phone_number": null,
+                    "email_address": "it+gov-sum@govrn.com"
+                },
+                {
+                    "uuid": "539da48b-d028-4616-b8e2-d9410f5d308b",
+                    "index": 1,
+                    "name": "Intervenant 2",
+                    "is_user": false,
+                    "phone_number": null,
+                    "email_address": null
+                }
+            ],
+            "prompts": [
+                {
+                    "uuid": "da26107f-10ad-4bbd-8c01-f5869a6aeaad",
+                    "title": "chaptering",
+                    "category": "chaptering",
+                    "completions": [
+                        "In dit hoofdstuk verwelkomt de spreker de aanwezigen en kondigt aan dat de opname van de sessie is gestart. Er wordt gesproken over het doel van de test om te controleren of alle geluiden goed doorkomen voor toekomstige samenvattingen.",
+                        "De spreker introduceert Govern, een startup die zich richt op het vernieuwen van raden van bestuur met behulp van kunstmatige intelligentie. Dit hoofdstuk benadrukt de innovatieve aanpak van Govern en hun doelstellingen."
+                    ]
+                },
+                {
+                    "uuid": "9b9f36da-1289-44c3-834f-0810b1e439ad",
+                    "title": "conversation type",
+                    "category": "text",
+                    "completions": [
+                        "\"Algemene vergadering\""
+                    ]
+                },
+                {
+                    "uuid": "1b2458f8-771a-4ff3-8d3a-c4425a7daae8",
+                    "title": "exec summary",
+                    "category": "summary",
+                    "completions": [
+                        "### Kerninzichten\n1. **Innovatie in Bestuur**: Govern is een startup die zich richt op het vernieuwen van raden van bestuur door gebruik te maken van kunstmatige intelligentie.\n2. **Focus op Samenwerking**: De sessies zijn bedoeld om samen te werken en inzichten te delen, zowel in grote als kleine zalen.\n3. **Toegankelijkheid van Informatie**: De opnames en samenvattingen van de sessies zullen beschikbaar worden gesteld op de website, waardoor informatie toegankelijker wordt voor het publiek.\n4. **Testen van Technologie**: Er wordt een test uitgevoerd om te zorgen dat alle technische aspecten goed functioneren voor een optimale opname-ervaring.\n5. **Verwelkoming van Deelnemers**: De spreker benadrukt het belang van het verwelkomen van deelnemers en het creëren van een inclusieve sfeer.\n\n### Inspirerend Citaat\n\"Ons doel is echt om de raden van bestuur een beetje een nieuwe wind in te blazen met de hulp van AI.\"\n\n### Executieve Samenvatting\nIn deze talk introduceert de spreker Govern, een innovatieve startup die zich richt op het moderniseren van raden van bestuur door middel van kunstmatige intelligentie. De sessies zijn ontworpen om samenwerking en kennisdeling te bevorderen, zowel in grote als kleine zalen. De spreker benadrukt het belang van toegankelijkheid van informatie, waarbij opnames en samenvattingen van de sessies op de website worden geplaatst om het publiek te informeren en te betrekken. Tijdens de talk wordt ook een test uitgevoerd om de technische aspecten van de opnames te waarborgen, wat de focus op kwaliteit en professionaliteit onderstreept. De spreker verwelkomt de deelnemers en creëert een inclusieve sfeer, wat essentieel is voor het succes van de sessies. De kernboodschap is dat Govern zich inzet voor innovatie in bestuur en het gebruik van technologie om effectievere en toegankelijkere besluitvormingsprocessen te faciliteren."
+                    ]
+                },
+                {
+                    "uuid": "0533c405-e708-4819-9c56-db3a58e60555",
+                    "title": "follow-up tasks",
+                    "category": "follow_up_tasks",
+                    "completions": [
+                        "Test de opname om te controleren of alle velden correct doorkomen.",
+                        "Bekijk de testresultaten die Ludovic zal doorsturen.",
+                        "Plaats de samenvattingen van de sessies op de website.",
+                        "Verwelkom nieuwe deelnemers en introduceer Govern als startup.",
+                        "Zorg dat er samenvattingen gemaakt worden voor zowel hoofdzalen als kleine bijzalen.",
+                        "Maak een nieuwe opname aan en zorg dat het geluid goed wordt opgenomen.",
+                        "Pas het volume aan zodat het niet te luid binnenkomt.",
+                        "Communiceer met de opname zodat anderen kunnen zien wat er gebeurt."
+                    ]
+                }
+            ],
+            "scorecards": [],
+            "tags": [],
+            "title": null,
+            "description": null,
+            "simple_transcript": ""
+        },
+        {
             "uuid": "0eba087b-86ee-495d-83f6-b522691f960f",
             "source": "leexi",
             "source_id": "8208fdd0-8936-4608-9249-c65d678890d3",
@@ -12,8 +481,8 @@
             "direction": "outbound",
             "is_video": false,
             "visible": true,
-            "recording_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/0eba087b-86ee-495d-83f6-b522691f960f/recording.mp3?X-Amz-Expires=3600\u0026X-Amz-Date=20250603T142134Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjED4aCWV1LXdlc3QtMyJGMEQCIDz%2BFGKnYDGz2xPQ4M0AcdRN%2F37hXfjvM2dPuk0PxfrpAiByYJgAPTcqtPl2vjFBJRRl3fDTrwszygZLQdAieaMcjiqZBAgXEAEaDDcyNzE1Mzg0MTMyOSIM3r2ekyAErqkYHofIKvYDnkIQZ7dFoKsf1yHZIYO0kA7NRm8VIslpy%2FQd6hsguEOSguSPoEv%2Fl6CHDzYNaHHTXhoskJyxJR0tS8hJdSFv6111WBX7fZ7aKPdoVKtAASMtO3IYabPJN5CsAwsM9wLjPoUS%2BAGjkVuJ6Sy6k06jVZWYb%2FfnceriqGi%2BbL1KsgXCjjHzBeSKQEGLNDsaD1XPl9C%2FTcJsm4%2FBvpf51d3iLqbOwrKpbOYqRXoKBjSl0JrDrT8wZh0D0Slpu3BcLGukWpELPmTFLwKsXUbc%2F4JvAG0IPGEVVn9bOu%2BGp4Edm9vC2z4zJqUlAP1%2Bge39zehIns4DXg6U8IpzEDhESeCE8fV4dtZSH7FNlSZqV8mEpjw4hX0hb47zhxXutlTLcy2jM1m1A2bKS8kY0dLHLvOpvTbZy7Z3j%2BXiQiXiJH5ldkcQcNE3Eva5cOGVDeNIZXziy%2FIPkbtddvMADhxinW5afrHXJzk0xWC6GS%2F3zo515YG8p2kQQ3W%2F2tthoPVHFGzYiEq1VgG82UjtYxoloJUxwX%2F8VJVIjdFbzxlQQsG2a%2BPwPTlGtYHXNHqB7To1zWVI4XZjO4e8Vy%2BZGdmYR3O5YI0XQ3B5qzTm0PJJfkSJr8J9bb9qCRTRt8BeYoZmQXu5t%2Bzcg%2FCFHD8jSoOnDXVQQLVBC8%2FGXzDD8vvBBjqnAT8tgDA0QlFqEdAbonebh8W7xRsPxzWJuiKxC6JYcBaSEYEq5DAcqzD598R1Js%2FYzI6m8sJj6hqvqscWr3m3y3Xr9e4W9BMoVD3f1vW1vvr7I1KUGwhPimi0ye3sYp0sDa542i95HHw3zEeCIKaPbaHhCtPrxK33DyllmZyvFHUdKFuyh7HEka7TiBKpOGq5UH6SmfEcpNEJyAP5ap4HGJvzCP8J7PF2\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSY54FVC22B%2F20250603%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=d4ec6ab4252b740ea3a6d8786f1fb6b8b3d68a69f3646e14ef2462796988c6e5",
-            "transcript_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/0eba087b-86ee-495d-83f6-b522691f960f/transcript.json?X-Amz-Expires=3600\u0026X-Amz-Date=20250603T142134Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjED4aCWV1LXdlc3QtMyJGMEQCIDz%2BFGKnYDGz2xPQ4M0AcdRN%2F37hXfjvM2dPuk0PxfrpAiByYJgAPTcqtPl2vjFBJRRl3fDTrwszygZLQdAieaMcjiqZBAgXEAEaDDcyNzE1Mzg0MTMyOSIM3r2ekyAErqkYHofIKvYDnkIQZ7dFoKsf1yHZIYO0kA7NRm8VIslpy%2FQd6hsguEOSguSPoEv%2Fl6CHDzYNaHHTXhoskJyxJR0tS8hJdSFv6111WBX7fZ7aKPdoVKtAASMtO3IYabPJN5CsAwsM9wLjPoUS%2BAGjkVuJ6Sy6k06jVZWYb%2FfnceriqGi%2BbL1KsgXCjjHzBeSKQEGLNDsaD1XPl9C%2FTcJsm4%2FBvpf51d3iLqbOwrKpbOYqRXoKBjSl0JrDrT8wZh0D0Slpu3BcLGukWpELPmTFLwKsXUbc%2F4JvAG0IPGEVVn9bOu%2BGp4Edm9vC2z4zJqUlAP1%2Bge39zehIns4DXg6U8IpzEDhESeCE8fV4dtZSH7FNlSZqV8mEpjw4hX0hb47zhxXutlTLcy2jM1m1A2bKS8kY0dLHLvOpvTbZy7Z3j%2BXiQiXiJH5ldkcQcNE3Eva5cOGVDeNIZXziy%2FIPkbtddvMADhxinW5afrHXJzk0xWC6GS%2F3zo515YG8p2kQQ3W%2F2tthoPVHFGzYiEq1VgG82UjtYxoloJUxwX%2F8VJVIjdFbzxlQQsG2a%2BPwPTlGtYHXNHqB7To1zWVI4XZjO4e8Vy%2BZGdmYR3O5YI0XQ3B5qzTm0PJJfkSJr8J9bb9qCRTRt8BeYoZmQXu5t%2Bzcg%2FCFHD8jSoOnDXVQQLVBC8%2FGXzDD8vvBBjqnAT8tgDA0QlFqEdAbonebh8W7xRsPxzWJuiKxC6JYcBaSEYEq5DAcqzD598R1Js%2FYzI6m8sJj6hqvqscWr3m3y3Xr9e4W9BMoVD3f1vW1vvr7I1KUGwhPimi0ye3sYp0sDa542i95HHw3zEeCIKaPbaHhCtPrxK33DyllmZyvFHUdKFuyh7HEka7TiBKpOGq5UH6SmfEcpNEJyAP5ap4HGJvzCP8J7PF2\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSY54FVC22B%2F20250603%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=ea6cc9b38fd9b59264d2bfe6a1c3e2a1ee5855ce3337daf0148d7b780271b75c",
+            "recording_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/0eba087b-86ee-495d-83f6-b522691f960f/recording.mp3?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T085333Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIFrkYVCKLzOGbmIjBKVEYzoIKSfSa%2Fw6a7EGGMw5n7k%2FAiEAxlfz9pBl8ViadgH6jLvy6QEuGle5zf%2FyFOokLZXQZqIqmQQIWhABGgw3MjcxNTM4NDEzMjkiDMEJY%2FN2bbdAKnfmXir2A4n67UUPx4CzZwYN%2FIkJdNFPYRdAT9QrEVkgtG4NzwOsxbPfEa2B%2BWg0KIzfLfHlNcvnmZ1ChAybzuZjZlY0E3qDnH4JbA0KravBljsTP32p%2BxrzyCDAd47OOkf4XPmO%2BNq6kMCx1sJAUEUR7s03g4fm4OxWAXaLT81liUIpP6%2FRSuEbmvqmMKQp92WkolRZlr%2B5ZZOBp7ayBULmGmgk7gNzqP96lPA2EfFssOQFw40xiuFehuj0v%2B08fI9rwVoJLqNliIZ9ed9nZwSrlQFO91DjZGbMzzmwjY4uwzP%2Bha3ekThL2WkYLHCEJOtVRJHtZlmVgWMZcB6WT7SB77dtu0QGck30ZACV7Msk%2ByBXmEXmrTqGLA2AltbU8OF8kVfspKK0LxKlHI7%2B9120g%2Bwmz7y5iALmFftC0QZ32lo211bqQTsAFnO2XIKtpEx5sO0WXzXtPAr6ryuQLbCku5lsUezkqZ2sBi8s2zxevKntcj8F4ePWKF3%2BC9oGv9%2FIG9rfT3MTY0IRkjM1I3pGKt6VJKT7UhpEdEZTkD1W7bXKwOtLmD%2F%2Fi5jASO9VStBjbZU0U4gk9P4AuYt%2BGcd5VXsQJ4U%2FU0zro76L%2BpVlVcpJSji9Oc5tqCi7l8JveC4qbzJUAE7NjDFp1broxTmHE5MFvz%2FYBuI8hKkwt8%2BKwgY6pgFhvcVmuY3eNaC%2FJeyUkYGMt1GphAHO1RqfOxy0g25pke262cXX9QSLh6BU2lEQIFw9iLKOuUYQEU3c4vXHejwmjmptXfGGjRY2%2B8uy0GV9Xg8d8vwcZ2zeiQcaCALoa8KRS4F2HP%2BEIczDuprNxE7YQScDk%2FiNuqsjHWqPyA4dNWPq66EObrE7aHmH6UBS5lSC%2B8emZfZHhf2K3QVaIlVITom6RmA9\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYXJSL7NLM%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=47af44d79a125201ea8880a5ee129dfd3f16435f2c612b29514818050dfc8052",
+            "transcript_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/0eba087b-86ee-495d-83f6-b522691f960f/transcript.json?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T085333Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIFrkYVCKLzOGbmIjBKVEYzoIKSfSa%2Fw6a7EGGMw5n7k%2FAiEAxlfz9pBl8ViadgH6jLvy6QEuGle5zf%2FyFOokLZXQZqIqmQQIWhABGgw3MjcxNTM4NDEzMjkiDMEJY%2FN2bbdAKnfmXir2A4n67UUPx4CzZwYN%2FIkJdNFPYRdAT9QrEVkgtG4NzwOsxbPfEa2B%2BWg0KIzfLfHlNcvnmZ1ChAybzuZjZlY0E3qDnH4JbA0KravBljsTP32p%2BxrzyCDAd47OOkf4XPmO%2BNq6kMCx1sJAUEUR7s03g4fm4OxWAXaLT81liUIpP6%2FRSuEbmvqmMKQp92WkolRZlr%2B5ZZOBp7ayBULmGmgk7gNzqP96lPA2EfFssOQFw40xiuFehuj0v%2B08fI9rwVoJLqNliIZ9ed9nZwSrlQFO91DjZGbMzzmwjY4uwzP%2Bha3ekThL2WkYLHCEJOtVRJHtZlmVgWMZcB6WT7SB77dtu0QGck30ZACV7Msk%2ByBXmEXmrTqGLA2AltbU8OF8kVfspKK0LxKlHI7%2B9120g%2Bwmz7y5iALmFftC0QZ32lo211bqQTsAFnO2XIKtpEx5sO0WXzXtPAr6ryuQLbCku5lsUezkqZ2sBi8s2zxevKntcj8F4ePWKF3%2BC9oGv9%2FIG9rfT3MTY0IRkjM1I3pGKt6VJKT7UhpEdEZTkD1W7bXKwOtLmD%2F%2Fi5jASO9VStBjbZU0U4gk9P4AuYt%2BGcd5VXsQJ4U%2FU0zro76L%2BpVlVcpJSji9Oc5tqCi7l8JveC4qbzJUAE7NjDFp1broxTmHE5MFvz%2FYBuI8hKkwt8%2BKwgY6pgFhvcVmuY3eNaC%2FJeyUkYGMt1GphAHO1RqfOxy0g25pke262cXX9QSLh6BU2lEQIFw9iLKOuUYQEU3c4vXHejwmjmptXfGGjRY2%2B8uy0GV9Xg8d8vwcZ2zeiQcaCALoa8KRS4F2HP%2BEIczDuprNxE7YQScDk%2FiNuqsjHWqPyA4dNWPq66EObrE7aHmH6UBS5lSC%2B8emZfZHhf2K3QVaIlVITom6RmA9\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYXJSL7NLM%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=680f6995fd990756fe0aa109ed7a71fb723acb2c496402e45b0688190a5241dd",
             "leexi_url": "https://app.leexi.ai/calls/0eba087b-86ee-495d-83f6-b522691f960f",
             "video_archived_at": null,
             "audio_archived_at": null,
@@ -56,7 +525,7 @@
                 {
                     "uuid": "ad92e0eb-6852-4866-9404-ae6e7c205925",
                     "index": 1,
-                    "name": "Speaker 2",
+                    "name": "Intervenant 2",
                     "is_user": false,
                     "phone_number": null,
                     "email_address": null
@@ -246,8 +715,8 @@
             "direction": "outbound",
             "is_video": false,
             "visible": true,
-            "recording_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/356d8967-9a87-4969-aaae-c0d3c21e0307/recording.mp3?X-Amz-Expires=3600\u0026X-Amz-Date=20250603T142134Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjED4aCWV1LXdlc3QtMyJGMEQCIDz%2BFGKnYDGz2xPQ4M0AcdRN%2F37hXfjvM2dPuk0PxfrpAiByYJgAPTcqtPl2vjFBJRRl3fDTrwszygZLQdAieaMcjiqZBAgXEAEaDDcyNzE1Mzg0MTMyOSIM3r2ekyAErqkYHofIKvYDnkIQZ7dFoKsf1yHZIYO0kA7NRm8VIslpy%2FQd6hsguEOSguSPoEv%2Fl6CHDzYNaHHTXhoskJyxJR0tS8hJdSFv6111WBX7fZ7aKPdoVKtAASMtO3IYabPJN5CsAwsM9wLjPoUS%2BAGjkVuJ6Sy6k06jVZWYb%2FfnceriqGi%2BbL1KsgXCjjHzBeSKQEGLNDsaD1XPl9C%2FTcJsm4%2FBvpf51d3iLqbOwrKpbOYqRXoKBjSl0JrDrT8wZh0D0Slpu3BcLGukWpELPmTFLwKsXUbc%2F4JvAG0IPGEVVn9bOu%2BGp4Edm9vC2z4zJqUlAP1%2Bge39zehIns4DXg6U8IpzEDhESeCE8fV4dtZSH7FNlSZqV8mEpjw4hX0hb47zhxXutlTLcy2jM1m1A2bKS8kY0dLHLvOpvTbZy7Z3j%2BXiQiXiJH5ldkcQcNE3Eva5cOGVDeNIZXziy%2FIPkbtddvMADhxinW5afrHXJzk0xWC6GS%2F3zo515YG8p2kQQ3W%2F2tthoPVHFGzYiEq1VgG82UjtYxoloJUxwX%2F8VJVIjdFbzxlQQsG2a%2BPwPTlGtYHXNHqB7To1zWVI4XZjO4e8Vy%2BZGdmYR3O5YI0XQ3B5qzTm0PJJfkSJr8J9bb9qCRTRt8BeYoZmQXu5t%2Bzcg%2FCFHD8jSoOnDXVQQLVBC8%2FGXzDD8vvBBjqnAT8tgDA0QlFqEdAbonebh8W7xRsPxzWJuiKxC6JYcBaSEYEq5DAcqzD598R1Js%2FYzI6m8sJj6hqvqscWr3m3y3Xr9e4W9BMoVD3f1vW1vvr7I1KUGwhPimi0ye3sYp0sDa542i95HHw3zEeCIKaPbaHhCtPrxK33DyllmZyvFHUdKFuyh7HEka7TiBKpOGq5UH6SmfEcpNEJyAP5ap4HGJvzCP8J7PF2\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSY54FVC22B%2F20250603%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=91ea60158e431467f9756c22288bbcfd9690ed1df7bbb65d1b863400dc09459d",
-            "transcript_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/356d8967-9a87-4969-aaae-c0d3c21e0307/transcript.json?X-Amz-Expires=3600\u0026X-Amz-Date=20250603T142134Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjED4aCWV1LXdlc3QtMyJGMEQCIDz%2BFGKnYDGz2xPQ4M0AcdRN%2F37hXfjvM2dPuk0PxfrpAiByYJgAPTcqtPl2vjFBJRRl3fDTrwszygZLQdAieaMcjiqZBAgXEAEaDDcyNzE1Mzg0MTMyOSIM3r2ekyAErqkYHofIKvYDnkIQZ7dFoKsf1yHZIYO0kA7NRm8VIslpy%2FQd6hsguEOSguSPoEv%2Fl6CHDzYNaHHTXhoskJyxJR0tS8hJdSFv6111WBX7fZ7aKPdoVKtAASMtO3IYabPJN5CsAwsM9wLjPoUS%2BAGjkVuJ6Sy6k06jVZWYb%2FfnceriqGi%2BbL1KsgXCjjHzBeSKQEGLNDsaD1XPl9C%2FTcJsm4%2FBvpf51d3iLqbOwrKpbOYqRXoKBjSl0JrDrT8wZh0D0Slpu3BcLGukWpELPmTFLwKsXUbc%2F4JvAG0IPGEVVn9bOu%2BGp4Edm9vC2z4zJqUlAP1%2Bge39zehIns4DXg6U8IpzEDhESeCE8fV4dtZSH7FNlSZqV8mEpjw4hX0hb47zhxXutlTLcy2jM1m1A2bKS8kY0dLHLvOpvTbZy7Z3j%2BXiQiXiJH5ldkcQcNE3Eva5cOGVDeNIZXziy%2FIPkbtddvMADhxinW5afrHXJzk0xWC6GS%2F3zo515YG8p2kQQ3W%2F2tthoPVHFGzYiEq1VgG82UjtYxoloJUxwX%2F8VJVIjdFbzxlQQsG2a%2BPwPTlGtYHXNHqB7To1zWVI4XZjO4e8Vy%2BZGdmYR3O5YI0XQ3B5qzTm0PJJfkSJr8J9bb9qCRTRt8BeYoZmQXu5t%2Bzcg%2FCFHD8jSoOnDXVQQLVBC8%2FGXzDD8vvBBjqnAT8tgDA0QlFqEdAbonebh8W7xRsPxzWJuiKxC6JYcBaSEYEq5DAcqzD598R1Js%2FYzI6m8sJj6hqvqscWr3m3y3Xr9e4W9BMoVD3f1vW1vvr7I1KUGwhPimi0ye3sYp0sDa542i95HHw3zEeCIKaPbaHhCtPrxK33DyllmZyvFHUdKFuyh7HEka7TiBKpOGq5UH6SmfEcpNEJyAP5ap4HGJvzCP8J7PF2\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSY54FVC22B%2F20250603%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=dd08b2cfc34e3d5e4e983b9c7245b66dec7c0e990d3e1f1bedcdf18bd164a5d4",
+            "recording_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/356d8967-9a87-4969-aaae-c0d3c21e0307/recording.mp3?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T085333Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIFrkYVCKLzOGbmIjBKVEYzoIKSfSa%2Fw6a7EGGMw5n7k%2FAiEAxlfz9pBl8ViadgH6jLvy6QEuGle5zf%2FyFOokLZXQZqIqmQQIWhABGgw3MjcxNTM4NDEzMjkiDMEJY%2FN2bbdAKnfmXir2A4n67UUPx4CzZwYN%2FIkJdNFPYRdAT9QrEVkgtG4NzwOsxbPfEa2B%2BWg0KIzfLfHlNcvnmZ1ChAybzuZjZlY0E3qDnH4JbA0KravBljsTP32p%2BxrzyCDAd47OOkf4XPmO%2BNq6kMCx1sJAUEUR7s03g4fm4OxWAXaLT81liUIpP6%2FRSuEbmvqmMKQp92WkolRZlr%2B5ZZOBp7ayBULmGmgk7gNzqP96lPA2EfFssOQFw40xiuFehuj0v%2B08fI9rwVoJLqNliIZ9ed9nZwSrlQFO91DjZGbMzzmwjY4uwzP%2Bha3ekThL2WkYLHCEJOtVRJHtZlmVgWMZcB6WT7SB77dtu0QGck30ZACV7Msk%2ByBXmEXmrTqGLA2AltbU8OF8kVfspKK0LxKlHI7%2B9120g%2Bwmz7y5iALmFftC0QZ32lo211bqQTsAFnO2XIKtpEx5sO0WXzXtPAr6ryuQLbCku5lsUezkqZ2sBi8s2zxevKntcj8F4ePWKF3%2BC9oGv9%2FIG9rfT3MTY0IRkjM1I3pGKt6VJKT7UhpEdEZTkD1W7bXKwOtLmD%2F%2Fi5jASO9VStBjbZU0U4gk9P4AuYt%2BGcd5VXsQJ4U%2FU0zro76L%2BpVlVcpJSji9Oc5tqCi7l8JveC4qbzJUAE7NjDFp1broxTmHE5MFvz%2FYBuI8hKkwt8%2BKwgY6pgFhvcVmuY3eNaC%2FJeyUkYGMt1GphAHO1RqfOxy0g25pke262cXX9QSLh6BU2lEQIFw9iLKOuUYQEU3c4vXHejwmjmptXfGGjRY2%2B8uy0GV9Xg8d8vwcZ2zeiQcaCALoa8KRS4F2HP%2BEIczDuprNxE7YQScDk%2FiNuqsjHWqPyA4dNWPq66EObrE7aHmH6UBS5lSC%2B8emZfZHhf2K3QVaIlVITom6RmA9\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYXJSL7NLM%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=67a787cafeded95b0dd2846fbd8d80e975029f009c9b6c0fdd1aaab2d98c221e",
+            "transcript_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/356d8967-9a87-4969-aaae-c0d3c21e0307/transcript.json?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T085333Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIFrkYVCKLzOGbmIjBKVEYzoIKSfSa%2Fw6a7EGGMw5n7k%2FAiEAxlfz9pBl8ViadgH6jLvy6QEuGle5zf%2FyFOokLZXQZqIqmQQIWhABGgw3MjcxNTM4NDEzMjkiDMEJY%2FN2bbdAKnfmXir2A4n67UUPx4CzZwYN%2FIkJdNFPYRdAT9QrEVkgtG4NzwOsxbPfEa2B%2BWg0KIzfLfHlNcvnmZ1ChAybzuZjZlY0E3qDnH4JbA0KravBljsTP32p%2BxrzyCDAd47OOkf4XPmO%2BNq6kMCx1sJAUEUR7s03g4fm4OxWAXaLT81liUIpP6%2FRSuEbmvqmMKQp92WkolRZlr%2B5ZZOBp7ayBULmGmgk7gNzqP96lPA2EfFssOQFw40xiuFehuj0v%2B08fI9rwVoJLqNliIZ9ed9nZwSrlQFO91DjZGbMzzmwjY4uwzP%2Bha3ekThL2WkYLHCEJOtVRJHtZlmVgWMZcB6WT7SB77dtu0QGck30ZACV7Msk%2ByBXmEXmrTqGLA2AltbU8OF8kVfspKK0LxKlHI7%2B9120g%2Bwmz7y5iALmFftC0QZ32lo211bqQTsAFnO2XIKtpEx5sO0WXzXtPAr6ryuQLbCku5lsUezkqZ2sBi8s2zxevKntcj8F4ePWKF3%2BC9oGv9%2FIG9rfT3MTY0IRkjM1I3pGKt6VJKT7UhpEdEZTkD1W7bXKwOtLmD%2F%2Fi5jASO9VStBjbZU0U4gk9P4AuYt%2BGcd5VXsQJ4U%2FU0zro76L%2BpVlVcpJSji9Oc5tqCi7l8JveC4qbzJUAE7NjDFp1broxTmHE5MFvz%2FYBuI8hKkwt8%2BKwgY6pgFhvcVmuY3eNaC%2FJeyUkYGMt1GphAHO1RqfOxy0g25pke262cXX9QSLh6BU2lEQIFw9iLKOuUYQEU3c4vXHejwmjmptXfGGjRY2%2B8uy0GV9Xg8d8vwcZ2zeiQcaCALoa8KRS4F2HP%2BEIczDuprNxE7YQScDk%2FiNuqsjHWqPyA4dNWPq66EObrE7aHmH6UBS5lSC%2B8emZfZHhf2K3QVaIlVITom6RmA9\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYXJSL7NLM%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=9304433d4f0b11d209d7e8db14cc31f3cb966f67436f7dfaaae4ad27ee5ecb1a",
             "leexi_url": "https://app.leexi.ai/calls/356d8967-9a87-4969-aaae-c0d3c21e0307",
             "video_archived_at": null,
             "audio_archived_at": null,
@@ -290,7 +759,7 @@
                 {
                     "uuid": "07b04639-e5ee-4542-8a5b-bee40d7b5c17",
                     "index": 1,
-                    "name": "Speaker 2",
+                    "name": "Intervenant 2",
                     "is_user": false,
                     "phone_number": null,
                     "email_address": null
@@ -363,8 +832,8 @@
             "direction": "outbound",
             "is_video": true,
             "visible": true,
-            "recording_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/e2aa2eb6-8c96-402b-b5b6-0220565beb66/recording.mp4?X-Amz-Expires=3600\u0026X-Amz-Date=20250603T142134Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjED4aCWV1LXdlc3QtMyJGMEQCIDz%2BFGKnYDGz2xPQ4M0AcdRN%2F37hXfjvM2dPuk0PxfrpAiByYJgAPTcqtPl2vjFBJRRl3fDTrwszygZLQdAieaMcjiqZBAgXEAEaDDcyNzE1Mzg0MTMyOSIM3r2ekyAErqkYHofIKvYDnkIQZ7dFoKsf1yHZIYO0kA7NRm8VIslpy%2FQd6hsguEOSguSPoEv%2Fl6CHDzYNaHHTXhoskJyxJR0tS8hJdSFv6111WBX7fZ7aKPdoVKtAASMtO3IYabPJN5CsAwsM9wLjPoUS%2BAGjkVuJ6Sy6k06jVZWYb%2FfnceriqGi%2BbL1KsgXCjjHzBeSKQEGLNDsaD1XPl9C%2FTcJsm4%2FBvpf51d3iLqbOwrKpbOYqRXoKBjSl0JrDrT8wZh0D0Slpu3BcLGukWpELPmTFLwKsXUbc%2F4JvAG0IPGEVVn9bOu%2BGp4Edm9vC2z4zJqUlAP1%2Bge39zehIns4DXg6U8IpzEDhESeCE8fV4dtZSH7FNlSZqV8mEpjw4hX0hb47zhxXutlTLcy2jM1m1A2bKS8kY0dLHLvOpvTbZy7Z3j%2BXiQiXiJH5ldkcQcNE3Eva5cOGVDeNIZXziy%2FIPkbtddvMADhxinW5afrHXJzk0xWC6GS%2F3zo515YG8p2kQQ3W%2F2tthoPVHFGzYiEq1VgG82UjtYxoloJUxwX%2F8VJVIjdFbzxlQQsG2a%2BPwPTlGtYHXNHqB7To1zWVI4XZjO4e8Vy%2BZGdmYR3O5YI0XQ3B5qzTm0PJJfkSJr8J9bb9qCRTRt8BeYoZmQXu5t%2Bzcg%2FCFHD8jSoOnDXVQQLVBC8%2FGXzDD8vvBBjqnAT8tgDA0QlFqEdAbonebh8W7xRsPxzWJuiKxC6JYcBaSEYEq5DAcqzD598R1Js%2FYzI6m8sJj6hqvqscWr3m3y3Xr9e4W9BMoVD3f1vW1vvr7I1KUGwhPimi0ye3sYp0sDa542i95HHw3zEeCIKaPbaHhCtPrxK33DyllmZyvFHUdKFuyh7HEka7TiBKpOGq5UH6SmfEcpNEJyAP5ap4HGJvzCP8J7PF2\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSY54FVC22B%2F20250603%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=a68148733e28e8f186b236145e2674fcfbda3c3e1824d50408ea310b2427b5a2",
-            "transcript_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/e2aa2eb6-8c96-402b-b5b6-0220565beb66/transcript.json?X-Amz-Expires=3600\u0026X-Amz-Date=20250603T142134Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjED4aCWV1LXdlc3QtMyJGMEQCIDz%2BFGKnYDGz2xPQ4M0AcdRN%2F37hXfjvM2dPuk0PxfrpAiByYJgAPTcqtPl2vjFBJRRl3fDTrwszygZLQdAieaMcjiqZBAgXEAEaDDcyNzE1Mzg0MTMyOSIM3r2ekyAErqkYHofIKvYDnkIQZ7dFoKsf1yHZIYO0kA7NRm8VIslpy%2FQd6hsguEOSguSPoEv%2Fl6CHDzYNaHHTXhoskJyxJR0tS8hJdSFv6111WBX7fZ7aKPdoVKtAASMtO3IYabPJN5CsAwsM9wLjPoUS%2BAGjkVuJ6Sy6k06jVZWYb%2FfnceriqGi%2BbL1KsgXCjjHzBeSKQEGLNDsaD1XPl9C%2FTcJsm4%2FBvpf51d3iLqbOwrKpbOYqRXoKBjSl0JrDrT8wZh0D0Slpu3BcLGukWpELPmTFLwKsXUbc%2F4JvAG0IPGEVVn9bOu%2BGp4Edm9vC2z4zJqUlAP1%2Bge39zehIns4DXg6U8IpzEDhESeCE8fV4dtZSH7FNlSZqV8mEpjw4hX0hb47zhxXutlTLcy2jM1m1A2bKS8kY0dLHLvOpvTbZy7Z3j%2BXiQiXiJH5ldkcQcNE3Eva5cOGVDeNIZXziy%2FIPkbtddvMADhxinW5afrHXJzk0xWC6GS%2F3zo515YG8p2kQQ3W%2F2tthoPVHFGzYiEq1VgG82UjtYxoloJUxwX%2F8VJVIjdFbzxlQQsG2a%2BPwPTlGtYHXNHqB7To1zWVI4XZjO4e8Vy%2BZGdmYR3O5YI0XQ3B5qzTm0PJJfkSJr8J9bb9qCRTRt8BeYoZmQXu5t%2Bzcg%2FCFHD8jSoOnDXVQQLVBC8%2FGXzDD8vvBBjqnAT8tgDA0QlFqEdAbonebh8W7xRsPxzWJuiKxC6JYcBaSEYEq5DAcqzD598R1Js%2FYzI6m8sJj6hqvqscWr3m3y3Xr9e4W9BMoVD3f1vW1vvr7I1KUGwhPimi0ye3sYp0sDa542i95HHw3zEeCIKaPbaHhCtPrxK33DyllmZyvFHUdKFuyh7HEka7TiBKpOGq5UH6SmfEcpNEJyAP5ap4HGJvzCP8J7PF2\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSY54FVC22B%2F20250603%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=3ec0f3cad1d84f7f0249d8ca83fa2dfc160ee1220025402376317fd3e631b9ba",
+            "recording_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/e2aa2eb6-8c96-402b-b5b6-0220565beb66/recording.mp4?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T085333Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIFrkYVCKLzOGbmIjBKVEYzoIKSfSa%2Fw6a7EGGMw5n7k%2FAiEAxlfz9pBl8ViadgH6jLvy6QEuGle5zf%2FyFOokLZXQZqIqmQQIWhABGgw3MjcxNTM4NDEzMjkiDMEJY%2FN2bbdAKnfmXir2A4n67UUPx4CzZwYN%2FIkJdNFPYRdAT9QrEVkgtG4NzwOsxbPfEa2B%2BWg0KIzfLfHlNcvnmZ1ChAybzuZjZlY0E3qDnH4JbA0KravBljsTP32p%2BxrzyCDAd47OOkf4XPmO%2BNq6kMCx1sJAUEUR7s03g4fm4OxWAXaLT81liUIpP6%2FRSuEbmvqmMKQp92WkolRZlr%2B5ZZOBp7ayBULmGmgk7gNzqP96lPA2EfFssOQFw40xiuFehuj0v%2B08fI9rwVoJLqNliIZ9ed9nZwSrlQFO91DjZGbMzzmwjY4uwzP%2Bha3ekThL2WkYLHCEJOtVRJHtZlmVgWMZcB6WT7SB77dtu0QGck30ZACV7Msk%2ByBXmEXmrTqGLA2AltbU8OF8kVfspKK0LxKlHI7%2B9120g%2Bwmz7y5iALmFftC0QZ32lo211bqQTsAFnO2XIKtpEx5sO0WXzXtPAr6ryuQLbCku5lsUezkqZ2sBi8s2zxevKntcj8F4ePWKF3%2BC9oGv9%2FIG9rfT3MTY0IRkjM1I3pGKt6VJKT7UhpEdEZTkD1W7bXKwOtLmD%2F%2Fi5jASO9VStBjbZU0U4gk9P4AuYt%2BGcd5VXsQJ4U%2FU0zro76L%2BpVlVcpJSji9Oc5tqCi7l8JveC4qbzJUAE7NjDFp1broxTmHE5MFvz%2FYBuI8hKkwt8%2BKwgY6pgFhvcVmuY3eNaC%2FJeyUkYGMt1GphAHO1RqfOxy0g25pke262cXX9QSLh6BU2lEQIFw9iLKOuUYQEU3c4vXHejwmjmptXfGGjRY2%2B8uy0GV9Xg8d8vwcZ2zeiQcaCALoa8KRS4F2HP%2BEIczDuprNxE7YQScDk%2FiNuqsjHWqPyA4dNWPq66EObrE7aHmH6UBS5lSC%2B8emZfZHhf2K3QVaIlVITom6RmA9\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYXJSL7NLM%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=c91afa227f0d5d037cbc80aa7f795058a0383feecee3b8c0b8c7dde95dec1de3",
+            "transcript_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/e2aa2eb6-8c96-402b-b5b6-0220565beb66/transcript.json?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T085333Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIFrkYVCKLzOGbmIjBKVEYzoIKSfSa%2Fw6a7EGGMw5n7k%2FAiEAxlfz9pBl8ViadgH6jLvy6QEuGle5zf%2FyFOokLZXQZqIqmQQIWhABGgw3MjcxNTM4NDEzMjkiDMEJY%2FN2bbdAKnfmXir2A4n67UUPx4CzZwYN%2FIkJdNFPYRdAT9QrEVkgtG4NzwOsxbPfEa2B%2BWg0KIzfLfHlNcvnmZ1ChAybzuZjZlY0E3qDnH4JbA0KravBljsTP32p%2BxrzyCDAd47OOkf4XPmO%2BNq6kMCx1sJAUEUR7s03g4fm4OxWAXaLT81liUIpP6%2FRSuEbmvqmMKQp92WkolRZlr%2B5ZZOBp7ayBULmGmgk7gNzqP96lPA2EfFssOQFw40xiuFehuj0v%2B08fI9rwVoJLqNliIZ9ed9nZwSrlQFO91DjZGbMzzmwjY4uwzP%2Bha3ekThL2WkYLHCEJOtVRJHtZlmVgWMZcB6WT7SB77dtu0QGck30ZACV7Msk%2ByBXmEXmrTqGLA2AltbU8OF8kVfspKK0LxKlHI7%2B9120g%2Bwmz7y5iALmFftC0QZ32lo211bqQTsAFnO2XIKtpEx5sO0WXzXtPAr6ryuQLbCku5lsUezkqZ2sBi8s2zxevKntcj8F4ePWKF3%2BC9oGv9%2FIG9rfT3MTY0IRkjM1I3pGKt6VJKT7UhpEdEZTkD1W7bXKwOtLmD%2F%2Fi5jASO9VStBjbZU0U4gk9P4AuYt%2BGcd5VXsQJ4U%2FU0zro76L%2BpVlVcpJSji9Oc5tqCi7l8JveC4qbzJUAE7NjDFp1broxTmHE5MFvz%2FYBuI8hKkwt8%2BKwgY6pgFhvcVmuY3eNaC%2FJeyUkYGMt1GphAHO1RqfOxy0g25pke262cXX9QSLh6BU2lEQIFw9iLKOuUYQEU3c4vXHejwmjmptXfGGjRY2%2B8uy0GV9Xg8d8vwcZ2zeiQcaCALoa8KRS4F2HP%2BEIczDuprNxE7YQScDk%2FiNuqsjHWqPyA4dNWPq66EObrE7aHmH6UBS5lSC%2B8emZfZHhf2K3QVaIlVITom6RmA9\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYXJSL7NLM%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=506cb19d4240441ef9310d6b5ded0e0fca2c15e3e24fad8b710880bc43f8a1f2",
             "leexi_url": "https://app.leexi.ai/calls/e2aa2eb6-8c96-402b-b5b6-0220565beb66",
             "video_archived_at": null,
             "audio_archived_at": null,
@@ -456,6 +925,6 @@
     "pagination": {
         "page": 1,
         "items": 10,
-        "count": 3
+        "count": 6
     }
 }

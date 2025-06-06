@@ -40,8 +40,9 @@ const programSessions: ProgramSession[] = [
     title: "Welkomstwoord & Introductie",
     speakers: ["Hanne Decoutere (5 min)", "Philip Peeters (10 min)"],
     type: "opening",
-    callId: "0eba087b-86ee-495d-83f6-b522691f960f",
-    summary: ""
+    summary: "",
+    summaryHtml: "",
+    callId: ""
   },
   {
     time: "09:30 - 10:20",
@@ -51,9 +52,9 @@ const programSessions: ProgramSession[] = [
     speakers: ["Randall Petersson"],
     type: "keynote",
     language: "EN",
-    summary: getCallSummaryById("0eba087b-86ee-495d-83f6-b522691f960f") || "",
-    callId: "0eba087b-86ee-495d-83f6-b522691f960f",
-    summaryHtml: marked.parse(getCallSummaryById("0eba087b-86ee-495d-83f6-b522691f960f") || "")
+    callId: "f1993c89-923f-4bab-a7e5-a45ce2b19846",
+    summary: getCallSummaryById("f1993c89-923f-4bab-a7e5-a45ce2b19846") || "",
+    summaryHtml: marked.parse(getCallSummaryById("f1993c89-923f-4bab-a7e5-a45ce2b19846") || "")
   },
   {
     time: "10:20 - 11:05",
