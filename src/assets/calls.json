@@ -1,6 +1,388 @@
 {
     "data": [
         {
+            "uuid": "24138eba-7fdd-49b6-9e36-42a5a5643673",
+            "source": "leexi",
+            "source_id": "2eae24b6-7038-4b78-9e14-7148354d2699",
+            "created_at": "2025-06-06T09:49:58.931Z",
+            "updated_at": "2025-06-06T09:54:39.412Z",
+            "performed_at": "2025-06-06T09:49:57.841Z",
+            "locale": "nl-NL",
+            "duration": 2642.95,
+            "direction": "outbound",
+            "is_video": false,
+            "visible": true,
+            "recording_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/24138eba-7fdd-49b6-9e36-42a5a5643673/recording.mp3?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T095558Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIGbf1B6JJsLU3%2Bm4nCWEDzj%2F5oxOUHLuUekyhgoCX9w%2FAiEAurtfvTXz9YI%2FkmxmEAmckUa%2Ftq0RKWMTD7Gr6Vq0THsqmQQIWhABGgw3MjcxNTM4NDEzMjkiDFMI8TTeFdN%2ByfTSeSr2A7bZOUVoL97%2BB2NSQ9fJBhzngjWCbBktV60%2FfZGOFa4KCNaKUAlTztCNpeDNDm3ju44JjjidMO3NqCVUs%2F8RA2rSXRz3rQ1QYtl%2BW4Li1hHjwkiXHxooiwKUam886lJYz8Pf8HesHLxw%2BS%2BaNApd36R81J0FtjCNyLFOdzY7Tf%2BiGdioh2YA43c2u3kac4CssZN%2B96ty8xD4eEc9SWDxmNULv3MrPW8hRxH8kfwVu%2ByJRPoreKH2SQf7TFCvEmZh66Y%2Bj431ercpXsMjh6gO8olxWtk%2ByNFV%2B6q28D1cUQUX4VnVRSArW268j1MucJIRuTRxkJCxADNsJS5n7yUCXTMt%2ByxFlehtLpIWaD1PLvymWLSexBZtTpSakdxiOFjAolls2Fcq5ZYLJu6AKLOltTehdlk0Vza1zD1fQLucEe82meIDO%2F3MYe97p9XbANal%2Frj3Jf9meC08FrcxsbOnanfTbJ%2F%2B0OvapknYGwbP3rsTDjuvSB402oQTjBCIGZ4Z7COP6F7dYN4zUTOOcO3TWMuha8Wrrt1TYFdVPp7hD14cd%2BMN%2F0%2BVp%2B3z4F%2FdZ0BCEjtmuNyswqMvuxoVglo20My1iuoKpUmHT5S08Rm%2BsOBIZCnb8Aa%2FgRtB5RP53qLUFhAYNOiM40oSh4Vwq5mIVoLSMHSRJUowzOGKwgY6pgGUFbxGIvXHegSOC%2BRQHVbbfip6yPZ%2Byy%2F08sAMX3X2IxLxUe068%2FgyeqMGrrgDUxSZBO4hS25dmXIuk2Z65E8FF6nTCK4LD1sRHpUPkLmlRQ6gLvDwUDcHeDAEoPo9ux6QvacvTTQt70CcnjpRFOy%2FMai%2F3MB0RkpYLtFVeCLdoPCXq3Qy9gMqt%2BuRZo%2B2LJ3rG5B%2F92RKeaLpVWSo67NlQIm1xgeG\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYZCYV2AO3%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=86883547bcdd3f84d2c0119360f3659728027a45365563d7cbd2b67ee191301b",
+            "transcript_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/24138eba-7fdd-49b6-9e36-42a5a5643673/transcript.json?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T095558Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIGbf1B6JJsLU3%2Bm4nCWEDzj%2F5oxOUHLuUekyhgoCX9w%2FAiEAurtfvTXz9YI%2FkmxmEAmckUa%2Ftq0RKWMTD7Gr6Vq0THsqmQQIWhABGgw3MjcxNTM4NDEzMjkiDFMI8TTeFdN%2ByfTSeSr2A7bZOUVoL97%2BB2NSQ9fJBhzngjWCbBktV60%2FfZGOFa4KCNaKUAlTztCNpeDNDm3ju44JjjidMO3NqCVUs%2F8RA2rSXRz3rQ1QYtl%2BW4Li1hHjwkiXHxooiwKUam886lJYz8Pf8HesHLxw%2BS%2BaNApd36R81J0FtjCNyLFOdzY7Tf%2BiGdioh2YA43c2u3kac4CssZN%2B96ty8xD4eEc9SWDxmNULv3MrPW8hRxH8kfwVu%2ByJRPoreKH2SQf7TFCvEmZh66Y%2Bj431ercpXsMjh6gO8olxWtk%2ByNFV%2B6q28D1cUQUX4VnVRSArW268j1MucJIRuTRxkJCxADNsJS5n7yUCXTMt%2ByxFlehtLpIWaD1PLvymWLSexBZtTpSakdxiOFjAolls2Fcq5ZYLJu6AKLOltTehdlk0Vza1zD1fQLucEe82meIDO%2F3MYe97p9XbANal%2Frj3Jf9meC08FrcxsbOnanfTbJ%2F%2B0OvapknYGwbP3rsTDjuvSB402oQTjBCIGZ4Z7COP6F7dYN4zUTOOcO3TWMuha8Wrrt1TYFdVPp7hD14cd%2BMN%2F0%2BVp%2B3z4F%2FdZ0BCEjtmuNyswqMvuxoVglo20My1iuoKpUmHT5S08Rm%2BsOBIZCnb8Aa%2FgRtB5RP53qLUFhAYNOiM40oSh4Vwq5mIVoLSMHSRJUowzOGKwgY6pgGUFbxGIvXHegSOC%2BRQHVbbfip6yPZ%2Byy%2F08sAMX3X2IxLxUe068%2FgyeqMGrrgDUxSZBO4hS25dmXIuk2Z65E8FF6nTCK4LD1sRHpUPkLmlRQ6gLvDwUDcHeDAEoPo9ux6QvacvTTQt70CcnjpRFOy%2FMai%2F3MB0RkpYLtFVeCLdoPCXq3Qy9gMqt%2BuRZo%2B2LJ3rG5B%2F92RKeaLpVWSo67NlQIm1xgeG\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYZCYV2AO3%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=97edf4b930d9d332cf026bceb298127954bbf709949c8b0fbe60baadeb62e70f",
+            "leexi_url": "https://app.leexi.ai/calls/24138eba-7fdd-49b6-9e36-42a5a5643673",
+            "video_archived_at": null,
+            "audio_archived_at": null,
+            "transcript_archived_at": null,
+            "completions_archived_at": null,
+            "summary": "### Kerninzichten\n\n1. **Authentiek Commitment**: Diversiteit en inclusie moeten een integraal onderdeel zijn van de bedrijfsstrategie en cultuur, niet slechts een checklist of een trend. Dit vereist een oprechte inzet van het leiderschapsteam.\n\n2. **Inclusieve Cultuur**: Het creëren van een veilige en inclusieve omgeving is cruciaal voor het benutten van de voordelen van diversiteit. Dit houdt in dat elke stem telt en dat er ruimte is voor open dialoog.\n\n3. **Strategische Waarde van Diversiteit**: Diversiteit is niet alleen een morele verplichting, maar ook een business imperative. Diverse teams leiden tot meer innovatie, creativiteit en betere besluitvorming, wat de algehele prestaties van een organisatie verbetert.\n\n4. **Bewustzijn van Blinde Vlekken**: Bestuurders moeten zich bewust zijn van hun eigen vooroordelen en blinde vlekken, en actief werken aan het verbeteren van teamdynamiek en interactie.\n\n5. **Actiegerichtheid**: Het is belangrijk om niet alleen te praten over diversiteit en inclusie, maar ook concrete stappen te ondernemen om deze waarden in de praktijk te brengen.\n\n### Impactvol Citaat\n\n\"Authentiek commitment begint bij het geloof in diversiteit en inclusie als een essentieel onderdeel van ons succes.\"\n\n### Executieve Samenvatting\n\nIn deze talk benadrukt Mard Bellefroy, CEO van Women on Board, de cruciale rol van diversiteit en inclusie in de moderne bedrijfsvoering. Ze stelt dat diversiteit niet alleen een morele verplichting is, maar ook een strategische noodzaak die leidt tot innovatie en betere besluitvorming. Bellefroy pleit voor een authentiek commitment van het leiderschapsteam, waarbij diversiteit en inclusie worden geïntegreerd in de bedrijfsstrategie en cultuur. Ze wijst op de noodzaak van een inclusieve omgeving waar elke stem telt en waar open dialoog wordt aangemoedigd. Daarnaast benadrukt ze het belang van bewustzijn van blinde vlekken en teamdynamiek om de effectiviteit van diverse teams te maximaliseren. De boodschap is duidelijk: bedrijven moeten niet alleen praten over diversiteit, maar ook concrete acties ondernemen om deze waarden te verankeren in hun organisatie.",
+            "conversation_type": {
+                "uuid": "47555ecb-bfa1-4490-a935-1ce04f91fe58",
+                "slug": "generic",
+                "active": true
+            },
+            "deal": null,
+            "meeting_event": null,
+            "feedbacks": [],
+            "owner": {
+                "uuid": "353e176c-29b8-40f9-83a8-38d445d7c4a4",
+                "name": "Admin api",
+                "email": "it+gov-sum@govrn.com",
+                "active": true
+            },
+            "participating_users": [
+                {
+                    "uuid": "353e176c-29b8-40f9-83a8-38d445d7c4a4",
+                    "name": "Admin api",
+                    "email": "it+gov-sum@govrn.com",
+                    "active": true
+                }
+            ],
+            "customer_phone_numbers": [],
+            "customer_email_addresses": [],
+            "speakers": [
+                {
+                    "uuid": "ff2f4655-0568-427d-a9d1-73ba0a4fee7e",
+                    "index": 0,
+                    "name": "Intervenant 1",
+                    "is_user": false,
+                    "phone_number": null,
+                    "email_address": null
+                },
+                {
+                    "uuid": "22416fb7-8803-4401-b61a-a9c55c0b25b3",
+                    "index": 1,
+                    "name": "Intervenant 2",
+                    "is_user": false,
+                    "phone_number": null,
+                    "email_address": null
+                },
+                {
+                    "uuid": "144b4f8f-789f-4d3b-be37-b644ab9f2457",
+                    "index": 2,
+                    "name": "Intervenant 3",
+                    "is_user": false,
+                    "phone_number": null,
+                    "email_address": null
+                }
+            ],
+            "prompts": [
+                {
+                    "uuid": "da26107f-10ad-4bbd-8c01-f5869a6aeaad",
+                    "title": "chaptering",
+                    "category": "chaptering",
+                    "completions": [
+                        "De sessie begint met een verwelkoming en een korte introductie van het onderwerp diversiteit en inclusie, met een focus op de rol van vrouwen in raden van bestuur.",
+                        "Mard Bellefroy introduceert de sprekers van de sessie, waaronder Robert van der Kijk en Lieve Kreten, en schetst hun achtergrond en expertise op het gebied van diversiteit.",
+                        "Er wordt gesproken over de vooruitgang in genderdiversiteit in Belgische raden van bestuur en de impact van quotawetgeving op de vertegenwoordiging van vrouwen.",
+                        "De sprekers bespreken de druk op inclusie en de noodzaak om niet alleen diversiteit te tellen, maar ook om ervoor te zorgen dat alle stemmen gehoord worden in de besluitvorming.",
+                        "Er wordt benadrukt dat diversiteit niet alleen een morele verplichting is, maar ook een strategische noodzaak voor bedrijven, met voordelen zoals innovatie en betere besluitvorming.",
+                        "De sprekers bespreken het belang van inclusief leiderschap en de noodzaak om een cultuur te creëren waarin diversiteit wordt gewaardeerd en gerespecteerd.",
+                        "De sessie eindigt met een oproep tot actie, waarbij de sprekers benadrukken dat authentiek commitment en het durven zijn van jezelf cruciaal zijn voor het bevorderen van diversiteit en inclusie."
+                    ]
+                },
+                {
+                    "uuid": "9b9f36da-1289-44c3-834f-0810b1e439ad",
+                    "title": "conversation type",
+                    "category": "text",
+                    "completions": [
+                        "\"Algemene vergadering\""
+                    ]
+                },
+                {
+                    "uuid": "1b2458f8-771a-4ff3-8d3a-c4425a7daae8",
+                    "title": "exec summary",
+                    "category": "summary",
+                    "completions": [
+                        "### Kerninzichten\n\n1. **Authentiek Commitment**: Diversiteit en inclusie moeten een integraal onderdeel zijn van de bedrijfsstrategie en cultuur, niet slechts een checklist of een trend. Dit vereist een oprechte inzet van het leiderschapsteam.\n\n2. **Inclusieve Cultuur**: Het creëren van een veilige en inclusieve omgeving is cruciaal voor het benutten van de voordelen van diversiteit. Dit houdt in dat elke stem telt en dat er ruimte is voor open dialoog.\n\n3. **Strategische Waarde van Diversiteit**: Diversiteit is niet alleen een morele verplichting, maar ook een business imperative. Diverse teams leiden tot meer innovatie, creativiteit en betere besluitvorming, wat de algehele prestaties van een organisatie verbetert.\n\n4. **Bewustzijn van Blinde Vlekken**: Bestuurders moeten zich bewust zijn van hun eigen vooroordelen en blinde vlekken, en actief werken aan het verbeteren van teamdynamiek en interactie.\n\n5. **Actiegerichtheid**: Het is belangrijk om niet alleen te praten over diversiteit en inclusie, maar ook concrete stappen te ondernemen om deze waarden in de praktijk te brengen.\n\n### Impactvol Citaat\n\n\"Authentiek commitment begint bij het geloof in diversiteit en inclusie als een essentieel onderdeel van ons succes.\"\n\n### Executieve Samenvatting\n\nIn deze talk benadrukt Mard Bellefroy, CEO van Women on Board, de cruciale rol van diversiteit en inclusie in de moderne bedrijfsvoering. Ze stelt dat diversiteit niet alleen een morele verplichting is, maar ook een strategische noodzaak die leidt tot innovatie en betere besluitvorming. Bellefroy pleit voor een authentiek commitment van het leiderschapsteam, waarbij diversiteit en inclusie worden geïntegreerd in de bedrijfsstrategie en cultuur. Ze wijst op de noodzaak van een inclusieve omgeving waar elke stem telt en waar open dialoog wordt aangemoedigd. Daarnaast benadrukt ze het belang van bewustzijn van blinde vlekken en teamdynamiek om de effectiviteit van diverse teams te maximaliseren. De boodschap is duidelijk: bedrijven moeten niet alleen praten over diversiteit, maar ook concrete acties ondernemen om deze waarden te verankeren in hun organisatie."
+                    ]
+                },
+                {
+                    "uuid": "0533c405-e708-4819-9c56-db3a58e60555",
+                    "title": "follow-up tasks",
+                    "category": "follow_up_tasks",
+                    "completions": [
+                        "Organiseer een koffiebreak met Women on Board bonbons en nodig deelnemers uit om vragen te stellen en verder te netwerken.",
+                        "Blijf actief betrokken bij Women on Board en ondersteun vrouwen in hun carrière naar raden van bestuur.",
+                        "Blijf het bewustzijn over het belang van inclusie en diversiteit in raden van bestuur promoten en mensen aansporen tot actie.",
+                        "Blijf het belang van authentieke commitment aan diversiteit en inclusie binnen organisaties benadrukken, vooral bij de raad van bestuur en het executive team.",
+                        "Stimuleer training en evaluatie van raden van bestuur om inclusieve en performante teams te creëren.",
+                        "Werk aan het bevorderen van open dialoog en het doorbreken van blinde vlekken binnen raden van bestuur.",
+                        "Blijf het belang van diversiteit en inclusie in leiderschap en raden van bestuur uitdragen, met nadruk op praktische toepassing en common sense.",
+                        "Werk aan het ontwikkelen van een stappenplan om diversiteit en inclusie te bevorderen binnen organisaties.",
+                        "Blijf betrokken bij het admissiecomité van Women on Board en ondersteun het identificeren van board ready vrouwen met complementaire profielen."
+                    ]
+                }
+            ],
+            "scorecards": [
+                {
+                    "uuid": "650a11c1-cd22-44a7-82fa-20fcd3db4c4b",
+                    "template_uuid": "3f761e72-c11e-48ab-a6f9-e7360499aa95",
+                    "title": "Meddic",
+                    "automatic": true,
+                    "scorecard_attributes": []
+                }
+            ],
+            "tags": [],
+            "title": null,
+            "description": null,
+            "simple_transcript": ""
+        },
+        {
+            "uuid": "f3854545-66b8-4793-bf20-03b06d2595b6",
+            "source": "leexi",
+            "source_id": "89db70a0-47ba-4002-ac38-3a487f78fe8d",
+            "created_at": "2025-06-06T09:48:31.333Z",
+            "updated_at": "2025-06-06T09:54:26.782Z",
+            "performed_at": "2025-06-06T09:48:30.334Z",
+            "locale": "nl-NL",
+            "duration": 2941.32,
+            "direction": "outbound",
+            "is_video": false,
+            "visible": true,
+            "recording_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/f3854545-66b8-4793-bf20-03b06d2595b6/recording.mp3?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T095558Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIGbf1B6JJsLU3%2Bm4nCWEDzj%2F5oxOUHLuUekyhgoCX9w%2FAiEAurtfvTXz9YI%2FkmxmEAmckUa%2Ftq0RKWMTD7Gr6Vq0THsqmQQIWhABGgw3MjcxNTM4NDEzMjkiDFMI8TTeFdN%2ByfTSeSr2A7bZOUVoL97%2BB2NSQ9fJBhzngjWCbBktV60%2FfZGOFa4KCNaKUAlTztCNpeDNDm3ju44JjjidMO3NqCVUs%2F8RA2rSXRz3rQ1QYtl%2BW4Li1hHjwkiXHxooiwKUam886lJYz8Pf8HesHLxw%2BS%2BaNApd36R81J0FtjCNyLFOdzY7Tf%2BiGdioh2YA43c2u3kac4CssZN%2B96ty8xD4eEc9SWDxmNULv3MrPW8hRxH8kfwVu%2ByJRPoreKH2SQf7TFCvEmZh66Y%2Bj431ercpXsMjh6gO8olxWtk%2ByNFV%2B6q28D1cUQUX4VnVRSArW268j1MucJIRuTRxkJCxADNsJS5n7yUCXTMt%2ByxFlehtLpIWaD1PLvymWLSexBZtTpSakdxiOFjAolls2Fcq5ZYLJu6AKLOltTehdlk0Vza1zD1fQLucEe82meIDO%2F3MYe97p9XbANal%2Frj3Jf9meC08FrcxsbOnanfTbJ%2F%2B0OvapknYGwbP3rsTDjuvSB402oQTjBCIGZ4Z7COP6F7dYN4zUTOOcO3TWMuha8Wrrt1TYFdVPp7hD14cd%2BMN%2F0%2BVp%2B3z4F%2FdZ0BCEjtmuNyswqMvuxoVglo20My1iuoKpUmHT5S08Rm%2BsOBIZCnb8Aa%2FgRtB5RP53qLUFhAYNOiM40oSh4Vwq5mIVoLSMHSRJUowzOGKwgY6pgGUFbxGIvXHegSOC%2BRQHVbbfip6yPZ%2Byy%2F08sAMX3X2IxLxUe068%2FgyeqMGrrgDUxSZBO4hS25dmXIuk2Z65E8FF6nTCK4LD1sRHpUPkLmlRQ6gLvDwUDcHeDAEoPo9ux6QvacvTTQt70CcnjpRFOy%2FMai%2F3MB0RkpYLtFVeCLdoPCXq3Qy9gMqt%2BuRZo%2B2LJ3rG5B%2F92RKeaLpVWSo67NlQIm1xgeG\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYZCYV2AO3%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=f9b0c30d946f55d3f0400c89e780e4794b56dbe9c927f189f1d6ff35cda3339f",
+            "transcript_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/f3854545-66b8-4793-bf20-03b06d2595b6/transcript.json?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T095558Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIGbf1B6JJsLU3%2Bm4nCWEDzj%2F5oxOUHLuUekyhgoCX9w%2FAiEAurtfvTXz9YI%2FkmxmEAmckUa%2Ftq0RKWMTD7Gr6Vq0THsqmQQIWhABGgw3MjcxNTM4NDEzMjkiDFMI8TTeFdN%2ByfTSeSr2A7bZOUVoL97%2BB2NSQ9fJBhzngjWCbBktV60%2FfZGOFa4KCNaKUAlTztCNpeDNDm3ju44JjjidMO3NqCVUs%2F8RA2rSXRz3rQ1QYtl%2BW4Li1hHjwkiXHxooiwKUam886lJYz8Pf8HesHLxw%2BS%2BaNApd36R81J0FtjCNyLFOdzY7Tf%2BiGdioh2YA43c2u3kac4CssZN%2B96ty8xD4eEc9SWDxmNULv3MrPW8hRxH8kfwVu%2ByJRPoreKH2SQf7TFCvEmZh66Y%2Bj431ercpXsMjh6gO8olxWtk%2ByNFV%2B6q28D1cUQUX4VnVRSArW268j1MucJIRuTRxkJCxADNsJS5n7yUCXTMt%2ByxFlehtLpIWaD1PLvymWLSexBZtTpSakdxiOFjAolls2Fcq5ZYLJu6AKLOltTehdlk0Vza1zD1fQLucEe82meIDO%2F3MYe97p9XbANal%2Frj3Jf9meC08FrcxsbOnanfTbJ%2F%2B0OvapknYGwbP3rsTDjuvSB402oQTjBCIGZ4Z7COP6F7dYN4zUTOOcO3TWMuha8Wrrt1TYFdVPp7hD14cd%2BMN%2F0%2BVp%2B3z4F%2FdZ0BCEjtmuNyswqMvuxoVglo20My1iuoKpUmHT5S08Rm%2BsOBIZCnb8Aa%2FgRtB5RP53qLUFhAYNOiM40oSh4Vwq5mIVoLSMHSRJUowzOGKwgY6pgGUFbxGIvXHegSOC%2BRQHVbbfip6yPZ%2Byy%2F08sAMX3X2IxLxUe068%2FgyeqMGrrgDUxSZBO4hS25dmXIuk2Z65E8FF6nTCK4LD1sRHpUPkLmlRQ6gLvDwUDcHeDAEoPo9ux6QvacvTTQt70CcnjpRFOy%2FMai%2F3MB0RkpYLtFVeCLdoPCXq3Qy9gMqt%2BuRZo%2B2LJ3rG5B%2F92RKeaLpVWSo67NlQIm1xgeG\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYZCYV2AO3%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=a6ec34d8a75217149664cee2e06727d7f85505f7ee7fc34007cce94a7ebb79a8",
+            "leexi_url": "https://app.leexi.ai/calls/f3854545-66b8-4793-bf20-03b06d2595b6",
+            "video_archived_at": null,
+            "audio_archived_at": null,
+            "transcript_archived_at": null,
+            "completions_archived_at": null,
+            "summary": "### Kerninzichten\n\n1. **Belang van Context**: De context van een organisatie bepaalt de geschiktheid van een CEO. Het is cruciaal dat de Raad van Bestuur begrijpt welke specifieke competenties en waarden nodig zijn voor de organisatie in zijn huidige situatie.\n\n2. **Risico van Subjectiviteit**: Bestuursleden moeten zich bewust zijn van hun onbewuste vooroordelen en de neiging om te kiezen uit een beperkte groep kandidaten. Dit kan leiden tot het missen van betere opties buiten hun netwerk.\n\n3. **Effectieve Communicatie**: Het is essentieel om een open communicatielijn te hebben tussen de Raad van Bestuur en de werkvloer. Dit helpt om problemen vroegtijdig te signaleren en zorgt voor een betere afstemming tussen strategie en uitvoering.\n\n4. **Voorbereiding en Objectiviteit**: Een grondige voorbereiding en het gebruik van objectieve criteria bij de selectie van een CEO kunnen de kans op een succesvolle aanstelling aanzienlijk verhogen.\n\n5. **Waarde van Extern Advies**: Het inschakelen van externe experts kan helpen bij het objectiveren van het selectieproces en het waarborgen dat de juiste match wordt gevonden voor de organisatie.\n\n### Inspirerend Citaat\n\n\"De juiste CEO voor het ene bedrijf is niet noodzakelijk een goede CEO voor uw bedrijf. De juiste CEO is iemand die echt voldoet aan de behoeften van uw organisatie en de cultuur en waarden van uw bedrijf begrijpt.\"\n\n### Executieve Samenvatting\n\nIn deze talk benadrukt Hilde van der Scherpe het cruciale belang van een doordachte en contextspecifieke aanpak bij de aanstelling van een CEO. Ze wijst op de hoge mislukkingpercentages van CEO-aanstellingen (40-60%) en de emotionele en financiële kosten die daarmee gepaard gaan. De spreker pleit voor een objectieve en grondige voorbereiding, waarbij de Raad van Bestuur zich bewust moet zijn van hun onbewuste vooroordelen en de neiging om te kiezen uit een beperkte groep kandidaten. Het is essentieel dat de Raad van Bestuur de specifieke behoeften van de organisatie begrijpt en dat er een open communicatielijn is met de werkvloer om problemen vroegtijdig te signaleren. Het inschakelen van externe experts kan de kans op een succesvolle aanstelling vergroten. De boodschap is duidelijk: een goede match tussen de CEO en de organisatie is van levensbelang voor het succes op lange termijn.",
+            "conversation_type": {
+                "uuid": "47555ecb-bfa1-4490-a935-1ce04f91fe58",
+                "slug": "generic",
+                "active": true
+            },
+            "deal": null,
+            "meeting_event": null,
+            "feedbacks": [],
+            "owner": {
+                "uuid": "353e176c-29b8-40f9-83a8-38d445d7c4a4",
+                "name": "Admin api",
+                "email": "it+gov-sum@govrn.com",
+                "active": true
+            },
+            "participating_users": [
+                {
+                    "uuid": "353e176c-29b8-40f9-83a8-38d445d7c4a4",
+                    "name": "Admin api",
+                    "email": "it+gov-sum@govrn.com",
+                    "active": true
+                }
+            ],
+            "customer_phone_numbers": [],
+            "customer_email_addresses": [],
+            "speakers": [
+                {
+                    "uuid": "e06675fd-75ff-4a5c-9693-f341fa06115f",
+                    "index": 0,
+                    "name": "Intervenant 1",
+                    "is_user": false,
+                    "phone_number": null,
+                    "email_address": null
+                },
+                {
+                    "uuid": "fa1d6746-aed4-4562-b1d5-1d631bdd93b5",
+                    "index": 1,
+                    "name": "Intervenant 2",
+                    "is_user": false,
+                    "phone_number": null,
+                    "email_address": null
+                },
+                {
+                    "uuid": "2dc7a5bb-451f-44b5-a558-151656922128",
+                    "index": 2,
+                    "name": "Intervenant 3",
+                    "is_user": false,
+                    "phone_number": null,
+                    "email_address": null
+                }
+            ],
+            "prompts": [
+                {
+                    "uuid": "da26107f-10ad-4bbd-8c01-f5869a6aeaad",
+                    "title": "chaptering",
+                    "category": "chaptering",
+                    "completions": [
+                        "Hilde van der Scherpe introduceert het onderwerp van de sessie, dat zich richt op de aanstelling van de juiste CEO en de impact van bestuursbeslissingen op organisaties.",
+                        "Hilde benadrukt het belang van het goed kiezen van een CEO, vergelijkbaar met een huwelijk, en bespreekt de hoge mislukkingpercentages van CEO-aanstellingen.",
+                        "Er worden verschillende valkuilen besproken die bestuursraden tegenkomen bij het kiezen van een CEO, zoals het vissen in een te kleine vijver en het baseren van beslissingen op emoties in plaats van feiten.",
+                        "Caroline de Klerk deelt haar ervaring met de aanstelling van een nieuwe CEO bij Bollieu International Group, inclusief de uitdagingen die voortkwamen uit veranderende economische omstandigheden.",
+                        "Kurt Kersmakers vertelt over zijn ervaring bij Gezinszorg Villers, waar hij te maken kreeg met een dominante directeur en de noodzaak om een nieuwe strategie en leiderschap te implementeren.",
+                        "De sessie eindigt met een vraag- en antwoordsessie waarin deelnemers hun ervaringen delen en vragen stellen over de uitdagingen van het bestuur en de communicatie binnen organisaties."
+                    ]
+                },
+                {
+                    "uuid": "9b9f36da-1289-44c3-834f-0810b1e439ad",
+                    "title": "conversation type",
+                    "category": "text",
+                    "completions": [
+                        "\"Algemene vergadering\""
+                    ]
+                },
+                {
+                    "uuid": "1b2458f8-771a-4ff3-8d3a-c4425a7daae8",
+                    "title": "exec summary",
+                    "category": "summary",
+                    "completions": [
+                        "### Kerninzichten\n\n1. **Belang van Context**: De context van een organisatie bepaalt de geschiktheid van een CEO. Het is cruciaal dat de Raad van Bestuur begrijpt welke specifieke competenties en waarden nodig zijn voor de organisatie in zijn huidige situatie.\n\n2. **Risico van Subjectiviteit**: Bestuursleden moeten zich bewust zijn van hun onbewuste vooroordelen en de neiging om te kiezen uit een beperkte groep kandidaten. Dit kan leiden tot het missen van betere opties buiten hun netwerk.\n\n3. **Effectieve Communicatie**: Het is essentieel om een open communicatielijn te hebben tussen de Raad van Bestuur en de werkvloer. Dit helpt om problemen vroegtijdig te signaleren en zorgt voor een betere afstemming tussen strategie en uitvoering.\n\n4. **Voorbereiding en Objectiviteit**: Een grondige voorbereiding en het gebruik van objectieve criteria bij de selectie van een CEO kunnen de kans op een succesvolle aanstelling aanzienlijk verhogen.\n\n5. **Waarde van Extern Advies**: Het inschakelen van externe experts kan helpen bij het objectiveren van het selectieproces en het waarborgen dat de juiste match wordt gevonden voor de organisatie.\n\n### Inspirerend Citaat\n\n\"De juiste CEO voor het ene bedrijf is niet noodzakelijk een goede CEO voor uw bedrijf. De juiste CEO is iemand die echt voldoet aan de behoeften van uw organisatie en de cultuur en waarden van uw bedrijf begrijpt.\"\n\n### Executieve Samenvatting\n\nIn deze talk benadrukt Hilde van der Scherpe het cruciale belang van een doordachte en contextspecifieke aanpak bij de aanstelling van een CEO. Ze wijst op de hoge mislukkingpercentages van CEO-aanstellingen (40-60%) en de emotionele en financiële kosten die daarmee gepaard gaan. De spreker pleit voor een objectieve en grondige voorbereiding, waarbij de Raad van Bestuur zich bewust moet zijn van hun onbewuste vooroordelen en de neiging om te kiezen uit een beperkte groep kandidaten. Het is essentieel dat de Raad van Bestuur de specifieke behoeften van de organisatie begrijpt en dat er een open communicatielijn is met de werkvloer om problemen vroegtijdig te signaleren. Het inschakelen van externe experts kan de kans op een succesvolle aanstelling vergroten. De boodschap is duidelijk: een goede match tussen de CEO en de organisatie is van levensbelang voor het succes op lange termijn."
+                    ]
+                },
+                {
+                    "uuid": "0533c405-e708-4819-9c56-db3a58e60555",
+                    "title": "follow-up tasks",
+                    "category": "follow_up_tasks",
+                    "completions": [
+                        "Bereid een samenvatting voor van de belangrijkste inzichten over CEO-aanstellingen en bestuursprocessen om te delen met de Raad van Bestuur.",
+                        "Organiseer een vervolgafspraak met Caroline en Kurt om dieper in te gaan op hun ervaringen en mogelijke aanbevelingen voor de organisatie.",
+                        "Zorg voor de verspreiding van relevante literatuur over onbewuste biases en besluitvorming, zoals het boek van Daniel Kahneman, onder de bestuursleden.",
+                        "Documenteer het proces van CEO-selectie binnen de familieonderneming, inclusief de betrokkenheid van de Raad van Bestuur en aandeelhouders.",
+                        "Evalueer de impact van de nieuwe CEO op de organisatie en bereid een rapport voor over de geleerde lessen uit het selectieproces.",
+                        "Bereid een presentatie voor over de rol van familieleden in de Raad van Bestuur en hoe dit de besluitvorming beïnvloedt.",
+                        "Breng een overzicht in kaart van de governance- en communicatieverbeteringen binnen Gezinszorg Villers sinds de bestuurswijzigingen.",
+                        "Ontwikkel een plan voor het versterken van de relatie tussen de Raad van Bestuur en de werkvloer, inclusief escalatiekanalen en bezoekregelingen.",
+                        "Bereid een voorstel voor om externe expertise in te schakelen bij toekomstige CEO-selecties en bestuursprocessen."
+                    ]
+                }
+            ],
+            "scorecards": [
+                {
+                    "uuid": "dc2d43b3-d3a2-4142-b92f-f763c791382c",
+                    "template_uuid": "409d312f-db86-402f-9ff1-6b96c14d54bf",
+                    "title": "SPICED",
+                    "automatic": true,
+                    "scorecard_attributes": []
+                },
+                {
+                    "uuid": "c63f950b-f329-4a91-b850-9096f5241cbf",
+                    "template_uuid": "3f761e72-c11e-48ab-a6f9-e7360499aa95",
+                    "title": "Meddic",
+                    "automatic": true,
+                    "scorecard_attributes": []
+                }
+            ],
+            "tags": [],
+            "title": null,
+            "description": null,
+            "simple_transcript": ""
+        },
+        {
+            "uuid": "6aeae3c1-2f58-409a-9440-1c4012d8700c",
+            "source": "leexi",
+            "source_id": "d5cd0f58-77bf-4236-a04a-248d52366f14",
+            "created_at": "2025-06-06T09:42:59.824Z",
+            "updated_at": "2025-06-06T09:50:49.495Z",
+            "performed_at": "2025-06-06T09:42:58.780Z",
+            "locale": "nl-NL",
+            "duration": 2428.45,
+            "direction": "outbound",
+            "is_video": false,
+            "visible": true,
+            "recording_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/6aeae3c1-2f58-409a-9440-1c4012d8700c/recording.mp3?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T095558Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIGbf1B6JJsLU3%2Bm4nCWEDzj%2F5oxOUHLuUekyhgoCX9w%2FAiEAurtfvTXz9YI%2FkmxmEAmckUa%2Ftq0RKWMTD7Gr6Vq0THsqmQQIWhABGgw3MjcxNTM4NDEzMjkiDFMI8TTeFdN%2ByfTSeSr2A7bZOUVoL97%2BB2NSQ9fJBhzngjWCbBktV60%2FfZGOFa4KCNaKUAlTztCNpeDNDm3ju44JjjidMO3NqCVUs%2F8RA2rSXRz3rQ1QYtl%2BW4Li1hHjwkiXHxooiwKUam886lJYz8Pf8HesHLxw%2BS%2BaNApd36R81J0FtjCNyLFOdzY7Tf%2BiGdioh2YA43c2u3kac4CssZN%2B96ty8xD4eEc9SWDxmNULv3MrPW8hRxH8kfwVu%2ByJRPoreKH2SQf7TFCvEmZh66Y%2Bj431ercpXsMjh6gO8olxWtk%2ByNFV%2B6q28D1cUQUX4VnVRSArW268j1MucJIRuTRxkJCxADNsJS5n7yUCXTMt%2ByxFlehtLpIWaD1PLvymWLSexBZtTpSakdxiOFjAolls2Fcq5ZYLJu6AKLOltTehdlk0Vza1zD1fQLucEe82meIDO%2F3MYe97p9XbANal%2Frj3Jf9meC08FrcxsbOnanfTbJ%2F%2B0OvapknYGwbP3rsTDjuvSB402oQTjBCIGZ4Z7COP6F7dYN4zUTOOcO3TWMuha8Wrrt1TYFdVPp7hD14cd%2BMN%2F0%2BVp%2B3z4F%2FdZ0BCEjtmuNyswqMvuxoVglo20My1iuoKpUmHT5S08Rm%2BsOBIZCnb8Aa%2FgRtB5RP53qLUFhAYNOiM40oSh4Vwq5mIVoLSMHSRJUowzOGKwgY6pgGUFbxGIvXHegSOC%2BRQHVbbfip6yPZ%2Byy%2F08sAMX3X2IxLxUe068%2FgyeqMGrrgDUxSZBO4hS25dmXIuk2Z65E8FF6nTCK4LD1sRHpUPkLmlRQ6gLvDwUDcHeDAEoPo9ux6QvacvTTQt70CcnjpRFOy%2FMai%2F3MB0RkpYLtFVeCLdoPCXq3Qy9gMqt%2BuRZo%2B2LJ3rG5B%2F92RKeaLpVWSo67NlQIm1xgeG\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYZCYV2AO3%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=4312d4a26ff221b20916bb299674ecb6b2f175983945325fae7a8b2b6bf4954c",
+            "transcript_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/6aeae3c1-2f58-409a-9440-1c4012d8700c/transcript.json?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T095558Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIGbf1B6JJsLU3%2Bm4nCWEDzj%2F5oxOUHLuUekyhgoCX9w%2FAiEAurtfvTXz9YI%2FkmxmEAmckUa%2Ftq0RKWMTD7Gr6Vq0THsqmQQIWhABGgw3MjcxNTM4NDEzMjkiDFMI8TTeFdN%2ByfTSeSr2A7bZOUVoL97%2BB2NSQ9fJBhzngjWCbBktV60%2FfZGOFa4KCNaKUAlTztCNpeDNDm3ju44JjjidMO3NqCVUs%2F8RA2rSXRz3rQ1QYtl%2BW4Li1hHjwkiXHxooiwKUam886lJYz8Pf8HesHLxw%2BS%2BaNApd36R81J0FtjCNyLFOdzY7Tf%2BiGdioh2YA43c2u3kac4CssZN%2B96ty8xD4eEc9SWDxmNULv3MrPW8hRxH8kfwVu%2ByJRPoreKH2SQf7TFCvEmZh66Y%2Bj431ercpXsMjh6gO8olxWtk%2ByNFV%2B6q28D1cUQUX4VnVRSArW268j1MucJIRuTRxkJCxADNsJS5n7yUCXTMt%2ByxFlehtLpIWaD1PLvymWLSexBZtTpSakdxiOFjAolls2Fcq5ZYLJu6AKLOltTehdlk0Vza1zD1fQLucEe82meIDO%2F3MYe97p9XbANal%2Frj3Jf9meC08FrcxsbOnanfTbJ%2F%2B0OvapknYGwbP3rsTDjuvSB402oQTjBCIGZ4Z7COP6F7dYN4zUTOOcO3TWMuha8Wrrt1TYFdVPp7hD14cd%2BMN%2F0%2BVp%2B3z4F%2FdZ0BCEjtmuNyswqMvuxoVglo20My1iuoKpUmHT5S08Rm%2BsOBIZCnb8Aa%2FgRtB5RP53qLUFhAYNOiM40oSh4Vwq5mIVoLSMHSRJUowzOGKwgY6pgGUFbxGIvXHegSOC%2BRQHVbbfip6yPZ%2Byy%2F08sAMX3X2IxLxUe068%2FgyeqMGrrgDUxSZBO4hS25dmXIuk2Z65E8FF6nTCK4LD1sRHpUPkLmlRQ6gLvDwUDcHeDAEoPo9ux6QvacvTTQt70CcnjpRFOy%2FMai%2F3MB0RkpYLtFVeCLdoPCXq3Qy9gMqt%2BuRZo%2B2LJ3rG5B%2F92RKeaLpVWSo67NlQIm1xgeG\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYZCYV2AO3%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=c85481f0dacd1d108288f68ee53f9138951147e90b8e7be95f7497ad47fe84c4",
+            "leexi_url": "https://app.leexi.ai/calls/6aeae3c1-2f58-409a-9440-1c4012d8700c",
+            "video_archived_at": null,
+            "audio_archived_at": null,
+            "transcript_archived_at": null,
+            "completions_archived_at": null,
+            "summary": "### Kerninzichten\n\n1. **Onvoldoende Bescherming voor Minderheidsaandeelhouders**: De spreker benadrukt dat minderheidsaandeelhouders in België vaak onvoldoende bescherming genieten, wat leidt tot situaties waarin ze benadeeld worden door grotere aandeelhouders of bedrijven.\n\n2. **Trafigura en Nierstar Case**: Het verhaal van Nierstar illustreert hoe een bedrijf door een grotere speler (Trafigura) werd overgenomen en leeggezogen, wat de kwetsbaarheid van minderheidsaandeelhouders blootlegt.\n\n3. **Nood aan Hervormingen**: Er is een dringende behoefte aan hervormingen binnen de Belgische regelgeving en het FSMA (Autoriteit voor Financiële Diensten en Markten) om de bescherming van minderheidsaandeelhouders te versterken en de efficiëntie van het juridische systeem te verbeteren.\n\n4. **Cultuur van Investeren**: De spreker pleit voor een cultuurverandering in België om meer mensen te stimuleren om te investeren in de beurs, wat cruciaal is voor de economische groei.\n\n5. **Oplossingen en Voorstellen**: Er worden verschillende voorstellen gedaan, zoals het uitbreiden van de bevoegdheden van de FSMA en het creëren van een systeem voor 'majority of minority shareholders', om de positie van minderheidsaandeelhouders te versterken.\n\n### Impactvol Citaat\n\n\"Het is heel moeilijk om dat allemaal te gaan recupereren. Maar het is zodat je op de lange termijn het fundament van onze beurs ondermijnt als je daar niets gaat doen.\"\n\n### Executieve Samenvatting\n\nIn zijn presentatie benadrukt Michael Freilich de kwetsbaarheid van minderheidsaandeelhouders in België, met de case van Nierstar als een sprekend voorbeeld van hoe grotere bedrijven hen kunnen benadelen. Hij wijst op de onvoldoende bescherming die deze aandeelhouders genieten en pleit voor dringende hervormingen binnen de Belgische regelgeving en de Autoriteit voor Financiële Diensten en Markten (FSMA). Freilich stelt dat er een cultuurverandering nodig is om meer mensen te stimuleren om te investeren in de beurs, wat essentieel is voor de economische groei. Hij doet verschillende voorstellen, waaronder het uitbreiden van de bevoegdheden van de FSMA en het implementeren van een 'majority of minority shareholders'-systeem, om de positie van minderheidsaandeelhouders te versterken. De presentatie roept op tot actie en bewustwording van de noodzaak om de investeringscultuur in België te verbeteren en de rechten van minderheidsaandeelhouders te waarborgen.",
+            "conversation_type": {
+                "uuid": "47555ecb-bfa1-4490-a935-1ce04f91fe58",
+                "slug": "generic",
+                "active": true
+            },
+            "deal": null,
+            "meeting_event": null,
+            "feedbacks": [],
+            "owner": {
+                "uuid": "353e176c-29b8-40f9-83a8-38d445d7c4a4",
+                "name": "Admin api",
+                "email": "it+gov-sum@govrn.com",
+                "active": true
+            },
+            "participating_users": [
+                {
+                    "uuid": "353e176c-29b8-40f9-83a8-38d445d7c4a4",
+                    "name": "Admin api",
+                    "email": "it+gov-sum@govrn.com",
+                    "active": true
+                }
+            ],
+            "customer_phone_numbers": [],
+            "customer_email_addresses": [],
+            "speakers": [
+                {
+                    "uuid": "fa5f8db7-32fc-4132-a67e-dc0b2721cedb",
+                    "index": 0,
+                    "name": "Admin api",
+                    "is_user": true,
+                    "phone_number": null,
+                    "email_address": "it+gov-sum@govrn.com"
+                },
+                {
+                    "uuid": "9e7be5fc-3b38-45b6-b257-0208bfe3bd8e",
+                    "index": 1,
+                    "name": "Intervenant 2",
+                    "is_user": false,
+                    "phone_number": null,
+                    "email_address": null
+                }
+            ],
+            "prompts": [
+                {
+                    "uuid": "da26107f-10ad-4bbd-8c01-f5869a6aeaad",
+                    "title": "chaptering",
+                    "category": "chaptering",
+                    "completions": [
+                        "Michael Freilich, lid van de Kamercommissie voor N-VA, introduceert zichzelf en zijn achtergrond als politicus en journalist. Hij spreekt over zijn aanwezigheid en de context van de presentatie.",
+                        "Freilich bespreekt de uitdagingen waarmee minderheidsaandeelhouders in België worden geconfronteerd, met voorbeelden van bedrijven zoals Nierstar. Hij legt de nadruk op de kwetsbaarheid van kleine aandeelhouders in de huidige markt.",
+                        "Freilich gaat dieper in op het Nierstar-schandaal, waarbij hij de rol van Trafigura als een 'koekoek' in de overname en plundering van het bedrijf beschrijft. Hij legt de drie fasen uit die Trafigura volgde om controle over Nierstar te krijgen.",
+                        "De spreker bespreekt de juridische lacunes en de traagheid van het Belgische rechtssysteem, evenals de beperkte bevoegdheden van de FSMA. Hij pleit voor hervormingen om de bescherming van minderheidsaandeelhouders te verbeteren.",
+                        "Freilich presenteert mogelijke oplossingen, zoals het versterken van de FSMA en het implementeren van een systeem voor de meerderheid van minderheidsaandeelhouders. Hij benadrukt de noodzaak van een betere corporate governance.",
+                        "Er is een interactief gedeelte waarin deelnemers vragen stellen over de aandeelhouderscultuur in België en de uitdagingen voor KMO's. Freilich reageert op de vragen en deelt zijn visie op de toekomst.",
+                        "Freilich sluit de sessie af en nodigt deelnemers uit voor verdere gesprekken tijdens de koffiepauze. Hij biedt zijn contactinformatie aan voor geïnteresseerden die dieper op de onderwerpen willen ingaan."
+                    ]
+                },
+                {
+                    "uuid": "9b9f36da-1289-44c3-834f-0810b1e439ad",
+                    "title": "conversation type",
+                    "category": "text",
+                    "completions": [
+                        "\"Algemene vergadering\""
+                    ]
+                },
+                {
+                    "uuid": "1b2458f8-771a-4ff3-8d3a-c4425a7daae8",
+                    "title": "exec summary",
+                    "category": "summary",
+                    "completions": [
+                        "### Kerninzichten\n\n1. **Onvoldoende Bescherming voor Minderheidsaandeelhouders**: De spreker benadrukt dat minderheidsaandeelhouders in België vaak onvoldoende bescherming genieten, wat leidt tot situaties waarin ze benadeeld worden door grotere aandeelhouders of bedrijven.\n\n2. **Trafigura en Nierstar Case**: Het verhaal van Nierstar illustreert hoe een bedrijf door een grotere speler (Trafigura) werd overgenomen en leeggezogen, wat de kwetsbaarheid van minderheidsaandeelhouders blootlegt.\n\n3. **Nood aan Hervormingen**: Er is een dringende behoefte aan hervormingen binnen de Belgische regelgeving en het FSMA (Autoriteit voor Financiële Diensten en Markten) om de bescherming van minderheidsaandeelhouders te versterken en de efficiëntie van het juridische systeem te verbeteren.\n\n4. **Cultuur van Investeren**: De spreker pleit voor een cultuurverandering in België om meer mensen te stimuleren om te investeren in de beurs, wat cruciaal is voor de economische groei.\n\n5. **Oplossingen en Voorstellen**: Er worden verschillende voorstellen gedaan, zoals het uitbreiden van de bevoegdheden van de FSMA en het creëren van een systeem voor 'majority of minority shareholders', om de positie van minderheidsaandeelhouders te versterken.\n\n### Impactvol Citaat\n\n\"Het is heel moeilijk om dat allemaal te gaan recupereren. Maar het is zodat je op de lange termijn het fundament van onze beurs ondermijnt als je daar niets gaat doen.\"\n\n### Executieve Samenvatting\n\nIn zijn presentatie benadrukt Michael Freilich de kwetsbaarheid van minderheidsaandeelhouders in België, met de case van Nierstar als een sprekend voorbeeld van hoe grotere bedrijven hen kunnen benadelen. Hij wijst op de onvoldoende bescherming die deze aandeelhouders genieten en pleit voor dringende hervormingen binnen de Belgische regelgeving en de Autoriteit voor Financiële Diensten en Markten (FSMA). Freilich stelt dat er een cultuurverandering nodig is om meer mensen te stimuleren om te investeren in de beurs, wat essentieel is voor de economische groei. Hij doet verschillende voorstellen, waaronder het uitbreiden van de bevoegdheden van de FSMA en het implementeren van een 'majority of minority shareholders'-systeem, om de positie van minderheidsaandeelhouders te versterken. De presentatie roept op tot actie en bewustwording van de noodzaak om de investeringscultuur in België te verbeteren en de rechten van minderheidsaandeelhouders te waarborgen."
+                    ]
+                },
+                {
+                    "uuid": "0533c405-e708-4819-9c56-db3a58e60555",
+                    "title": "follow-up tasks",
+                    "category": "follow_up_tasks",
+                    "completions": [
+                        "Documenteer en publiceer het gedetailleerde verslag over het Nierstar-schandaal op de website.",
+                        "Organiseer vervolgafspraken met geïnteresseerden voor diepgaandere gesprekken over de bescherming van minderheidsaandeelhouders.",
+                        "Blijf lobbyen en samenwerken met politieke partijen om hervormingen voor de FSMA en bescherming van minderheidsaandeelhouders te realiseren.",
+                        "Volg de ontwikkelingen rond de FSMA en stel voorstellen op voor uitbreiding van hun bevoegdheden.",
+                        "Bereid een overzicht voor van mogelijke uitzonderingen op de meerwaardebelasting voor medewerkers die aandelen in hun eigen bedrijf bezitten."
+                    ]
+                }
+            ],
+            "scorecards": [],
+            "tags": [],
+            "title": null,
+            "description": null,
+            "simple_transcript": ""
+        },
+        {
             "uuid": "f1993c89-923f-4bab-a7e5-a45ce2b19846",
             "source": "leexi",
             "source_id": "fa2466b8-e848-436e-a28b-c66bf1742b36",
@@ -12,8 +394,8 @@
             "direction": "outbound",
             "is_video": false,
             "visible": true,
-            "recording_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/f1993c89-923f-4bab-a7e5-a45ce2b19846/recording.mp3?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T085333Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIFrkYVCKLzOGbmIjBKVEYzoIKSfSa%2Fw6a7EGGMw5n7k%2FAiEAxlfz9pBl8ViadgH6jLvy6QEuGle5zf%2FyFOokLZXQZqIqmQQIWhABGgw3MjcxNTM4NDEzMjkiDMEJY%2FN2bbdAKnfmXir2A4n67UUPx4CzZwYN%2FIkJdNFPYRdAT9QrEVkgtG4NzwOsxbPfEa2B%2BWg0KIzfLfHlNcvnmZ1ChAybzuZjZlY0E3qDnH4JbA0KravBljsTP32p%2BxrzyCDAd47OOkf4XPmO%2BNq6kMCx1sJAUEUR7s03g4fm4OxWAXaLT81liUIpP6%2FRSuEbmvqmMKQp92WkolRZlr%2B5ZZOBp7ayBULmGmgk7gNzqP96lPA2EfFssOQFw40xiuFehuj0v%2B08fI9rwVoJLqNliIZ9ed9nZwSrlQFO91DjZGbMzzmwjY4uwzP%2Bha3ekThL2WkYLHCEJOtVRJHtZlmVgWMZcB6WT7SB77dtu0QGck30ZACV7Msk%2ByBXmEXmrTqGLA2AltbU8OF8kVfspKK0LxKlHI7%2B9120g%2Bwmz7y5iALmFftC0QZ32lo211bqQTsAFnO2XIKtpEx5sO0WXzXtPAr6ryuQLbCku5lsUezkqZ2sBi8s2zxevKntcj8F4ePWKF3%2BC9oGv9%2FIG9rfT3MTY0IRkjM1I3pGKt6VJKT7UhpEdEZTkD1W7bXKwOtLmD%2F%2Fi5jASO9VStBjbZU0U4gk9P4AuYt%2BGcd5VXsQJ4U%2FU0zro76L%2BpVlVcpJSji9Oc5tqCi7l8JveC4qbzJUAE7NjDFp1broxTmHE5MFvz%2FYBuI8hKkwt8%2BKwgY6pgFhvcVmuY3eNaC%2FJeyUkYGMt1GphAHO1RqfOxy0g25pke262cXX9QSLh6BU2lEQIFw9iLKOuUYQEU3c4vXHejwmjmptXfGGjRY2%2B8uy0GV9Xg8d8vwcZ2zeiQcaCALoa8KRS4F2HP%2BEIczDuprNxE7YQScDk%2FiNuqsjHWqPyA4dNWPq66EObrE7aHmH6UBS5lSC%2B8emZfZHhf2K3QVaIlVITom6RmA9\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYXJSL7NLM%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=8a6d99623371447d06760e8a6504f8955c6ab0dc344a4b72075904feb7176f1b",
-            "transcript_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/f1993c89-923f-4bab-a7e5-a45ce2b19846/transcript.json?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T085333Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIFrkYVCKLzOGbmIjBKVEYzoIKSfSa%2Fw6a7EGGMw5n7k%2FAiEAxlfz9pBl8ViadgH6jLvy6QEuGle5zf%2FyFOokLZXQZqIqmQQIWhABGgw3MjcxNTM4NDEzMjkiDMEJY%2FN2bbdAKnfmXir2A4n67UUPx4CzZwYN%2FIkJdNFPYRdAT9QrEVkgtG4NzwOsxbPfEa2B%2BWg0KIzfLfHlNcvnmZ1ChAybzuZjZlY0E3qDnH4JbA0KravBljsTP32p%2BxrzyCDAd47OOkf4XPmO%2BNq6kMCx1sJAUEUR7s03g4fm4OxWAXaLT81liUIpP6%2FRSuEbmvqmMKQp92WkolRZlr%2B5ZZOBp7ayBULmGmgk7gNzqP96lPA2EfFssOQFw40xiuFehuj0v%2B08fI9rwVoJLqNliIZ9ed9nZwSrlQFO91DjZGbMzzmwjY4uwzP%2Bha3ekThL2WkYLHCEJOtVRJHtZlmVgWMZcB6WT7SB77dtu0QGck30ZACV7Msk%2ByBXmEXmrTqGLA2AltbU8OF8kVfspKK0LxKlHI7%2B9120g%2Bwmz7y5iALmFftC0QZ32lo211bqQTsAFnO2XIKtpEx5sO0WXzXtPAr6ryuQLbCku5lsUezkqZ2sBi8s2zxevKntcj8F4ePWKF3%2BC9oGv9%2FIG9rfT3MTY0IRkjM1I3pGKt6VJKT7UhpEdEZTkD1W7bXKwOtLmD%2F%2Fi5jASO9VStBjbZU0U4gk9P4AuYt%2BGcd5VXsQJ4U%2FU0zro76L%2BpVlVcpJSji9Oc5tqCi7l8JveC4qbzJUAE7NjDFp1broxTmHE5MFvz%2FYBuI8hKkwt8%2BKwgY6pgFhvcVmuY3eNaC%2FJeyUkYGMt1GphAHO1RqfOxy0g25pke262cXX9QSLh6BU2lEQIFw9iLKOuUYQEU3c4vXHejwmjmptXfGGjRY2%2B8uy0GV9Xg8d8vwcZ2zeiQcaCALoa8KRS4F2HP%2BEIczDuprNxE7YQScDk%2FiNuqsjHWqPyA4dNWPq66EObrE7aHmH6UBS5lSC%2B8emZfZHhf2K3QVaIlVITom6RmA9\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYXJSL7NLM%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=6ff74979a2f3611e32b4da1e706854d134033d84cf2b248bf5ae1eef71338097",
+            "recording_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/f1993c89-923f-4bab-a7e5-a45ce2b19846/recording.mp3?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T095558Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIGbf1B6JJsLU3%2Bm4nCWEDzj%2F5oxOUHLuUekyhgoCX9w%2FAiEAurtfvTXz9YI%2FkmxmEAmckUa%2Ftq0RKWMTD7Gr6Vq0THsqmQQIWhABGgw3MjcxNTM4NDEzMjkiDFMI8TTeFdN%2ByfTSeSr2A7bZOUVoL97%2BB2NSQ9fJBhzngjWCbBktV60%2FfZGOFa4KCNaKUAlTztCNpeDNDm3ju44JjjidMO3NqCVUs%2F8RA2rSXRz3rQ1QYtl%2BW4Li1hHjwkiXHxooiwKUam886lJYz8Pf8HesHLxw%2BS%2BaNApd36R81J0FtjCNyLFOdzY7Tf%2BiGdioh2YA43c2u3kac4CssZN%2B96ty8xD4eEc9SWDxmNULv3MrPW8hRxH8kfwVu%2ByJRPoreKH2SQf7TFCvEmZh66Y%2Bj431ercpXsMjh6gO8olxWtk%2ByNFV%2B6q28D1cUQUX4VnVRSArW268j1MucJIRuTRxkJCxADNsJS5n7yUCXTMt%2ByxFlehtLpIWaD1PLvymWLSexBZtTpSakdxiOFjAolls2Fcq5ZYLJu6AKLOltTehdlk0Vza1zD1fQLucEe82meIDO%2F3MYe97p9XbANal%2Frj3Jf9meC08FrcxsbOnanfTbJ%2F%2B0OvapknYGwbP3rsTDjuvSB402oQTjBCIGZ4Z7COP6F7dYN4zUTOOcO3TWMuha8Wrrt1TYFdVPp7hD14cd%2BMN%2F0%2BVp%2B3z4F%2FdZ0BCEjtmuNyswqMvuxoVglo20My1iuoKpUmHT5S08Rm%2BsOBIZCnb8Aa%2FgRtB5RP53qLUFhAYNOiM40oSh4Vwq5mIVoLSMHSRJUowzOGKwgY6pgGUFbxGIvXHegSOC%2BRQHVbbfip6yPZ%2Byy%2F08sAMX3X2IxLxUe068%2FgyeqMGrrgDUxSZBO4hS25dmXIuk2Z65E8FF6nTCK4LD1sRHpUPkLmlRQ6gLvDwUDcHeDAEoPo9ux6QvacvTTQt70CcnjpRFOy%2FMai%2F3MB0RkpYLtFVeCLdoPCXq3Qy9gMqt%2BuRZo%2B2LJ3rG5B%2F92RKeaLpVWSo67NlQIm1xgeG\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYZCYV2AO3%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=92b496d38527d5ea1a414c134d8f1d6ca5561b49a5d385671fe141065dcb2d31",
+            "transcript_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/f1993c89-923f-4bab-a7e5-a45ce2b19846/transcript.json?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T095558Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIGbf1B6JJsLU3%2Bm4nCWEDzj%2F5oxOUHLuUekyhgoCX9w%2FAiEAurtfvTXz9YI%2FkmxmEAmckUa%2Ftq0RKWMTD7Gr6Vq0THsqmQQIWhABGgw3MjcxNTM4NDEzMjkiDFMI8TTeFdN%2ByfTSeSr2A7bZOUVoL97%2BB2NSQ9fJBhzngjWCbBktV60%2FfZGOFa4KCNaKUAlTztCNpeDNDm3ju44JjjidMO3NqCVUs%2F8RA2rSXRz3rQ1QYtl%2BW4Li1hHjwkiXHxooiwKUam886lJYz8Pf8HesHLxw%2BS%2BaNApd36R81J0FtjCNyLFOdzY7Tf%2BiGdioh2YA43c2u3kac4CssZN%2B96ty8xD4eEc9SWDxmNULv3MrPW8hRxH8kfwVu%2ByJRPoreKH2SQf7TFCvEmZh66Y%2Bj431ercpXsMjh6gO8olxWtk%2ByNFV%2B6q28D1cUQUX4VnVRSArW268j1MucJIRuTRxkJCxADNsJS5n7yUCXTMt%2ByxFlehtLpIWaD1PLvymWLSexBZtTpSakdxiOFjAolls2Fcq5ZYLJu6AKLOltTehdlk0Vza1zD1fQLucEe82meIDO%2F3MYe97p9XbANal%2Frj3Jf9meC08FrcxsbOnanfTbJ%2F%2B0OvapknYGwbP3rsTDjuvSB402oQTjBCIGZ4Z7COP6F7dYN4zUTOOcO3TWMuha8Wrrt1TYFdVPp7hD14cd%2BMN%2F0%2BVp%2B3z4F%2FdZ0BCEjtmuNyswqMvuxoVglo20My1iuoKpUmHT5S08Rm%2BsOBIZCnb8Aa%2FgRtB5RP53qLUFhAYNOiM40oSh4Vwq5mIVoLSMHSRJUowzOGKwgY6pgGUFbxGIvXHegSOC%2BRQHVbbfip6yPZ%2Byy%2F08sAMX3X2IxLxUe068%2FgyeqMGrrgDUxSZBO4hS25dmXIuk2Z65E8FF6nTCK4LD1sRHpUPkLmlRQ6gLvDwUDcHeDAEoPo9ux6QvacvTTQt70CcnjpRFOy%2FMai%2F3MB0RkpYLtFVeCLdoPCXq3Qy9gMqt%2BuRZo%2B2LJ3rG5B%2F92RKeaLpVWSo67NlQIm1xgeG\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYZCYV2AO3%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=d1b4e894c43cc28b188c57b408e42a3d578750f9757156965c0384655d961301",
             "leexi_url": "https://app.leexi.ai/calls/f1993c89-923f-4bab-a7e5-a45ce2b19846",
             "video_archived_at": null,
             "audio_archived_at": null,
@@ -250,8 +632,8 @@
             "direction": "outbound",
             "is_video": false,
             "visible": true,
-            "recording_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/63c6fccc-aa76-4979-9c7d-03f257e8a122/recording.mp3?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T085333Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIFrkYVCKLzOGbmIjBKVEYzoIKSfSa%2Fw6a7EGGMw5n7k%2FAiEAxlfz9pBl8ViadgH6jLvy6QEuGle5zf%2FyFOokLZXQZqIqmQQIWhABGgw3MjcxNTM4NDEzMjkiDMEJY%2FN2bbdAKnfmXir2A4n67UUPx4CzZwYN%2FIkJdNFPYRdAT9QrEVkgtG4NzwOsxbPfEa2B%2BWg0KIzfLfHlNcvnmZ1ChAybzuZjZlY0E3qDnH4JbA0KravBljsTP32p%2BxrzyCDAd47OOkf4XPmO%2BNq6kMCx1sJAUEUR7s03g4fm4OxWAXaLT81liUIpP6%2FRSuEbmvqmMKQp92WkolRZlr%2B5ZZOBp7ayBULmGmgk7gNzqP96lPA2EfFssOQFw40xiuFehuj0v%2B08fI9rwVoJLqNliIZ9ed9nZwSrlQFO91DjZGbMzzmwjY4uwzP%2Bha3ekThL2WkYLHCEJOtVRJHtZlmVgWMZcB6WT7SB77dtu0QGck30ZACV7Msk%2ByBXmEXmrTqGLA2AltbU8OF8kVfspKK0LxKlHI7%2B9120g%2Bwmz7y5iALmFftC0QZ32lo211bqQTsAFnO2XIKtpEx5sO0WXzXtPAr6ryuQLbCku5lsUezkqZ2sBi8s2zxevKntcj8F4ePWKF3%2BC9oGv9%2FIG9rfT3MTY0IRkjM1I3pGKt6VJKT7UhpEdEZTkD1W7bXKwOtLmD%2F%2Fi5jASO9VStBjbZU0U4gk9P4AuYt%2BGcd5VXsQJ4U%2FU0zro76L%2BpVlVcpJSji9Oc5tqCi7l8JveC4qbzJUAE7NjDFp1broxTmHE5MFvz%2FYBuI8hKkwt8%2BKwgY6pgFhvcVmuY3eNaC%2FJeyUkYGMt1GphAHO1RqfOxy0g25pke262cXX9QSLh6BU2lEQIFw9iLKOuUYQEU3c4vXHejwmjmptXfGGjRY2%2B8uy0GV9Xg8d8vwcZ2zeiQcaCALoa8KRS4F2HP%2BEIczDuprNxE7YQScDk%2FiNuqsjHWqPyA4dNWPq66EObrE7aHmH6UBS5lSC%2B8emZfZHhf2K3QVaIlVITom6RmA9\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYXJSL7NLM%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=45d0f2273311378ec8cc025ff10d99237aaf2350507ed17482bc646a3affc1db",
-            "transcript_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/63c6fccc-aa76-4979-9c7d-03f257e8a122/transcript.json?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T085333Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIFrkYVCKLzOGbmIjBKVEYzoIKSfSa%2Fw6a7EGGMw5n7k%2FAiEAxlfz9pBl8ViadgH6jLvy6QEuGle5zf%2FyFOokLZXQZqIqmQQIWhABGgw3MjcxNTM4NDEzMjkiDMEJY%2FN2bbdAKnfmXir2A4n67UUPx4CzZwYN%2FIkJdNFPYRdAT9QrEVkgtG4NzwOsxbPfEa2B%2BWg0KIzfLfHlNcvnmZ1ChAybzuZjZlY0E3qDnH4JbA0KravBljsTP32p%2BxrzyCDAd47OOkf4XPmO%2BNq6kMCx1sJAUEUR7s03g4fm4OxWAXaLT81liUIpP6%2FRSuEbmvqmMKQp92WkolRZlr%2B5ZZOBp7ayBULmGmgk7gNzqP96lPA2EfFssOQFw40xiuFehuj0v%2B08fI9rwVoJLqNliIZ9ed9nZwSrlQFO91DjZGbMzzmwjY4uwzP%2Bha3ekThL2WkYLHCEJOtVRJHtZlmVgWMZcB6WT7SB77dtu0QGck30ZACV7Msk%2ByBXmEXmrTqGLA2AltbU8OF8kVfspKK0LxKlHI7%2B9120g%2Bwmz7y5iALmFftC0QZ32lo211bqQTsAFnO2XIKtpEx5sO0WXzXtPAr6ryuQLbCku5lsUezkqZ2sBi8s2zxevKntcj8F4ePWKF3%2BC9oGv9%2FIG9rfT3MTY0IRkjM1I3pGKt6VJKT7UhpEdEZTkD1W7bXKwOtLmD%2F%2Fi5jASO9VStBjbZU0U4gk9P4AuYt%2BGcd5VXsQJ4U%2FU0zro76L%2BpVlVcpJSji9Oc5tqCi7l8JveC4qbzJUAE7NjDFp1broxTmHE5MFvz%2FYBuI8hKkwt8%2BKwgY6pgFhvcVmuY3eNaC%2FJeyUkYGMt1GphAHO1RqfOxy0g25pke262cXX9QSLh6BU2lEQIFw9iLKOuUYQEU3c4vXHejwmjmptXfGGjRY2%2B8uy0GV9Xg8d8vwcZ2zeiQcaCALoa8KRS4F2HP%2BEIczDuprNxE7YQScDk%2FiNuqsjHWqPyA4dNWPq66EObrE7aHmH6UBS5lSC%2B8emZfZHhf2K3QVaIlVITom6RmA9\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYXJSL7NLM%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=1833cadb6c77de03f3633e21a7d77fd6edf0795e7e9b0b8e793effe218de1f59",
+            "recording_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/63c6fccc-aa76-4979-9c7d-03f257e8a122/recording.mp3?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T095558Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIGbf1B6JJsLU3%2Bm4nCWEDzj%2F5oxOUHLuUekyhgoCX9w%2FAiEAurtfvTXz9YI%2FkmxmEAmckUa%2Ftq0RKWMTD7Gr6Vq0THsqmQQIWhABGgw3MjcxNTM4NDEzMjkiDFMI8TTeFdN%2ByfTSeSr2A7bZOUVoL97%2BB2NSQ9fJBhzngjWCbBktV60%2FfZGOFa4KCNaKUAlTztCNpeDNDm3ju44JjjidMO3NqCVUs%2F8RA2rSXRz3rQ1QYtl%2BW4Li1hHjwkiXHxooiwKUam886lJYz8Pf8HesHLxw%2BS%2BaNApd36R81J0FtjCNyLFOdzY7Tf%2BiGdioh2YA43c2u3kac4CssZN%2B96ty8xD4eEc9SWDxmNULv3MrPW8hRxH8kfwVu%2ByJRPoreKH2SQf7TFCvEmZh66Y%2Bj431ercpXsMjh6gO8olxWtk%2ByNFV%2B6q28D1cUQUX4VnVRSArW268j1MucJIRuTRxkJCxADNsJS5n7yUCXTMt%2ByxFlehtLpIWaD1PLvymWLSexBZtTpSakdxiOFjAolls2Fcq5ZYLJu6AKLOltTehdlk0Vza1zD1fQLucEe82meIDO%2F3MYe97p9XbANal%2Frj3Jf9meC08FrcxsbOnanfTbJ%2F%2B0OvapknYGwbP3rsTDjuvSB402oQTjBCIGZ4Z7COP6F7dYN4zUTOOcO3TWMuha8Wrrt1TYFdVPp7hD14cd%2BMN%2F0%2BVp%2B3z4F%2FdZ0BCEjtmuNyswqMvuxoVglo20My1iuoKpUmHT5S08Rm%2BsOBIZCnb8Aa%2FgRtB5RP53qLUFhAYNOiM40oSh4Vwq5mIVoLSMHSRJUowzOGKwgY6pgGUFbxGIvXHegSOC%2BRQHVbbfip6yPZ%2Byy%2F08sAMX3X2IxLxUe068%2FgyeqMGrrgDUxSZBO4hS25dmXIuk2Z65E8FF6nTCK4LD1sRHpUPkLmlRQ6gLvDwUDcHeDAEoPo9ux6QvacvTTQt70CcnjpRFOy%2FMai%2F3MB0RkpYLtFVeCLdoPCXq3Qy9gMqt%2BuRZo%2B2LJ3rG5B%2F92RKeaLpVWSo67NlQIm1xgeG\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYZCYV2AO3%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=7b6788a3605d65a1b23a61193698518f247711254978cf0125821ed13804cf54",
+            "transcript_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/63c6fccc-aa76-4979-9c7d-03f257e8a122/transcript.json?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T095558Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIGbf1B6JJsLU3%2Bm4nCWEDzj%2F5oxOUHLuUekyhgoCX9w%2FAiEAurtfvTXz9YI%2FkmxmEAmckUa%2Ftq0RKWMTD7Gr6Vq0THsqmQQIWhABGgw3MjcxNTM4NDEzMjkiDFMI8TTeFdN%2ByfTSeSr2A7bZOUVoL97%2BB2NSQ9fJBhzngjWCbBktV60%2FfZGOFa4KCNaKUAlTztCNpeDNDm3ju44JjjidMO3NqCVUs%2F8RA2rSXRz3rQ1QYtl%2BW4Li1hHjwkiXHxooiwKUam886lJYz8Pf8HesHLxw%2BS%2BaNApd36R81J0FtjCNyLFOdzY7Tf%2BiGdioh2YA43c2u3kac4CssZN%2B96ty8xD4eEc9SWDxmNULv3MrPW8hRxH8kfwVu%2ByJRPoreKH2SQf7TFCvEmZh66Y%2Bj431ercpXsMjh6gO8olxWtk%2ByNFV%2B6q28D1cUQUX4VnVRSArW268j1MucJIRuTRxkJCxADNsJS5n7yUCXTMt%2ByxFlehtLpIWaD1PLvymWLSexBZtTpSakdxiOFjAolls2Fcq5ZYLJu6AKLOltTehdlk0Vza1zD1fQLucEe82meIDO%2F3MYe97p9XbANal%2Frj3Jf9meC08FrcxsbOnanfTbJ%2F%2B0OvapknYGwbP3rsTDjuvSB402oQTjBCIGZ4Z7COP6F7dYN4zUTOOcO3TWMuha8Wrrt1TYFdVPp7hD14cd%2BMN%2F0%2BVp%2B3z4F%2FdZ0BCEjtmuNyswqMvuxoVglo20My1iuoKpUmHT5S08Rm%2BsOBIZCnb8Aa%2FgRtB5RP53qLUFhAYNOiM40oSh4Vwq5mIVoLSMHSRJUowzOGKwgY6pgGUFbxGIvXHegSOC%2BRQHVbbfip6yPZ%2Byy%2F08sAMX3X2IxLxUe068%2FgyeqMGrrgDUxSZBO4hS25dmXIuk2Z65E8FF6nTCK4LD1sRHpUPkLmlRQ6gLvDwUDcHeDAEoPo9ux6QvacvTTQt70CcnjpRFOy%2FMai%2F3MB0RkpYLtFVeCLdoPCXq3Qy9gMqt%2BuRZo%2B2LJ3rG5B%2F92RKeaLpVWSo67NlQIm1xgeG\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYZCYV2AO3%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=71d73a6179b47f39737fb1081764142e48768a81546aaef758f52f93ac065569",
             "leexi_url": "https://app.leexi.ai/calls/63c6fccc-aa76-4979-9c7d-03f257e8a122",
             "video_archived_at": null,
             "audio_archived_at": null,
@@ -371,8 +753,8 @@
             "direction": "outbound",
             "is_video": false,
             "visible": true,
-            "recording_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/569dc843-a898-4d5e-86e5-484d5139befc/recording.mp3?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T085333Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIFrkYVCKLzOGbmIjBKVEYzoIKSfSa%2Fw6a7EGGMw5n7k%2FAiEAxlfz9pBl8ViadgH6jLvy6QEuGle5zf%2FyFOokLZXQZqIqmQQIWhABGgw3MjcxNTM4NDEzMjkiDMEJY%2FN2bbdAKnfmXir2A4n67UUPx4CzZwYN%2FIkJdNFPYRdAT9QrEVkgtG4NzwOsxbPfEa2B%2BWg0KIzfLfHlNcvnmZ1ChAybzuZjZlY0E3qDnH4JbA0KravBljsTP32p%2BxrzyCDAd47OOkf4XPmO%2BNq6kMCx1sJAUEUR7s03g4fm4OxWAXaLT81liUIpP6%2FRSuEbmvqmMKQp92WkolRZlr%2B5ZZOBp7ayBULmGmgk7gNzqP96lPA2EfFssOQFw40xiuFehuj0v%2B08fI9rwVoJLqNliIZ9ed9nZwSrlQFO91DjZGbMzzmwjY4uwzP%2Bha3ekThL2WkYLHCEJOtVRJHtZlmVgWMZcB6WT7SB77dtu0QGck30ZACV7Msk%2ByBXmEXmrTqGLA2AltbU8OF8kVfspKK0LxKlHI7%2B9120g%2Bwmz7y5iALmFftC0QZ32lo211bqQTsAFnO2XIKtpEx5sO0WXzXtPAr6ryuQLbCku5lsUezkqZ2sBi8s2zxevKntcj8F4ePWKF3%2BC9oGv9%2FIG9rfT3MTY0IRkjM1I3pGKt6VJKT7UhpEdEZTkD1W7bXKwOtLmD%2F%2Fi5jASO9VStBjbZU0U4gk9P4AuYt%2BGcd5VXsQJ4U%2FU0zro76L%2BpVlVcpJSji9Oc5tqCi7l8JveC4qbzJUAE7NjDFp1broxTmHE5MFvz%2FYBuI8hKkwt8%2BKwgY6pgFhvcVmuY3eNaC%2FJeyUkYGMt1GphAHO1RqfOxy0g25pke262cXX9QSLh6BU2lEQIFw9iLKOuUYQEU3c4vXHejwmjmptXfGGjRY2%2B8uy0GV9Xg8d8vwcZ2zeiQcaCALoa8KRS4F2HP%2BEIczDuprNxE7YQScDk%2FiNuqsjHWqPyA4dNWPq66EObrE7aHmH6UBS5lSC%2B8emZfZHhf2K3QVaIlVITom6RmA9\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYXJSL7NLM%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=0e770e38700623fc1c8399c3879aa9b8e7d700c07fb63172d21abebfb0db684c",
-            "transcript_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/569dc843-a898-4d5e-86e5-484d5139befc/transcript.json?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T085333Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIFrkYVCKLzOGbmIjBKVEYzoIKSfSa%2Fw6a7EGGMw5n7k%2FAiEAxlfz9pBl8ViadgH6jLvy6QEuGle5zf%2FyFOokLZXQZqIqmQQIWhABGgw3MjcxNTM4NDEzMjkiDMEJY%2FN2bbdAKnfmXir2A4n67UUPx4CzZwYN%2FIkJdNFPYRdAT9QrEVkgtG4NzwOsxbPfEa2B%2BWg0KIzfLfHlNcvnmZ1ChAybzuZjZlY0E3qDnH4JbA0KravBljsTP32p%2BxrzyCDAd47OOkf4XPmO%2BNq6kMCx1sJAUEUR7s03g4fm4OxWAXaLT81liUIpP6%2FRSuEbmvqmMKQp92WkolRZlr%2B5ZZOBp7ayBULmGmgk7gNzqP96lPA2EfFssOQFw40xiuFehuj0v%2B08fI9rwVoJLqNliIZ9ed9nZwSrlQFO91DjZGbMzzmwjY4uwzP%2Bha3ekThL2WkYLHCEJOtVRJHtZlmVgWMZcB6WT7SB77dtu0QGck30ZACV7Msk%2ByBXmEXmrTqGLA2AltbU8OF8kVfspKK0LxKlHI7%2B9120g%2Bwmz7y5iALmFftC0QZ32lo211bqQTsAFnO2XIKtpEx5sO0WXzXtPAr6ryuQLbCku5lsUezkqZ2sBi8s2zxevKntcj8F4ePWKF3%2BC9oGv9%2FIG9rfT3MTY0IRkjM1I3pGKt6VJKT7UhpEdEZTkD1W7bXKwOtLmD%2F%2Fi5jASO9VStBjbZU0U4gk9P4AuYt%2BGcd5VXsQJ4U%2FU0zro76L%2BpVlVcpJSji9Oc5tqCi7l8JveC4qbzJUAE7NjDFp1broxTmHE5MFvz%2FYBuI8hKkwt8%2BKwgY6pgFhvcVmuY3eNaC%2FJeyUkYGMt1GphAHO1RqfOxy0g25pke262cXX9QSLh6BU2lEQIFw9iLKOuUYQEU3c4vXHejwmjmptXfGGjRY2%2B8uy0GV9Xg8d8vwcZ2zeiQcaCALoa8KRS4F2HP%2BEIczDuprNxE7YQScDk%2FiNuqsjHWqPyA4dNWPq66EObrE7aHmH6UBS5lSC%2B8emZfZHhf2K3QVaIlVITom6RmA9\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYXJSL7NLM%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=acc541fb61e926679384ffcf55b0f2addb008e87b6f792be04cd0a3c7362f221",
+            "recording_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/569dc843-a898-4d5e-86e5-484d5139befc/recording.mp3?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T095558Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIGbf1B6JJsLU3%2Bm4nCWEDzj%2F5oxOUHLuUekyhgoCX9w%2FAiEAurtfvTXz9YI%2FkmxmEAmckUa%2Ftq0RKWMTD7Gr6Vq0THsqmQQIWhABGgw3MjcxNTM4NDEzMjkiDFMI8TTeFdN%2ByfTSeSr2A7bZOUVoL97%2BB2NSQ9fJBhzngjWCbBktV60%2FfZGOFa4KCNaKUAlTztCNpeDNDm3ju44JjjidMO3NqCVUs%2F8RA2rSXRz3rQ1QYtl%2BW4Li1hHjwkiXHxooiwKUam886lJYz8Pf8HesHLxw%2BS%2BaNApd36R81J0FtjCNyLFOdzY7Tf%2BiGdioh2YA43c2u3kac4CssZN%2B96ty8xD4eEc9SWDxmNULv3MrPW8hRxH8kfwVu%2ByJRPoreKH2SQf7TFCvEmZh66Y%2Bj431ercpXsMjh6gO8olxWtk%2ByNFV%2B6q28D1cUQUX4VnVRSArW268j1MucJIRuTRxkJCxADNsJS5n7yUCXTMt%2ByxFlehtLpIWaD1PLvymWLSexBZtTpSakdxiOFjAolls2Fcq5ZYLJu6AKLOltTehdlk0Vza1zD1fQLucEe82meIDO%2F3MYe97p9XbANal%2Frj3Jf9meC08FrcxsbOnanfTbJ%2F%2B0OvapknYGwbP3rsTDjuvSB402oQTjBCIGZ4Z7COP6F7dYN4zUTOOcO3TWMuha8Wrrt1TYFdVPp7hD14cd%2BMN%2F0%2BVp%2B3z4F%2FdZ0BCEjtmuNyswqMvuxoVglo20My1iuoKpUmHT5S08Rm%2BsOBIZCnb8Aa%2FgRtB5RP53qLUFhAYNOiM40oSh4Vwq5mIVoLSMHSRJUowzOGKwgY6pgGUFbxGIvXHegSOC%2BRQHVbbfip6yPZ%2Byy%2F08sAMX3X2IxLxUe068%2FgyeqMGrrgDUxSZBO4hS25dmXIuk2Z65E8FF6nTCK4LD1sRHpUPkLmlRQ6gLvDwUDcHeDAEoPo9ux6QvacvTTQt70CcnjpRFOy%2FMai%2F3MB0RkpYLtFVeCLdoPCXq3Qy9gMqt%2BuRZo%2B2LJ3rG5B%2F92RKeaLpVWSo67NlQIm1xgeG\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYZCYV2AO3%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=6c595474926a9b60253836a8a63d90e64b79dbcb2261cdb62e79d6ba5b21604a",
+            "transcript_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/569dc843-a898-4d5e-86e5-484d5139befc/transcript.json?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T095558Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIGbf1B6JJsLU3%2Bm4nCWEDzj%2F5oxOUHLuUekyhgoCX9w%2FAiEAurtfvTXz9YI%2FkmxmEAmckUa%2Ftq0RKWMTD7Gr6Vq0THsqmQQIWhABGgw3MjcxNTM4NDEzMjkiDFMI8TTeFdN%2ByfTSeSr2A7bZOUVoL97%2BB2NSQ9fJBhzngjWCbBktV60%2FfZGOFa4KCNaKUAlTztCNpeDNDm3ju44JjjidMO3NqCVUs%2F8RA2rSXRz3rQ1QYtl%2BW4Li1hHjwkiXHxooiwKUam886lJYz8Pf8HesHLxw%2BS%2BaNApd36R81J0FtjCNyLFOdzY7Tf%2BiGdioh2YA43c2u3kac4CssZN%2B96ty8xD4eEc9SWDxmNULv3MrPW8hRxH8kfwVu%2ByJRPoreKH2SQf7TFCvEmZh66Y%2Bj431ercpXsMjh6gO8olxWtk%2ByNFV%2B6q28D1cUQUX4VnVRSArW268j1MucJIRuTRxkJCxADNsJS5n7yUCXTMt%2ByxFlehtLpIWaD1PLvymWLSexBZtTpSakdxiOFjAolls2Fcq5ZYLJu6AKLOltTehdlk0Vza1zD1fQLucEe82meIDO%2F3MYe97p9XbANal%2Frj3Jf9meC08FrcxsbOnanfTbJ%2F%2B0OvapknYGwbP3rsTDjuvSB402oQTjBCIGZ4Z7COP6F7dYN4zUTOOcO3TWMuha8Wrrt1TYFdVPp7hD14cd%2BMN%2F0%2BVp%2B3z4F%2FdZ0BCEjtmuNyswqMvuxoVglo20My1iuoKpUmHT5S08Rm%2BsOBIZCnb8Aa%2FgRtB5RP53qLUFhAYNOiM40oSh4Vwq5mIVoLSMHSRJUowzOGKwgY6pgGUFbxGIvXHegSOC%2BRQHVbbfip6yPZ%2Byy%2F08sAMX3X2IxLxUe068%2FgyeqMGrrgDUxSZBO4hS25dmXIuk2Z65E8FF6nTCK4LD1sRHpUPkLmlRQ6gLvDwUDcHeDAEoPo9ux6QvacvTTQt70CcnjpRFOy%2FMai%2F3MB0RkpYLtFVeCLdoPCXq3Qy9gMqt%2BuRZo%2B2LJ3rG5B%2F92RKeaLpVWSo67NlQIm1xgeG\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYZCYV2AO3%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=66a2e274ad2ff435c5b51882417e161dfe62d10bf668f9338dd88ff04f1ac1e6",
             "leexi_url": "https://app.leexi.ai/calls/569dc843-a898-4d5e-86e5-484d5139befc",
             "video_archived_at": null,
             "audio_archived_at": null,
@@ -481,8 +863,8 @@
             "direction": "outbound",
             "is_video": false,
             "visible": true,
-            "recording_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/0eba087b-86ee-495d-83f6-b522691f960f/recording.mp3?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T085333Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIFrkYVCKLzOGbmIjBKVEYzoIKSfSa%2Fw6a7EGGMw5n7k%2FAiEAxlfz9pBl8ViadgH6jLvy6QEuGle5zf%2FyFOokLZXQZqIqmQQIWhABGgw3MjcxNTM4NDEzMjkiDMEJY%2FN2bbdAKnfmXir2A4n67UUPx4CzZwYN%2FIkJdNFPYRdAT9QrEVkgtG4NzwOsxbPfEa2B%2BWg0KIzfLfHlNcvnmZ1ChAybzuZjZlY0E3qDnH4JbA0KravBljsTP32p%2BxrzyCDAd47OOkf4XPmO%2BNq6kMCx1sJAUEUR7s03g4fm4OxWAXaLT81liUIpP6%2FRSuEbmvqmMKQp92WkolRZlr%2B5ZZOBp7ayBULmGmgk7gNzqP96lPA2EfFssOQFw40xiuFehuj0v%2B08fI9rwVoJLqNliIZ9ed9nZwSrlQFO91DjZGbMzzmwjY4uwzP%2Bha3ekThL2WkYLHCEJOtVRJHtZlmVgWMZcB6WT7SB77dtu0QGck30ZACV7Msk%2ByBXmEXmrTqGLA2AltbU8OF8kVfspKK0LxKlHI7%2B9120g%2Bwmz7y5iALmFftC0QZ32lo211bqQTsAFnO2XIKtpEx5sO0WXzXtPAr6ryuQLbCku5lsUezkqZ2sBi8s2zxevKntcj8F4ePWKF3%2BC9oGv9%2FIG9rfT3MTY0IRkjM1I3pGKt6VJKT7UhpEdEZTkD1W7bXKwOtLmD%2F%2Fi5jASO9VStBjbZU0U4gk9P4AuYt%2BGcd5VXsQJ4U%2FU0zro76L%2BpVlVcpJSji9Oc5tqCi7l8JveC4qbzJUAE7NjDFp1broxTmHE5MFvz%2FYBuI8hKkwt8%2BKwgY6pgFhvcVmuY3eNaC%2FJeyUkYGMt1GphAHO1RqfOxy0g25pke262cXX9QSLh6BU2lEQIFw9iLKOuUYQEU3c4vXHejwmjmptXfGGjRY2%2B8uy0GV9Xg8d8vwcZ2zeiQcaCALoa8KRS4F2HP%2BEIczDuprNxE7YQScDk%2FiNuqsjHWqPyA4dNWPq66EObrE7aHmH6UBS5lSC%2B8emZfZHhf2K3QVaIlVITom6RmA9\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYXJSL7NLM%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=47af44d79a125201ea8880a5ee129dfd3f16435f2c612b29514818050dfc8052",
-            "transcript_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/0eba087b-86ee-495d-83f6-b522691f960f/transcript.json?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T085333Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIFrkYVCKLzOGbmIjBKVEYzoIKSfSa%2Fw6a7EGGMw5n7k%2FAiEAxlfz9pBl8ViadgH6jLvy6QEuGle5zf%2FyFOokLZXQZqIqmQQIWhABGgw3MjcxNTM4NDEzMjkiDMEJY%2FN2bbdAKnfmXir2A4n67UUPx4CzZwYN%2FIkJdNFPYRdAT9QrEVkgtG4NzwOsxbPfEa2B%2BWg0KIzfLfHlNcvnmZ1ChAybzuZjZlY0E3qDnH4JbA0KravBljsTP32p%2BxrzyCDAd47OOkf4XPmO%2BNq6kMCx1sJAUEUR7s03g4fm4OxWAXaLT81liUIpP6%2FRSuEbmvqmMKQp92WkolRZlr%2B5ZZOBp7ayBULmGmgk7gNzqP96lPA2EfFssOQFw40xiuFehuj0v%2B08fI9rwVoJLqNliIZ9ed9nZwSrlQFO91DjZGbMzzmwjY4uwzP%2Bha3ekThL2WkYLHCEJOtVRJHtZlmVgWMZcB6WT7SB77dtu0QGck30ZACV7Msk%2ByBXmEXmrTqGLA2AltbU8OF8kVfspKK0LxKlHI7%2B9120g%2Bwmz7y5iALmFftC0QZ32lo211bqQTsAFnO2XIKtpEx5sO0WXzXtPAr6ryuQLbCku5lsUezkqZ2sBi8s2zxevKntcj8F4ePWKF3%2BC9oGv9%2FIG9rfT3MTY0IRkjM1I3pGKt6VJKT7UhpEdEZTkD1W7bXKwOtLmD%2F%2Fi5jASO9VStBjbZU0U4gk9P4AuYt%2BGcd5VXsQJ4U%2FU0zro76L%2BpVlVcpJSji9Oc5tqCi7l8JveC4qbzJUAE7NjDFp1broxTmHE5MFvz%2FYBuI8hKkwt8%2BKwgY6pgFhvcVmuY3eNaC%2FJeyUkYGMt1GphAHO1RqfOxy0g25pke262cXX9QSLh6BU2lEQIFw9iLKOuUYQEU3c4vXHejwmjmptXfGGjRY2%2B8uy0GV9Xg8d8vwcZ2zeiQcaCALoa8KRS4F2HP%2BEIczDuprNxE7YQScDk%2FiNuqsjHWqPyA4dNWPq66EObrE7aHmH6UBS5lSC%2B8emZfZHhf2K3QVaIlVITom6RmA9\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYXJSL7NLM%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=680f6995fd990756fe0aa109ed7a71fb723acb2c496402e45b0688190a5241dd",
+            "recording_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/0eba087b-86ee-495d-83f6-b522691f960f/recording.mp3?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T095558Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIGbf1B6JJsLU3%2Bm4nCWEDzj%2F5oxOUHLuUekyhgoCX9w%2FAiEAurtfvTXz9YI%2FkmxmEAmckUa%2Ftq0RKWMTD7Gr6Vq0THsqmQQIWhABGgw3MjcxNTM4NDEzMjkiDFMI8TTeFdN%2ByfTSeSr2A7bZOUVoL97%2BB2NSQ9fJBhzngjWCbBktV60%2FfZGOFa4KCNaKUAlTztCNpeDNDm3ju44JjjidMO3NqCVUs%2F8RA2rSXRz3rQ1QYtl%2BW4Li1hHjwkiXHxooiwKUam886lJYz8Pf8HesHLxw%2BS%2BaNApd36R81J0FtjCNyLFOdzY7Tf%2BiGdioh2YA43c2u3kac4CssZN%2B96ty8xD4eEc9SWDxmNULv3MrPW8hRxH8kfwVu%2ByJRPoreKH2SQf7TFCvEmZh66Y%2Bj431ercpXsMjh6gO8olxWtk%2ByNFV%2B6q28D1cUQUX4VnVRSArW268j1MucJIRuTRxkJCxADNsJS5n7yUCXTMt%2ByxFlehtLpIWaD1PLvymWLSexBZtTpSakdxiOFjAolls2Fcq5ZYLJu6AKLOltTehdlk0Vza1zD1fQLucEe82meIDO%2F3MYe97p9XbANal%2Frj3Jf9meC08FrcxsbOnanfTbJ%2F%2B0OvapknYGwbP3rsTDjuvSB402oQTjBCIGZ4Z7COP6F7dYN4zUTOOcO3TWMuha8Wrrt1TYFdVPp7hD14cd%2BMN%2F0%2BVp%2B3z4F%2FdZ0BCEjtmuNyswqMvuxoVglo20My1iuoKpUmHT5S08Rm%2BsOBIZCnb8Aa%2FgRtB5RP53qLUFhAYNOiM40oSh4Vwq5mIVoLSMHSRJUowzOGKwgY6pgGUFbxGIvXHegSOC%2BRQHVbbfip6yPZ%2Byy%2F08sAMX3X2IxLxUe068%2FgyeqMGrrgDUxSZBO4hS25dmXIuk2Z65E8FF6nTCK4LD1sRHpUPkLmlRQ6gLvDwUDcHeDAEoPo9ux6QvacvTTQt70CcnjpRFOy%2FMai%2F3MB0RkpYLtFVeCLdoPCXq3Qy9gMqt%2BuRZo%2B2LJ3rG5B%2F92RKeaLpVWSo67NlQIm1xgeG\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYZCYV2AO3%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=07c1bb86c8f0e7f7ec134aee6ab80632cbace5532cf04cc78d6394f9c81f7839",
+            "transcript_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/0eba087b-86ee-495d-83f6-b522691f960f/transcript.json?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T095558Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIGbf1B6JJsLU3%2Bm4nCWEDzj%2F5oxOUHLuUekyhgoCX9w%2FAiEAurtfvTXz9YI%2FkmxmEAmckUa%2Ftq0RKWMTD7Gr6Vq0THsqmQQIWhABGgw3MjcxNTM4NDEzMjkiDFMI8TTeFdN%2ByfTSeSr2A7bZOUVoL97%2BB2NSQ9fJBhzngjWCbBktV60%2FfZGOFa4KCNaKUAlTztCNpeDNDm3ju44JjjidMO3NqCVUs%2F8RA2rSXRz3rQ1QYtl%2BW4Li1hHjwkiXHxooiwKUam886lJYz8Pf8HesHLxw%2BS%2BaNApd36R81J0FtjCNyLFOdzY7Tf%2BiGdioh2YA43c2u3kac4CssZN%2B96ty8xD4eEc9SWDxmNULv3MrPW8hRxH8kfwVu%2ByJRPoreKH2SQf7TFCvEmZh66Y%2Bj431ercpXsMjh6gO8olxWtk%2ByNFV%2B6q28D1cUQUX4VnVRSArW268j1MucJIRuTRxkJCxADNsJS5n7yUCXTMt%2ByxFlehtLpIWaD1PLvymWLSexBZtTpSakdxiOFjAolls2Fcq5ZYLJu6AKLOltTehdlk0Vza1zD1fQLucEe82meIDO%2F3MYe97p9XbANal%2Frj3Jf9meC08FrcxsbOnanfTbJ%2F%2B0OvapknYGwbP3rsTDjuvSB402oQTjBCIGZ4Z7COP6F7dYN4zUTOOcO3TWMuha8Wrrt1TYFdVPp7hD14cd%2BMN%2F0%2BVp%2B3z4F%2FdZ0BCEjtmuNyswqMvuxoVglo20My1iuoKpUmHT5S08Rm%2BsOBIZCnb8Aa%2FgRtB5RP53qLUFhAYNOiM40oSh4Vwq5mIVoLSMHSRJUowzOGKwgY6pgGUFbxGIvXHegSOC%2BRQHVbbfip6yPZ%2Byy%2F08sAMX3X2IxLxUe068%2FgyeqMGrrgDUxSZBO4hS25dmXIuk2Z65E8FF6nTCK4LD1sRHpUPkLmlRQ6gLvDwUDcHeDAEoPo9ux6QvacvTTQt70CcnjpRFOy%2FMai%2F3MB0RkpYLtFVeCLdoPCXq3Qy9gMqt%2BuRZo%2B2LJ3rG5B%2F92RKeaLpVWSo67NlQIm1xgeG\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYZCYV2AO3%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=83dbbdd2fba69ff1e886067d6a0c5719a190ee9f813324e7dfe8a3c0d032179c",
             "leexi_url": "https://app.leexi.ai/calls/0eba087b-86ee-495d-83f6-b522691f960f",
             "video_archived_at": null,
             "audio_archived_at": null,
@@ -715,8 +1097,8 @@
             "direction": "outbound",
             "is_video": false,
             "visible": true,
-            "recording_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/356d8967-9a87-4969-aaae-c0d3c21e0307/recording.mp3?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T085333Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIFrkYVCKLzOGbmIjBKVEYzoIKSfSa%2Fw6a7EGGMw5n7k%2FAiEAxlfz9pBl8ViadgH6jLvy6QEuGle5zf%2FyFOokLZXQZqIqmQQIWhABGgw3MjcxNTM4NDEzMjkiDMEJY%2FN2bbdAKnfmXir2A4n67UUPx4CzZwYN%2FIkJdNFPYRdAT9QrEVkgtG4NzwOsxbPfEa2B%2BWg0KIzfLfHlNcvnmZ1ChAybzuZjZlY0E3qDnH4JbA0KravBljsTP32p%2BxrzyCDAd47OOkf4XPmO%2BNq6kMCx1sJAUEUR7s03g4fm4OxWAXaLT81liUIpP6%2FRSuEbmvqmMKQp92WkolRZlr%2B5ZZOBp7ayBULmGmgk7gNzqP96lPA2EfFssOQFw40xiuFehuj0v%2B08fI9rwVoJLqNliIZ9ed9nZwSrlQFO91DjZGbMzzmwjY4uwzP%2Bha3ekThL2WkYLHCEJOtVRJHtZlmVgWMZcB6WT7SB77dtu0QGck30ZACV7Msk%2ByBXmEXmrTqGLA2AltbU8OF8kVfspKK0LxKlHI7%2B9120g%2Bwmz7y5iALmFftC0QZ32lo211bqQTsAFnO2XIKtpEx5sO0WXzXtPAr6ryuQLbCku5lsUezkqZ2sBi8s2zxevKntcj8F4ePWKF3%2BC9oGv9%2FIG9rfT3MTY0IRkjM1I3pGKt6VJKT7UhpEdEZTkD1W7bXKwOtLmD%2F%2Fi5jASO9VStBjbZU0U4gk9P4AuYt%2BGcd5VXsQJ4U%2FU0zro76L%2BpVlVcpJSji9Oc5tqCi7l8JveC4qbzJUAE7NjDFp1broxTmHE5MFvz%2FYBuI8hKkwt8%2BKwgY6pgFhvcVmuY3eNaC%2FJeyUkYGMt1GphAHO1RqfOxy0g25pke262cXX9QSLh6BU2lEQIFw9iLKOuUYQEU3c4vXHejwmjmptXfGGjRY2%2B8uy0GV9Xg8d8vwcZ2zeiQcaCALoa8KRS4F2HP%2BEIczDuprNxE7YQScDk%2FiNuqsjHWqPyA4dNWPq66EObrE7aHmH6UBS5lSC%2B8emZfZHhf2K3QVaIlVITom6RmA9\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYXJSL7NLM%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=67a787cafeded95b0dd2846fbd8d80e975029f009c9b6c0fdd1aaab2d98c221e",
-            "transcript_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/356d8967-9a87-4969-aaae-c0d3c21e0307/transcript.json?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T085333Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIFrkYVCKLzOGbmIjBKVEYzoIKSfSa%2Fw6a7EGGMw5n7k%2FAiEAxlfz9pBl8ViadgH6jLvy6QEuGle5zf%2FyFOokLZXQZqIqmQQIWhABGgw3MjcxNTM4NDEzMjkiDMEJY%2FN2bbdAKnfmXir2A4n67UUPx4CzZwYN%2FIkJdNFPYRdAT9QrEVkgtG4NzwOsxbPfEa2B%2BWg0KIzfLfHlNcvnmZ1ChAybzuZjZlY0E3qDnH4JbA0KravBljsTP32p%2BxrzyCDAd47OOkf4XPmO%2BNq6kMCx1sJAUEUR7s03g4fm4OxWAXaLT81liUIpP6%2FRSuEbmvqmMKQp92WkolRZlr%2B5ZZOBp7ayBULmGmgk7gNzqP96lPA2EfFssOQFw40xiuFehuj0v%2B08fI9rwVoJLqNliIZ9ed9nZwSrlQFO91DjZGbMzzmwjY4uwzP%2Bha3ekThL2WkYLHCEJOtVRJHtZlmVgWMZcB6WT7SB77dtu0QGck30ZACV7Msk%2ByBXmEXmrTqGLA2AltbU8OF8kVfspKK0LxKlHI7%2B9120g%2Bwmz7y5iALmFftC0QZ32lo211bqQTsAFnO2XIKtpEx5sO0WXzXtPAr6ryuQLbCku5lsUezkqZ2sBi8s2zxevKntcj8F4ePWKF3%2BC9oGv9%2FIG9rfT3MTY0IRkjM1I3pGKt6VJKT7UhpEdEZTkD1W7bXKwOtLmD%2F%2Fi5jASO9VStBjbZU0U4gk9P4AuYt%2BGcd5VXsQJ4U%2FU0zro76L%2BpVlVcpJSji9Oc5tqCi7l8JveC4qbzJUAE7NjDFp1broxTmHE5MFvz%2FYBuI8hKkwt8%2BKwgY6pgFhvcVmuY3eNaC%2FJeyUkYGMt1GphAHO1RqfOxy0g25pke262cXX9QSLh6BU2lEQIFw9iLKOuUYQEU3c4vXHejwmjmptXfGGjRY2%2B8uy0GV9Xg8d8vwcZ2zeiQcaCALoa8KRS4F2HP%2BEIczDuprNxE7YQScDk%2FiNuqsjHWqPyA4dNWPq66EObrE7aHmH6UBS5lSC%2B8emZfZHhf2K3QVaIlVITom6RmA9\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYXJSL7NLM%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=9304433d4f0b11d209d7e8db14cc31f3cb966f67436f7dfaaae4ad27ee5ecb1a",
+            "recording_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/356d8967-9a87-4969-aaae-c0d3c21e0307/recording.mp3?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T095558Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIGbf1B6JJsLU3%2Bm4nCWEDzj%2F5oxOUHLuUekyhgoCX9w%2FAiEAurtfvTXz9YI%2FkmxmEAmckUa%2Ftq0RKWMTD7Gr6Vq0THsqmQQIWhABGgw3MjcxNTM4NDEzMjkiDFMI8TTeFdN%2ByfTSeSr2A7bZOUVoL97%2BB2NSQ9fJBhzngjWCbBktV60%2FfZGOFa4KCNaKUAlTztCNpeDNDm3ju44JjjidMO3NqCVUs%2F8RA2rSXRz3rQ1QYtl%2BW4Li1hHjwkiXHxooiwKUam886lJYz8Pf8HesHLxw%2BS%2BaNApd36R81J0FtjCNyLFOdzY7Tf%2BiGdioh2YA43c2u3kac4CssZN%2B96ty8xD4eEc9SWDxmNULv3MrPW8hRxH8kfwVu%2ByJRPoreKH2SQf7TFCvEmZh66Y%2Bj431ercpXsMjh6gO8olxWtk%2ByNFV%2B6q28D1cUQUX4VnVRSArW268j1MucJIRuTRxkJCxADNsJS5n7yUCXTMt%2ByxFlehtLpIWaD1PLvymWLSexBZtTpSakdxiOFjAolls2Fcq5ZYLJu6AKLOltTehdlk0Vza1zD1fQLucEe82meIDO%2F3MYe97p9XbANal%2Frj3Jf9meC08FrcxsbOnanfTbJ%2F%2B0OvapknYGwbP3rsTDjuvSB402oQTjBCIGZ4Z7COP6F7dYN4zUTOOcO3TWMuha8Wrrt1TYFdVPp7hD14cd%2BMN%2F0%2BVp%2B3z4F%2FdZ0BCEjtmuNyswqMvuxoVglo20My1iuoKpUmHT5S08Rm%2BsOBIZCnb8Aa%2FgRtB5RP53qLUFhAYNOiM40oSh4Vwq5mIVoLSMHSRJUowzOGKwgY6pgGUFbxGIvXHegSOC%2BRQHVbbfip6yPZ%2Byy%2F08sAMX3X2IxLxUe068%2FgyeqMGrrgDUxSZBO4hS25dmXIuk2Z65E8FF6nTCK4LD1sRHpUPkLmlRQ6gLvDwUDcHeDAEoPo9ux6QvacvTTQt70CcnjpRFOy%2FMai%2F3MB0RkpYLtFVeCLdoPCXq3Qy9gMqt%2BuRZo%2B2LJ3rG5B%2F92RKeaLpVWSo67NlQIm1xgeG\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYZCYV2AO3%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=8eda30ad2dff009c2e6b84ab3e2c8413a7dd97d011ab0a2f15d31954d9c306d2",
+            "transcript_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/356d8967-9a87-4969-aaae-c0d3c21e0307/transcript.json?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T095558Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIGbf1B6JJsLU3%2Bm4nCWEDzj%2F5oxOUHLuUekyhgoCX9w%2FAiEAurtfvTXz9YI%2FkmxmEAmckUa%2Ftq0RKWMTD7Gr6Vq0THsqmQQIWhABGgw3MjcxNTM4NDEzMjkiDFMI8TTeFdN%2ByfTSeSr2A7bZOUVoL97%2BB2NSQ9fJBhzngjWCbBktV60%2FfZGOFa4KCNaKUAlTztCNpeDNDm3ju44JjjidMO3NqCVUs%2F8RA2rSXRz3rQ1QYtl%2BW4Li1hHjwkiXHxooiwKUam886lJYz8Pf8HesHLxw%2BS%2BaNApd36R81J0FtjCNyLFOdzY7Tf%2BiGdioh2YA43c2u3kac4CssZN%2B96ty8xD4eEc9SWDxmNULv3MrPW8hRxH8kfwVu%2ByJRPoreKH2SQf7TFCvEmZh66Y%2Bj431ercpXsMjh6gO8olxWtk%2ByNFV%2B6q28D1cUQUX4VnVRSArW268j1MucJIRuTRxkJCxADNsJS5n7yUCXTMt%2ByxFlehtLpIWaD1PLvymWLSexBZtTpSakdxiOFjAolls2Fcq5ZYLJu6AKLOltTehdlk0Vza1zD1fQLucEe82meIDO%2F3MYe97p9XbANal%2Frj3Jf9meC08FrcxsbOnanfTbJ%2F%2B0OvapknYGwbP3rsTDjuvSB402oQTjBCIGZ4Z7COP6F7dYN4zUTOOcO3TWMuha8Wrrt1TYFdVPp7hD14cd%2BMN%2F0%2BVp%2B3z4F%2FdZ0BCEjtmuNyswqMvuxoVglo20My1iuoKpUmHT5S08Rm%2BsOBIZCnb8Aa%2FgRtB5RP53qLUFhAYNOiM40oSh4Vwq5mIVoLSMHSRJUowzOGKwgY6pgGUFbxGIvXHegSOC%2BRQHVbbfip6yPZ%2Byy%2F08sAMX3X2IxLxUe068%2FgyeqMGrrgDUxSZBO4hS25dmXIuk2Z65E8FF6nTCK4LD1sRHpUPkLmlRQ6gLvDwUDcHeDAEoPo9ux6QvacvTTQt70CcnjpRFOy%2FMai%2F3MB0RkpYLtFVeCLdoPCXq3Qy9gMqt%2BuRZo%2B2LJ3rG5B%2F92RKeaLpVWSo67NlQIm1xgeG\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYZCYV2AO3%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=1f2bff59b5a00570c49d289004a51e531801bce4568c582c220587211221c92a",
             "leexi_url": "https://app.leexi.ai/calls/356d8967-9a87-4969-aaae-c0d3c21e0307",
             "video_archived_at": null,
             "audio_archived_at": null,
@@ -832,8 +1214,8 @@
             "direction": "outbound",
             "is_video": true,
             "visible": true,
-            "recording_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/e2aa2eb6-8c96-402b-b5b6-0220565beb66/recording.mp4?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T085333Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIFrkYVCKLzOGbmIjBKVEYzoIKSfSa%2Fw6a7EGGMw5n7k%2FAiEAxlfz9pBl8ViadgH6jLvy6QEuGle5zf%2FyFOokLZXQZqIqmQQIWhABGgw3MjcxNTM4NDEzMjkiDMEJY%2FN2bbdAKnfmXir2A4n67UUPx4CzZwYN%2FIkJdNFPYRdAT9QrEVkgtG4NzwOsxbPfEa2B%2BWg0KIzfLfHlNcvnmZ1ChAybzuZjZlY0E3qDnH4JbA0KravBljsTP32p%2BxrzyCDAd47OOkf4XPmO%2BNq6kMCx1sJAUEUR7s03g4fm4OxWAXaLT81liUIpP6%2FRSuEbmvqmMKQp92WkolRZlr%2B5ZZOBp7ayBULmGmgk7gNzqP96lPA2EfFssOQFw40xiuFehuj0v%2B08fI9rwVoJLqNliIZ9ed9nZwSrlQFO91DjZGbMzzmwjY4uwzP%2Bha3ekThL2WkYLHCEJOtVRJHtZlmVgWMZcB6WT7SB77dtu0QGck30ZACV7Msk%2ByBXmEXmrTqGLA2AltbU8OF8kVfspKK0LxKlHI7%2B9120g%2Bwmz7y5iALmFftC0QZ32lo211bqQTsAFnO2XIKtpEx5sO0WXzXtPAr6ryuQLbCku5lsUezkqZ2sBi8s2zxevKntcj8F4ePWKF3%2BC9oGv9%2FIG9rfT3MTY0IRkjM1I3pGKt6VJKT7UhpEdEZTkD1W7bXKwOtLmD%2F%2Fi5jASO9VStBjbZU0U4gk9P4AuYt%2BGcd5VXsQJ4U%2FU0zro76L%2BpVlVcpJSji9Oc5tqCi7l8JveC4qbzJUAE7NjDFp1broxTmHE5MFvz%2FYBuI8hKkwt8%2BKwgY6pgFhvcVmuY3eNaC%2FJeyUkYGMt1GphAHO1RqfOxy0g25pke262cXX9QSLh6BU2lEQIFw9iLKOuUYQEU3c4vXHejwmjmptXfGGjRY2%2B8uy0GV9Xg8d8vwcZ2zeiQcaCALoa8KRS4F2HP%2BEIczDuprNxE7YQScDk%2FiNuqsjHWqPyA4dNWPq66EObrE7aHmH6UBS5lSC%2B8emZfZHhf2K3QVaIlVITom6RmA9\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYXJSL7NLM%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=c91afa227f0d5d037cbc80aa7f795058a0383feecee3b8c0b8c7dde95dec1de3",
-            "transcript_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/e2aa2eb6-8c96-402b-b5b6-0220565beb66/transcript.json?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T085333Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIFrkYVCKLzOGbmIjBKVEYzoIKSfSa%2Fw6a7EGGMw5n7k%2FAiEAxlfz9pBl8ViadgH6jLvy6QEuGle5zf%2FyFOokLZXQZqIqmQQIWhABGgw3MjcxNTM4NDEzMjkiDMEJY%2FN2bbdAKnfmXir2A4n67UUPx4CzZwYN%2FIkJdNFPYRdAT9QrEVkgtG4NzwOsxbPfEa2B%2BWg0KIzfLfHlNcvnmZ1ChAybzuZjZlY0E3qDnH4JbA0KravBljsTP32p%2BxrzyCDAd47OOkf4XPmO%2BNq6kMCx1sJAUEUR7s03g4fm4OxWAXaLT81liUIpP6%2FRSuEbmvqmMKQp92WkolRZlr%2B5ZZOBp7ayBULmGmgk7gNzqP96lPA2EfFssOQFw40xiuFehuj0v%2B08fI9rwVoJLqNliIZ9ed9nZwSrlQFO91DjZGbMzzmwjY4uwzP%2Bha3ekThL2WkYLHCEJOtVRJHtZlmVgWMZcB6WT7SB77dtu0QGck30ZACV7Msk%2ByBXmEXmrTqGLA2AltbU8OF8kVfspKK0LxKlHI7%2B9120g%2Bwmz7y5iALmFftC0QZ32lo211bqQTsAFnO2XIKtpEx5sO0WXzXtPAr6ryuQLbCku5lsUezkqZ2sBi8s2zxevKntcj8F4ePWKF3%2BC9oGv9%2FIG9rfT3MTY0IRkjM1I3pGKt6VJKT7UhpEdEZTkD1W7bXKwOtLmD%2F%2Fi5jASO9VStBjbZU0U4gk9P4AuYt%2BGcd5VXsQJ4U%2FU0zro76L%2BpVlVcpJSji9Oc5tqCi7l8JveC4qbzJUAE7NjDFp1broxTmHE5MFvz%2FYBuI8hKkwt8%2BKwgY6pgFhvcVmuY3eNaC%2FJeyUkYGMt1GphAHO1RqfOxy0g25pke262cXX9QSLh6BU2lEQIFw9iLKOuUYQEU3c4vXHejwmjmptXfGGjRY2%2B8uy0GV9Xg8d8vwcZ2zeiQcaCALoa8KRS4F2HP%2BEIczDuprNxE7YQScDk%2FiNuqsjHWqPyA4dNWPq66EObrE7aHmH6UBS5lSC%2B8emZfZHhf2K3QVaIlVITom6RmA9\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYXJSL7NLM%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=506cb19d4240441ef9310d6b5ded0e0fca2c15e3e24fad8b710880bc43f8a1f2",
+            "recording_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/e2aa2eb6-8c96-402b-b5b6-0220565beb66/recording.mp4?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T095558Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIGbf1B6JJsLU3%2Bm4nCWEDzj%2F5oxOUHLuUekyhgoCX9w%2FAiEAurtfvTXz9YI%2FkmxmEAmckUa%2Ftq0RKWMTD7Gr6Vq0THsqmQQIWhABGgw3MjcxNTM4NDEzMjkiDFMI8TTeFdN%2ByfTSeSr2A7bZOUVoL97%2BB2NSQ9fJBhzngjWCbBktV60%2FfZGOFa4KCNaKUAlTztCNpeDNDm3ju44JjjidMO3NqCVUs%2F8RA2rSXRz3rQ1QYtl%2BW4Li1hHjwkiXHxooiwKUam886lJYz8Pf8HesHLxw%2BS%2BaNApd36R81J0FtjCNyLFOdzY7Tf%2BiGdioh2YA43c2u3kac4CssZN%2B96ty8xD4eEc9SWDxmNULv3MrPW8hRxH8kfwVu%2ByJRPoreKH2SQf7TFCvEmZh66Y%2Bj431ercpXsMjh6gO8olxWtk%2ByNFV%2B6q28D1cUQUX4VnVRSArW268j1MucJIRuTRxkJCxADNsJS5n7yUCXTMt%2ByxFlehtLpIWaD1PLvymWLSexBZtTpSakdxiOFjAolls2Fcq5ZYLJu6AKLOltTehdlk0Vza1zD1fQLucEe82meIDO%2F3MYe97p9XbANal%2Frj3Jf9meC08FrcxsbOnanfTbJ%2F%2B0OvapknYGwbP3rsTDjuvSB402oQTjBCIGZ4Z7COP6F7dYN4zUTOOcO3TWMuha8Wrrt1TYFdVPp7hD14cd%2BMN%2F0%2BVp%2B3z4F%2FdZ0BCEjtmuNyswqMvuxoVglo20My1iuoKpUmHT5S08Rm%2BsOBIZCnb8Aa%2FgRtB5RP53qLUFhAYNOiM40oSh4Vwq5mIVoLSMHSRJUowzOGKwgY6pgGUFbxGIvXHegSOC%2BRQHVbbfip6yPZ%2Byy%2F08sAMX3X2IxLxUe068%2FgyeqMGrrgDUxSZBO4hS25dmXIuk2Z65E8FF6nTCK4LD1sRHpUPkLmlRQ6gLvDwUDcHeDAEoPo9ux6QvacvTTQt70CcnjpRFOy%2FMai%2F3MB0RkpYLtFVeCLdoPCXq3Qy9gMqt%2BuRZo%2B2LJ3rG5B%2F92RKeaLpVWSo67NlQIm1xgeG\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYZCYV2AO3%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=8fc5dbc8d147dc1aca6bd9f49ec9a2d40e7ecdcbcb7982aafe71d27c46161c4b",
+            "transcript_url": "https://leexi.s3.eu-west-3.amazonaws.com/governance-summit/calls/e2aa2eb6-8c96-402b-b5b6-0220565beb66/transcript.json?X-Amz-Expires=3600\u0026X-Amz-Date=20250606T095558Z\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMyJHMEUCIGbf1B6JJsLU3%2Bm4nCWEDzj%2F5oxOUHLuUekyhgoCX9w%2FAiEAurtfvTXz9YI%2FkmxmEAmckUa%2Ftq0RKWMTD7Gr6Vq0THsqmQQIWhABGgw3MjcxNTM4NDEzMjkiDFMI8TTeFdN%2ByfTSeSr2A7bZOUVoL97%2BB2NSQ9fJBhzngjWCbBktV60%2FfZGOFa4KCNaKUAlTztCNpeDNDm3ju44JjjidMO3NqCVUs%2F8RA2rSXRz3rQ1QYtl%2BW4Li1hHjwkiXHxooiwKUam886lJYz8Pf8HesHLxw%2BS%2BaNApd36R81J0FtjCNyLFOdzY7Tf%2BiGdioh2YA43c2u3kac4CssZN%2B96ty8xD4eEc9SWDxmNULv3MrPW8hRxH8kfwVu%2ByJRPoreKH2SQf7TFCvEmZh66Y%2Bj431ercpXsMjh6gO8olxWtk%2ByNFV%2B6q28D1cUQUX4VnVRSArW268j1MucJIRuTRxkJCxADNsJS5n7yUCXTMt%2ByxFlehtLpIWaD1PLvymWLSexBZtTpSakdxiOFjAolls2Fcq5ZYLJu6AKLOltTehdlk0Vza1zD1fQLucEe82meIDO%2F3MYe97p9XbANal%2Frj3Jf9meC08FrcxsbOnanfTbJ%2F%2B0OvapknYGwbP3rsTDjuvSB402oQTjBCIGZ4Z7COP6F7dYN4zUTOOcO3TWMuha8Wrrt1TYFdVPp7hD14cd%2BMN%2F0%2BVp%2B3z4F%2FdZ0BCEjtmuNyswqMvuxoVglo20My1iuoKpUmHT5S08Rm%2BsOBIZCnb8Aa%2FgRtB5RP53qLUFhAYNOiM40oSh4Vwq5mIVoLSMHSRJUowzOGKwgY6pgGUFbxGIvXHegSOC%2BRQHVbbfip6yPZ%2Byy%2F08sAMX3X2IxLxUe068%2FgyeqMGrrgDUxSZBO4hS25dmXIuk2Z65E8FF6nTCK4LD1sRHpUPkLmlRQ6gLvDwUDcHeDAEoPo9ux6QvacvTTQt70CcnjpRFOy%2FMai%2F3MB0RkpYLtFVeCLdoPCXq3Qy9gMqt%2BuRZo%2B2LJ3rG5B%2F92RKeaLpVWSo67NlQIm1xgeG\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIA2STN7CSYZCYV2AO3%2F20250606%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=b6faea3650a501c0f17690c35c6c839dc330e12509033fd834a4e51654916ff4",
             "leexi_url": "https://app.leexi.ai/calls/e2aa2eb6-8c96-402b-b5b6-0220565beb66",
             "video_archived_at": null,
             "audio_archived_at": null,
@@ -925,6 +1307,6 @@
     "pagination": {
         "page": 1,
         "items": 10,
-        "count": 6
+        "count": 9
     }
 }
