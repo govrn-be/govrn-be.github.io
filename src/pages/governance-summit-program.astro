@@ -246,8 +246,9 @@ const programSessions: ProgramSession[] = [
     title: "Toespraak Eerste Minister",
     speakers: ["Bart De Wever, Eerste minister van België"],
     type: "keynote",
-    callId: "19",
-    summary: ""
+    callId: "e899fe3e-4442-411b-8259-1e45830881f6",
+    summary: getCallSummaryById("e899fe3e-4442-411b-8259-1e45830881f6") || "",
+    summaryHtml: marked.parse(getCallSummaryById("e899fe3e-4442-411b-8259-1e45830881f6") || "")
   },
   {
     time: "18:30 - 18:40",
