@@ -4,7 +4,7 @@ description: "Discover how GOVRN’s AI Minute Builder and AI Assist directly ta
 pubDate: 2025-06-26
 author: "Ludovic Laffineur"
 authorRole: "CTO at Govrn"
-image: "https://k0n.abe.mytemp.website/wp-content/uploads/2024/10/Untitled-design-1.png"
+image: "/govrn-ai-minute-builder-and-assist.jpg"
 category: "Technology"
 tags: ["AI board software", "board room AI agenda assistant", "Governance", "Productivity"]
 featured: true
