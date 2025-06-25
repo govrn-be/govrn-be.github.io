@@ -9,6 +9,7 @@ category: "Technology"
 tags: ["AI board software", "board room AI agenda assistant", "Governance", "Productivity"]
 featured: true
 slug: govrn-ai-minute-builder-and-assist
+lang: en
 ---
 
 # How GOVRN's AI Features Solve Real Boardroom Pain Points
