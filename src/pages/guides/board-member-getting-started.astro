@@ -1,0 +1,472 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import GuideHeader from '../../components/guides/GuideHeader.astro';
+import GuideStep from '../../components/guides/GuideStep.astro';
+import GuideSubSection from '../../components/guides/GuideSubSection.astro';
+import GuideStepList from '../../components/guides/GuideStepList.astro';
+import ProTip from '../../components/guides/ProTip.astro';
+import { Image } from 'astro:assets';
+import applicationHomePage from '../../assets/application-home-page.png';
+
+const invitationSteps = [
+  "Check your email inbox for an invitation from support@govrn.com",
+  "Click on the invitation link in the email",
+  "Insert your phone number when prompted",
+  "Create your profile by filling in the required information",
+  "Set up a strong password for your account",
+  "Complete your profile setup"
+];
+
+const connectivityTips = [
+  "Visit app.govrn.com to test connectivity to our services",
+  "Check your internet connection",
+  "Ensure your firewall allows access to Govrn domains",
+  "Contact your IT department if issues persist"
+];
+
+const phoneNumberTips = [
+  "You can use any email address linked to your phone number",
+  "Communications will be automatically linked to the correct emails",
+  "Multiple email addresses can share the same phone number",
+  "Login works with any of your registered email addresses"
+];
+
+const homePageFeatures = [
+  "View next events you are invited to",
+  "Check assigned tasks and their deadlines",
+  "See recent notifications and updates",
+  "Access quick navigation to key sections"
+];
+
+const eventTabFeatures = [
+  "Browse future events for your board groups",
+  "Review past events and their materials",
+  "Filter events by date, type, or group",
+  "Access event-specific documents and tasks"
+];
+
+const eventPreparationSteps = [
+  "Mark your presence by clicking the attendance button",
+  "Alternatively, respond to the email invitation from Govrn",
+  "Review tasks assigned for this board meeting",
+  "Read and annotate documents in the board pack",
+  "Complete any required actions (read, sign, vote)",
+  "Prepare notes and questions for the meeting"
+];
+
+const documentCategories = [
+  "Event Documents: Materials linked to specific meetings",
+  "General Documents: Bylaws, SHA, and other permanent files",
+  "Signed Documents: Items requiring your digital signature",
+  "Draft Documents: Working versions and collaborative materials"
+];
+
+const boardPackSteps = [
+  "Access the board pack from your event details page",
+  "Click on any document to open the viewer",
+  "Use the annotation tools in the sidebar",
+  "Add private notes that only you can see",
+  "Highlight important sections for quick reference",
+  "Save your annotations automatically as you work"
+];
+
+const annotationFeatures = [
+  "Private notes visible only to you",
+  "Text highlighting in multiple colors",
+  "Comment bubbles for detailed observations",
+  "Drawing tools for diagrams and markups",
+  "Search within your annotations",
+  "Export annotations with document references"
+];
+---
+
+<Layout title="Board Member Getting Started Guide - Govrn">
+  <main class="pt-24">
+    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <GuideHeader
+        title="Board Member Getting Started Guide"
+        description="Complete guide to setting up your Govrn account and navigating the platform as a board member."
+      />
+
+      <GuideStep
+        number={1}
+        title="Receiving Your Invitation"
+        description="Your board journey begins with an email invitation from Govrn:"
+      >
+        <div class="mb-8">
+          <Image 
+            src="/onboarding-invitation.png"
+            alt="Example of Govrn invitation email interface"
+            width={300}
+            height={500}
+            class="rounded-lg shadow-lg border border-gray-200 mb-6 w-full"
+            loading="lazy"
+          />
+          <GuideStepList items={invitationSteps} />
+        </div>
+
+        <ProTip
+          tip="Keep your invitation email handy during setup in case you need to reference any specific instructions from your board secretary."
+        />
+
+        <div class="grid md:grid-cols-2 gap-6 mt-6">
+          <GuideSubSection title="Connectivity Issues?">
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <ul class="text-sm text-gray-600 space-y-2">
+                {connectivityTips.map(tip => (
+                  <li>• {tip}</li>
+                ))}
+              </ul>
+            </div>
+          </GuideSubSection>
+
+          <GuideSubSection title="Phone Number Already Used?">
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <ul class="text-sm text-gray-600 space-y-2">
+                {phoneNumberTips.map(tip => (
+                  <li>• {tip}</li>
+                ))}
+              </ul>
+            </div>
+          </GuideSubSection>
+        </div>
+      </GuideStep>
+
+      <GuideStep
+        number={2}
+        title="Creating Your Password and Profile"
+        description="Set up your secure credentials and complete your board member profile:"
+      >
+     
+
+        <GuideSubSection title="Password Requirements">
+          <div class="bg-white rounded-lg p-4 border border-gray-200 mb-6">
+            <ul class="space-y-2 text-gray-600">
+              <li>• Minimum 8 characters long</li>
+              <li>• At least one uppercase letter</li>
+              <li>• At least one number</li>
+              <li>• At least one special character</li>
+            </ul>
+          </div>
+        </GuideSubSection>
+
+        <GuideSubSection title="Profile Information">
+          <div class="bg-white rounded-lg p-4 border border-gray-200">
+            <p class="text-sm text-gray-600 mb-3">Complete your profile with:</p>
+            <ul class="space-y-2 text-gray-600">
+              <li>• Full name and professional title</li>
+              <li>• Contact preferences for notifications</li>
+              <li>• Profile photo (optional but recommended)</li>
+              <li>• Time zone for meeting scheduling</li>
+            </ul>
+          </div>
+        </GuideSubSection>
+
+        <ProTip
+          tip="Use a professional email address and keep your profile information up to date for better board collaboration."
+        />
+      </GuideStep>
+
+      <GuideStep
+        number={3}
+        title="Your First Login - Home Page Overview"
+        description="After logging in, you'll see your personalized board member dashboard:"
+      >
+        <div class="mb-8">
+          <Image 
+            src="/onboarding-homepage.png"
+            alt="Govrn board member dashboard home page interface"
+            width={800}
+            height={600}
+            class="rounded-lg shadow-lg border border-gray-200 mb-6 w-full"
+            loading="lazy"
+          />
+          <GuideStepList items={homePageFeatures} />
+        </div>
+
+        <GuideSubSection title="Dashboard Sections">
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <h4 class="font-semibold text-gray-900 mb-2">Upcoming Events</h4>
+              <p class="text-sm text-gray-600">See meetings you're invited to with dates, times, and preparation status.</p>
+            </div>
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <h4 class="font-semibold text-gray-900 mb-2">Assigned Tasks</h4>
+              <p class="text-sm text-gray-600">Track documents to read, items to sign, and votes to cast before meetings.</p>
+            </div>
+          </div>
+        </GuideSubSection>
+      </GuideStep>
+
+      <GuideStep
+        number={4}
+        title="Navigating the Events Tab"
+        description="Manage your board meetings and access event-related materials:"
+      >
+        <div class="mb-8">
+          <Image 
+            src="/onboarding-events.png"
+            alt="Govrn events tab showing upcoming and past board meetings"
+            width={800}
+            height={600}
+            class="rounded-lg shadow-lg border border-gray-200 mb-6 w-full"
+            loading="lazy"
+          />
+          <GuideStepList items={eventTabFeatures} />
+        </div>
+
+        <GuideSubSection title="Event Organization">
+          <div class="bg-white rounded-lg p-4 border border-gray-200">
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Future Events</h4>
+                <ul class="text-sm text-gray-600 space-y-1">
+                  <li>• Upcoming board meetings</li>
+                  <li>• Committee sessions</li>
+                  <li>• Special events and AGMs</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Past Events</h4>
+                <ul class="text-sm text-gray-600 space-y-1">
+                  <li>• Meeting minutes and records</li>
+                  <li>• Historical documents</li>
+                  <li>• Decision archives</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </GuideSubSection>
+      </GuideStep>
+
+      <GuideStep
+        number={5}
+        title="Preparing for Board Meetings"
+        description="Use event details to prepare effectively for each board meeting:"
+      >
+        <div class="mb-8">
+          <Image 
+            src="/onboarding-event-detail.png"
+            alt="Govrn meeting preparation screen with attendance, tasks and board pack"
+            width={800}
+            height={600}
+            class="rounded-lg shadow-lg border border-gray-200 mb-6 w-full"
+            loading="lazy"
+          />
+          <GuideStepList items={eventPreparationSteps} />
+        </div>
+
+        <ProTip
+          tip="Start reviewing board materials early and make private annotations as you read. This helps you prepare thoughtful questions and contributions."
+        />
+
+        <GuideSubSection title="Meeting Preparation Checklist">
+          <div class="bg-white rounded-lg p-4 border border-gray-200">
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Before the Meeting</h4>
+                <ul class="text-sm text-gray-600 space-y-1">
+                  <li>✓ Confirm attendance</li>
+                  <li>✓ Read all board pack materials</li>
+                  <li>✓ Complete required tasks</li>
+                  <li>✓ Prepare questions and notes</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Document Actions</h4>
+                <ul class="text-sm text-gray-600 space-y-1">
+                  <li>• Read: Review and understand</li>
+                  <li>• Sign: Digital signature required</li>
+                  <li>• Vote: Cast your board vote</li>
+                  <li>• Annotate: Add private notes</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </GuideSubSection>
+      </GuideStep>
+
+      <GuideStep
+        number={6}
+        title="Board Pack and Annotations"
+        description="Read documents efficiently and make private annotations to prepare for meetings:"
+      >
+        <div class="mb-8">
+          <Image 
+            src="/onboarding-boardpack.png"
+            alt="Govrn board pack and annotations interface"
+            width={800}
+            height={600}
+            class="rounded-lg shadow-lg border border-gray-200 mb-6 w-full"
+            loading="lazy"
+          />
+          <GuideStepList items={boardPackSteps} />
+        </div>
+
+        <ProTip
+          tip="Your annotations are completely private and help you prepare thoughtful questions and insights for board discussions."
+        />
+
+        <GuideSubSection title="Annotation Tools">
+          <div class="bg-white rounded-lg p-4 border border-gray-200 mb-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-3">Available Features</h4>
+                <ul class="space-y-2 text-gray-600">
+                  {annotationFeatures.map(feature => (
+                    <li>• {feature}</li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-3">Best Practices</h4>
+                <ul class="space-y-2 text-gray-600">
+                  <li>• Use different colors for different topics</li>
+                  <li>• Add questions directly to relevant sections</li>
+                  <li>• Highlight key financial figures</li>
+                  <li>• Note potential concerns or risks</li>
+                  <li>• Reference related documents in notes</li>
+                  <li>• Review annotations before meetings</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </GuideSubSection>
+
+        
+      </GuideStep>
+
+      <GuideStep
+        number={7}
+        title="Managing Documents"
+        description="Access and organize all your board-related documents:"
+      >
+        <div class="mb-8">
+          <Image 
+            src="/onboarding-document-list.png"
+            alt="Govrn documents section with search, filters and document categories"
+            width={800}
+            height={600}
+            class="rounded-lg shadow-lg border border-gray-200 mb-6 w-full"
+            loading="lazy"
+          />
+          <GuideStepList items={documentCategories} />
+        </div>
+
+        <GuideSubSection title="Document Organization">
+          <div class="bg-white rounded-lg p-4 border border-gray-200 mb-6">
+            <h4 class="font-semibold text-gray-900 mb-3">Search and Filter</h4>
+            <p class="text-sm text-gray-600 mb-2">Use the search bar to quickly find documents:</p>
+            <ul class="space-y-1 text-gray-600">
+              <li>• Type "minutes" to see all meeting minutes</li>
+              <li>• Search by document name or content</li>
+              <li>• Filter by document type or date</li>
+              <li>• Sort by relevance or creation date</li>
+            </ul>
+          </div>
+        </GuideSubSection>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <GuideSubSection title="Event Documents">
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <p class="text-sm text-gray-600">Documents organized by meeting, including agendas, reports, and presentations.</p>
+            </div>
+          </GuideSubSection>
+
+          <GuideSubSection title="General Documents">
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
+              <p class="text-sm text-gray-600">Permanent documents like bylaws, shareholder agreements, and governance policies.</p>
+            </div>
+          </GuideSubSection>
+        </div>
+      </GuideStep>
+
+      <GuideStep
+        number={8}
+        title="Private Chat and Collaboration"
+        description="Communicate securely with fellow board members:"
+      >
+        <div class="mb-8">
+          <Image 
+            src="/onboarding-private-chat.png"
+            alt="Govrn private chat and group collaboration features"
+            width={800}
+            height={600}
+            class="rounded-lg shadow-lg border border-gray-200 mb-6 w-full"
+            loading="lazy"
+          />
+        </div>
+
+        <GuideSubSection title="Chat Features">
+          <div class="bg-white rounded-lg p-4 border border-gray-200 mb-6">
+            <ul class="space-y-3 text-gray-600">
+              <li>
+                <strong class="text-gray-900">Private Discussions:</strong>
+                Start confidential conversations with individual board members without leaving the platform.
+              </li>
+              <li>
+                <strong class="text-gray-900">Group Chats:</strong>
+                Create focused discussion groups for committee work or specific topics.
+              </li>
+              <li>
+                <strong class="text-gray-900">Secure Messaging:</strong>
+                All communications are encrypted and remain within your board's secure environment.
+              </li>
+            </ul>
+          </div>
+        </GuideSubSection>
+
+        <ProTip
+          tip="Use group chats for committee discussions and private messages for sensitive topics that require discretion."
+        />
+      </GuideStep>
+
+      <!-- Quick Reference -->
+      <div class="mt-16 bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-xl p-8 border border-primary/10">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Quick Reference</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-2">Key Actions</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li>• Confirm meeting attendance early</li>
+              <li>• Read board packs before meetings</li>
+              <li>• Complete assigned tasks on time</li>
+              <li>• Use private annotations for notes</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-2">Best Practices</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li>• Keep your profile information updated</li>
+              <li>• Use search filters to find documents</li>
+              <li>• Engage in board discussions via chat</li>
+              <li>• Review past meeting materials</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Help Section -->
+      <div class="mt-8 bg-white rounded-xl p-8 shadow-sm border border-gray-200">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>
+        <p class="text-gray-600 mb-6">
+          You now have everything you need to effectively use Govrn as a board member. If you need additional help or have questions about specific features, our support team is ready to assist.
+        </p>
+        <div class="flex space-x-4">
+          <a
+            href="/contact"
+            class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg text-white bg-primary hover:bg-primary/90 transition-colors"
+          >
+            Contact Support
+          </a>
+          <a
+            href="/guides"
+            class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg text-gray-900 bg-white border border-gray-200 hover:bg-gray-50 transition-colors"
+          >
+            View All Guides
+          </a>
+        </div>
+      </div>
+    </article>
+  </main>
+</Layout>
