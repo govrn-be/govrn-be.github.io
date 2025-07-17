@@ -3,6 +3,15 @@ import { Image } from "astro:assets";
 import MegaMenu from "./navigation/MegaMenu.astro";
 
 const { transparent = false, hideMenu = false, whiteLogo = false, currentLang = 'en' } = Astro.props;
+
+// Get current path and language for language selector
+const path = Astro.url.pathname;
+
+// Generate language URLs
+const basePath = path.replace(/^\/(fr|nl)(\/|$)/, '/');
+const enUrl = basePath;
+const frUrl = `/fr${basePath}`;
+const nlUrl = `/nl${basePath}`;
 const buttonTexts = currentLang === 'fr' ? {
   signIn: "Se connecter",
   tryForFree: "Essayer gratuitement",
@@ -76,7 +85,7 @@ interface Props {
   data-current-lang={currentLang}
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center py-4">
+    <div class="flex justify-between items-center py-3">
       <!-- Logo -->
       <div class="flex items-center">
         <a href={currentLang === 'en' ? '/' : `/${currentLang}`} class="flex items-center group">
@@ -84,25 +93,25 @@ interface Props {
   loading="lazy"
             src={whiteLogo ? "/logo_white.png" : "/logo.webp"}
             alt="Govrn Logo"
-            class="h-8 transform transition-transform duration-200 group-hover:scale-105"
+            class="h-7 transform transition-transform duration-200 group-hover:scale-105"
           />
         </a>
       </div>
 
       <!-- Desktop Navigation -->
       {!hideMenu && (
-        <nav class="hidden md:flex items-center space-x-1">
+        <nav class="hidden lg:flex items-center space-x-1">
         {
           navItems.map((item) => (
             <div class="relative group">
               <a
                 href={item.href}
-                class="px-4 py-2 text-gray-600 hover:text-gray-900 rounded-lg hover:bg-gray-50 transition-all duration-200 flex items-center"
+                class="px-3 py-2 text-sm text-gray-600 hover:text-gray-900 rounded-lg hover:bg-gray-50 transition-all duration-200 flex items-center"
               >
                 {item.label}
                 {item.hasMegaMenu && (
                   <svg
-                    class="w-4 h-4 ml-1"
+                    class="w-3 h-3 ml-1"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -124,25 +133,37 @@ interface Props {
       )}
 
       <!-- Action Buttons -->
-      <div class="flex items-center space-x-4">
+      <div class="flex items-center space-x-2">
+        <!-- Language Selector -->
+        <div class="hidden lg:block">
+          <select 
+            class="bg-white border border-gray-200 text-gray-600 hover:text-gray-900 rounded-md py-1 px-2 text-xs focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200"
+            onchange="window.location.href=this.value"
+          >
+            <option value={enUrl} selected={currentLang === 'en'}>EN</option>
+            <option value={frUrl} selected={currentLang === 'fr'}>FR</option>
+            <option value={nlUrl} selected={currentLang === 'nl'}>NL</option>
+          </select>
+        </div>
+        
         <a
           href="https://app.govrn.com"
           target="_blank"
           rel="noopener noreferrer"
-          class="hidden md:inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg text-primary hover:bg-primary/5 transition-all duration-200"
+          class="hidden lg:inline-flex items-center px-3 py-2 text-xs font-medium rounded-lg text-primary hover:bg-primary/5 transition-all duration-200"
         >
           {buttonTexts.signIn}
         </a>
         <a
           href={buttonTexts.tryPath}
-          class="hidden md:inline-flex items-center px-6 py-3 text-base font-medium rounded-lg text-white bg-primary hover:bg-primary/90 shadow-sm hover:shadow-md transition-all duration-200"
+          class="hidden lg:inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg text-white bg-primary hover:bg-primary/90 shadow-sm hover:shadow-md transition-all duration-200"
         >
           {buttonTexts.tryForFree}
         </a>
 
         <!-- Mobile Menu Button -->
         <button
-          class="md:hidden p-2 rounded-lg hover:bg-gray-50 transition-colors duration-200"
+          class="lg:hidden p-2 rounded-lg hover:bg-gray-50 transition-colors duration-200"
           id="mobile-menu-button-main"
           aria-label="Toggle menu"
         >
@@ -166,7 +187,7 @@ interface Props {
   <!-- Mobile Menu -->
   {!hideMenu && (
     <div
-      class="hidden md:hidden border-t border-gray-100 bg-white/95 backdrop-blur-sm transition-all duration-300"
+      class="hidden lg:hidden border-t border-gray-100 bg-white/95 backdrop-blur-sm transition-all duration-300"
       id="mobile-menu"
     >
       <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 space-y-2">
@@ -183,6 +204,18 @@ interface Props {
           ))
         }
         <div class="pt-4 space-y-2">
+          <!-- Mobile Language Selector -->
+          <div class="px-4">
+            <select 
+              class="w-full bg-white border border-gray-200 text-gray-600 rounded-md py-2 px-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200"
+              onchange="window.location.href=this.value"
+            >
+              <option value={enUrl} selected={currentLang === 'en'}>English</option>
+              <option value={frUrl} selected={currentLang === 'fr'}>Français</option>
+              <option value={nlUrl} selected={currentLang === 'nl'}>Nederlands</option>
+            </select>
+          </div>
+          
           <a
             href="https://app.govrn.com"
             target="_blank"
@@ -195,7 +228,7 @@ interface Props {
       </nav>
     </div>
   )}
-  <div class="md:hidden flex items-center fixed top-4 right-4 z-50 space-x-2">
+  <div class="lg:hidden flex items-center fixed top-4 right-4 z-50 space-x-2">
     <button
       class="p-2 rounded-lg hover:bg-gray-50 transition-colors duration-200 bg-white"
       id="mobile-menu-button-fixed"
@@ -216,7 +249,7 @@ interface Props {
     </button>
     <a
       href={buttonTexts.tryPath}
-      class="inline-flex items-center px-4 py-2 text-base font-medium text-white bg-primary hover:bg-primary/90 rounded-lg shadow-lg transition-all duration-200"
+      class="inline-flex items-center px-3 py-1.5 text-sm font-medium text-white bg-primary hover:bg-primary/90 rounded-lg shadow-lg transition-all duration-200"
     >
       {buttonTexts.tryForFree}
     </a>
