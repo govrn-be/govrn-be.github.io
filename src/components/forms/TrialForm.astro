@@ -365,6 +365,10 @@ const {
           if (!response.ok) {
             throw new Error("Failed to submit trial request");
           }
+          const email = formData.get('email');
+          
+          var myNewName = window.dataLayer || [];
+          myNewName.push({'email': email});
 
           form.classList.add("hidden");
           success?.classList.remove("hidden");

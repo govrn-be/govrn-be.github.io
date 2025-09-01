@@ -48,6 +48,7 @@ const {
 } = Astro.props;
 ---
 
+
 <form id="contactForm" class="space-y-6" method="POST">
   <div class="grid grid-cols-2 gap-6">
     <div>
@@ -141,6 +142,12 @@ const {
 
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();
+    
+    const formData = new FormData(form);
+    const email = formData.get('email');
+    
+    var myNewName = window.dataLayer || [];
+    myNewName.push({'email': email});
     
     // Here you would typically send the form data to your backend
     // For demo purposes, we'll just show the success message
