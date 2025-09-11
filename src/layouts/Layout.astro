@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import CookieBanner from "../components/CookieBanner.astro";
+import criticalFontsCSS from "../styles/fonts-critical.css?inline";
 
 interface Props {
   title: string;
@@ -92,9 +93,11 @@ const RECAPTCHA_EXECUTE_KEY =
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <script
-      src="https://tag.clearbitscripts.com/v1/pk_3e1d6d2934e384070f62039bb4f4efe6/tags.js"
-      referrerpolicy="strict-origin-when-cross-origin"></script>
+    
+    <!-- Critical font preloading -->
+    <link rel="preload" href="/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-600.woff2" as="font" type="font/woff2" crossorigin />
+    
     <script
       src={`https://www.google.com/recaptcha/enterprise.js?render=${RECAPTCHA_EXECUTE_KEY}`}
       async
@@ -133,11 +136,22 @@ const RECAPTCHA_EXECUTE_KEY =
     <meta property="twitter:image" content={image} />
 
     <link rel="canonical" href={url} />
+    
+    <!-- Inline critical fonts CSS -->
+    <style set:html={criticalFontsCSS}></style>
+    
+    <!-- Load non-critical fonts asynchronously -->
+    <link rel="preload" href="/styles/fonts.css" as="style" />
+    <script>
+      (function() {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = '/styles/fonts.css';
+        document.head.appendChild(link);
+      })();
+    </script>
+    <noscript><link rel="stylesheet" href="/styles/fonts.css" /></noscript>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
     <!-- Start of HubSpot Embed Code -->
     <script
       type="text/javascript"
