@@ -1,4 +1,9 @@
 ---
+import { Image } from 'astro:assets';
+import vdvLorePortraitImg from '../assets/images/vdv-lore-portrait.jpg';
+import fibPierreImg from '../assets/images/fib-pierre.webp';
+import carepropertyLogoImg from '../assets/images/careproperty-logo.png';
+
 interface Props {
   texts?: {
     title: string;
@@ -29,7 +34,7 @@ const {
       author: "Lore Werbrouck",
       position: "General Counsel",
       company: "Van de Velde",
-      image: "/vdv-lore-portrait.jpg",
+      image: vdvLorePortraitImg,
       link: "/case-studies/van-de-velde"
     },
     {
@@ -37,7 +42,7 @@ const {
       author: "Pierre Hermant",
       position: "CEO",
       company: "Finance & Invest Brussels",
-      image: "/fib-pierre.webp",
+      image: fibPierreImg,
       link: "/case-studies/finance-invest-brussels"
     },
     {
@@ -45,7 +50,7 @@ const {
       author: "Nathalie Byl",
       position: "Paralegal en Compliance Officer",
       company: "Care Property Invest",
-      image: "/careproperty-logo.png",
+      image: carepropertyLogoImg,
       link: "/case-studies/care-property-invest"
     }
   ]
@@ -68,11 +73,14 @@ const {
         <a href={testimonial.link} class="group">
           <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
             <div class="relative h-64">
-              <img 
-  loading="lazy"
+              <Image 
+                loading="lazy"
                 src={testimonial.image}
                 alt={testimonial.author}
                 class="w-full h-full object-cover"
+                width={400}
+                height={256}
+                quality={90}
               />
               <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
               <div class="absolute bottom-4 left-4 text-white">

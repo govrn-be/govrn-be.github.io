@@ -1,4 +1,9 @@
 ---
+import { Image } from 'astro:assets';
+import heroManImg from '../assets/images/hero-man.jpg';
+import heroWomanImg from '../assets/images/hero-woman.jpg';
+import heroGroupImg from '../assets/images/hero-group.jpg';
+
 interface StatsProps {
   stats?: {
     value: string;
@@ -14,19 +19,19 @@ const {
       value: "93%",
       label: "Of board members feel more confident in their decisions with AI support",
       icon: "🎯",
-      bgImage: "/hero-man.jpg"
+      bgImage: heroManImg
     },
     {
       value: "2.5x",
       label: "Faster strategic planning and execution with our collaborative tools",
       icon: "⚡",
-      bgImage: "/hero-woman.jpg"
+      bgImage: heroWomanImg
     },
     {
       value: "86%",
       label: "Of boards report improved stakeholder engagement and transparency",
       icon: "🤝",
-      bgImage: "/hero-group.jpg"
+      bgImage: heroGroupImg
     }
   ]
 } = Astro.props;
@@ -37,11 +42,14 @@ const {
     <div class="grid grid-cols-1 gap-10 md:grid-cols-3">
       {stats.map(stat => (
         <div class="relative overflow-hidden rounded-xl bg-primary/5 transition-transform duration-300 hover:scale-[1.02] hover:shadow-2xl">
-          <img 
-  loading="lazy" 
+          <Image 
+            loading="lazy" 
             src={stat.bgImage} 
             alt={`Background image illustrating ${stat.label}`}
             class="absolute inset-0 w-full h-full object-cover transform transition-all duration-700 ease-in-out hover:scale-110 brightness-[0.65] contrast-[1.15] saturate-[0.95] hue-rotate-[10deg]"
+            width={400}
+            height={300}
+            quality={85}
           />
           <div class="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/75 to-primary/60 opacity-75 mix-blend-soft-light"></div>
           <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent opacity-80"></div>

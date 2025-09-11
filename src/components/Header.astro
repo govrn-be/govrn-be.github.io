@@ -1,6 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import MegaMenu from "./navigation/MegaMenu.astro";
+import logoImg from '../assets/images/logo.webp';
+import logoWhiteImg from '../assets/images/logo_white.png';
 
 const { transparent = false, hideMenu = false, whiteLogo = false, currentLang = 'en' } = Astro.props;
 
@@ -89,11 +91,16 @@ interface Props {
       <!-- Logo -->
       <div class="flex items-center">
         <a href={currentLang === 'en' ? '/' : `/${currentLang}`} class="flex items-center group">
-          <img 
-  loading="lazy"
-            src={whiteLogo ? "/logo_white.png" : "/logo.webp"}
+          <Image 
+            loading="eager"
+            src={whiteLogo ? logoWhiteImg : logoImg}
             alt="Govrn Logo"
-            class="h-7 transform transition-transform duration-200 group-hover:scale-105"
+            class="h-7 w-auto object-contain transform transition-transform duration-200 group-hover:scale-105"
+            width={573}
+            height={194}
+            quality={100}
+            format="webp"
+            densities={[1, 2]}
           />
         </a>
       </div>
