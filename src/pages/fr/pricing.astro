@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { supportFaqs } from '../../data/faq-data';
+import FAQ from '../../components/FAQ.astro';
 
 import PricingTiers from '../../components/pricing/PricingTiers.astro';
 const supportServices = [
@@ -71,20 +72,20 @@ const featureCategories = [
 ];
 
 
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "name": "Govrn - FAQ Tarification",
-  "inLanguage": "fr",
-  mainEntity: supportFaqs.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
+// const structuredData = {
+//   "@context": "https://schema.org",
+//   "@type": "FAQPage",
+//   "name": "Govrn - FAQ Tarification",
+//   "inLanguage": "fr",
+//   mainEntity: supportFaqs.map((faq) => ({
+//     "@type": "Question",
+//     name: faq.question,
+//     acceptedAnswer: {
+//       "@type": "Answer",
+//       text: faq.answer,
+//     },
+//   })),
+// };
 
 const pricingTexts = {
   featureCategories: [
@@ -536,28 +537,35 @@ const pricingTexts = {
     subtitle: "Découvrez en détail les fonctionnalités de chaque offre pour choisir celle qui vous convient"
   } };
 
-const faqs =  [
-    {
-      question: "Quelle formation proposez-vous ?",
-      answer: "Nous offrons des programmes de formation complets comprenant des sessions en direct, des tutoriels vidéo, de la documentation et des ateliers personnalisés. Notre formation couvre tout, de la navigation de base aux fonctionnalités avancées et aux meilleures pratiques."
-    },
-    {
-      question: "Combien de temps dure le processus d'intégration ?",
-      answer: "L'intégration prend généralement 2 à 4 semaines, selon la taille et les besoins de votre organisation. Nous vous accompagnons tout au long du processus pour assurer une transition en douceur."
-    },
-    {
-      question: "Proposez-vous un support continu après la mise en place ?",
-      answer: "Oui, nous fournissons un support continu via plusieurs canaux : email, téléphone et chat en direct. Les clients Entreprise bénéficient d'un responsable succès client dédié pour une assistance personnalisée."
-    },
-    {
-      question: "Pouvez-vous nous aider avec la migration des données ?",
-      answer: "Absolument ! Notre équipe vous aide à migrer vos documents et données existants vers Govrn, en garantissant une transition fluide tout en préservant l'intégrité et la sécurité des données."
-    }
-  ];
+const supportFaqsFr = [
+  {
+    question: "Quelle formation proposez-vous ?",
+    answer: "Nous offrons des programmes de formation complets comprenant des sessions en direct, des tutoriels vidéo, de la documentation et des ateliers personnalisés. Notre formation couvre tout, de la navigation de base aux fonctionnalités avancées et aux meilleures pratiques."
+  },
+  {
+    question: "Combien de temps dure le processus d'intégration ?",
+    answer: "L'intégration prend généralement 2 à 4 semaines, selon la taille et les besoins de votre organisation. Nous vous accompagnons tout au long du processus pour assurer une transition en douceur."
+  },
+  {
+    question: "Proposez-vous un support continu après la mise en place ?",
+    answer: "Oui, nous fournissons un support continu via plusieurs canaux : email, téléphone et chat en direct. Les clients Entreprise bénéficient d'un responsable succès client dédié pour une assistance personnalisée."
+  },
+  {
+    question: "Pouvez-vous nous aider avec la migration des données ?",
+    answer: "Absolument ! Notre équipe vous aide à migrer vos documents et données existants vers Govrn, en garantissant une transition fluide tout en préservant l'intégrité et la sécurité des données."
+  }
+];
+
+const faqData = {
+  title: "FAQ Support et Formation",
+  subtitle: "Questions fréquentes sur nos services de support et de formation",
+  inLanguage: "fr",
+  faqs: supportFaqsFr
+};
 
 ---
 
-<Layout title="Tarifs - Logiciel de gestion de conseil Govrn" description="Tarification simple et transparente à partir de 149€/mois. Choisissez le forfait idéal pour votre conseil." structuredData={structuredData}>
+<Layout title="Tarifs - Logiciel de gestion de conseil Govrn" description="Tarification simple et transparente à partir de 149€/mois. Choisissez le forfait idéal pour votre conseil." >
   <main class="pt-16">
     <!-- Section d'en-tête -->
     <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
@@ -618,23 +626,7 @@ const faqs =  [
     </section>
 
     <!-- FAQ Support -->
-    <section class="py-20 bg-white">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl font-bold text-gray-900">FAQ Support et Formation</h2>
-          <p class="mt-4 text-xl text-gray-600">Questions fréquentes sur nos services de support et de formation</p>
-        </div>
-
-        <div class="space-y-8">
-          {faqs.map(faq => (
-            <div class="bg-gray-50 rounded-lg p-6">
-              <h3 class="text-lg font-semibold text-gray-900">{faq.question}</h3>
-              <p class="mt-2 text-gray-600">{faq.answer}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+    <FAQ texts={faqData} />
 
     <!-- Appel à l'action -->
     <section class="bg-gradient-to-br from-primary to-blue-600 py-24">

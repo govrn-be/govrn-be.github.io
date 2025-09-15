@@ -1,0 +1,614 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import backgroundImage from '../../assets/images/background-image.jpg';
+import FAQ from '../../components/FAQ.astro';
+
+const testimonials = [
+  {
+    quote: "Van 5 uur naar 30 minuten per vergadering. Govrn's AI geeft me gestructureerde, professionele concepten die alleen kleine aanpassingen nodig hebben.",
+    author: "Sarah M.",
+    title: "Bedrijfssecretaris",
+    company: "Tech bedrijf"
+  },
+  {
+    quote: "De AI begrijpt bestuursterminologie en governance-vereisten. Ik bespaar 70% van mijn tijd en lever betere kwaliteit notulen.",
+    author: "Lore Werbrouck",
+    title: "Algemeen Juridisch Adviseur",
+    company: "Van de Velde"
+  }
+];
+
+const painPoints = [
+  {
+    title: "5+ uur werk na de vergadering",
+    description: "Bestuurssecretarissen besteden hele avonden aan het uitwerken van notities, formatteren van documenten en ervoor zorgen dat niets gemist wordt.",
+    icon: "⏰",
+    painLevel: "high"
+  },
+  {
+    title: "Inconsistente concepten en meerdere versies",
+    description: "Handmatige notulen leiden tot onvolledige verslagen, gemiste beslissingen en eindeloze heen-en-weer revisies.",
+    icon: "📝",
+    painLevel: "high"
+  },
+  {
+    title: "Risico op fouten of gemiste belangrijke beslissingen",
+    description: "Kritieke resoluties en actiepunten gaan verloren in rommelige handgeschreven notities of verspreide digitale documenten.",
+    icon: "❌",
+    painLevel: "critical"
+  },
+  {
+    title: "Stress om notulen snel af te ronden voor compliance",
+    description: "Governance-vereisten eisen snelle afhandeling, maar handmatige processen maken dit bijna onmogelijk.",
+    icon: "😰",
+    painLevel: "critical"
+  }
+];
+
+const timeSavings = [
+  {
+    feature: "AI-concept in minuten",
+    benefit: "vermindert werklast met 70%",
+    description: "Krijg een gestructureerd, governance-conform concept direct nadat uw vergadering eindigt."
+  },
+  {
+    feature: "Beoordelen, niet herschrijven",
+    benefit: "secretarissen behouden volledige controle",
+    description: "U valideert en verfijnt in plaats van vanaf nul te beginnen. Volledige redactionele controle blijft behouden."
+  },
+  {
+    feature: "Governance-getrainde AI",
+    benefit: "begrijpt beslissingen, acties, resoluties",
+    description: "Speciaal gebouwd voor bestuursvergaderingen, geen generieke transcriptie. Identificeert belangrijke governance-elementen."
+  },
+  {
+    feature: "Eén-klik publiceren",
+    benefit: "veilig distribueren naar alle bestuurders",
+    description: "Deel definitieve notulen naadloos via veilige, GDPR-conforme kanalen."
+  }
+];
+
+const comparisonData = [
+  {
+    task: "Notulen opstellen",
+    before: "3–4 uur",
+    after: "< 10 minuten (AI-concept)"
+  },
+  {
+    task: "Herschrijven & afstemmen",
+    before: "1–2 uur",
+    after: "< 20 minuten (beoordeling)"
+  },
+  {
+    task: "Delen met bestuurders",
+    before: "1 uur",
+    after: "1 klik"
+  }
+];
+
+const trustFactors = [
+  {
+    title: "EU-gebaseerde hosting & GDPR-naleving",
+    description: "uw gegevens verlaten Europa nooit",
+    icon: "🇪🇺"
+  },
+  {
+    title: "Bank-niveau beveiliging",
+    description: "AES 256, ISO-gecertificeerd",
+    icon: "🔒"
+  },
+  {
+    title: "Onbeperkte gebruikers inbegrepen",
+    description: "geen verborgen kosten per seat",
+    icon: "👥"
+  },
+  {
+    title: "AI native, geen add-on",
+    description: "direct in het platform ingebouwd",
+    icon: "🤖"
+  }
+];
+
+const competitorComparison = [
+  {
+    feature: "AI-gegenereerde notulen",
+    govrn: { status: "✅", description: "Native, governance-getraind" },
+    onboard: { status: "✅", description: "Add-on" },
+    diligent: { status: "✅", description: "Add-on" }
+  },
+  {
+    feature: "GDPR-naleving",
+    govrn: { status: "✅", description: "100% EU" },
+    onboard: { status: "❌", description: "VS-gebaseerd" },
+    diligent: { status: "❌", description: "VS-gebaseerd" }
+  },
+  {
+    feature: "Onbeperkte gebruikers",
+    govrn: { status: "✅", description: "Ja" },
+    onboard: { status: "❌", description: "Nee" },
+    diligent: { status: "❌", description: "Nee" }
+  },
+  {
+    feature: "Prijstransparantie",
+    govrn: { status: "✅", description: "Vaste plannen" },
+    onboard: { status: "❌", description: "Verborgen kosten" },
+    diligent: { status: "❌", description: "Alleen offertes" }
+  },
+  {
+    feature: "Tijd bespaard per vergadering",
+    govrn: { status: "✅", description: "70% (5u → 30min)" },
+    onboard: { status: "~40%", description: "" },
+    diligent: { status: "~40%", description: "" }
+  }
+];
+
+const faqData = {
+  title: "Veelgestelde vragen",
+  subtitle: "Alles wat u moet weten over AI-ondersteunde bestuursnotulen",
+  inLanguage: "nl",
+  faqs: [
+    {
+      question: "Hoe snel kan AI notulen genereren?",
+      answer: "Govrn maakt binnen minuten na afloop van de vergadering een concept — secretarissen verminderen doorgaans hun werklast met 70%."
+    },
+    {
+      question: "Kunnen AI-notulen een secretaris vervangen?",
+      answer: "Nee. AI doet het zware werk, maar secretarissen blijven in controle voor beoordeling, validatie en publicatie."
+    },
+    {
+      question: "Is het veilig om AI bestuursnotulen te laten verwerken?",
+      answer: "Ja. Govrn is EU-gebaseerd, GDPR-conform en end-to-end versleuteld. In tegenstelling tot VS-providers verlaten uw gegevens Europa nooit."
+    },
+    {
+      question: "Wat als ik de notulen moet aanpassen?",
+      answer: "U kunt eenvoudig beoordelen, bewerken en context toevoegen. Het AI-concept is een startpunt, geen rigide uitvoer."
+    }
+  ]
+};
+---
+
+<Layout
+  title="AI Vergadernotulen Generator – Bespaar Uren | Govrn"
+  description="Verander uren handmatige notulen in minuten. Govrn's AI Notulen Builder bespaart 70% van uw tijd. EU-gebaseerd, GDPR-conform."
+
+>
+  <main class="pt-16">
+    <!-- Hero Sectie -->
+    <section class="relative min-h-[90vh] flex items-center overflow-hidden">
+      <!-- Achtergrond afbeelding -->
+      <div class="absolute inset-0 z-0">
+        <Image
+          src={backgroundImage}
+          alt="AI vergadernotulen achtergrond"
+          class="w-full h-full object-cover"
+          quality={80}
+        />
+        <div class="absolute inset-0 bg-gradient-to-br from-primary/95 via-slate-900/90 to-slate-900/95"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(57,153,222,0.1),transparent_50%)]"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(57,153,222,0.05),transparent_60%)]"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <!-- Inhoud -->
+          <div class="flex-1 text-center lg:text-left">
+            <div class="inline-flex items-center rounded-full px-4 py-1.5 text-sm font-medium bg-white/20 text-white backdrop-blur-sm mb-8 hover:bg-white/30 transition-colors">
+              📝 AI Notulen Builder
+            </div>
+
+            <h1 class="text-5xl lg:text-6xl font-bold text-white tracking-tight mb-6 leading-tight">
+              Verander uren handmatige notulen in <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">minuten slimme AI-samenvattingen</span>
+            </h1>
+            <p class="text-xl text-white/90 leading-relaxed mb-8">
+              Bestuurssecretarissen hoeven niet langer 5+ uur per vergadering te besteden aan het opstellen, herschrijven en afstemmen van bestuursnotulen. Met Govrn's AI Notulen Builder krijgt u een gestructureerd, veilig, EU-gehost concept in minuten — u bespaart tot 70% van uw tijd.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 lg:justify-start justify-center">
+              <a href="/nl/try" class="px-8 py-4 bg-primary text-white rounded-xl font-medium hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20">
+                Start gratis proefperiode
+              </a>
+              <a href="/nl/request-demo" class="px-8 py-4 bg-white text-primary border-2 border-primary/20 rounded-xl font-medium hover:bg-primary/5 transition-colors">
+                Boek een demo
+              </a>
+            </div>
+            <p class="text-sm text-white/70 mt-4">
+              Geen creditcard vereist • EU-gehost & GDPR-conform • Setup in minuten
+            </p>
+          </div>
+
+          <!-- Tijdbesparings visueel -->
+          <div class="flex-1 lg:max-w-lg">
+            <div class="relative">
+              <div class="bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-8 shadow-xl border border-primary/20">
+                <div class="text-center">
+                  <div class="text-6xl mb-4">⚡</div>
+                  <div class="bg-white rounded-lg p-6 shadow-lg mb-4">
+                    <div class="text-center mb-4">
+                      <div class="text-2xl font-bold text-gray-900 mb-2">Van 5 uur → 30 minuten</div>
+                      <div class="text-primary font-semibold">Elke vergadering</div>
+                    </div>
+                    <div class="flex items-center justify-between text-sm">
+                      <div class="text-red-500 font-medium">Voor: Handmatig werk</div>
+                      <div class="text-primary font-medium">Na: AI-concept</div>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mt-3">
+                      <div class="bg-primary h-2 rounded-full" style="width: 30%"></div>
+                    </div>
+                    <div class="text-xs text-gray-500 mt-2 text-center">70% minder tijd besteed</div>
+                  </div>
+                  <div class="text-sm font-medium text-primary/90 italic bg-white/95 px-3 py-2 rounded-lg shadow-sm">
+                    "Eindelijk kan ik me concentreren op de vergadering, niet op de notities"
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tijdbesparings indicatoren -->
+              <div class="absolute -top-4 -right-4 bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-semibold shadow-lg animate-bounce-slow">
+                70% tijd bespaard
+              </div>
+              <div class="absolute -bottom-4 -left-4 bg-white text-primary px-3 py-1 rounded-full text-sm font-semibold shadow-lg border border-primary/20">
+                AI-aangedreven
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stop met tijd verspillen sectie -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-4xl mx-auto mb-16">
+          <div class="inline-flex items-center rounded-full px-4 py-1.5 text-sm font-medium bg-red-100 text-red-700 mb-8">
+            Stop de tijdverspilling
+          </div>
+          <h2 class="text-4xl font-bold text-gray-900 mt-2 mb-6">
+            Stop tijd verspillen, focus op beslissingen
+          </h2>
+          <p class="text-xl text-gray-600 mb-8">
+            Handmatige notulen vertragen besturen. Govrn verandert dit: u begint met een klaar-voor-beoordeling concept, geen blanco pagina.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          {painPoints.map((point) => (
+            <div class={`rounded-xl p-6 border ${point.painLevel === 'critical' ? 'bg-red-50 border-red-200' : 'bg-orange-50 border-orange-200'}`}>
+              <div class="text-3xl mb-4 text-center">{point.icon}</div>
+              <h3 class="font-bold text-gray-900 mb-3 text-center">{point.title}</h3>
+              <p class="text-gray-600 text-sm text-center">{point.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg font-semibold text-gray-900 mb-6">
+            Govrn verandert dit: u begint met een klaar-voor-beoordeling concept, geen blanco pagina.
+          </p>
+          <a href="/nl/try" class="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors">
+            Start gratis proefperiode
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Onmiddellijke tijdbesparingen sectie -->
+    <section class="py-24 bg-gradient-to-br from-primary/5 to-primary/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-4xl mx-auto mb-16">
+          <div class="inline-flex items-center rounded-full px-4 py-1.5 text-sm font-medium bg-primary/10 text-primary mb-8">
+            Onmiddellijke tijdbesparingen
+          </div>
+          <h2 class="text-4xl font-bold text-gray-900 mt-2 mb-6">
+            Onmiddellijke tijdbesparingen met AI Notulen Builder
+          </h2>
+          <p class="text-xl text-gray-600">
+            👉 Van 5 uur → 30 minuten. Elke vergadering.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          {timeSavings.map((item) => (
+            <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div class="mb-4">
+                <h3 class="font-bold text-gray-900 mb-2">{item.feature}</h3>
+                <div class="text-primary font-semibold text-sm mb-3">→ {item.benefit}</div>
+              </div>
+              <p class="text-gray-600 text-sm">{item.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="text-center">
+          <div class="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+            <a href="/nl/try" class="inline-flex items-center px-8 py-4 bg-primary text-white rounded-xl font-medium hover:bg-primary/90 transition-colors shadow-lg">
+              Start gratis proefperiode
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+            <a href="/nl/features/ai-minute-builder" class="inline-flex items-center px-8 py-4 bg-white text-primary border-2 border-primary rounded-xl font-medium hover:bg-primary/5 transition-colors shadow-lg">
+              Ontdek hoe het werkt
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Voor & Na Govrn sectie -->
+    <section class="py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-6">
+            Voor & na Govrn
+          </h2>
+          <p class="text-xl text-gray-600">
+            Zie de dramatische tijdbesparingen in actie
+          </p>
+        </div>
+
+        <div class="bg-gradient-to-r from-gray-50 to-primary/5 rounded-2xl p-8 shadow-xl border border-gray-200">
+          <div class="overflow-x-auto">
+            <table class="w-full">
+              <thead>
+                <tr class="border-b border-gray-200">
+                  <th class="text-left py-4 px-6 font-bold text-gray-900">Taak</th>
+                  <th class="text-center py-4 px-6 font-bold text-red-600">Voor Govrn</th>
+                  <th class="text-center py-4 px-6 font-bold text-primary">Met Govrn</th>
+                </tr>
+              </thead>
+              <tbody>
+                {comparisonData.map((row, index) => (
+                  <tr class={`border-b border-gray-100 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
+                    <td class="py-4 px-6 font-semibold text-gray-900">{row.task}</td>
+                    <td class="py-4 px-6 text-center text-red-600 font-medium">{row.before}</td>
+                    <td class="py-4 px-6 text-center text-primary font-medium">{row.after}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mt-8 text-center bg-white rounded-xl p-6 border border-primary/20">
+            <div class="text-2xl font-bold text-gray-900 mb-2">
+              Totaal tijd bespaard: <span class="text-primary">4,5+ uur per vergadering</span>
+            </div>
+            <p class="text-gray-600 mb-4">Dat is uw hele weekend terugkrijgen!</p>
+            <a href="/nl/request-demo" class="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors">
+              Boek een demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Waarom Europese besturen Govrn vertrouwen -->
+    <section class="py-24 bg-gradient-to-br from-primary/5 to-primary/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-4xl mx-auto mb-16">
+          <div class="inline-flex items-center rounded-full px-4 py-1.5 text-sm font-medium bg-primary/10 text-primary mb-8">
+            Europees vertrouwen
+          </div>
+          <h2 class="text-4xl font-bold text-gray-900 mt-2 mb-6">
+            Waarom Europese besturen Govrn vertrouwen
+          </h2>
+          <p class="text-xl text-gray-600 mb-6">
+            👉 In tegenstelling tot Amerikaanse concurrenten is Govrn ontworpen voor Europese besturen eerst.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          {trustFactors.map((factor) => (
+            <div class="bg-white rounded-xl p-6 shadow-lg border border-primary/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-center">
+              <div class="text-3xl mb-4">{factor.icon}</div>
+              <h3 class="font-bold text-gray-900 mb-3">{factor.title}</h3>
+              <p class="text-gray-600 text-sm">{factor.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="text-center">
+          <div class="inline-flex items-center rounded-full px-6 py-3 bg-primary/10 text-primary font-medium mb-6">
+            🇪🇺 100% Europese datasoevereiniteit
+          </div>
+          <br>
+          <a href="/nl/try" class="inline-flex items-center px-8 py-4 bg-primary text-white rounded-xl font-medium hover:bg-primary/90 transition-colors shadow-lg">
+            Ervaar Europees-first governance
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Concurrent vergelijking -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-6">
+            Govrn vs OnBoard vs Diligent
+          </h2>
+          <p class="text-xl text-gray-600">
+            👉 Govrn is het enige EU-native bestuursplatform dat AI-snelheid combineert met GDPR-niveau beveiliging.
+          </p>
+        </div>
+
+        <div class="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 shadow-xl border border-gray-200">
+          <div class="overflow-x-auto">
+            <table class="w-full">
+              <thead>
+                <tr class="border-b border-gray-200">
+                  <th class="text-left py-4 px-6 font-bold text-gray-900">Functie</th>
+                  <th class="text-center py-4 px-6 font-bold text-primary">Govrn</th>
+                  <th class="text-center py-4 px-6 font-bold text-gray-600">OnBoard</th>
+                  <th class="text-center py-4 px-6 font-bold text-gray-600">Diligent</th>
+                </tr>
+              </thead>
+              <tbody>
+                {competitorComparison.map((row, index) => (
+                  <tr class={`border-b border-gray-100 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
+                    <td class="py-4 px-6 font-semibold text-gray-900">{row.feature}</td>
+                    <td class="py-4 px-6 text-center">
+                      <div class="font-bold text-primary">{row.govrn.status}</div>
+                      <div class="text-sm text-gray-600">{row.govrn.description}</div>
+                    </td>
+                    <td class="py-4 px-6 text-center">
+                      <div class="font-bold text-gray-600">{row.onboard.status}</div>
+                      <div class="text-sm text-gray-600">{row.onboard.description}</div>
+                    </td>
+                    <td class="py-4 px-6 text-center">
+                      <div class="font-bold text-gray-600">{row.diligent.status}</div>
+                      <div class="text-sm text-gray-600">{row.diligent.description}</div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mt-8 text-center bg-white rounded-xl p-6 border border-primary/20">
+            <div class="text-xl font-bold text-gray-900 mb-4">
+              Klaar om over te stappen naar de Europese leider in AI governance?
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/nl/try" class="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors">
+                Start gratis proefperiode
+              </a>
+              <a href="/nl/request-demo" class="inline-flex items-center px-6 py-3 bg-white text-primary border border-primary rounded-lg font-medium hover:bg-primary/5 transition-colors">
+                Boek een demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Sectie -->
+    <FAQ texts={faqData} />
+
+    <!-- Finale CTA sectie -->
+    <section class="bg-gradient-to-br from-primary to-primary/80 py-32">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+        <h2 class="text-4xl font-bold text-white mb-8">
+          Klaar om uren te besparen na elke bestuursvergadering?
+        </h2>
+        <p class="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
+          👉 Start nu uw gratis proefperiode en zie waarom Europese besturen overstappen van OnBoard & Diligent naar Govrn.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/nl/request-demo"
+            class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-primary bg-white hover:bg-gray-50 transition-all duration-200 hover:shadow-lg hover:-translate-y-1"
+          >
+            Boek een demo
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+          <a
+            href="/nl/try"
+            class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white border-2 border-white hover:bg-white/10 transition-all duration-200 hover:-translate-y-1"
+          >
+            Start gratis proefperiode
+          </a>
+        </div>
+        <p class="text-white/80 mt-6">
+          Geen creditcard vereist • EU-gehost & GDPR-conform • Setup in 5 minuten
+        </p>
+        <p class="text-sm text-white/60 mt-2">
+          Sluit u aan bij 200+ Europese besturen die al 70% van hun tijd besparen met AI
+        </p>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+
+<style>
+  /* Aangepaste animaties */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes bounceSlow {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 1s ease-out 0.3s both;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-bounce-slow {
+    animation: bounceSlow 3s ease-in-out infinite;
+  }
+
+  /* FAQ vloeiende overgangen */
+  .faq-content {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .faq-icon {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* Verbeterde responsieve tabellen */
+  @media (max-width: 768px) {
+    .overflow-x-auto table {
+      font-size: 0.875rem;
+    }
+
+    .overflow-x-auto td,
+    .overflow-x-auto th {
+      padding: 0.75rem 0.5rem;
+    }
+  }
+</style>

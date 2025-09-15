@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { supportFaqs } from '../../data/faq-data';
+import FAQ from '../../components/FAQ.astro';
 
 import PricingTiers from '../../components/pricing/PricingTiers.astro';
 const supportServices = [
@@ -69,21 +70,6 @@ const featureCategories = [
     ]
   }
 ];
-
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "name": "Govrn - Prijzen FAQ",
-  "inLanguage": "nl",
-  mainEntity: supportFaqs.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
 
 const pricingTexts = {
   featureCategories: [
@@ -535,28 +521,35 @@ const pricingTexts = {
     subtitle: "Ontdek in detail de functies van elk pakket om de beste keuze te maken"
   } };
 
-const faqs = [
-    {
-      question: "Welke training biedt u aan?",
-      answer: "We bieden uitgebreide trainingsprogramma's met live sessies, videohandleidingen, documentatie en aangepaste workshops. Onze training behandelt alles, van basisnavigatie tot geavanceerde functies en best practices."
-    },
-    {
-      question: "Hoe lang duurt het onboardingproces?",
-      answer: "De onboarding duurt meestal 2 tot 4 weken, afhankelijk van de grootte en behoeften van uw organisatie. We begeleiden u door het hele proces voor een soepele overgang."
-    },
-    {
-      question: "Biedt u doorlopende ondersteuning na implementatie?",
-      answer: "Ja, we bieden doorlopende ondersteuning via verschillende kanalen: e-mail, telefoon en live chat. Enterprise klanten krijgen een dedicated klantsuccesmanager voor persoonlijke ondersteuning."
-    },
-    {
-      question: "Kunt u ons helpen met gegevensmigratie?",
-      answer: "Absoluut! Ons team helpt u bij het migreren van bestaande documenten en gegevens naar Govrn, waarbij we een soepele overgang garanderen met behoud van data-integriteit en beveiliging."
-    }
+const supportFaqsNl = [
+  {
+    question: "Welke training biedt u aan?",
+    answer: "We bieden uitgebreide trainingsprogramma's met live sessies, videohandleidingen, documentatie en aangepaste workshops. Onze training behandelt alles, van basisnavigatie tot geavanceerde functies en best practices."
+  },
+  {
+    question: "Hoe lang duurt het onboardingproces?",
+    answer: "De onboarding duurt meestal 2 tot 4 weken, afhankelijk van de grootte en behoeften van uw organisatie. We begeleiden u door het hele proces voor een soepele overgang."
+  },
+  {
+    question: "Biedt u doorlopende ondersteuning na implementatie?",
+    answer: "Ja, we bieden doorlopende ondersteuning via verschillende kanalen: e-mail, telefoon en live chat. Enterprise klanten krijgen een dedicated klantsuccesmanager voor persoonlijke ondersteuning."
+  },
+  {
+    question: "Kunt u ons helpen met gegevensmigratie?",
+    answer: "Absoluut! Ons team helpt u bij het migreren van bestaande documenten en gegevens naar Govrn, waarbij we een soepele overgang garanderen met behoud van data-integriteit en beveiliging."
+  }
 ];
+
+const faqData = {
+  title: "FAQ Support en Training",
+  subtitle: "Veelgestelde vragen over onze support- en trainingsdiensten",
+  inLanguage: "nl",
+  faqs: supportFaqsNl
+};
 
 ---
 
-<Layout title="Prijzen - Govrn Bestuurssoftware" description="Eenvoudige en transparante prijzen vanaf €149/maand. Kies het ideale pakket voor uw bestuur." structuredData={structuredData}>
+<Layout title="Prijzen - Govrn Bestuurssoftware" description="Eenvoudige en transparante prijzen vanaf €149/maand. Kies het ideale pakket voor uw bestuur." >
   <main class="pt-16">
     <!-- Header sectie -->
     <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
@@ -618,23 +611,7 @@ const faqs = [
     </section>
 
     <!-- FAQ Support -->
-    <section class="py-20 bg-white">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl font-bold text-gray-900">FAQ Support en Training</h2>
-          <p class="mt-4 text-xl text-gray-600">Veelgestelde vragen over onze support- en trainingsdiensten</p>
-        </div>
-
-        <div class="space-y-8">
-          {faqs.map(faq => (
-            <div class="bg-gray-50 rounded-lg p-6">
-              <h3 class="text-lg font-semibold text-gray-900">{faq.question}</h3>
-              <p class="mt-2 text-gray-600">{faq.answer}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+    <FAQ texts={faqData} />
 
     <!-- Call-to-action -->
     <section class="bg-gradient-to-br from-primary to-blue-600 py-24">

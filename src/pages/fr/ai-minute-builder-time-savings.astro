@@ -1,0 +1,614 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import backgroundImage from '../../assets/images/background-image.jpg';
+import FAQ from '../../components/FAQ.astro';
+
+const testimonials = [
+  {
+    quote: "De 5 heures à 30 minutes par réunion. L'IA de Govrn me donne des brouillons structurés et professionnels qui ne nécessitent qu'une révision mineure.",
+    author: "Sarah M.",
+    title: "Secrétaire corporative",
+    company: "Société technologique"
+  },
+  {
+    quote: "L'IA comprend la terminologie du conseil et les exigences de gouvernance. J'économise 70% de mon temps et livre des minutes de meilleure qualité.",
+    author: "Lore Werbrouck",
+    title: "Conseiller juridique général",
+    company: "Van de Velde"
+  }
+];
+
+const painPoints = [
+  {
+    title: "5+ heures de travail post-réunion",
+    description: "Les secrétaires de conseil passent des soirées entières à transcrire les notes, formater les documents et s'assurer que rien n'a été oublié.",
+    icon: "⏰",
+    painLevel: "high"
+  },
+  {
+    title: "Brouillons incohérents et versions multiples",
+    description: "La prise de notes manuelle conduit à des enregistrements incomplets, des décisions manquées et d'interminables révisions.",
+    icon: "📝",
+    painLevel: "high"
+  },
+  {
+    title: "Risque d'erreurs ou décisions clés manquées",
+    description: "Les résolutions critiques et les éléments d'action se perdent dans les notes manuscrites désordonnées ou les documents numériques éparpillés.",
+    icon: "❌",
+    painLevel: "critical"
+  },
+  {
+    title: "Stress pour finaliser rapidement les minutes pour la conformité",
+    description: "Les exigences de gouvernance demandent un délai d'exécution rapide, mais les processus manuels rendent cela presque impossible.",
+    icon: "😰",
+    painLevel: "critical"
+  }
+];
+
+const timeSavings = [
+  {
+    feature: "Brouillon IA en quelques minutes",
+    benefit: "réduit la charge de travail de 70%",
+    description: "Obtenez un brouillon structuré et conforme à la gouvernance immédiatement après la fin de votre réunion."
+  },
+  {
+    feature: "Réviser, ne pas réécrire",
+    benefit: "les secrétaires gardent le contrôle total",
+    description: "Vous validez et affinez au lieu de repartir de zéro. Le contrôle éditorial complet est maintenu."
+  },
+  {
+    feature: "IA formée à la gouvernance",
+    benefit: "comprend les décisions, actions, résolutions",
+    description: "Conçu spécifiquement pour les réunions de conseil, pas une transcription générique. Identifie les éléments clés de gouvernance."
+  },
+  {
+    feature: "Publication en un clic",
+    benefit: "distribuer en sécurité à tous les administrateurs",
+    description: "Partagez facilement les minutes finales via des canaux sécurisés et conformes au RGPD."
+  }
+];
+
+const comparisonData = [
+  {
+    task: "Rédaction des minutes",
+    before: "3–4 heures",
+    after: "< 10 minutes (brouillon IA)"
+  },
+  {
+    task: "Réécriture & alignement",
+    before: "1–2 heures",
+    after: "< 20 minutes (révision)"
+  },
+  {
+    task: "Partage avec les administrateurs",
+    before: "1 heure",
+    after: "1 clic"
+  }
+];
+
+const trustFactors = [
+  {
+    title: "Hébergement UE & conformité RGPD",
+    description: "vos données ne quittent jamais l'Europe",
+    icon: "🇪🇺"
+  },
+  {
+    title: "Sécurité niveau bancaire",
+    description: "AES 256, certifié ISO",
+    icon: "🔒"
+  },
+  {
+    title: "Utilisateurs illimités inclus",
+    description: "pas de coûts cachés par siège",
+    icon: "👥"
+  },
+  {
+    title: "IA native, pas un module complémentaire",
+    description: "intégré directement dans la plateforme",
+    icon: "🤖"
+  }
+];
+
+const competitorComparison = [
+  {
+    feature: "Minutes générées par IA",
+    govrn: { status: "✅", description: "Native, formée gouvernance" },
+    onboard: { status: "✅", description: "Module complémentaire" },
+    diligent: { status: "✅", description: "Module complémentaire" }
+  },
+  {
+    feature: "Conformité RGPD",
+    govrn: { status: "✅", description: "100% UE" },
+    onboard: { status: "❌", description: "Basé aux États-Unis" },
+    diligent: { status: "❌", description: "Basé aux États-Unis" }
+  },
+  {
+    feature: "Utilisateurs illimités",
+    govrn: { status: "✅", description: "Oui" },
+    onboard: { status: "❌", description: "Non" },
+    diligent: { status: "❌", description: "Non" }
+  },
+  {
+    feature: "Transparence tarifaire",
+    govrn: { status: "✅", description: "Plans fixes" },
+    onboard: { status: "❌", description: "Frais cachés" },
+    diligent: { status: "❌", description: "Devis uniquement" }
+  },
+  {
+    feature: "Temps économisé par réunion",
+    govrn: { status: "✅", description: "70% (5h → 30min)" },
+    onboard: { status: "~40%", description: "" },
+    diligent: { status: "~40%", description: "" }
+  }
+];
+
+const faqData = {
+  title: "Foire aux questions",
+  subtitle: "Tout ce que vous devez savoir sur les minutes de conseil assistées par IA",
+  inLanguage: "fr",
+  faqs: [
+    {
+      question: "À quelle vitesse l'IA peut-elle générer des minutes ?",
+      answer: "Govrn crée un brouillon en quelques minutes après la fin de la réunion — les secrétaires réduisent généralement leur charge de travail de 70%."
+    },
+    {
+      question: "Les minutes IA peuvent-elles remplacer un secrétaire ?",
+      answer: "Non. L'IA fait le gros du travail, mais les secrétaires restent en contrôle pour la révision, la validation et la publication."
+    },
+    {
+      question: "Est-il sûr de laisser l'IA gérer les minutes de conseil ?",
+      answer: "Oui. Govrn est basé en UE, conforme au RGPD et chiffré de bout en bout. Contrairement aux fournisseurs américains, vos données ne quittent jamais l'Europe."
+    },
+    {
+      question: "Et si je dois personnaliser les minutes ?",
+      answer: "Vous pouvez facilement réviser, éditer et ajouter du contexte. Le brouillon IA est un point de départ, pas une sortie rigide."
+    }
+  ]
+};
+---
+
+<Layout
+  title="Générateur de Minutes de Réunion IA – Économisez des Heures | Govrn"
+  description="Transformez des heures de prise de notes manuelle en minutes. Le Générateur de Minutes IA de Govrn vous fait économiser 70% de votre temps. Basé en UE, conforme RGPD."
+
+>
+  <main class="pt-16">
+    <!-- Section Hero -->
+    <section class="relative min-h-[90vh] flex items-center overflow-hidden">
+      <!-- Image d'arrière-plan -->
+      <div class="absolute inset-0 z-0">
+        <Image
+          src={backgroundImage}
+          alt="Arrière-plan minutes de réunion IA"
+          class="w-full h-full object-cover"
+          quality={80}
+        />
+        <div class="absolute inset-0 bg-gradient-to-br from-primary/95 via-slate-900/90 to-slate-900/95"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(57,153,222,0.1),transparent_50%)]"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(57,153,222,0.05),transparent_60%)]"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <!-- Contenu -->
+          <div class="flex-1 text-center lg:text-left">
+            <div class="inline-flex items-center rounded-full px-4 py-1.5 text-sm font-medium bg-white/20 text-white backdrop-blur-sm mb-8 hover:bg-white/30 transition-colors">
+              📝 Générateur de Minutes IA
+            </div>
+
+            <h1 class="text-5xl lg:text-6xl font-bold text-white tracking-tight mb-6 leading-tight">
+              Transformez des heures de prise de notes manuelle en <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">minutes de résumés IA intelligents</span>
+            </h1>
+            <p class="text-xl text-white/90 leading-relaxed mb-8">
+              Les secrétaires de conseil n'ont plus besoin de passer 5+ heures par réunion à rédiger, réécrire et aligner les minutes de conseil. Avec le Générateur de Minutes IA de Govrn, vous obtenez un brouillon structuré, sécurisé, hébergé en UE en quelques minutes — économisant jusqu'à 70% de votre temps.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 lg:justify-start justify-center">
+              <a href="/fr/try" class="px-8 py-4 bg-primary text-white rounded-xl font-medium hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20">
+                Commencer l'essai gratuit
+              </a>
+              <a href="/fr/request-demo" class="px-8 py-4 bg-white text-primary border-2 border-primary/20 rounded-xl font-medium hover:bg-primary/5 transition-colors">
+                Réserver une démo
+              </a>
+            </div>
+            <p class="text-sm text-white/70 mt-4">
+              Aucune carte de crédit requise • Hébergé en UE & conforme RGPD • Configuration en minutes
+            </p>
+          </div>
+
+          <!-- Visuel d'économie de temps -->
+          <div class="flex-1 lg:max-w-lg">
+            <div class="relative">
+              <div class="bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-8 shadow-xl border border-primary/20">
+                <div class="text-center">
+                  <div class="text-6xl mb-4">⚡</div>
+                  <div class="bg-white rounded-lg p-6 shadow-lg mb-4">
+                    <div class="text-center mb-4">
+                      <div class="text-2xl font-bold text-gray-900 mb-2">De 5 heures → 30 minutes</div>
+                      <div class="text-primary font-semibold">Chaque réunion</div>
+                    </div>
+                    <div class="flex items-center justify-between text-sm">
+                      <div class="text-red-500 font-medium">Avant : Travail manuel</div>
+                      <div class="text-primary font-medium">Après : Brouillon IA</div>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mt-3">
+                      <div class="bg-primary h-2 rounded-full" style="width: 30%"></div>
+                    </div>
+                    <div class="text-xs text-gray-500 mt-2 text-center">70% moins de temps passé</div>
+                  </div>
+                  <div class="text-sm font-medium text-primary/90 italic bg-white/95 px-3 py-2 rounded-lg shadow-sm">
+                    "Enfin, je peux me concentrer sur la réunion, pas sur les notes"
+                  </div>
+                </div>
+              </div>
+
+              <!-- Indicateurs d'économie de temps -->
+              <div class="absolute -top-4 -right-4 bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-semibold shadow-lg animate-bounce-slow">
+                70% temps économisé
+              </div>
+              <div class="absolute -bottom-4 -left-4 bg-white text-primary px-3 py-1 rounded-full text-sm font-semibold shadow-lg border border-primary/20">
+                Alimenté par IA
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Arrêtez de perdre du temps -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-4xl mx-auto mb-16">
+          <div class="inline-flex items-center rounded-full px-4 py-1.5 text-sm font-medium bg-red-100 text-red-700 mb-8">
+            Arrêtez la perte de temps
+          </div>
+          <h2 class="text-4xl font-bold text-gray-900 mt-2 mb-6">
+            Arrêtez de perdre du temps, concentrez-vous sur les décisions
+          </h2>
+          <p class="text-xl text-gray-600 mb-8">
+            Les minutes manuelles ralentissent les conseils. Govrn change cela : vous commencez par un brouillon prêt à réviser, pas une page blanche.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          {painPoints.map((point) => (
+            <div class={`rounded-xl p-6 border ${point.painLevel === 'critical' ? 'bg-red-50 border-red-200' : 'bg-orange-50 border-orange-200'}`}>
+              <div class="text-3xl mb-4 text-center">{point.icon}</div>
+              <h3 class="font-bold text-gray-900 mb-3 text-center">{point.title}</h3>
+              <p class="text-gray-600 text-sm text-center">{point.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="text-center">
+          <p class="text-lg font-semibold text-gray-900 mb-6">
+            Govrn change cela : vous commencez par un brouillon prêt à réviser, pas une page blanche.
+          </p>
+          <a href="/fr/try" class="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors">
+            Commencer l'essai gratuit
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Économies de temps immédiates -->
+    <section class="py-24 bg-gradient-to-br from-primary/5 to-primary/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-4xl mx-auto mb-16">
+          <div class="inline-flex items-center rounded-full px-4 py-1.5 text-sm font-medium bg-primary/10 text-primary mb-8">
+            Économies de temps immédiates
+          </div>
+          <h2 class="text-4xl font-bold text-gray-900 mt-2 mb-6">
+            Économies de temps immédiates avec le Générateur de Minutes IA
+          </h2>
+          <p class="text-xl text-gray-600">
+            👉 De 5 heures → 30 minutes. Chaque réunion.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          {timeSavings.map((item) => (
+            <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div class="mb-4">
+                <h3 class="font-bold text-gray-900 mb-2">{item.feature}</h3>
+                <div class="text-primary font-semibold text-sm mb-3">→ {item.benefit}</div>
+              </div>
+              <p class="text-gray-600 text-sm">{item.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="text-center">
+          <div class="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+            <a href="/fr/try" class="inline-flex items-center px-8 py-4 bg-primary text-white rounded-xl font-medium hover:bg-primary/90 transition-colors shadow-lg">
+              Commencer l'essai gratuit
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+            <a href="/fr/features/ai-minute-builder" class="inline-flex items-center px-8 py-4 bg-white text-primary border-2 border-primary rounded-xl font-medium hover:bg-primary/5 transition-colors shadow-lg">
+              Découvrir comment ça marche
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Avant & Après Govrn -->
+    <section class="py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-6">
+            Avant & après Govrn
+          </h2>
+          <p class="text-xl text-gray-600">
+            Découvrez les économies de temps spectaculaires en action
+          </p>
+        </div>
+
+        <div class="bg-gradient-to-r from-gray-50 to-primary/5 rounded-2xl p-8 shadow-xl border border-gray-200">
+          <div class="overflow-x-auto">
+            <table class="w-full">
+              <thead>
+                <tr class="border-b border-gray-200">
+                  <th class="text-left py-4 px-6 font-bold text-gray-900">Tâche</th>
+                  <th class="text-center py-4 px-6 font-bold text-red-600">Avant Govrn</th>
+                  <th class="text-center py-4 px-6 font-bold text-primary">Avec Govrn</th>
+                </tr>
+              </thead>
+              <tbody>
+                {comparisonData.map((row, index) => (
+                  <tr class={`border-b border-gray-100 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
+                    <td class="py-4 px-6 font-semibold text-gray-900">{row.task}</td>
+                    <td class="py-4 px-6 text-center text-red-600 font-medium">{row.before}</td>
+                    <td class="py-4 px-6 text-center text-primary font-medium">{row.after}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mt-8 text-center bg-white rounded-xl p-6 border border-primary/20">
+            <div class="text-2xl font-bold text-gray-900 mb-2">
+              Temps total économisé : <span class="text-primary">4,5+ heures par réunion</span>
+            </div>
+            <p class="text-gray-600 mb-4">Cela représente récupérer tout votre week-end !</p>
+            <a href="/fr/request-demo" class="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors">
+              Réserver une démo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pourquoi les conseils européens font confiance à Govrn -->
+    <section class="py-24 bg-gradient-to-br from-primary/5 to-primary/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-4xl mx-auto mb-16">
+          <div class="inline-flex items-center rounded-full px-4 py-1.5 text-sm font-medium bg-primary/10 text-primary mb-8">
+            Confiance européenne
+          </div>
+          <h2 class="text-4xl font-bold text-gray-900 mt-2 mb-6">
+            Pourquoi les conseils européens font confiance à Govrn
+          </h2>
+          <p class="text-xl text-gray-600 mb-6">
+            👉 Contrairement aux concurrents américains, Govrn est conçu pour les conseils européens en priorité.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          {trustFactors.map((factor) => (
+            <div class="bg-white rounded-xl p-6 shadow-lg border border-primary/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-center">
+              <div class="text-3xl mb-4">{factor.icon}</div>
+              <h3 class="font-bold text-gray-900 mb-3">{factor.title}</h3>
+              <p class="text-gray-600 text-sm">{factor.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="text-center">
+          <div class="inline-flex items-center rounded-full px-6 py-3 bg-primary/10 text-primary font-medium mb-6">
+            🇪🇺 Souveraineté des données 100% européenne
+          </div>
+          <br>
+          <a href="/fr/try" class="inline-flex items-center px-8 py-4 bg-primary text-white rounded-xl font-medium hover:bg-primary/90 transition-colors shadow-lg">
+            Découvrez la gouvernance européenne-first
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparaison concurrentielle -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-6">
+            Govrn vs OnBoard vs Diligent
+          </h2>
+          <p class="text-xl text-gray-600">
+            👉 Govrn est la seule plateforme de conseil native UE combinant rapidité IA et sécurité niveau RGPD.
+          </p>
+        </div>
+
+        <div class="bg-gradient-to-br from-gray-50 to-primary/5 rounded-2xl p-8 shadow-xl border border-gray-200">
+          <div class="overflow-x-auto">
+            <table class="w-full">
+              <thead>
+                <tr class="border-b border-gray-200">
+                  <th class="text-left py-4 px-6 font-bold text-gray-900">Fonctionnalité</th>
+                  <th class="text-center py-4 px-6 font-bold text-primary">Govrn</th>
+                  <th class="text-center py-4 px-6 font-bold text-gray-600">OnBoard</th>
+                  <th class="text-center py-4 px-6 font-bold text-gray-600">Diligent</th>
+                </tr>
+              </thead>
+              <tbody>
+                {competitorComparison.map((row, index) => (
+                  <tr class={`border-b border-gray-100 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
+                    <td class="py-4 px-6 font-semibold text-gray-900">{row.feature}</td>
+                    <td class="py-4 px-6 text-center">
+                      <div class="font-bold text-primary">{row.govrn.status}</div>
+                      <div class="text-sm text-gray-600">{row.govrn.description}</div>
+                    </td>
+                    <td class="py-4 px-6 text-center">
+                      <div class="font-bold text-gray-600">{row.onboard.status}</div>
+                      <div class="text-sm text-gray-600">{row.onboard.description}</div>
+                    </td>
+                    <td class="py-4 px-6 text-center">
+                      <div class="font-bold text-gray-600">{row.diligent.status}</div>
+                      <div class="text-sm text-gray-600">{row.diligent.description}</div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mt-8 text-center bg-white rounded-xl p-6 border border-primary/20">
+            <div class="text-xl font-bold text-gray-900 mb-4">
+              Prêt à passer au leader européen de la gouvernance IA ?
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/fr/try" class="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors">
+                Commencer l'essai gratuit
+              </a>
+              <a href="/fr/request-demo" class="inline-flex items-center px-6 py-3 bg-white text-primary border border-primary rounded-lg font-medium hover:bg-primary/5 transition-colors">
+                Réserver une démo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section FAQ -->
+    <FAQ texts={faqData} />
+
+    <!-- Section CTA finale -->
+    <section class="bg-gradient-to-br from-primary to-primary/80 py-32">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+        <h2 class="text-4xl font-bold text-white mb-8">
+          Prêt à économiser des heures après chaque réunion de conseil ?
+        </h2>
+        <p class="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
+          👉 Commencez votre essai gratuit maintenant et découvrez pourquoi les conseils européens passent d'OnBoard & Diligent à Govrn.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/fr/request-demo"
+            class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-primary bg-white hover:bg-gray-50 transition-all duration-200 hover:shadow-lg hover:-translate-y-1"
+          >
+            Réserver une démo
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+          <a
+            href="/fr/try"
+            class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white border-2 border-white hover:bg-white/10 transition-all duration-200 hover:-translate-y-1"
+          >
+            Commencer l'essai gratuit
+          </a>
+        </div>
+        <p class="text-white/80 mt-6">
+          Aucune carte de crédit requise • Hébergé en UE & conforme RGPD • Configuration en 5 minutes
+        </p>
+        <p class="text-sm text-white/60 mt-2">
+          Rejoignez 200+ conseils européens qui économisent déjà 70% de leur temps avec l'IA
+        </p>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+
+<style>
+  /* Animations personnalisées */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes bounceSlow {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 1s ease-out 0.3s both;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-bounce-slow {
+    animation: bounceSlow 3s ease-in-out infinite;
+  }
+
+  /* Transitions FAQ fluides */
+  .faq-content {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .faq-icon {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* Tableaux responsive améliorés */
+  @media (max-width: 768px) {
+    .overflow-x-auto table {
+      font-size: 0.875rem;
+    }
+
+    .overflow-x-auto td,
+    .overflow-x-auto th {
+      padding: 0.75rem 0.5rem;
+    }
+  }
+</style>

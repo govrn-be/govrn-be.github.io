@@ -3,6 +3,7 @@ interface Props {
   texts?: {
     title: string;
     subtitle: string;
+    inLanguage: string;
     faqs: {
       question: string;
       answer: string;
@@ -14,6 +15,7 @@ const {
   texts = {
     title: "Frequently Asked Questions",
     subtitle: "Find answers to common questions about Govrn",
+    inLanguage: "en",
     faqs: [
       {
         question: "How does Govrn handle different levels of digital adoption?",
@@ -42,7 +44,23 @@ const {
     ]
   }
 } = Astro.props;
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "name": texts.title,
+  "inLanguage": texts.inLanguage,
+  mainEntity: texts.faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
 ---
+<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
 <section id="faq" class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
