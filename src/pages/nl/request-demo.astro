@@ -1,9 +1,11 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import hanneImg from '../../assets/hanne.png';
 
 const sectoren = [
   "Financiële dienstverlening",
-  "Gezondheidszorg", 
+  "Gezondheidszorg",
   "Vastgoed",
   "Productie",
   "Non-profit",
@@ -13,115 +15,364 @@ const sectoren = [
 
 const bestuursgroottes = [
   "1-5 leden",
-  "6-10 leden", 
+  "6-10 leden",
   "11-15 leden",
   "16+ leden"
 ];
 
-const voordelen = [
+const waaromKiezenVoorOns = [
   {
-    icon: "📊",
+    icon: "🤖",
+    title: "AI-first platform",
+    description: "Het enige bestuursbeheersysteem dat vanaf de grond opgebouwd is met AI als kern",
+    stats: "50% snellere besluitvorming"
+  },
+  {
+    icon: "🔒",
+    title: "Enterprise beveiliging",
+    description: "Bankniveau beveiliging met geavanceerde encryptieprotocollen en uitgebreide gegevensbescherming",
+    stats: "Nul beveiligingsincidenten"
+  },
+  {
+    icon: "⚡",
+    title: "Snelle implementatie",
+    description: "Operationeel binnen enkele dagen, niet maanden, met onze begeleide onboarding",
+    stats: "Snelle configuratie"
+  },
+  {
+    icon: "📈",
+    title: "Bewezen resultaten",
+    description: "Onze klanten ervaren aanzienlijke tijdsbesparing en verbeterde bestuursefficiëntie door AI-automatisering",
+    stats: "Meetbare verbeteringen"
+  },
+  {
+    icon: "🎯",
+    title: "Speciaal voor besturen",
+    description: "Speciaal ontworpen voor bestuurgovernance, niet aangepast van andere tools",
+    stats: "98% tevredenheid"
+  },
+  {
+    icon: "🌍",
+    title: "Globale compliance",
+    description: "Ondersteuning voor internationale governance-standaarden en regelgeving",
+    stats: "50+ landen ondersteund"
+  }
+];
+
+const demoUitkomsten = [
+  {
+    icon: "🎬",
     title: "Live productdemonstratie",
-    description: "Bekijk Govrn in actie met een persoonlijke rondleiding"
+    description: "Zie hoe AI uw bestuursvergaderingen transformeert met realtime notulenopmaak, agenda-opbouw en besluitvormingsvolging"
   },
   {
-    icon: "💡", 
-    title: "Expert consultatie",
-    description: "Ontvang advies op maat voor de behoeften van uw bestuur"
+    icon: "📋",
+    title: "Persoonlijke beoordeling",
+    description: "Krijg een op maat gemaakte analyse van uw huidige bestuursprocessen en identificeer specifieke verbeteringsgebieden"
   },
   {
-    icon: "💰",
-    title: "Prijsbespreking",
-    description: "Ontdek onze flexibele prijsopties"
+    icon: "🛠️",
+    title: "Implementatie roadmap",
+    description: "Ontvang een gedetailleerd plan voor de uitrol van Govrn in uw bestuur, inclusief tijdlijn en best practices"
   },
   {
-    icon: "🚀",
-    title: "Implementatieplan",
-    description: "Leer hoe u kunt starten met Govrn"
+    icon: "💼",
+    title: "Aangepast prijsvoorstel",
+    description: "Krijg een op maat gemaakte prijsofferte gebaseerd op uw bestuursgrootte, behoeften en specifieke vereisten"
+  },
+  {
+    icon: "🎯",
+    title: "ROI Projectie",
+    description: "Zie geprojecteerde tijdbesparing en efficiëntiewinsten specifiek voor de bestuursstructuur van uw organisatie"
+  },
+  {
+    icon: "🤝",
+    title: "Expert begeleiding",
+    description: "Maak contact met onze bestuurgovernance-experts die de unieke uitdagingen van uw sector begrijpen"
   }
 ];
 ---
 
-<Layout title="Vraag een demo aan - Govrn Bestuursbeheersoftware" description="Plan een persoonlijke demo om te zien hoe Govrn uw bestuursprocessen kan transformeren met AI-gestuurde inzichten en naadloze samenwerking.">
-  <main class="pt-16">
-    <!-- Hero Sectie -->
-    <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
+<Layout title="Vraag een Demo aan - Govrn Bestuurbeheersoftware" description="Plan een persoonlijke demo om te zien hoe Govrn uw bestuursprocessen kan transformeren met AI-gestuurde inzichten en naadloze samenwerking.">
+  <main class="overflow-hidden">
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-white to-gray-50 pt-32 pb-24 overflow-x-hidden">
       <div class="absolute inset-0 z-0">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
       </div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-          <!-- Linkerkolom - Content -->
-          <div>
-            <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
-              Ervaar de toekomst van
-              <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
-                Bestuursbeheer
-              </span>
-            </h1>
-            <p class="text-xl text-gray-600 leading-relaxed mb-12">
-              Plan een persoonlijke demo om te zien hoe Govrn uw bestuursprocessen kan transformeren met AI-gestuurde inzichten en naadloze samenwerking.
-            </p>
-
-            <div class="grid sm:grid-cols-2 gap-6">
-              {voordelen.map(voordeel => (
-                <div class="flex items-start space-x-4">
-                  <div class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-2xl">
-                    {voordeel.icon}
-                  </div>
-                  <div>
-                    <h2 class="font-semibold text-gray-900">{voordeel.title}</h3>
-                    <p class="text-sm text-gray-600">{voordeel.description}</p>
-                  </div>
-                </div>
-              ))}
+        <!-- Header Section -->
+        <div class="text-center mb-16">
+          <div class="flex items-center justify-center gap-4 mb-8">
+            <div class="inline-flex items-center rounded-full px-4 py-1 text-sm font-medium bg-primary/10 text-primary">
+              <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              Expert Demo Sessie
             </div>
           </div>
 
-          <!-- Rechterkolom - Formulier -->
+          <h1 class="text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight leading-tight mb-8">
+            Praat met een
+            <span class="bg-clip-text text-transparent" style="background: linear-gradient(to right, #00c3cc, #3372e3, #7426ef); -webkit-background-clip: text;">
+              Expert
+            </span>
+          </h1>
+
+          <p class="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+            Plan een persoonlijke demo om te zien hoe Govrn uw bestuursprocessen kan transformeren met AI-gestuurde inzichten en naadloze samenwerking.
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-16 items-start">
+          <!-- Left Column - Calendly -->
           <div class="bg-white rounded-2xl p-8 shadow-xl border border-gray-100">
-            <h2 class="text-2xl font-bold text-gray-900 mb-8">Plan uw demo</h2>
+            <!-- Expert Profile -->
+            <div class="flex items-center space-x-4 mb-8 p-4 bg-gradient-to-r from-primary/5 to-blue-50 rounded-xl">
+              <div class="flex-shrink-0">
+                <Image
+                  src={hanneImg}
+                  alt="Hanne - Bestuurgovernance Specialist"
+                  width={64}
+                  height={64}
+                  class="w-16 h-16 rounded-full object-cover border-2 border-white shadow-md"
+                />
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-900">Ontmoet Hanne</h3>
+                <p class="text-sm text-gray-600">Bestuurgovernance Specialist</p>
+                <p class="text-xs text-gray-500 mt-1">Uw toegewijde expert voor deze consultatie</p>
+              </div>
+            </div>
+
             <!-- Calendly inline widget begin -->
-<div class="calendly-inline-widget" data-url="https://calendly.com/marketing-lech/30min-1?primary_color=3999de" style="min-width:320px;height:700px;"></div>
-<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-<!-- Calendly inline widget end -->
-            
+            <div class="calendly-inline-widget" data-url="https://calendly.com/marketing-lech/30min-1?primary_color=3999de" style="min-width:320px;height:700px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <!-- Calendly inline widget end -->
+          </div>
+
+          <!-- Right Column - Key Benefits -->
+          <div class="relative">
+            <!-- Floating elements for visual appeal -->
+            <div class="absolute -top-6 -right-6 w-24 h-24 bg-primary/5 rounded-full blur-xl"></div>
+            <div class="absolute -bottom-12 -left-8 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl"></div>
+
+            <div class="relative space-y-8">
+              <div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-2">Wat u krijgt van deze demo</h2>
+                <p class="text-lg text-gray-600">Transformeer uw bestuursprocessen met expert begeleiding</p>
+              </div>
+
+              <div class="grid gap-6">
+                {demoUitkomsten.slice(0, 4).map((uitkomst, index) => (
+                  <div class="group flex items-start space-x-4 p-6 bg-gradient-to-r from-white to-gray-50/50 rounded-xl border border-gray-100 hover:shadow-lg hover:border-primary/20 transition-all duration-300 hover:scale-[1.02]">
+                    <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-primary/10 to-primary/20 rounded-xl flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
+                      {uitkomst.icon}
+                    </div>
+                    <div class="flex-1">
+                      <h3 class="font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">{uitkomst.title}</h3>
+                      <p class="text-sm text-gray-600 leading-relaxed">{uitkomst.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <!-- Enhanced Trust badges -->
+              <div class="mt-12 p-6 bg-gradient-to-br from-primary/5 via-blue-50/50 to-white rounded-2xl border border-primary/10">
+                <div class="grid grid-cols-3 gap-4">
+                  <div class="text-center group">
+                    <div class="flex-shrink-0 w-16 h-16 mx-auto mb-3 rounded-xl bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <div class="text-sm">
+                      <div class="font-bold text-gray-900">30 Minuten</div>
+                      <div class="text-gray-600">Expert consultatie</div>
+                    </div>
+                  </div>
+
+                  <div class="text-center group">
+                    <div class="flex-shrink-0 w-16 h-16 mx-auto mb-3 rounded-xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      </svg>
+                    </div>
+                    <div class="text-sm">
+                      <div class="font-bold text-gray-900">Geen Risico</div>
+                      <div class="text-gray-600">Geen verplichting</div>
+                    </div>
+                  </div>
+
+                  <div class="text-center group">
+                    <div class="flex-shrink-0 w-16 h-16 mx-auto mb-3 rounded-xl bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                    </div>
+                    <div class="text-sm">
+                      <div class="font-bold text-gray-900">Boek Nu</div>
+                      <div class="text-gray-600">Directe toegang</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Sociale bewijssectie -->
-    <section class="py-20 bg-white">
+    <!-- Why People Choose Us Section -->
+    <section class="py-24 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center">
-          <h2 class="text-3xl font-bold text-gray-900 mb-8">Vertrouwd door toonaangevende organisaties</h2>
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-70">
-            <img 
-  loading="lazy"
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-6">Waarom toonaangevende besturen voor Govrn kiezen</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Sluit u aan bij honderden vooruitdenkende organisaties die hun bestuurgovernance hebben getransformeerd met ons AI-platform
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {waaromKiezenVoorOns.map(reden => (
+            <div class="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 group hover:scale-105">
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0 w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-2xl group-hover:bg-primary/20 transition-colors">
+                  {reden.icon}
+                </div>
+                <div class="flex-1">
+                  <h3 class="font-bold text-gray-900 mb-3">{reden.title}</h3>
+                  <p class="text-gray-600 mb-4">{reden.description}</p>
+                  <div class="inline-flex items-center px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                    {reden.stats}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced Social Proof Section -->
+    <section class="py-32 bg-gradient-to-br from-gray-50 to-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-20">
+          <h2 class="text-4xl font-bold text-gray-900 mb-6">Vertrouwd door toonaangevende organisaties wereldwijd</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+            Sluit u aan bij vooruitdenkende besturen wereldwijd die hun governance hebben getransformeerd met Govrn
+          </p>
+
+          <!-- Value Props Row -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+            <div class="text-center">
+              <div class="text-2xl font-bold text-primary mb-2">🏢</div>
+              <div class="font-semibold text-gray-900">Enterprise klanten</div>
+              <div class="text-sm text-gray-600">Beursgenoteerde bedrijven & instellingen</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-primary mb-2">🌍</div>
+              <div class="font-semibold text-gray-900">Wereldwijd bereik</div>
+              <div class="text-sm text-gray-600">Meerdere landen & regelgeving</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-primary mb-2">🔒</div>
+              <div class="font-semibold text-gray-900">Enterprise beveiliging</div>
+              <div class="text-sm text-gray-600">Bankniveau bescherming & compliance</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-primary mb-2">🚀</div>
+              <div class="font-semibold text-gray-900">Snelle implementatie</div>
+              <div class="text-sm text-gray-600">Snelle setup & onboarding</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Company Logos -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-12 items-center mb-16">
+          <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            <img
+              loading="lazy"
               src="/vdv-logo.png"
               alt="Van de Velde"
-              class="h-12 object-contain mx-auto"
+              class="h-16 object-contain mx-auto"
             />
-            <img 
-  loading="lazy"
+          </div>
+          <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            <img
+              loading="lazy"
               src="/fib-logo.png"
               alt="Finance & Invest Brussels"
-              class="h-12 object-contain mx-auto"
+              class="h-16 object-contain mx-auto"
             />
-            <img 
-  loading="lazy"
+          </div>
+          <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            <img
+              loading="lazy"
               src="/careproperty-logo.png"
               alt="Care Property Invest"
-              class="h-12 object-contain mx-auto"
+              class="h-16 object-contain mx-auto"
             />
-            <img 
-  loading="lazy"
-              src="/fib-logo.png"
-              alt="Ander bedrijf"
-              class="h-12 object-contain mx-auto"
+          </div>
+          <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            <img
+              loading="lazy"
+              src="/toolbox-logo.png"
+              alt="Toolbox Group"
+              class="h-16 object-contain mx-auto"
             />
+          </div>
+        </div>
+
+        <!-- Quality & Implementation Highlights -->
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center p-8 bg-white rounded-xl shadow-sm border border-gray-100">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Premium implementatie</h3>
+            <p class="text-gray-600 mb-4">White-glove onboarding met toegewijde customer success manager en uitgebreide ondersteuning tijdens uitrol</p>
+            <div class="inline-flex items-center text-sm text-green-600 font-medium">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              Begeleid setup proces
+            </div>
+          </div>
+
+          <div class="text-center p-8 bg-white rounded-xl shadow-sm border border-gray-100">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Enterprise-grade beveiliging</h3>
+            <p class="text-gray-600 mb-4">Bankniveau beveiligingsarchitectuur met geavanceerde encryptie, multi-factor authenticatie en robuuste infrastructuur voor kritieke bestuursactiviteiten</p>
+            <div class="inline-flex items-center text-sm text-blue-600 font-medium">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              Maximale beveiligingsstandaarden
+            </div>
+          </div>
+
+          <div class="text-center p-8 bg-white rounded-xl shadow-sm border border-gray-100">
+            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Bewezen resultaten</h3>
+            <p class="text-gray-600 mb-4">Onze klanten ervaren aanzienlijke tijdsbesparing en verbeterde bestuursefficiëntie door AI-automatisering</p>
+            <div class="inline-flex items-center text-sm text-purple-600 font-medium">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              Meetbare verbeteringen
+            </div>
           </div>
         </div>
       </div>
