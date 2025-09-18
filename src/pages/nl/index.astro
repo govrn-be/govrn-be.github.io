@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Hero from "../../components/Hero.astro";
+import WhyWeBuildVideo from "../../components/WhyWeBuildVideo.astro";
 import Features from "../../components/Features.astro";
 import Stats from "../../components/Stats.astro";
 import Timeline from "../../components/Timeline.astro";
@@ -540,6 +541,14 @@ const structuredData = {
   })),
 };
 
+const whyWeBuildVideoProps = {
+  title: "Waarom we Govrn bouwen",
+  subtitle: "Onze Missie",
+  videoId: "D6vubHkS_is",
+  description: "Ontdek het verhaal achter Govrn en waarom we gepassioneerd zijn over het transformeren van bestuursbeheer met AI-aangedreven oplossingen.",
+  language: "nl"
+};
+
 const ctaProps = {
   texts: {
     title: "Klaar om uw governance te transformeren?",
@@ -561,6 +570,7 @@ const ctaProps = {
 >
   <main class="overflow-hidden">
     <Hero {...hero} />
+    <WhyWeBuildVideo {...whyWeBuildVideoProps} />
     <Stats stats={stats} />
     <Features {...featuresProps} />
     <FeatureShowcase {...featureShowcaseProps} />

@@ -7,13 +7,15 @@ interface WhyWeBuildVideoProps {
   subtitle?: string;
   videoId?: string;
   description?: string;
+  language?: string;
 }
 
 const {
   title = "Why We Build Govrn",
   subtitle = "Our Mission",
   videoId = "D6vubHkS_is",
-  description = "Discover the story behind Govrn and why we're passionate about transforming board management with AI-powered solutions."
+  description = "Discover the story behind Govrn and why we're passionate about transforming board management with AI-powered solutions.",
+  language = "en"
 } = Astro.props;
 ---
 
@@ -74,7 +76,7 @@ const {
   </div>
 </section>
 
-<script define:vars={{ videoId }}>
+<script define:vars={{ videoId, language }}>
   document.addEventListener('DOMContentLoaded', function() {
     const playButton = document.getElementById('playButton');
     const thumbnail = document.getElementById('videoThumbnail');
@@ -85,8 +87,18 @@ const {
         // Hide thumbnail
         thumbnail.style.display = 'none';
 
-        // Set iframe source and show it
-        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+        // Configure subtitles based on language
+        let ccParams = '';
+        if (language === 'fr') {
+          ccParams = '&cc_load_policy=1&cc_lang_pref=fr';
+        } else if (language === 'nl') {
+          ccParams = '&cc_load_policy=1&cc_lang_pref=nl';
+        } else {
+          ccParams = '&cc_load_policy=1&cc_lang_pref=en';
+        }
+
+        // Set iframe source with appropriate subtitles and show it
+        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1${ccParams}`;
         iframe.classList.remove('hidden');
       });
     }
