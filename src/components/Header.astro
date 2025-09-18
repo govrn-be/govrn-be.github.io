@@ -16,16 +16,16 @@ const frUrl = `/fr${basePath}`;
 const nlUrl = `/nl${basePath}`;
 const buttonTexts = currentLang === 'fr' ? {
   signIn: "Se connecter",
-  tryForFree: "Essayer gratuitement",
-  tryPath: "/fr/try"
+  tryForFree: "Parler à un expert",
+  tryPath: "/fr/request-demo"
 } : currentLang === 'nl' ? {
-  signIn: "Inloggen", 
-  tryForFree: "Gratis proberen",
-  tryPath: "/nl/try"
+  signIn: "Inloggen",
+  tryForFree: "Praat met een expert",
+  tryPath: "/nl/request-demo"
 } : {
   signIn: "Sign In",
-  tryForFree: "Try for Free",
-  tryPath: "/try"
+  tryForFree: "Talk to an expert",
+  tryPath: "/request-demo"
 };
 
 const navItems = currentLang === 'fr' ? [

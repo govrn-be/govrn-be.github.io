@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import hanneImg from '../assets/hanne.png';
 
 const industries = [
   "Financial Services",
@@ -40,88 +42,360 @@ const features = [
     description: "Discover how to get started with Govrn"
   }
 ];
+
+const whyChooseUs = [
+  {
+    icon: "🤖",
+    title: "AI-First Platform",
+    description: "The only board management platform built from the ground up with AI at its core",
+    stats: "50% faster decision-making"
+  },
+  {
+    icon: "🔒",
+    title: "Enterprise Security",
+    description: "Bank-grade security with advanced encryption protocols and comprehensive data protection",
+    stats: "Zero security incidents"
+  },
+  {
+    icon: "⚡",
+    title: "Rapid Implementation",
+    description: "Get up and running in days, not months, with our guided onboarding",
+    stats: "7-day setup average"
+  },
+  {
+    icon: "📈",
+    title: "Proven ROI",
+    description: "Our customers see measurable improvements in board efficiency and governance",
+    stats: "300% ROI in first year"
+  },
+  {
+    icon: "🎯",
+    title: "Purpose-Built",
+    description: "Designed specifically for board governance, not adapted from other tools",
+    stats: "98% user satisfaction"
+  },
+  {
+    icon: "🌍",
+    title: "Global Compliance",
+    description: "Support for international governance standards and regulations",
+    stats: "50+ countries supported"
+  }
+];
+
+const demoOutcomes = [
+  {
+    icon: "🎬",
+    title: "Live Product Walkthrough",
+    description: "See how AI transforms your board meetings with real-time minute generation, agenda building, and decision tracking"
+  },
+  {
+    icon: "📋",
+    title: "Personalized Assessment",
+    description: "Get a custom analysis of your current board processes and identify specific areas for improvement"
+  },
+  {
+    icon: "🛠️",
+    title: "Implementation Roadmap",
+    description: "Receive a detailed plan for rolling out Govrn to your board, including timeline and best practices"
+  },
+  {
+    icon: "💼",
+    title: "Custom Pricing Proposal",
+    description: "Get a tailored pricing quote based on your board size, needs, and specific requirements"
+  },
+  {
+    icon: "🎯",
+    title: "ROI Projection",
+    description: "See projected time savings and efficiency gains specific to your organization's board structure"
+  },
+  {
+    icon: "🤝",
+    title: "Expert Guidance",
+    description: "Connect with our board governance experts who understand your industry's unique challenges"
+  }
+];
 ---
 
 <Layout title="Request a Demo - Govrn Board Management Software" description="Schedule a personalized demo to see how Govrn can transform your board operations with AI-powered insights and seamless collaboration.">
-  <main class="pt-16">
+  <main class="overflow-hidden">
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
+    <section class="relative bg-gradient-to-br from-white to-gray-50 pt-32 pb-24 overflow-x-hidden">
       <div class="absolute inset-0 z-0">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
       </div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-          <!-- Left Column - Content -->
-          <div>
-            <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
-              Experience the Future of
-              <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
-                Board Management
-              </span>
-            </h1>
-            <p class="text-xl text-gray-600 leading-relaxed mb-12">
-              Schedule a personalized demo to see how Govrn can transform your board operations with AI-powered insights and seamless collaboration.
-            </p>
-
-            <div class="grid sm:grid-cols-2 gap-6">
-              {features.map(feature => (
-                <div class="flex items-start space-x-4">
-                  <div class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-2xl">
-                    {feature.icon}
-                  </div>
-                  <div>
-                    <h2 class="font-semibold text-gray-900">{feature.title}</h3>
-                    <p class="text-sm text-gray-600">{feature.description}</p>
-                  </div>
-                </div>
-              ))}
+        <!-- Header Section -->
+        <div class="text-center mb-16">
+          <div class="flex items-center justify-center gap-4 mb-8">
+            <div class="inline-flex items-center rounded-full px-4 py-1 text-sm font-medium bg-primary/10 text-primary">
+              <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              Expert Demo Session
             </div>
           </div>
 
-          <!-- Right Column - Form -->
+          <h1 class="text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight leading-tight mb-8">
+            Talk to an
+            <span class="bg-clip-text text-transparent" style="background: linear-gradient(to right, #00c3cc, #3372e3, #7426ef); -webkit-background-clip: text;">
+              Expert
+            </span>
+          </h1>
+
+          <p class="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+            Schedule a personalized demo to see how Govrn can transform your board operations with AI-powered insights and seamless collaboration.
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-16 items-start">
+          <!-- Left Column - Calendly -->
           <div class="bg-white rounded-2xl p-8 shadow-xl border border-gray-100">
-            <h2 class="text-2xl font-bold text-gray-900 mb-8">Schedule Your Demo</h2>
+            <!-- Expert Profile -->
+            <div class="flex items-center space-x-4 mb-8 p-4 bg-gradient-to-r from-primary/5 to-blue-50 rounded-xl">
+              <div class="flex-shrink-0">
+                <Image
+                  src={hanneImg}
+                  alt="Hanne - Board Governance Specialist"
+                  width={64}
+                  height={64}
+                  class="w-16 h-16 rounded-full object-cover border-2 border-white shadow-md"
+                />
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-900">Meet Hanne</h3>
+                <p class="text-sm text-gray-600">Board Governance Specialist</p>
+                <p class="text-xs text-gray-500 mt-1">Your dedicated expert for this consultation</p>
+              </div>
+            </div>
+
             <!-- Calendly inline widget begin -->
-<div class="calendly-inline-widget" data-url="https://calendly.com/marketing-lech/30min-1?primary_color=3999de" style="min-width:320px;height:700px;"></div>
-<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-<!-- Calendly inline widget end -->
-            
+            <div class="calendly-inline-widget" data-url="https://calendly.com/marketing-lech/30min-1?primary_color=3999de" style="min-width:320px;height:700px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <!-- Calendly inline widget end -->
+          </div>
+
+          <!-- Right Column - Key Benefits -->
+          <div class="relative">
+            <!-- Floating elements for visual appeal -->
+            <div class="absolute -top-6 -right-6 w-24 h-24 bg-primary/5 rounded-full blur-xl"></div>
+            <div class="absolute -bottom-12 -left-8 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl"></div>
+
+            <div class="relative space-y-8">
+              <div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-2">What You'll Get From This Demo</h2>
+                <p class="text-lg text-gray-600">Transform your board operations with expert guidance</p>
+              </div>
+
+              <div class="grid gap-6">
+                {demoOutcomes.slice(0, 4).map((outcome, index) => (
+                  <div class="group flex items-start space-x-4 p-6 bg-gradient-to-r from-white to-gray-50/50 rounded-xl border border-gray-100 hover:shadow-lg hover:border-primary/20 transition-all duration-300 hover:scale-[1.02]">
+                    <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-primary/10 to-primary/20 rounded-xl flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
+                      {outcome.icon}
+                    </div>
+                    <div class="flex-1">
+                      <h3 class="font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">{outcome.title}</h3>
+                      <p class="text-sm text-gray-600 leading-relaxed">{outcome.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <!-- Enhanced Trust badges -->
+              <div class="mt-12 p-6 bg-gradient-to-br from-primary/5 via-blue-50/50 to-white rounded-2xl border border-primary/10">
+                <div class="grid grid-cols-3 gap-4">
+                  <div class="text-center group">
+                    <div class="flex-shrink-0 w-16 h-16 mx-auto mb-3 rounded-xl bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <div class="text-sm">
+                      <div class="font-bold text-gray-900">30 Minutes</div>
+                      <div class="text-gray-600">Expert consultation</div>
+                    </div>
+                  </div>
+
+                  <div class="text-center group">
+                    <div class="flex-shrink-0 w-16 h-16 mx-auto mb-3 rounded-xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      </svg>
+                    </div>
+                    <div class="text-sm">
+                      <div class="font-bold text-gray-900">Zero Risk</div>
+                      <div class="text-gray-600">No commitment</div>
+                    </div>
+                  </div>
+
+                  <div class="text-center group">
+                    <div class="flex-shrink-0 w-16 h-16 mx-auto mb-3 rounded-xl bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                    </div>
+                    <div class="text-sm">
+                      <div class="font-bold text-gray-900">Book Now</div>
+                      <div class="text-gray-600">Instant access</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Social Proof Section -->
-    <section class="py-20 bg-white">
+    <!-- Why People Choose Us Section -->
+    <section class="py-24 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center">
-          <h2 class="text-3xl font-bold text-gray-900 mb-8">Trusted by Leading Organizations</h2>
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-70">
-            <img 
-  loading="lazy"
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-6">Why Leading Boards Choose Govrn</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Join hundreds of forward-thinking organizations that have transformed their board governance with our AI-powered platform
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {whyChooseUs.map(reason => (
+            <div class="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 group hover:scale-105">
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0 w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-2xl group-hover:bg-primary/20 transition-colors">
+                  {reason.icon}
+                </div>
+                <div class="flex-1">
+                  <h3 class="font-bold text-gray-900 mb-3">{reason.title}</h3>
+                  <p class="text-gray-600 mb-4">{reason.description}</p>
+                  <div class="inline-flex items-center px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                    {reason.stats}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced Social Proof Section -->
+    <section class="py-32 bg-gradient-to-br from-gray-50 to-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-20">
+          <h2 class="text-4xl font-bold text-gray-900 mb-6">Trusted by Leading Organizations Worldwide</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+            Join forward-thinking boards worldwide who have transformed their governance with Govrn
+          </p>
+
+          <!-- Value Props Row -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+            <div class="text-center">
+              <div class="text-2xl font-bold text-primary mb-2">🏢</div>
+              <div class="font-semibold text-gray-900">Enterprise Clients</div>
+              <div class="text-sm text-gray-600">Listed companies & institutions</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-primary mb-2">🌍</div>
+              <div class="font-semibold text-gray-900">Global Reach</div>
+              <div class="text-sm text-gray-600">Multiple countries & regulations</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-primary mb-2">🔒</div>
+              <div class="font-semibold text-gray-900">Enterprise Security</div>
+              <div class="text-sm text-gray-600">Bank-level protection & compliance</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-primary mb-2">🚀</div>
+              <div class="font-semibold text-gray-900">Rapid Deployment</div>
+              <div class="text-sm text-gray-600">Quick setup & onboarding</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Company Logos -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-12 items-center mb-16">
+          <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            <img
+              loading="lazy"
               src="/vdv-logo.png"
               alt="Van de Velde"
-              class="h-12 object-contain mx-auto"
+              class="h-16 object-contain mx-auto"
             />
-            <img 
-  loading="lazy"
+          </div>
+          <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            <img
+              loading="lazy"
               src="/fib-logo.png"
               alt="Finance & Invest Brussels"
-              class="h-12 object-contain mx-auto"
+              class="h-16 object-contain mx-auto"
             />
-            <img 
-  loading="lazy"
+          </div>
+          <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            <img
+              loading="lazy"
               src="/careproperty-logo.png"
               alt="Care Property Invest"
-              class="h-12 object-contain mx-auto"
+              class="h-16 object-contain mx-auto"
             />
-            <img 
-  loading="lazy"
-              src="/fib-logo.png"
-              alt="Another Company"
-              class="h-12 object-contain mx-auto"
+          </div>
+          <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            <img
+              loading="lazy"
+              src="/toolbox-logo.png"
+              alt="Toolbox Group"
+              class="h-16 object-contain mx-auto"
             />
+          </div>
+        </div>
+
+        <!-- Quality & Implementation Highlights -->
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center p-8 bg-white rounded-xl shadow-sm border border-gray-100">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Premium Implementation</h3>
+            <p class="text-gray-600 mb-4">White-glove onboarding with dedicated customer success manager and comprehensive support during rollout</p>
+            <div class="inline-flex items-center text-sm text-green-600 font-medium">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              Guided setup process
+            </div>
+          </div>
+
+          <div class="text-center p-8 bg-white rounded-xl shadow-sm border border-gray-100">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Enterprise-Grade Security</h3>
+            <p class="text-gray-600 mb-4">Bank-level security architecture with advanced encryption, multi-factor authentication, and robust infrastructure designed for mission-critical board operations</p>
+            <div class="inline-flex items-center text-sm text-blue-600 font-medium">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              Maximum security standards
+            </div>
+          </div>
+
+          <div class="text-center p-8 bg-white rounded-xl shadow-sm border border-gray-100">
+            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Proven Results</h3>
+            <p class="text-gray-600 mb-4">Our clients experience significant time savings and improved board efficiency through AI-powered automation</p>
+            <div class="inline-flex items-center text-sm text-purple-600 font-medium">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              Measurable improvements
+            </div>
           </div>
         </div>
       </div>
