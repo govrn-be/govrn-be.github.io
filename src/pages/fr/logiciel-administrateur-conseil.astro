@@ -52,22 +52,7 @@ const productStructuredData = {
   ]
 };
 
-const faqStructuredData = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "name": "Govrn One - FAQ Logiciel Administrateur de Conseil",
-  "inLanguage": "fr",
-  mainEntity: boardMemberFaqs.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  })),
-};
-
-const combinedStructuredData = [productStructuredData, faqStructuredData];
+const combinedStructuredData = [productStructuredData];
 ---
 
 <Layout
