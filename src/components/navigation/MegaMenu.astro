@@ -1,6 +1,7 @@
 ---
 import IndustriesMenu from './menus/IndustriesMenu.astro';
 import RolesMenu from './menus/RolesMenu.astro';
+import RegionsMenu from './menus/RegionsMenu.astro';
 
 interface Props {
   isOpen: boolean;
@@ -12,15 +13,18 @@ const { isOpen, lang="en" } = Astro.props;
 const texts = {
   en: {
     industries: "Industries",
-    roles: "Roles"
+    roles: "Roles",
+    regions: "Regions"
   },
   fr: {
     industries: "Industries",
-    roles: "Rôles"
+    roles: "Rôles",
+    regions: "Régions"
   },
   nl: {
     industries: "Industrieën",
-    roles: "Rollen"
+    roles: "Rollen",
+    regions: "Regio's"
   }
 }[lang];
 
@@ -86,6 +90,33 @@ const industries = {
     }
   ]
 }[lang];
+
+const regions = {
+  en: [
+    {
+      name: "Saudi Arabia - Vision 2030",
+      icon: "🇸🇦",
+      description: "CMA Corporate Governance & Economic Diversification",
+      href: "/regions/saudi-vision-2030",
+    }
+  ],
+  fr: [
+    {
+      name: "Arabie Saoudite - Vision 2030",
+      icon: "🇸🇦",
+      description: "Gouvernance d'entreprise CMA et diversification économique",
+      href: "/regions/saudi-vision-2030",
+    }
+  ],
+  nl: [
+    {
+      name: "Saoedi-Arabië - Vision 2030",
+      icon: "🇸🇦",
+      description: "CMA Corporate Governance en economische diversificatie",
+      href: "/regions/saudi-vision-2030",
+    }
+  ]
+}[lang];
 ---
 
 <div 
@@ -111,6 +142,12 @@ const industries = {
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
           </button>
+          <button class="w-full text-left px-4 py-3 rounded-lg hover:bg-gray-50 text-gray-900 font-medium flex items-center justify-between group/nav" data-section="regions">
+            {texts.regions}
+            <svg class="w-5 h-5 text-gray-400 group-hover/nav:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
         </div>
       </div>
 
@@ -122,6 +159,9 @@ const industries = {
         <div id="roles-content" class="hidden">
           <RolesMenu />
         </div>
+        <div id="regions-content" class="hidden">
+          <RegionsMenu regions={regions} />
+        </div>
       </div>
     </div>
   </div>
@@ -132,7 +172,8 @@ const industries = {
     const navButtons = document.querySelectorAll('button[data-section]');
     const contentSections = {
       industries: document.getElementById('industries-content'),
-      roles: document.getElementById('roles-content')
+      roles: document.getElementById('roles-content'),
+      regions: document.getElementById('regions-content')
     };
 
     // Show industries by default
