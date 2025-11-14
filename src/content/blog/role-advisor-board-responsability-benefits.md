@@ -1,5 +1,5 @@
 ---
-title: "The Role of an Advisor to the Board: Responsibilities and Benefits"
+title: "The Role of an Advisor to the Board of Directors: Responsibilities and Benefits"
 description: "Understanding the crucial role of board advisors, their responsibilities, and the benefits they bring to organizations through governance and strategic guidance."
 pubDate: 2024-11-03
 author: "Jean-Louis Van Houwe"
@@ -14,7 +14,7 @@ featured: false
 
 ---
 
-## Who is an Advisor to the Board?
+## Who is an Advisor to the Board of Directors?
 
 An advisor to the board is a trusted expert who provides critical guidance and insights to a company’s board of directors. Unlike board members, advisors work behind the scenes, bringing specialized knowledge to inform decisions and address challenges.  
 
@@ -27,7 +27,7 @@ Advisors are especially valuable in areas where the board may lack experience, s
 
 ---
 
-## Responsibilities of an Advisor to the Board
+## Responsibilities of an Advisor to the Board of Directors
 
 The responsibilities of an advisor are tailored to the organization’s needs but often include:  
 
