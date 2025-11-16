@@ -91,16 +91,15 @@ interface Props {
       <!-- Logo -->
       <div class="flex items-center">
         <a href={currentLang === 'en' ? '/' : `/${currentLang}`} class="flex items-center group">
-          <Image 
+          <Image
             loading="eager"
             src={whiteLogo ? logoWhiteImg : logoImg}
             alt="Govrn Logo"
             class="h-7 w-auto object-contain transform transition-transform duration-200 group-hover:scale-105"
-            width={573}
-            height={194}
-            quality={100}
+            widths={[152, 304]}
+            sizes="152px"
+            quality={90}
             format="webp"
-            densities={[1, 2]}
           />
         </a>
       </div>
