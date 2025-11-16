@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 import Layout from '../../../layouts/Layout.astro';
 import BlogContent from '../../../components/blog/BlogContent.astro';
 import BlogCard from '../../../components/blog/BlogCard.astro';
@@ -27,6 +28,14 @@ const sortedPosts = publishedPosts.sort((a, b) => b.data.pubDate.valueOf() - a.d
 const nextPosts = sortedPosts.filter(post => post.slug !== slug).slice(0, 3);
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+
+// Dynamically import blog image from assets
+const images = import.meta.glob('/src/assets/blog-images/**/*.{png,jpg,jpeg,webp,gif}', { eager: true });
+const imagePath = entry.data.image.startsWith('http')
+  ? entry.data.image
+  : `/src/assets/blog-images${entry.data.image}`;
+const imageModule = entry.data.image.startsWith('http') ? null : images[imagePath];
+const heroImage = imageModule ? (imageModule as any).default : entry.data.image;
 
 const formattedDate = entry.data.pubDate.toLocaleDateString('fr-FR', {
   year: 'numeric',
@@ -64,11 +73,15 @@ const structuredData = {
         <!-- Image principale -->
         <div class="relative rounded-xl overflow-hidden mb-12 aspect-video">
           <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent"></div>
-          <img 
-  loading="lazy"
-            src={entry.data.image}
+          <Image
+            src={heroImage}
             alt={entry.data.title}
+            width={1200}
+            height={675}
             class="w-full h-full object-cover"
+            loading="eager"
+            fetchpriority="high"
+            format="webp"
           />
         </div>
 
