@@ -50,6 +50,20 @@ const enBlogRedirects = Object.fromEntries(
 
 
 export default defineConfig({
+  vite: {
+    build: {
+      cssCodeSplit: true,
+      rollupOptions: {
+        output: {
+          manualChunks: undefined
+        }
+      }
+    }
+  },
+  build: {
+    inlineStylesheets: 'auto',
+    format: 'file'
+  },
   integrations: [tailwind(), react(), sitemap(
     {
       i18n: {
@@ -157,9 +171,5 @@ export default defineConfig({
     'r/RS2': 'https://www.youtube.com/watch?v=mgr62dXb2QM',
     'r/Fuz': "/guides",
     'r/event': '/governance-summit-summary',
-  },
-  build: {
-    // Example: Generate `page.html` instead of `page/index.html` during build.
-    format: 'file'
   }
 });
