@@ -35,15 +35,19 @@
 /*.js
   Cache-Control: public, max-age=31536000, immutable
 
-# Cache font files
+# Cache font files with CORS headers
 /*.woff
   Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
 
 /*.woff2
   Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
 
 /*.ttf
   Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
 
 /*.eot
   Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
