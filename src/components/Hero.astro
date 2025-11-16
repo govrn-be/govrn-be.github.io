@@ -88,7 +88,7 @@ const {
 ---
 
 <section class="relative bg-gradient-to-br from-white to-gray-50 pt-32 pb-24 overflow-x-hidden">
-  <div class="absolute inset-0 z-0">
+  <!-- <div class="absolute inset-0 z-0">
     <Image
       src={govrnLogoBg}
       alt=""
@@ -97,7 +97,7 @@ const {
       height={384}
     />
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
-  </div>
+  </div> -->
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="relative flex items-center">
@@ -116,8 +116,10 @@ const {
             <Image
               src={g2Logo}
               alt="G2 Logo"
+              quality={'low'}
               width={20}
               height={20}
+              loading="eager"
               class="mr-2"
             />
             <div class="flex items-center">

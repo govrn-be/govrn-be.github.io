@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 import Layout from '../../layouts/Layout.astro';
 import BlogContent from '../../components/blog/BlogContent.astro';
 import BlogCard from '../../components/blog/BlogCard.astro';
@@ -64,12 +65,13 @@ const structuredData = {
         <!-- Hero Image -->
         <div class="relative rounded-xl overflow-hidden mb-12 aspect-video">
           <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent"></div>
-          <img 
-  loading="lazy"
+          <Image
             src={entry.data.image}
             alt={entry.data.title}
+            width={1200}
+            height={675}
             class="w-full h-full object-cover"
-            loading="lazy"
+            loading="eager"
           />
         </div>
 
