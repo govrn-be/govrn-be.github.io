@@ -61,7 +61,7 @@ export default defineConfig({
     }
   },
   build: {
-    inlineStylesheets: 'auto',
+    inlineStylesheets: 'always',
     format: 'file'
   },
   integrations: [tailwind(), react(), sitemap(
