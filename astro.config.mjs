@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 import { readdirSync, readFileSync } from 'fs';
 import { join } from 'path';
-import matter from 'gray-matter';
+import matter from '@yankeeinlondon/gray-matter';
 
 // Read all MD files from blog directory
 const blogDir = join(process.cwd(), 'src/content/blog');
