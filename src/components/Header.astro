@@ -10,10 +10,12 @@ const { transparent = false, hideMenu = false, whiteLogo = false, currentLang = 
 const path = Astro.url.pathname;
 
 // Generate language URLs
-const basePath = path.replace(/^\/(fr|nl)(\/|$)/, '/');
+// Remove .html extension and language prefix
+const cleanPath = path.replace(/\.html$/, '').replace(/^\/(fr|nl)(\/|$)/, '/');
+const basePath = cleanPath === '/' ? '/' : cleanPath;
 const enUrl = basePath;
-const frUrl = `/fr${basePath}`;
-const nlUrl = `/nl${basePath}`;
+const frUrl = basePath === '/' ? '/fr' : `/fr${basePath}`;
+const nlUrl = basePath === '/' ? '/nl' : `/nl${basePath}`;
 const buttonTexts = currentLang === 'fr' ? {
   signIn: "Se connecter",
   tryForFree: "Parler à un expert",
