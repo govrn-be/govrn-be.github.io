@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
+import Critters from 'astro-critters';
 
 import { readdirSync, readFileSync } from 'fs';
 import { join } from 'path';
@@ -64,7 +65,13 @@ export default defineConfig({
     inlineStylesheets: 'auto',
     format: 'file'
   },
-  integrations: [tailwind(), react(), sitemap(
+  integrations: [tailwind(), react(), Critters(
+    {
+      preload: 'swap',   // évite tout render-blocking
+      compress: true,    // optimise le CSS inline
+      reduceInlineStyles: true
+    }
+  ), sitemap(
     {
       i18n: {
         locales: {
