@@ -77,7 +77,7 @@ Govrn's platform offers tools to help boards manage pay transparency requirement
 
 ### Pay Transparency Management Features
 
-Our [compliance monitoring tools](/features/compliance-monitoring) help organizations:
+Our [compliance monitoring tools](/features/ai-board-compliance-monitoring) help organizations:
 
 - Track and analyze pay data across the organization
 - Generate required reports for regulatory compliance
