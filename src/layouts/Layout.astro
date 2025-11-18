@@ -78,9 +78,7 @@ const currentLang =
       ? "nl"
       : "en";
 
-const RECAPTCHA_EXECUTE_KEY =
-  import.meta.env.RECAPTCHA_EXECUTE_KEY ||
-  "6LfV-TwrAAAAAC5iJ7BMz5JoCKYHRRPCa16_Ic6E";
+
 ---
 
 <!doctype html>
@@ -118,12 +116,7 @@ const RECAPTCHA_EXECUTE_KEY =
     
     <!-- Critical image preloading handled by Astro Image optimization -->
     
-    <script
-      is:inline
-      src={`https://www.google.com/recaptcha/enterprise.js?render=${RECAPTCHA_EXECUTE_KEY}`}
-      async
-      defer
-      data-cfasync="false"></script>
+
 
     <title>{title}</title>
     <script
