@@ -5,20 +5,20 @@ interface Props {
 
 const { videoId } = Astro.props;
 ---
-
 <div id="videoModal" class="fixed inset-0 z-50 hidden">
   <div class="absolute inset-0 bg-black/75 backdrop-blur-sm"></div>
-  <div class="absolute inset-0 flex items-center justify-center p-4">
+  <div id="videoModalYoutube" class="absolute inset-0 flex items-center justify-center p-4" style="display: none;">
     <div class="relative w-full max-w-4xl mx-auto">
       <div class="relative pt-[56.25%]">
         <iframe
           id="youtubePlayer"
           class="absolute inset-0 w-full h-full rounded-xl"
-          src={`https://www.youtube.com/embed/${videoId}?enablejsapi=1`}
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
+          data-src={`https://www.youtube.com/embed/${videoId}?enablejsapi=1`}
+          style="display: none;"
         ></iframe>
       </div>
       <button
@@ -35,32 +35,48 @@ const { videoId } = Astro.props;
 
 <script>
   const modal = document.getElementById('videoModal');
+  const modalYoutube = document.getElementById('videoModalYoutube');
   const closeBtn = document.getElementById('closeVideoModal');
-  const iframe = document.getElementById('youtubePlayer') as HTMLIFrameElement;
+  const iframe = document.getElementById('youtubePlayer');
+
+  let isLoaded = false;
 
   function openModal() {
-    modal?.classList.remove('hidden');
+    modal.classList.remove('hidden');
+    modalYoutube.style.display = 'flex';
+    iframe.style.display = 'block';
     document.body.style.overflow = 'hidden';
-  }
 
-  function closeModal() {
-    modal?.classList.add('hidden');
-    document.body.style.overflow = '';
-    // Stop video when closing modal
-    if (iframe?.contentWindow) {
-      iframe.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+    // Lazy-load YouTube only once
+    if (!isLoaded) {
+      iframe.src = iframe.dataset.src;
+      isLoaded = true;
     }
   }
 
-  // Export function to global scope
+  function closeModal() {
+    modal.classList.add('hidden');
+    modalYoutube.style.display = 'none';
+    document.body.style.overflow = '';
+
+    // Stop video
+    if (iframe?.contentWindow) {
+      iframe.contentWindow.postMessage(
+        '{"event":"command","func":"stopVideo","args":""}',
+        '*'
+      );
+    }
+  }
+
+  // Export global function
   window.openVideoModal = openModal;
 
   closeBtn?.addEventListener('click', closeModal);
+
   modal?.addEventListener('click', (e) => {
     if (e.target === modal) closeModal();
   });
 
-  // Handle escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeModal();
   });
