@@ -1,6 +1,6 @@
 ---
-title: "What is a Board Portal in an AI World: Revolutionizing Meeting Management"
-description: "Discover how AI-powered board portals are transforming meeting management with smarter scheduling, real-time collaboration, and enhanced decision-making for today’s dynamic boardrooms."
+title: "What is an AI board portal and how it improves meeting management."
+description: "Discover how AI-powered board portals transform meeting management with smarter scheduling, real-time collaboration and better decision-making for modern boards."
 pubDate: 2024-05-01
 author: "Govrn"
 authorRole: "Govrn Editorial Team"
