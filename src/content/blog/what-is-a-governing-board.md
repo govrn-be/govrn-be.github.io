@@ -1,6 +1,6 @@
 ---
-title: "What Is a Governance Board and How Does It Function?"
-description: "Learn what a governance board is, its roles and responsibilities, and how it provides oversight, accountability and strategic direction within an organization."
+title: "What Is a Governing Board and How Does It Function?"
+description: "Learn what a governing board is, its roles and responsibilities, and how it provides oversight, accountability and strategic direction within an organization."
 pubDate: 2025-02-15
 author: "Ludovic Laffineur"
 authorRole: "CTO at Govrn"
@@ -11,7 +11,7 @@ featured: true
 slug: what-is-a-governing-board
 ---
 
-## What Is a Governance Board?
+## What Is a Governing Board?
 
 A **governing board**—commonly known as a **board of directors**—is the central decision-making authority within an organization’s governance structure. Its core purpose is to provide direction, oversight, and accountability for the company’s management and performance.
 
