@@ -1,6 +1,6 @@
 ---
 title: "What is Meeting Management Software? Complete Guide (2025)"
-description: "Explore how meeting management software streamlines the meeting lifecycle with advanced AI features, enhanced security, and compliance tools for modern organizations."
+description: "Learn what meeting management software is and how it streamlines meetings with AI-driven workflows, secure collaboration, and built-in compliance tools."
 pubDate: 2025-01-10
 author: "Ludovic Laffineur"
 authorRole: "CTO at Govrn"
