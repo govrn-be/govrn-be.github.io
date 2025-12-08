@@ -1,6 +1,6 @@
 ---
-title: "Advisor to the Board of Directors: Job Description & Responsibilities"
-description: "Learn the advisor to the board of directors job description, including key responsibilities and how advisors strengthen governance and decision-making."
+title: "Board of Directors Advisor: Job Description and Core Requirements"
+description: "Discover what a board of directors advisor does, including key responsibilities, required skills, and how this role strengthens governance, oversight and decision-making."
 pubDate: 2024-11-03
 author: "Jean-Louis Van Houwe"
 authorRole: "CEO & Founder at Govrn"
@@ -14,7 +14,7 @@ featured: false
 
 ---
 
-## Who is an Advisor to the Board of Directors?
+## Who Is a Board of Directors Advisor?
 
 An advisor to the board is a trusted expert who provides critical guidance and insights to a company’s board of directors. Unlike board members, advisors work behind the scenes, bringing specialized knowledge to inform decisions and address challenges.  
 
@@ -31,7 +31,7 @@ Advisors are especially valuable in areas where the board may lack experience, s
 
 The responsibilities of an advisor are tailored to the organization’s needs but often include:  
 
-### **1. Expert Guidance**  
+### **1. How a Board of Directors Advisor Provides Expert Guidance**  
 Advisors provide critical insights on areas like finance, marketing, human resources, or regulatory compliance, enabling the board to make informed decisions.  
 
 ### **2. Strategic Planning**  
