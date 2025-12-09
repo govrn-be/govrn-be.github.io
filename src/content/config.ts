@@ -9,6 +9,7 @@ const blog = defineCollection({
     author: z.string(),
     authorRole: z.string(),
     image: z.string(),
+    imageAlt: z.string().optional(),
     category: z.enum(['Governance', 'Technology', 'Best Practices', 'Industry Insights', 'Regulatory']),
     tags: z.array(z.string()),
     featured: z.boolean().optional().default(false),
