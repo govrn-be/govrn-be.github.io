@@ -1,0 +1,451 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const securityThreats = [
+  {
+    threat: "unauthorized access",
+    icon: "🚫"
+  },
+  {
+    threat: "password theft or sharing",
+    icon: "🔑"
+  },
+  {
+    threat: "phishing attacks",
+    icon: "🎣"
+  },
+  {
+    threat: "impersonation",
+    icon: "👥"
+  },
+  {
+    threat: "account takeover",
+    icon: "⚠️"
+  },
+  {
+    threat: "exposure of confidential documents",
+    icon: "📄"
+  }
+];
+
+const mfaBenefits = [
+  "Strengthens protection against unauthorized access",
+  "Easy for board members, no apps needed",
+  "Secure on any device",
+  "Supports compliance & audit requirements",
+  "Ideal for hybrid or remote board meetings",
+  "Reinforces trust in digital governance"
+];
+
+const protectedData = [
+  "board packs & agendas",
+  "confidential attachments",
+  "annotated documents",
+  "voting & resolutions",
+  "AI-generated meeting minutes",
+  "internal discussions",
+  "full governance archives"
+];
+
+const mfaSteps = [
+  {
+    step: "1",
+    title: "User enters their email and password",
+    icon: "📧"
+  },
+  {
+    step: "2",
+    title: "Govrn automatically sends a unique, time-sensitive code via SMS",
+    icon: "📱"
+  },
+  {
+    step: "3",
+    title: "User enters the code",
+    icon: "🔢"
+  },
+  {
+    step: "4",
+    title: "Access is granted only if both steps match",
+    icon: "✅"
+  }
+];
+
+const securityFramework = [
+  "EU-based data hosting",
+  "Encryption at rest & in transit",
+  "Role-based access & permissions",
+  "Detailed audit trails & activity logs",
+  "Secure distribution of board packs",
+  "Redundancy & backups"
+];
+
+const complianceAreas = [
+  {
+    title: "GDPR security expectations",
+    icon: "🇪🇺"
+  },
+  {
+    title: "internal IT & risk policies",
+    icon: "📋"
+  },
+  {
+    title: "audit & supervisory requirements",
+    icon: "🔍"
+  }
+];
+
+const targetOrganizations = [
+  "listed companies",
+  "financial services & insurance",
+  "municipalities & public institutions",
+  "hospitals & education",
+  "private companies with strategic boards"
+];
+
+const mfaUsers = [
+  "all board members",
+  "management committees",
+  "executive leadership",
+  "board secretaries",
+  "audit, risk & remuneration committees",
+  "external advisors and observers"
+];
+
+const govrnFeatures = [
+  "AI minutes",
+  "board pack builder",
+  "agenda management",
+  "resolution management",
+  "document library & archives",
+  "cross-committee collaboration",
+  "annotations & preparation tools"
+];
+---
+
+<Layout
+  title="Multi-Factor Authentication (MFA) via SMS for Secure Board Access | Govrn"
+  description="Govrn protects board information with SMS-based multi-factor authentication (MFA). Learn how SMS verification strengthens secure access for directors and governance teams."
+>
+  <main class="pt-16">
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-3xl mx-auto">
+          <div class="inline-flex items-center rounded-full px-4 py-1 text-sm font-medium bg-primary/10 text-primary mb-8">
+            Multi-Factor Authentication
+          </div>
+          <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
+            Secure Access to Sensitive Board Information With
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
+              SMS Verification
+            </span>
+          </h1>
+          <p class="text-xl text-gray-600 leading-relaxed">
+            Govrn protects board information with SMS-based multi-factor authentication (MFA). Learn how SMS verification strengthens secure access for directors and governance teams.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- What Is MFA Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">🔐 What Is MFA — And Why It Matters for Boards</h2>
+          <div class="prose prose-lg text-gray-600 space-y-4">
+            <p>
+              Board environments involve highly confidential information: strategy, finance, audit materials, legal documentation, and executive discussions. This makes secure authentication essential.
+            </p>
+            <p>
+              <strong>Multi-Factor Authentication (MFA)</strong> adds a second verification step — beyond a password — to ensure only authorized individuals access the platform.
+            </p>
+            <p>
+              With Govrn, this second step is issued via SMS, giving organizations a fast, reliable, and secure method to confirm user identity before granting access to sensitive governance data.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why SMS-Based MFA Matters -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">🛡️ Why SMS-Based MFA Matters for Governance</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            SMS verification significantly reduces the risk of multiple security threats
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {securityThreats.map(item => (
+            <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+              <div class="text-3xl mb-3">{item.icon}</div>
+              <p class="text-gray-900 font-medium">{item.threat}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="bg-gradient-to-br from-primary/5 to-blue-50 rounded-2xl p-8 max-w-4xl mx-auto">
+          <p class="text-lg text-gray-700 leading-relaxed">
+            Even if a password becomes compromised, access to Govrn still requires the unique code sent via SMS to the user's registered mobile number.
+          </p>
+          <p class="text-lg text-gray-700 leading-relaxed mt-4">
+            For governance contexts — boards, committees, executive teams — this is a crucial safeguard.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MFA Designed for Boards -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">💼 MFA Designed for Boards, Committees & Governance Teams</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+          <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">✔️ Simple & Fast for Directors</h3>
+            <p class="text-gray-600">
+              Board members often work across devices and locations. SMS MFA provides instant, user-friendly authentication without requiring apps or technical setup.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">✔️ Secure Access Anywhere</h3>
+            <p class="text-gray-600">
+              Whether logging in from a laptop, tablet, or mobile phone, users receive the SMS code within seconds — ensuring secure access even when travelling.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">✔️ Protection for All Sensitive Governance Data</h3>
+            <p class="text-gray-600 mb-6">SMS MFA secures:</p>
+            <ul class="space-y-2">
+              {protectedData.map(item => (
+                <li class="flex items-center text-gray-600">
+                  <svg class="h-5 w-5 text-primary mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">🔧 How Multi-Factor Authentication Works in Govrn</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Govrn uses SMS-based verification to strengthen login security. Here's how it works:
+          </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+          <div class="grid gap-6">
+            {mfaSteps.map(step => (
+              <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100 flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-6">
+                  <span class="text-2xl">{step.icon}</span>
+                </div>
+                <div>
+                  <div class="text-sm font-semibold text-primary mb-2">STEP {step.step}</div>
+                  <p class="text-lg text-gray-900">{step.title}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div class="bg-gradient-to-br from-primary to-blue-600 rounded-2xl p-8 text-white mt-8">
+            <p class="text-lg">
+              This ensures that access is restricted to the person who controls the registered mobile number — offering strong protection without complexity.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Essential for European Organizations -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8">🌍 Essential for European & Regulated Organizations</h2>
+
+          <p class="text-lg text-gray-600 mb-8">
+            Govrn's SMS MFA helps organizations meet internal and external expectations around secure authentication.
+          </p>
+
+          <div class="bg-gray-50 rounded-xl p-8 mb-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-6">This is especially important for:</h3>
+            <div class="grid sm:grid-cols-2 gap-4">
+              {targetOrganizations.map(org => (
+                <div class="flex items-center text-gray-700">
+                  <svg class="h-5 w-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  {org}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div class="bg-primary/5 rounded-xl p-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-6">SMS MFA supports compliance with:</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+              {complianceAreas.map(area => (
+                <div class="text-center">
+                  <div class="text-3xl mb-3">{area.icon}</div>
+                  <p class="text-gray-900 font-medium">{area.title}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Security Framework -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8">🔒 Part of Govrn's Secure-By-Design Architecture</h2>
+
+          <p class="text-lg text-gray-600 mb-8">
+            SMS-based MFA works alongside Govrn's complete security framework:
+          </p>
+
+          <div class="grid sm:grid-cols-2 gap-4 mb-8">
+            {securityFramework.map(feature => (
+              <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100 flex items-center">
+                <svg class="h-6 w-6 text-primary mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                <span class="text-gray-900">{feature}</span>
+              </div>
+            ))}
+          </div>
+
+          <p class="text-lg text-gray-600">
+            This layered approach ensures continuous protection for your governance workflows.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">📊 Benefits of Using SMS MFA With Govrn</h2>
+        </div>
+
+        <div class="max-w-4xl mx-auto grid sm:grid-cols-2 gap-6">
+          {mfaBenefits.map(benefit => (
+            <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100 flex items-start">
+              <svg class="h-6 w-6 text-primary mr-4 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-gray-900">{benefit}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Who Should Activate MFA -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8">🚀 Who Should Activate MFA?</h2>
+
+          <p class="text-lg text-gray-600 mb-8">
+            We strongly recommend enabling SMS MFA for:
+          </p>
+
+          <div class="grid sm:grid-cols-2 gap-4 mb-8">
+            {mfaUsers.map(user => (
+              <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100 flex items-center">
+                <svg class="h-6 w-6 text-primary mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                <span class="text-gray-900">{user}</span>
+              </div>
+            ))}
+          </div>
+
+          <div class="bg-gradient-to-br from-primary to-blue-600 rounded-2xl p-8 text-white">
+            <p class="text-lg">
+              For organizations handling critical decisions, MFA is central to digital governance security.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Integrated Workflow -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8">🧩 Integrated Into the Governance Workflow</h2>
+
+          <p class="text-lg text-gray-600 mb-8">
+            SMS MFA ensures secure access to all Govrn features:
+          </p>
+
+          <div class="grid sm:grid-cols-2 gap-4 mb-8">
+            {govrnFeatures.map(feature => (
+              <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100 flex items-center">
+                <svg class="h-6 w-6 text-primary mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-900">{feature}</span>
+              </div>
+            ))}
+          </div>
+
+          <div class="bg-primary/5 rounded-xl p-6 text-center">
+            <p class="text-xl text-gray-900 font-semibold">
+              Every login is protected — every time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-gradient-to-br from-primary to-blue-600 py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold text-white mb-8">
+          📞 Enhance Your Governance Security With SMS MFA
+        </h2>
+        <p class="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
+          If you want to further strengthen your governance processes, our team can guide you through best practices and configuration options.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/request-demo"
+            class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-primary bg-white hover:bg-gray-50 transition-colors duration-200"
+          >
+            Request Demo
+          </a>
+          <a
+            href="/contact"
+            class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white border-2 border-white hover:bg-white/10 transition-colors duration-200"
+          >
+            Talk to Our Team
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

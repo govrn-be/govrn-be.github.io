@@ -18,6 +18,12 @@ const securityFeatures = [
     description: "Chiffrement de bout en bout pour toutes les transmissions et le stockage des données"
   },
   {
+    icon: "📱",
+    title: "Authentification Multi-Facteurs",
+    description: "La vérification par SMS ajoute une couche de sécurité supplémentaire au-delà des mots de passe pour protéger les informations sensibles du conseil",
+    link: "/fr/security/mfa"
+  },
+  {
     icon: "👤",
     title: "Contrôle d'accès granulaire",
     description: "Gestion des accès basée sur les rôles avec piste d'audit complète"
@@ -132,10 +138,21 @@ const trustedPartners = [
         </div>
         <div class="grid md:grid-cols-2 gap-8">
           {securityFeatures.map(feature => (
-            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:border-primary/20 transition-all duration-200">
               <div class="text-4xl mb-6">{feature.icon}</div>
               <h3 class="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
-              <p class="text-gray-600">{feature.description}</p>
+              <p class="text-gray-600 mb-4">{feature.description}</p>
+              {feature.link && (
+                <a
+                  href={feature.link}
+                  class="inline-flex items-center text-primary hover:text-primary/80 font-medium"
+                >
+                  En savoir plus
+                  <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              )}
             </div>
           ))}
         </div>
