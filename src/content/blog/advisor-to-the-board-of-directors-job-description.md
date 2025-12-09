@@ -16,14 +16,17 @@ featured: false
 
 ## Who Is a Board of Directors Advisor?
 
-An advisor to the board is a trusted expert who provides critical guidance and insights to a company’s board of directors. Unlike board members, advisors work behind the scenes, bringing specialized knowledge to inform decisions and address challenges.  
+An advisor to the board is a trusted expert who provides critical guidance and insights to a company's board of directors. Unlike board members, advisors work behind the scenes, bringing specialized knowledge to inform decisions and address challenges.
 
-### **Key Attributes of an Advisor**  
-- Deep expertise in their field.  
-- External perspective that complements internal capabilities.  
-- Ability to offer unbiased, strategic guidance.  
+![Board advisor providing strategic guidance and expertise to directors in corporate governance meeting](/board-collab-blog.jpg)
+*Advisor to the board of directors job description includes strategic collaboration and expert guidance*
 
-Advisors are especially valuable in areas where the board may lack experience, such as emerging technologies, industry trends, or regulatory changes.  
+### **Key Attributes of an Advisor**
+- Deep expertise in their field.
+- External perspective that complements internal capabilities.
+- Ability to offer unbiased, strategic guidance.
+
+Advisors are especially valuable in areas where the board may lack experience, such as emerging technologies, industry trends, or regulatory changes.
 
 ---
 
@@ -43,8 +46,11 @@ Advisors identify potential risks and opportunities, offering strategies to navi
 ### **4. Performance Review**  
 They assess organizational performance, providing recommendations to enhance operations and achieve better outcomes.  
 
-### **5. Stakeholder Engagement**  
-Advisors often help strengthen relationships with stakeholders, investors, and other critical partners by offering insights and strategies for effective communication.  
+### **5. Stakeholder Engagement**
+Advisors often help strengthen relationships with stakeholders, investors, and other critical partners by offering insights and strategies for effective communication.
+
+![Professional board advisors reviewing organizational performance and strategic planning documents](/blog-board-management.jpg)
+*Board of directors advisor role: Performance review and strategic decision-making responsibilities*
 
 ---
 
@@ -64,8 +70,11 @@ With expert insights, boards are empowered to make decisions that are strategic,
 ### **4. Improved Risk Management**  
 Advisors help boards foresee and mitigate risks, ensuring the organization stays resilient in uncertain environments.  
 
-### **5. Stronger Stakeholder Relationships**  
-An advisor’s guidance often leads to better communication and trust-building with investors, partners, and other key stakeholders.  
+### **5. Stronger Stakeholder Relationships**
+An advisor's guidance often leads to better communication and trust-building with investors, partners, and other key stakeholders.
+
+![Building high-performing boards with expert advisors and effective governance practices](/blog-building-high-performing-board.jpg)
+*Advisor to the board of directors job description: Building stronger governance and stakeholder relationships*
 
 ---
 
@@ -85,8 +94,11 @@ Seek candidates with a strong track record, industry knowledge, and a reputation
 ### **4. Evaluate Candidates**  
 Assess their skills, experience, and alignment with your organization’s goals and culture.  
 
-### **5. Formalize the Appointment**  
-Set clear expectations through a formal letter of appointment or contract, detailing their role and the scope of their work.  
+### **5. Formalize the Appointment**
+Set clear expectations through a formal letter of appointment or contract, detailing their role and the scope of their work.
+
+![Corporate governance meeting with board directors and advisors discussing strategic initiatives](/meeting.jpg)
+*Essential qualifications and responsibilities in an advisor to the board of directors job description*
 
 ---
 
