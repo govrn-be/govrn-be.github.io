@@ -37,7 +37,7 @@ Close the loop by distributing minutes and action items promptly. Track progress
 ## **Core Strategies for Successful Board Meetings**
 
 ### **1. Strategic Agenda Setting**
-An effective agenda is curated well in advance and designed to balance reviews, discussions, and strategic planning. Agendas must include clear sections, objectives, and actionable outcomes, ensuring a structured approach to addressing key priorities.
+An effective agenda is curated well in advance and designed to balance reviews, discussions, and strategic planning. Agendas must include clear sections, objectives, and actionable outcomes, ensuring a structured approach to addressing key priorities. [Explore AI-Powered Agenda Builder](/features/ai-powered-agenda-builder) for smarter agenda creation.
 
 ### **2. Dissemination of Materials**
 The final agenda, board pack, and supporting materials should be shared at least a week prior to the meeting. Establish a submission cut-off date for materials and ensure policies and tools are in place to streamline preparation.  
@@ -58,8 +58,8 @@ Encourage members to prepare thoroughly during the pre-read phase. This includes
 - Clearly signal transitions from discussion to decision-making, using structured approaches to reach conclusions and define actionable outcomes.  
 
 ### **Actionable Meeting Outcomes**
-- Circulate detailed minutes promptly, capturing key discussions, decisions, and action items with deadlines.  
-- Establish a review and approval process for minutes that streamlines follow-up tasks before the next meeting.  
+- Circulate detailed minutes promptly, capturing key discussions, decisions, and action items with deadlines. [See how AI Minute Builder](/features/ai-minute-builder) automates meeting minutes to save time.
+- Establish a review and approval process for minutes that streamlines follow-up tasks before the next meeting.
 - Utilize systems to track tasks, deadlines, and associated progress.  
 
 ---

@@ -63,10 +63,15 @@ A hallmark of effective board directors is **unwavering integrity**. They act et
 
 Effective directors recognize that diversity enriches decision-making. They value a range of backgrounds, experiences, and perspectives, fostering inclusivity and avoiding groupthink.
 
-* **Govrn can help:** Govrn facilitates diverse contributions by enabling board members to collaborate using various tools, times, and approaches.
+* **Govrn can help:** Govrn facilitates diverse contributions by enabling board members to collaborate using various tools, times, and approaches. [Learn about our Secure Communication](/features/secure-communication) and [Document Collaboration](/features/document-collaboration) features.
 
 ## Govrn: Your Partner in Effective Board Governance
 
-Govrn is more than a board portal; it's a platform designed to help directors develop and practice the habits of highly effective board directors. By streamlining communication, centralizing information, and fostering collaboration, Govrn enables directors to be more engaged, informed, and impactful. 
+Govrn is more than a board portal; it's a platform designed to help directors develop and practice the habits of highly effective board directors. By streamlining communication, centralizing information, and fostering collaboration, Govrn enables directors to be more engaged, informed, and impactful.
+
+**Related Reading:**
+- [Productive Board Meetings: Maximising Engagement](/blog/productive-board-meetings-maximising-engagement)
+- [Mastering Board Management for Effective Governance](/blog/mastering-board-management-effective-governance)
+- [Top 5 Challenges Facing Modern Boards](/blog/top-5-challenges-facing-modern-boards)
 
 **Contact us today to learn more about how Govrn can transform your board governance.**

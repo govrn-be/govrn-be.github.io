@@ -26,7 +26,7 @@ By integrating AI, modern board portals offer features that not only simplify bu
 Gone are the days of endless back-and-forth emails. AI analyzes participants’ schedules, time zones, and preferences to automatically find optimal meeting times. Invitations, reminders, and updates are automated, ensuring seamless coordination.
 
 ### 2. Intelligent Agenda Building
-AI crafts agendas that focus on what matters most. By analyzing past meetings, organizational goals, and current priorities, it suggests and organizes topics, ensuring every discussion aligns with strategic objectives.
+AI crafts agendas that focus on what matters most. By analyzing past meetings, organizational goals, and current priorities, it suggests and organizes topics, ensuring every discussion aligns with strategic objectives. [Learn more about AI-Powered Agenda Builder](/features/ai-powered-agenda-builder).
 
 ### 3. Hassle-Free Document Management
 Say goodbye to the chaos of email attachments and last-minute updates. AI-powered portals compile, distribute, and update meeting materials in real time. Directors get exactly what they need, when they need it, with insights into document engagement.
@@ -38,7 +38,7 @@ Preparation is key, and AI takes it to the next level. Directors receive tailore
 During meetings, AI tools such as live polls, chatbots, and virtual assistants foster engagement. These features ensure discussions are productive, helping boards stay focused and on track.
 
 ### 6. Automated Minutes and Follow-Ups
-Forget manual transcription. AI captures key points, decisions, and action items in real time, generating detailed minutes that keep everyone aligned. Follow-up tasks are tracked and shared instantly, ensuring nothing slips through the cracks.
+Forget manual transcription. AI captures key points, decisions, and action items in real time, generating detailed minutes that keep everyone aligned. Follow-up tasks are tracked and shared instantly, ensuring nothing slips through the cracks. [Discover AI Minute Builder](/features/ai-minute-builder) for automated meeting minutes.
 
 ### 7. Actionable Post-Meeting Analytics
 The work doesn’t stop when the meeting ends. AI offers insights into meeting outcomes, tracks progress on decisions, and highlights areas for improvement. This data-driven approach ensures continuous improvement in governance practices.

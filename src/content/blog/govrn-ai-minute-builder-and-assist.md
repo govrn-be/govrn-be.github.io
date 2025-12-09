@@ -22,7 +22,7 @@ GOVRN was built to change that.
 
 **Problem:** Board Secretaries often spend **4–6 hours** per meeting compiling, reviewing, and finalizing minutes. They chase clarity, cross-reference discussions, and struggle to ensure accuracy—especially across long or complex sessions.
 
-**Solution:** GOVRN’s AI Minute Builder automates the heavy lifting. It:
+**Solution:** GOVRN's [AI Minute Builder](/features/ai-minute-builder) automates the heavy lifting. It:
 
 - **Records the meeting**
 - **Automatically aligns transcripts with agenda items**
@@ -41,9 +41,9 @@ This isn't just transcription. It’s smart, contextual documentation that helps
 
 ## 🔒 Feature 2: AI Assist – Ask Questions Inside a Secure Governance Bubble
 
-**Problem:** Directors and executives often need to **query documents mid-meeting**—“Did we approve this before?” “What was our CSRD stance?”—but navigating folders, PDFs, and email threads wastes time and derails focus.
+**Problem:** Directors and executives often need to **query documents mid-meeting**—"Did we approve this before?" "What was our CSRD stance?"—but navigating folders, PDFs, and email threads wastes time and derails focus.
 
-**Solution:** GOVRN’s **AI Assist** answers questions directly from your board materials, within your secure environment.
+**Solution:** GOVRN's [AI Assistant](/features/ai-assistant) answers questions directly from your board materials, within your secure environment.
 
 Ask:
 
