@@ -154,6 +154,7 @@ export default defineConfig({
     '/blog/tips-tricks-12/what-does-abstained-mean-understanding-the-meaning-and-implications-152': '/blog/what-does-abstained-mean',
     '/blog/our-blog-1/what-does-abstained-mean-understanding-the-meaning-and-implications-152': '/blog/what-does-abstained-mean',
     '/blog/board-roles-11/the-role-of-an-advisor-to-the-board-responsibilities-and-benefits-198': '/blog/role-advisor-board-responsability-benefits',
+    '/blog/role-advisor-board-responsability-benefits': '/blog/advisor-to-the-board-of-directors-job-description',
     '/blog/board-roles-11/understanding-the-fun ctions-of-the-executive-importance-and-examples-172': '/blog/understanding-functions-of-the-executive',
     '/blog/esg-10/the-ultimate-guide-to-non-profit-board-of-directors-roles-responsibilities-and-best-practices-202': '/blog/non-profit-board-roles-responsibilities-best-practices',
     '/blog/our-blog-1/understanding-the-role-of-board-of-directors-for-non-profits-192': '/blog/role-board-directors-non-profits',
