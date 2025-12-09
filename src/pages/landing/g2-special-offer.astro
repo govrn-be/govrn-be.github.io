@@ -1,0 +1,530 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Image } from 'astro:assets';
+import g2Logo from '../../assets/G2_logo.jpg';
+import CTA from "../../components/CTA.astro";
+
+// NOTE: The g2-promo-image.png needs to be manually downloaded from:
+// https://github.com/user-attachments/assets/af99c6bd-77b0-4a9b-973f-b952c6418a74
+// and placed in src/assets/g2-promo-image.png
+// import g2PromoImage from '../../assets/g2-promo-image.png';
+
+const features = [
+  {
+    icon: "🚀",
+    title: "Quick Setup",
+    description: "Get your board up and running in minutes with our intuitive onboarding process"
+  },
+  {
+    icon: "🤖",
+    title: "AI-Powered Insights",
+    description: "Leverage advanced AI to automate meeting minutes, agenda building, and compliance monitoring"
+  },
+  {
+    icon: "🔒",
+    title: "Enterprise Security",
+    description: "GDPR compliant with 256-bit encryption and multi-factor authentication"
+  },
+  {
+    icon: "📊",
+    title: "Real-Time Collaboration",
+    description: "Seamless document sharing, voting, and communication for your entire board"
+  }
+];
+
+const benefits = [
+  "Reduce admin time by 60%",
+  "Improve board efficiency by 97%",
+  "Ensure regulatory compliance",
+  "Centralize all board documents",
+  "Automate meeting workflows",
+  "Access from any device, anywhere"
+];
+---
+
+<Layout
+  title="G2 Exclusive: 10% Off Govrn Board Management Software"
+  description="Special offer for G2 visitors! Get 10% off your first year of Govrn's AI-powered board management platform. Book your onboarding call to claim your unique discount code."
+>
+  <main>
+    <!-- Hero Section with Special Offer -->
+    <section class="relative bg-gradient-to-br from-primary/5 via-white to-blue-50 pt-32 pb-24">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.15),transparent_50%)]"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <!-- Left Column - Content -->
+          <div class="max-w-xl">
+            <!-- G2 Badge -->
+            <div class="inline-flex items-center rounded-full px-4 py-2 bg-white shadow-md mb-6">
+              <Image
+                src={g2Logo}
+                alt="G2 Logo"
+                width={80}
+                height={30}
+                class="h-6 w-auto"
+              />
+              <span class="ml-3 text-sm font-semibold text-gray-700 border-l border-gray-300 pl-3">
+                Exclusive Offer
+              </span>
+            </div>
+
+            <!-- Special Offer Badge -->
+            <div class="inline-flex items-center rounded-full px-4 py-1.5 text-sm font-bold bg-gradient-to-r from-primary to-blue-600 text-white mb-6 shadow-lg">
+              <span class="mr-2">🎉</span>
+              10% OFF Your First Year
+            </div>
+
+            <h1 class="text-5xl font-bold text-gray-900 leading-tight mb-6">
+              Transform Your Board Management with
+              <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
+                AI-Powered Govrn
+              </span>
+            </h1>
+
+            <p class="text-xl text-gray-600 mb-8">
+              Welcome, G2 visitor! Experience the future of board governance with our comprehensive platform trusted by 500+ organizations worldwide.
+            </p>
+
+            <!-- Key Stats -->
+            <div class="grid grid-cols-3 gap-4 mb-8">
+              <div class="text-center bg-white/80 rounded-lg p-4 shadow-sm">
+                <div class="text-3xl font-bold text-primary">97%</div>
+                <div class="text-xs text-gray-600">Better Efficiency</div>
+              </div>
+              <div class="text-center bg-white/80 rounded-lg p-4 shadow-sm">
+                <div class="text-3xl font-bold text-primary">60%</div>
+                <div class="text-xs text-gray-600">Time Saved</div>
+              </div>
+              <div class="text-center bg-white/80 rounded-lg p-4 shadow-sm">
+                <div class="text-3xl font-bold text-primary">500+</div>
+                <div class="text-xs text-gray-600">Organizations</div>
+              </div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#booking-form"
+                class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary to-blue-600 text-white rounded-lg hover:shadow-xl transition-all transform hover:scale-105 font-semibold text-lg group"
+              >
+                <span>Book Onboarding Call</span>
+                <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </a>
+              <a
+                href="/request-demo"
+                class="inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-primary rounded-lg hover:bg-primary/5 transition-all font-semibold text-lg"
+              >
+                Watch Demo
+              </a>
+            </div>
+
+            <!-- Trust Indicators -->
+            <div class="flex items-center gap-6 mt-8 text-sm text-gray-600">
+              <div class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>No credit card required</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>GDPR Compliant</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column - Promo Image Placeholder -->
+          <div class="relative">
+            <div class="bg-gradient-to-br from-primary/10 to-blue-100 rounded-2xl p-8 shadow-2xl">
+              <!-- Placeholder for the G2 promo image -->
+              <!-- Once the image is downloaded to src/assets/g2-promo-image.png, uncomment below: -->
+              <!-- <Image
+                src={g2PromoImage}
+                alt="Govrn Platform Dashboard"
+                class="rounded-lg shadow-lg w-full"
+              /> -->
+              <div class="bg-white rounded-lg p-12 text-center">
+                <div class="text-6xl mb-4">🎯</div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Your Exclusive G2 Offer</h3>
+                <p class="text-gray-600 mb-6">Book your onboarding call today and receive:</p>
+                <div class="space-y-3 text-left">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                      </svg>
+                    </div>
+                    <span class="text-gray-700">10% discount code for first year</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                      </svg>
+                    </div>
+                    <span class="text-gray-700">Personalized platform walkthrough</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                      </svg>
+                    </div>
+                    <span class="text-gray-700">Dedicated onboarding support</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                      </svg>
+                    </div>
+                    <span class="text-gray-700">Priority implementation assistance</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What is Govrn Section -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-6">
+            What is Govrn?
+          </h2>
+          <p class="text-xl text-gray-600">
+            Govrn is the AI-first board management platform that streamlines your entire board governance workflow. From meeting preparation to compliance monitoring, we help boards make better decisions faster.
+          </p>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {features.map((feature) => (
+            <div class="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all border border-gray-100 hover:border-primary/20">
+              <div class="text-4xl mb-4">{feature.icon}</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                {feature.title}
+              </h3>
+              <p class="text-gray-600 text-sm">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-24 bg-gradient-to-br from-gray-50 to-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 class="text-4xl font-bold text-gray-900 mb-6">
+              Why Leading Organizations Choose Govrn
+            </h2>
+            <p class="text-xl text-gray-600 mb-8">
+              Our comprehensive platform combines powerful features with intuitive design to deliver exceptional value for boards of all sizes.
+            </p>
+
+            <div class="space-y-4">
+              {benefits.map((benefit) => (
+                <div class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
+                    <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                  </div>
+                  <span class="text-lg text-gray-700">{benefit}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-xl border border-gray-100">
+            <div class="text-center mb-6">
+              <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
+                <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">Ready to Get Started?</h3>
+              <p class="text-gray-600">Set up your board in minutes, not weeks</p>
+            </div>
+
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                  1
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900 mb-1">Book Your Call</h4>
+                  <p class="text-sm text-gray-600">Schedule a personalized onboarding session with our team</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                  2
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900 mb-1">Receive Your Code</h4>
+                  <p class="text-sm text-gray-600">Get your exclusive 10% discount code during the call</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                  3
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900 mb-1">Launch & Succeed</h4>
+                  <p class="text-sm text-gray-600">Start transforming your board management immediately</p>
+                </div>
+              </div>
+            </div>
+
+            <a
+              href="#booking-form"
+              class="mt-8 w-full inline-flex items-center justify-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-all font-semibold"
+            >
+              Book Your Onboarding Call
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section id="booking-form" class="py-24 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <div class="inline-flex items-center rounded-full px-4 py-1.5 text-sm font-bold bg-gradient-to-r from-primary to-blue-600 text-white mb-6">
+            <span class="mr-2">🎁</span>
+            Claim Your 10% Discount
+          </div>
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            Book Your Onboarding Call
+          </h2>
+          <p class="text-xl text-gray-600">
+            Schedule a call with our team to get your unique discount code and personalized platform walkthrough
+          </p>
+        </div>
+
+        <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 shadow-xl border border-gray-100">
+          <form id="g2BookingForm" class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">
+                  First Name *
+                </label>
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  required
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition-all"
+                  placeholder="John"
+                />
+              </div>
+              <div>
+                <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">
+                  Last Name *
+                </label>
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  required
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition-all"
+                  placeholder="Smith"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+                Work Email *
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition-all"
+                placeholder="john@company.com"
+              />
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label for="company" class="block text-sm font-medium text-gray-700 mb-2">
+                  Company *
+                </label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  required
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition-all"
+                  placeholder="Acme Inc."
+                />
+              </div>
+              <div>
+                <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition-all"
+                  placeholder="+1 (555) 123-4567"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="boardSize" class="block text-sm font-medium text-gray-700 mb-2">
+                Board Size
+              </label>
+              <select
+                id="boardSize"
+                name="boardSize"
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition-all"
+              >
+                <option value="">Select board size...</option>
+                <option value="1-5">1-5 members</option>
+                <option value="6-10">6-10 members</option>
+                <option value="11-20">11-20 members</option>
+                <option value="20+">20+ members</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-2">
+                Additional Information
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition-all"
+                placeholder="Tell us about your board management needs..."
+              ></textarea>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <input
+                type="checkbox"
+                id="consent"
+                name="consent"
+                required
+                class="mt-1 w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
+              />
+              <label for="consent" class="text-sm text-gray-600">
+                I agree to receive communications from Govrn about this exclusive G2 offer and understand my data will be processed according to the <a href="/privacy" class="text-primary hover:underline">Privacy Policy</a> *
+              </label>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full px-8 py-4 bg-gradient-to-r from-primary to-blue-600 text-white rounded-lg hover:shadow-xl transition-all transform hover:scale-[1.02] font-semibold text-lg flex items-center justify-center gap-2 group"
+            >
+              <span>Schedule My Onboarding Call</span>
+              <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
+            </button>
+
+            <div class="flex items-center justify-center gap-6 text-sm text-gray-600">
+              <div class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>Free consultation</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>No commitment required</span>
+              </div>
+            </div>
+          </form>
+
+          <div id="successMessage" class="hidden text-center py-8">
+            <svg class="w-20 h-20 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Thank You!</h3>
+            <p class="text-lg text-gray-600 mb-4">
+              Your onboarding call has been requested successfully.
+            </p>
+            <p class="text-gray-600">
+              Our team will contact you shortly to schedule your personalized demo and provide your exclusive 10% discount code.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <CTA
+      texts={{
+        title: "Questions About Your G2 Offer?",
+        subtitle: "Our team is here to help you get the most out of your exclusive discount",
+        cta1: "Book Onboarding Call",
+        cta2: "Contact Sales"
+      }}
+      links={{
+        cta1: "#booking-form",
+        cta2: "/contact"
+      }}
+    />
+  </main>
+</Layout>
+
+<script>
+  const form = document.getElementById("g2BookingForm") as HTMLFormElement;
+  const successMessage = document.getElementById("successMessage");
+
+  form?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    // Here you would typically send the form data to your backend
+    // For now, we'll just show the success message
+
+    form.classList.add('hidden');
+    successMessage?.classList.remove('hidden');
+
+    // Scroll to success message
+    successMessage?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  // Form validation feedback
+  const inputs = form?.querySelectorAll("input[required], textarea[required], select[required]");
+  inputs?.forEach((input) => {
+    input.addEventListener("blur", () => {
+      if ((input as HTMLInputElement).checkValidity()) {
+        input.classList.remove("border-red-500");
+        input.classList.add("border-green-500");
+      } else {
+        input.classList.add("border-red-500");
+        input.classList.remove("border-green-500");
+      }
+    });
+
+    input.addEventListener("input", () => {
+      if ((input as HTMLInputElement).checkValidity()) {
+        input.classList.remove("border-red-500");
+      }
+    });
+  });
+</script>
