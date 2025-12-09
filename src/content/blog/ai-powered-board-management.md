@@ -28,7 +28,7 @@ AI-powered systems can automatically analyze, categorize, and extract key insigh
 Machine learning algorithms can provide data-driven insights and recommendations, helping boards make more informed decisions based on historical data and market trends.
 
 ### 3. Automated Compliance
-AI systems can continuously monitor regulatory requirements and automatically flag potential compliance issues, reducing risk and ensuring governance standards are maintained.
+AI systems can continuously monitor regulatory requirements and automatically flag potential compliance issues, reducing risk and ensuring governance standards are maintained. [Discover AI Board Compliance Monitoring](/features/ai-board-compliance-monitoring) for automated regulatory tracking.
 
 ## Best Practices for AI Implementation
 

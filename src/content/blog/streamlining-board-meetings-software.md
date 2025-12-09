@@ -16,10 +16,10 @@ Board meetings are a critical component of effective governance, enabling organi
 
 Board meeting software is designed to simplify the planning, execution, and follow-up of board meetings. By leveraging technology, it helps organizations:
 
-- Create and distribute agendas.
+- Create and distribute agendas. [See AI-Powered Agenda Builder](/features/ai-powered-agenda-builder).
 - Assign and track tasks.
-- Maintain secure records of meeting minutes and decisions.
-- Provide a centralized platform for document sharing and collaboration.
+- Maintain secure records of meeting minutes and decisions. [Learn about AI Minute Builder](/features/ai-minute-builder).
+- Provide a centralized platform for document sharing and collaboration. [Discover Document Collaboration](/features/document-collaboration).
 
 This technology allows organizations to create a virtual boardroom, enabling members to participate from anywhere in the world. It bridges geographical gaps, ensuring that remote participants remain fully engaged and informed.
 
