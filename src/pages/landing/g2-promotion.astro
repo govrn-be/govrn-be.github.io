@@ -1,0 +1,441 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CTA from "../../components/CTA.astro";
+import { Image } from 'astro:assets';
+import g2Logo from '../../assets/G2_logo.jpg';
+
+const features = [
+  {
+    icon: "🤖",
+    title: "AI-Powered Minute Builder",
+    description: "Automatically generate accurate meeting minutes with our advanced AI technology, saving hours of manual work"
+  },
+  {
+    icon: "📊",
+    title: "Smart Board Management",
+    description: "Streamline your board operations with intuitive tools for agenda building, document management, and decision tracking"
+  },
+  {
+    icon: "🔒",
+    title: "Enterprise Security",
+    description: "Bank-grade security with advanced encryption, ensuring your sensitive board information stays protected"
+  },
+  {
+    icon: "⚡",
+    title: "Quick Setup",
+    description: "Get up and running in days with our guided onboarding process and dedicated support team"
+  }
+];
+
+const benefits = [
+  {
+    stat: "60%",
+    label: "Time saved on board administration"
+  },
+  {
+    stat: "97%",
+    label: "Improved board efficiency"
+  },
+  {
+    stat: "99.9%",
+    label: "Platform uptime guarantee"
+  }
+];
+
+const demoIncludes = [
+  {
+    icon: "🎬",
+    title: "Live Product Demo",
+    description: "See Govrn in action with a personalized walkthrough tailored to your board's needs"
+  },
+  {
+    icon: "💡",
+    title: "Expert Consultation",
+    description: "Get recommendations from our board governance experts on optimizing your processes"
+  },
+  {
+    icon: "🛠️",
+    title: "Implementation Roadmap",
+    description: "Receive a detailed plan for rolling out Govrn to your board with timeline and best practices"
+  },
+  {
+    icon: "💰",
+    title: "Custom Pricing",
+    description: "Discuss flexible pricing options designed for your board size and specific requirements"
+  }
+];
+---
+
+<Layout
+  title="G2 Exclusive: Get 10% Off Govrn Board Management Software"
+  description="Special offer for G2 visitors: Transform your board operations with AI-powered Govrn and save 10% when you book an onboarding call today."
+>
+  <main>
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-white to-gray-50 pt-32 pb-24">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <!-- Left Column - Content -->
+          <div class="max-w-xl">
+            <!-- G2 Badge -->
+            <div class="flex items-center gap-3 mb-6">
+              <div class="bg-white rounded-lg shadow-md p-3 border border-gray-100">
+                <img
+                  src={g2Logo}
+                  alt="G2 Logo"
+                  class="h-8 w-auto"
+                  loading="eager"
+                />
+              </div>
+              <div class="inline-flex items-center rounded-full px-4 py-2 text-sm font-medium bg-green-50 text-green-700 border border-green-200">
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Exclusive G2 Offer
+              </div>
+            </div>
+
+            <h1 class="text-5xl font-bold text-gray-900 leading-tight mb-6">
+              Save <span class="bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-green-500">10%</span> on
+              <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
+                AI-Powered Board Management
+              </span>
+            </h1>
+
+            <p class="text-xl text-gray-600 mb-8">
+              Welcome, G2 visitors! Transform your board operations with Govrn's AI-first platform and enjoy an exclusive 10% discount when you book your onboarding call today.
+            </p>
+
+            <!-- Discount Code Display -->
+            <div class="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-6 mb-8 border-2 border-green-200">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-sm text-gray-600 mb-1">Your Exclusive Discount Code</p>
+                  <p class="text-2xl font-bold text-gray-900 font-mono">G2GOVRN10</p>
+                  <p class="text-sm text-green-600 mt-1">10% off your first year</p>
+                </div>
+                <button
+                  onclick="navigator.clipboard.writeText('G2GOVRN10'); this.innerHTML = '<svg class=\'w-6 h-6\' fill=\'currentColor\' viewBox=\'0 0 20 20\'><path fill-rule=\'evenodd\' d=\'M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z\' clip-rule=\'evenodd\'/></svg>'; setTimeout(() => { this.innerHTML = '<svg class=\'w-6 h-6\' fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\'/></svg>'; }, 2000);"
+                  class="p-3 bg-white rounded-lg hover:bg-gray-50 transition-colors cursor-pointer text-gray-600 hover:text-primary"
+                  aria-label="Copy discount code"
+                >
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Benefits Stats -->
+            <div class="grid grid-cols-3 gap-4">
+              {benefits.map((benefit) => (
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-primary">{benefit.stat}</div>
+                  <div class="text-xs text-gray-600">{benefit.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Right Column - Form -->
+          <div class="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 relative">
+            <div class="absolute -top-4 left-0 right-0 mx-auto w-max bg-gradient-to-r from-green-600 to-green-500 text-white px-6 py-2 rounded-full text-sm font-medium shadow-lg">
+              <span class="mr-1">🎁</span> Limited Time G2 Offer
+            </div>
+
+            <h2 class="text-2xl font-bold text-gray-900 mb-2 mt-4">
+              Book Your Onboarding Call
+            </h2>
+            <p class="text-gray-600 mb-6">
+              Schedule a personalized demo and claim your 10% discount
+            </p>
+
+            <form
+              id="g2DemoForm"
+              class="space-y-4"
+              action="https://calendly.com/govrn/onboarding"
+              method="GET"
+              target="_blank"
+            >
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label for="firstName" class="block text-sm font-medium text-gray-700 mb-1">
+                    First Name
+                  </label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="first_name"
+                    required
+                    class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary"
+                    placeholder="John"
+                  />
+                </div>
+                <div>
+                  <label for="lastName" class="block text-sm font-medium text-gray-700 mb-1">
+                    Last Name
+                  </label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="last_name"
+                    required
+                    class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary"
+                    placeholder="Smith"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">
+                  Work Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary"
+                  placeholder="john@company.com"
+                />
+              </div>
+
+              <div>
+                <label for="company" class="block text-sm font-medium text-gray-700 mb-1">
+                  Company
+                </label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  required
+                  class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary"
+                  placeholder="Acme Inc."
+                />
+              </div>
+
+              <input type="hidden" name="utm_source" value="g2" />
+              <input type="hidden" name="discount_code" value="G2GOVRN10" />
+
+              <button
+                type="submit"
+                class="w-full px-6 py-4 bg-gradient-to-r from-green-600 to-green-500 text-white rounded-lg hover:from-green-700 hover:to-green-600 transition-all transform hover:scale-[1.02] font-medium shadow-lg flex items-center justify-center gap-2"
+              >
+                <span>Book Onboarding Call & Claim 10% Off</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                </svg>
+              </button>
+
+              <div class="flex items-center justify-center gap-4 pt-4">
+                <div class="flex items-center gap-2 text-gray-600 text-sm">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 15V17M6 21H18C19.1046 21 20 20.1046 20 19V13C20 11.8954 19.1046 11 18 11H6C4.89543 11 4 11.8954 4 13V19C4 20.1046 4.89543 21 6 21ZM16 11V7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7V11H16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>GDPR Compliant</span>
+                </div>
+                <div class="flex items-center gap-2 text-gray-600 text-sm">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>No credit card required</span>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What is Govrn Section -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            What is Govrn?
+          </h2>
+          <p class="text-xl text-gray-600">
+            Govrn is the first AI-powered board management platform designed to transform how boards operate. We help organizations streamline their governance processes, save time, and make better decisions through intelligent automation and seamless collaboration.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {features.map((feature) => (
+            <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+              <div class="text-4xl mb-4">{feature.icon}</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                {feature.title}
+              </h3>
+              <p class="text-gray-600 text-sm">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Setup & Demo Section -->
+    <section class="py-24 bg-gradient-to-br from-gray-50 to-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            What to Expect in Your
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
+              Onboarding Call
+            </span>
+          </h2>
+          <p class="text-xl text-gray-600">
+            Our onboarding process is designed to get you up and running quickly while ensuring Govrn is perfectly tailored to your board's needs.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {demoIncludes.map((item) => (
+            <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+              <div class="flex items-start gap-4">
+                <div class="text-4xl flex-shrink-0">{item.icon}</div>
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                    {item.title}
+                  </h3>
+                  <p class="text-gray-600">{item.description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- Quick Setup Steps -->
+        <div class="mt-16 max-w-4xl mx-auto">
+          <h3 class="text-2xl font-bold text-gray-900 text-center mb-12">
+            Our Simple Setup Process
+          </h3>
+          <div class="relative">
+            <div class="absolute top-1/2 left-0 right-0 h-1 bg-gray-200 hidden md:block" style="transform: translateY(-50%);"></div>
+            <div class="grid md:grid-cols-3 gap-8 relative">
+              <div class="text-center">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary text-white text-2xl font-bold mb-4 relative z-10 shadow-lg">
+                  1
+                </div>
+                <h4 class="text-lg font-semibold text-gray-900 mb-2">Book Your Call</h4>
+                <p class="text-gray-600 text-sm">Schedule a convenient time with our team using the form above</p>
+              </div>
+              <div class="text-center">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary text-white text-2xl font-bold mb-4 relative z-10 shadow-lg">
+                  2
+                </div>
+                <h4 class="text-lg font-semibold text-gray-900 mb-2">Personalized Demo</h4>
+                <p class="text-gray-600 text-sm">See Govrn in action with features tailored to your needs</p>
+              </div>
+              <div class="text-center">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary text-white text-2xl font-bold mb-4 relative z-10 shadow-lg">
+                  3
+                </div>
+                <h4 class="text-lg font-semibold text-gray-900 mb-2">Quick Setup</h4>
+                <p class="text-gray-600 text-sm">Get up and running in days with guided implementation</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-24 bg-gradient-to-br from-primary/5 to-blue-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="bg-white rounded-lg shadow-md p-3 inline-flex items-center gap-3 mb-8">
+          <img
+            src={g2Logo}
+            alt="G2 Logo"
+            class="h-8 w-auto"
+            loading="lazy"
+          />
+          <span class="text-gray-600 font-medium">Exclusive Partner Offer</span>
+        </div>
+
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Ready to Transform Your Board?
+        </h2>
+        <p class="text-xl text-gray-600 mb-8">
+          Don't miss this exclusive G2 offer. Book your onboarding call today and save 10% on your first year.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="#g2DemoForm"
+            onclick="event.preventDefault(); document.getElementById('g2DemoForm').scrollIntoView({behavior: 'smooth'});"
+            class="px-8 py-4 bg-gradient-to-r from-green-600 to-green-500 text-white rounded-lg hover:from-green-700 hover:to-green-600 transition-all transform hover:scale-105 font-medium shadow-lg inline-flex items-center gap-2"
+          >
+            <span>Book Your Call Now</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+            </svg>
+          </a>
+          <a
+            href="/request-demo"
+            class="px-8 py-4 bg-white text-primary rounded-lg hover:bg-gray-50 transition-all font-medium shadow-md border border-gray-200"
+          >
+            Learn More
+          </a>
+        </div>
+
+        <div class="mt-8 flex items-center justify-center gap-2 text-sm text-gray-600">
+          <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <span>Offer valid for new customers only. Use code <strong class="font-mono">G2GOVRN10</strong> during onboarding.</span>
+        </div>
+      </div>
+    </section>
+
+    <CTA />
+  </main>
+</Layout>
+
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+</style>
+
+<script>
+  const form = document.getElementById("g2DemoForm") as HTMLFormElement;
+
+  form?.addEventListener("submit", (e) => {
+    // Track the form submission
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'g2_demo_request', {
+        'event_category': 'lead_generation',
+        'event_label': 'G2 Landing Page',
+        'value': 'G2GOVRN10'
+      });
+    }
+  });
+
+  // Add validation feedback
+  const inputs = form?.querySelectorAll("input[type='text'], input[type='email']");
+  inputs?.forEach((input) => {
+    input.addEventListener("blur", () => {
+      const inputElement = input as HTMLInputElement;
+      if (inputElement.checkValidity()) {
+        inputElement.classList.add("border-green-500");
+        inputElement.classList.remove("border-red-500");
+      } else if (inputElement.value) {
+        inputElement.classList.add("border-red-500");
+        inputElement.classList.remove("border-green-500");
+      }
+    });
+  });
+</script>
