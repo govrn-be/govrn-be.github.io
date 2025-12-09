@@ -5,6 +5,7 @@ pubDate: 2024-11-03
 author: "Jean-Louis Van Houwe"
 authorRole: "CEO & Founder at Govrn"
 image: "/boussole.jpg"
+imageAlt: "Advisor to the board of directors job description: Professional guidance compass for strategic board governance and decision-making excellence"
 category: "Governance"
 tags: ["Board Advisors", "Corporate Governance", "Decision-Making", "Leadership"]
 featured: false
