@@ -13,14 +13,19 @@ declare global {
 /**
  * Initialize gtag function and dataLayer
  * Must be called before any consent or tracking operations
+ * Note: Will not overwrite if gtag already exists (set in Layout.astro head)
  */
 export const initializeGtag = () => {
   window.dataLayer = window.dataLayer || [];
-  function gtag(...args: any[]) {
-    window.dataLayer.push(args);
+
+  // Don't overwrite if already defined (set correctly in Layout.astro)
+  if (!window.gtag) {
+    window.gtag = function() {
+      window.dataLayer.push(arguments);
+    };
   }
-  window.gtag = gtag;
-  return gtag;
+
+  return window.gtag;
 };
 
 /**
@@ -46,9 +51,14 @@ export const setDefaultConsent = () => {
  * Update consent state based on user choice
  */
 export const updateConsent = (granted: boolean) => {
-  const gtag = window.gtag || initializeGtag();
+  // Ensure gtag exists
+  if (!window.gtag) {
+    initializeGtag();
+  }
+  console.log('Updating consent to:', granted);
+  console.log('dataLayer before update:', JSON.stringify(window.dataLayer));
 
-  gtag('consent', 'update', {
+  window.gtag('consent', 'update', {
     'ad_storage': granted ? 'granted' : 'denied',
     'ad_user_data': granted ? 'granted' : 'denied',
     'ad_personalization': granted ? 'granted' : 'denied',
@@ -58,10 +68,12 @@ export const updateConsent = (granted: boolean) => {
   });
 
   // Fire consent update event
-  gtag('event', 'consent_update', {
+  window.gtag('event', 'consent_update', {
     'consent_status': granted ? 'granted' : 'denied',
     'timestamp': new Date().toISOString()
   });
+
+  console.log('dataLayer after update:', JSON.stringify(window.dataLayer));
 };
 
 /**
@@ -121,13 +133,14 @@ export const loadGTM = () => {
 
 /**
  * Initialize analytics with consent mode
- * This loads the scripts but they will respect the consent settings
+ * Note: GTM and consent defaults are now set in Layout.astro head
+ * This function only loads GA4 for additional tracking
  */
 export const initializeAnalytics = () => {
+  // GTM and consent defaults are set inline in Layout.astro <head>
+  // We only need to ensure gtag is available and load GA4
   initializeGtag();
-  setDefaultConsent();
   loadGA4();
-  loadGTM();
 };
 
 /**
