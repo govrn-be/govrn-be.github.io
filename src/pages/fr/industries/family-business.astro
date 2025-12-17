@@ -1,0 +1,216 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import CTA from '../../../components/CTA.astro';
+
+const challenges = [
+  {
+    title: "Planification de la Succession",
+    description: "Gérez les transitions générationnelles complexes et assurez la continuité de l'entreprise",
+    icon: "👨‍👩‍👧‍👦"
+  },
+  {
+    title: "Dynamique Familiale vs. Professionnelle",
+    description: "Équilibrez les relations familiales avec les exigences de gouvernance professionnelle",
+    icon: "⚖️"
+  },
+  {
+    title: "Professionnalisation",
+    description: "Transition de pratiques informelles vers une gouvernance structurée",
+    icon: "🎯"
+  }
+];
+
+const features = [
+  {
+    title: "Cadre de Gouvernance",
+    description: "Établissez des rôles, responsabilités et processus décisionnels clairs",
+    icon: "📋"
+  },
+  {
+    title: "Communication Transparente",
+    description: "Favorisez un dialogue ouvert entre les membres de la famille et les parties prenantes",
+    icon: "💬"
+  },
+  {
+    title: "Feuille de Route de Succession",
+    description: "Planifiez et documentez les transitions de leadership avec clarté et confiance",
+    icon: "🗺️"
+  }
+];
+
+const benefits = [
+  {
+    title: "Résolution de Conflits",
+    description: "Créez des processus structurés pour traiter les désaccords de manière professionnelle",
+    icon: "🤝"
+  },
+  {
+    title: "Supervision Indépendante",
+    description: "Introduisez des perspectives externes tout en respectant les valeurs familiales",
+    icon: "👁️"
+  },
+  {
+    title: "Protection du Patrimoine",
+    description: "Préservez les valeurs familiales tout en stimulant la croissance de l'entreprise",
+    icon: "🛡️"
+  }
+];
+---
+
+<Layout title="Logiciel de Gestion du Conseil pour Entreprises Familiales | Govrn" description="Renforcez la gouvernance de votre entreprise familiale avec des outils conçus pour équilibrer la dynamique familiale et la gestion professionnelle du conseil.">
+  <main class="pt-16">
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-3xl mx-auto">
+          <div class="inline-flex items-center rounded-full px-4 py-1 text-sm font-medium bg-primary/10 text-primary mb-8">
+            Entreprises Familiales
+          </div>
+          <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
+            Logiciel de Gestion du Conseil pour
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
+              Entreprises Familiales
+            </span>
+          </h1>
+          <p class="text-xl text-gray-600 leading-relaxed mb-12">
+            Renforcez la gouvernance de votre entreprise familiale avec des outils conçus pour équilibrer la dynamique familiale et la gestion professionnelle du conseil.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/fr/try"
+              class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              Essai Gratuit
+            </a>
+            <a
+              href="/fr/request-demo"
+              class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-gray-900 bg-white border-2 border-gray-200 hover:border-primary/20 hover:bg-gray-50 transition-colors duration-200"
+            >
+              Demander une Démo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Challenges Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Défis des Entreprises Familiales que Nous Résolvons
+          </h2>
+          <p class="text-xl text-gray-600">
+            Relevez les défis uniques auxquels font face les conseils d'entreprises familiales avec notre solution complète.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          {challenges.map(challenge => (
+            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+              <div class="text-3xl mb-4">{challenge.icon}</div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">{challenge.title}</h3>
+              <p class="text-gray-600">{challenge.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- How Govrn Helps Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Comment Govrn Renforce la Gouvernance des Entreprises Familiales
+          </h2>
+          <p class="text-xl text-gray-600">
+            Transformez les pratiques informelles des entreprises familiales en structures de gouvernance professionnelles.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          {features.map(feature => (
+            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+              <div class="text-3xl mb-4">{feature.icon}</div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
+              <p class="text-gray-600">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Principaux Avantages pour les Entreprises Familiales
+          </h2>
+          <p class="text-xl text-gray-600">
+            Construisez une structure de gouvernance durable qui respecte l'héritage familial tout en favorisant la réussite de l'entreprise.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          {benefits.map(benefit => (
+            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+              <div class="text-3xl mb-4">{benefit.icon}</div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>
+              <p class="text-gray-600">{benefit.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Professional Governance Matters -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Pourquoi la Gouvernance Professionnelle est Importante pour les Entreprises Familiales
+          </h2>
+
+          <div class="prose prose-lg max-w-none text-gray-600">
+            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100 mb-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">Le Défi Unique</h3>
+              <p>Les entreprises familiales font face à un défi distinctif : équilibrer les liens familiaux émotionnels avec des décisions commerciales objectives. Sans structures de gouvernance claires, les relations personnelles peuvent compliquer la prise de décision stratégique, la planification de la succession et la résolution de conflits.</p>
+            </div>
+
+            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100 mb-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">Difficultés Courantes</h3>
+              <ul class="space-y-3">
+                <li><strong>Prise de Décision Informelle :</strong> S'appuyer sur des accords verbaux et des discussions informelles sans documentation appropriée</li>
+                <li><strong>Ambiguïté des Rôles :</strong> Frontières floues entre les rôles des membres de la famille et les responsabilités professionnelles</li>
+                <li><strong>Anxiété de Succession :</strong> Difficulté à discuter et planifier les transitions de leadership entre générations</li>
+                <li><strong>Lacunes de Communication :</strong> Mélange des communications familiales et professionnelles, entraînant des malentendus</li>
+                <li><strong>Résistance au Changement :</strong> Mentalité "nous avons toujours fait comme ça" empêchant la professionnalisation nécessaire</li>
+              </ul>
+            </div>
+
+            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">Comment une Plateforme Transforme la Gouvernance</h3>
+              <p class="mb-4">Une plateforme dédiée à la gestion du conseil comme Govrn fournit la structure et les outils pour professionnaliser la gouvernance des entreprises familiales tout en maintenant les valeurs familiales :</p>
+              <ul class="space-y-3">
+                <li><strong>Réunions Structurées :</strong> Ordres du jour formels, procès-verbaux et points d'action séparent les discussions professionnelles des réunions familiales</li>
+                <li><strong>Documentation Claire :</strong> Référentiel centralisé pour les statuts, politiques et décisions apporte clarté et réduit les conflits</li>
+                <li><strong>Processus Définis :</strong> Workflows standardisés pour les décisions, approbations et communications</li>
+                <li><strong>Transparence :</strong> Toutes les parties prenantes ont accès aux mêmes informations, réduisant l'asymétrie d'information</li>
+                <li><strong>Responsabilité :</strong> Suivez les responsabilités et les engagements avec une propriété claire</li>
+                <li><strong>Planification de la Succession :</strong> Documentez les connaissances institutionnelles et les plans de transition de manière sécurisée et structurée</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <CTA />
+  </main>
+</Layout>

@@ -1,0 +1,216 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CTA from '../../components/CTA.astro';
+
+const challenges = [
+  {
+    title: "Succession Planning",
+    description: "Navigate complex generational transitions and ensure business continuity",
+    icon: "👨‍👩‍👧‍👦"
+  },
+  {
+    title: "Family vs. Business Dynamics",
+    description: "Balance family relationships with professional governance requirements",
+    icon: "⚖️"
+  },
+  {
+    title: "Professionalization",
+    description: "Transition from informal to structured board governance practices",
+    icon: "🎯"
+  }
+];
+
+const features = [
+  {
+    title: "Governance Framework",
+    description: "Establish clear roles, responsibilities, and decision-making processes",
+    icon: "📋"
+  },
+  {
+    title: "Transparent Communication",
+    description: "Foster open dialogue between family members and board stakeholders",
+    icon: "💬"
+  },
+  {
+    title: "Succession Roadmap",
+    description: "Plan and document leadership transitions with clarity and confidence",
+    icon: "🗺️"
+  }
+];
+
+const benefits = [
+  {
+    title: "Conflict Resolution",
+    description: "Create structured processes for addressing disagreements professionally",
+    icon: "🤝"
+  },
+  {
+    title: "Independent Oversight",
+    description: "Introduce external perspectives while respecting family values",
+    icon: "👁️"
+  },
+  {
+    title: "Legacy Protection",
+    description: "Preserve family values while driving business growth",
+    icon: "🛡️"
+  }
+];
+---
+
+<Layout title="Family Business Board Management Software | Govrn" description="Strengthen your family business governance with tools designed to balance family dynamics and professional board management.">
+  <main class="pt-16">
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-3xl mx-auto">
+          <div class="inline-flex items-center rounded-full px-4 py-1 text-sm font-medium bg-primary/10 text-primary mb-8">
+            Family Business
+          </div>
+          <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
+            Board Management Software for
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
+              Family Businesses
+            </span>
+          </h1>
+          <p class="text-xl text-gray-600 leading-relaxed mb-12">
+            Strengthen your family business governance with tools designed to balance family dynamics and professional board management.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/try"
+              class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-white bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              Start Free Trial
+            </a>
+            <a
+              href="/request-demo"
+              class="inline-flex items-center px-8 py-4 text-lg font-medium rounded-xl text-gray-900 bg-white border-2 border-gray-200 hover:border-primary/20 hover:bg-gray-50 transition-colors duration-200"
+            >
+              Request Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Challenges Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Family Business Challenges We Solve
+          </h2>
+          <p class="text-xl text-gray-600">
+            Address the unique challenges facing family business boards with our comprehensive solution.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          {challenges.map(challenge => (
+            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+              <div class="text-3xl mb-4">{challenge.icon}</div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">{challenge.title}</h3>
+              <p class="text-gray-600">{challenge.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- How Govrn Helps Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            How Govrn Strengthens Family Business Governance
+          </h2>
+          <p class="text-xl text-gray-600">
+            Transform informal family business practices into professional governance structures.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          {features.map(feature => (
+            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+              <div class="text-3xl mb-4">{feature.icon}</div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
+              <p class="text-gray-600">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Key Benefits for Family Businesses
+          </h2>
+          <p class="text-xl text-gray-600">
+            Build a sustainable governance structure that respects family heritage while driving business success.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          {benefits.map(benefit => (
+            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+              <div class="text-3xl mb-4">{benefit.icon}</div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>
+              <p class="text-gray-600">{benefit.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Professional Governance Matters -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Why Professional Governance Matters for Family Businesses
+          </h2>
+
+          <div class="prose prose-lg max-w-none text-gray-600">
+            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100 mb-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">The Unique Challenge</h3>
+              <p>Family businesses face a distinctive challenge: balancing emotional family ties with objective business decisions. Without clear governance structures, personal relationships can complicate strategic decision-making, succession planning, and conflict resolution.</p>
+            </div>
+
+            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100 mb-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">Common Struggles</h3>
+              <ul class="space-y-3">
+                <li><strong>Informal Decision-Making:</strong> Relying on verbal agreements and informal discussions without proper documentation</li>
+                <li><strong>Role Ambiguity:</strong> Unclear boundaries between family member roles and professional responsibilities</li>
+                <li><strong>Succession Anxiety:</strong> Difficulty discussing and planning leadership transitions across generations</li>
+                <li><strong>Communication Gaps:</strong> Mixing family and business communications, leading to misunderstandings</li>
+                <li><strong>Resistance to Change:</strong> "We've always done it this way" mentality preventing necessary professionalization</li>
+              </ul>
+            </div>
+
+            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">How a Platform Transforms Governance</h3>
+              <p class="mb-4">A dedicated board management platform like Govrn provides the structure and tools to professionalize family business governance while maintaining family values:</p>
+              <ul class="space-y-3">
+                <li><strong>Structured Meetings:</strong> Formal agendas, minutes, and action items separate business discussions from family gatherings</li>
+                <li><strong>Clear Documentation:</strong> Centralized repository for bylaws, policies, and decisions provides clarity and reduces disputes</li>
+                <li><strong>Defined Processes:</strong> Standardized workflows for decisions, approvals, and communications</li>
+                <li><strong>Transparency:</strong> All stakeholders have access to the same information, reducing information asymmetry</li>
+                <li><strong>Accountability:</strong> Track responsibilities and follow-up on commitments with clear ownership</li>
+                <li><strong>Succession Planning:</strong> Document institutional knowledge and transition plans in a secure, structured manner</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <CTA />
+  </main>
+</Layout>
