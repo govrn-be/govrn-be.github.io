@@ -13,7 +13,9 @@ interface Props {
 }
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection('blog');
+  const blogEntries = await getCollection('blog', (entry) => {
+    return entry.data.lang === 'fr';
+  });
   return blogEntries.map(entry => ({
     params: { slug: entry.slug },
     props: { entry },

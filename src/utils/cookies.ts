@@ -1,10 +1,20 @@
+/**
+ * Set a cookie with proper security attributes
+ */
 export const setCookie = (name: string, value: string, days: number) => {
   const date = new Date();
   date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
   const expires = `expires=${date.toUTCString()}`;
-  document.cookie = `${name}=${value};${expires};path=/;SameSite=Lax`;
+
+  // Add Secure flag if using HTTPS
+  const secure = window.location.protocol === 'https:' ? ';Secure' : '';
+
+  document.cookie = `${name}=${value};${expires};path=/;SameSite=Lax${secure}`;
 };
 
+/**
+ * Get a cookie value by name
+ */
 export const getCookie = (name: string): string | null => {
   const nameEQ = `${name}=`;
   const ca = document.cookie.split(';');
@@ -16,6 +26,9 @@ export const getCookie = (name: string): string | null => {
   return null;
 };
 
+/**
+ * Delete a cookie by name
+ */
 export const deleteCookie = (name: string) => {
   document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/`;
 };
