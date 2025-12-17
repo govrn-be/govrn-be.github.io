@@ -55,7 +55,7 @@ const categories = [
 ];
 
 const posts = await getCollection('blog');
-const publishedPosts = posts.filter(post => post.data.pubDate.getTime() <= new Date().getTime() && post.data.lang === 'en');
+const publishedPosts = posts.filter(post => post.data.pubDate.getTime() <= new Date().getTime() && (!post.data.lang || post.data.lang === 'en'));
 const sortedPosts = publishedPosts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 const latestPosts = sortedPosts.slice(0, 3);
 
