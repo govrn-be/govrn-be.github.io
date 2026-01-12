@@ -35,6 +35,7 @@ interface Props {
   selectReasonText?: string;
   termsUrl?: string;
   privacyUrl?: string;
+  redirectUrl?: string;
 }
 
 const {
@@ -62,6 +63,7 @@ const {
   selectReasonText = "Select a reason",
   termsUrl = "/terms",
   privacyUrl = "/privacy",
+  redirectUrl = "/request-demo",
 } = Astro.props;
 ---
 
@@ -288,7 +290,7 @@ const {
   }
 </style>
 
-<script define:vars={{ TRIAL_API_URL, RECAPTCHA_EXECUTE_KEY }}>
+<script define:vars={{ TRIAL_API_URL, RECAPTCHA_EXECUTE_KEY, redirectUrl }}>
   document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("trialForm");
     const success = document.getElementById("formSuccess");
@@ -373,12 +375,12 @@ const {
             throw new Error("Failed to submit trial request");
           }
           const email = formData.get('email');
-          
+
           var myNewName = window.dataLayer || [];
           myNewName.push({'email': email});
 
-          form.classList.add("hidden");
-          success?.classList.remove("hidden");
+          // Redirect to demo booking page
+          window.location.href = redirectUrl + "?from=trial";
         });
       } catch (error) {
         console.error("Error submitting form:", error);
