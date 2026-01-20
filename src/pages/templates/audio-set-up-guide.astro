@@ -16,12 +16,6 @@ const previews = [
     emoji: "🏢"
   }
 ];
-
-const stats = [
-  { value: "500+", label: "Board Secretaries Trust Us" },
-  { value: "4.8/5", label: "User Rating" },
-  { value: "100%", label: "Expert Reviewed" }
-];
 ---
 
 <Layout
@@ -47,19 +41,9 @@ const stats = [
                 Great Recording Quality
               </span>
             </h1>
-            <p class="text-xl text-gray-600 leading-relaxed mb-8">
+            <p class="text-xl text-gray-600 leading-relaxed mb-12">
               Accurate and comprehensive board meeting minutes depend on clear audio recordings. Whether you're transcribing manually or using AI-powered tools, the quality of your recording directly impacts the quality of your minutes.
             </p>
-
-            <!-- Stats -->
-            <div class="grid grid-cols-3 gap-8 mb-12">
-              {stats.map(stat => (
-                <div>
-                  <div class="text-3xl font-bold text-primary mb-1">{stat.value}</div>
-                  <div class="text-sm text-gray-600">{stat.label}</div>
-                </div>
-              ))}
-            </div>
 
             <!-- Preview Cards -->
             <div class="grid grid-cols-2 gap-4">
