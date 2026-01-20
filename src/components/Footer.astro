@@ -10,8 +10,9 @@ const links = currentLang === 'fr' ? {
   resources: "/fr/resources",
   blog: "/fr/blog",
   podcast: "/fr/podcast",
-  security: "/fr/security", 
+  security: "/fr/security",
   template: "/fr/templates/board-meeting-minutes",
+  audioTemplate: "/templates/audio-set-up-guide",
   contact: "/fr/contact",
   privacy: "/fr/privacy",
   terms: "/fr/terms",
@@ -25,6 +26,7 @@ const links = currentLang === 'fr' ? {
   podcastText: "Podcast",
   securityText: "Sécurité",
   templateText: "Modèle de PV de conseil",
+  audioTemplateText: "Guide de configuration audio",
   contactText: "Contactez-nous",
   privacyText: "Politique de confidentialité",
   termsText: "Conditions d'utilisation",
@@ -36,7 +38,8 @@ const links = currentLang === 'fr' ? {
   podcast: "/nl/podcast",
   security: "/nl/security",
   template: "/nl/templates/board-meeting-minutes",
-  contact: "/nl/contact", 
+  audioTemplate: "/templates/audio-set-up-guide",
+  contact: "/nl/contact",
   privacy: "/nl/privacy",
   terms: "/nl/terms",
   quickLinks: "Snelle links",
@@ -49,17 +52,19 @@ const links = currentLang === 'fr' ? {
   podcastText: "Podcast",
   securityText: "Beveiliging",
   templateText: "Sjabloon voor notulen",
+  audioTemplateText: "Audio setup gids",
   contactText: "Contacteer ons",
   privacyText: "Privacybeleid",
   termsText: "Gebruiksvoorwaarden",
   allRights: "Alle rechten voorbehouden"
 } : {
   about: "/about",
-  resources: "/resources", 
+  resources: "/resources",
   blog: "/blog",
   podcast: "/podcast",
   security: "/security",
   template: "/templates/board-meeting-minutes",
+  audioTemplate: "/templates/audio-set-up-guide",
   contact: "/contact",
   privacy: "/privacy",
   terms: "/terms",
@@ -73,6 +78,7 @@ const links = currentLang === 'fr' ? {
   podcastText: "Podcast",
   securityText: "Security",
   templateText: "Board Meeting Minutes Template",
+  audioTemplateText: "Audio Setup Guide",
   contactText: "Contact Us",
   privacyText: "Privacy Policy",
   termsText: "Terms of Service",
@@ -97,6 +103,7 @@ const links = currentLang === 'fr' ? {
           <li><a href={links.podcast} class="text-gray-400 hover:text-white">{links.podcastText}</a></li>
           <li><a href={links.security} class="text-gray-400 hover:text-white">{links.securityText}</a></li>
           <li><a href={links.template} class="text-gray-400 hover:text-white">{links.templateText}</a></li>
+          <li><a href={links.audioTemplate} class="text-gray-400 hover:text-white">{links.audioTemplateText}</a></li>
         </ul>
       </div>
 
