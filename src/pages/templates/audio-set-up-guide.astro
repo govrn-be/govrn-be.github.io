@@ -6,27 +6,27 @@ import FeatureComparison from '../../components/templates/audio/FeatureCompariso
 
 const previews = [
   {
-    title: "Quick Reference",
-    description: "Step-by-step guide for optimal microphone and speaker setup",
-    emoji: "🎙️"
+    title: "Online Meetings",
+    description: "Audio quality is typically reliable with standard video conferencing tools",
+    emoji: "💻"
   },
   {
-    title: "Best Practices",
-    description: "Professional tips for crystal-clear audio in virtual meetings",
-    emoji: "✅"
+    title: "Hybrid & Offline",
+    description: "Requires careful setup - see our detailed guidelines in the PDF",
+    emoji: "🏢"
   }
 ];
 
 const stats = [
-  { value: "500+", label: "Downloads This Month" },
+  { value: "500+", label: "Board Secretaries Trust Us" },
   { value: "4.8/5", label: "User Rating" },
   { value: "100%", label: "Expert Reviewed" }
 ];
 ---
 
 <Layout
-  title="Free Audio Setup Guide for Virtual Board Meetings | Govrn [2025]"
-  description="Download our professional audio setup guide for virtual board meetings. Free, comprehensive guide with best practices for microphone, speaker, and video conferencing setup."
+  title="Audio Setup Guide for High-Quality Board Meeting Minutes | Govrn [2025]"
+  description="Recording quality is essential for accurate board meeting minutes. Download our free audio setup guide for hybrid and offline meetings. Govrn helps boards achieve professional-grade minutes."
 >
   <main class="pt-16">
     <!-- Hero Section -->
@@ -39,16 +39,16 @@ const stats = [
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <div class="inline-flex items-center rounded-full px-4 py-1 text-sm font-medium bg-green-100 text-green-800 mb-8">
-              Free Download • No Credit Card Required
+              Free Download • Professional Guidelines
             </div>
             <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
-              Professional Audio Setup
+              High-Quality Minutes Start with
               <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
-                Guide for Board Meetings
+                Great Recording Quality
               </span>
             </h1>
             <p class="text-xl text-gray-600 leading-relaxed mb-8">
-              Ensure crystal-clear audio quality in your virtual board meetings. Our comprehensive quick reference guide covers microphone setup, speaker configuration, and troubleshooting tips for seamless communication.
+              Accurate and comprehensive board meeting minutes depend on clear audio recordings. Whether you're transcribing manually or using AI-powered tools, the quality of your recording directly impacts the quality of your minutes.
             </p>
 
             <!-- Stats -->
@@ -74,56 +74,88 @@ const stats = [
       </div>
     </section>
 
-    <!-- What's Inside Section -->
+    <!-- Why Recording Quality Matters Section -->
     <section class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16">
           <h2 class="text-4xl font-bold text-gray-900 mb-4">
-            What's Inside the Guide?
+            Why Recording Quality Matters for Board Minutes
           </h2>
           <p class="text-xl text-gray-600">
-            Everything you need for professional-quality audio in your virtual meetings
+            Understanding the audio challenges across different meeting formats
           </p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8 mb-16">
-          <div class="bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-2xl p-8 border border-primary/10">
-            <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-2xl mb-6">
-              🎤
+          <div class="bg-gradient-to-br from-green-50 to-green-100/50 rounded-2xl p-8 border border-green-200">
+            <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center text-2xl mb-6">
+              💻
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-3">Microphone Setup</h3>
-            <p class="text-gray-600">
-              Optimal microphone positioning, input level settings, and noise reduction techniques for clear voice capture.
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Online Meetings</h3>
+            <p class="text-gray-600 mb-4">
+              Good news: audio quality in fully online meetings is typically reliable. Modern video conferencing platforms handle audio optimization automatically.
             </p>
+            <div class="inline-flex items-center px-3 py-1 rounded-full text-sm bg-green-100 text-green-800">
+              Usually OK
+            </div>
           </div>
 
-          <div class="bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-2xl p-8 border border-primary/10">
-            <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-2xl mb-6">
-              🔊
+          <div class="bg-gradient-to-br from-amber-50 to-amber-100/50 rounded-2xl p-8 border border-amber-200">
+            <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center text-2xl mb-6">
+              🔀
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-3">Speaker Configuration</h3>
-            <p class="text-gray-600">
-              Volume calibration, echo prevention, and speaker placement recommendations for optimal listening.
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Hybrid Meetings</h3>
+            <p class="text-gray-600 mb-4">
+              Hybrid meetings present unique challenges. In-room participants may be difficult to capture clearly while remote attendees have good audio.
             </p>
+            <div class="inline-flex items-center px-3 py-1 rounded-full text-sm bg-amber-100 text-amber-800">
+              Requires Setup
+            </div>
           </div>
 
-          <div class="bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-2xl p-8 border border-primary/10">
-            <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-2xl mb-6">
-              🛠️
+          <div class="bg-gradient-to-br from-orange-50 to-orange-100/50 rounded-2xl p-8 border border-orange-200">
+            <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center text-2xl mb-6">
+              🏢
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-3">Troubleshooting</h3>
-            <p class="text-gray-600">
-              Common audio issues and quick fixes to ensure your meetings run smoothly without technical interruptions.
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Offline Meetings</h3>
+            <p class="text-gray-600 mb-4">
+              In-person board meetings require proper microphone placement and room acoustics consideration to ensure all participants are captured clearly.
             </p>
+            <div class="inline-flex items-center px-3 py-1 rounded-full text-sm bg-orange-100 text-orange-800">
+              Detailed Setup Needed
+            </div>
           </div>
         </div>
 
+        <!-- CTA Box -->
+        <div class="bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-2xl p-8 border border-primary/10 mb-16">
+          <div class="max-w-3xl mx-auto text-center">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              Hybrid or Offline? Check Our Guidelines
+            </h3>
+            <p class="text-lg text-gray-600 mb-6">
+              For hybrid and offline board meetings, proper audio setup is essential. We've put together detailed instructions in our downloadable PDF to help you achieve optimal recording quality.
+            </p>
+            <a
+              href="#"
+              onclick="document.getElementById('email')?.focus(); window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
+              class="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg text-white bg-primary hover:bg-primary/90 transition-colors duration-200"
+            >
+              Download Guidelines
+              <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Govrn Section -->
         <div class="text-center max-w-3xl mx-auto mb-16">
           <h2 class="text-4xl font-bold text-gray-900 mb-4">
-            Good Start, But Why Stop There?
+            We Guide Our Clients Every Step of the Way
           </h2>
           <p class="text-xl text-gray-600">
-            See how Govrn transforms the entire virtual meeting experience
+            At Govrn, we understand that high-quality board meeting minutes are critical for governance, compliance, and institutional memory. That's why we don't just provide software - we partner with our clients to ensure excellence.
           </p>
         </div>
 
