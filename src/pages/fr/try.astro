@@ -1,6 +1,5 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import TrialForm from '../../components/forms/TrialForm.astro';
 
 const benefits = [
   {
@@ -9,7 +8,7 @@ const benefits = [
     description: "Commencez immédiatement avec notre plateforme complète"
   },
   {
-    icon: "🎯", 
+    icon: "🎯",
     title: "Sans carte bancaire",
     description: "Testez toutes les fonctionnalités sans risque pendant 14 jours"
   },
@@ -24,34 +23,6 @@ const benefits = [
     description: "Protection et cryptage de niveau bancaire dès le premier jour"
   }
 ];
-
-const trialFormProps = {
-  selectReasonText: "Sélectionnez un motif",
-  reasons: [
-    "Évaluation de solutions de gestion de conseil",
-    "Création d'un nouveau conseil", 
-    "Changement de plateforme",
-    "Amélioration de l'efficacité du conseil",
-    "Autre",
-  ],
-  labels: {
-    firstName: "Prénom",
-    lastName: "Nom", 
-    email: "Email professionnel",
-    company: "Nom de l'entreprise",
-    reason: "Motif de l'essai",
-    submit: "Commencer maintenant",
-    termsText: "En vous inscrivant, vous acceptez nos",
-    termsLink: "Conditions d'utilisation",
-    privacyLink: "Politique de confidentialité",
-    
-  },
-  termsUrl: "/fr/terms",
-  privacyUrl: "/fr/privacy",
-  redirectUrl: "/fr/request-demo",
-  successTitle: "Bienvenue sur Govrn!",
-  successMessage: "Votre compte d'essai est en cours de création. Vérifiez votre email pour les instructions de connexion."
-} 
 ---
 
 <Layout title="Essayez Govrn gratuitement - Optimisez la gestion de votre conseil" description="Découvrez comment Govrn peut transformer la gestion de votre conseil avec notre essai gratuit de 14 jours. Aucune carte bancaire requise.">
@@ -91,10 +62,29 @@ const trialFormProps = {
             </div>
           </div>
 
-          <!-- Colonne droite - Formulaire -->
-          <div class="bg-white rounded-2xl p-8 shadow-xl border border-gray-100">
-            <h2 class="text-2xl font-bold text-gray-900 mb-8">Activez votre essai gratuit</h2>
-            <TrialForm {...trialFormProps} />
+          <!-- Colonne droite - CTA -->
+          <div class="bg-white rounded-2xl p-10 shadow-xl border border-gray-100 text-center">
+            <div class="mb-8">
+              <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg class="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+              </div>
+              <h2 class="text-2xl font-bold text-gray-900 mb-4">Démarrez avec l'aide d'un expert</h2>
+              <p class="text-lg text-gray-600 leading-relaxed">
+                Notre expert vous accompagnera personnellement pour configurer votre essai gratuit et vous garantir de tirer le meilleur parti de Govrn dès le premier jour.
+              </p>
+            </div>
+            <a
+              href="/fr/request-demo?from=trial"
+              class="inline-flex items-center justify-center w-full px-8 py-4 text-lg font-semibold text-white bg-primary hover:bg-primary/90 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl"
+            >
+              Commencer maintenant
+              <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </a>
+            <p class="mt-4 text-sm text-gray-500">Sans engagement</p>
           </div>
         </div>
       </div>

@@ -1,6 +1,5 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import TrialForm from '../../components/forms/TrialForm.astro';
 
 const benefits = [
   {
@@ -9,7 +8,7 @@ const benefits = [
     description: "Begin meteen met ons complete platform"
   },
   {
-    icon: "🎯", 
+    icon: "🎯",
     title: "Geen creditcard nodig",
     description: "Test alle functies risicovrij gedurende 14 dagen"
   },
@@ -24,33 +23,6 @@ const benefits = [
     description: "Bankwaardige bescherming en versleuteling vanaf dag één"
   }
 ];
-
-const trialFormProps = {
-  selectReasonText: "Selecteer een reden",
-  reasons: [
-    "Evaluatie van bestuursbeheersystemen",
-    "Oprichting van een nieuw bestuur", 
-    "Overstap van platform",
-    "Verbetering van bestuursefficiëntie",
-    "Anders",
-  ],
-  labels: {
-    firstName: "Voornaam",
-    lastName: "Achternaam", 
-    email: "Zakelijk e-mailadres",
-    company: "Bedrijfsnaam",
-    reason: "Reden voor proefperiode",
-    submit: "Nu beginnen",
-    termsText: "Door u aan te melden, gaat u akkoord met onze",
-    termsLink: "Gebruiksvoorwaarden",
-    privacyLink: "Privacybeleid",
-  },
-  termsUrl: "/nl/terms",
-  privacyUrl: "/nl/privacy",
-  redirectUrl: "/nl/request-demo",
-  successTitle: "Welkom bij Govrn!",
-  successMessage: "Uw proefaccount wordt aangemaakt. Controleer uw e-mail voor inloginstructies."
-} 
 ---
 
 <Layout title="Probeer Govrn gratis - Optimaliseer uw bestuursbeheer" description="Ontdek hoe Govrn uw bestuursbeheer kan transformeren met onze gratis proefperiode van 14 dagen. Geen creditcard vereist.">
@@ -90,10 +62,29 @@ const trialFormProps = {
             </div>
           </div>
 
-          <!-- Rechterkolom - Formulier -->
-          <div class="bg-white rounded-2xl p-8 shadow-xl border border-gray-100">
-            <h2 class="text-2xl font-bold text-gray-900 mb-8">Activeer uw gratis proefperiode</h2>
-            <TrialForm {...trialFormProps} />
+          <!-- Rechterkolom - CTA -->
+          <div class="bg-white rounded-2xl p-10 shadow-xl border border-gray-100 text-center">
+            <div class="mb-8">
+              <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg class="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+              </div>
+              <h2 class="text-2xl font-bold text-gray-900 mb-4">Start met begeleiding van een expert</h2>
+              <p class="text-lg text-gray-600 leading-relaxed">
+                Onze expert helpt u persoonlijk bij het opzetten van uw gratis proefperiode en zorgt ervoor dat u vanaf dag één het maximale uit Govrn haalt.
+              </p>
+            </div>
+            <a
+              href="/nl/request-demo?from=trial"
+              class="inline-flex items-center justify-center w-full px-8 py-4 text-lg font-semibold text-white bg-primary hover:bg-primary/90 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl"
+            >
+              Nu beginnen
+              <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </a>
+            <p class="mt-4 text-sm text-gray-500">Geen verplichting</p>
           </div>
         </div>
       </div>
