@@ -1,0 +1,134 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PreviewCard from '../../components/templates/audio/PreviewCard.astro';
+import TemplateForm from '../../components/templates/audio/TemplateForm.astro';
+import FeatureComparison from '../../components/templates/audio/FeatureComparison.astro';
+
+const previews = [
+  {
+    title: "Quick Reference",
+    description: "Step-by-step guide for optimal microphone and speaker setup",
+    emoji: "🎙️"
+  },
+  {
+    title: "Best Practices",
+    description: "Professional tips for crystal-clear audio in virtual meetings",
+    emoji: "✅"
+  }
+];
+
+const stats = [
+  { value: "500+", label: "Downloads This Month" },
+  { value: "4.8/5", label: "User Rating" },
+  { value: "100%", label: "Expert Reviewed" }
+];
+---
+
+<Layout
+  title="Free Audio Setup Guide for Virtual Board Meetings | Govrn [2025]"
+  description="Download our professional audio setup guide for virtual board meetings. Free, comprehensive guide with best practices for microphone, speaker, and video conferencing setup."
+>
+  <main class="pt-16">
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-white to-gray-50 py-32 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,153,222,0.1),transparent_50%)]"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <div class="inline-flex items-center rounded-full px-4 py-1 text-sm font-medium bg-green-100 text-green-800 mb-8">
+              Free Download • No Credit Card Required
+            </div>
+            <h1 class="text-5xl font-extrabold text-gray-900 tracking-tight mb-8">
+              Professional Audio Setup
+              <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
+                Guide for Board Meetings
+              </span>
+            </h1>
+            <p class="text-xl text-gray-600 leading-relaxed mb-8">
+              Ensure crystal-clear audio quality in your virtual board meetings. Our comprehensive quick reference guide covers microphone setup, speaker configuration, and troubleshooting tips for seamless communication.
+            </p>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-3 gap-8 mb-12">
+              {stats.map(stat => (
+                <div>
+                  <div class="text-3xl font-bold text-primary mb-1">{stat.value}</div>
+                  <div class="text-sm text-gray-600">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+
+            <!-- Preview Cards -->
+            <div class="grid grid-cols-2 gap-4">
+              {previews.map(preview => (
+                <PreviewCard {...preview} />
+              ))}
+            </div>
+          </div>
+
+          <TemplateForm />
+        </div>
+      </div>
+    </section>
+
+    <!-- What's Inside Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            What's Inside the Guide?
+          </h2>
+          <p class="text-xl text-gray-600">
+            Everything you need for professional-quality audio in your virtual meetings
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          <div class="bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-2xl p-8 border border-primary/10">
+            <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-2xl mb-6">
+              🎤
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Microphone Setup</h3>
+            <p class="text-gray-600">
+              Optimal microphone positioning, input level settings, and noise reduction techniques for clear voice capture.
+            </p>
+          </div>
+
+          <div class="bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-2xl p-8 border border-primary/10">
+            <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-2xl mb-6">
+              🔊
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Speaker Configuration</h3>
+            <p class="text-gray-600">
+              Volume calibration, echo prevention, and speaker placement recommendations for optimal listening.
+            </p>
+          </div>
+
+          <div class="bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-2xl p-8 border border-primary/10">
+            <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-2xl mb-6">
+              🛠️
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Troubleshooting</h3>
+            <p class="text-gray-600">
+              Common audio issues and quick fixes to ensure your meetings run smoothly without technical interruptions.
+            </p>
+          </div>
+        </div>
+
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            Good Start, But Why Stop There?
+          </h2>
+          <p class="text-xl text-gray-600">
+            See how Govrn transforms the entire virtual meeting experience
+          </p>
+        </div>
+
+        <FeatureComparison />
+      </div>
+    </section>
+  </main>
+</Layout>
