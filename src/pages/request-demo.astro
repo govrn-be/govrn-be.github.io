@@ -271,7 +271,7 @@ const demoOutcomes = [
                   <span class="text-green-800 font-medium">Details confirmed! Now select your preferred time below.</span>
                 </div>
               </div>
-              <div id="calendlyWidget" class="calendly-inline-widget" style="min-width:320px;height:700px;"></div>
+              <div id="calendlyWidget" style="min-width:320px;height:700px;"></div>
             </div>
             <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
           </div>
@@ -686,17 +686,25 @@ const demoOutcomes = [
           'a2': companyUrl
         });
 
-        // Set the Calendly widget URL
+        // Initialize Calendly widget
         if (calendlyWidget) {
-          calendlyWidget.setAttribute('data-url', `${calendlyBaseUrl}?${calendlyParams.toString()}`);
+          const calendlyUrl = `${calendlyBaseUrl}?${calendlyParams.toString()}`;
 
-          // Reinitialize Calendly widget
-          if (window.Calendly) {
-            window.Calendly.initInlineWidget({
-              url: `${calendlyBaseUrl}?${calendlyParams.toString()}`,
-              parentElement: calendlyWidget
-            });
-          }
+          // Wait for Calendly to be available then initialize
+          const initCalendly = () => {
+            const Calendly = (window as any).Calendly;
+            if (Calendly) {
+              Calendly.initInlineWidget({
+                url: calendlyUrl,
+                parentElement: calendlyWidget
+              });
+            } else {
+              // Retry after 100ms if Calendly not ready yet
+              setTimeout(initCalendly, 100);
+            }
+          };
+
+          initCalendly();
         }
       });
     });
