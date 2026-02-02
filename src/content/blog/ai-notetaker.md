@@ -1,7 +1,7 @@
 ---
 title: "AI Notetaker: The Complete Guide to Intelligent Meeting Notes"
 description: "Discover the best AI notetaker apps for meetings, Google Meet, Zoom, and Teams. Compare free AI note taker options and learn how to automate meeting notes."
-pubDate: 2025-02-02
+pubDate: 2026-02-01
 author: "Govrn"
 authorRole: "Govrn Editorial Team"
 image: "/govrn-ai-minute-builder-and-assist.jpg"
