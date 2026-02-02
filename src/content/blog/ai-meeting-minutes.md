@@ -4,7 +4,7 @@ description: "Discover how AI meeting minutes tools transform meeting documentat
 pubDate: 2025-01-28
 author: "Govrn"
 authorRole: "Govrn Editorial Team"
-image: "/applications-picture-meeting.png"
+image: "/meeting.jpg"
 category: "Technology"
 tags: ["AI Meeting Minutes", "Meeting Notes", "Board Meetings", "AI Technology", "Productivity"]
 featured: false

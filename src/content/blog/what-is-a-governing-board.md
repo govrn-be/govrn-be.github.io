@@ -4,7 +4,7 @@ description: "Learn what a governing board is, its roles and responsibilities, a
 pubDate: 2025-02-15
 author: "Ludovic Laffineur"
 authorRole: "CTO at Govrn"
-image: "https://images.unsplash.com/photo-1603574670812-d24560880210?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80"
+image: "/boardroom.webp"
 category: "Governance"
 tags: ["governing board", "board roles", "board duties", "board functions", "board responsibilities"]
 featured: true
